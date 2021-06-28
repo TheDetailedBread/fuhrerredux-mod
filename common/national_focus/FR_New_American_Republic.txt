@@ -257,8 +257,10 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
-        prerequisite = { focus = NAR_suppress_the_minorities }
-        prerequisite = { focus = NAR_rights_for_everyone }
+        prerequisite = { 
+            focus = NAR_suppress_the_minorities 
+            focus = NAR_rights_for_everyone
+        }
         relative_position_id = NAR_suppress_the_minorities
         completion_reward = {
             add_ideas = NAR_civilian_heroism_idea
@@ -827,6 +829,12 @@ focus_tree = {
         x = 14
         y = 6
         cost = 6
+        available = {
+            any_owned_state = { is_coastal = yes }
+        }
+        completion_reward = {
+            navy_experience = 25
+        }
     }
 
     # Construct More Ports
@@ -836,8 +844,28 @@ focus_tree = {
         x = -3
         y = 1
         cost = 6
+        available = {
+            any_owned_state = { is_coastal = yes }
+        }
         prerequisite = { focus = NAR_the_new_american_navy }
         relative_position_id = NAR_the_new_american_navy
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = { 
+                    free_building_slots = { 
+                        building = dockyard
+                        size > 0
+                        include_locked = yes 
+                    }
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes 
+                }
+            }
+        }
     }
 
     # The WAVES
@@ -849,6 +877,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_the_new_american_navy }
         relative_position_id = NAR_the_new_american_navy
+        completion_reward = {
+            add_ideas = NAR_new_waves
+        }
     }
 
     # Transport Equipment
@@ -860,6 +891,27 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_construct_more_ports }
         relative_position_id = NAR_construct_more_ports
+        completion_reward = {
+            if = {
+                limit = { has_dlc = "Man the Guns" }
+                add_tech_bonus = {
+                    technology = mtg_landing_craft
+                    technology = mtg_transport
+                    technology = mtg_tank_landing_craft
+                    bonus = 2.0
+                    uses = 1
+                }
+            }
+            else = {
+                add_tech_bonus = {
+                    bonus = 2.0
+                    technology = landing_craft
+                    technology = transport
+                    technology = tank_landing_craft
+                    uses = 1
+                }
+            }
+        }
     }
 
     # Maritime Industry
@@ -872,6 +924,24 @@ focus_tree = {
         prerequisite = { focus = NAR_construct_more_ports }
         prerequisite = { focus = NAR_the_waves }
         relative_position_id = NAR_construct_more_ports
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = { 
+                    free_building_slots = { 
+                        building = dockyard
+                        size > 0
+                        include_locked = yes 
+                    }
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes 
+                }
+            }
+            add_ideas = NAR_maritime_industry_idea
+        }
     }
 
     # Expand the Marine Corps
@@ -883,11 +953,18 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_maritime_industry }
         relative_position_id = NAR_maritime_industry
+        completion_reward = {
+            add_tech_bonus = {
+                category = marine_tech
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
-    # Sempre Fi
+    # Coastal Bunkers
     focus = {
-        id = NAR_sempre_fi
+        id = NAR_coastal_bunkers
         icon = GFX_focus_generic_coastal_fort
         x = 0
         y = 2
@@ -895,6 +972,23 @@ focus_tree = {
         prerequisite = { focus = NAR_expand_the_marine_corps }
         prerequisite = { focus = NAR_transport_equipment }
         relative_position_id = NAR_transport_equipment
+        completion_reward = {
+            every_owned_state = {
+                limit = {
+                    is_core_of = ROOT
+                    is_coastal = yes
+                }
+                add_building_construction = {
+                    type = coastal_bunker
+                    province = {
+                        all_provinces = yes
+                        limit_to_naval_base = yes
+                    }
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
     }
 
     # New Tactics
@@ -906,6 +1000,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_the_new_american_navy }
         relative_position_id = NAR_the_new_american_navy
+        completion_reward = {
+            add_tech_bonus = {
+                category = naval_doctrine
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # The American Coast Guard
@@ -917,6 +1018,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_the_new_american_navy }
         relative_position_id = NAR_the_new_american_navy
+        completion_reward = {
+            add_tech_bonus = {
+                category = dd_tech
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Submarine Modernization
@@ -928,6 +1036,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_new_tactics }
         relative_position_id = NAR_new_tactics
+        completion_reward = {
+            add_tech_bonus = {
+                category = ss_tech
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Cruiser Modernization
@@ -939,6 +1054,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_new_tactics }
         relative_position_id = NAR_new_tactics
+        completion_reward = {
+            add_tech_bonus = {
+                category = cl_tech
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Battlecruiser Development
@@ -951,6 +1073,13 @@ focus_tree = {
         prerequisite = { focus = NAR_cruiser_modernization }
         prerequisite = { focus = NAR_new_tactics }
         relative_position_id = NAR_new_tactics
+        completion_reward = {
+            add_tech_bonus = {
+                category = ca_tech
+                bonus = 1.0
+                uses = 1 
+            }
+        }
     }
 
     # Carrier Research
@@ -962,6 +1091,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_the_american_coast_guard }
         relative_position_id = NAR_the_american_coast_guard
+        completion_reward = {
+            add_tech_bonus = {
+                category = cv_tech
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Naval Aviation
@@ -974,6 +1110,13 @@ focus_tree = {
         prerequisite = { focus = NAR_carrier_research }
         prerequisite = { focus = NAR_cruiser_modernization }
         relative_position_id = NAR_carrier_research
+        completion_reward = {
+            add_tech_bonus = {
+                category = naval_air
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Battleship Development
@@ -985,6 +1128,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_submarine_modernization }
         relative_position_id = NAR_submarine_modernization
+        completion_reward = {
+            add_tech_bonus = {
+                category = bb_tech
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # New Sailors
@@ -996,6 +1146,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_maritime_industry }
         relative_position_id = NAR_maritime_industry
+        completion_reward = {
+            add_manpower = 15000
+        }
     }
 
     # Liberty Ships
@@ -1007,6 +1160,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = NAR_new_sailors }
         relative_position_id = NAR_new_sailors
+        completion_reward = {
+            add_ideas = NAR_liberty_ships_idea
+        }
     }
 
     # America Rules the Waves
@@ -1019,7 +1175,11 @@ focus_tree = {
         prerequisite = { focus = NAR_liberty_ships }
         prerequisite = { focus = NAR_battleship_development }
         prerequisite = { focus = NAR_naval_aviation }
-        prerequisite = { focus = NAR_sempre_fi }
+        prerequisite = { focus = NAR_coastal_bunkers }
         relative_position_id = NAR_liberty_ships
+        completion_reward = {
+            add_ideas = NAR_rules_the_waves_idea
+            navy_experience = 50
+        }
     }
 }

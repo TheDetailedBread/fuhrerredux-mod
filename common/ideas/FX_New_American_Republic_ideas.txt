@@ -238,5 +238,34 @@ ideas = {
                 }
             }
         }
+        NAR_new_waves = {
+            allowed = { original_tag = NAR }
+            picture = UoB_women_soldiers
+            modifier = {
+                repair_speed_factor = 0.15
+            }
+        }
+        NAR_maritime_industry_idea = {
+            allowed = { original_tag = NAR }
+            picture = generic_coastal_defense_ships2
+            modifier = {
+                industrial_capacity_dockyard = 0.15
+            }
+        }
+        NAR_liberty_ships_idea = {
+			allowed = { original_tag = NAR }
+            picture = liberty_ships_focus
+			equipment_bonus = {	
+                convoy = { build_cost_ic = -0.25 instant = yes } 
+            }
+		}
+        NAR_rules_the_waves_idea = {
+            allowed = { original_tag = NAR }
+            picture = generic_coastal_defense_ships
+            modifier = {
+				navy_max_range_factor = 0.20
+				naval_coordination = 0.05
+			}
+        }
     }
 }
