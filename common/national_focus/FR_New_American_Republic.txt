@@ -1182,4 +1182,248 @@ focus_tree = {
             navy_experience = 50
         }
     }
+
+    #################################################################
+
+    # The New American Air Force
+    focus = {
+        id = NAR_the_new_american_air_force
+        icon = GFX_goal_generic_build_airforce
+        x = 24
+        y = 6
+        cost = 6
+        completion_reward = {
+            air_experience = 25
+            country_event = { id = nar.1 hours = 4 }
+        }
+    }
+
+    # Prioritize Support
+    focus = {
+        id = NAR_prioritize_support
+        icon = GFX_goal_generic_secret_weapon
+        x = -2
+        y = 1
+        cost = 6
+        available = {
+            has_country_flag = NAR_chosen_support
+        }
+        prerequisite = { focus = NAR_the_new_american_air_force }
+        relative_position_id = NAR_the_new_american_air_force
+        completion_reward = {
+            add_tech_bonus = {
+                category = cat_battlefield_support
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # Construct Air Bases
+    focus = {
+        id = NAR_construct_air_bases
+        icon = GFX_goal_generic_construction
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_the_new_american_air_force }
+        relative_position_id = NAR_the_new_american_air_force
+        completion_reward = {
+            random_owned_controlled_state = {
+                if = {
+                    limit = {
+                        free_building_slots = {
+                            building = air_base
+                            size > 1
+                        }
+                    }
+                    add_building_construction = {
+                        type = air_base
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+
+    # Embrace Destruction
+    focus = {
+        id = NAR_embrace_destruction
+        icon = GFX_goal_bombs_away
+        x = 2
+        y = 1
+        cost = 6
+        available = {
+            has_country_flag = NAR_chosen_destruction
+        }
+        prerequisite = { focus = NAR_the_new_american_air_force }
+        relative_position_id = NAR_the_new_american_air_force
+        completion_reward = {
+            add_tech_bonus = {
+                category = cat_strategic_destruction
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # Fighter Modernization
+    focus = {
+        id = NAR_fighter_modernization
+        icon = GFX_goal_generic_air_fighter
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_prioritize_support }
+        relative_position_id = NAR_prioritize_support
+        completion_reward = {
+            add_tech_bonus = {
+                category = light_fighter
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # CAS Modernization
+    focus = {
+        id = NAR_cas_modernization
+        icon = GFX_goal_generic_CAS
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_prioritize_support }
+        relative_position_id = NAR_prioritize_support
+        completion_reward = {
+            add_tech_bonus = {
+                category = cas_bomber
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # Heavy Fighter Research
+    focus = {
+        id = NAR_heavy_fighter_research
+        icon = GFX_goal_generic_air_fighter
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_embrace_destruction }
+        relative_position_id = NAR_embrace_destruction
+        completion_reward = {
+            add_tech_bonus = {
+                category = cat_heavy_fighter
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # Strategic Bomber Research
+    focus = {
+        id = NAR_strategic_bomber_research
+        icon = GFX_goal_generic_air_bomber
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_embrace_destruction }
+        relative_position_id = NAR_embrace_destruction
+        completion_reward = {
+            add_tech_bonus = {
+                category = cat_strategic_bomber
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # New Pilots
+    focus = {
+        id = NAR_new_pilots
+        icon = GFX_goal_generic_air_doctrine
+        x = -2
+        y = 2
+        cost = 6
+        prerequisite = {
+            focus = NAR_fighter_modernization
+            focus = NAR_cas_modernization
+            focus = NAR_heavy_fighter_research
+            focus = NAR_strategic_bomber_research
+        }
+        relative_position_id = NAR_construct_air_bases
+        completion_reward = {
+            add_manpower = 15000
+        }
+    }
+
+    # Air Defenses
+    focus = {
+        id = NAR_air_defenses
+        icon = GFX_focus_generic_air_defense
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = NAR_construct_air_bases }
+        relative_position_id = NAR_construct_air_bases
+        completion_reward = {
+            random_owned_controlled_state = {
+                if = {
+                    limit = {
+                        free_building_slots = {
+                            building = anti_air_building
+                            size > 1
+                        }
+                    }
+                    add_building_construction = {
+                        type = anti_air_building
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+
+    # Subsidize the Aviation Industry
+    focus = {
+        id = NAR_subsidize_the_aviation_industry
+        icon = GFX_focus_mex_privatisation
+        x = 2
+        y = 2
+        cost = 6
+        prerequisite = {
+            focus = NAR_fighter_modernization
+            focus = NAR_cas_modernization
+            focus = NAR_heavy_fighter_research
+            focus = NAR_strategic_bomber_research
+        }
+        relative_position_id = NAR_construct_air_bases
+        completion_reward = {
+            add_ideas = NAR_aviation_industry
+        }
+    }
+
+    # Improve Current Strategies
+    focus = {
+        id = NAR_improve_current_strategies
+        icon = GFX_goal_generic_air_production
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_new_pilots }
+        prerequisite = { focus = NAR_air_defenses }
+        prerequisite = { focus = NAR_subsidize_the_aviation_industry }
+        relative_position_id = NAR_air_defenses
+        completion_reward = {
+            air_experience = 15
+            add_tech_bonus = {
+                category = air_doctrine
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
 }
