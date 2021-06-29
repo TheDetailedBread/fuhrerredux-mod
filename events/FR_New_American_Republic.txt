@@ -1,2 +1,19 @@
 # New American Republic Events
 # created by: dax0102
+
+country_event = { # Air Force
+    id = nar.1
+    title = nar.1.t
+    desc = nar.1.d
+    picture = GFX_report_event_ace_promoted
+    is_triggered_only = yes
+
+    option = {
+        name = nar.1.a
+        set_country_flag = NAR_chosen_support
+    }
+    option = {
+        name = nar.1.b
+        set_country_flag = NAR_chosen_destruction
+    }
+}
