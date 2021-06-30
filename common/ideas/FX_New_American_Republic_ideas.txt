@@ -99,6 +99,16 @@ ideas = {
                 monthly_population = 0.15
             }
         }
+        NAR_limited_rights_for_minorities = {
+            allowed = { original_tag = NAR }
+            picture = generic_neutrality_drift_bonus
+            modifier = {
+                stability_factor = 0.05
+                war_support_factor = 0.05
+                conscription_factor = -0.05
+                monthly_population = -0.05
+            }
+        }
         NAR_church_support = {
             allowed = { original_tag = NAR }
             picture = IRE_catholic
@@ -142,20 +152,20 @@ ideas = {
         }
         NAR_labour_agreement = {
             allowed = { original_tag = NAR }
-            picture = generic_production_bonus
+            picture = generic_labour_agreement
             modifier = {
-                production_factory_max_efficiency_factor = 0.15
-                industrial_capacity_factory = -0.05
-                industrial_capacity_dockyard = -0.05
+                production_factory_max_efficiency_factor = -0.15
+                industrial_capacity_factory = 0.15
+                industrial_capacity_dockyard = 0.15
             }
         }
         NAR_union_suppression = {
             allowed = { original_tag = NAR }
-            picture = NOR_labour_conflicts
+            picture = generic_union_suppression
             modifier = {
-                production_factory_max_efficiency_factor = -0.15
-                industrial_capacity_factory = 0.05
-                industrial_capacity_dockyard = 0.05
+                production_factory_max_efficiency_factor = 0.15
+                industrial_capacity_factory = -0.15
+                industrial_capacity_dockyard = -0.15
             }
         }
         NAR_cointelpro = {
@@ -240,7 +250,7 @@ ideas = {
         }
         NAR_new_waves = {
             allowed = { original_tag = NAR }
-            picture = UoB_women_soldiers
+            picture = generic_maritime_industry
             modifier = {
                 repair_speed_factor = 0.15
             }
@@ -275,6 +285,16 @@ ideas = {
                     build_cost_ic = -0.05
                     instant = yes
                 }
+            }
+        }
+        NAR_worker_and_minority_strikes = {
+            allowed = { original_tag = NAR }
+            picture = NOR_labour_conflicts
+            modifier = {
+                consumer_goods_factor = 0.25
+                production_speed_buildings_factor = -0.25
+                industrial_capacity_factory = -0.25
+                industrial_capacity_dockyard = -0.25
             }
         }
     }

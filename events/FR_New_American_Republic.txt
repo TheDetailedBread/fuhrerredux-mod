@@ -1,6 +1,8 @@
 # New American Republic Events
 # created by: dax0102
 
+add_namespace = nar
+
 country_event = { # Air Force
     id = nar.1
     title = nar.1.t
@@ -15,5 +17,229 @@ country_event = { # Air Force
     option = {
         name = nar.1.b
         set_country_flag = NAR_chosen_destruction
+    }
+}
+
+country_event = { # Minorities and Security Force clash at Chicago
+    id = nar.2
+    title = nar.2.t
+    desc = nar.2.d
+    picture = GFX_report_event_generic_strike
+    is_triggered_only = yes
+
+    option = { # Just as we thought..
+        name = nar.2.a
+        add_political_power = -50
+        hidden_effect = {
+            country_event = { id = nar.3 hours = 18 }
+        }
+    }
+}
+
+country_event = { # Tragedy at Western Avenue
+    id = nar.3
+    title = nar.3.t
+    desc = nar.3.d
+    picture = GFX_report_event_iww_demonstration
+    is_triggered_only = yes
+
+    option = { # We send our condelences
+        name = nar.3.a
+        ai_chance = {
+            factor = 80
+        }
+        add_political_power = 5
+        hidden_effect = {
+            country_event = { id = nar.4 days = 7 }
+        }
+    }
+}
+
+country_event = { # Minorities Demands Reforms
+    id = nar.4
+    title = nar.4.t
+    desc = nar.4.d
+    picture = GFX_report_event_gathering_protest
+    is_triggered_only = yes
+
+    option = { # That is a bit out of stretch
+        name = nar.4.a
+        ai_chance = {
+            factor = 90
+        }
+        add_political_power = -50
+        hidden_effect = {
+            country_event = { id = nar.5 days = 7 }
+        }
+    }
+    option = { # It's not to late to accept
+        name = nar.4.b
+        ai_chance = {
+            factor = 10
+        }
+        add_political_power = 50
+        hidden_effect = {
+            country_event = { id = nar.7 days = 8 }
+        }
+    }
+}
+
+country_event = { # Worker Join the Minorities in Strikes
+    id = nar.5
+    title = nar.5.t
+    desc = nar.5.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = { # Order the arrest of their prominent leaders!
+        name = nar.5.a
+        add_ideas = NAR_worker_and_minority_strikes
+        add_stability = -0.05
+        hidden_effect = {
+            country_event = { id = nar.6 days = 14 }
+        }
+    }
+    option = { # Do nothing
+        name = nar.5.b
+        add_ideas = NAR_worker_and_minority_strikes
+        hidden_effect = {
+            country_event = { id = nar.7 days = 14 }
+        }
+    }
+}
+
+country_event = { # Revolt!
+    id = nar.6
+    title = nar.6.t
+    desc = nar.6.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            every_owned_state = {
+                limit = {
+                    OR = {
+                        state = 394
+                        state = 395
+                        state = 396
+                    }
+                }
+                SRA = {
+                    add_state_core = PREV
+                    transfer_state = PREV
+                }
+                NAR = {
+                    remove_state_core = PREV
+                    add_state_claim = PREV
+                    delete_unit = {
+                        state = PREV
+                        disband = no
+                    }
+                }
+            }
+            SRA = {
+                load_oob = "SRA"
+                set_cosmetic_tag = SRA_revolt
+            }
+        }
+    }
+
+    option = {
+        name = nar.6.a
+        if = {
+            limit = { has_idea = NAR_worker_and_minority_strikes }
+            remove_ideas = NAR_worker_and_minority_strikes
+        }
+        declare_war_on = {
+            target = SRA
+            type = annex_everything
+        }
+    }
+}
+
+country_event = { # Reforms
+    id = nar.7
+    title = nar.7.t
+    desc = nar.7.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = { # Accept
+        name = nar.7.a
+        if = {
+            limit = { has_idea = NAR_racial_issue }
+            swap_ideas = {
+                remove_idea = NAR_racial_issue
+                add_idea = NAR_equal_rights_for_minorities
+            }
+        }
+        else_if = {
+            limit = { has_idea = NAR_suppressed_minorities }
+            swap_ideas = {
+                remove_idea = NAR_suppressed_minorities
+                add_idea = NAR_equal_rights_for_minorities
+            }
+        }
+    }
+    option = { # Compromise
+        name = nar.7.b
+        if = {
+            limit = { has_idea = NAR_racial_issue }
+            swap_ideas = {
+                remove_idea = NAR_racial_issue
+                add_idea = NAR_limited_rights_for_minorities
+            }
+        }
+        else_if = {
+            limit = { has_idea = NAR_suppressed_minorities }
+            swap_ideas = {
+                remove_idea = NAR_suppressed_minorities
+                add_idea = NAR_limited_rights_for_minorities
+            }
+        }
+    }
+}
+
+country_event = { # Reforming the National Guardsmen?
+    id = nar.8
+    title = nar.8.t
+    desc = nar.8.d
+    picture = GFX_report_event_czech_soldiers_01
+    is_triggered_only = yes
+
+    option = { # Reform the Security Forces
+        name = nar.8.a
+        add_political_power = 50
+        hidden_effect = {
+            country_event = { id = nar.7 days = 21 }
+        }
+    }
+    option = { # Just fire the hot-headed ones
+        name = nar.8.b
+        add_political_power = 10
+    }
+}
+
+country_event = { # Revolt Crushed
+    id = nar.9
+    title = nar.9.t
+    desc = nar.9.d
+    picture = GFX_report_event_czech_soldiers_01
+    is_triggered_only = yes
+
+    option = {
+        name = nar.9.a
+        every_owned_state = {
+            limit = {
+                OR = {
+                    state = 394
+                    state = 395
+                    state = 396
+                }
+            }
+            SRA = { remove_state_core = PREV }
+            NAR = { add_state_core = PREV }
+        }
     }
 }
