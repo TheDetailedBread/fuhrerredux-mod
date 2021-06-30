@@ -221,6 +221,7 @@ focus_tree = {
         x = -1
         y = 1
         cost = 6
+        ai_will_do = { factor = 400 }
         mutually_exclusive = { focus = NAR_rights_for_everyone }
         prerequisite = { focus = NAR_cement_our_authority }
         relative_position_id = NAR_cement_our_authority
@@ -228,6 +229,9 @@ focus_tree = {
             swap_ideas = {
                 remove_idea = NAR_racial_issue
                 add_idea = NAR_suppressed_minorities
+            }
+            hidden_effect = {
+                country_event = { id = nar.2 months = 1 }
             }
         }
     }

@@ -1,0 +1,15 @@
+on_actions = {
+    on_annex = {
+        effect = {
+            if = {
+                limit = {
+                    FROM = { tag = SRA }
+                    ROOT = { tag = NAR }
+                }
+                ROOT = {
+                    country_event = { id = nar.9 days = 2 }
+                }
+            }
+        }
+    }
+}
