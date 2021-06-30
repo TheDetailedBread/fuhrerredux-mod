@@ -1,6 +1,7 @@
 on_actions = {
     on_annex = {
         effect = {
+            # if Ford wins
             if = {
                 limit = {
                     FROM = { tag = SRA }
@@ -8,6 +9,16 @@ on_actions = {
                 }
                 ROOT = {
                     country_event = { id = nar.9 days = 2 }
+                }
+            }
+            # if the revolt wins
+            if = {
+                limit = {
+                    FROM = { tag = NAR }
+                    ROOT = { tag = SRA }
+                }
+                ROOT = {
+                    country_event = { id = sra.1 days = 2 }
                 }
             }
         }

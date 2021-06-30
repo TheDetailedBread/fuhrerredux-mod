@@ -301,3 +301,38 @@ news_event = { # Abdülmecid II Assassinated
         name = news.16.a
     }
 }
+
+news_event = { # Revolt in the New American Republic
+    id = news.17
+    title = news.17.t
+    desc = news.17.d
+    picture = GFX_news_event_capture_chicago
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = NAR }
+        NOT = { tag = SRA }
+    }
+
+    option = {
+        name = news.17.a
+    }
+}
+
+news_event = { # SRA Victorious!
+    id = news.18
+    title = news.18.t
+    desc = news.18.d
+    picture = GFX_news_event_capture_chicago
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = SRA }
+    }
+
+    option = {
+        name = news.18.a
+    }
+}

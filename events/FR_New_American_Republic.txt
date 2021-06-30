@@ -96,6 +96,7 @@ country_event = { # Worker Join the Minorities in Strikes
         add_ideas = NAR_worker_and_minority_strikes
         add_stability = -0.05
         hidden_effect = {
+            set_country_flag = NAR_mass_arrests
             country_event = { id = nar.6 days = 14 }
         }
     }
@@ -103,7 +104,7 @@ country_event = { # Worker Join the Minorities in Strikes
         name = nar.5.b
         add_ideas = NAR_worker_and_minority_strikes
         hidden_effect = {
-            country_event = { id = nar.7 days = 14 }
+            country_event = { id = nar.6 days = 14 }
         }
     }
 }
@@ -141,6 +142,19 @@ country_event = { # Revolt!
             SRA = {
                 load_oob = "SRA"
                 set_cosmetic_tag = SRA_revolt
+            }
+            if = {
+                limit = {
+                    has_country_flag = NAR_mass_arrests
+                }
+                SRA = {
+                    add_ideas = NAR_revolutionary_fervor
+                    add_state_core = 397
+                    transfer_state = 397
+                }
+            }
+            random_other_country = {
+                news_event = { id = news.17 hours = 12 }
             }
         }
     }
@@ -236,6 +250,7 @@ country_event = { # Revolt Crushed
                     state = 394
                     state = 395
                     state = 396
+                    state = 397
                 }
             }
             SRA = { remove_state_core = PREV }
