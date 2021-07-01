@@ -3,6 +3,16 @@
 #######################
 
 ideas = {
+    hidden_ideas = {
+        USA_emergency_government_idea = {
+            allowed = { original_tag = USA }
+            picture = ENG_the_war_to_end_all_wars
+            modifier = {
+                offensive_war_stability_factor = 0.15
+                defensive_war_stability_factor = 0.15
+            }
+        }
+    }
     country = {
 		USA_the_greater_depression = {
             allowed = { original_tag = USA }
@@ -493,6 +503,16 @@ ideas = {
                 head_of_government
                 market_liberal
                 hog_old_compromiser
+            }
+        }
+        USA_Charles_Curtis_hog_mli = {
+            allowed = { original_tag = USA }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                market_liberal
+                hog_silent_workhorse
             }
         }
         USA_Alben_W_Barkley_hog_mli = {

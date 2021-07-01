@@ -1,0 +1,243 @@
+NAR_unification_of_america = {
+    NAR_attack_traitors = {
+        icon = GFX_decision_generic_prepare_civil_war
+
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = NAR
+                    tag = CLB
+                    tag = NEE
+                    tag = ORE
+                    tag = USA
+                }
+            }
+        }
+
+        visible = {
+            country_exists = FROM
+            is_neighbor_of = FROM
+            NOT = { tag = FROM }
+        }
+        available = { has_war = no }
+        complete_effect = {
+            create_wargoal = {
+                target = FROM
+                type = annex_everything
+            }
+        }
+    }
+    NAR_demand_territory = {
+        icon = GFX_decision_eng_trade_unions_support
+
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = MEX
+                    tag = CAN
+                    tag = ENG
+                }
+            }
+        }
+
+        visible = { 
+            FROM = {
+                is_neighbor_of = ROOT
+                any_owned_state = { is_core_of = ROOT }
+            }
+        }
+        available = { 
+            has_war = no
+            is_neighbor_of = FROM
+        }
+        complete_effect = {
+            FROM = {  }
+        }
+    }
+}
+NAR_state_reintegration = {
+    NAR_integrate_columbian_states = {
+        name = NAR_integrate_state
+        icon = GFX_decision_oppression
+        cost = 25
+        days_remove = 60
+        fire_only_once = yes
+
+        state_target = yes
+        on_map_mode = map_and_decisions_view
+        targets = {
+            373 374 381 382 383 384 385 386 387 388 389 390
+            391 392
+        }
+        target_trigger = { owns_state = FROM }
+
+        visible = {
+            NOT = { country_exists = CLB }
+            NOT = { is_core_of = ROOT }
+        }
+        available = { controls_state = FROM }
+        remove_effect = {
+            add_state_core = FROM
+            hidden_effect = {
+                CLB = { remove_state_core = FROM }
+            }
+        }
+    }
+    NAR_integrate_new_english_states = {
+        name = NAR_integrate_state
+        icon = GFX_decision_oppression
+        cost = 25
+        days_remove = 60
+        fire_only_once = yes
+
+        state_target = yes
+        on_map_mode = map_and_decisions_view
+        targets = {
+            357 358 359 837 838 839 840 841
+        }
+        target_trigger = { owns_state = FROM }
+
+        visible = {
+            NOT = { country_exists = NEE }
+            NOT = { is_core_of = ROOT }
+        }
+        available = { controls_state = FROM }
+        remove_effect = {
+            add_state_core = FROM
+            hidden_effect = {
+                NEE = { remove_state_core = FROM }
+            }
+        }
+    }
+    NAR_integrate_shoshoni_states = {
+        name = NAR_integrate_state
+        icon = GFX_decision_oppression
+        cost = 25
+        days_remove = 60
+        fire_only_once = yes
+
+        state_target = yes
+        on_map_mode = map_and_decisions_view
+        targets = {
+            387
+        }
+        target_trigger = { owns_state = FROM }
+
+        visible = {
+            NOT = { country_exists = SNE }
+            NOT = { is_core_of = ROOT }
+        }
+        available = { controls_state = FROM }
+        remove_effect = {
+            add_state_core = FROM
+            hidden_effect = {
+                SNE = { remove_state_core = FROM }
+            }
+        }
+    }
+    NAR_integrate_oregon_states = {
+        name = NAR_integrate_state
+        icon = GFX_decision_oppression
+        cost = 25
+        days_remove = 60
+        fire_only_once = yes
+
+        state_target = yes
+        on_map_mode = map_and_decisions_view
+        targets = {
+            385 386
+        }
+        target_trigger = { owns_state = FROM }
+
+        visible = {
+            NOT = { country_exists = ORE }
+            NOT = { is_core_of = ROOT }
+        }
+        available = { controls_state = FROM }
+        remove_effect = {
+            add_state_core = FROM
+            hidden_effect = {
+                ORE = { remove_state_core = FROM }
+            }
+        }
+    }
+    NAR_integrate_federal_states = {
+        name = NAR_integrate_state
+        icon = GFX_decision_oppression
+        cost = 25
+        days_remove = 60
+        fire_only_once = yes
+
+        state_target = yes
+        on_map_mode = map_and_decisions_view
+        targets = {
+            361 362 363 364 365 366 367 368
+            370 371 372
+        }
+        target_trigger = { owns_state = FROM }
+
+        visible = {
+            NOT = { country_exists = USA }
+            NOT = { is_core_of = ROOT }
+        }
+        available = { controls_state = FROM }
+        remove_effect = {
+            add_state_core = FROM
+            hidden_effect = {
+                USA = { remove_state_core = FROM }
+            }
+        }
+    }
+    NAR_formalize_the_new_republic = {
+        cost = 50
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = USA_recovered_territories_from_mexico_tt
+                AND = {
+                    owns_state = 375 # Texas
+                    owns_state = 376 # New Mexico
+                    owns_state = 377 # Arizona
+                    owns_state = 378 # California
+                    owns_state = 379 # Nevada
+                    owns_state = 380 # Utah 
+                    owns_state = 484 # Baja California
+                    owns_state = 919 # East Texas
+                    owns_state = 920 # Panhandle
+                    owns_state = 921 # Transpecos
+                    owns_state = 926 # Bay Area
+                    owns_state = 927 # Northern California
+                    owns_state = 928 # Southern California
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = USA_recovered_territories_from_britain_tt
+                AND = {
+                    owns_state = 385 # Oregon
+                    owns_state = 386 # Washington
+                    owns_state = 463 # Alaska
+                }
+            }
+        }
+        visible = {
+            has_war = no
+            NOT = { country_exists = NEE }
+            NOT = { country_exists = NAR }
+            NOT = { country_exists = CLB }
+            NOT = { country_exists = ORE }
+            NOT = { country_exists = SNE }
+            any_owned_state = {
+                OR = {
+                    NOT = { is_core_of = NEE }
+                    NOT = { is_core_of = NAR }
+                    NOT = { is_core_of = CLB }
+                    NOT = { is_core_of = ORE }
+                    NOT = { is_core_of = SNE }
+                }
+            }
+        }
+        complete_effect = {
+            remove_ideas = NAR_illegitimate_government
+        }
+    }
+}
