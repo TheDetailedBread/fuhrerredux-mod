@@ -12,17 +12,17 @@ focus_tree = {
         }
     }
 
-    continuous_focus_position = { x = 100 y = 900 }
+    continuous_focus_position = { x = 100 y = 1400 }
 
     # Cement our Authority
     focus = {
         id = NAR_cement_our_authority
-        icon = GFX_goal_flag_new_american_republic
+        icon = GFX_goal_authoritarian
         x = 7
         y = 0
         cost = 6
         completion_reward = {
-            add_political_power = 150
+            add_political_power = 100
         }
     }
 
@@ -222,35 +222,30 @@ focus_tree = {
         y = 1
         cost = 6
         ai_will_do = { factor = 400 }
-        mutually_exclusive = { focus = NAR_rights_for_everyone }
+        mutually_exclusive = { 
+            focus = NAR_limited_rights_for_minorities
+        }
         prerequisite = { focus = NAR_cement_our_authority }
         relative_position_id = NAR_cement_our_authority
         completion_reward = {
-            swap_ideas = {
-                remove_idea = NAR_racial_issue
-                add_idea = NAR_suppressed_minorities
-            }
-            hidden_effect = {
-                country_event = { id = nar.2 months = 1 }
-            }
+            NAR_increase_suppression = yes
         }
     }
 
-    # Rights for Everyone
+    # Limited Rights
     focus = {
-        id = NAR_rights_for_everyone
+        id = NAR_limited_rights_for_minorities
         icon = GFX_goal_liberty
         x = 1
         y = 1
         cost = 6
-        mutually_exclusive = { focus = NAR_suppress_the_minorities }
+        mutually_exclusive = { 
+            focus = NAR_suppress_the_minorities
+        }
         prerequisite = { focus = NAR_cement_our_authority }
         relative_position_id = NAR_cement_our_authority
         completion_reward = {
-            swap_ideas = {
-                remove_idea = NAR_racial_issue
-                add_idea = NAR_equal_rights_for_minorities
-            }
+            NAR_decrease_suppression = yes
         }
     }
 
@@ -263,7 +258,7 @@ focus_tree = {
         cost = 6
         prerequisite = { 
             focus = NAR_suppress_the_minorities 
-            focus = NAR_rights_for_everyone
+            focus = NAR_limited_rights_for_minorities
         }
         relative_position_id = NAR_suppress_the_minorities
         completion_reward = {
@@ -364,10 +359,10 @@ focus_tree = {
         }
     }
 
-    # Ensure Bureaucratic Loyalty
+    # Republic without Democracy
     focus = {
-        id = NAR_ensure_bureaucratic_loyalty
-        icon = GFX_goal_Centralised_Government
+        id = NAR_republic_without_democracy
+        icon = GFX_goal_DEI_focus_disband_volksraad
         x = 1
         y = 1
         cost = 6
@@ -377,7 +372,7 @@ focus_tree = {
         }
         relative_position_id = NAR_secure_labour_agreements
         completion_reward = {
-            remove_ideas = NAR_unstable_bureaucracy
+            add_political_power = 150
         }
     }
 
@@ -466,26 +461,26 @@ focus_tree = {
         x = 0
         y = 1
         cost = 6
-        prerequisite = { focus = NAR_purge_opposition }
-        relative_position_id = NAR_purge_opposition
-        completion_reward = {
-            unlock_decision_category_tooltip = NAR_unification_of_america
-        }
-    }
-
-    # Republic without Democracy
-    focus = {
-        id = NAR_republic_without_democracy
-        icon = GFX_goal_DEI_focus_disband_volksraad
-        x = 0
-        y = 1
-        cost = 6
         prerequisite = { focus = NAR_begin_civilian_mobilization }
         prerequisite = { focus = NAR_economic_recovery }
         prerequisite = { focus = NAR_ensure_bureaucratic_loyalty }
         relative_position_id = NAR_begin_civilian_mobilization
         completion_reward = {
-            unlock_decision_category_tooltip = NAR_state_integration
+            unlock_decision_category_tooltip = NAR_unification_of_america
+        }
+    }
+
+    # Ensure Bureaucratic Loyalty
+    focus = {
+        id = NAR_ensure_bureaucratic_loyalty
+        icon = GFX_goal_Centralised_Government
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_purge_opposition }
+        relative_position_id = NAR_purge_opposition
+        completion_reward = {
+            remove_ideas = NAR_unstable_bureaucracy
         }
     }
 
@@ -830,7 +825,7 @@ focus_tree = {
     focus = {
         id = NAR_the_new_american_navy
         icon = GFX_goal_generic_build_navy
-        x = 14
+        x = 13
         y = 6
         cost = 6
         available = {
@@ -1193,7 +1188,7 @@ focus_tree = {
     focus = {
         id = NAR_the_new_american_air_force
         icon = GFX_goal_generic_build_airforce
-        x = 24
+        x = 22
         y = 6
         cost = 6
         completion_reward = {
@@ -1429,5 +1424,147 @@ focus_tree = {
                 uses = 1
             }
         }
+    }
+
+    #################################################################
+
+    # Join the Entente
+    focus = {
+        id = NAR_join_the_entente
+        icon = GFX_focus_chi_reach_out_to_france
+        x = 1
+        y = 6
+        cost = 6
+        available = {
+            NOT = { has_idea = NAR_illegitimate_government }
+        }
+        mutually_exclusive = { focus = NAR_our_own_domain }
+    }
+
+    # Unite the Armies
+    focus = {
+        id = NAR_unite_the_armies
+        icon = GFX_goal_army_guy_2
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_join_the_entente }
+        relative_position_id = NAR_join_the_entente
+    }
+
+    # The Three Eyes Program
+    focus = {
+        id = NAR_the_three_eyes_program
+        icon = GFX_goal_offensive_army
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_join_the_entente }
+        relative_position_id = NAR_join_the_entente
+    }
+
+    # Our Own Domain
+    focus = {
+        id = NAR_our_own_domain
+        icon = GFX_focus_generic_diplomatic_treaty
+        x = 2
+        y = 0
+        cost = 6
+        available = {
+            NOT = { has_idea = NAR_illegitimate_government }
+        }
+        mutually_exclusive = { focus = NAR_join_the_entente }
+        relative_position_id = NAR_join_the_entente
+    }
+
+    # Reclaim Corporate Lands
+    focus = {
+        id = NAR_reclaim_corporate_lands
+        icon = GFX_goal_generic_attack_guatemala
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_our_own_domain }
+        relative_position_id = NAR_our_own_domain
+        completion_reward = {
+            custom_effect_tooltip = NAR_reclaim_corporate_lands_tt
+        }
+    }
+
+    # The Coffee Plantations
+    focus = {
+        id = NAR_the_coffee_plantations
+        icon = GFX_goal_generic_attack_colombia
+        x = 3
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_our_own_domain }
+        relative_position_id = NAR_our_own_domain
+        completion_reward = {
+            custom_effect_tooltip = NAR_the_coffee_plantations_tt
+        }
+    }
+
+    # The Carribean Shipyards
+    focus = {
+        id = NAR_the_carribean_shipyards
+        icon = GFX_goal_generic_attack_cuba
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_reclaim_corporate_lands }
+        relative_position_id = NAR_reclaim_corporate_lands
+        completion_reward = {
+            custom_effect_tooltip = NAR_the_carribean_shipyards_tt
+        }
+    }
+
+    # Attack the Marxists
+    focus = {
+        id = NAR_attack_the_marxists
+        icon = GFX_goal_generic_attack_socialist_brazil
+        x = -1
+        y = 1
+        cost = 6
+        available = {
+            UBR = { can_declare_war = yes }
+            NOT = { country_exists = BPS }
+        }
+        mutually_exclusive = { focus = NAR_support_the_state }
+        prerequisite = { focus = NAR_the_coffee_plantations }
+        relative_position_id = NAR_the_coffee_plantations
+    }
+
+    # Support the State
+    focus = {
+        id = NAR_support_the_state
+        icon = GFX_goal_generic_demand_territory
+        x = 1
+        y = 1
+        cost = 6
+        available = {
+            country_exists = BPS
+        }
+        bypass = {
+            OR = {
+                has_war_with = BPS
+                is_in_faction_with = BPS
+            }
+        }
+        mutually_exclusive = { focus = NAR_attack_the_marxists }
+        prerequisite = { focus = NAR_the_coffee_plantations }
+        relative_position_id = NAR_the_coffee_plantations
+    }
+
+    # Continue the Cleansing
+    focus = {
+        id = NAR_continue_the_cleansing
+        icon = GFX_goal_generic_political_pressure
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_attack_the_marxists }
+        prerequisite = { focus = NAR_support_the_state }
+        relative_position_id = NAR_attack_the_marxists
     }
 }

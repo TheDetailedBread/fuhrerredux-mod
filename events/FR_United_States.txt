@@ -1587,7 +1587,7 @@ country_event = { # New England Seceeds
     id = usa.102
     title = usa.102.t
     desc = usa.102.d
-    picture = GFX_report_event_communist_leader
+    picture = GFX_report_event_generic_norman_thomas
     is_triggered_only = yes
 
     trigger = {
@@ -1647,7 +1647,7 @@ country_event = { # Midwest Seceeds
     id = usa.103
     title = usa.103.t
     desc = usa.103.d
-    picture = GFX_report_event_canada_patriation
+    picture = GFX_report_event_generic_pelley_and_friends
     is_triggered_only = yes
 
     trigger = {
@@ -1710,7 +1710,7 @@ country_event = { # Rust Belt
     id = usa.104
     title = usa.104.t
     desc = usa.104.d
-    picture = GFX_report_event_fascists_posing
+    picture = GFX_report_event_canada_patriation
     is_triggered_only = yes
 
     trigger = {
@@ -1817,10 +1817,15 @@ country_event = { # Collapse of the Union
 
     option = {
         name = usa.106.a
-        add_ideas = USA_anarchy_and_chaos
+        add_ideas = {
+            USA_anarchy_and_chaos
+            USA_economic_shock
+            USA_crumbling_army
+            USA_apathetic_citizens
+        }
         set_country_flag = USA_union_collapsed
-        set_cosmetic_tag = USA_federal
         hidden_effect = {
+            set_cosmetic_tag = USA_federal
             load_focus_tree = usa_emergency_focus
             country_event = { id = usa.107 days = 3 }
             random_other_country = {

@@ -1,3 +1,77 @@
+foreign_politics = {
+    NAR_invade_ufc_countries = {
+        allowed = { original_tag = NAR }
+        name = NAR_invade_country
+        icon = GFX_decision_generic_prepare_civil_war
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = CRU
+                    tag = GUA
+                    tag = HON
+                    tag = ELS
+                    tag = NIC
+                    tag = COS
+                }
+            }
+        }
+        visible = {
+            has_completed_focus = NAR_reclaim_corporate_lands
+        }
+        available = {
+            FROM = { can_declare_war = yes }
+        }
+        complete_effect = {
+            create_wargoal = { target = FROM type = annex_everything }
+        }
+    }
+    NAR_invade_carribean_countries = {
+        allowed = { original_tag = NAR }
+        name = NAR_invade_country
+        icon = GFX_decision_generic_prepare_civil_war
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = CUB
+                    tag = HAI
+                    tag = DOM
+                }
+            }
+        }
+        visible = {
+            has_completed_focus = NAR_the_carribean_shipyards
+        }
+        available = {
+            FROM = { can_declare_war = yes }
+        }
+        complete_effect = {
+            create_wargoal = { target = FROM type = annex_everything }
+        }
+    }
+    NAR_invade_coffee_countries = {
+        allowed = { original_tag = NAR }
+        name = NAR_invade_country
+        icon = GFX_decision_generic_prepare_civil_war
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = ECU
+                    tag = COL
+                    tag = VEN
+                }
+            }
+        }
+        visible = {
+            has_completed_focus = NAR_the_coffee_plantations
+        }
+        available = {
+            FROM = { can_declare_war = yes }
+        }
+        complete_effect = {
+            create_wargoal = { target = FROM type = annex_everything }
+        }
+    }
+}
 NAR_unification_of_america = {
     NAR_attack_traitors = {
         icon = GFX_decision_generic_prepare_civil_war
