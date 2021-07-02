@@ -1,0 +1,21 @@
+defined_text = {
+    name = NAR_current_minority_status
+    text = {
+        trigger = {
+            check_variable = { minority_suppression > 60 }
+        }
+        localization_key = NAR_oppressed
+    }
+    text = {
+        trigger = {
+            check_variable = { minority_suppression < 1 }
+        }
+        localization_key = PHI_aeda_none
+    }
+    text = {
+        trigger = {
+            check_variable = { minority_suppression }
+        }
+        localization_key = PHI_aeda1_last
+    }
+}

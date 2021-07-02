@@ -292,26 +292,34 @@ ideas = {
         }
         USA_anarchy_and_chaos = {
             allowed = { original_tag = USA }
-            picture = hol_liberation
+            picture = chi_war_of_resistance2
             modifier = {
                 stability_factor = -0.35
                 war_support_factor = -0.35
             }
         }
-        USA_anarchy_and_chaos_1 = {
+        USA_apathetic_citizens = {
             allowed = { original_tag = USA }
-            picture = hol_liberation
+            picture = chi_wargaming_division
             modifier = {
-                stability_factor = -0.25
-                war_support_factor = -0.25
+                political_power_gain = -0.15
+                conscription_factor = -0.15
             }
         }
-        USA_anarchy_and_chaos_2 = {
+        USA_economic_shock = {
             allowed = { original_tag = USA }
-            picture = hol_liberation
+            picture = FRA_matignon_agreements
             modifier = {
-                stability_factor = -0.15
-                war_support_factor = -0.15
+                industrial_capacity_factory = -0.15
+                industrial_capacity_dockyard = -0.15
+            }
+        }
+        USA_crumbling_army = {
+            allowed = { original_tag = USA }
+            picture = generic_army_problems
+            modifier = {
+                army_morale_factor = -0.15
+                army_org_factor = -0.15
             }
         }
         USA_unification_spirit = {
@@ -326,8 +334,10 @@ ideas = {
         }
         USA_american_gis = {
             allowed = { original_tag = USA }
-            picture = army_cooperation
+            picture = country_focus_army
             modifier = {
+                supply_consumption_factor = -0.15
+                army_org_factor = 0.05
                 army_attack_factor = 0.05
                 army_defence_factor = 0.05
             }
@@ -338,6 +348,14 @@ ideas = {
             modifier = {
                 industrial_capacity_factory = -0.15
                 industrial_capacity_dockyard = -0.15
+            }
+        }
+        USA_emergency_funds_idea = {
+            allowed = { original_tag = USA }
+            picture = generic_foreign_capital
+            modifier = {
+                consumer_goods_factor = -0.15
+                production_speed_buildings_factor = 0.25
             }
         }
     }
