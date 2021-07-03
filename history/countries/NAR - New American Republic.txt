@@ -104,10 +104,10 @@ add_ideas = {
 	NAR_unstable_bureaucracy
 	NAR_illegitimate_government
 
-	GEN_hog_pau
-    GEN_for_pau
-    GEN_eco_pau
-    GEN_sec_pau
+	NAR_Henry_Ford_hog_pau
+    NAR_William_Bell_Riley_for_pau
+    NAR_Charles_Emil_Sorensen_eco_pau
+    NAR_Clare_Eugene_Hoffman_sec_pau
 	republican_dictatorship
 }
 
@@ -179,22 +179,22 @@ create_field_marshal = {
 	planning_skill = 1
 	logistics_skill = 1
 }
-
-### Corp Commanders
-create_corps_commander = {
-	name = "Jacob L. Devers"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Jacob_Devers.tga"
-	traits = { trait_reckless artillery_officer artillery_specialist }
+create_field_marshal = {
+	name = "George S. Patton"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_S_Patton.tga"
+	traits = { trickster armor_officer panzer_leader war_hero trait_reckless }
 	skill = 5
 	attack_skill = 7
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 4
 }
+
+### Corp Commanders
 create_corps_commander = {
-	name = "George S. Patton"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_S_Patton.tga"
-	traits = { trickster armor_officer panzer_leader war_hero trait_reckless }
+	name = "Jacob L. Devers"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Jacob_Devers.tga"
+	traits = { trait_reckless artillery_officer artillery_specialist }
 	skill = 5
 	attack_skill = 7
 	defense_skill = 3
@@ -270,4 +270,36 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 2
+}
+
+### Admirals
+create_navy_leader = {
+	name = "Arthur L. Bristol"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Arthur_Bristol.tga"
+	traits = { air_controller }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Francis L. Garrett"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Francis_L_Garrett.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = "Mickey Cochrane"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Mickey_Cochrane.tga"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
 }

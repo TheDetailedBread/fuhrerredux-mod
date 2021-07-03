@@ -1454,7 +1454,7 @@ focus_tree = {
     focus = {
         id = NAR_reclaim_corporate_lands
         icon = GFX_goal_generic_attack_guatemala
-        x = -1
+        x = -2
         y = 1
         cost = 6
         prerequisite = { focus = NAR_our_own_domain }
@@ -1464,31 +1464,32 @@ focus_tree = {
         }
     }
 
-    # The Coffee Plantations
+    # The Carribean Shipyards
     focus = {
-        id = NAR_the_coffee_plantations
-        icon = GFX_goal_generic_attack_colombia
+        id = NAR_the_carribean_shipyards
+        icon = GFX_goal_generic_attack_cuba
         x = 2
         y = 1
         cost = 6
         prerequisite = { focus = NAR_our_own_domain }
         relative_position_id = NAR_our_own_domain
+        
         completion_reward = {
-            custom_effect_tooltip = NAR_the_coffee_plantations_tt
+            custom_effect_tooltip = NAR_the_carribean_shipyards_tt
         }
     }
 
-    # The Carribean Shipyards
+    # The Coffee Plantations
     focus = {
-        id = NAR_the_carribean_shipyards
-        icon = GFX_goal_generic_attack_cuba
-        x = -1
+        id = NAR_the_coffee_plantations
+        icon = GFX_goal_generic_attack_colombia
+        x = 0
         y = 1
         cost = 6
         prerequisite = { focus = NAR_reclaim_corporate_lands }
         relative_position_id = NAR_reclaim_corporate_lands
         completion_reward = {
-            custom_effect_tooltip = NAR_the_carribean_shipyards_tt
+            custom_effect_tooltip = NAR_the_coffee_plantations_tt
         }
     }
 
@@ -1504,8 +1505,8 @@ focus_tree = {
             NOT = { country_exists = BPS }
         }
         mutually_exclusive = { focus = NAR_support_the_state }
-        prerequisite = { focus = NAR_the_coffee_plantations }
-        relative_position_id = NAR_the_coffee_plantations
+        prerequisite = { focus = NAR_the_carribean_shipyards }
+        relative_position_id = NAR_the_carribean_shipyards
         completion_reward = {
             create_wargoal = {
                 target = UBR
@@ -1531,8 +1532,8 @@ focus_tree = {
             }
         }
         mutually_exclusive = { focus = NAR_attack_the_marxists }
-        prerequisite = { focus = NAR_the_coffee_plantations }
-        relative_position_id = NAR_the_coffee_plantations
+        prerequisite = { focus = NAR_the_carribean_shipyards }
+        relative_position_id = NAR_the_carribean_shipyards
         completion_reward = {
             BPS = { country_event = { id = newamerica.100 hours = 12 } }
         }
@@ -1542,11 +1543,12 @@ focus_tree = {
     focus = {
         id = NAR_continue_the_cleansing
         icon = GFX_goal_generic_political_pressure
-        x = 1
+        x = -1
         y = 1
         cost = 6
         prerequisite = { focus = NAR_attack_the_marxists }
         prerequisite = { focus = NAR_support_the_state }
+        prerequisite = { focus = NAR_the_coffee_plantations }
         relative_position_id = NAR_attack_the_marxists
         completion_reward = {
             custom_effect_tooltip = NAR_continue_the_cleansing_tt

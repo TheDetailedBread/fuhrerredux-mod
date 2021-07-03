@@ -250,10 +250,10 @@ country_event = { # Simmons Coup
         }
         remove_every_minister = yes
         add_ideas = {
-            GEN_hog_npo
-            GEN_for_npo
-            GEN_eco_npo
-            GEN_sec_npo
+            NAR_Edward_L_Jackson_hog_npo
+            NAR_George_Sylvester_Viereck_for_npo
+            NAR_Arthur_Kent_White_eco_npo
+            NAR_Addison_Roswell_Thompson_sec_npo
         }
     }
 }
@@ -284,7 +284,7 @@ country_event = { # Moseley Coup
             create_country_leader = {
                 name = "George Van Horn Moseley"
                 desc = "POLITICS_GEORGE_VAN_HORN_MOSELEY_DESC"
-                picture = "Portrait_NAR_George_Van_Horn_Moseley"
+                picture = "Portrait_NAR_George_Van_Horn_Moseley.tga"
                 expire = "1965.1.1"
                 ideology = paternal_autocrat_subtype
                 traits = { }
@@ -297,6 +297,13 @@ country_event = { # Moseley Coup
         add_popularity = {
             ideology = paternal_autocrat
             popularity = 0.05
+        }
+        remove_every_minister = yes
+        add_ideas = {
+            NAR_John_Elliott_Rankin_hog_pau
+            NAR_Arthur_Cherep_Spiridovich_for_pau
+            NAR_Louis_Thomas_McFadden_eco_pau
+            NAR_D_W_Griffith_sec_pau
         }
     }
 }
@@ -335,10 +342,10 @@ country_event = { # Hughes Coup
         }
         remove_every_minister = yes
         add_ideas = {
-            GEN_hog_ade
-            GEN_for_ade
-            GEN_eco_ade
-            GEN_sec_ade
+            NAR_James_Francis_Byrnes_hog_ade
+            NAR_Arthur_Cherep_Spiridovich_for_pau
+            NAR_Fred_Chase_Koch_eco_ade
+            NAR_Eugene_Talmadge_sec_pau
         }
     }
 }
