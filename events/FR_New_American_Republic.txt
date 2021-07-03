@@ -228,7 +228,7 @@ country_event = { # Simmons Coup
         has_country_flag = NAR_protests_happened
         has_country_flag = NAR_compromised_with_cults
         NOT = { has_country_flag = NAR_arrested_cults }
-        check_variable = { minority_suppression > 40 }
+        check_variable = { minority_suppression > 45 }
     }
 
     mean_time_to_happen = {
@@ -270,7 +270,7 @@ country_event = { # Moseley Coup
         has_country_flag = NAR_protests_happened
         has_country_flag = NAR_detriot_garrison
         NOT = { has_country_flag = NAR_compromised_with_cults }
-        check_variable = { minority_suppression > 30 }
+        check_variable = { minority_suppression > 45 }
     }
 
     mean_time_to_happen = {
@@ -313,7 +313,7 @@ country_event = { # Hughes Coup
         has_country_flag = NAR_protests_happened
         NOT = { has_country_flag = NAR_detriot_garrison }
         NOT = { has_country_flag = NAR_compromised_with_cults }
-        check_variable = { minority_suppression > 30 }
+        check_variable = { minority_suppression > 45 }
     }
 
     mean_time_to_happen = {
