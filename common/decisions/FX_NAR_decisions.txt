@@ -71,6 +71,30 @@ foreign_politics = {
             create_wargoal = { target = FROM type = annex_everything }
         }
     }
+    NAR_invade_commie_countries = {
+        allowed = { original_tag = NAR }
+        name = NAR_invade_country
+        icon = GFX_decision_generic_prepare_civil_war
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = CHL
+                    tag = BOL
+                    tag = ARG
+                }
+            }
+        }
+        visible = {
+            has_completed_focus = NAR_continue_the_cleansing
+            FROM = { has_socialist_government = yes }
+        }
+        available = {
+            FROM = { can_declare_war = yes }
+        }
+        complete_effect = {
+            create_wargoal = { target = FROM type = annex_everything }
+        }
+    }
 }
 NAR_unification_of_america = {
     NAR_attack_traitors = {
