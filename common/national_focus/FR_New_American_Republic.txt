@@ -1450,6 +1450,35 @@ focus_tree = {
         }
     }
 
+    # Crush the Southern Serpent
+    focus = {
+        id = NAR_crush_the_southern_serpent
+        icon = GFX_goal_generic_attack_mexico
+        x = 0
+        y = 1
+        cost = 6
+        available = {
+            MEX = { can_declare_war = yes }
+        }
+        bypass = {
+            NOT = { country_exists = MEX }
+            MEX = { 
+                OR = {
+                    is_puppet_of = ROOT
+                    is_in_faction_with = ROOT
+                }
+            }
+        }
+        prerequisite = { focus = NAR_our_own_domain }
+        relative_position_id = NAR_our_own_domain
+        completion_reward = {
+            create_wargoal = {
+                target = MEX
+                type = annex_everything
+            }
+        }
+    }
+
     # Reclaim Corporate Lands
     focus = {
         id = NAR_reclaim_corporate_lands
