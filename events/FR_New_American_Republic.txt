@@ -1,118 +1,389 @@
 # New American Republic Events
 # created by: dax0102
 
-add_namespace = nar
+add_namespace = newamerica
 
-country_event = { # Air Force
-    id = nar.1
-    title = nar.1.t
-    desc = nar.1.d
-    picture = GFX_report_event_ace_promoted
+country_event = { # Our Authority
+    id = newamerica.1
+    title = newamerica.1.t
+    desc = newamerica.1.d
+    picture = GFX_report_event_generic_rally2
     is_triggered_only = yes
 
-    option = {
-        name = nar.1.a
-        set_country_flag = NAR_chosen_support
+    option = { # Our authority comes from the guns of the army
+        name = newamerica.1.a
+        add_political_power = 50
+        hidden_effect = {
+            country_event = { id = newamerica.2 days = 14 }
+        }
     }
-    option = {
-        name = nar.1.b
-        set_country_flag = NAR_chosen_destruction
+    option = { # Try having relations with the minorities
+        name = newamerica.1.b
+        add_stability = 0.05
+        hidden_effect = {
+            NAR_decrease_suppression = yes
+            country_event = { id = newamerica.2 days = 14 }
+        }
     }
 }
 
-country_event = { # Minorities and Security Force clash at Chicago
-    id = nar.2
-    title = nar.2.t
-    desc = nar.2.d
-    picture = GFX_report_event_generic_strike
+country_event = { # Compromise with Simmons?
+    id = newamerica.2
+    title = newamerica.2.t
+    desc = newamerica.2.d
+    picture = GFX_report_event_albanian_partisans
     is_triggered_only = yes
 
-    option = { # Just as we thought..
-        name = nar.2.a
+    option = { # As long as it will solidify our power
+        name = newamerica.2.a
+        add_popularity = {
+            ideology = national_populist
+            popularity = 0.05
+        }
         hidden_effect = {
-            country_event = { id = nar.3 hours = 18 }
+            NAR_increase_suppression = yes
+            country_event = { id = newamerica.3 days = 7 }
+        }
+    }
+    option = { # They give me the creeps, but do nothing
+        name = newamerica.2.b
+        hidden_effect = {
+            country_event = { id = newamerica.3 days = 7 }
+        }
+    }
+    option = { # Ban them
+        name = newamerica.2.c
+        hidden_effect = {
+            NAR_decrease_suppression = yes
+            country_event = { id = newamerica.3 days = 7 }
+        }
+    }
+}
+
+country_event = { # Reviewing the Unemployment Benefits
+    id = newamerica.3
+    title = newamerica.3.t
+    desc = newamerica.3.d
+    picture = GFX_report_event_german_troops
+    is_triggered_only = yes
+
+    option = { # Revoke for the minorities
+        name = newamerica.3.a
+        hidden_effect = {
+            NAR_increase_suppression = yes
+            country_event = { id = newamerica.4 days = 14 }
+        }
+    }
+    option = { # Revoke it for all
+        name = newamerica.3.b
+        add_stability = -0.05
+        hidden_effect = {
+            country_event = { id = newamerica.4 days = 14 }
+        }
+    }
+}
+
+country_event = { # Garrisons in Detriot?
+    id = newamerica.4
+    title = newamerica.4.t
+    desc = newamerica.4.d
+    picture = GFX_report_event_czech_soldiers_01
+    is_triggered_only = yes
+
+    option = { # Deploy the garrisons
+        name = newamerica.4.a
+        add_manpower = -100
+        hidden_effect = {
+            country_event = { id = newamerica.5 days = 14 }
+            set_country_flag = NAR_detriot_garrison
+        }
+    }
+    option = { # They are more needed elsewhere
+        name = newamerica.4.b
+        hidden_effect = {
+            country_event = { id = newamerica.5 days = 14 }
+        }
+    }
+}
+
+country_event = { # The Minimum Wage Issue
+    id = newamerica.5
+    title = newamerica.5.t
+    desc = newamerica.5.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = { # What an absurd demand
+        name = newamerica.5.a
+        add_political_power = -50
+        hidden_effect = {
+            NAR_increase_suppression = yes
+            country_event = { id = newamerica.6 days = 7 }
+        }
+    }
+    option = { # It is only for the privileged ones
+        name = newamerica.5.b
+        add_political_power = -20
+        hidden_effect = {
+            NAR_increase_suppression = yes
+            country_event = { id = newamerica.6 days = 7 }
+        }
+    }
+    option = { # Just accept it, it's only money
+        name = newamerica.5.c
+        hidden_effect = {
+            NAR_decrease_suppression = yes
+            country_event = { id = newamerica.6 days = 7 }
+        }
+    }
+}
+
+country_event = { # Recuitments in the Black Legion
+    id = newamerica.6
+    title = newamerica.6.t
+    desc = newamerica.6.d
+    picture = GFX_report_event_french_resistance_01
+    is_triggered_only = yes
+
+    option = { # Let them be
+        name = newamerica.6.a
+        add_stability = -0.05
+        hidden_effect = {
+            country_event = { id = newamerica.7 days = 14 }
+            NAR_increase_suppression = yes
+        }
+    }
+    option = { # Arrest them
+        name = newamerica.6.b
+        hidden_effect = {
+            set_country_flag = NAR_arrested_cults
+            country_event = { id = newamerica.7 days = 14 }
+            NAR_decrease_suppression = yes
+        }
+    }
+}
+
+country_event = { # Clash at Chicago
+    id = newamerica.7
+    title = newamerica.7.t
+    desc = newamerica.7.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.7.a
+        hidden_effect = {
+            country_event = { id = newamerica.8 days = 2 }
         }
     }
 }
 
 country_event = { # Tragedy at Western Avenue
-    id = nar.3
-    title = nar.3.t
-    desc = nar.3.d
+    id = newamerica.8
+    title = newamerica.8.t
+    desc = newamerica.8.d
     picture = GFX_report_event_iww_demonstration
     is_triggered_only = yes
 
     option = { # We send our condelences
-        name = nar.3.a
-        ai_chance = {
-            factor = 80
-        }
-        add_political_power = 5
+        name = newamerica.8.a
         hidden_effect = {
-            country_event = { id = nar.4 days = 7 }
+            country_event = { id = newamerica.9 days = 1 }
         }
     }
 }
 
-country_event = { # Minorities Demands Reforms
-    id = nar.4
-    title = nar.4.t
-    desc = nar.4.d
-    picture = GFX_report_event_gathering_protest
+country_event = { # The Investigation
+    id = newamerica.9
+    title = newamerica.9.t
+    desc = newamerica.9.d
+    picture = GFX_report_event_generic_sign_treaty1
     is_triggered_only = yes
 
-    option = { # That is a bit out of stretch
-        name = nar.4.a
-        ai_chance = {
-            factor = 90
-        }
-        add_political_power = -50
+    option = { # The protesters are at fault
+        name = newamerica.9.a
         hidden_effect = {
-            country_event = { id = nar.5 days = 7 }
+            set_country_flag = NAR_protests_happened
+            NAR_increase_suppression = yes
         }
     }
-    option = { # It's not to late to accept
-        name = nar.4.b
-        ai_chance = {
-            factor = 10
-        }
-        NAR_decrease_suppression = yes
+    option = { # The forces at our fault
+        name = newamerica.9.b
         hidden_effect = {
-            country_event = { id = nar.7 days = 8 }
+            set_country_flag = NAR_protests_happened
+            NAR_decrease_suppression = yes
         }
     }
 }
 
-country_event = { # Worker Join the Minorities in Strikes
-    id = nar.5
-    title = nar.5.t
-    desc = nar.5.d
+country_event = { # Simmons Coup
+    id = newamerica.10
+    title = newamerica.10.t
+    desc = newamerica.10.d
+    picture = GFX_report_event_german_troops_paris
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_protests_happened
+        has_country_flag = NAR_compromised_with_cults
+        NOT = { has_country_flag = NAR_arrested_cults }
+        check_variable = { minority_suppression > 40 }
+    }
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = {
+        name = newamerica.10.a
+        hidden_effect = {
+            decrease_ruling_party_popularity_by_20 = yes
+        }
+        set_politics = {
+            ruling_party = national_populist
+            elections_allowed = no
+        }
+        add_popularity = {
+            ideology = national_populist
+            popularity = 0.25
+        }
+        remove_every_minister = yes
+        add_ideas = {
+            GEN_hog_npo
+            GEN_for_npo
+            GEN_eco_npo
+            GEN_sec_npo
+        }
+    }
+}
+
+country_event = { # Moseley Coup
+    id = newamerica.11
+    title = newamerica.11.t
+    desc = newamerica.11.d
+    picture = GFX_report_event_germany_politician_handshake
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_protests_happened
+        has_country_flag = NAR_detriot_garrison
+        NOT = { has_country_flag = NAR_compromised_with_cults }
+        check_variable = { minority_suppression > 30 }
+    }
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = {
+        name = newamerica.11.a
+        hidden_effect = {
+            kill_ideology_leader = paternal_autocrat
+            create_country_leader = {
+                name = "George Van Horn Moseley"
+                desc = "POLITICS_GEORGE_VAN_HORN_MOSELEY_DESC"
+                picture = "Portrait_NAR_George_Van_Horn_Moseley"
+                expire = "1965.1.1"
+                ideology = paternal_autocrat_subtype
+                traits = { }
+            }
+        }
+        set_politics = {
+            ruling_party = paternal_autocrat
+            elections_allowed = no
+        }
+        add_popularity = {
+            ideology = paternal_autocrat
+            popularity = 0.05
+        }
+    }
+}
+
+country_event = { # Hughes Coup
+    id = newamerica.12
+    title = newamerica.12.t
+    desc = newamerica.12.d
+    picture = GFX_report_event_generic_read_write
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_protests_happened
+        NOT = { has_country_flag = NAR_detriot_garrison }
+        NOT = { has_country_flag = NAR_compromised_with_cults }
+        check_variable = { minority_suppression > 30 }
+    }
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = {
+        name = newamerica.12.a
+        hidden_effect = {
+            decrease_ruling_party_popularity_by_20 = yes
+        }
+        set_politics = {
+            ruling_party = authoritarian_democrat
+            elections_allowed = no
+        }
+        add_popularity = {
+            ideology = authoritarian_democrat
+            popularity = 0.2
+        }
+        remove_every_minister = yes
+        add_ideas = {
+            GEN_hog_ade
+            GEN_for_ade
+            GEN_eco_ade
+            GEN_sec_ade
+        }
+    }
+}
+
+country_event = { # Worker Joins Protestors
+    id = newamerica.13
+    title = newamerica.13.t
+    desc = newamerica.13.d
     picture = GFX_report_event_worker_protests
-    is_triggered_only = yes
+    fire_only_once = yes
 
-    option = { # Order the arrest of their prominent leaders!
-        name = nar.5.a
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_protests_happened
+        check_variable = { minority_suppression < 45 }
+    }
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = { # Order the arrest of their leaders
+        name = newamerica.13.a
         add_ideas = NAR_worker_and_minority_strikes
-        add_stability = -0.05
+        add_political_power = 10
         hidden_effect = {
             set_country_flag = NAR_mass_arrests
-            country_event = { id = nar.6 days = 14 }
+            country_event = { id = newamerica.14 days = 2 }
         }
     }
-    option = { # Do nothing
-        name = nar.5.b
+    option = { # It will resolve on it's own
+        name = newamerica.13.b
         add_ideas = NAR_worker_and_minority_strikes
+        add_political_power = -10
         hidden_effect = {
-            country_event = { id = nar.6 days = 14 }
+            country_event = { id = newamerica.14 days = 2 }
         }
     }
 }
 
-country_event = { # Revolt!
-    id = nar.6
-    title = nar.6.t
-    desc = nar.6.d
-    picture = GFX_report_event_worker_protests
+country_event = { # Revolt
+    id = newamerica.14
+    title = newamerica.14.t
+    desc = newamerica.14.d
+    picture = GFX_report_event_gathering_protest
     is_triggered_only = yes
 
     immediate = {
@@ -155,9 +426,9 @@ country_event = { # Revolt!
             }
         }
     }
-
+    
     option = {
-        name = nar.6.a
+        name = newamerica.14.a
         if = {
             limit = { has_idea = NAR_worker_and_minority_strikes }
             remove_ideas = NAR_worker_and_minority_strikes
@@ -169,56 +440,15 @@ country_event = { # Revolt!
     }
 }
 
-country_event = { # Reforms
-    id = nar.7
-    title = nar.7.t
-    desc = nar.7.d
-    picture = GFX_report_event_generic_read_write
+country_event = { # Crushed the Revolt
+    id = newamerica.15
+    title = newamerica.15.t
+    desc = newamerica.15.d
+    picture = GFX_report_event_soviet_army_greeted
     is_triggered_only = yes
-
-    option = { # Accept
-        name = nar.7.a
-        NAR_decrease_suppression = yes
-    }
-    option = { # Compromise
-        name = nar.7.b
-        add_political_power = 10
-    }
-    option = { # Never
-        name = nar.7.c
-        NAR_increase_suppression = yes
-    }
-}
-
-country_event = { # Reforming the National Guardsmen?
-    id = nar.8
-    title = nar.8.t
-    desc = nar.8.d
-    picture = GFX_report_event_czech_soldiers_01
-    is_triggered_only = yes
-
-    option = { # Reform the Security Forces
-        name = nar.8.a
-        add_political_power = 50
-        hidden_effect = {
-            country_event = { id = nar.7 days = 21 }
-        }
-    }
-    option = { # Just fire the hot-headed ones
-        name = nar.8.b
-        add_political_power = 10
-    }
-}
-
-country_event = { # Revolt Crushed
-    id = nar.9
-    title = nar.9.t
-    desc = nar.9.d
-    picture = GFX_report_event_czech_soldiers_01
-    is_triggered_only = yes
-
+    
     option = {
-        name = nar.9.a
+        name = newamerica.15.a
         every_owned_state = {
             limit = {
                 OR = {
@@ -231,5 +461,67 @@ country_event = { # Revolt Crushed
             SRA = { remove_state_core = PREV }
             NAR = { add_state_core = PREV }
         }
+    }
+}
+
+country_event = { # Air Force
+    id = newamerica.16
+    title = newamerica.16.t
+    desc = newamerica.16.d
+    picture = GFX_report_event_ace_promoted
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.16.a
+        set_country_flag = NAR_chosen_support
+    }
+    option = {
+        name = newamerica.16.b
+        set_country_flag = NAR_chosen_destruction
+    }
+}
+
+country_event = { # Invitation from NAR
+    id = newamerica.100
+    title = newamerica.100.t
+    desc = newamerica.100.d
+    picture = GFX_report_event_generic_sign_treaty2
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.100.a
+        FROM = { country_event = { id = newamerica.101 hours = 12 } }
+    }
+    option = {
+        name = newamerica.100.b
+        FROM = { country_event = { id = newamerica.102 hours = 12 } }
+    }
+}
+
+country_event = { # Accepted Invitation
+    id = newamerica.101
+    title = newamerica.101.t
+    desc = newamerica.101.d
+    picture = GFX_report_event_generic_sign_treaty2
+    is_triggered_only = yes
+
+    option = { # 
+        name = newamerica.101.a
+        if = {
+            limit = { is_faction_leader = yes }
+            add_to_faction = FROM
+        }
+    }
+}
+
+country_event = { # Refused Invitaiton
+    id = newamerica.102
+    title = newamerica.102.t
+    desc = newamerica.102.d
+    picture = GFX_report_event_generic_sign_treaty2
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.102.a
     }
 }

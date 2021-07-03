@@ -68,8 +68,8 @@ if = {
 }
 
 set_convoys = 300
-set_stability = 0.56
-set_war_support = 0.34
+set_stability = 0.34
+set_war_support = 0.12
 
 set_politics = {
 	ruling_party = paternal_autocrat
@@ -90,8 +90,6 @@ set_popularities = {
 	paternal_autocrat = 30
 	national_populist = 2
 }
-
-set_country_flag = coalition_authoritarian_democrat
 
 set_variable = { var = minority_suppression value = 50 }
 NAR_set_minority_effects = yes
@@ -138,6 +136,14 @@ create_country_leader = {
 	traits = { }
 }
 create_country_leader = {
+	name = "Howard Hughes"
+	desc = "POLITICS_HOWARD_HUGHES_DESC"
+	picture = "Portrait_NAR_Howard_Hughes.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = { }
+}
+create_country_leader = {
 	name = "Henry Ford"
 	desc = "POLITICS_HENRY_FORD_DESC"
 	picture = "Portrait_NAR_Henry_Ford.tga"
@@ -164,8 +170,8 @@ create_country_leader = {
 
 ### Field Marshal
 create_field_marshal = {
-	name = "Jacob L. Devers"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Jacob_Devers.tga"
+	name = "George Van Horn Moseley"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_Van_Horn_Moseley.tga"
 	traits = { trait_reckless artillery_officer artillery_specialist }
 	skill = 2
 	attack_skill = 3
@@ -175,6 +181,16 @@ create_field_marshal = {
 }
 
 ### Corp Commanders
+create_corps_commander = {
+	name = "Jacob L. Devers"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Jacob_Devers.tga"
+	traits = { trait_reckless artillery_officer artillery_specialist }
+	skill = 5
+	attack_skill = 7
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
 create_corps_commander = {
 	name = "George S. Patton"
 	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_S_Patton.tga"
@@ -244,4 +260,14 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Henry I. Hodes"
+	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Henry_Hodes.tga"
+	traits = { trait_reckless infantry_leader }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
 }
