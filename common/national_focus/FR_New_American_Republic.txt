@@ -22,7 +22,7 @@ focus_tree = {
         y = 0
         cost = 6
         completion_reward = {
-            add_political_power = 100
+            country_event = { id = newamerica.1 hours = 2 }
         }
     }
 
@@ -493,6 +493,7 @@ focus_tree = {
         x = 20
         y = 0
         cost = 6
+        available = { has_country_flag = NAR_cemented_our_authority }
         completion_reward = {
             army_experience = 25
         }
@@ -829,6 +830,7 @@ focus_tree = {
         y = 6
         cost = 6
         available = {
+            has_country_flag = NAR_cemented_our_authority
             any_owned_state = { is_coastal = yes }
         }
         completion_reward = {
@@ -1191,9 +1193,10 @@ focus_tree = {
         x = 22
         y = 6
         cost = 6
+        available = { has_country_flag = NAR_cemented_our_authority }
         completion_reward = {
             air_experience = 25
-            country_event = { id = nar.1 hours = 4 }
+            country_event = { id = newamerica.16 hours = 4 }
         }
     }
 
@@ -1428,60 +1431,30 @@ focus_tree = {
 
     #################################################################
 
-    # Join the Entente
+    # Our Own Domain
     focus = {
-        id = NAR_join_the_entente
-        icon = GFX_focus_chi_reach_out_to_france
-        x = 1
+        id = NAR_our_own_domain
+        icon = GFX_focus_generic_diplomatic_treaty
+        x = 3
         y = 6
         cost = 6
         available = {
             NOT = { has_idea = NAR_illegitimate_government }
         }
-        mutually_exclusive = { focus = NAR_our_own_domain }
-    }
-
-    # Unite the Armies
-    focus = {
-        id = NAR_unite_the_armies
-        icon = GFX_goal_army_guy_2
-        x = -1
-        y = 1
-        cost = 6
-        prerequisite = { focus = NAR_join_the_entente }
         relative_position_id = NAR_join_the_entente
-    }
-
-    # The Three Eyes Program
-    focus = {
-        id = NAR_the_three_eyes_program
-        icon = GFX_goal_offensive_army
-        x = 1
-        y = 1
-        cost = 6
-        prerequisite = { focus = NAR_join_the_entente }
-        relative_position_id = NAR_join_the_entente
-    }
-
-    # Our Own Domain
-    focus = {
-        id = NAR_our_own_domain
-        icon = GFX_focus_generic_diplomatic_treaty
-        x = 2
-        y = 0
-        cost = 6
-        available = {
-            NOT = { has_idea = NAR_illegitimate_government }
+        completion_reward = {
+            set_rule = {
+                can_create_factions = yes
+            }
+            create_faction = washington_accord
         }
-        mutually_exclusive = { focus = NAR_join_the_entente }
-        relative_position_id = NAR_join_the_entente
     }
 
     # Reclaim Corporate Lands
     focus = {
         id = NAR_reclaim_corporate_lands
         icon = GFX_goal_generic_attack_guatemala
-        x = 1
+        x = -1
         y = 1
         cost = 6
         prerequisite = { focus = NAR_our_own_domain }
@@ -1495,7 +1468,7 @@ focus_tree = {
     focus = {
         id = NAR_the_coffee_plantations
         icon = GFX_goal_generic_attack_colombia
-        x = 3
+        x = 2
         y = 1
         cost = 6
         prerequisite = { focus = NAR_our_own_domain }
@@ -1533,6 +1506,12 @@ focus_tree = {
         mutually_exclusive = { focus = NAR_support_the_state }
         prerequisite = { focus = NAR_the_coffee_plantations }
         relative_position_id = NAR_the_coffee_plantations
+        completion_reward = {
+            create_wargoal = {
+                target = UBR
+                type = annex_everything
+            }
+        }
     }
 
     # Support the State
@@ -1554,6 +1533,9 @@ focus_tree = {
         mutually_exclusive = { focus = NAR_attack_the_marxists }
         prerequisite = { focus = NAR_the_coffee_plantations }
         relative_position_id = NAR_the_coffee_plantations
+        completion_reward = {
+            BPS = { country_event = { id = newamerica.100 hours = 12 } }
+        }
     }
 
     # Continue the Cleansing
