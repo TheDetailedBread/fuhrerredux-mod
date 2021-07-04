@@ -23,3 +23,16 @@ NAR_decrease_suppression = {
         NAR_set_minority_effects = yes
     }
 }
+
+NAR_remove_suppression = {
+    remove_ideas = NAR_racial_issue
+    hidden_effect = {
+        clear_variable = minority_suppression
+        clear_variable = minority_pp
+        clear_variable = minority_stability
+        clear_variable = minority_conscription
+        clear_variable = minority_construction
+
+        set_country_flag = NAR_removed_minorities
+    }
+}

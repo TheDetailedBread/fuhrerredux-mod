@@ -261,6 +261,100 @@ ideas = {
                 industrial_capacity_dockyard = -0.25
             }
         }
+        NAR_using_cheap_labour = {
+            allowed = { original_tag = NAR }
+            picture = DEI_cultuurstelsel
+            modifier = {
+                political_power_cost = 0.05
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+        NAR_lowered_corporate_tax = {
+            allowed = { original_tag = NAR }
+            picture = generic_economic_turmoil
+            modifier = {
+                consumer_goods_factor = 0.15
+                production_factory_max_efficiency_factor = 0.15
+            }
+        }
+        NAR_financial_reforms_idea = {
+            allowed = { original_tag = NAR }
+            picture = generic_political_support
+            modifier = {
+                production_speed_buildings_factor = 0.15
+            }
+        }
+        NAR_thriving_economy = {
+            allowed = { original_tag = NAR }
+            picture = chi_hyper_inflation5
+            modifier = {
+                global_building_slots = 1
+                production_speed_buildings_factor = 0.15
+                production_factory_start_efficiency_factor = 0.05
+                production_lack_of_resource_penalty_factor = -0.15
+            }
+        }
+        NAR_militaristic_education = {
+            allowed = { original_tag = NAR }
+            picture = chi_army_corruption2
+            modifier = {
+                training_time_factor = -0.15
+                army_attack_factor = 0.025
+                army_defence_factor = 0.025
+            }
+        }
+        NAR_civilian_conservation_corps_idea = {
+            allowed = { original_tag = NAR }
+            picture = ast_all_in
+            modifier = {
+                production_speed_buildings_factor = 0.05
+                industry_free_repair_factor = 0.15
+            }
+        }
+        NAR_farming_subsidies = {
+            allowed = { original_tag = NAR }
+            picture = generic_agrarian_reform
+            modifier = {
+                supply_consumption_factor = -0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+        NAR_american_oil = {
+            allowed = { original_tag = NAR }
+            picture = Oil
+            modifier = {
+                fuel_gain_from_states = 0.15
+                production_oil_factor = 0.15
+            }
+        }
+        NAR_white_welfare_idea = {
+            allowed = { original_tag = NAR }
+            picture = generic_foreign_capital
+            modifier = {
+                political_power_cost = 0.15
+                monthly_population = 0.25
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+        NAR_forced_labour_idea = {
+            allowed = { original_tag = NAR }
+            picture = saf_history_of_segregation_2
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_factory_max_efficiency_factor = 0.25
+            }
+        }
+        NAR_christian_work_ethics_idea = {
+            allowed = { original_tag = NAR }
+            picture = PAP_tenth_crusade
+            modifier = {
+                line_change_production_efficiency_factor = 0.15
+            }
+        }
     }
     ### Head of Government
     head_of_government = {
