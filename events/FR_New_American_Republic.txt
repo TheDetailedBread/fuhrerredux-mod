@@ -548,6 +548,28 @@ country_event = { # Refused Invitaiton
 }
 
 country_event = { # Entry to the Entente
+    id = newamerica.103
+    title = newamerica.103.t
+    desc = newamerica.103.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.103.a
+        if = {
+            limit = { is_faction_leader = yes }
+            add_to_faction = FROM
+        }
+    }
+    option = {
+        name = newamerica.103.b
+        FROM = { 
+            country_event = { id = newamerica.104 hours = 8 }
+        }
+    }
+}
+
+country_event = { # Entry Denied
     id = newamerica.104
     title = newamerica.104.t
     desc = newamerica.104.d
@@ -556,28 +578,188 @@ country_event = { # Entry to the Entente
 
     option = {
         name = newamerica.104.a
-        if = {
-            limit = { is_faction_leader = yes }
-            add_to_faction = FROM
-        }
-    }
-    option = {
-        name = newamerica.104.b
-        FROM = { 
-            country_event = { id = newamerica.105 hours = 8 }
-        }
+        add_political_power = -10
     }
 }
 
-country_event = { # Entry Denied
+country_event = { # Supporting a Side
     id = newamerica.105
     title = newamerica.105.t
-    desc = newamerica.105.d
-    picture = GFX_report_event_generic_read_write
+    desc = newmerica.105.a
+    picture = GFX_report_event_chinese_soldiers_02
     is_triggered_only = yes
 
     option = {
         name = newamerica.105.a
+        CHI = {
+            reverse_add_opinion_modifier = {
+				modifier = PHI_diplomatic_mission
+				target = ROOT
+			}
+            country_event = { id = newamerica.106 hours = 8 }
+        }
+        set_country_flag = NAR_chosen_side
+        set_country_flag = NAR_supported_chiang
+    }
+    option = {
+        name = newamerica.105.b
+        ZHI = {
+            reverse_add_opinion_modifier = {
+				modifier = PHI_diplomatic_mission
+				target = ROOT
+			}
+            country_event = { id = newamerica.106 hours = 8 }
+        }
+        set_country_flag = NAR_chosen_side
+        set_country_flag = NAR_supported_sun
+    }
+    option = {
+        name = newamerica.105.c
+        MAN = {
+            reverse_add_opinion_modifier = {
+				modifier = PHI_diplomatic_mission
+				target = ROOT
+			}
+            country_event = { id = newamerica.106 hours = 8 }
+        }
+        set_country_flag = NAR_chosen_side
+        set_country_flag = NAR_supported_zhang
+    }
+}
+
+country_event = { # American Support
+    id = newamerica.106
+    title = newamerica.106.t
+    desc = newamerica.106.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.106.a
+    }
+}
+
+country_event = { # NAR Requests PHI to the Faction
+    id = newamerica.107
+    title = newamerica.107.t
+    desc = newamerica.107.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = { # Send our the invite
+        name = newamerica.107.a
+        PHI = { country_event = newamerica.108 }
+    }
+    option = { # No
+        name = newamerica.107.b
+        FROM = { country_event = newamerica.111 }
+    }
+}
+
+country_event = { # PHI - Entry to the Faction
+    id = newamerica.108
+    title = newamerica.108.t
+    desc = newamerica.108.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.108.a
+        NAR = { country_event = newamerica.109 }
+        FROM = { country_event = newamerica.109 }
+    }
+    option = {
+        name = newamerica.108.b
+        NAR = { country_event = newamerica.110 }
+    }
+}
+
+country_event = { # PHI Accepts
+    id = newamerica.109
+    title = newamerica.109.t
+    desc = newamerica.109.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.109.a
+        if = {
+            limit = { is_faction_leader = yes }
+            add_to_faction = FROM 
+        }
+    }
+}
+
+country_event = { # PHI Refuses
+    id = newamerica.110
+    title = newamerica.110.t
+    desc = newamerica.110.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.110.a
         add_political_power = -10
+    }
+}
+
+country_event = { # NAR - France Refuses to Invite Philippines
+    id = newamerica.111
+    title = newamerica.111.t
+    desc = newamerica.111.d
+    picture = GFX_report_event_degaulle_churchill
+    is_triggered_only = yes
+
+    option = { # Threaten them that we will leave the faction
+        name = newamerica.111.a
+        FROM = { country_event = newamerica.112 }
+    }
+    option = { # They will be a burden anyway
+        name = newamerica.111.b
+        add_political_power = -100
+    }
+}
+
+country_event = { # NAR - Threatens to leave the faction
+    id = newamerica.112
+    title = newamerica.112.t
+    desc = newamerica.112.d
+    picture = GFX_report_event_usa_election_generic
+    is_triggered_only = yes
+
+    option = { # Accept their demands, they are too valuable
+        name = newamerica.112.a
+        PHI = { country_event = newamerica.108 }
+        FROM = { country_event = newamerica.113 }
+    }
+    option = { # So what?
+        name = newamerica.112.b
+        FROM = { country_event = newamerica.114 }
+    }
+}
+
+country_event = { # NAR - France caves into our demands
+    id = newamerica.113
+    title = newamerica.113.t
+    desc = newamerica.113.d
+    picture = GFX_report_event_degaulle_churchill
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.113.a
+        increase_ruling_party_popularity_by_5 = yes
+    }
+}
+
+country_event = { # NAR - France is stubborn af
+    id = newamerica.114
+    title = newamerica.114.t
+    desc = newamerica.114.d
+    picture = GFX_report_event_degaulle_churchill
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.114.a
+        leave_faction = yes
     }
 }

@@ -481,7 +481,7 @@ focus_tree = {
 
     # Crackdown on Traitors
     focus = {
-        id = NAR_crackdown_on_traitors
+        id = NAR_crackdown_on_undesirables
         icon = GFX_goal_purge_opposition
         x = 1
         y = 1
@@ -490,20 +490,19 @@ focus_tree = {
         prerequisite = { focus = NAR_forced_labour }
         relative_position_id = NAR_christian_work_ethics
         completion_reward = {
-            add_stability = 0.15
-            add_war_support = 0.05
+            add_ideas = NAR_the_great_purge
         }
     }
     
     # Segragation Forever
     focus = {
-        id = NAR_segregation_forever
+        id = NAR_enforce_segregation
         icon = GFX_goal_flames_of_rebellion
         x = 0
         y = 1
         cost = 6
-        prerequisite = { focus = NAR_crackdown_on_traitors }
-        relative_position_id = NAR_crackdown_on_traitors
+        prerequisite = { focus = NAR_crackdown_on_undesirables }
+        relative_position_id = NAR_crackdown_on_undesirables
         completion_reward = {
             NAR_remove_suppression = yes
         }
@@ -1323,7 +1322,7 @@ focus_tree = {
     focus = {
         id = NAR_the_new_american_navy
         icon = GFX_goal_NAR_navy
-        x = 20
+        x = 22
         y = 6
         cost = 6
         available = {
@@ -1687,7 +1686,7 @@ focus_tree = {
     focus = {
         id = NAR_the_new_american_air_force
         icon = GFX_goal_NAR_airforce
-        x = 30
+        x = 31
         y = 6
         cost = 6
         available = { has_country_flag = NAR_cemented_our_authority }
@@ -1960,7 +1959,7 @@ focus_tree = {
     focus = {
         id = NAR_our_own_domain
         icon = GFX_focus_generic_diplomatic_treaty
-        x = 12
+        x = 13
         y = 6
         cost = 6
         available = {
@@ -2001,11 +2000,56 @@ focus_tree = {
         }
     }
 
+    # Approach the Philippines
+    focus = {
+        id = NAR_approach_the_philippines
+        icon = GFX_goal_flag_phillipines
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_choose_the_entente }
+        relative_position_id = NAR_choose_the_entente
+        completion_reward = {
+            FRA = { country_event = newamerica.107 }
+        }
+    }
+
+    # Tackle the Japanese Threat
+    focus = {
+        id = NAR_tackle_the_japanese_threat
+        icon = GFX_focus_attack_japan
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_approach_the_philippines }
+        relative_position_id = NAR_approach_the_philippines
+        completion_reward = {
+            create_wargoal = {
+                target = JAP
+                type = annex_everything
+            }
+        }
+    }
+
+    # Choosing a Side
+    focus = {
+        id = NAR_choosing_a_side
+        icon = GFX_goal_generic_chinese_warlords
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = NAR_approach_the_philippines }
+        relative_position_id = NAR_approach_the_philippines
+        completion_reward = {
+            country_event = newamerica.105
+        }
+    }
+
     # Crush the Southern Serpent
     focus = {
         id = NAR_crush_the_southern_serpent
         icon = GFX_goal_generic_attack_mexico
-        x = -2
+        x = -1
         y = 1
         cost = 6
         available = {
@@ -2065,14 +2109,14 @@ focus_tree = {
     focus = {
         id = NAR_the_carribean_shipyards
         icon = GFX_goal_generic_attack_cuba
-        x = 1
+        x = 0
         y = 1
         cost = 6
         prerequisite = { 
             focus = NAR_our_own_domain
             focus = NAR_favour_the_reich
         }
-        relative_position_id = NAR_our_own_domain
+        relative_position_id = NAR_favour_the_reich
         completion_reward = {
             custom_effect_tooltip = NAR_the_carribean_shipyards_tt
         }
@@ -2144,5 +2188,4 @@ focus_tree = {
         }
     }
 
-    
 }
