@@ -1,4 +1,40 @@
 foreign_politics = {
+    NAR_intervene_chinese_unification = {
+        allowed = { original_tag = NAR }
+        icon = GFX_decision_generic_prepare_civil_war
+        visible = {
+            has_country_flag = NAR_chosen_side
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_country_flag = NAR_supported_chiang }
+                }
+                create_wargoal = {
+                    target = CHI
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_flag = NAR_supported_sun }
+                }
+                create_wargoal = {
+                    target = ZHI
+                    type = annex_everything
+                }
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_flag = NAR_supported_zhang }
+                }
+                create_wargoal = {
+                    target = MAN
+                    type = annex_everything
+                }
+            }
+        }
+    }
     NAR_invade_ufc_countries = {
         allowed = { original_tag = NAR }
         name = NAR_invade_country
