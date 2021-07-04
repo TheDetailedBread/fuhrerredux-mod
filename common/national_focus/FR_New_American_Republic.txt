@@ -12,7 +12,7 @@ focus_tree = {
         }
     }
 
-    continuous_focus_position = { x = 100 y = 1400 }
+    continuous_focus_position = { x = 100 y = 1500 }
 
     # Cement our Authority
     focus = {
@@ -454,22 +454,6 @@ focus_tree = {
         }
     }
 
-    # Tackle our Legitimacy
-    focus = {
-        id = NAR_tackle_our_legitimacy
-        icon = GFX_goal_checkmate
-        x = 0
-        y = 1
-        cost = 6
-        prerequisite = { focus = NAR_begin_civilian_mobilization }
-        prerequisite = { focus = NAR_economic_recovery }
-        prerequisite = { focus = NAR_ensure_bureaucratic_loyalty }
-        relative_position_id = NAR_begin_civilian_mobilization
-        completion_reward = {
-            unlock_decision_category_tooltip = NAR_unification_of_america
-        }
-    }
-
     # Ensure Bureaucratic Loyalty
     focus = {
         id = NAR_ensure_bureaucratic_loyalty
@@ -481,6 +465,22 @@ focus_tree = {
         relative_position_id = NAR_purge_opposition
         completion_reward = {
             remove_ideas = NAR_unstable_bureaucracy
+        }
+    }
+
+    # Tackle our Legitimacy
+    focus = {
+        id = NAR_tackle_our_legitimacy
+        icon = GFX_goal_checkmate
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = NAR_begin_civilian_mobilization }
+        prerequisite = { focus = NAR_economic_recovery }
+        prerequisite = { focus = NAR_republic_without_democracy }
+        relative_position_id = NAR_begin_civilian_mobilization
+        completion_reward = {
+            unlock_decision_category_tooltip = NAR_unification_of_america
         }
     }
 
@@ -1431,15 +1431,47 @@ focus_tree = {
 
     #################################################################
 
+    # Choose the Entente
+    focus = {
+        id = NAR_choose_the_entente
+        icon = GFX_goal_flag_france
+        x = -2
+        y = 0
+        cost = 6
+        available = {
+            NOT = { has_idea = NAR_illegitimate_government }
+        }
+        mutually_exclusive = {
+            focus = NAR_our_own_domain
+            focus = NAR_favour_the_reich
+        }
+        relative_position_id = NAR_our_own_domain
+        completion_reward = {
+            if = {
+                limit = {
+                    FRA = { is_faction_leader = yes }
+                }
+                FRA = { country_event = newamerica.103 }
+                else = {
+                    ENG = { country_event = newamerica.103 }
+                }
+            }
+        }
+    }
+
     # Our Own Domain
     focus = {
         id = NAR_our_own_domain
         icon = GFX_focus_generic_diplomatic_treaty
-        x = 3
+        x = 4
         y = 6
         cost = 6
         available = {
             NOT = { has_idea = NAR_illegitimate_government }
+        }
+        mutually_exclusive = {
+            focus = NAR_favour_the_reich
+            focus = NAR_choose_the_entente
         }
         relative_position_id = NAR_join_the_entente
         completion_reward = {
@@ -1450,11 +1482,33 @@ focus_tree = {
         }
     }
 
+    # Favour the Reich
+    focus = {
+        id = NAR_favour_the_reich
+        icon = GFX_goal_germany
+        x = 2
+        y = 0
+        cost = 6
+        available = {
+            NOT = { has_idea = NAR_illegitimate_government }
+        }
+        mutually_exclusive = {
+            focus = NAR_our_own_domain
+            focus = NAR_choose_the_entente
+        }
+        relative_position_id = NAR_our_own_domain
+        completion_reward = {
+            GER = {
+                country_event = newamerica.103
+            }
+        }
+    }
+
     # Crush the Southern Serpent
     focus = {
         id = NAR_crush_the_southern_serpent
         icon = GFX_goal_generic_attack_mexico
-        x = 0
+        x = -2
         y = 1
         cost = 6
         available = {
@@ -1469,7 +1523,10 @@ focus_tree = {
                 }
             }
         }
-        prerequisite = { focus = NAR_our_own_domain }
+        prerequisite = { 
+            focus = NAR_our_own_domain
+            focus = NAR_choose_the_entente
+        }
         relative_position_id = NAR_our_own_domain
         completion_reward = {
             create_wargoal = {
@@ -1483,28 +1540,13 @@ focus_tree = {
     focus = {
         id = NAR_reclaim_corporate_lands
         icon = GFX_goal_generic_attack_guatemala
-        x = -2
-        y = 1
+        x = 0
+        y = 2
         cost = 6
-        prerequisite = { focus = NAR_our_own_domain }
-        relative_position_id = NAR_our_own_domain
+        prerequisite = { focus = NAR_crush_the_southern_serpent }
+        relative_position_id = NAR_crush_the_southern_serpent
         completion_reward = {
             custom_effect_tooltip = NAR_reclaim_corporate_lands_tt
-        }
-    }
-
-    # The Carribean Shipyards
-    focus = {
-        id = NAR_the_carribean_shipyards
-        icon = GFX_goal_generic_attack_cuba
-        x = 2
-        y = 1
-        cost = 6
-        prerequisite = { focus = NAR_our_own_domain }
-        relative_position_id = NAR_our_own_domain
-        
-        completion_reward = {
-            custom_effect_tooltip = NAR_the_carribean_shipyards_tt
         }
     }
 
@@ -1512,13 +1554,30 @@ focus_tree = {
     focus = {
         id = NAR_the_coffee_plantations
         icon = GFX_goal_generic_attack_colombia
-        x = 0
+        x = 1
         y = 1
         cost = 6
-        prerequisite = { focus = NAR_reclaim_corporate_lands }
-        relative_position_id = NAR_reclaim_corporate_lands
+        prerequisite = { focus = NAR_crush_the_southern_serpent }
+        relative_position_id = NAR_crush_the_southern_serpent
         completion_reward = {
             custom_effect_tooltip = NAR_the_coffee_plantations_tt
+        }
+    }
+
+    # The Carribean Shipyards
+    focus = {
+        id = NAR_the_carribean_shipyards
+        icon = GFX_goal_generic_attack_cuba
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { 
+            focus = NAR_our_own_domain
+            focus = NAR_favour_the_reich
+        }
+        relative_position_id = NAR_our_own_domain
+        completion_reward = {
+            custom_effect_tooltip = NAR_the_carribean_shipyards_tt
         }
     }
 
@@ -1527,14 +1586,17 @@ focus_tree = {
         id = NAR_attack_the_marxists
         icon = GFX_goal_generic_attack_socialist_brazil
         x = -1
-        y = 1
+        y = 2
         cost = 6
         available = {
             UBR = { can_declare_war = yes }
             NOT = { country_exists = BPS }
         }
         mutually_exclusive = { focus = NAR_support_the_state }
-        prerequisite = { focus = NAR_the_carribean_shipyards }
+        prerequisite = { 
+            focus = NAR_the_carribean_shipyards
+            focus = NAR_the_coffee_plantations
+        }
         relative_position_id = NAR_the_carribean_shipyards
         completion_reward = {
             create_wargoal = {
@@ -1547,9 +1609,9 @@ focus_tree = {
     # Support the State
     focus = {
         id = NAR_support_the_state
-        icon = GFX_goal_generic_demand_territory
+        icon = GFX_goal_flag_reactionary_brazil
         x = 1
-        y = 1
+        y = 2
         cost = 6
         available = {
             country_exists = BPS
@@ -1572,12 +1634,13 @@ focus_tree = {
     focus = {
         id = NAR_continue_the_cleansing
         icon = GFX_goal_generic_political_pressure
-        x = -1
+        x = 1
         y = 1
         cost = 6
-        prerequisite = { focus = NAR_attack_the_marxists }
-        prerequisite = { focus = NAR_support_the_state }
-        prerequisite = { focus = NAR_the_coffee_plantations }
+        prerequisite = { 
+            focus = NAR_attack_the_marxists 
+            focus = NAR_support_the_state
+        }
         relative_position_id = NAR_attack_the_marxists
         completion_reward = {
             custom_effect_tooltip = NAR_continue_the_cleansing_tt

@@ -530,5 +530,48 @@ country_event = { # Refused Invitaiton
 
     option = {
         name = newamerica.102.a
+        create_wargoal = {
+            target = FROM
+            type = annex_everything
+        }
+    }
+    option = {
+        name = newamerica.102.b
+        add_political_power = -10
+    }
+}
+
+country_event = { # Entry to the Entente
+    id = newamerica.104
+    title = newamerica.104.t
+    desc = newamerica.104.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.104.a
+        if = {
+            limit = { is_faction_leader = yes }
+            add_to_faction = FROM
+        }
+    }
+    option = {
+        name = newamerica.104.b
+        FROM = { 
+            country_event = { id = newamerica.105 hours = 8 }
+        }
+    }
+}
+
+country_event = { # Entry Denied
+    id = newamerica.105
+    title = newamerica.105.t
+    desc = newamerica.105.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.105.a
+        add_political_power = -10
     }
 }
