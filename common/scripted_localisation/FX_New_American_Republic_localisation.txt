@@ -1,21 +1,24 @@
 defined_text = {
-    name = NAR_current_minority_status
+    name = NAR_minority_status
     text = {
         trigger = {
-            check_variable = { minority_suppression > 60 }
+            check_variable = { minority_suppression < 25 }
         }
-        localization_key = NAR_oppressed
+        localization_key = NAR_the_racial_issue_normal
     }
     text = {
         trigger = {
-            check_variable = { minority_suppression < 1 }
+           check_variable = { minority_suppression > 55 }
         }
-        localization_key = PHI_aeda_none
+        localization_key = NAR_the_racial_issue_oppressed
     }
     text = {
         trigger = {
-            check_variable = { minority_suppression }
+            AND = {
+                check_variable = { minority_suppression > 25 }
+                check_variable = { minority_suppression < 55 }
+            }
         }
-        localization_key = PHI_aeda1_last
+        localization_key = NAR_the_racial_issue_suppressed
     }
 }

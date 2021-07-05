@@ -1,3 +1,188 @@
+NAR_the_racial_issue = {
+    NAR_send_them_to_the_mines = {
+        icon = GFX_decision_chromium
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        visible = { has_idea = NAR_racial_issue }
+        available = { NAR_is_conducting_operations = no }
+        modifier = {
+            local_resources_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_send_them_to_the_factories = {
+        icon = GFX_decision_ger_military_buildup
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            industrial_capacity_factory = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_send_them_to_the_dockyards = {
+        icon = GFX_decision_generic_naval
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            industrial_capacity_dockyard = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_send_them_to_the_refineries = {
+        icon = GFX_decision_oil
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            fuel_gain_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_build_our_defences = {
+        icon = GFX_decision_generic_operation
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            production_speed_costal_bunker_factor = 0.15
+            production_speed_bunker_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_build_industries = {
+        icon = GFX_decision_generic_industry
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            production_speed_industrial_complex_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_build_factories = {
+        icon = GFX_decision_generic_tank
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            production_speed_arms_factory_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_build_dockyards = {
+        icon = GFX_decision_generic_naval
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            production_speed_dockyard_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_build_infrastructure = {
+        icon = GFX_decision_border_war
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            production_speed_infrastructure_factor = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_repair_damaged_industry = {
+        icon = GFX_decision_generic_ignite_civil_war
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            repair_speed_industrial_complex_factor  = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_repair_damaged_factories = {
+        icon = GFX_decision_generic_prepare_civil_war
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            repair_speed_arms_factory_factor  = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_repair_damaged_dockyards = {
+        icon = GFX_decision_generic_naval
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            repair_speed_dockyard_factor  = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+    NAR_make_them_repair_damaged_infrastructure = {
+        icon = GFX_decision_generic_scorched_earth
+        cost = 50
+        days_remove = 120
+        days_re_enable = 360
+        available = { NAR_is_conducting_operations = no }
+        visible = { has_idea = NAR_racial_issue }
+        modifier = {
+            repair_speed_infrastructure_factor  = 0.15
+            weekly_manpower = -10
+        }
+        complete_effect = { set_country_flag = NAR_operation_in_progress }
+        remove_effect = { clr_country_flag = NAR_operation_in_progress }
+    }
+}
 foreign_politics = {
     NAR_intervene_chinese_unification = {
         allowed = { original_tag = NAR }

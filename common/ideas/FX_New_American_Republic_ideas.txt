@@ -365,6 +365,22 @@ ideas = {
                 weekly_war_support = 0.05
             }
         }
+        NAR_fleeing_minorities = {
+            allowed = { original_tag = NAR }
+            picture = prc_low_popular_support2
+            modifier = {
+                monthly_population = -0.5
+                weekly_manpower = -250
+            }
+        }
+        NAR_second_great_migration = {
+            allowed = { original_tag = NAR }
+            picture = prc_the_long_march2
+            modifier = {
+                monthly_population = 0.5
+                weekly_manpower = 250
+            }
+        }
     }
     ### Head of Government
     head_of_government = {
