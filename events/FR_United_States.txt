@@ -1831,6 +1831,39 @@ country_event = { # Collapse of the Union
             random_other_country = {
                 news_event = { id = news.9 hours = 12 }
             }
+            NAR = {
+                if = {
+                    limit = { has_dlc = "Man the Guns" }
+                    load_oob = "NAR_naval_mtg"
+                    else = {
+                        load_oob = "NAR_naval_legacy"
+                    }
+                }
+            }
+            NEE = {
+                if = {
+                    limit = { has_dlc = "Man the Guns" }
+                    load_oob = "NEE_naval_mtg"
+                    else = {
+                        load_oob = "NEE_naval_legacy"
+                    }
+                }
+            }
+            USA = {
+                destroy_ships = { type = destroyer count = all }
+                destroy_ships = { type = submarine count = all }
+                destroy_ships = { type = heavy_cruiser count = all }
+                destroy_ships = { type = light_cruiser count = all }
+                destroy_ships = { type = battleship count = all }
+                destroy_ships = { type = carrier count = all }
+                if = {
+                    limit = { has_dlc = "Man the Guns" }
+                    load_oob = "USA_collapsed_naval_mtg"
+                    else = {
+                        load_oob = "USA_collapsed_naval_legacy"
+                    }
+                }
+            }
         }
     }
 }
