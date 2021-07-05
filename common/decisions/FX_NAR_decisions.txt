@@ -349,7 +349,6 @@ NAR_state_reintegration = {
                 AND = {
                     owns_state = 385 # Oregon
                     owns_state = 386 # Washington
-                    owns_state = 463 # Alaska
                 }
             }
         }
@@ -372,6 +371,11 @@ NAR_state_reintegration = {
         }
         complete_effect = {
             remove_ideas = NAR_illegitimate_government
+            drop_cosmetic_tag = yes
+            if = {
+                limit = { has_country_flag = NAR_path_natpop }
+                set_cosmetic_tag = NAR_sacred_unified
+            }
         }
     }
 }

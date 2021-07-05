@@ -517,6 +517,7 @@ focus_tree = {
         x = 17
         y = 0
         cost = 6
+        ai_will_do = { factor = 2000 }
         completion_reward = {
             country_event = { id = newamerica.1 hours = 2 }
         }
@@ -717,7 +718,9 @@ focus_tree = {
         x = -1
         y = 1
         cost = 6
-        ai_will_do = { factor = 400 }
+        ai_will_do = { 
+            factor = 400
+        }
         mutually_exclusive = { 
             focus = NAR_limited_rights_for_minorities
         }
@@ -735,6 +738,9 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
+        ai_will_do = {
+            factor = 20
+        }
         mutually_exclusive = { 
             focus = NAR_suppress_the_minorities
         }
