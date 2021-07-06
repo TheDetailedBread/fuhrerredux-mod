@@ -504,11 +504,12 @@ country_event = { # Air Force
     }
 }
 
-country_event = { # Minorities Fleeing
+country_event = { # Second Great Migration
     id = newamerica.17
     title = newamerica.17.t
     desc = newamerica.17.d
     picture = GFX_report_event_china_infiltration
+    is_triggered_only = yes
 
     immediate = {
         hidden_effect = {
@@ -520,13 +521,13 @@ country_event = { # Minorities Fleeing
     option = {
         name = newamerica.17.a
         add_timed_idea = {
-            idea = NAR_fleeing_minorities
-            days = 1400
+            idea = NAR_great_migration
+            days = 360
         }
     }
 }
 
-country_event = { # Second Great Migration
+country_event = { # American Refugees
     id = newamerica.18
     title = newamerica.18.t
     desc = newamerica.18.d
@@ -537,7 +538,206 @@ country_event = { # Second Great Migration
         name = newamerica.18.a
         add_timed_idea = {
             idea = NAR_second_great_migration
-            days = 1400
+            days = 360
+        }
+    }
+}
+
+country_event = { # Archbishops Seek Support
+    id = newamerica.19
+    title = newamerica.19.t
+    desc = newamerica.19.d
+    picture = GFX_report_event_royal_parade
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        OR = {
+            has_country_flag = NAR_path_corporate
+            has_country_flag = NAR_path_pataut
+        }
+    }
+    
+    mean_time_to_happen = { months = 3 }
+
+    option = {
+        name = newamerica.19.a
+        add_political_power = -30
+    }
+    option = {
+        name = newamerica.19.b
+        add_manpower = -2000
+        add_command_power = 25
+    }
+}
+
+country_event = { # The Jewish Question
+    id = newamerica.20
+    title = newamerica.20.t
+    desc = newamerica.20.d
+    picture = GFX_report_event_communist_leader
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        has_completed_focus = NAR_political_stabilization
+    }
+
+    mean_time_to_happen = {
+        months = 4
+    }
+
+    option = {
+        name = newamerica.20.a
+        increase_ruling_party_popularity_by_15 = yes
+        add_political_power = -10
+        add_stability = -0.01
+    }
+    option = {
+        name = newamerica.20.b
+        increase_ruling_party_popularity_by_10 = yes
+        add_political_power = 35
+        add_stability = 0.025
+        add_manpower = -15000
+    }
+    option = {
+        name = newamerica.20.c
+        increase_ruling_party_popularity_by_5 = yes
+        add_political_power = -5
+        add_stability = -0.03
+        add_manpower = 5000
+        add_command_power = -5
+    }
+}
+
+country_event = { # Fighting Crime
+    id = newamerica.22
+    title = newamerica.22.t
+    desc = newamerica.22.d
+    picture = GFX_report_event_german_polish_border
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_path_natpop
+        owns_state = 374
+    }
+
+    mean_time_to_happen = { days = 14 }
+
+    option = {
+        name = newamerica.22.a
+        add_political_power = 10
+    }
+}
+
+country_event = { # Black Education Act
+    id = newamerica.23
+    title = newamerica.23.t
+    desc = newamerica.23.d
+    picture = GFX_report_event_generic_sign_treaty1
+    fire_only_once = yes
+
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_path_natpop
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    option = { # It's for the best
+        name = newamerica.23.a
+        add_political_power = -20
+        add_stability = 0.025
+    }
+}
+
+country_event = { # The Pass Laws
+    id = newamerica.24
+    title = newamerica.24.t
+    desc = newamerica.24.d
+    picture = GFX_report_event_czech_soldiers_01
+    fire_only_once = yes
+
+    option = {
+        name = newamerica.24.a
+        add_political_power = -10
+    }
+}
+
+country_event = { # The Third Great Migration
+    id = newamerica.25
+    title = newamerica.25.t
+    desc = newamerica.25.d
+    picture = newamerica.25.a
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.25
+        add_timed_idea = {
+            idea = NAR_great_migration
+            days = 720
+        }
+        every_country = {
+            limit = {
+                NOT = { is_puppet_of = NAR }
+                NOT = { has_war_with = NAR }
+                OR = {
+                    tag = CAN
+                    tag = NEE
+                    tag = USA
+                    tag = LIB
+                    tag = MEX
+                    tag = CUB
+                    tag = HAI
+                }
+            }
+            country_event = { id = newamerica.26 hours = 18 }
+        }
+    }
+}
+
+country_event = { # The Third Great Migration
+    id = newamerica.26
+    title = newamerica.26.t
+    desc = {
+        text = newamerica.26.d.can
+        trigger = { tag = CAN }
+    }
+    desc = {
+        text = newamerica.26.d.nee
+        trigger = { tag = NEE }
+    }
+    desc = {
+        text = newamerica.26.d.usa
+        trigger = { tag = USA }
+    }
+    desc = {
+        text = newamerica.26.d.lib
+        trigger = { tag = LIB }
+    }
+    desc = {
+        text = newamerica.26.d.mex
+        trigger = { tag = MEX }
+    }
+    desc = {
+        text = newamerica.26.d.hai
+        trigger = { tag = HAI }
+    }
+    desc = {
+        text = newamerica.26.d.cub
+        trigger = { tag = CUB }
+    }
+    picture = GFX_report_event_african_soldiers
+    is_triggered_only = yes
+
+    option = {
+        name = newamerica.26.a
+        add_timed_idea = {
+            idea = NAR_american_refugees_1
+            days = 720
         }
     }
 }
