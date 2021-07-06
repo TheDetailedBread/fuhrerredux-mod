@@ -479,7 +479,7 @@ focus_tree = {
         }
     }
 
-    # Crackdown on Traitors
+    # Crackdown on Underisables
     focus = {
         id = NAR_crackdown_on_undesirables
         icon = GFX_goal_purge_opposition
@@ -491,6 +491,9 @@ focus_tree = {
         relative_position_id = NAR_christian_work_ethics
         completion_reward = {
             add_ideas = NAR_the_great_purge
+            hidden_effect = {
+                country_event = { id = newamerica.25 days = 3 }
+            }
         }
     }
     

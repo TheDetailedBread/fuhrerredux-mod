@@ -365,7 +365,7 @@ ideas = {
                 weekly_war_support = 0.05
             }
         }
-        NAR_fleeing_minorities = {
+        NAR_great_migration = {
             allowed = { original_tag = NAR }
             picture = prc_low_popular_support2
             modifier = {
@@ -373,12 +373,20 @@ ideas = {
                 weekly_manpower = -250
             }
         }
-        NAR_second_great_migration = {
+        NAR_american_refugees = {
             allowed = { original_tag = NAR }
             picture = prc_the_long_march2
             modifier = {
                 monthly_population = 0.5
                 weekly_manpower = 250
+            }
+        }
+        NAR_american_refugees_1 = {
+            allowed = { original_tag = NAR }
+            picture = prc_the_long_march2
+            modifier = {
+                monthly_population = 0.25
+                weekly_manpower = 150
             }
         }
     }
