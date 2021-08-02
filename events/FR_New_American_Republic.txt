@@ -12,6 +12,9 @@ country_event = { # Our Authority
 
     option = { # Our authority comes from the guns of the army
         name = newamerica.1.a
+        ai_chance = {
+            factor = 20
+        }
         add_political_power = 50
         hidden_effect = {
             country_event = { id = newamerica.2 days = 14 }
@@ -19,6 +22,9 @@ country_event = { # Our Authority
     }
     option = { # Try having relations with the minorities
         name = newamerica.1.b
+        ai_chance = {
+            factor = 80
+        }
         add_stability = 0.05
         hidden_effect = {
             NAR_decrease_suppression = yes
@@ -36,6 +42,9 @@ country_event = { # Compromise with Simmons?
 
     option = { # As long as it will solidify our power
         name = newamerica.2.a
+        ai_chance = {
+            factor = 20
+        }
         add_popularity = {
             ideology = national_populist
             popularity = 0.05
@@ -47,12 +56,18 @@ country_event = { # Compromise with Simmons?
     }
     option = { # They give me the creeps, but do nothing
         name = newamerica.2.b
+        ai_chance = {
+            factor = 40
+        }
         hidden_effect = {
             country_event = { id = newamerica.3 days = 7 }
         }
     }
     option = { # Ban them
         name = newamerica.2.c
+        ai_chance = {
+            factor = 40
+        }
         hidden_effect = {
             NAR_decrease_suppression = yes
             country_event = { id = newamerica.3 days = 7 }
