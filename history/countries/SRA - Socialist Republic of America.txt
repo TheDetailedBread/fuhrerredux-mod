@@ -71,7 +71,7 @@ set_stability = 0.56
 set_war_support = 0.34
 
 set_politics = {
-	ruling_party = libertarian_socialist
+	ruling_party = collectivist
 	last_election = "1932.11.15"
 	election_frequency = 48
 	elections_allowed = no
@@ -79,8 +79,8 @@ set_politics = {
 
 set_popularities = {
 	vanguardist = 3
-	collectivist = 22
-	libertarian_socialist = 48
+	collectivist = 48
+	libertarian_socialist = 22
 	social_democrat = 17
 	social_liberal = 8
 	market_liberal = 2
@@ -92,22 +92,29 @@ set_popularities = {
 
 add_ideas = {
 	party_pop_0_20
-
 	limited_conscription
 
 	SRA_our_right_to_survive
 
-	GEN_hog_lso
-    GEN_for_lso
-    GEN_eco_lso
-    GEN_sec_lso
+	GEN_hog_col
+    GEN_for_col
+    GEN_eco_col
+    GEN_sec_col
 	revolutionary_movement
 }
 
 create_country_leader = {
-	name = "Maria Spiridonova"
-	desc = "POLITICS_MARIA_SPIRIDONOVA_DESC"
-	picture = "gfx/leaders/NAR/Portrait_NAR_Maria_Spiridonova.tga"
+	name = "William Haywood"
+	desc = "POLITICS_WILLIAM_HAYWOOD_DESC"
+	picture = "Portrait_SRA_William_Haywood.tga"
+	expire = "1965.1.1"
+	ideology = collectivist_subtype
+	traits = { }
+}
+create_country_leader = {
+	name = "James W. Ford"
+	desc = "POLITICS_JAMES_W_FORD_DESC"
+	picture = "Portrait_SRA_James_W_Ford.tga"
 	expire = "1965.1.1"
 	ideology = collectivist_subtype
 	traits = { }
