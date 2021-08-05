@@ -17,6 +17,7 @@ country_event = { # Our Authority
         }
         add_political_power = 50
         hidden_effect = {
+            set_country_flag = NAR_cemented_our_authority
             country_event = { id = newamerica.2 days = 14 }
         }
     }
@@ -27,6 +28,7 @@ country_event = { # Our Authority
         }
         add_stability = 0.05
         hidden_effect = {
+            set_country_flag = NAR_cemented_our_authority
             NAR_decrease_suppression = yes
             country_event = { id = newamerica.2 days = 14 }
         }
@@ -51,6 +53,7 @@ country_event = { # Compromise with Simmons?
         }
         hidden_effect = {
             NAR_increase_suppression = yes
+            set_country_flag = NAR_compromised_with_cults
             country_event = { id = newamerica.3 days = 7 }
         }
     }
@@ -243,7 +246,11 @@ country_event = { # Simmons Coup
         has_country_flag = NAR_protests_happened
         has_country_flag = NAR_compromised_with_cults
         NOT = { has_country_flag = NAR_arrested_cults }
-        check_variable = { minority_suppression > 45 }
+        check_variable = {
+            var = minority_suppression
+            value = 40
+            compare = less_than_or_equals
+        }
     }
 
     mean_time_to_happen = {
@@ -289,7 +296,11 @@ country_event = { # Moseley Coup
         has_country_flag = NAR_protests_happened
         has_country_flag = NAR_detriot_garrison
         NOT = { has_country_flag = NAR_compromised_with_cults }
-        check_variable = { minority_suppression > 45 }
+        check_variable = {
+            var = minority_suppression
+            value = 40
+            compare = less_than_or_equals  
+        }
     }
 
     mean_time_to_happen = {
@@ -331,7 +342,7 @@ country_event = { # Moseley Coup
     }
 }
 
-country_event = { # Hughes Coup
+country_event = { # Teagle Coup
     id = newamerica.12
     title = newamerica.12.t
     desc = newamerica.12.d
@@ -343,7 +354,18 @@ country_event = { # Hughes Coup
         has_country_flag = NAR_protests_happened
         NOT = { has_country_flag = NAR_detriot_garrison }
         NOT = { has_country_flag = NAR_compromised_with_cults }
-        check_variable = { minority_suppression > 45 }
+        OR = {
+            check_variable = { 
+                var = minority_suppression
+                value = 45
+                compare = greater_than_or_equals
+            }
+            check_variable = {
+                var = minority_suppression
+                value = 55
+                compare = less_than_or_equals
+            }
+        }
     }
 
     mean_time_to_happen = {
@@ -360,19 +382,19 @@ country_event = { # Hughes Coup
             country_event = { id = newamerica.17 months = 1 }
         }
         set_politics = {
-            ruling_party = authoritarian_democrat
+            ruling_party = paternal_autocrat
             elections_allowed = no
         }
         add_popularity = {
-            ideology = authoritarian_democrat
+            ideology = paternal_autocrat
             popularity = 0.2
         }
         remove_every_minister = yes
         add_ideas = {
-            NAR_Howard_Hughes_hog_ade
-            NAR_Arthur_Cherep_Spiridovich_for_pau
-            NAR_Fred_Chase_Koch_eco_ade
-            NAR_Eugene_Talmadge_sec_pau
+            NAR_Walter_C_Teagle_hog_pau
+            NAR_William_Bell_Riley_for_pau
+            NAR_Charles_Emil_Sorensen_eco_pau
+            NAR_Clare_Eugene_Hoffman_sec_pau
         }
     }
 }
@@ -387,7 +409,11 @@ country_event = { # Worker Joins Protestors
     trigger = {
         tag = NAR
         has_country_flag = NAR_protests_happened
-        check_variable = { minority_suppression < 45 }
+        check_variable = { 
+            var = minority_suppression
+            value = 56
+            compare = greater_than_or_equals
+        }
     }
 
     mean_time_to_happen = {

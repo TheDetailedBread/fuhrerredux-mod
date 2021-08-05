@@ -168,7 +168,7 @@ focus_tree = {
         prerequisite = { focus = NAR_lower_the_corporate_tax }
         relative_position_id = NAR_use_cheap_labour
         completion_reward = {
-            add_ideas = NAR_financial_reform
+            add_ideas = NAR_financial_reforms_idea
         }
     }
 
@@ -183,7 +183,7 @@ focus_tree = {
         relative_position_id = NAR_financial_reform
         completion_reward = {
             swap_ideas = {
-                remove_idea = NAR_financial_reform
+                remove_idea = NAR_financial_reforms_idea
                 add_idea = NAR_thriving_economy
             }
         }
@@ -1117,7 +1117,7 @@ focus_tree = {
         relative_position_id = NAR_new_army_doctrines
         completion_reward = {
             add_tech_bonus = {
-                category = motorized
+                category = motorized_equipment
                 bonus = 1.0
                 uses = 1
             }
