@@ -21,6 +21,7 @@ country_event = {
         set_country_flag = PHI_worker_victory_tt
         remove_ideas = PHI_the_filipino_civil_war
         hidden_effect = {
+			country_event = { id = phr.3 days = 7 }
         	country_event = { id = phr.2 days = 14 }
         }
     }
@@ -174,11 +175,6 @@ country_event = {
 	option = {
 		name = phr.2.b
 		increase_ruling_party_popularity_by_10 = yes
-		hidden_effect = {
-			JAP = {
-				country_event = { id = phr.3 days = 14 }
-			}
-		}
 	}
 }
 
@@ -190,7 +186,70 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = {
-		name = phr.3.a
-	}
+	option = { # LibSoc
+        name = phr.3.a
+        set_politics = {
+            ruling_party = libertarian_socialist
+            elections_allowed = no
+        }
+        add_popularity = {
+            ideology = libertarian_socialist
+            popularity = 0.15
+        }
+        remove_every_minister = yes
+        add_ideas = {
+            PHI_Crisanto_Evangelista_hog_lib
+            PHI_Casto_Alejandrino_for_col
+            PHI_Herminegildo_Cruz_eco_col
+            PHI_Guillermo_Capadocia_sec_col
+        }
+        hidden_effect = {
+            set_country_flag = PHR_had_revolutionary_congress
+            set_country_flag = PHR_laborista_victory
+        }
+    }
+	option = { # Socialist
+        name = phr.3.b
+        set_politics = {
+            ruling_party = collectivist
+            elections_allowed = no
+        }
+        add_popularity = {
+            ideology = collectivist
+            popularity = 0.15
+        }
+        remove_every_minister = yes
+        add_ideas = {
+            PHI_Luis_Taruc_hog_col
+            PHI_Casto_Alejandrino_for_col
+            PHI_Herminegildo_Cruz_eco_col
+            PHI_Guillermo_Capadocia_sec_col
+        }
+        hidden_effect = {
+            set_country_flag = PHR_had_revolutionary_congress
+            set_country_flag = PHR_soyalista_victory
+        }
+    }
+    option = { # Vanguardist
+        name = phr.3.c
+        set_politics = {
+            ruling_party = vanguardist
+            elections_allowed = no
+        }
+        add_popularity = {
+            ideology = vanguardist
+            popularity = 0.15
+        }
+        remove_every_minister = yes
+        add_ideas = {
+            PHI_Pedro_Abad_Santos_hog_van
+            PHI_Casto_Alejandrino_for_col
+            PHI_Herminegildo_Cruz_eco_col
+            PHI_Guillermo_Capadocia_sec_col
+        }
+        hidden_effect = {
+            set_country_flag = PHR_had_revolutionary_congress
+            set_country_flag = PHR_kumonista_victory
+        }
+    }
 }
