@@ -65,11 +65,9 @@ focus_tree = {
         x = -2
         y = 1
         cost = 0
-        available = {
-            has_country_flag = PHR_laborista_victory
-        }
         bypass = {
             has_country_flag = PHR_had_revolutionary_congress
+            has_country_flag = PHR_laborista_victory
         }
         mutually_exclusive = {
             focus = PHR_pangkat_kumonista
@@ -86,11 +84,9 @@ focus_tree = {
         x = 0
         y = 1
         cost = 6
-        available = {
-            has_country_flag = PHR_soyalista_victory
-        }
         bypass = {
             has_country_flag = PHR_had_revolutionary_congress
+            has_country_flag = PHR_soyalista_victory
         }
         mutually_exclusive = {
             focus = PHR_pangkat_laborista
@@ -107,11 +103,9 @@ focus_tree = {
         x = 2
         y = 1
         cost = 6
-        available = {
-            has_country_flag = PHR_kumonista_victory
-        }
         bypass = {
             has_country_flag = PHR_had_revolutionary_congress
+            has_country_flag = PHR_kumonista_victory
         }
         mutually_exclusive = {
             focus = PHR_pangkat_laborista
@@ -164,11 +158,11 @@ focus_tree = {
         relative_position_id = PHR_pangkat_laborista
         completion_reward = {
             add_offsite_building = {
-                building = industrial_complex
+                type = industrial_complex
                 level = 2
             }
             add_offsite_building = {
-                building = arms_factory
+                type = arms_factory
                 level = 2
             }
         }
@@ -204,7 +198,7 @@ focus_tree = {
         relative_position_id = PHR_pangkat_soyalista
         completion_reward = {
             add_tech_bonus = {
-                technology = electronics
+                category = electronics
                 bonus = 0.75
                 uses = 2
             }
