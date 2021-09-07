@@ -439,6 +439,16 @@ on_actions = {
                     set_country_flag = PHI_ai_chosen
                     set_country_flag = PHI_valkist_behavior
                 }
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = PHI_AI_BEHAVIOR
+							option = RULE_OPTION_PHI_RED_DAWN
+						}
+					}
+					set_country_flag = PHI_ai_chosen
+					set_country_flag = PHI_socialist_behavior
+				}
             }
 		}
 	}
