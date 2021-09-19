@@ -2,6 +2,7 @@ foreign_politics = {
     USA_support_brazil = {
         icon = GFX_decision_generic_prepare_civil_war
         cost = 50
+        days_remove = 14
         allowed = { original_tag = USA }
         visible = { 
             BRA = {
@@ -9,10 +10,39 @@ foreign_politics = {
                 has_war_with = UBR
             }
         }
-        available = { has_war = no }
+        available = { 
+            has_war = no
+            BRA = { 
+                exists = yes
+                has_capitulated = no
+            }    
+        }
         ai_will_do = { factor = 200 }
-        complete_effect = {
+        remove_effect = {
             BRA = { country_event = { id = usa.35 hours = 5 } }
+        }
+    }
+    USA_support_philippines = {
+        icon = GFX_decision_generic_prepare_civil_war
+        cost = 50
+        days_remove = 14
+        allowed = { original_tag = USA }
+        visible = {
+            PHI = {
+                has_war_with = PHR
+            }
+            country_exists = PHR
+        }
+        available = { 
+            has_war = no
+            PHI = {
+                exists = yes
+                has_capitulated = no
+            }
+        }
+        ai_will_do = { factor = 200 }
+        remove_effect = {
+            PHI = { country_event = { id = usa.35 hours = 5 } }
         }
     }
     USA_demand_mexican_submission = {

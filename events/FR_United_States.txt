@@ -1553,6 +1553,58 @@ country_event = { # Concerns in Share our Wealth
     }
 }
 
+country_event = { # Support the Philippines
+    id = usa.48
+    title = usa.48.t
+    desc = usa.48.d
+    picture = GFX_report_event_election_vote
+    
+    is_triggered_only = yes
+
+    option = {
+        name = usa.48.a
+        manpower = 1000
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_1
+            amount = 2500
+            producer = USA
+        }
+        add_equipment_to_stockpile = {
+            type = support_equipment_1
+            amount = 1000
+            producer = USA
+        }
+        ai_chance = {
+            factor = 40
+            modifier = {
+                has_country_flag = PHI_democratic_behavior
+                factor = 8
+            }
+            modifier = {
+                has_country_flag = PHI_pataut_behavior
+                factor = 8
+            }
+        }
+    }
+    option = {
+        name = usa.48.b
+        add_stability = 0.05
+        add_war_support = 0.05
+        add_political_power = 150
+        ai_chance = {
+            factor = 40
+            modifier = {
+                has_country_flag = PHI_socialist_behavior
+                factor = 8
+            }
+            modifier = {
+                has_country_flag = PHI_valkist_behavior
+                factor = 8
+            }
+        }
+    }
+}
+
 country_event = { # Nationwide Riots
     id = usa.100
     title = usa.100.t
