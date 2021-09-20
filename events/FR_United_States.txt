@@ -30,12 +30,6 @@ country_event = { # 1936 Elections
         NOT = { has_country_flag = USA_had_1936_elections }
     }
 
-    immediate = {
-        hidden_effect = {
-            kill_ideology_leader = market_liberal
-        }
-    }
-
     option = { # Long
         name = usa.1.a
         set_politics = {
@@ -103,6 +97,15 @@ country_event = { # 1936 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1936_elections
+            kill_ideology_leader = market_liberal
+            create_country_leader = {
+                name = "Alf Landon"
+                desc = "POLITICS_ALF_LANDON_DESC"
+                picture = "Portrait_USA_Alf_Landon_fx.tga"
+                expire = "1965.1.1"
+                ideology = market_liberal_subtype
+                traits = { }
+            }
             random_other_country = {
                 news_event = { id = news.13 hours = 12 }
             }
