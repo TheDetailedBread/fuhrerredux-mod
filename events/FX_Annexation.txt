@@ -533,10 +533,19 @@ country_event = {
     trigger = {
         NOT = {
             tag = BEL
+<<<<<<< HEAD
             has_country_flag = BE_OCCUPIED
             country_exists = BEL
             country_exists = FLA
             country_exists = WLL
+=======
+            has_country_flag = BEL_OCCUPIED
+            OR = {
+                country_exists = BEL
+                country_exists = FLA
+                country_exists = WLL
+            }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
             has_global_flag = belgium_balkanized
         }
         ROOT = {
@@ -546,6 +555,12 @@ country_event = {
     }
     option = { # Puppet
         name = annexation.13.a
+<<<<<<< HEAD
+=======
+        trigger = {
+            NOT = { tag = HOL }
+        }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         ai_chance = { base = 95 }
         every_owned_state = {
             limit = {
@@ -565,6 +580,12 @@ country_event = {
     }
     option = {
         name = annexation.13.b
+<<<<<<< HEAD
+=======
+        trigger = {
+            NOT = { tag = HOL }
+        }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         every_owned_state = {
             limit = {
                 OR = {
@@ -2355,6 +2376,12 @@ country_event = {
     option = { # Puppet
         name = annexation.51.a
         ai_chance = { base = 95 }
+<<<<<<< HEAD
+=======
+        trigger = {
+            NOT = { tag = HOL }
+        }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         every_owned_state = {
             limit = {
                 is_core_of = FLA
@@ -7426,6 +7453,12 @@ country_event = {
     }
     option = { # Puppet
         name = annexation.147.a
+<<<<<<< HEAD
+=======
+        trigger = {
+            NOT = { tag = HOL }
+        }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         ai_chance = { base = 95 }
         every_owned_state = {
             limit = {
