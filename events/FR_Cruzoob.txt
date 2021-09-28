@@ -7,7 +7,11 @@ country_event = { # Intro
     id = cruzoob.0
     title = cruzoob.0.t
     desc = cruzoob.0.d
+<<<<<<< HEAD
     
+=======
+    picture = GFX_report_event_tanks_mexico_city
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
     is_triggered_only = yes
 
     option = { 
@@ -404,7 +408,15 @@ country_event = { # Joint Army Exercises
     option = {
         name = cruzoob.104.a
         ai_chance = {
+<<<<<<< HEAD
             base = 80
+=======
+            factor = 80
+            modifier = {
+                factor = 20
+                FROM = { has_same_government_as_ROOT = yes }
+            }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         add_tech_bonus = {
             category = land_doctrine
@@ -416,7 +428,20 @@ country_event = { # Joint Army Exercises
     option = {
         name = cruzoob.104.b
         ai_chance = {
+<<<<<<< HEAD
             base = 20
+=======
+            factor = 20
+            modifier = {
+                factor = 0.8
+                MEX = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+            }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         FROM = { country_event = cruzoob.106 }
     }
@@ -470,7 +495,17 @@ country_event = { # Intel Sharing
     option = {
         name = cruzoob.107.a
         ai_chance = {
+<<<<<<< HEAD
             base = 60
+=======
+            factor = 80
+            modifier = {
+                factor = 20
+                FROM = {
+                    has_same_government_as_ROOT = yes
+                }
+            }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         add_tech_bonus = {
             category = encryption_tech
@@ -483,7 +518,11 @@ country_event = { # Intel Sharing
     option = {
         name = cruzoob.107.b
         ai_chance = {
+<<<<<<< HEAD
             base = 40
+=======
+            factor = 20
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         FROM = { country_event = cruzoob.109 }
     }
@@ -530,7 +569,15 @@ country_event = { # Faction Joining
     option = {
         name = cruzoob.110.a
         ai_chance = {
+<<<<<<< HEAD
             base = 60
+=======
+            factor = 80
+            modifier = {
+                factor = 20
+                tag = GER
+            }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         
         add_to_faction = FROM
@@ -539,7 +586,11 @@ country_event = { # Faction Joining
     option = {
         name = cruzoob.110.b
         ai_chance = {
+<<<<<<< HEAD
             base = 40
+=======
+            factor = 40
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         FROM = { country_event = cruzoob.112 }
     }
@@ -580,7 +631,15 @@ country_event = { # Create Faction with Bolivia
     option = {
         name = cruzoob.113.a
         ai_chance = {
+<<<<<<< HEAD
             base = 60
+=======
+            factor = 80
+            modifier = {
+                factor = 20
+                tag = BOL
+            }
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
 
         create_faction = CRU_BOL_accord
@@ -590,7 +649,11 @@ country_event = { # Create Faction with Bolivia
     option = {
         name = cruzoob.113.a
         ai_chance = {
+<<<<<<< HEAD
             base = 40
+=======
+            factor = 40
+>>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
         }
         FROM = { country_event = cruzoob.115 }
     }
