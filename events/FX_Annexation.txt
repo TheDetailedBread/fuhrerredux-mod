@@ -533,12 +533,10 @@ country_event = {
     trigger = {
         NOT = {
             tag = BEL
-            has_country_flag = BEL_OCCUPIED
-            OR = {
-                country_exists = BEL
-                country_exists = FLA
-                country_exists = WLL
-            }
+            has_country_flag = BE_OCCUPIED
+            country_exists = BEL
+            country_exists = FLA
+            country_exists = WLL
             has_global_flag = belgium_balkanized
         }
         ROOT = {
@@ -548,9 +546,6 @@ country_event = {
     }
     option = { # Puppet
         name = annexation.13.a
-        trigger = {
-            NOT = { tag = HOL }
-        }
         ai_chance = { base = 95 }
         every_owned_state = {
             limit = {
@@ -570,9 +565,6 @@ country_event = {
     }
     option = {
         name = annexation.13.b
-        trigger = {
-            NOT = { tag = HOL }
-        }
         every_owned_state = {
             limit = {
                 OR = {
@@ -2363,9 +2355,6 @@ country_event = {
     option = { # Puppet
         name = annexation.51.a
         ai_chance = { base = 95 }
-        trigger = {
-            NOT = { tag = HOL }
-        }
         every_owned_state = {
             limit = {
                 is_core_of = FLA
@@ -7437,9 +7426,6 @@ country_event = {
     }
     option = { # Puppet
         name = annexation.147.a
-        trigger = {
-            NOT = { tag = HOL }
-        }
         ai_chance = { base = 95 }
         every_owned_state = {
             limit = {
@@ -7791,7 +7777,6 @@ country_event = {
     trigger = {
         NOT = {
             tag = HON
-            tag = GUA
             has_country_flag = HON_OCCUPIED
             country_exists = HON
         }
