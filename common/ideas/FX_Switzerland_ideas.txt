@@ -6,7 +6,7 @@ ideas = {
     country = {
 		SWI_arms_industry = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_arms_industry"}
-			picture = generic_production_bonus
+			picture = ast_volunteer_defence_corps
 			modifier = {
 				industrial_capacity_factory = 0.05
         consumer_goods_factor = 0.10
@@ -20,7 +20,7 @@ ideas = {
 
 		SWI_die_schweizer_armee = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_die_schweizer_armee"}
-			picture = generic_manpower_bonus
+			picture = generic_reserve_divisions
 			modifier = {
 				mobilization_speed = 0.50
         conscription = 0.01
@@ -40,7 +40,7 @@ ideas = {
 
 		SWI_party_line_on_banking_legal_audits = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_party_line_on_banking_legal_audits"}
-			picture = japanese_aid_cut
+			picture = ger_mefo_bills_payment
 			modifier = {
 				political_power_factor = -0.15
         # trade_laws_cost_factor = 0.20 modifier does not seem to exist even though the wiki says so. -Jespertjee
@@ -67,7 +67,7 @@ ideas = {
 
 		SWI_weapons_dividends = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_weapons_dividends"}
-			picture = HUN_treaty_of_triannon
+			picture = chi_hyper_inflation5
 			modifier = {
 				consumer_goods_factor = -0.20
         political_power_factor = 0.05
@@ -128,7 +128,7 @@ ideas = {
 
 		SWI_arms_industry_licenses_revoked = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_arms_industry_licenses_revoked"}
-			picture = generic_production_bonus
+			picture = generic_acquire_tanks
 			modifier = {
 				industrial_capacity_factory = -0.05
         consumer_goods_factor = -0.15
@@ -143,7 +143,7 @@ ideas = {
 
 		SWI_arms_industry_licenses_revoked_taxing_weapons = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_arms_industry_licenses_revoked_taxing_weapons"}
-			picture = generic_production_bonus
+			picture = generic_acquire_tanks
 			modifier = {
 				industrial_capacity_factory = -0.05
         consumer_goods_factor = -0.20
@@ -158,7 +158,7 @@ ideas = {
 
 		SWI_arms_industry_taxing_weapons = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_arms_industry_taxing_weapons"}
-			picture = generic_production_bonus
+			picture = ger_mefo_bills_payment
 			modifier = {
         consumer_goods_factor = 0.13
         }
@@ -180,7 +180,7 @@ ideas = {
 
 		SWI_restriction_on_gun_production = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_restriction_on_gun_production"}
-			picture = generic_production_bonus
+			picture = generic_deal_with_the_devil2
 			modifier = {
         political_power_factor = 0.20
         }
@@ -207,7 +207,7 @@ ideas = {
 
 		SWI_mandatory_youth_weapons_education = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_mandatory_youth_weapons_education"}
-			picture = generic_production_bonus
+			picture = FRA_factory_strikes
 			modifier = {
         stability_factor = -0.15
         mobilization_speed = 0.05
@@ -221,7 +221,7 @@ ideas = {
 
 		SWI_port_payments = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_port_payments"}
-			picture = generic_production_bonus
+			picture = generic_navy
 			modifier = {
         consumer_goods_factor = 0.15
         }
@@ -229,7 +229,7 @@ ideas = {
 
 		SWI_small_port_access_boon = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_small_port_access_boon"}
-			picture = generic_production_bonus
+			picture = generic_navy
 			modifier = {
         industrial_capacity_dockyard = 0.12
         consumer_goods_factor = -0.03
@@ -238,7 +238,7 @@ ideas = {
 
 		SWI_large_port_access_boon = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_large_port_access_boon"}
-			picture = generic_production_bonus
+			picture = generic_navy
 			modifier = {
         industrial_capacity_dockyard = 0.20
         consumer_goods_factor = -0.05
@@ -247,7 +247,7 @@ ideas = {
 
 		SWI_radical_suppression_german = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_radical_suppression_german"}
-			picture = generic_production_bonus
+			picture = generic_oppression
 			modifier = {
         valkist_drift = -0.05
         drift_defence_factor = 0.20
@@ -257,7 +257,7 @@ ideas = {
 
 		SWI_radical_suppression_french = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_radical_suppression_french"}
-			picture = generic_production_bonus
+			picture = generic_oppression
 			modifier = {
         paternal_autocrat_drift = -0.05
         drift_defence_factor = 0.20
@@ -267,7 +267,7 @@ ideas = {
 
 		SWI_radical_suppression_german_and_french = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_radical_suppression_german_and_french"}
-			picture = generic_production_bonus
+			picture = generic_oppression
 			modifier = {
         valkist_drift = -0.05
         paternal_autocrat_drift = -0.05
@@ -279,7 +279,7 @@ ideas = {
 
 		SWI_war_refugee_increase = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_war_refugee_increase"}
-			picture = generic_production_bonus
+			picture = prc_low_popular_support3
 			modifier = {
         MONTHLY_POPULATION = 0.5
         stability_factor = -0.1
@@ -290,7 +290,7 @@ ideas = {
 
 		SWI_war_refugees_departing = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SWI_war_refugees_departing"}
-			picture = generic_production_bonus
+			picture = prc_low_popular_support3
 			modifier = {
         MONTHLY_POPULATION = -0.5
         stability_factor = -0.1
