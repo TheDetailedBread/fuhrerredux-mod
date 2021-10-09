@@ -216,7 +216,9 @@ country_event = { # Mexican Response
             target = MEX
             type = annex_everything
         }
-        news_event = { id = worldnews.104 }
+        random_other_country = {
+            news_event = { id = worldnews.104 }
+        }
     }
 }
 
@@ -226,7 +228,13 @@ country_event = { # Some triggering event-ask the FR devs
     desc = usa.6.d
     fire_only_once = yes
     hidden = yes
-    immediate = { news_event = news.8 }
+    immediate = { 
+        hidden_effect = {
+            random_other_country = {
+                news_event = news.8 
+            }
+        }
+    }
     mean_time_to_happen = { days = 0 }
 
     trigger = {

@@ -36,6 +36,7 @@ country_event = {
 	title = rom.2.t
 	desc = rom.2.d
 	picture = GFX_report_event_soviet_soldiers_tank
+	fire_only_once = yes
 
 	# Drowse
 	trigger = {
@@ -48,7 +49,13 @@ country_event = {
 	}
 	# Drowse
 
-	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			random_other_country = {
+                news_event = { id = news.20 hours = 12 }
+            }
+		}
+	}
 
 	option = {
 		name = rom.2.a
@@ -100,6 +107,14 @@ country_event = {
 			picture = "Portrait_Romania_Michael_I.tga"
 			expire = "2017.12.5"
 			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		create_country_leader = {
+			name = "Michael I"
+			desc = "POLITICS_MICHAEL_I_DESC"
+			picture = "Portrait_Romania_Michael_I.tga"
+			expire = "2017.12.5"
+			ideology = national_populist_subtype
 			traits = { }
 		}
 	}
