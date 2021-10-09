@@ -50,6 +50,7 @@ foreign_politics = {
         cost = 100
         days_remove = 30
         ai_will_do = { factor = 2000 }
+        fire_only_once = yes
         allowed = { original_tag = USA }
         visible = { 
             USA_1936_elections_happened = yes
@@ -57,6 +58,7 @@ foreign_politics = {
         }
         available = {
             USA_has_less_great_depression = yes
+            NOT = { has_war_with = MEX }
         }
         remove_effect = {
             MEX = { country_event = usa.4 }
