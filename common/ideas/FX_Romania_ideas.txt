@@ -1,0 +1,584 @@
+ideas = {
+    country = {
+        ROM_the_iron_guard = {
+            allowed = { original_tag = ROM }
+            picture = ROM_iron_guard
+            modifier = {
+                stability = -0.05
+                war_support = -0.05
+                political_power_cost = 0.15
+            }
+        }
+        ROM_economic_modernization = {
+            allowed = { original_tag = ROM }
+            picture = ger_mefo_bills_payment
+            modifier = {
+                production_speed_buildings_factor = 0.15
+            }
+        }
+    }
+
+    head_of_government = {
+        ROM_Gheorghe_Apostol_hog_col = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                collectivist
+                hog_red_chairmen
+            }
+        }
+        ROM_Virgil_Madgearu_hog_sde = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                social_democrat
+                hog_reformist_soldier
+            }
+        }
+        ROM_Iuliu_Maniu_hog_sli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                social_liberal
+                hog_accomplished_diplomat
+            }
+        }
+        ROM_Constantin_Bratianu_hog_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                market_liberal
+                hog_charismatic_charmer
+            }
+        }
+        ROM_Constantin_Angelescu_hog_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                market_liberal
+                hog_corporate_suit
+            }
+        }
+        ROM_Alexandru_Vaida_Voevod_hog_sco = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                social_conservative
+                hog_naive_optimist
+            }
+        }
+        ROM_Armand_Calinescu_hog_ade = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                authoritarian_democrat
+                hog_naive_optimist
+            }
+        }
+        ROM_Alexandru_Cantacuzino_hog_pau = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                paternal_autocrat
+                hog_backroom_backstabber
+            }
+        }
+        ROM_Horia_Sima_hog_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                national_populist
+                hog_local_tyrant
+            }
+        }
+        ROM_Ion_Mota_hog_val = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                valkist
+                hog_flamboyant_tough_guy
+            }
+        }
+        ROM_Corneliu_Codreanu_hog_val = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                valkist
+                hog_determined_populist
+            }
+        }
+    }
+
+    foreign_minister = {
+        ROM_Ana_Pauker_for_col = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                collectivist
+                for_biased_intellectual
+            }
+        }
+        ROM_Grigore_Gafencu_for_sli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                social_liberal
+                for_great_compromiser
+            }
+        }
+        ROM_Gheorghe_Tatarescu_for_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                market_liberal
+                for_relations_expert
+            }
+        }
+        ROM_Savel_Radulescu_for_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                market_liberal
+                for_ideological_crusader
+            }
+        }
+        ROM_Viorel_Tilea_for_sco = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                social_conservative
+                for_moderate_among_radicals
+            }
+        }
+        ROM_Grigore_Niculescu_Buzesti_for_ade = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                authoritarian_democrat
+                for_apologetic_clerk
+            }
+        }
+        ROM_Constantin_Papanace_for_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                national_populist
+                for_the_cloak_n_dagger_schemer
+            }
+        }
+        ROM_Mihail_Sturdza_for_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                national_populist
+                for_radical_among_moderates
+            }
+        }
+        ROM_Radu_Mironovici_for_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                national_populist
+                for_world_patrician
+            }
+        }
+        ROM_Ion_Mota_for_val = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                foreign_minister
+                valkist
+                for_biased_intellectual
+            }
+        }
+    }
+
+    economy_minister = {
+        ROM_Miron_Constantinescu_eco_van = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                vanguardist
+                eco_planned_economy_proponent
+            }
+        }
+        ROM_Virgil_Madgearu_eco_sde = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                social_democrat
+                eco_reformer
+            }
+        }
+        ROM_Ion_Mihalache_eco_sde = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                social_democrat
+                eco_imbedded_unioneer
+            }
+        }
+        ROM_Gheorghe_Tatarescu_eco_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                market_liberal
+                eco_mixed_economy
+            }
+        }
+        ROM_Victor_Slavescu_eco_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                market_liberal
+                eco_bank_president
+            }
+        }
+        ROM_Mitita_Constantinescu_eco_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                market_liberal
+                eco_construction_magnate
+            }
+        }
+        ROM_Gheorghe_Mironescu_eco_sco = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                social_conservative
+                eco_administrative_genius
+            }
+        }
+        ROM_Gheorghe_Potopeanu_eco_pau = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                paternal_autocrat
+                eco_devoted_monopoly_buster
+            }
+        }
+        ROM_Ilie_Garneata_eco_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                national_populist
+                eco_national_liberal
+            }
+        }
+        ROM_Mihail_Manoilescu_eco_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                national_populist
+                eco_trade_proponent
+            }
+        }
+        ROM_Gheorghe_Clime_eco_val = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                economy_minister
+                valkist
+                eco_reformer
+            }
+        }
+    }
+
+    security_minister = {
+        ROM_Teohari_Georgescu_sec_van = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                vanguardist
+                sec_back_stabber
+            }
+        }
+        ROM_Pantelimon_Halippa_sec_sde = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                social_democrat
+                sec_compassionate_gentleman
+            }
+        }
+        ROM_Victor_Iamandi_sec_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                market_liberal
+                sec_efficient_sociopath
+            }
+        }
+        ROM_Richard_Franasovici_sec_mli = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                market_liberal
+                sec_man_of_the_people
+            }
+        }
+        ROM_Alexandru_Vaida_Voevod_sec_sco = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                social_conservative
+                sec_prince_of_terror
+            }
+        }
+        ROM_Mihail_Ghelmegeanu_sec_sco = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                social_conservative
+                sec_silent_lawyer
+            }
+        }
+        ROM_Aurel_Aldea_sec_sco = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                social_conservative
+                sec_crime_fighter
+            }
+        }
+        ROM_Horia_Sima_sec_npo = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                national_populist
+                sec_driven_recruiter
+            }
+        }
+        ROM_Alexandru_Cantacuzino_sec_pau = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                paternal_autocrat
+                sec_back_stabber
+            }
+        }
+        ROM_Ion_Belgea_sec_val = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_minister = no }
+            cancel_if_invalid = no
+            traits = {
+                security_minister
+                valkist
+                sec_preserver_of_culture
+            }
+        }
+    }
+
+    chief_of_staff = {
+        ROM_Ioan_Ilcus_cos_sli = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_staff
+                social_liberal
+                cos_school_of_fire_support
+            }
+        }
+        ROM_Mihail_Racovita_cos_sli = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_staff
+                social_liberal
+                cos_school_of_mass_combat
+            }
+        }
+        ROM_Constantin_Pantazi_cos_sco = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_staff
+                social_conservative
+                cos_school_of_defence
+            }
+        }
+        ROM_Ion_Antonescu_cos_pau = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_staff
+                paternal_autocrat
+                cos_school_of_manoeuvre
+            }
+        }
+        ROM_Gheorghe_Argeseanu_cos_pau = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_staff
+                paternal_autocrat
+                cos_school_of_psychology
+            }
+        }
+    }
+
+    chief_of_army = {
+        ROM_Costin_Ionascu_carm_sli = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_army
+                social_liberal
+                carm_commando_doctrine
+            }
+        }
+        ROM_Gheorghe_Mihail_carm_ade = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_army
+                authoritarian_democrat
+                carm_guns_and_butter_doctrine
+            }
+        }
+        ROM_Ilie_Steflea_carm_pau = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_army
+                paternal_autocrat
+                carm_static_defence_doctrine
+            }
+        }
+        ROM_Alexandru_Ioanitiu_carm_npo = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_army
+                national_populist
+                carm_decisive_battle_doctrine
+            }
+        }
+    }
+
+    chief_of_navy = {
+        ROM_Horia_Macellariu_cnav_ade = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_navy
+                authoritarian_democrat
+                cnav_decisive_battle_doctrine
+            }
+        }
+        ROM_Nicolae_Sova_cnav_ade = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_navy
+                authoritarian_democrat
+                cnav_indirect_approach_doctrine
+            }
+        }
+        ROM_Ioan_Georgescu_cnav_pau = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_navy
+                paternal_autocrat
+                cnav_power_projection_doctrine
+            }
+        }
+    }
+
+    chief_of_air_force = {
+        ROM_Gheorghe_Jienescu_cair_ade = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_air_force
+                authoritarian_democrat
+                cair_carpet_bombing_doctrine
+            }
+        }
+        ROM_Paul_Teodorescu_cair_ade = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_air_force
+                authoritarian_democrat
+                cair_air_superiority_doctrine
+            }
+        }
+        ROM_Ermil_Gheorghiu_cair_pau = {
+            allowed = { original_tag = ROM }
+            traits = {
+                chief_of_air_force
+                paternal_autocrat
+                cair_battlefield_support_doctrine
+            }
+        }
+    }
+}
