@@ -704,6 +704,15 @@ country_event = { # The Pass Laws
     picture = GFX_report_event_czech_soldiers_01
     fire_only_once = yes
 
+    trigger = {
+        tag = NAR
+        has_country_flag = NAR_path_natpop
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
     option = {
         name = newamerica.24.a
         add_political_power = -10
