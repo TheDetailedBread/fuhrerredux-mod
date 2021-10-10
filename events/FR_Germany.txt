@@ -13901,10 +13901,11 @@ option = { # Divide the isles
 	ai_chance = {
 		base = 35
 	}
-    name = ger.423.a
+    name = ger.423.b
 		GER = {
             puppet = EGL
 			puppet = SCO
+			puppet = WLS
         }
 			EGL = {
 			set_cosmetic_tag = GER_ENG_rk
@@ -13915,7 +13916,6 @@ option = { # Divide the isles
             transfer_state = 338
             transfer_state = 129
             transfer_state = 128
-            transfer_state = 122
             transfer_state = 132
             transfer_state = 130
             transfer_state = 131
@@ -13956,9 +13956,6 @@ option = { # Divide the isles
             add_core_of = EGL
         }
         128 = {
-            add_core_of = EGL
-        }
-        122 = {
             add_core_of = EGL
         }
         132 = {
@@ -14024,6 +14021,26 @@ option = { # Divide the isles
 		}
 		120 = {
 			add_core_of = SCO
+		}
+	}
+	
+	WLS = {
+		set_cosmetic_tag = GER_WLS_rk
+		transfer_state = 122
+		set_political_party = {
+			ideology = valkist
+			popularity = 60
+		}
+		add_ideas = {
+			GEN_hog_val
+			GEN_for_val
+				GEN_eco_val
+			GEN_sec_val
+			limited_conscription
+		}
+
+		122 = {
+			add_core_of = WLS
 		}
 	}
 
@@ -14093,7 +14110,6 @@ option = { # Divide the isles
 		}
 	}
 }
-
 
 option = { # Germany shall conquer all
 	ai_chance = {
