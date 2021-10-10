@@ -590,4 +590,169 @@ ideas = {
             }
         }
     }
+
+    theorist = {
+        ROM_Gheorghe_Argeseanu_theo = {
+            allowed = { original_tag = ROM }
+            traits = {
+                superior_firepower_theorist
+            }
+            research_bonus = {
+                cat_superior_firepower = 0.1
+            }
+        }
+        ROM_Ion_Antonescu_theo = {
+            allowed = { original_tag = ROM }
+            traits = {
+                trench_warfare_theorist
+            }
+            research_bonus = {
+                cat_grand_battle_plan = 0.1
+            }
+        }
+        ROM_Nicolae_Sova_theo = {
+            allowed = { original_tag = ROM }
+            traits = {
+                naval_doctrine_theorist
+            }
+            research_bonus = {
+                naval_doctrine = 0.1
+            }
+        }
+        ROM_Paul_Teodorescu_theo = {
+            allowed = { original_tag = ROM }
+            traits = {
+                air_doctrine_theorist
+            }
+            research_bonus = {
+                air_doctrine = 0.1
+            }
+        }
+        ROM_Ermil_Gheorghiu_theo = {
+            allowed = { original_tag = ROM }
+            traits = {
+                battlefield_support_theorist
+            }
+            research_bonus = {
+                cat_battlefield_support = 0.1
+            }
+        }
+    }
+
+
+    industrial_concern = {
+
+		malaxa = {
+			allowed = { tag = ROM }
+			available = {
+				has_completed_focus = ROM_support_malaxa
+			}
+			cost = 100
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		universitatea_bucuresti = {
+			allowed = { tag = ROM }
+			traits = { electronics_manufacturer }
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		rafinaria_steaua_romana = {
+			allowed = { tag = ROM }
+			traits = { chemical_producer }
+			research_bonus = {
+				synth_resources = 0.1
+			}
+		}
+	}
+
+	weapons_manufacturer = {
+		designer = yes
+
+		fabrica_de_arme_cugir = {
+			allowed = { tag = ROM }
+			traits = { infantry_equipment_producer_offense_1 }
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		udr = {
+			allowed = { tag = ROM }
+			available = { controls_state = 84 }
+			traits = { artillery_producer_defense_1 }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+
+		caile_ferate_romane = {
+			allowed = { tag = ROM }
+			traits = { medium_tank_producer_defense_0 }
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		leonida = {
+			allowed = { tag = ROM }
+			traits = { small_tank_producer_offense_1 }
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+    
+	air_naval_manufacturer = {
+		designer = yes
+
+		santierul_naval_constanta = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea santierul_naval_constanta"}
+			allowed = { tag = ROM }
+			available = { has_completed_focus = ROM_equip_galati }
+			traits = { small_ship_producer_offense_0 }
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		industria_aeronautica_romana = {
+			allowed = { tag = ROM }
+			available = { has_completed_focus = ROM_found_iar }
+			traits = { fighter_producer_offense_1 }
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		icar = {
+			allowed = { tag = ROM }
+			traits = { bomber_producer_offense_1 }
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		fabrica_avioane_set = {
+			allowed = { tag = ROM }
+			traits = { nav_cas_producer_defense_1 }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+	}
 }
