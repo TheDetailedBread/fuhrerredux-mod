@@ -4,8 +4,8 @@ ideas = {
             allowed = { original_tag = ROM }
             picture = ROM_iron_guard
             modifier = {
-                stability = -0.05
-                war_support = -0.05
+                stability_factor = -0.15
+                war_support_factor = -0.15
                 political_power_cost = 0.15
             }
         }
@@ -19,6 +19,15 @@ ideas = {
     }
 
     head_of_government = {
+        ROM_Position_Vacant_hog = {
+            allowed = { original_tag = ROM }
+            available = { can_replace_hog = no }
+            cancel_if_invalid = no
+            traits = {
+                head_of_government
+                hog_vacant_position
+            }
+        }
         ROM_Gheorghe_Apostol_hog_col = {
             allowed = { original_tag = ROM }
             available = { can_replace_hog = no }
