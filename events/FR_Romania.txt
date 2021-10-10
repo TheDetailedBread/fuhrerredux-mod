@@ -4,9 +4,34 @@ country_event = { # Intro
 	id = romania.0
 	title = romania.0.t
 	desc = romania.0.d
+	picture = GFX_report_event_vienna_award_negotiations
 	is_triggered_only = yes
 
 	option = {
 		name = romania.0.a
+	}
+}
+
+country_event = { # The New Regent
+	id = romania.1
+	title = romania.1.t
+	desc = romania.1.d
+	picture = GFX_report_event_german_reichstag_gathering
+	is_triggered_only = yes
+
+	option = { # Appoint from the ruling party
+		name = romania.1.a
+		remove_ideas_with_trait = head_of_government
+		add_ideas = ROM_Armand_Calinescu_hog_ade
+	}
+	option = { # Try courting the PNL
+		name = romania.1.c
+		remove_ideas_with_trait = head_of_government
+		add_ideas = ROM_Alexandru_Vaida_Voevod_hog_sco
+	}
+	option = { # Maybe a coalition with PSDR won't hurt
+		name = romania.1.e
+		remove_ideas_with_trait = head_of_government
+		add_ideas = ROM_Virgil_Madgearu_hog_sde
 	}
 }
