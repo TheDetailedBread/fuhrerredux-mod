@@ -35,6 +35,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = ROM_hungarian_suppression
 			hidden_effect = {
+				remove_ideas = ROM_tensions_in_transylvania
 				every_owned_state = {
 					limit = {
 						is_controlled_by = ROM
@@ -564,7 +565,7 @@ focus_tree = {
 
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
-                    type = arms_factor
+                    type = arms_factory
                     level = 2
                     instant_build = yes
                 }
@@ -695,7 +696,7 @@ focus_tree = {
     # The Liberal Regent
     focus = {
         id = ROM_the_liberal_regent
-        icon = GFX_goal_ideology_social_conservative
+        icon = GFX_goal_ideology_market_liberal
         x = 1
         y = 1
         cost = 6

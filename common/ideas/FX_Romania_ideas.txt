@@ -120,6 +120,9 @@ ideas = {
         ROM_Position_Vacant_hog = {
             allowed = { original_tag = ROM }
             available = { can_replace_hog = no }
+            visible = {
+                NOT = { has_country_flag = ROM_selected_regent }
+            }
             cancel_if_invalid = no
             traits = {
                 head_of_government
