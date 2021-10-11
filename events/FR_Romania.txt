@@ -26,15 +26,39 @@ country_event = { # The New Regent
 		set_country_flag = ROM_status_quo_regent
 	}
 	option = { # Try courting the PNL
-		name = romania.1.c
+		name = romania.1.b
 		remove_ideas_with_trait = head_of_government
 		add_ideas = ROM_Alexandru_Vaida_Voevod_hog_sco
 		set_country_flag = ROM_liberal_regent
 	}
 	option = { # Maybe a coalition with PSDR won't hurt
-		name = romania.1.e
+		name = romania.1.c
 		remove_ideas_with_trait = head_of_government
 		add_ideas = ROM_Virgil_Madgearu_hog_sde
 		set_country_flag = ROM_leftist_regent
+	}
+}
+
+country_event = {
+	id = romania.2
+	title = romania.2.t
+	desc = romania.2.d
+	picture = GFX_report_event_german_reichstag_gathering
+	is_triggered_only = yes
+
+	option = {
+		name = romania.2.a
+		hidden_effect = {
+			retire_ideology_leader = social_democrat
+			retire_ideology_leader = social_liberal
+			retire_ideology_leader = market_liberal
+			retire_ideology_leader = social_conservative
+			retire_ideology_leader = authoritarian_democrat
+			retire_ideology_leader = paternal_autocrat
+			retire_ideology_leader = national_populist
+			random_other_country = {
+				news_event = { id = news.20 hours = 8 }
+			}
+		}
 	}
 }
