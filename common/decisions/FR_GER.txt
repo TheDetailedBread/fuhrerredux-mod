@@ -136,9 +136,9 @@ GER_fate_of_bohemia = {
 					ruling_party = valkist elections_allowed = no
 				}
 				create_country_leader = {
-				name = "Alois Eliáš"
+				name = "Jan Rys-Rozsévač"
 				desc = ""
-				picture = "gfx/leaders/CZE/Portrait_Czech_Jaroslav_Krejci.dds"
+				picture = "gfx/leaders/CZE/JanRys.tga"
 				expire = "1965.1.1"
 				ideology = valkist_subtype
 				traits = { }
@@ -164,6 +164,53 @@ GER_fate_of_bohemia = {
 				factor = 10
             }
         }
+    }
+}
+
+GER_fate_of_france = {
+	puppet_france = {
+
+        icon = generic_nationalism
+
+		available = {
+			GER = {
+				OR = {
+					has_country_flag = GER_french_escapes
+					owns_state = 16
+					FRA = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+        visible = {
+			original_tag = GER
+ 			GER = {
+				OR = {
+					has_war_with = FRA
+					has_country_flag = GER_french_escapes
+					owns_state = 16
+				}
+			}
+        }
+		
+        cost = 25
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision puppet_france"
+			country_event = ger.403
+		}
+
+        ai_will_do = {
+            factor = 200
+        }
+
+        fire_only_once = yes
+
+        cost = 50
     }
 }
 
@@ -235,53 +282,6 @@ GER_fate_of_austria = {
     }
 }
 
-GER_fate_of_france = {
-	puppet_france = {
-
-        icon = generic_nationalism
-
-		available = {
-			GER = {
-				OR = {
-					has_country_flag = GER_french_escapes
-					owns_state = 16
-					FRA = {
-						has_capitulated = yes
-					}
-				}
-			}
-		}
-
-        visible = {
-			original_tag = GER
- 			GER = {
-				OR = {
-					has_war_with = FRA
-					has_country_flag = GER_french_escapes
-					owns_state = 16
-				}
-			}
-        }
-		
-        cost = 25
-
-        fire_only_once = yes
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision puppet_france"
-			country_event = ger.403
-		}
-
-        ai_will_do = {
-            factor = 200
-        }
-
-        fire_only_once = yes
-
-        cost = 50
-    }
-}
-
 GER_fate_of_italy = {
 	puppet_italy = {
 
@@ -290,7 +290,7 @@ GER_fate_of_italy = {
 		available = {
 			GER = {
 				OR = {
-					controls_state = 2
+					owns_state = 2
 					has_country_flag = GER_italy_escapes
 				}
 			}
@@ -702,6 +702,7 @@ GER_fate_of_east_europe = {
 		
         visible = {
 			original_tag = GER
+			owns_state = 202
 		}
 		
         cost = 25
@@ -744,7 +745,7 @@ GER_fate_of_east_europe = {
 				ideology = valkist_subtype
 				traits = { }
 				}
-				set_cosmetic_tag = UKR_puppet
+				set_cosmetic_tag = GER_UKR_rk
 			}
 		}
     }
@@ -804,14 +805,14 @@ GER_fate_of_east_europe = {
 					ruling_party = valkist elections_allowed = no
 				}
 				create_country_leader = {
-				name = "Radasłaŭ_Astroŭski"
+				name = "Radasłaŭ Astroŭski"
 				desc = ""
-				picture = "gfx/leaders/BLR/leader_BLR_Radaslau_Astrouski.tga"
+				picture = "gfx/leaders/BLR/Portrait_BLR_Radaslau_Astrouski.tga"
 				expire = "1965.1.1"
 				ideology = valkist_subtype
 				traits = { }
 				}
-				set_cosmetic_tag = BLR_puppet
+				set_cosmetic_tag = GER_BLR_rk
 			}
 		}
     }
@@ -1184,7 +1185,7 @@ GER_fate_of_denmark_dec = {
 			}
 			DEN = {
 				load_focus_tree = generic_focus
-				set_cosmetic_tag = DEN_puppet
+				set_cosmetic_tag = GER_DEN_rk
 				copy_government_idea_of_ROOT = yes
 				set_politics = {
 					ruling_party = valkist elections_allowed = no
@@ -1192,7 +1193,7 @@ GER_fate_of_denmark_dec = {
 				create_country_leader = {
 				name = "Frits Clausen"
 				desc = "POLITICS_FRITS_CLAUSEN_DESC"
-				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				picture = "gfx/leaders/DEN/Portrait_Denmark_Frits_Clausen.tga"
 				expire = "1965.1.1"
 				ideology = valkist_subtype
 				traits = { }
