@@ -22,6 +22,37 @@ focus_tree = {
         }
     }
 
+    # Suppress Hungarians
+    focus = {
+        id = ROM_suppress_hungarians
+        icon = GFX_goal_step_on_skull
+        x = -7
+        y = 1
+        cost = 2
+		available = { has_idea = ROM_tensions_in_transylvania }
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+		completion_reward = {
+			custom_effect_tooltip = ROM_hungarian_suppression
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROM
+						OR = {
+							state = 762
+							state = 154
+							state = 84
+							state = 83
+							state = 82
+							state = 76
+						}
+					}
+					remove_dynamic_modifier = { modifier = ROM_hungarian_resistance }
+				}
+			}
+		}
+    }
+
     # Defensive Positions
     focus = {
         id = ROM_defensive_positions
@@ -29,11 +60,68 @@ focus_tree = {
         x = -5
         y = 1
         cost = 3
+		available = { has_capitulated = no }
         prerequisite = { focus = ROM_preservation_of_greater_romania }
         relative_position_id = ROM_preservation_of_greater_romania
         completion_reward = {
-            army_experience = 15
-            air_experience = 15
+            78 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3577
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6600
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 11686
+					instant_build = yes
+				}
+			}
+			853 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6727
+					instant_build = yes
+				}
+			}
+			82 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9606
+					instant_build = yes
+				}
+			}
+			83 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 646
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 6697
+					instant_build = yes
+				}
+			}
+			762 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 713
+					instant_build = yes
+				}
+			}
         }
     }
 
@@ -44,8 +132,55 @@ focus_tree = {
         x = -1
         y = 1
         cost = 6
+		available = {
+			has_capitulated = no
+			owns_state = 83
+			owns_state = 762
+		}
         prerequisite = { focus = ROM_defensive_positions }
         relative_position_id = ROM_defensive_positions
+		completion_reward = {
+			83 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 646
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6682
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6697
+					instant_build = yes
+				}
+			}
+			762 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3696
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 713
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 746
+					instant_build = yes
+				}
+			}
+		}
     }
 
     # Bessarabia Forts Expansion
@@ -55,8 +190,61 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
+		available = {
+			has_capitulated = no
+			owns_state = 78
+			owns_state = 853
+		}
         prerequisite = { focus = ROM_defensive_positions }
         relative_position_id = ROM_defensive_positions
+		completion_reward = {
+			78 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3577
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 414
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6600
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11705
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11686
+					instant_build = yes
+				}
+			}
+			853 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6743
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6727
+					instant_build = yes
+				}
+			}
+		}
     }
 
     # Defensive Line in the Carpathians
@@ -66,8 +254,106 @@ focus_tree = {
         x = -2
         y = 2
         cost = 6
+		available = {
+			has_capitulated = no
+			owns_state = 76
+			owns_state = 84
+			owns_state = 82
+		}
         prerequisite = { focus = ROM_defensive_positions }
         relative_position_id = ROM_defensive_positions
+		completion_reward = {
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9704
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 13210
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 727
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9685
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 711
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3689
+					instant_build = yes
+				}
+			}
+			84 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 690
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3676
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6709
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6679
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3665
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9619
+					instant_build = yes
+				}
+			}
+			82 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11592
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9606
+					instant_build = yes
+				}
+			}
+		}
     }
 
     # City Defenses
@@ -77,9 +363,65 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
+		available = {
+			has_capitulated = no
+			owns_state = 76
+			owns_state = 79
+			owns_state = 84
+			owns_state = 861
+			owns_state = 46
+		}
         prerequisite = { focus = ROM_tisza_forts_expansion }
         prerequisite = { focus = ROM_bessarabia_forts_expansion }
         relative_position_id = ROM_tisza_forts_expansion
+		completion_reward = {
+			76 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6711
+					instant_build = yes
+				}
+			}
+			79 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9716
+					instant_build = yes
+				}
+			}
+			84 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 690
+					instant_build = yes
+				}
+			}
+			861 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 657
+					instant_build = yes
+				}
+			}
+			46 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3663
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 9617
+					instant_build = yes
+				}
+			}
+		}
     }
 
     # Encourage Militarism
@@ -105,6 +447,17 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_city_defenses }
         relative_position_id = ROM_city_defenses
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 1000
+				producer = ROM
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
     }
 
     # Agricultural Expansion
@@ -116,6 +469,30 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_preservation_of_greater_romania }
         relative_position_id = ROM_preservation_of_greater_romania
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+			}
+		}
     }
 
     # Continue Industrial Development
@@ -246,6 +623,9 @@ focus_tree = {
         prerequisite = { focus = ROM_fund_local_industries }
         prerequisite = { focus = ROM_expand_the_weapons_factories }
         relative_position_id = ROM_fund_local_industries
+		completion_reward = {
+			add_ideas = ROM_standard_wages
+		}
     }
 
     # Develop the Mining Industry
@@ -310,17 +690,6 @@ focus_tree = {
         completion_reward = {
             add_research_slots = 1
         }
-    }
-
-    # Renounce Hungarian Territorial Claims
-    focus = {
-        id = ROM_renounce_hungarian_territorial_claims
-        icon = GFX_goal_step_on_skull
-        x = -7
-        y = 1
-        cost = 2
-        prerequisite = { focus = ROM_preservation_of_greater_romania }
-        relative_position_id = ROM_preservation_of_greater_romania
     }
 
     # The Liberal Regent
