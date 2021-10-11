@@ -1,0 +1,539 @@
+# Romanian Focus Tree
+
+focus_tree = {
+    id = FR_Romania
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = ROM
+        }
+    }
+
+    # Preservation of Greater Romania
+    focus = {
+        id = ROM_preservation_of_greater_romania
+        icon = GFX_focus_rom_preserve_romania
+        x = 7
+        y = 0
+        cost = 3
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+
+    # Defensive Positions
+    focus = {
+        id = ROM_defensive_positions
+        icon = GFX_goal_skull_fortification
+        x = -5
+        y = 1
+        cost = 3
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+        completion_reward = {
+            army_experience = 15
+            air_experience = 15
+        }
+    }
+
+    # Tisza Forts Expansion
+    focus = {
+        id = ROM_tisza_forts_expansion
+        icon = GFX_goal_generic_construction
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_defensive_positions }
+        relative_position_id = ROM_defensive_positions
+    }
+
+    # Bessarabia Forts Expansion
+    focus = {
+        id = ROM_bessarabia_forts_expansion
+        icon = GFX_goal_generic_construction2
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_defensive_positions }
+        relative_position_id = ROM_defensive_positions
+    }
+
+    # Defensive Line in the Carpathians
+    focus = {
+        id = ROM_defensive_lines_in_the_carpathians
+        icon = GFX_goal_generic_construct_military
+        x = -2
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_defensive_positions }
+        relative_position_id = ROM_defensive_positions
+    }
+
+    # City Defenses
+    focus = {
+        id = ROM_city_defenses
+        icon = GFX_goal_nested_fortifications
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_tisza_forts_expansion }
+        prerequisite = { focus = ROM_bessarabia_forts_expansion }
+        relative_position_id = ROM_tisza_forts_expansion
+    }
+
+    # Encourage Militarism
+    focus = {
+        id = ROM_encourage_militarism
+        icon = GFX_goal_national_mobilization
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_city_defenses }
+        relative_position_id = ROM_city_defenses
+        completion_reward = {
+            add_ideas = ROM_rising_militarism
+        }
+    }
+
+    # Contracts with UDR
+    focus = {
+        id = ROM_contracts_with_udr
+        icon = GFX_goal_national_arsenal
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_city_defenses }
+        relative_position_id = ROM_city_defenses
+    }
+
+    # Agricultural Expansion
+    focus = {
+        id = ROM_agricultural_expansion
+        icon = GFX_focus_AUS_agriculture
+        x = -3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+    }
+
+    # Continue Industrial Development
+    focus = {
+        id = ROM_continue_industrial_development
+        icon = GFX_goal_generic_production2
+        x = -1
+        y =1 
+        cost = 6
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+        completion_reward = {
+            add_tech_bonus = {
+                category = industry
+                bonus = 1.0
+                uses = 2
+            }
+        }
+    }
+
+    # Fund Local Industries
+    focus = {
+        id = ROM_fund_local_industries
+        icon = GFX_goal_generic_construct_civ_factory   
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_agricultural_expansion }
+        prerequisite = { focus = ROM_continue_industrial_development }
+        relative_position_id = ROM_continue_industrial_development
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    # Expand the Weapons Factories
+    focus = {
+        id = ROM_expand_the_weapons_factories
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_continue_industrial_development }
+        relative_position_id = ROM_continue_industrial_development
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factor
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    # Rural Infrastructure Projects
+    focus = {
+        id = ROM_rural_infrastructure_projects
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_agricultural_expansion }
+        relative_position_id = ROM_agricultural_expansion
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    # Enforce Fairer Wages
+    focus = {
+        id = ROM_enforce_fairer_wages
+        icon = GFX_goal_production
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_fund_local_industries }
+        prerequisite = { focus = ROM_expand_the_weapons_factories }
+        relative_position_id = ROM_fund_local_industries
+    }
+
+    # Develop the Mining Industry
+    focus = {
+        id = ROM_develop_the_mining_industry
+        icon = GFX_goal_DEI_focus_moar_rubber
+        x = 1
+        y = 1
+        cost = 6
+        available = {
+            has_capitulated = no
+            owns_state = 84
+            owns_state = 861
+        }
+        prerequisite = { focus = ROM_rural_infrastructure_projects }
+        relative_position_id = ROM_rural_infrastructure_projects
+        completion_reward = {
+            add_resource = {
+                type = steel
+                amount = 16
+                state = 84
+            }
+            add_resource = {
+                type = tungsten
+                amount = 8
+                state = 861
+            }
+        }
+    }
+
+    # Ploiești Oil Fields Expansion
+    focus = {
+        id = ROM_ploiesti_oil_fields_expansion
+        icon = GFX_goal_basic_oil
+        x = 0
+        y = 2
+        cost = 6
+        available = {
+            has_capitulated = no
+            owns_state = 46
+        }
+        prerequisite = { focus = ROM_rural_infrastructure_projects }
+        relative_position_id = ROM_rural_infrastructure_projects
+        completion_reward = {
+            add_resource = {
+                type = steel
+                amount = 16
+                state = 46
+            }
+        }
+    }
+
+    # Research Fundings
+    focus = {
+        id = ROM_research_fundings
+        icon = GFX_goal_great_science
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_enforce_fairer_wages }
+        relative_position_id = ROM_enforce_fairer_wages
+        completion_reward = {
+            add_research_slots = 1
+        }
+    }
+
+    # Renounce Hungarian Territorial Claims
+    focus = {
+        id = ROM_renounce_hungarian_territorial_claims
+        icon = GFX_goal_step_on_skull
+        x = -7
+        y = 1
+        cost = 2
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+    }
+
+    # The Liberal Regent
+    focus = {
+        id = ROM_the_liberal_regent
+        icon = GFX_goal_ideology_social_conservative
+        x = 1
+        y = 1
+        cost = 6
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_liberal_regent
+        }
+        mutually_exclusive = {
+            focus = ROM_the_status_quo_regent
+            focus = ROM_the_leftist_regent
+        }
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+    }
+
+    # The Status Quo Regent
+    focus = {
+        id = ROM_the_status_quo_regent
+        icon = GFX_goal_ideology_authoritarian_democrat
+        x = 3
+        y = 1
+        cost = 6
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_status_quo_regent
+        }
+        mutually_exclusive = {
+            focus = ROM_the_liberal_regent
+            focus = ROM_the_leftist_regent
+        }
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+    }
+
+    # The Leftist Regent
+    focus = {
+        id = ROM_the_leftist_regent
+        icon = GFX_goal_ideology_social_democrat
+        x = 5
+        y = 1
+        cost = 6
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_leftist_regent
+        }
+        mutually_exclusive = {
+            focus = ROM_the_liberal_regent
+            focus = ROM_the_status_quo_regent
+        }
+        prerequisite = { focus = ROM_preservation_of_greater_romania }
+        relative_position_id = ROM_preservation_of_greater_romania
+    }
+
+    # London Crash Response
+    focus = {
+        id = ROM_london_crash_response
+        icon = GFX_focus_empty_coffers
+        x = 0
+        y = 1
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_black_wednesday
+        }
+        prerequisite = {
+            focus = ROM_the_liberal_regent
+            focus = ROM_the_status_quo_regent
+            focus = ROM_the_leftist_regent
+        }
+        relative_position_id = ROM_the_status_quo_regent
+    }
+
+    # Secure International Investments
+    focus = {
+        id = ROM_secure_international_investments
+        icon = GFX_goal_generic_foreign_investments
+        x = -2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_london_crash_response }
+        relative_position_id = ROM_london_crash_response
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+        }
+    }
+
+    # Tackle Inflation
+    focus = {
+        id = ROM_tackle_inflation
+        icon = GFX_goal_gold_up
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_london_crash_response }
+        relative_position_id = ROM_london_crash_response
+        completion_reward = {
+            ROM_recover_from_black_wednesday = yes
+        }
+    }
+
+    # Approach the Industrialists
+    focus = {
+        id = ROM_approach_the_industrialists
+        icon = GFX_goal_factory_complex
+        x = 2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_london_crash_response }
+        relative_position_id = ROM_london_crash_response
+        completion_reward =  {
+            add_ideas = ROM_good_business_relations
+        }
+    }
+
+    # Reform the Currency System
+    focus = {
+        id = ROM_reform_the_currency_system
+        icon = GFX_goal_gold_reserve
+        x = -3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_tackle_inflation }
+        relative_position_id = ROM_tackle_inflation
+        completion_reward = {
+            ROM_recover_from_black_wednesday = yes
+        }
+    }
+
+    # Talks with the Unions
+    focus = {
+        id = ROM_talks_with_the_unions
+        icon = GFX_focus_eng_concessions_to_the_trade_unions
+        x = 3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_tackle_inflation }
+        relative_position_id = ROM_tackle_inflation
+        completion_reward = {
+            ROM_recover_from_black_wednesday = yes
+        }
+    }
+
+    # Increase Purchase Tax
+    focus = {
+        id = ROM_increase_purchase_tax
+        icon = GFX_focus_mex_privatisation
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_tackle_inflation }
+        relative_position_id = ROM_tackle_inflation
+        completion_reward = {
+            ROM_recover_from_black_wednesday = yes
+        }
+    }
+
+    # Find New Trading Partners
+    focus = {
+        id = ROM_find_new_trading_partners
+        icon = GFX_goal_generic_trade
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_tackle_inflation }
+        relative_position_id = ROM_tackle_inflation
+        completion_reward = {
+            ROM_recover_from_black_wednesday = yes
+        }
+    }
+
+    # Easing Regulations
+    focus = {
+        id = ROM_easing_regulations
+        icon = GFX_focus_generic_concessions
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_reform_the_currency_system }
+        prerequisite = { focus = ROM_increase_purchase_tax }
+        prerequisite = { focus = ROM_find_new_trading_partners }
+        prerequisite = { focus = ROM_talks_with_the_unions }
+        relative_position_id = ROM_increase_purchase_tax
+        completion_reward = {
+            ROM_recover_from_black_wednesday = yes
+        }
+    }
+}
