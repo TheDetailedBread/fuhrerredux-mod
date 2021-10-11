@@ -1,5 +1,9 @@
 ideas = {
     country = {
+        ROM_tensions_in_transylvania = {
+            allowed = { original_tag = ROM }
+            picture = generic_disjointed_gov
+        }
         ROM_the_iron_guard = {
             allowed = { original_tag = ROM }
             picture = ROM_iron_guard
@@ -100,6 +104,14 @@ ideas = {
                 conscription_factor = 0.05
                 army_attack_core_factor = 0.05
                 army_defence_core_factor = 0.05
+            }
+        }
+        ROM_standard_wages = {
+            allowed = { original_tag = ROM }
+            picture = FRA_factory_strikes
+            modifier = {
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
             }
         }
     }
@@ -776,7 +788,8 @@ ideas = {
 		}
 		udr = {
 			allowed = { tag = ROM }
-			available = { controls_state = 84 }
+            available = { has_completed_focus = ROM_contracts_with_udr }
+			visible = { controls_state = 84 }
 			traits = { artillery_producer_defense_1 }
 			modifier = {
 				production_speed_buildings_factor = 0.1

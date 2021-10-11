@@ -103,3 +103,48 @@ country_event = { # Effects of Black Wednesday Dissapearing
 		}
 	}
 }
+
+country_event = {
+	id = romania.5
+	title = romania.5.t
+	desc = romania.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = romania.5.a
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROM
+				OR = {
+					state = 762
+					state = 154
+					state = 84
+					state = 83
+					state = 82
+					state = 76
+				}
+			}
+
+			add_dynamic_modifier = {
+                modifier = ROM_hungarian_resistance
+            }
+		}
+	}
+}
+
+country_event = { # Railroad Explosion in Transylvania
+	id = romania.6
+	title = romania.6.t
+	desc = romania.6.d
+	is_triggered_only = yes
+
+	option = {
+		name = romania.6.a
+		random_owned_controlled_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		}
+	}
+}
