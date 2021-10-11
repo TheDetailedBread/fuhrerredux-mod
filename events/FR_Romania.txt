@@ -39,7 +39,7 @@ country_event = { # The New Regent
 	}
 }
 
-country_event = {
+country_event = { # Michael's Coronation
 	id = romania.2
 	title = romania.2.t
 	desc = romania.2.d
@@ -59,6 +59,47 @@ country_event = {
 			random_other_country = {
 				news_event = { id = news.20 hours = 8 }
 			}
+		}
+	}
+}
+
+country_event = { # London Stock Market Crash
+	id = romania.3
+	title = romania.3.t
+	desc = romania.3.d
+	picture = GFX_report_event_worker_protests
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		ENG = { has_country_flag = ENG_stock_crash }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = { add_ideas = ROM_black_wednesday }
+		set_country_flag = ROM_black_wednesday
+	}
+
+	option = {
+		name = romania.3.a
+	}
+}
+
+country_event = { # Effects of Black Wednesday Dissapearing
+	id = romania.4
+	title = romania.4.t
+	desc = romania.4.d
+	picture = GFX_report_event_canada_ronnie
+	is_triggered_only = yes
+
+	option = {
+		name = romania.4.a
+		if = {
+			limit = { has_idea = ROM_black_wednesday_recovering }
+			remove_ideas = ROM_black_wednesday_recovering
 		}
 	}
 }
