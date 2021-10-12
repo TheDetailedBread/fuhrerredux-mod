@@ -114,6 +114,28 @@ ideas = {
                 industrial_capacity_dockyard = 0.05
             }
         }
+        ROM_fleet_construction = {
+            allowed = { original_tag = ROM }
+            picture = generic_maritime_industry
+            modifier = {
+                industrial_capacity_dockyard = 0.15
+            }
+        }
+        ROM_improved_torpedoes = {
+            allowed = { original_tag = ROM }
+            picture = the_long_lance
+            modifier = {
+                naval_torpedo_screen_penetration_factor = 0.25
+                naval_torpedo_hit_chance_factor = 0.15
+            }
+        }
+        ROM_naval_repair_dockyards = {
+            allowed = { original_tag = ROM }
+            picture = generic_coastal_defense_ships
+            modifier = {
+                repair_speed_factor = 0.15
+            }
+        }
     }
 
     head_of_government = {
