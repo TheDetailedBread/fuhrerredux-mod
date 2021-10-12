@@ -564,7 +564,7 @@ country_event = { # 1937 General Elections
 			ROM_Aurel_Aldea_sec_sco
 		}
 		hidden_effect = {
-			country_event = { id = romania.25 days = 30 }
+			country_event = { id = romania.25 days = 100 }
 		}
 	}
 	option = { # PNL - MarLib
@@ -635,7 +635,7 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
-			country_event = { id = romania.25 days = 30 }
+			country_event = { id = romania.25 days = 100 }
 		}
 	}
 	option = { # PSDR
@@ -666,7 +666,7 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
-			country_event = { id = romania.24 days = 30 }
+			country_event = { id = romania.24 days = 100 }
 		}
 	}
 	option = { # Iron Guard
@@ -980,12 +980,18 @@ country_event = { # Prime Minister Assassinated!
 
 	trigger = {
 		tag = ROM
-		has_government = social_democrat
-		NOT = { has_country_flag = ROM_iron_guard_banned }
+		NOT = { 
+			OR = {
+				has_country_flag = ROM_iron_guard_banned
+				has_completed_focus = ROM_ban_the_radical_far_right
+				has_completed_focus = ROM_hunt_down_the_iron_guard
+			}
+		}
 	}
 
 	option = { # The Deputy assumes control of Premiership
 		name = romania.24.a
+		increase_ruling_party_popularity_by_5 = yes
 		hidden_effect = {
 			country_event = { id = romania.30 days = 2 }
 		}
@@ -1037,7 +1043,12 @@ country_event = { # Iron Guard Coups the Government!
 
 	trigger = {
 		tag = ROM
-		NOT = { has_country_flag = ROM_iron_guard_banned }
+		NOT = { 
+			OR = {
+				has_country_flag = ROM_iron_guard_banned
+				has_completed_focus = ROM_disarm_the_extremists
+			}
+		}
 	}
 
 	option = { # Loyal Units Suppressed Valkist Militias
