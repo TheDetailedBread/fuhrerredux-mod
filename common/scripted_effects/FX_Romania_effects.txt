@@ -45,3 +45,59 @@ ROM_recover_from_black_wednesday = {
         }
     }
 }
+
+ROM_increase_progressive_strength = {
+    custom_effect_tooltip = ROM_increase_progressive_strength_tt
+    hidden_effect = {
+        add_to_variable = {
+            var = rom_progressive_strength
+            value = 1
+        }
+        add_popularity = {
+            ideology = social_liberal
+            popularity = 0.025
+        }
+    }
+}
+
+ROM_increase_conservative_strength = {
+    custom_effect_tooltip = ROM_increase_conservative_strength_tt
+    hidden_effect = {
+        add_to_variable = {
+            var = rom_conservative_strength
+            value = 1
+        }
+        add_popularity = {
+            ideology = social_conservative
+            popularity = 0.025
+        }
+    }
+}
+
+ROM_decrease_progressive_strength = {
+    custom_effect_tooltip = ROM_decrease_progressive_strength_tt
+    hidden_effect = {
+        add_to_variable = {
+            var = rom_progressive_strength
+            value = -1
+        }
+        add_popularity = {
+            ideology = social_liberal
+            popularity = -0.025
+        }
+    }
+}
+
+ROM_decrease_conservative_strength = {
+    custom_effect_tooltip = ROM_decrease_conservative_strength_tt
+    hidden_effect = {
+        add_to_variable = {
+            var = rom_conservative_strength
+            value = -1
+        }
+        add_popularity = {
+            ideology = social_conservative
+            popularity = -0.025
+        }
+    }
+}
