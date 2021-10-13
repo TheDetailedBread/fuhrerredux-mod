@@ -76,12 +76,51 @@ country_event = { # Michael's Coronation
 
 	trigger = {
 		tag = ROM
-		NOT = { has_country_flag = ROM_michael_assassinated }
+		NOT = { 
+			OR = {
+				has_country_flag = ROM_michael_assassinated
+				has_completed_focus = ROM_abolish_the_monarchy
+			}
+		}
 	}
 
 	option = {
 		name = romania.2.a
 		hidden_effect = {
+			kill_ideology_leader = vanguardist
+			kill_ideology_leader = collectivist
+			kill_ideology_leader = libertarian_socialist
+			kill_ideology_leader = social_democrat
+			kill_ideology_leader = social_liberal
+			kill_ideology_leader = market_liberal
+			kill_ideology_leader = social_conservative
+			kill_ideology_leader = authoritarian_democrat
+			kill_ideology_leader = paternal_autocrat
+			kill_ideology_leader = national_populist
+			create_country_leader = {
+				name = "Michael I"
+				desc = "POLITICS_MICHAEL_I_DESC"
+				picture = "Portrait_Romania_Michael_I.tga"
+				expire = "2017.12.5"
+				ideology = vanguardist_subtype
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Michael I"
+				desc = "POLITICS_MICHAEL_I_DESC"
+				picture = "Portrait_Romania_Michael_I.tga"
+				expire = "2017.12.5"
+				ideology = collectivist_subtype
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Michael I"
+				desc = "POLITICS_MICHAEL_I_DESC"
+				picture = "Portrait_Romania_Michael_I.tga"
+				expire = "2017.12.5"
+				ideology = libertarian_socialist_subtype
+				traits = { }
+			}
 			create_country_leader = {
 				name = "Michael I"
 				desc = "POLITICS_MICHAEL_I_DESC"
@@ -354,7 +393,7 @@ country_event = { # Madgearu Proposes Reforms
 
 	option = { # The Regent Accepts the Reforms
 		name = romania.10.a
-		add_political_power = -100
+		add_ideas = ROM_madgearus_reforms
 	}
 	option = { # It's too radical for a reform
 		name = romania.10.b
@@ -545,6 +584,7 @@ country_event = { # 1937 General Elections
 			OR = {
 				has_country_flag = ROM_had_1937_elections
 				has_country_flag = ROM_direct_rule_from_bucharest
+				has_country_flag = ROM_valkist_romania
 			}
 		}
 	}
@@ -556,6 +596,7 @@ country_event = { # 1937 General Elections
 			elections_allowed = yes
 		}
 		set_country_flag = ROM_had_1937_elections
+		set_country_flag = ROM_status_quo_election
 		remove_every_minister = yes
 		add_ideas = {
 			ROM_Armand_Calinescu_hog_ade
@@ -564,6 +605,8 @@ country_event = { # 1937 General Elections
 			ROM_Aurel_Aldea_sec_sco
 		}
 		hidden_effect = {
+			set_country_flag = ROM_democratic_romania
+			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
 		}
 	}
@@ -575,6 +618,7 @@ country_event = { # 1937 General Elections
 		}
 		increase_ruling_party_popularity_by_15 = yes
 		set_country_flag = ROM_had_1937_elections
+		set_country_flag = ROM_liberal_election
 		remove_every_minister = yes
 		if = {
 			limit = {
@@ -635,6 +679,8 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
+			set_country_flag = ROM_democratic_romania
+			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
 		}
 	}
@@ -646,6 +692,7 @@ country_event = { # 1937 General Elections
 		}
 		increase_ruling_party_popularity_by_15 = yes
 		set_country_flag = ROM_had_1937_elections
+		set_country_flag = ROM_leftist_election
 		remove_every_minister = yes
 		if = {
 			limit = { has_country_flag = ROM_leftist_coalition }
@@ -666,6 +713,8 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
+			set_country_flag = ROM_democratic_romania
+			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.24 days = 100 }
 		}
 	}
@@ -691,6 +740,10 @@ country_event = { # 1937 General Elections
 			ROM_Gheorghe_Clime_eco_val
 			ROM_Ion_Belgea_sec_val
 		}
+		hidden_effect = {
+			set_country_flag = ROM_valkist_romania
+			load_focus_tree = FR_Romania_Iron_Guard
+		}
 	}
 	option = { # PNC
 		name = romania.17.f
@@ -711,6 +764,7 @@ country_event = { # 1937 General Elections
 			ROM_Horia_Sima_sec_npo
 		}
 		hidden_effect = {
+			set_country_flag = ROM_natpop_romania
 			country_event = { id = romania.26 days = 30 }
 		}
 	}
@@ -819,6 +873,30 @@ country_event = { # Coronation of Nicholas I
 				desc = "POLITICS_NICHOLAS_I_DESC"
 				picture = "Portrait_Romania_Nicholas_I.tga"
 				expire = "2017.12.5"
+				ideology = vanguardist_subtype
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Nicholas I"
+				desc = "POLITICS_NICHOLAS_I_DESC"
+				picture = "Portrait_Romania_Nicholas_I.tga"
+				expire = "2017.12.5"
+				ideology = collectivist_subtype
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Nicholas I"
+				desc = "POLITICS_NICHOLAS_I_DESC"
+				picture = "Portrait_Romania_Nicholas_I.tga"
+				expire = "2017.12.5"
+				ideology = libertarian_socialist_subtype
+				traits = { }
+			}
+			create_country_leader = {
+				name = "Nicholas I"
+				desc = "POLITICS_NICHOLAS_I_DESC"
+				picture = "Portrait_Romania_Nicholas_I.tga"
+				expire = "2017.12.5"
 				ideology = social_democrat_subtype
 				traits = { }
 			}
@@ -909,6 +987,15 @@ country_event = { # Iron Guard Behind Assassination
 		name = romania.22.b
 		add_political_power = 100
 		set_country_flag = ROM_codreanu_exiled
+		kill_ideology_leader = valkist
+		create_country_leader = {
+			name = "Ion Mota"
+			desc = "POLITICS_ION_MOTA_DESC"
+			picture = "Portrait_Romania_Ion_Mota.tga"
+			expire = "2017.12.5"
+			ideology = valkist_subtype
+			traits = { }
+		}
 		hidden_effect = {
 			GER = {
 				country_event = { id = romania.31 days = 2 }
@@ -989,30 +1076,8 @@ country_event = { # Prime Minister Assassinated!
 		}
 	}
 
-	option = { # The Deputy assumes control of Premiership
-		name = romania.24.a
-		increase_ruling_party_popularity_by_5 = yes
-		hidden_effect = {
-			country_event = { id = romania.30 days = 2 }
-		}
-	}
-	option = { # Suprise Iron Guard Coup
-		name = romania.24.b
-		set_politics = {
-			ruling_party = valkist
-			elections_allowed = no
-		}
-		increase_ruling_party_popularity_by_10 = yes
-		remove_every_minister = yes
-		add_ideas = {
-			ROM_Corneliu_Codreanu_hog_val
-			ROM_Ion_Mota_for_val
-			ROM_Gheorghe_Clime_eco_val
-			ROM_Ion_Belgea_sec_val
-		}
-	}
 	option = { # PDaT Assumes Control
-		name = romania.24.c
+		name = romania.24.a
 		trigger = {
 			has_country_flag = ROM_leftist_coalition
 		}
@@ -1029,7 +1094,24 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Teohari_Georgescu_sec_van
 		}
 		hidden_effect = {
+			set_country_flag = ROM_socialist_romania
+			load_focus_tree = FR_Romania_Socialist
 			country_event = { id = romania.30 days = 2 }
+		}
+	}
+	option = { # Suprise Iron Guard Coup
+		name = romania.24.b
+		set_politics = {
+			ruling_party = valkist
+			elections_allowed = no
+		}
+		increase_ruling_party_popularity_by_10 = yes
+		remove_every_minister = yes
+		add_ideas = {
+			ROM_Corneliu_Codreanu_hog_val
+			ROM_Ion_Mota_for_val
+			ROM_Gheorghe_Clime_eco_val
+			ROM_Ion_Belgea_sec_val
 		}
 	}
 }
@@ -1124,6 +1206,10 @@ country_event = { # Iron Guard Coups the Government!
 			ROM_Gheorghe_Clime_eco_val
 			ROM_Ion_Belgea_sec_val
 		}
+		hidden_effect = {
+			set_country_flag = ROM_valkist_romania
+			load_focus_tree = FR_Romania_Iron_Guard
+		}
 	}
 }
 
@@ -1148,13 +1234,16 @@ country_event = { # PNC Wants Nicholas' Abdication
 		add_stability = 0.05
 		hidden_effect = {
 			country_event = { id = romania.27 days = 5 }
-			retire_ideology_leader = social_democrat
-			retire_ideology_leader = social_liberal
-			retire_ideology_leader = market_liberal
-			retire_ideology_leader = social_conservative
-			retire_ideology_leader = authoritarian_democrat
-			retire_ideology_leader = paternal_autocrat
-			retire_ideology_leader = national_populist
+			kill_ideology_leader = vanguardist
+			kill_ideology_leader = collectivist
+			kill_ideology_leader = libertarian_socialist
+			kill_ideology_leader = social_democrat
+			kill_ideology_leader = social_liberal
+			kill_ideology_leader = market_liberal
+			kill_ideology_leader = social_conservative
+			kill_ideology_leader = authoritarian_democrat
+			kill_ideology_leader = paternal_autocrat
+			kill_ideology_leader = national_populist
 		}
 	}
 	option = { # The King orders the arrests of the PNC Government
@@ -1172,6 +1261,10 @@ country_event = { # PNC Wants Nicholas' Abdication
 			ROM_Gheorghe_Potopeanu_eco_pau
 			ROM_Aurel_Aldea_sec_sco
 		}
+		hidden_effect = {
+			set_country_flag = ROM_direct_rule_from_bucharest
+			load_focus_tree = FR_Romania_Royalist
+		}
 	}
 }
 
@@ -1184,6 +1277,30 @@ country_event = { # Coronation of Alexander I
 
 	option = { # God Save the King!
 		name = romania.27.a
+		create_country_leader = {
+			name = "Alexander I"
+			desc = "POLITICS_ALEXANDER_I_DESC"
+			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
+			expire = "2017.12.5"
+			ideology = vanguardist_subtype
+			traits = { }
+		}
+		create_country_leader = {
+			name = "Alexander I"
+			desc = "POLITICS_ALEXANDER_I_DESC"
+			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
+			expire = "2017.12.5"
+			ideology = collectivist_subtype
+			traits = { }
+		}
+		create_country_leader = {
+			name = "Alexander I"
+			desc = "POLITICS_ALEXANDER_I_DESC"
+			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
+			expire = "2017.12.5"
+			ideology = libertarian_socialist_subtype
+			traits = { }
+		}
 		create_country_leader = {
 			name = "Alexander I"
 			desc = "POLITICS_ALEXANDER_I_DESC"

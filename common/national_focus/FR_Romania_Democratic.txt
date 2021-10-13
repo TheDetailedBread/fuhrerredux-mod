@@ -1,0 +1,592 @@
+focus_tree = {
+    id = FR_Romania_Democratic
+
+    continuous_focus_position = { x = 100 y = 1000 }
+
+    shared_focus = ROM_preservation_of_greater_romania
+    shared_focus = ROM_the_romanian_army
+    shared_focus = ROM_the_romanian_navy
+    shared_focus = ROM_the_romanian_air_force
+
+    # The General Elections
+    focus = {
+        id = ROM_the_general_elections
+        icon = GFX_goal_generic_elections
+        x = 26
+        y = 0
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_had_1937_elections
+        }
+    }
+
+    # Democratic Left Victorious
+    focus = {
+        id = ROM_democratic_left_victorious
+        icon = GFX_goal_ideology_social_democrat
+        x = -7
+        y = 1
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_leftist_election
+        }
+        prerequisite = { focus = ROM_the_general_elections }
+        relative_position_id = ROM_the_general_elections
+    }
+
+    # Continue Nationalization
+    focus = {
+        id = ROM_continue_nationalization
+        icon = GFX_goal_state_economy
+        x = -2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_democratic_left_victorious }
+        relative_position_id = ROM_democratic_left_victorious
+    }
+
+    # Extensive Land Reform
+    focus = {
+        id = ROM_extensive_land_reform
+        icon = GFX_goal_flames_of_rebellion
+        x = -2  
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_continue_nationalization }
+        relative_position_id = ROM_continue_nationalization
+    }
+
+    # A Welfare State
+    focus = {
+        id = ROM_a_welfare_state
+        icon = GFX_focus_generic_concessions
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_continue_nationalization }
+        relative_position_id = ROM_continue_nationalization
+    }
+
+    # Public Works Programme
+    focus = {
+        id = ROM_public_works_programme
+        icon = GFX_goal_generic_construction
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_continue_nationalization }
+        relative_position_id = ROM_continue_nationalization
+    }
+
+    # Expanding the Labour Pool
+    focus = {
+        id = ROM_expanding_the_labour_pool
+        icon = GFX_goal_production
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_a_welfare_state }
+        prerequisite = { focus = ROM_extensive_land_reform }
+        relative_position_id = ROM_a_welfare_state
+    }
+
+    # Limit the King's Powers
+    focus = {
+        id = ROM_limit_the_kings_powers
+        icon = GFX_focus_rom_handle_king
+        x = 0
+        y = 1
+        cost = 3
+        prerequisite = { focus = ROM_democratic_left_victorious }
+        relative_position_id = ROM_democratic_left_victorious
+    }
+
+    # Consitutional Education
+    focus = {
+        id = ROM_constitutional_education
+        icon = GFX_goal_KTG_Bookstack
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_limit_the_kings_powers }
+        relative_position_id = ROM_continue_nationalization
+    }
+
+    # Ban the Radical Far Right
+    focus = {
+        id = ROM_ban_the_radical_far_right
+        icon = GFX_goal_generic_ban_right_wing
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_limit_the_kings_powers }
+        prerequisite = { focus = ROM_fight_against_corruption }
+        relative_position_id = ROM_limit_the_kings_powers
+    }
+
+    # Homes for the People
+    focus = {
+        id = ROM_homes_for_the_people
+        icon = GFX_goal_generic_build_housing
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_constitutional_education }
+        prerequisite = { focus = ROM_ban_the_radical_far_right }
+        relative_position_id = ROM_constitutional_education
+    }
+
+    # Fight Against Corruption
+    focus = {
+        id = ROM_fight_against_corruption
+        icon = GFX_goal_government_icon
+        x = 2
+        y = 1
+        cost = 3
+        prerequisite = { focus = ROM_democratic_left_victorious }
+        relative_position_id = ROM_democratic_left_victorious
+    }
+
+    # Industrial Development Scheme
+    focus = {
+        id = ROM_industrial_development_scheme
+        icon = GFX_goal_factory_complex
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_fight_against_corruption }
+        relative_position_id = ROM_fight_against_corruption
+    }
+
+    # Fund the Fortifications
+    focus = {
+        id = ROM_fund_the_fortifications
+        icon = GFX_goal_bag_of_money
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_public_works_programme }
+        prerequisite = { focus = ROM_homes_for_the_people }
+        relative_position_id = ROM_homes_for_the_people
+    }
+
+    # Cooperate with the Unions
+    focus = {
+        id = ROM_cooperate_with_the_unions
+        icon = GFX_goal_revolution_tools
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_homes_for_the_people }
+        relative_position_id = ROM_homes_for_the_people
+    }
+
+    # A Workers Paradise
+    focus = {
+        id = ROM_a_workers_paradise
+        icon = GFX_goal_national_mobilization
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_expanding_the_labour_pool }
+        prerequisite = { focus = ROM_fund_the_fortifications }
+        prerequisite = { focus = ROM_cooperate_with_the_unions }
+        relative_position_id = ROM_fund_the_fortifications
+    }
+
+    # The Liberal Government
+    focus = {
+        id = ROM_the_liberal_government
+        icon = GFX_goal_ideology_market_liberal
+        x = 0
+        y = 1
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_liberal_election
+        }
+        prerequisite = { focus = ROM_the_general_elections }
+        relative_position_id = ROM_the_general_elections
+    }
+
+    # Economic Expansion Initiative
+    focus = {
+        id = ROM_economic_expansion_initiative
+        icon = GFX_goal_generic_foreign_investments
+        x = -3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_liberal_government }
+        relative_position_id = ROM_the_liberal_government 
+    }
+
+    # Maintain Rationing Programs
+    focus = {
+        id = ROM_maintain_rationing_programs
+        icon = GFX_goal_famine
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_economic_expansion_initiative }
+        relative_position_id = ROM_economic_expansion_initiative
+    }
+
+    # Economic Investments
+    focus = {
+        id = ROM_economic_investments
+        icon = GFX_goal_generic_banking_legislation
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_liberal_government }
+        relative_position_id = ROM_the_liberal_government
+    }
+
+    # Generous Farm Subsidies
+    focus = {
+        id = ROM_generous_farm_subsidies
+        icon = GFX_goal_generic_agricultural_aid
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_economic_investments }
+        relative_position_id = ROM_economic_investments
+    }
+
+    # Technological Advancements
+    focus = {
+        id = ROM_technological_advancements
+        icon = GFX_goal_machine
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_economic_investments }
+        relative_position_id = ROM_economic_investments
+    }
+
+    # Privatize the Oil Industry
+    focus = {
+        id = ROM_privatize_the_oil_industry
+        icon = GFX_goal_further_oil
+        x = 0
+        y = 3
+        cost = 6
+        prerequisite = { 
+            focus = ROM_generous_farm_subsidies
+            focus = ROM_technological_advancements
+        }
+        prerequisite = {
+            focus = ROM_rural_land_development
+        }
+        relative_position_id = ROM_economic_investments
+    }
+
+    # Business is Booming
+    focus = {
+        id = ROM_business_is_booming
+        icon = GFX_goal_gold_up
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_privatize_the_oil_industry }
+        prerequisite = { focus = ROM_maternity_services }
+        prerequisite = { focus = ROM_promote_education }
+        relative_position_id = ROM_privatize_the_oil_industry
+    }
+
+    # Maternity Services
+    focus = {
+        id = ROM_maternity_services
+        icon = GFX_focus_generic_self_management
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_maintain_rationing_programs }
+        relative_position_id = ROM_maintain_rationing_programs
+    }
+
+    # Rural Land Development
+    focus = {
+        id = ROM_rural_land_development
+        icon = GFX_goal_KTG_Jungle_Railroad
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_economic_expansion_initiative }
+        relative_position_id = ROM_economic_expansion_initiative
+    }
+
+    # Rewrite the Constitution
+    focus = {
+        id = ROM_rewrite_the_constitution
+        icon = GFX_goal_Centralised_Government
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_liberal_government }
+        relative_position_id = ROM_the_liberal_government
+    }
+
+    # Disarm the Extremists
+    focus = {
+        id = ROM_disarm_the_extremists
+        icon = GFX_goal_break_rifle
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_rewrite_the_constitution }
+        relative_position_id = ROM_rewrite_the_constitution
+    }    
+
+    # Concessions to the Land Owners
+    focus = {
+        id = ROM_concessions_to_the_land_owners
+        icon = GFX_DAH_Topke
+        x = 3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_liberal_government }
+        relative_position_id = ROM_the_liberal_government
+    }
+
+    # Worker Rights
+    focus = {
+        id = ROM_worker_rights
+        icon = GFX_goal_DOM_End_Judicial_Corruption
+        x = -1
+        y = 1 
+        cost = 6
+        prerequisite = { focus = ROM_concessions_to_the_land_owners }
+        relative_position_id = ROM_concessions_to_the_land_owners
+    }
+
+    # Easier Credit
+    focus = {
+        id = ROM_easier_credit
+        icon = GFX_goal_generic_investments
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_concessions_to_the_land_owners }
+        relative_position_id = ROM_concessions_to_the_land_owners
+    }
+
+    # Promote Education
+    focus = {
+        id = ROM_promote_education
+        icon = GFX_focus_research2
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_disarm_the_extremists }
+        prerequisite = { focus = ROM_worker_rights }
+        relative_position_id = ROM_worker_rights
+    }
+
+    # Status Quo Unshaken
+    focus = {
+        id = ROM_status_quo_unshaken
+        icon = GFX_goal_ideology_authoritarian_democrat
+        x = 8
+        y = 1
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_status_quo_election
+        }
+        prerequisite = { focus = ROM_the_general_elections }
+        relative_position_id = ROM_the_general_elections
+    }
+
+    # Encourage the Agricultural Sector
+    focus = {
+        id = ROM_encourage_the_agricultural_sector
+        icon = GFX_focus_AUS_agriculture
+        x = -3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_status_quo_unshaken }
+        relative_position_id = ROM_status_quo_unshaken
+    }
+
+    # Standardized Healthcare
+    focus = {
+        id = ROM_standardized_healthcare
+        icon = GFX_goal_generic_medical
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_encourage_the_agricultural_sector }
+        prerequisite = { focus = ROM_infrastructure_expansion }
+        relative_position_id = ROM_encourage_the_agricultural_sector
+    }
+
+    # Research Councils
+    focus = {
+        id = ROM_research_councils
+        icon = GFX_goal_great_science
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_standardized_healthcare }
+        relative_position_id = ROM_standardized_healthcare
+    }
+
+    # Explore Romania's Richness
+    focus = {
+        id = ROM_explore_romanias_richness
+        icon = GFX_goal_generic_construction2
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_research_councils }
+        relative_position_id = ROM_research_councils
+    }
+
+    # Opportunities for the Unemployed
+    focus = {
+        id = ROM_opportunities_for_the_unemployed
+        icon = GFX_goal_conspiracy
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_research_councils }
+        relative_position_id = ROM_research_councils
+    }
+
+    # Arms Factory Expansion
+    focus = {
+        id = ROM_arms_factory_expansion
+        icon = GFX_goal_munitions_factories
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_research_councils }
+        relative_position_id = ROM_research_councils
+    }
+
+    # Infrastructure Expansion
+    focus = {
+        id = ROM_infrastructure_expansion
+        icon = GFX_goal_generic_railroad
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_status_quo_unshaken }
+        relative_position_id = ROM_status_quo_unshaken
+    }
+
+    # Urban Projects
+    focus = {
+        id = ROM_urban_projects
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_infrastructure_expansion }
+        relative_position_id = ROM_infrastructure_expansion
+    }
+
+    # Worker Subsidies
+    focus = {
+        id = ROM_worker_subsidies
+        icon = GFX_goal_HOL_progressive_tax
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_urban_projects }
+        prerequisite = { focus = ROM_destroy_leftists }
+        relative_position_id = ROM_urban_projects
+    }
+
+    # Small Business Subsidies
+    focus = {
+        id = ROM_small_business_subsidies
+        icon = GFX_goal_generic_trade
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_status_quo_unshaken }
+        relative_position_id = ROM_status_quo_unshaken
+    }
+
+    # Establish the Siguranta
+    focus = {
+        id = ROM_establish_the_siguranta
+        icon = GFX_goal_secret_agents
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_status_quo_unshaken }
+        relative_position_id = ROM_status_quo_unshaken
+    }
+
+    # Hunt Down the Iron Guard
+    focus = {
+        id = ROM_hunt_down_the_iron_guard
+        icon = GFX_goal_generic_political_pressure
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_establish_the_siguranta }
+        relative_position_id = ROM_establish_the_siguranta
+    }
+
+    # Destroy Leftists
+    focus = {
+        id = ROM_destroy_leftists
+        icon = GFX_goal_generic_attack_allies
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_establish_the_siguranta }
+        relative_position_id = ROM_establish_the_siguranta
+    }
+
+    # Criminalise Radicalism
+    focus = {
+        id = ROM_criminalise_radicalism
+        icon = GFX_goal_skull_treaty
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_hunt_down_the_iron_guard }
+        prerequisite = { focus = ROM_destroy_leftists }
+        relative_position_id = ROM_hunt_down_the_iron_guard
+    }
+
+    # Stable Democracy
+    focus = {
+        id = ROM_stable_democracy
+        icon = GFX_goal_COS_Ferrer_Coup
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_opportunities_for_the_unemployed }
+        prerequisite = { focus = ROM_worker_subsidies }
+        prerequisite = { focus = ROM_criminalise_radicalism }
+        relative_position_id = ROM_worker_subsidies
+    }
+}

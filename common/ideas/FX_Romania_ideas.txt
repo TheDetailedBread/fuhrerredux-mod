@@ -170,6 +170,32 @@ ideas = {
                 surrender_limit = 0.1
             }
         }
+        ROM_air_production = {
+            allowed = { original_tag = ROM }
+            picture = generic_air_payment
+            equipment_bonus = {
+                air_equipment = {
+                    build_cost_ic = -0.15
+                    instant_build = yes
+                }
+            }
+        }
+        ROM_air_domination = {
+            allowed = { original_tag = ROM }
+            picture = air_support_focus
+            modifier = {
+                air_superiority_efficiency = 0.15
+                ground_attack_factor = 0.15
+                army_bonus_air_superiority_factor = 0.05
+            }
+        }
+        ROM_madgearus_reforms = {
+            allowed = { original_tag = ROM }
+            picture = generic_neutrality_drift_bonus
+            modifier = {
+                political_power_cost = 0.15
+            }
+        }
     }
 
     head_of_government = {
