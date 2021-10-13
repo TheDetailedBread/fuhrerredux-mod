@@ -1,0 +1,164 @@
+focus_tree = {
+    id = FR_Romania_Iron_Guard
+    country = {
+        factor = 0
+    }
+
+    continuous_focus_position = { x = 100 y = 1000 }
+
+    shared_focus = ROM_preservation_of_greater_romania
+    shared_focus = ROM_the_romanian_army
+    shared_focus = ROM_the_romanian_navy
+    shared_focus = ROM_the_romanian_air_force
+
+    # The Iron Guard in Power
+    focus = {
+        id = ROM_the_iron_guard_in_power
+        icon = GFX_goal_ideology_valkist
+        x = 18
+        y = 0
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_iron_guard_romania
+        }
+    }
+
+    # Merge the Legion to the Army
+    focus = {
+        id = ROM_merge_the_legion_to_the_army
+        icon = GFX_goal_conscription
+        x = -1
+        y = 1
+        cost = 6
+        mutually_exclusive = { focus = ROM_the_legion_as_a_separate_force }
+        prerequisite = { focus = ROM_the_iron_guard_in_power }
+        relative_position_id = ROM_the_iron_guard_in_power
+    }
+
+    # The Legion as a Separate Force
+    focus = {
+        id = ROM_the_legion_as_a_separate_force
+        icon = GFX_goal_army_guy_2
+        x = 1
+        y = 1
+        cost = 6
+        mutually_exclusive = { focus = ROM_merge_the_legion_to_the_army }
+        prerequisite = { focus = ROM_the_iron_guard_in_power }
+        relative_position_id = ROM_the_iron_guard_in_power
+    }
+
+    # Join the Stahlpakt
+    focus = {
+        id = ROM_join_the_stahlpakt
+        icon = GFX_goal_ROM_join_stahlpakt
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = {
+            focus = ROM_merge_the_legion_to_the_army 
+            focus = ROM_the_legion_as_a_separate_force
+        }
+        relative_position_id = ROM_the_legion_as_a_separate_force
+    }
+
+    # Legionary Industrialization
+    focus = {
+        id = ROM_legionary_industrialization
+        icon = GFX_focus_generic_the_giant_wakes
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_merge_the_legion_to_the_army }
+        relative_position_id = ROM_merge_the_legion_to_the_army
+    }
+
+    # Obligatory Camp Service
+    focus = {
+        id = ROM_obligatory_camp_service
+        icon = GFX_goal_economic_control
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_legion_as_a_separate_force }
+        relative_position_id = ROM_the_legion_as_a_separate_force
+    }
+
+    # Criminalise Socialism
+    focus = {
+        id = ROM_criminalise_socialism
+        icon = GFX_goal_generic_war_with_comintern
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = {
+            focus = ROM_join_the_stahlpakt
+        }
+        relative_position_id = ROM_obligatory_camp_service
+    }
+
+    # Guide the Nation
+    focus = {
+        id = ROM_guide_the_nation
+        icon = GFX_goal_generic_national_unity
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { 
+            focus = ROM_join_the_stahlpakt
+        }
+        relative_position_id = ROM_legionary_industrialization
+    }
+
+    # Green Welfare
+    focus = {
+        id = ROM_green_welfare
+        icon = GFX_focus_generic_concessions
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_guide_the_nation }
+        relative_position_id = ROM_legionary_industrialization
+    }
+
+    # Legionary Secret Police
+    focus = {
+        id = ROM_legionary_secret_police
+        icon = GFX_goal_secret_agents
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_criminalise_socialism }
+        relative_position_id = ROM_obligatory_camp_service
+    }
+
+    # Their Assets do not Matter
+    focus = {
+        id = ROM_their_assets_do_not_matter
+        icon = GFX_goal_factory_complex
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_guide_the_nation }
+        prerequisite = { focus = ROM_criminalise_socialism }
+        relative_position_id = ROM_guide_the_nation
+    }
+
+    # National Legionary State
+    focus = {
+        id = ROM_national_legionary_state
+        icon = GFX_goal_iron_guard_romania
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_green_welfare }
+        prerequisite = { focus = ROM_their_assets_do_not_matter }
+        prerequisite = { focus = ROM_legionary_secret_police }
+        relative_position_id = ROM_their_assets_do_not_matter
+    }
+}
