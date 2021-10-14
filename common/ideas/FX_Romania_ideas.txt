@@ -8,8 +8,6 @@ ideas = {
             allowed = { original_tag = ROM }
             picture = ROM_iron_guard
             modifier = {
-                stability_factor = -0.15
-                war_support_factor = -0.15
                 political_power_cost = 0.15
             }
         }
@@ -17,6 +15,7 @@ ideas = {
             allowed = { original_tag = ROM }
             picture = ger_mefo_bills_payment
             modifier = {
+                production_factory_max_efficiency_factor = 0.05
                 production_speed_buildings_factor = 0.15
             }
         }
@@ -194,6 +193,66 @@ ideas = {
             picture = generic_neutrality_drift_bonus
             modifier = {
                 political_power_cost = 0.15
+            }
+        }
+        ROM_decentralized_economic_planning = {
+            allowed = { original_tag = ROM }
+            picture = generic_central_management
+            modifier = {
+                war_support_factor = 0.05
+				political_power_gain = -0.05
+				production_lack_of_resource_penalty_factor = -0.08
+				local_resources_factor = 0.05
+				conversion_cost_mil_to_civ_factor = -0.1
+				production_factory_start_efficiency_factor = 0.03
+				supply_consumption_factor = -0.05
+				monthly_population = 0.02
+            }
+        }
+        ROM_public_owned_enterprise = {
+            allowed = { original_tag = ROM }
+            picture = chi_hyper_inflation2
+            modifier = {
+                consumer_goods_factor = -0.02
+                production_factory_start_efficiency_factor = 0.1
+				local_resources_factor = 0.05
+				trade_opinion_factor = -0.1
+            }
+        }
+        ROM_public_owned_enterprise_1 = {
+            allowed = { original_tag = ROM }
+            picture = chi_hyper_inflation4
+            modifier = {
+                consumer_goods_factor = -0.04
+                production_factory_start_efficiency_factor = 0.2
+                local_resources_factor = 0.1
+                trade_opinion_factor = -0.2
+            }
+        }
+        ROM_social_security_programs = {
+            allowed = { original_tag = ROM }
+            picture = raj_risk_of_famine
+            modifier = {
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+                monthly_population = 0.15
+            }
+        }
+        ROM_socialist_romania_idea = {
+            allowed = { original_tag = ROM }
+            picture = ger_the_great_red_menace
+            modifier = {
+                surrender_limit = 0.1
+                political_power_gain = 0.15
+            }
+        }
+        ROM_securitate = {
+            allowed = { original_tag = ROM }
+            picture = NOR_secret_police_idea_1
+            modifier = {
+                decryption_factor = 0.1
+				encryption_factor = 0.15
+                special_forces_cap = 0.02
             }
         }
     }

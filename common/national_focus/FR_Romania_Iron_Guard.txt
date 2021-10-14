@@ -15,7 +15,7 @@ focus_tree = {
     focus = {
         id = ROM_the_iron_guard_in_power
         icon = GFX_goal_ideology_valkist
-        x = 18
+        x = 22
         y = 0
         cost = 0
         available = {
@@ -29,89 +29,164 @@ focus_tree = {
         }
     }
 
+    # Loyalty to the Conducator
+    focus = {
+        id = ROM_loyalty_to_the_conducator
+        icon = GFX_goal_ROM_loyalty_to_codreanu
+        x = -2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_iron_guard_in_power }
+        relative_position_id = ROM_the_iron_guard_in_power
+    }
+
     # Merge the Legion to the Army
     focus = {
         id = ROM_merge_the_legion_to_the_army
         icon = GFX_goal_conscription
-        x = -1
+        x = -3
         y = 1
         cost = 6
         mutually_exclusive = { focus = ROM_the_legion_as_a_separate_force }
-        prerequisite = { focus = ROM_the_iron_guard_in_power }
-        relative_position_id = ROM_the_iron_guard_in_power
+        prerequisite = { focus = ROM_loyalty_to_the_conducator }
+        relative_position_id = ROM_loyalty_to_the_conducator
     }
 
     # The Legion as a Separate Force
     focus = {
         id = ROM_the_legion_as_a_separate_force
         icon = GFX_goal_army_guy_2
-        x = 1
+        x = -1
         y = 1
         cost = 6
         mutually_exclusive = { focus = ROM_merge_the_legion_to_the_army }
-        prerequisite = { focus = ROM_the_iron_guard_in_power }
-        relative_position_id = ROM_the_iron_guard_in_power
+        prerequisite = { focus = ROM_loyalty_to_the_conducator }
+        relative_position_id = ROM_loyalty_to_the_conducator
     }
 
     # Join the Stahlpakt
     focus = {
         id = ROM_join_the_stahlpakt
         icon = GFX_goal_ROM_join_stahlpakt
-        x = -1
-        y = 1
-        cost = 6
-        prerequisite = {
-            focus = ROM_merge_the_legion_to_the_army 
-            focus = ROM_the_legion_as_a_separate_force
-        }
-        relative_position_id = ROM_the_legion_as_a_separate_force
-    }
-
-    # Legionary Industrialization
-    focus = {
-        id = ROM_legionary_industrialization
-        icon = GFX_focus_generic_the_giant_wakes
-        x = -1
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_merge_the_legion_to_the_army }
-        relative_position_id = ROM_merge_the_legion_to_the_army
-    }
-
-    # Obligatory Camp Service
-    focus = {
-        id = ROM_obligatory_camp_service
-        icon = GFX_goal_economic_control
         x = 1
         y = 1
         cost = 6
-        prerequisite = { focus = ROM_the_legion_as_a_separate_force }
-        relative_position_id = ROM_the_legion_as_a_separate_force
+        prerequisite = { focus = ROM_loyalty_to_the_conducator }
+        relative_position_id = ROM_loyalty_to_the_conducator
     }
 
-    # Criminalise Socialism
+    # Legionary Secret Police
     focus = {
-        id = ROM_criminalise_socialism
-        icon = GFX_goal_generic_war_with_comintern
+        id = ROM_legionary_secret_police
+        icon = GFX_goal_secret_agents
+        x = -3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_join_the_stahlpakt }
+        relative_position_id = ROM_join_the_stahlpakt
+    }
+
+    # German Military Exercises
+    focus = {
+        id = ROM_german_military_exercises
+        icon = GFX_goal_generic_military_sphere
         x = -1
         y = 1
         cost = 6
-        prerequisite = {
-            focus = ROM_join_the_stahlpakt
-        }
-        relative_position_id = ROM_obligatory_camp_service
+        prerequisite = { focus = ROM_join_the_stahlpakt }
+        relative_position_id = ROM_join_the_stahlpakt
+    }
+
+    # National Legionary State
+    focus = {
+        id = ROM_national_legionary_state
+        icon = GFX_goal_ROM_national_legionary_state
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_criminalise_socialism }
+        prerequisite = { focus = ROM_german_military_exercises }
+        prerequisite = { focus = ROM_legionary_secret_police }
+        relative_position_id = ROM_german_military_exercises
     }
 
     # Guide the Nation
     focus = {
         id = ROM_guide_the_nation
         icon = GFX_goal_generic_national_unity
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_iron_guard_in_power }
+        relative_position_id = ROM_the_iron_guard_in_power
+    }
+
+    # Criminalise Socialism
+    focus = {
+        id = ROM_criminalise_socialism
+        icon = GFX_goal_generic_war_with_comintern
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_guide_the_nation }
+        prerequisite = { focus = ROM_their_assets_do_not_matter }
+        relative_position_id = ROM_guide_the_nation
+    }
+
+    # Legionary Industrialization
+    focus = {
+        id = ROM_legionary_industrialization
+        icon = GFX_focus_generic_the_giant_wakes
+        x = 2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_iron_guard_in_power }
+        relative_position_id = ROM_the_iron_guard_in_power
+    }
+
+    # Legionary Education
+    focus = {
+        id = ROM_legionary_education
+        icon = GFX_goal_KTG_Bookstack
         x = 1
         y = 1
         cost = 6
-        prerequisite = { 
-            focus = ROM_join_the_stahlpakt
-        }
+        prerequisite = { focus = ROM_legionary_industrialization }
+        relative_position_id = ROM_legionary_industrialization
+    }
+
+    # Alliance with the Church
+    focus = {
+        id = ROM_alliance_with_the_church
+        icon = GFX_BEL_Improve_Catholic_Relations
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_legionary_education }
+        prerequisite = { focus = ROM_obligatory_camp_service }
+        relative_position_id = ROM_legionary_education
+    }
+
+    # Green Agrarian Roots
+    focus = {
+        id = ROM_green_agriarian_roots
+        icon = GFX_IRE_farms
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_their_assets_do_not_matter }
+        prerequisite = { focus = ROM_green_welfare }
+        relative_position_id = ROM_their_assets_do_not_matter
+    }
+
+    # Their Assets do not Matter
+    focus = {
+        id = ROM_their_assets_do_not_matter
+        icon = GFX_goal_factory_complex
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_legionary_industrialization }
         relative_position_id = ROM_legionary_industrialization
     }
 
@@ -122,43 +197,31 @@ focus_tree = {
         x = 0
         y = 2
         cost = 6
-        prerequisite = { focus = ROM_guide_the_nation }
+        prerequisite = { focus = ROM_their_assets_do_not_matter }
+        prerequisite = { focus = ROM_legionary_industrialization }
         relative_position_id = ROM_legionary_industrialization
     }
 
-    # Legionary Secret Police
+    # Obligatory Camp Service
     focus = {
-        id = ROM_legionary_secret_police
-        icon = GFX_goal_secret_agents
-        x = 0
+        id = ROM_obligatory_camp_service
+        icon = GFX_goal_economic_control
+        x = 2
         y = 2
         cost = 6
-        prerequisite = { focus = ROM_criminalise_socialism }
-        relative_position_id = ROM_obligatory_camp_service
+        prerequisite = { focus = ROM_legionary_industrialization }
+        relative_position_id = ROM_legionary_industrialization
     }
 
-    # Their Assets do not Matter
+    # Legionary Culture Centres
     focus = {
-        id = ROM_their_assets_do_not_matter
-        icon = GFX_goal_factory_complex
+        id = ROM_legionary_culture_centres
+        icon = GFX_goal_collaborate_local_elites
         x = 1
         y = 1
         cost = 6
-        prerequisite = { focus = ROM_guide_the_nation }
-        prerequisite = { focus = ROM_criminalise_socialism }
-        relative_position_id = ROM_guide_the_nation
-    }
-
-    # National Legionary State
-    focus = {
-        id = ROM_national_legionary_state
-        icon = GFX_goal_iron_guard_romania
-        x = 0
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_green_welfare }
-        prerequisite = { focus = ROM_their_assets_do_not_matter }
-        prerequisite = { focus = ROM_legionary_secret_police }
-        relative_position_id = ROM_their_assets_do_not_matter
+        prerequisite = { focus = ROM_green_agriarian_roots }
+        prerequisite = { focus = ROM_alliance_with_the_church }
+        relative_position_id = ROM_green_agriarian_roots
     }
 }
