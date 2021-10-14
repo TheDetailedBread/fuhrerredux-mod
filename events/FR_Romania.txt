@@ -849,7 +849,7 @@ country_event = { # Prince Michael Assassinated!
 		name = romania.20.a
 		set_country_flag = ROM_michael_assassinated
 		hidden_effect = {
-			country_event = { id = romania.21 days = 7 }
+			country_event = { id = romania.32 days = 7 } # The Empty Romanian Throne
 		}
 	}
 }
@@ -1213,57 +1213,37 @@ country_event = { # Iron Guard Coups the Government!
 	}
 }
 
-country_event = { # PNC Wants Nicholas' Abdication
+country_event = { # The Monarch
 	id = romania.26
 	title = romania.26.t
 	desc = romania.26.d
-	picture = GFX_report_event_carol_party
+	picture = GFX_report_event_generic_sign_treaty3
 	is_triggered_only = yes
 
 	trigger = {
 		tag = ROM
-		has_government = national_populist
-		has_country_leader = {
-			name = "Nicholas I"
-			ruling_only = yes
+		has_country_flag = ROM_had_1937_elections
+		has_country_flag = ROM_empty_throne
+		NOT = {
+			OR = {
+				has_government = vanguardist
+				has_government = collectivist
+				has_government = libertarian_socialist
+				has_government = valkist
+			}
 		}
 	}
 
-	option = { # The King abdicated
+	option = {
 		name = romania.26.a
-		add_stability = 0.05
 		hidden_effect = {
-			country_event = { id = romania.27 days = 5 }
-			kill_ideology_leader = vanguardist
-			kill_ideology_leader = collectivist
-			kill_ideology_leader = libertarian_socialist
-			kill_ideology_leader = social_democrat
-			kill_ideology_leader = social_liberal
-			kill_ideology_leader = market_liberal
-			kill_ideology_leader = social_conservative
-			kill_ideology_leader = authoritarian_democrat
-			kill_ideology_leader = paternal_autocrat
-			kill_ideology_leader = national_populist
+			country_event = { id = romania.21 days = 2 }
 		}
 	}
-	option = { # The King orders the arrests of the PNC Government
+	option = {
 		name = romania.26.b
-		set_politics = {
-			ruling_party = paternal_autocrat
-			elections_allowed = no
-		}
-		increase_ruling_party_popularity_by_25 = yes
-		set_country_flag = ROM_direct_rule_from_bucharest
-		remove_every_minister = yes
-		add_ideas = {
-			ROM_Alexandru_Cantacuzino_hog_pau
-			ROM_Grigore_Niculescu_Buzesti_for_ade
-			ROM_Gheorghe_Potopeanu_eco_pau
-			ROM_Aurel_Aldea_sec_sco
-		}
 		hidden_effect = {
-			set_country_flag = ROM_direct_rule_from_bucharest
-			load_focus_tree = FR_Romania_Royalist
+			country_event = { id = romania.27 days = 2 }
 		}
 	}
 }
@@ -1434,5 +1414,99 @@ country_event = { # Codreanu Arrives in Berlin
 	option = {
 		name = romania.31.a
 		add_political_power = 50
+	}
+}
+
+country_event = { # The Empty Romanian Throne
+	id = romania.32
+	title = romania.32.t
+	desc = romania.32.d
+	picture = GFX_report_event_germany_politician_handshake
+	is_triggered_only = yes
+
+	option = { # Invite Prince Nicholas to assume the throne
+		name = romania.32.a
+		hidden_effect = {
+			country_event = { id = romania.21 days = 2 }
+		}
+	}
+	option = { # Let's do this after the elections
+		name = romania.32.b
+		set_country_flag = ROM_empty_throne
+	}
+}
+
+country_event = { # Iron Guard Hostile to New Socialist Government
+	id = romania.33
+	title = romania.33.t
+	desc = romania.33.d
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+
+	option = { # Raid their headquarters
+		name = romania.33.a
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = romania.34 days = 3 }
+		}
+	}
+	option = { # Arrest the members from their homes
+		name = romania.33.b
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = romania.35 days = 3 }
+		}
+	}
+}
+
+country_event = { # Iron Guard Suppressed
+	id = romania.34
+	title = romania.34.t
+	desc = romania.34.d
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+
+	option = {
+		name = romania.34.a
+		add_stability = 0.05
+		if = {
+			limit = { has_idea = ROM_the_iron_guard }
+			remove_ideas = ROM_the_iron_guard
+		}
+		add_popularity = {
+			ideology = valkist
+			popularity = -0.2
+		}
+	}
+}
+
+country_event = { # Iron Guard Launches Revolt
+	id = romania.35
+	title = romania.35.t
+	desc = romania.35.d
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			delete_unit = { state = 78 disband = yes }
+			delete_unit = { state = 79 disband = yes }
+			delete_unit = { state = 853 disband = yes }
+			ROR = {
+				transfer_state = 78
+				transfer_state = 79
+				transfer_state = 853
+				load_oob = "ROR"
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+			add_civil_war_target = ROR
+		}
+	}
+
+	option = {
+		name = romania.35.a
 	}
 }

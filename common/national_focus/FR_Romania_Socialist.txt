@@ -15,7 +15,7 @@ focus_tree = {
     focus = {
         id = ROM_the_radical_left_government
         icon = GFX_goal_ideology_libertarian_socialism
-        x = 20
+        x = 22
         y = 0
         cost = 0
         available = {
@@ -29,17 +29,295 @@ focus_tree = {
         }
     }
 
-    # Abolish the Monarchy
+    # Radical Land Reform
     focus = {
-        id = ROM_abolish_the_monarchy
-        icon = GFX_focus_rom_abdicate
+        id = ROM_radical_land_reform
+        icon = GFX_focus_prc_agrarian_socialism
+        x = -3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_radical_left_government }
+        relative_position_id = ROM_the_radical_left_government
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+        }
+    }
+
+    # Decentralized Planning
+    focus = {
+        id = ROM_decentralized_planning
+        icon = GFX_goal_Centralised_Government
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_radical_land_reform }
+        relative_position_id = ROM_radical_land_reform
+        completion_reward = {
+            add_ideas = ROM_decentralized_economic_planning
+        }
+    }
+
+    # The Industrial Strategy
+    focus = {
+        id = ROM_the_industrial_strategy
+        icon = GFX_goal_workers_rights
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_decentralized_planning }
+        relative_position_id = ROM_decentralized_planning
+        completion_reward = {
+            add_tech_bonus = {
+                category = industry
+                bonus = 1.0
+                uses = 1
+            }
+        }
+    }
+
+    # Farm to Market Roads
+    focus = {
+        id = ROM_farm_to_market_roads
+        icon = GFX_goal_generic_highway
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_radical_land_reform }
+        relative_position_id = ROM_radical_land_reform
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    # Nationalise the Oil Fields
+    focus = {
+        id = ROM_nationalise_the_oil_fields
+        icon = GFX_goal_basic_oil
         x = 0
         y = 1
         cost = 6
         prerequisite = { focus = ROM_the_radical_left_government }
         relative_position_id = ROM_the_radical_left_government
         completion_reward = {
+            add_resource = { type = oil amount = 12 state = 46 }
+        }
+    }
+
+    # Seize Foreign Industries
+    focus = {
+        id = ROM_seize_foreign_industries
+        icon = GFX_goal_generic_seize_investments
+        x = -1
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_nationalise_the_oil_fields }
+        prerequisite = { focus = ROM_farm_to_market_roads }
+        relative_position_id = ROM_nationalise_the_oil_fields
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+        }
+    }
+
+    # Publicly Owned Entreprise
+    focus = {
+        id = ROM_publicly_owned_entreprise
+        icon = GFX_goal_generic_foreign_investments
+        x = 1
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_abolish_the_monarchy }
+        prerequisite = { focus = ROM_nationalise_the_oil_fields }
+        relative_position_id = ROM_nationalise_the_oil_fields
+        completion_reward = {
+            add_ideas = ROM_public_owned_enterprise
+            add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+        }
+    }
+
+    # Liberalize Unions
+    focus = {
+        id = ROM_liberalize_unions
+        icon = GFX_goal_revolution_tools
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_seize_foreign_industries }
+        relative_position_id = ROM_seize_foreign_industries
+        completion_reward = {
+            add_popularity = {
+                ideology = vanguardist
+                popularity = 0.025
+            }
+            add_popularity = {
+                ideology = collectivist
+                popularity = 0.05
+            }
+            add_popularity = {
+                ideology = libertarian_socialist
+                popularity = 0.1
+            }
+            add_popularity = {
+                ideology = social_democrat
+                popularity = 0.05
+            }
+            add_political_power = 100
+            add_stability = 0.05
+        }
+    }
+
+    # Socialist Social Security
+    focus = {
+        id = ROM_socialist_social_security
+        icon = GFX_focus_generic_self_management
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_liberalize_unions }
+        relative_position_id = ROM_liberalize_unions
+        completion_reward = {
+            add_ideas = ROM_social_security_programs
+        }
+    }
+
+    # Revolutionary Science
+    focus = {
+        id = ROM_revolutionary_science
+        icon = GFX_focus_generic_socialist_science
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { 
+            focus = ROM_seize_foreign_industries
+            focus = ROM_publicly_owned_entreprise
+        }
+        relative_position_id = ROM_seize_foreign_industries
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+
+    # Progressive Taxes
+    focus = {
+        id = ROM_progressive_taxes
+        icon = GFX_goal_bag_of_money
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_publicly_owned_entreprise }
+        relative_position_id = ROM_publicly_owned_entreprise
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = ROM_public_owned_enterprise
+                add_idea = ROM_public_owned_enterprise_1
+            }
+        }
+    }
+
+    # A New Romania
+    focus = {
+        id = ROM_a_new_romania
+        icon = GFX_goal_ROM_flag
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_revolutionary_science }
+        prerequisite = { focus = ROM_progressive_taxes }
+        relative_position_id = ROM_revolutionary_science
+        completion_reward = {
+            add_ideas = ROM_socialist_romania_idea
+        }
+    }
+
+    # Abolish the Monarchy
+    focus = {
+        id = ROM_abolish_the_monarchy
+        icon = GFX_focus_rom_abdicate
+        x = 3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_radical_left_government }
+        relative_position_id = ROM_the_radical_left_government
+        completion_reward = {
             hidden_effect = {
+                set_cosmetic_tag = ROM_republic
                 kill_ideology_leader = vanguardist
                 kill_ideology_leader = collectivist
                 kill_ideology_leader = libertarian_socialist
@@ -54,151 +332,61 @@ focus_tree = {
         }
     }
 
-    # Radical Land Reform
+    # Establish the Securitate
     focus = {
-        id = ROM_radical_land_reform
-        icon = GFX_focus_prc_agrarian_socialism
-        x = -2
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_abolish_the_monarchy }
-        relative_position_id = ROM_abolish_the_monarchy
-    }
-
-    # Farm to Market Roads
-    focus = {
-        id = ROM_farm_to_market_roads
-        icon = GFX_goal_generic_highway
-        x = 0
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_radical_land_reform }
-        relative_position_id = ROM_radical_land_reform
-    }
-
-    # Liberalize Unions
-    focus = {
-        id = ROM_liberalize_unions
-        icon = GFX_goal_revolution_tools
-        x = 0
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_abolish_the_monarchy }
-        relative_position_id = ROM_abolish_the_monarchy
-    }
-
-    # Publicly Owned Entreprise
-    focus = {
-        id = ROM_publicly_owned_entreprise
-        icon = GFX_goal_generic_foreign_investments
-        x = 0
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_liberalize_unions }
-        relative_position_id = ROM_liberalize_unions
-    }
-
-    # Nationalise the Oil Fields
-    focus = {
-        id = ROM_nationalise_the_oil_fields
-        icon = GFX_goal_basic_oil
-        x = 2
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_abolish_the_monarchy }
-        relative_position_id = ROM_abolish_the_monarchy
-    }
-
-    # Seize Foreign Industries
-    focus = {
-        id = ROM_seize_foreign_industries
-        icon = GFX_goal_generic_seize_investments
-        x = 0
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_nationalise_the_oil_fields }
-        relative_position_id = ROM_nationalise_the_oil_fields
-    }
-
-    # Revolutionary Science
-    focus = {
-        id = ROM_revolutionary_science
-        icon = GFX_focus_generic_socialist_science
+        id = ROM_establish_the_securitate
+        icon = GFX_goal_secret_agents
         x = -1
         y = 1
         cost = 6
-        prerequisite = { focus = ROM_farm_to_market_roads }
-        relative_position_id = ROM_farm_to_market_roads
+        prerequisite = { focus = ROM_abolish_the_monarchy }
+        relative_position_id = ROM_abolish_the_monarchy
+        completion_reward = {
+            add_ideas = ROM_securitate
+        }
     }
 
-    # Socialist Social Security
+    # Fight Reactionaries
     focus = {
-        id = ROM_socialist_social_security
-        icon = GFX_focus_generic_self_management
+        id = ROM_fight_reactionaries
+        icon = GFX_focus_generic_anti_fascist_diplomacy
         x = 1
         y = 1
         cost = 6
-        prerequisite = { focus = ROM_farm_to_market_roads }
-        prerequisite = { focus = ROM_publicly_owned_entreprise }
-        relative_position_id = ROM_farm_to_market_roads
-    }
-
-    # Decentralized Planning
-    focus = {
-        id = ROM_decentralized_planning
-        icon = GFX_goal_Centralised_Government
-        x = 1
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_publicly_owned_entreprise }
-        prerequisite = { focus = ROM_seize_foreign_industries }
-        relative_position_id = ROM_publicly_owned_entreprise
-    }
-
-    # Progressive Taxes
-    focus = {
-        id = ROM_progressive_taxes
-        icon = GFX_goal_bag_of_money
-        x = 1
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_seize_foreign_industries }
-        relative_position_id = ROM_seize_foreign_industries
-    }
-
-    # Working Women
-    focus = {
-        id = ROM_working_women
-        icon = GFX_goal_production
-        x = 1
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_revolutionary_science }
-        prerequisite = { focus = ROM_socialist_social_security }
-        relative_position_id = ROM_revolutionary_science
+        prerequisite = { focus = ROM_abolish_the_monarchy }
+        relative_position_id = ROM_abolish_the_monarchy
+        completion_reward = {
+            add_popularity = {
+                ideology = authoritarian_democrat
+                popularity = -0.1
+            }
+            add_popularity = {
+                ideology = paternal_autocrat
+                popularity = -0.1
+            }
+            add_popularity = {
+                ideology = national_populist
+                popularity = -0.1
+            }
+            add_popularity = {
+                ideology = valkist
+                popularity = 0.1
+            }
+            hidden_effect = {
+                country_event = { id = romania.33 days = 7 }
+            }
+        }
     }
 
     # Join the Internationale
     focus = {
         id = ROM_join_the_internationale
         icon = GFX_focus_chi_mission_to_the_soviet_union
-        x = 1
+        x = -1
         y = 1
         cost = 6
-        prerequisite = { focus = ROM_socialist_social_security }
-        prerequisite = { focus = ROM_decentralized_planning }
-        relative_position_id = ROM_socialist_social_security
-    }
-
-    # The Industrial Strategy
-    focus = {
-        id = ROM_the_industrial_strategy
-        icon = GFX_goal_workers_rights
-        x = 1
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_decentralized_planning }
-        prerequisite = { focus = ROM_progressive_taxes }
-        relative_position_id = ROM_decentralized_planning
+        prerequisite = { focus = ROM_fight_reactionaries }
+        prerequisite = { focus = ROM_establish_the_securitate }
+        relative_position_id = ROM_fight_reactionaries
     }
 }
