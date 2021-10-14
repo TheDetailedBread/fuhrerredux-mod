@@ -1,3 +1,382 @@
+ROM_cementing_our_power = {
+    # Valkist
+    ROM_eliminate_opposition_valkist = {
+        is_good = no
+        icon = GFX_decision_oppression
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_royalist_influence_destroyed
+                has_country_flag = ROM_harrassed_royalist_politicians
+                has_country_flag = ROM_held_legionary_rally
+                has_country_flag = ROM_passed_populist_policies
+                has_country_flag = ROM_obtained_support_from_the_military
+            }
+        }
+        activation = {
+            has_completed_focus = ROM_loyalty_to_the_conducator
+            #has_government = valkist
+        }
+        days_mission_timeout = 120
+        timeout_effect = {
+            custom_effect_tooltip = ROM_eliminate_opposition_failed
+            hidden_effect = {
+                
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = ROM_eliminate_opposition_success
+            hidden_effect = {
+                
+            }
+        }
+    }
+    ROM_harrass_royalist_politicians = {
+        icon = GFX_decision_generic_civil_support
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_valkist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            weekly_stability = -0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_harrassed_royalist_politicians
+            custom_effect_tooltip = ROM_harrassed_royalist_politicians
+        }
+    }
+    ROM_hold_legionary_rally = {
+        icon = GFX_decision_eng_blackshirt_speech
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_valkist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            consumer_goods_factor = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_held_legionary_rally
+            custom_effect_tooltip = ROM_held_legionary_rally
+        }
+    }
+    ROM_pass_populist_policies = {
+        icon = GFX_decision_eng_support_imperialist_coup
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_valkist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            political_power_cost = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_passed_populist_policies
+            custom_effect_tooltip = ROM_passed_populist_policies
+        }
+    }
+    ROM_obtain_support_from_the_military = {
+        icon = GFX_decision_generic_army_support
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_valkist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            command_power_gain = -0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_obtained_support_from_the_military
+            custom_trigger_tooltip = ROM_obtained_support_from_the_military
+        }
+    }
+    # Royalist
+    ROM_eliminate_opposition_royalist = {
+        is_good = no
+        icon = GFX_decision_oppression
+        selectable_mission = no
+        days_mission_timeout = 120
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_iron_guard_destroyed
+                has_country_flag = ROM_arranged_public_appearances
+                has_country_flag = ROM_newspaper_propagandas
+                has_country_flag = ROM_infiltrated_the_legion
+                has_country_flag = ROM_reaffirmed_support_from_the_capitalists
+            }
+        }
+        activation = {
+            has_government = paternal_autocrat
+        }
+        timeout_effect = {
+            custom_effect_tooltip = ROM_eliminate_opposition_failed
+        }
+        complete_effect = {
+            custom_effect_tooltip = ROM_eliminate_opposition_success
+        }
+    }
+    ROM_arrange_public_appearances = {
+        icon = GFX_decision_hol_radio_oranje
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_royalist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            political_power_cost = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_arranged_public_appearances
+            custom_trigger_tooltip = ROM_arranged_public_appearances
+        }
+    }
+    ROM_newspaper_propaganda = {
+        icon = GFX_decision_eng_propaganda_campaigns
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_royalist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            consumer_goods_factor = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_newspaper_propagandas
+            custom_trigger_tooltip = ROM_newspaper_propagandas
+        }
+    }
+    ROM_infiltrate_the_legion = {
+        icon = GFX_decision_eng_blackshirt_march
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_royalist }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            political_power_cost = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_infiltrated_the_legion
+            custom_effect_tooltip = ROM_infiltrated_the_legion
+        }
+    }
+    ROM_reaffirm_support_from_the_capitalists = {
+        icon = GFX_decision_generic_industry
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_royalist }
+        available = {
+            custom_effect_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            production_speed_buildings_factor = -0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_reaffirmed_support_from_the_capitalists
+            custom_effect_tooltip = ROM_reaffirmed_support_from_the_capitalists
+        }
+    }
+
+    # Socialist
+    ROM_eliminate_opposition_socialist = {
+        is_good = no
+        icon = GFX_decision_oppression
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ROM_iron_guard_destroyed
+                has_country_flag = ROM_reduced_worker_quotas
+                has_country_flag = ROM_found_monarchist_conspirators
+                has_country_flag = ROM_sow_discontent_among_the_legion
+                has_country_flag = ROM_reshuffled_the_officers
+            }
+        }
+        activation = {
+            #has_completed_focus = ROM_fight_reactionaries
+            has_government = libertarian_socialist
+        }
+        days_mission_timeout = 120
+        timeout_effect = {
+            custom_effect_tooltip = ROM_eliminate_opposition_failed
+            hidden_effect = {
+                country_event = { id = romania.35 hours = 8 }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = ROM_eliminate_opposition_success
+            hidden_effect = {
+                country_event = { id = romania.34 hours = 8 }
+            }
+        }
+    }
+    ROM_reduce_worker_quotas = {
+        icon = GFX_decision_ger_military_buildup
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_socialist }
+        available = {
+            custom_effect_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            industrial_capacity_factory = -0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_reduced_worker_quotas
+            custom_effect_tooltip = ROM_reduced_worker_quotas
+        }
+    }
+    ROM_find_monarchist_conspirators = {
+        icon = GFX_decision_generic_political_discourse
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_socialist }
+        available = {
+            custom_effect_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            consumer_goods_factor = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_found_monarchist_conspirators
+            custom_effect_tooltip = ROM_found_monarchist_conspirators
+        }
+    }
+    ROM_sow_discontent_among_the_legion = {
+        icon = GFX_decision_generic_civil_support
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_socialist }
+        available = {
+            custom_effect_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            political_power_cost = 0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_sowed_discontent_among_the_legion
+            custom_effect_tooltip = ROM_sowed_discontent_among_the_legion
+        }
+    }
+    ROM_reshuffle_the_officers = {
+        icon = GFX_decision_generic_army_support
+        cost = 20
+        days_remove = 25
+        fire_only_once = yes
+        visible = { has_active_mission = ROM_eliminate_opposition_socialist }
+        available = {
+            custom_effect_tooltip = {
+                tooltip = ROM_operation_pending
+                NOT = { has_country_flag = ROM_operation_pending }
+            }
+        }
+        modifier = {
+            command_power_gain = -0.025
+        }
+        complete_effect = {
+            set_country_flag = ROM_operation_pending
+        }
+        remove_effect = {
+            clr_country_flag = ROM_operation_pending
+            set_country_flag = ROM_reshuffled_the_officers
+            custom_effect_tooltip = ROM_reshuffled_the_officers
+        }
+    }
+}
+
 ROM_factionalism_in_pnl = {
     ROM_meet_with_the_progressives = {
         fire_only_once = yes
