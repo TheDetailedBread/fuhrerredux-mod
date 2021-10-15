@@ -356,22 +356,7 @@ focus_tree = {
         prerequisite = { focus = ROM_abolish_the_monarchy }
         relative_position_id = ROM_abolish_the_monarchy
         completion_reward = {
-            add_popularity = {
-                ideology = authoritarian_democrat
-                popularity = -0.1
-            }
-            add_popularity = {
-                ideology = paternal_autocrat
-                popularity = -0.1
-            }
-            add_popularity = {
-                ideology = national_populist
-                popularity = -0.1
-            }
-            add_popularity = {
-                ideology = valkist
-                popularity = 0.1
-            }
+            activate_mission_tooltip = ROM_eliminate_opposition_socialist
             hidden_effect = {
                 country_event = { id = romania.33 days = 7 }
             }

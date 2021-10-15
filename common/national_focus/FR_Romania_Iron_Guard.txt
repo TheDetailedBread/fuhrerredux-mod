@@ -39,7 +39,7 @@ focus_tree = {
         prerequisite = { focus = ROM_the_iron_guard_in_power }
         relative_position_id = ROM_the_iron_guard_in_power
         completion_reward = {
-            custom_effect_tooltip = ROM_loyalty_to_the_conducator_tt
+            activate_mission_tooltip = ROM_eliminate_opposition_valkist
         }
     }
 
@@ -123,6 +123,9 @@ focus_tree = {
         prerequisite = { focus = ROM_german_military_exercises }
         prerequisite = { focus = ROM_legionary_secret_police }
         relative_position_id = ROM_german_military_exercises
+        completion_reward = {
+            add_ideas = ROM_legionary_brotherhood
+        }
     }
 
     # Guide the Nation

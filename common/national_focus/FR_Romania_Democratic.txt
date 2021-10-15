@@ -55,6 +55,43 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_democratic_left_victorious }
         relative_position_id = ROM_democratic_left_victorious
+        completion_reward = {
+            add_stability = -0.10
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
     }
 
     # Extensive Land Reform
@@ -66,6 +103,33 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_continue_nationalization }
         relative_position_id = ROM_continue_nationalization
+        completion_reward = {
+            add_political_power = -100
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+        }
     }
 
     # A Welfare State
@@ -77,6 +141,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_continue_nationalization }
         relative_position_id = ROM_continue_nationalization
+        completion_reward = {
+            add_ideas = ROM_welfare_idea
+        }
     }
 
     # Public Works Programme
@@ -88,6 +155,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_continue_nationalization }
         relative_position_id = ROM_continue_nationalization
+        completion_reward = {
+            add_ideas = ROM_public_works_programs
+        }
     }
 
     # Expanding the Labour Pool
@@ -100,6 +170,9 @@ focus_tree = {
         prerequisite = { focus = ROM_a_welfare_state }
         prerequisite = { focus = ROM_extensive_land_reform }
         relative_position_id = ROM_a_welfare_state
+        completion_reward = {
+            add_manpower = 15000
+        }
     }
 
     # Limit the King's Powers
@@ -111,6 +184,11 @@ focus_tree = {
         cost = 3
         prerequisite = { focus = ROM_democratic_left_victorious }
         relative_position_id = ROM_democratic_left_victorious
+        completion_reward = {
+            increase_ruling_party_popularity_by_5 = yes
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
     }
 
     # Consitutional Education
@@ -122,6 +200,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_limit_the_kings_powers }
         relative_position_id = ROM_continue_nationalization
+        completion_reward = {
+            add_research_slot = 1
+        }
     }
 
     # Ban the Radical Far Right
@@ -134,6 +215,17 @@ focus_tree = {
         prerequisite = { focus = ROM_limit_the_kings_powers }
         prerequisite = { focus = ROM_fight_against_corruption }
         relative_position_id = ROM_limit_the_kings_powers
+        completion_reward = {
+            add_popularity = {
+                ideology = national_populist
+                popularity = -0.15
+            }
+            add_popularity = {
+                ideology = valkist
+                popularity = -0.15
+            }
+            custom_effect_tooltip = ROM_ban_the_radical_far_right_tt
+        }
     }
 
     # Homes for the People
@@ -146,6 +238,12 @@ focus_tree = {
         prerequisite = { focus = ROM_constitutional_education }
         prerequisite = { focus = ROM_ban_the_radical_far_right }
         relative_position_id = ROM_constitutional_education
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+        }
     }
 
     # Fight Against Corruption
@@ -157,6 +255,12 @@ focus_tree = {
         cost = 3
         prerequisite = { focus = ROM_democratic_left_victorious }
         relative_position_id = ROM_democratic_left_victorious
+        completion_reward = {
+            add_timed_idea = {
+                idea = ROM_government_cleansing
+                days = 360
+            }
+        }
     }
 
     # Industrial Development Scheme
@@ -168,6 +272,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_fight_against_corruption }
         relative_position_id = ROM_fight_against_corruption
+        completion_reward = {
+            add_tech_bonus = {
+                category = industry
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Fund the Fortifications
@@ -180,6 +291,9 @@ focus_tree = {
         prerequisite = { focus = ROM_public_works_programme }
         prerequisite = { focus = ROM_homes_for_the_people }
         relative_position_id = ROM_homes_for_the_people
+        completion_reward = {
+            add_timed_idea = ROM_fortification_funding
+        }
     }
 
     # Cooperate with the Unions
@@ -191,6 +305,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_homes_for_the_people }
         relative_position_id = ROM_homes_for_the_people
+        completion_reward = {
+            add_ideas = ROM_union_cooperation
+        }
     }
 
     # A Workers Paradise
@@ -204,6 +321,17 @@ focus_tree = {
         prerequisite = { focus = ROM_fund_the_fortifications }
         prerequisite = { focus = ROM_cooperate_with_the_unions }
         relative_position_id = ROM_fund_the_fortifications
+        completion_reward = {
+            unlock_decision_tooltip = ROM_join_entente
+            if = {
+                limit = {
+                    NOT = {
+                        ENG = { is_in_faction_with = FRA }
+                    }
+                }
+                unlock_decision_tooltip = ROM_join_ipa
+            }
+        }
     }
 
     # The Liberal Government
@@ -234,7 +362,10 @@ focus_tree = {
         y = 1
         cost = 6
         prerequisite = { focus = ROM_the_liberal_government }
-        relative_position_id = ROM_the_liberal_government 
+        relative_position_id = ROM_the_liberal_government
+        completion_reward = {
+            add_ideas = ROM_economic_expansion
+        }
     }
 
     # Maintain Rationing Programs
@@ -246,6 +377,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_economic_expansion_initiative }
         relative_position_id = ROM_economic_expansion_initiative
+        completion_reward = {
+            add_ideas = ROM_government_rationing
+        }
     }
 
     # Economic Investments
@@ -257,6 +391,12 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_the_liberal_government }
         relative_position_id = ROM_the_liberal_government
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
+        }
     }
 
     # Generous Farm Subsidies
@@ -268,6 +408,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_economic_investments }
         relative_position_id = ROM_economic_investments
+        completion_reward = {
+            add_ideas = ROM_farm_subsidies
+        }
     }
 
     # Technological Advancements
@@ -279,6 +422,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_economic_investments }
         relative_position_id = ROM_economic_investments
+        completion_reward = {
+            add_tech_bonus = {
+                category = electronics
+                bonus = 1
+                uses = 1
+            }
+        }
     }
 
     # Privatize the Oil Industry
@@ -288,6 +438,10 @@ focus_tree = {
         x = 0
         y = 3
         cost = 6
+        available = {
+            has_capitulated = no
+            owns_state = 46
+        }
         prerequisite = { 
             focus = ROM_generous_farm_subsidies
             focus = ROM_technological_advancements
@@ -296,6 +450,13 @@ focus_tree = {
             focus = ROM_rural_land_development
         }
         relative_position_id = ROM_economic_investments
+        completion_reward = {
+            add_resource = {
+                type = oil
+                amount = 12
+                state = 46
+            }
+        }
     }
 
     # Business is Booming
@@ -309,6 +470,17 @@ focus_tree = {
         prerequisite = { focus = ROM_maternity_services }
         prerequisite = { focus = ROM_promote_education }
         relative_position_id = ROM_privatize_the_oil_industry
+        completion_reward = {
+            unlock_decision_tooltip = ROM_join_entente
+            if = {
+                limit = {
+                    NOT = {
+                        ENG = { is_in_faction_with = FRA }
+                    }
+                }
+                unlock_decision_tooltip = ROM_join_ipa
+            }
+        }
     }
 
     # Maternity Services
@@ -320,6 +492,12 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_maintain_rationing_programs }
         relative_position_id = ROM_maintain_rationing_programs
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = ROM_government_rationing
+                add_idea = ROM_government_social_services
+            }
+        }
     }
 
     # Rural Land Development
@@ -331,6 +509,32 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_economic_expansion_initiative }
         relative_position_id = ROM_economic_expansion_initiative
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+        }
     }
 
     # Rewrite the Constitution
@@ -342,6 +546,11 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_the_liberal_government }
         relative_position_id = ROM_the_liberal_government
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            add_political_power = 100
+        }
     }
 
     # Disarm the Extremists
@@ -353,6 +562,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_rewrite_the_constitution }
         relative_position_id = ROM_rewrite_the_constitution
+        completion_reward = {
+            custom_effect_tooltip = ROM_disarm_the_extremists_tt
+            add_popularity = {
+                ideology = valkist
+                popularity = -0.25
+            }
+        }
     }    
 
     # Concessions to the Land Owners
@@ -364,6 +580,36 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_the_liberal_government }
         relative_position_id = ROM_the_liberal_government
+        completion_reward = {
+            add_timed_idea = {
+                idea = ROM_concessions_to_the_land_owners_idea
+                days = 360
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+        }
     }
 
     # Worker Rights
@@ -375,6 +621,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_concessions_to_the_land_owners }
         relative_position_id = ROM_concessions_to_the_land_owners
+        completion_reward = {
+            add_ideas = ROM_worker_rights_idea
+        }
     }
 
     # Easier Credit
@@ -386,6 +635,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_concessions_to_the_land_owners }
         relative_position_id = ROM_concessions_to_the_land_owners
+        completion_reward = {
+            add_ideas = ROM_low_interest_rates
+        }
     }
 
     # Promote Education
@@ -398,6 +650,9 @@ focus_tree = {
         prerequisite = { focus = ROM_disarm_the_extremists }
         prerequisite = { focus = ROM_worker_rights }
         relative_position_id = ROM_worker_rights
+        completion_reward = {
+            add_research_slot = 1
+        }
     }
 
     # Status Quo Unshaken
@@ -429,6 +684,32 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_status_quo_unshaken }
         relative_position_id = ROM_status_quo_unshaken
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+        }
     }
 
     # Standardized Healthcare
@@ -441,6 +722,14 @@ focus_tree = {
         prerequisite = { focus = ROM_encourage_the_agricultural_sector }
         prerequisite = { focus = ROM_infrastructure_expansion }
         relative_position_id = ROM_encourage_the_agricultural_sector
+        completion_reward = {
+            add_ideas = ROM_state_healthcare_programs
+            add_tech_bonus = {
+                category = hospital_tech
+                bonus = 1
+                uses = 1
+            }
+        }
     }
 
     # Research Councils
@@ -452,6 +741,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_standardized_healthcare }
         relative_position_id = ROM_standardized_healthcare
+        completion_reward = {
+            add_research_slot = 1
+        }
     }
 
     # Explore Romania's Richness
@@ -463,6 +755,17 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_research_councils }
         relative_position_id = ROM_research_councils
+        completion_reward = {
+            add_tech_bonus = {
+                technology = excavation1
+                technology = excavation2
+                technology = excavation3
+                technology = excavation4
+                technology = excavation5
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Opportunities for the Unemployed
@@ -474,6 +777,12 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_research_councils }
         relative_position_id = ROM_research_councils
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+        }
     }
 
     # Arms Factory Expansion
@@ -485,6 +794,42 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_research_councils }
         relative_position_id = ROM_research_councils
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = ROM
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
     }
 
     # Infrastructure Expansion
@@ -496,6 +841,29 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_status_quo_unshaken }
         relative_position_id = ROM_status_quo_unshaken
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
     }
 
     # Urban Projects
@@ -507,6 +875,17 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_infrastructure_expansion }
         relative_position_id = ROM_infrastructure_expansion
+        completion_reward = {
+            add_tech_bonus = {
+                technology = construction1
+                technology = construction2
+                technology = construction3
+                technology = construction4
+                technology = construction5
+                bonus = 1.0
+                uses = 1
+            }
+        }
     }
 
     # Worker Subsidies
@@ -519,6 +898,9 @@ focus_tree = {
         prerequisite = { focus = ROM_urban_projects }
         prerequisite = { focus = ROM_destroy_leftists }
         relative_position_id = ROM_urban_projects
+        completion_reward = {
+            add_ideas = ROM_worker_subsidies
+        }
     }
 
     # Small Business Subsidies
@@ -530,6 +912,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_status_quo_unshaken }
         relative_position_id = ROM_status_quo_unshaken
+        completion_reward = {
+            add_ideas = ROM_business_subsidies
+        }
     }
 
     # Establish the Siguranta
@@ -541,6 +926,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_status_quo_unshaken }
         relative_position_id = ROM_status_quo_unshaken
+        completion_reward = {
+            add_ideas = ROM_siguranta
+        }
     }
 
     # Hunt Down the Iron Guard
@@ -552,6 +940,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_establish_the_siguranta }
         relative_position_id = ROM_establish_the_siguranta
+        completion_reward = {
+            custom_effect_tooltip = ROM_hunt_down_the_iron_guard_tt
+            add_popularity = {
+                ideology = valkist
+                popularity = -0.25
+            }
+        }
     }
 
     # Destroy Leftists
@@ -563,6 +958,20 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_establish_the_siguranta }
         relative_position_id = ROM_establish_the_siguranta
+        completion_reward = {
+            add_popularity = {
+                ideology = vanguardist
+                popularity = -0.15
+            }
+            add_popularity = {
+                ideology = collectivist
+                popularity = -0.15
+            }
+            add_popularity = {
+                ideology = libertarian_socialist
+                popularity = -0.25
+            }
+        }
     }
 
     # Criminalise Radicalism
@@ -575,6 +984,10 @@ focus_tree = {
         prerequisite = { focus = ROM_hunt_down_the_iron_guard }
         prerequisite = { focus = ROM_destroy_leftists }
         relative_position_id = ROM_hunt_down_the_iron_guard
+        completion_reward = {
+            add_stability = 0.15
+            add_war_support = 0.15
+        }
     }
 
     # Stable Democracy
@@ -588,5 +1001,16 @@ focus_tree = {
         prerequisite = { focus = ROM_worker_subsidies }
         prerequisite = { focus = ROM_criminalise_radicalism }
         relative_position_id = ROM_worker_subsidies
+        completion_reward = {
+            unlock_decision_tooltip = ROM_join_entente
+            if = {
+                limit = {
+                    NOT = {
+                        ENG = { is_in_faction_with = FRA }
+                    }
+                }
+                unlock_decision_tooltip = ROM_join_ipa
+            }
+        }
     }
 }
