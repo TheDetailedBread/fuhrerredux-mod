@@ -21,6 +21,13 @@ country_event = { # The New Regent
 
 	option = { # Appoint from the ruling party
 		name = romania.1.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_democratic_behavior
+			}
+		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = ROM_Armand_Calinescu_hog_ade
 		set_country_flag = ROM_selected_regent
@@ -31,6 +38,13 @@ country_event = { # The New Regent
 	}
 	option = { # Try courting the PNL
 		name = romania.1.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_democratic_behavior
+			}
+		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = ROM_Constantin_Bratianu_hog_mli
 		set_country_flag = ROM_selected_regent
@@ -53,6 +67,17 @@ country_event = { # The New Regent
 	}
 	option = { # Maybe a coalition with PSDR won't hurt
 		name = romania.1.c
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_democratic_behavior
+			}
+			modifier = {
+				factor = 1000
+				has_country_flag = ROM_socialist_behavior
+			}
+		}
 		remove_ideas_with_trait = head_of_government
 		add_ideas = ROM_Virgil_Madgearu_hog_sde
 		set_country_flag = ROM_selected_regent
@@ -290,6 +315,13 @@ country_event = { # A Possible Coalition?
 
 	option = { # The coalition is created
 		name = romania.7.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_socialist_behavior
+			}
+		}
 		set_country_flag = ROM_leftist_coalition
 		hidden_effect = {
 			country_event = { id = romania.10 days = 21 }
@@ -297,6 +329,13 @@ country_event = { # A Possible Coalition?
 	}
 	option = { # Madgearu decides against it.
 		name = romania.7.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_democratic_behavior
+			}
+		}
 	}
 }
 
@@ -309,6 +348,9 @@ country_event = { # Meeting with the Georgist Faction
 
 	option = {
 		name = romania.8.a
+		ai_chance = {
+			factor = 50
+		}
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.05
@@ -320,6 +362,9 @@ country_event = { # Meeting with the Georgist Faction
 	}
 	option = {
 		name = romania.8.b
+		ai_chance = {
+			factor = 50
+		}
 		add_political_power = 20
 		hidden_effect = {
 			country_event = { id = romania.9 days = 14 }
@@ -348,6 +393,9 @@ country_event = { # Meeting with the Progressives
 
 	option = {
 		name = romania.9.a
+		ai_chance = {
+			factor = 10
+		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.05
@@ -377,6 +425,9 @@ country_event = { # Meeting with the Progressives
 	}
 	option = {
 		name = romania.9.c
+		ai_chance = {
+			factor = 80
+		}
 		add_political_power = 20
 		trigger = {
 			NOT = { has_country_flag = ROM_conservative_coalition }
@@ -393,10 +444,20 @@ country_event = { # Madgearu Proposes Reforms
 
 	option = { # The Regent Accepts the Reforms
 		name = romania.10.a
+		ai_chance = {
+			factor = 200
+			modifier = {
+				factor = 10
+				has_country_flag = ROM_socialist_behavior
+			}
+		}
 		add_ideas = ROM_madgearus_reforms
 	}
 	option = { # It's too radical for a reform
 		name = romania.10.b
+		ai_chance = {
+			factor = 200
+		}
 		hidden_effect = {
 			country_event = { id = romania.11 days = 3 }
 		}
@@ -434,16 +495,25 @@ country_event = { # Tensions in the Coalition
 
 	option = { # Side with the Georgists
 		name = romania.12.a
+		ai_chance = {
+			factor = 20
+		}
 		add_political_power = -10
 		ROM_increase_conservative_strength = yes
 	}
 	option = { # Side with the Maniu Faction
 		name = romania.12.b
+		ai_chance = {
+			factor = 20
+		}
 		add_political_power = -10
 		ROM_increase_progressive_strength = yes
 	}
 	option = { # Force a compromise
 		name = romania.12.c
+		ai_chance = {
+			factor = 40
+		}
 		add_political_power = -50
 	}
 }
@@ -591,6 +661,13 @@ country_event = { # 1937 General Elections
 
 	option = { # Peasants Party
 		name = romania.17.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 4
+				has_country_flag = ROM_democratic_behavior
+			}
+		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = yes
@@ -615,6 +692,20 @@ country_event = { # 1937 General Elections
 	}
 	option = { # PNL - MarLib
 		name = romania.17.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 40
+				has_country_flag = ROM_socialist_behavior
+			}
+			modifier = {
+				factor = 20
+				OR = {
+					has_country_flag = ROM_conservative_coalition
+					has_country_flag = ROM_progressive_coalition
+				}
+			}
+		}
 		set_politics = {
 			ruling_party = market_liberal
 			elections_allowed = yes
@@ -692,6 +783,17 @@ country_event = { # 1937 General Elections
 	}
 	option = { # PSDR
 		name = romania.17.c
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 10
+				has_country_flag = ROM_democratic_behavior
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = ROM_socialist_behavior
+			}
+		}
 		set_politics = {
 			ruling_party = social_democrat
 			elections_allowed = yes
@@ -729,6 +831,13 @@ country_event = { # 1937 General Elections
 	}
 	option = { # Iron Guard
 		name = romania.17.e
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 200
+				has_country_flag = ROM_valkist_behavior
+			}
+		}
 		trigger = {
 			NOT = { has_country_flag = ROM_iron_guard_banned }
 		}
@@ -759,6 +868,7 @@ country_event = { # 1937 General Elections
 	}
 	option = { # PNC
 		name = romania.17.f
+		ai_chance = { factor = 0 } # Easter Egg
 		trigger = {
 			has_country_flag = ROM_iron_guard_banned
 		}
@@ -824,12 +934,26 @@ country_event = { # Deploying troops in Transylvania
 
 	option = { # Deploy the reserves
 		name = romania.19.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_autocrat_behavior
+			}
+		}
 		hidden_effect = {
 			country_event = { id = romania.20 days = 18 }
 		}
 	}
 	option = { # Send some of the reserves
 		name = romania.19.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_autocrat_behavior
+			}
+		}
 		set_country_flag = ROM_deployed_some_of_troops
 		hidden_effect = {
 			country_event = { id = romania.20 days = 18 }
@@ -1012,6 +1136,7 @@ country_event = { # Iron Guard Behind Assassination
 			traits = { }
 		}
 		hidden_effect = {
+			country_event = { id = romania.23 days = 3 }
 			GER = {
 				country_event = { id = romania.31 days = 2 }
 			}
@@ -1033,6 +1158,13 @@ country_event = { # The King's and Romania's Safety
 
 	option = { # The King orders the abolishment of Parliament
 		name = romania.23.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_autocrat_behavior
+			}
+		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -1096,6 +1228,13 @@ country_event = { # Prime Minister Assassinated!
 
 	option = { # PDaT Assumes Control
 		name = romania.24.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_socialist_behavior
+			}
+		}
 		trigger = {
 			has_country_flag = ROM_leftist_coalition
 		}
@@ -1118,6 +1257,13 @@ country_event = { # Prime Minister Assassinated!
 		}
 	}
 	option = { # Suprise Iron Guard Coup
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_valkist_behavior
+			}
+		}
 		name = romania.24.b
 		set_politics = {
 			ruling_party = valkist
@@ -1159,6 +1305,13 @@ country_event = { # Iron Guard Coups the Government!
 	option = { # Loyal Units Suppressed Valkist Militias
 		name = romania.25.a
 		add_political_power = 100
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_democratic_behavior
+			}
+		}
 		hidden_effect = {
 			country_event = { id = romania.30 days = 2 }
 		}
@@ -1170,6 +1323,13 @@ country_event = { # Iron Guard Coups the Government!
 		}
 		hidden_effect = {
 			country_event = { id = romania.30 days = 2 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_democratic_behavior
+			}
 		}
 
 		if = {
@@ -1217,6 +1377,13 @@ country_event = { # Iron Guard Coups the Government!
 	}
 	option = { # The Coup Succeeds
 		name = romania.25.c
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_valkist_behavior
+			}
+		}
 		set_politics = {
 			ruling_party = valkist
 			elections_allowed = no
@@ -1262,12 +1429,22 @@ country_event = { # The Monarch
 
 	option = {
 		name = romania.26.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = ROM_autocrat_behavior
+			}
+		}
 		hidden_effect = {
 			country_event = { id = romania.21 days = 2 }
 		}
 	}
 	option = {
 		name = romania.26.b
+		ai_chance = {
+			factor = 0
+		}
 		hidden_effect = {
 			country_event = { id = romania.27 days = 2 }
 		}
