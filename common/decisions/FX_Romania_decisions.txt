@@ -1,3 +1,61 @@
+foreign_politics = {
+    ROM_join_entente = {
+        icon = GFX_decision_generic_civil_support
+        cost = 20
+        days_remove = 4
+        allowed = { original_tag = ROM }
+        visible = {
+            OR = {
+                has_completed_focus = ROM_a_workers_paradise
+                has_completed_focus = ROM_business_is_booming
+                has_completed_focus = ROM_stable_democracy
+                AND = {
+                    GER = {
+                        has_war_with = FRA
+                        has_war_with = ROOT
+                    }
+                }
+            }
+        }
+        available = {
+            is_in_faction = no
+            is_subject = no
+        }
+        remove_effect = {
+
+        }
+    }
+    ROM_join_ipa = {
+        icon = GFX_decision_generic_civil_support
+        cost = 20
+        days_remove = 4
+        allowed = { original_tag = ROM }
+        visible = {
+            OR = {
+                has_completed_focus = ROM_a_workers_paradise
+                has_completed_focus = ROM_business_is_booming
+                has_completed_focus = ROM_stable_democracy
+                AND = {
+                    GER = {
+                        has_war_with = FRA
+                        has_war_with = ROOT
+                    }
+                }
+            }
+            NOT = {
+                ENG = { is_in_faction_with = FRA }
+            }
+        }
+        available = {
+            is_in_faction = no
+            is_subject = no
+        }
+        remove_effect = {
+
+        }
+    }
+}
+
 ROM_cementing_our_power = {
     # Valkist
     ROM_eliminate_opposition_valkist = {
