@@ -605,6 +605,9 @@ country_event = { # 1937 General Elections
 			ROM_Aurel_Aldea_sec_sco
 		}
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.25 hours = 8 }
+			}
 			set_country_flag = ROM_democratic_romania
 			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
@@ -679,6 +682,9 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.23 hours = 8 }
+			}
 			set_country_flag = ROM_democratic_romania
 			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
@@ -713,6 +719,9 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.24 hours = 8 }
+			}
 			set_country_flag = ROM_democratic_romania
 			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.24 days = 100 }
@@ -741,6 +750,9 @@ country_event = { # 1937 General Elections
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.26 hours = 8 }
+			}
 			set_country_flag = ROM_valkist_romania
 			load_focus_tree = FR_Romania_Iron_Guard
 		}
@@ -764,6 +776,9 @@ country_event = { # 1937 General Elections
 			ROM_Horia_Sima_sec_npo
 		}
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.27 hours = 8 }
+			}
 			set_country_flag = ROM_natpop_romania
 			country_event = { id = romania.26 days = 30 }
 		}
@@ -949,7 +964,7 @@ country_event = { # Coronation of Nicholas I
 				traits = { }
 			}
 			random_other_country = {
-				news_event = { id = news.20 hours = 8 }
+				news_event = { id = news.21 hours = 8 }
 			}
 		}
 	}
@@ -1030,6 +1045,9 @@ country_event = { # The King's and Romania's Safety
 			ROM_Grigore_Niculescu_Buzesti_for_ade
 			ROM_Gheorghe_Potopeanu_eco_pau
 			ROM_Horia_Sima_sec_npo
+		}
+		hidden_effect = {
+			load_focus_tree = FR_Romania_Royalist
 		}
 	}
 	option = { # The King orders the banning of radical parties
@@ -1112,6 +1130,11 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Ion_Mota_for_val
 			ROM_Gheorghe_Clime_eco_val
 			ROM_Ion_Belgea_sec_val
+		}
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.28 hours = 8 }
+			}
 		}
 	}
 }
@@ -1207,6 +1230,9 @@ country_event = { # Iron Guard Coups the Government!
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.28 hours = 8 }
+			}
 			set_country_flag = ROM_valkist_romania
 			load_focus_tree = FR_Romania_Iron_Guard
 		}
@@ -1336,6 +1362,9 @@ country_event = { # Coronation of Alexander I
 			expire = "2017.12.5"
 			ideology = national_populist_subtype
 			traits = { }
+		}
+		random_other_country = {
+			news_event = { id = news.22 hours = 8 }
 		}
 	}
 }
@@ -1487,6 +1516,9 @@ country_event = { # Iron Guard Launches Revolt
 			delete_unit = { state = 79 disband = yes }
 			delete_unit = { state = 853 disband = yes }
 			ROR = {
+				add_state_core = 78
+				add_state_core = 79
+				add_state_core = 853
 				transfer_state = 78
 				transfer_state = 79
 				transfer_state = 853
@@ -1502,5 +1534,98 @@ country_event = { # Iron Guard Launches Revolt
 
 	option = {
 		name = romania.35.a
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.29 hours = 8 }
+			}
+		}
+	}
+}
+
+country_event = { # Royalists Launches Revolt
+	id = romania.36
+	title = romania.36.t
+	desc = romania.36.d
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			delete_unit = { state = 76 disband = yes }
+			delete_unit = { state = 83 disband = yes }
+			delete_unit = { state = 84 disband = yes }
+			ROR = {
+				set_capital = 84
+
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = valkist
+					popularity = -0.5
+				}
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.45
+				}
+				remove_every_minister = yes
+				add_ideas = {
+					GEN_hog_pau
+					GEN_for_pau
+					GEN_eco_pau
+					GEN_sec_pau
+				}
+
+				add_state_core = 76
+				add_state_core = 83
+				add_state_core = 84
+				transfer_state = 76
+				transfer_state = 83
+				transfer_state = 84
+				load_oob = "ROR_royalist"
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+			add_civil_war_target = ROR
+		}
+	}
+
+	option = {
+		name = romania.36.a
+		hidden_effect = {
+			random_other_country = {
+				news_event = { id = news.29 hours = 8 }
+			}
+		}
+	}
+}
+
+country_event = { # Civil War Over
+	id = romania.37
+	title = romania.37.t
+	is_triggered_only = yes
+
+	desc = {
+		text = romania.37.d1
+		trigger = {
+			ROR = { has_government = valkist }
+		}
+	}
+	desc = {
+		text = romania.37.d2
+		trigger = {
+			ROR = { has_government = paternal_autocrat }
+		}
+	}
+
+	option = {
+		name = romania.37.t
+		every_owned_state = {
+			limit = { is_core_of = ROR }
+			remove_core_of = ROR
+		}
 	}
 }

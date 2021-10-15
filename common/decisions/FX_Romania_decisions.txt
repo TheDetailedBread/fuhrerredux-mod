@@ -14,7 +14,6 @@ ROM_cementing_our_power = {
         }
         activation = {
             has_completed_focus = ROM_loyalty_to_the_conducator
-            #has_government = valkist
         }
         days_mission_timeout = 120
         timeout_effect = {
@@ -51,7 +50,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_harrassed_royalist_politicians
-            custom_effect_tooltip = ROM_harrassed_royalist_politicians
         }
     }
     ROM_hold_legionary_rally = {
@@ -75,7 +73,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_held_legionary_rally
-            custom_effect_tooltip = ROM_held_legionary_rally
         }
     }
     ROM_pass_populist_policies = {
@@ -99,7 +96,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_passed_populist_policies
-            custom_effect_tooltip = ROM_passed_populist_policies
         }
     }
     ROM_obtain_support_from_the_military = {
@@ -123,7 +119,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_obtained_support_from_the_military
-            custom_trigger_tooltip = ROM_obtained_support_from_the_military
         }
     }
     # Royalist
@@ -142,7 +137,7 @@ ROM_cementing_our_power = {
             }
         }
         activation = {
-            has_government = paternal_autocrat
+            has_completed_focus = ROM_eradicate_the_remaining_legionnaires
         }
         timeout_effect = {
             custom_effect_tooltip = ROM_eliminate_opposition_failed
@@ -159,7 +154,7 @@ ROM_cementing_our_power = {
         visible = { has_active_mission = ROM_eliminate_opposition_royalist }
         available = {
             custom_trigger_tooltip = {
-                tooltip = ROM_operation_pending
+                tooltip = ROM_operation_pending_NOT
                 NOT = { has_country_flag = ROM_operation_pending }
             }
         }
@@ -172,7 +167,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_arranged_public_appearances
-            custom_trigger_tooltip = ROM_arranged_public_appearances
         }
     }
     ROM_newspaper_propaganda = {
@@ -183,7 +177,7 @@ ROM_cementing_our_power = {
         visible = { has_active_mission = ROM_eliminate_opposition_royalist }
         available = {
             custom_trigger_tooltip = {
-                tooltip = ROM_operation_pending
+                tooltip = ROM_operation_pending_NOT
                 NOT = { has_country_flag = ROM_operation_pending }
             }
         }
@@ -196,7 +190,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_newspaper_propagandas
-            custom_trigger_tooltip = ROM_newspaper_propagandas
         }
     }
     ROM_infiltrate_the_legion = {
@@ -207,7 +200,7 @@ ROM_cementing_our_power = {
         visible = { has_active_mission = ROM_eliminate_opposition_royalist }
         available = {
             custom_trigger_tooltip = {
-                tooltip = ROM_operation_pending
+                tooltip = ROM_operation_pending_NOT
                 NOT = { has_country_flag = ROM_operation_pending }
             }
         }
@@ -220,7 +213,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_infiltrated_the_legion
-            custom_effect_tooltip = ROM_infiltrated_the_legion
         }
     }
     ROM_reaffirm_support_from_the_capitalists = {
@@ -230,8 +222,8 @@ ROM_cementing_our_power = {
         fire_only_once = yes
         visible = { has_active_mission = ROM_eliminate_opposition_royalist }
         available = {
-            custom_effect_tooltip = {
-                tooltip = ROM_operation_pending
+            custom_trigger_tooltip = {
+                tooltip = ROM_operation_pending_NOT
                 NOT = { has_country_flag = ROM_operation_pending }
             }
         }
@@ -244,7 +236,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_reaffirmed_support_from_the_capitalists
-            custom_effect_tooltip = ROM_reaffirmed_support_from_the_capitalists
         }
     }
 
@@ -262,8 +253,7 @@ ROM_cementing_our_power = {
             }
         }
         activation = {
-            #has_completed_focus = ROM_fight_reactionaries
-            has_government = libertarian_socialist
+            has_completed_focus = ROM_fight_reactionaries
         }
         days_mission_timeout = 120
         timeout_effect = {
@@ -286,7 +276,7 @@ ROM_cementing_our_power = {
         fire_only_once = yes
         visible = { has_active_mission = ROM_eliminate_opposition_socialist }
         available = {
-            custom_effect_tooltip = {
+            custom_trigger_tooltip = {
                 tooltip = ROM_operation_pending
                 NOT = { has_country_flag = ROM_operation_pending }
             }
@@ -300,7 +290,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_reduced_worker_quotas
-            custom_effect_tooltip = ROM_reduced_worker_quotas
         }
     }
     ROM_find_monarchist_conspirators = {
@@ -310,7 +299,7 @@ ROM_cementing_our_power = {
         fire_only_once = yes
         visible = { has_active_mission = ROM_eliminate_opposition_socialist }
         available = {
-            custom_effect_tooltip = {
+            custom_trigger_tooltip = {
                 tooltip = ROM_operation_pending
                 NOT = { has_country_flag = ROM_operation_pending }
             }
@@ -324,7 +313,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_found_monarchist_conspirators
-            custom_effect_tooltip = ROM_found_monarchist_conspirators
         }
     }
     ROM_sow_discontent_among_the_legion = {
@@ -334,7 +322,7 @@ ROM_cementing_our_power = {
         fire_only_once = yes
         visible = { has_active_mission = ROM_eliminate_opposition_socialist }
         available = {
-            custom_effect_tooltip = {
+            custom_trigger_tooltip = {
                 tooltip = ROM_operation_pending
                 NOT = { has_country_flag = ROM_operation_pending }
             }
@@ -348,7 +336,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_sowed_discontent_among_the_legion
-            custom_effect_tooltip = ROM_sowed_discontent_among_the_legion
         }
     }
     ROM_reshuffle_the_officers = {
@@ -358,7 +345,7 @@ ROM_cementing_our_power = {
         fire_only_once = yes
         visible = { has_active_mission = ROM_eliminate_opposition_socialist }
         available = {
-            custom_effect_tooltip = {
+            custom_trigger_tooltip = {
                 tooltip = ROM_operation_pending
                 NOT = { has_country_flag = ROM_operation_pending }
             }
@@ -372,7 +359,6 @@ ROM_cementing_our_power = {
         remove_effect = {
             clr_country_flag = ROM_operation_pending
             set_country_flag = ROM_reshuffled_the_officers
-            custom_effect_tooltip = ROM_reshuffled_the_officers
         }
     }
 }

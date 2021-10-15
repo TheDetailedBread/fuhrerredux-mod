@@ -38,6 +38,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_the_iron_guard_in_power }
         relative_position_id = ROM_the_iron_guard_in_power
+        completion_reward = {
+            custom_effect_tooltip = ROM_loyalty_to_the_conducator_tt
+        }
     }
 
     # Merge the Legion to the Army
@@ -50,6 +53,9 @@ focus_tree = {
         mutually_exclusive = { focus = ROM_the_legion_as_a_separate_force }
         prerequisite = { focus = ROM_loyalty_to_the_conducator }
         relative_position_id = ROM_loyalty_to_the_conducator
+        completion_reward = {
+            add_ideas = ROM_legion_army
+        }
     }
 
     # The Legion as a Separate Force
@@ -62,6 +68,9 @@ focus_tree = {
         mutually_exclusive = { focus = ROM_merge_the_legion_to_the_army }
         prerequisite = { focus = ROM_loyalty_to_the_conducator }
         relative_position_id = ROM_loyalty_to_the_conducator
+        completion_reward = {
+            add_ideas = ROM_legion_support
+        }
     }
 
     # Join the Stahlpakt
@@ -84,6 +93,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_join_the_stahlpakt }
         relative_position_id = ROM_join_the_stahlpakt
+        completion_reward = {
+            add_ideas = ROM_legion_secret_police_idea
+        }
     }
 
     # German Military Exercises
@@ -95,6 +107,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_join_the_stahlpakt }
         relative_position_id = ROM_join_the_stahlpakt
+        completion_reward = {
+            army_experience = 25
+        }
     }
 
     # National Legionary State
@@ -119,6 +134,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_the_iron_guard_in_power }
         relative_position_id = ROM_the_iron_guard_in_power
+        completion_reward = {
+            add_political_power = 150
+        }
     }
 
     # Criminalise Socialism
@@ -131,6 +149,20 @@ focus_tree = {
         prerequisite = { focus = ROM_guide_the_nation }
         prerequisite = { focus = ROM_their_assets_do_not_matter }
         relative_position_id = ROM_guide_the_nation
+        completion_reward = {
+            add_popularity = {
+                ideology = vanguardist
+                popularity = -0.15
+            }
+            add_popularity = {
+                ideology = collectivist
+                popularity = -0.15
+            }
+            add_popularity = {
+                ideology = libertarian_socialist
+                popularity = -0.15
+            }
+        }
     }
 
     # Legionary Industrialization
@@ -142,6 +174,13 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_the_iron_guard_in_power }
         relative_position_id = ROM_the_iron_guard_in_power
+        completion_reward = {
+            add_tech_bonus = {
+                category = industry
+                bonus = 0.75
+                uses = 1
+            }
+        }
     }
 
     # Legionary Education
@@ -153,6 +192,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_legionary_industrialization }
         relative_position_id = ROM_legionary_industrialization
+        completion_reward = {
+            add_research_slot = 1
+        }
     }
 
     # Alliance with the Church
@@ -165,6 +207,11 @@ focus_tree = {
         prerequisite = { focus = ROM_legionary_education }
         prerequisite = { focus = ROM_obligatory_camp_service }
         relative_position_id = ROM_legionary_education
+        completion_reward = {
+            increase_ruling_party_popularity_by_5 = yes
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
     }
 
     # Green Agrarian Roots
@@ -177,6 +224,9 @@ focus_tree = {
         prerequisite = { focus = ROM_their_assets_do_not_matter }
         prerequisite = { focus = ROM_green_welfare }
         relative_position_id = ROM_their_assets_do_not_matter
+        completion_reward = {
+            add_ideas = ROM_legionary_agriculture
+        }
     }
 
     # Their Assets do not Matter
@@ -188,6 +238,41 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_legionary_industrialization }
         relative_position_id = ROM_legionary_industrialization
+        completion_reward = {
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 0
+                        include_locked = yes
+                    }
+                }
+
+                add_extra_state_shared_building_slots = 2
+            }
+        }
     }
 
     # Green Welfare
@@ -200,6 +285,9 @@ focus_tree = {
         prerequisite = { focus = ROM_their_assets_do_not_matter }
         prerequisite = { focus = ROM_legionary_industrialization }
         relative_position_id = ROM_legionary_industrialization
+        completion_reward = {
+            add_ideas = ROM_legionary_welfare
+        }
     }
 
     # Obligatory Camp Service
@@ -211,6 +299,9 @@ focus_tree = {
         cost = 6
         prerequisite = { focus = ROM_legionary_industrialization }
         relative_position_id = ROM_legionary_industrialization
+        completion_reward = {
+            add_ideas = ROM_camp_service
+        }
     }
 
     # Legionary Culture Centres
@@ -223,5 +314,8 @@ focus_tree = {
         prerequisite = { focus = ROM_green_agriarian_roots }
         prerequisite = { focus = ROM_alliance_with_the_church }
         relative_position_id = ROM_green_agriarian_roots
+        completion_reward = {
+            add_ideas = ROM_culture_centres
+        }
     }
 }
