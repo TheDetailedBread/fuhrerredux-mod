@@ -56,7 +56,7 @@ focus_tree = {
         prerequisite = { focus = ROM_democratic_left_victorious }
         relative_position_id = ROM_democratic_left_victorious
         completion_reward = {
-            add_stability = -0.10
+            add_stability = -0.05
             random_owned_controlled_state = {
                 limit = {
                     is_core_of = ROM
@@ -292,7 +292,10 @@ focus_tree = {
         prerequisite = { focus = ROM_homes_for_the_people }
         relative_position_id = ROM_homes_for_the_people
         completion_reward = {
-            add_timed_idea = ROM_fortification_funding
+            add_timed_idea = {
+                idea = ROM_fortification_funding
+                days = 360
+            }
         }
     }
 
@@ -322,15 +325,7 @@ focus_tree = {
         prerequisite = { focus = ROM_cooperate_with_the_unions }
         relative_position_id = ROM_fund_the_fortifications
         completion_reward = {
-            unlock_decision_tooltip = ROM_join_entente
-            if = {
-                limit = {
-                    NOT = {
-                        ENG = { is_in_faction_with = FRA }
-                    }
-                }
-                unlock_decision_tooltip = ROM_join_ipa
-            }
+            custom_effect_tooltip = ROM_a_workers_paradise_tt
         }
     }
 
@@ -471,15 +466,7 @@ focus_tree = {
         prerequisite = { focus = ROM_promote_education }
         relative_position_id = ROM_privatize_the_oil_industry
         completion_reward = {
-            unlock_decision_tooltip = ROM_join_entente
-            if = {
-                limit = {
-                    NOT = {
-                        ENG = { is_in_faction_with = FRA }
-                    }
-                }
-                unlock_decision_tooltip = ROM_join_ipa
-            }
+            custom_effect_tooltip = ROM_business_is_booming_tt
         }
     }
 
@@ -629,7 +616,7 @@ focus_tree = {
     # Easier Credit
     focus = {
         id = ROM_easier_credit
-        icon = GFX_goal_generic_investments
+        icon = GFX_goal_gold_up
         x = 1
         y = 1
         cost = 6
@@ -1002,15 +989,7 @@ focus_tree = {
         prerequisite = { focus = ROM_criminalise_radicalism }
         relative_position_id = ROM_worker_subsidies
         completion_reward = {
-            unlock_decision_tooltip = ROM_join_entente
-            if = {
-                limit = {
-                    NOT = {
-                        ENG = { is_in_faction_with = FRA }
-                    }
-                }
-                unlock_decision_tooltip = ROM_join_ipa
-            }
+            custom_effect_tooltip = ROM_stable_democracy_tt
         }
     }
 }
