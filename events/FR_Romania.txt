@@ -225,7 +225,7 @@ country_event = { # London Stock Market Crash
 	}
 
 	immediate = {
-		hidden_effect = { add_ideas = ROM_black_wednesday }
+		hidden_effect = { add_ideas = ROM_black_wednesday_0 }
 		set_country_flag = ROM_black_wednesday
 	}
 
@@ -840,6 +840,7 @@ country_event = { # 1937 General Elections
 		}
 		trigger = {
 			NOT = { has_country_flag = ROM_iron_guard_banned }
+			NOT = { has_country_flag = ROM_banned_radicals }
 		}
 		if = {
 			limit = { has_idea = ROM_the_iron_guard }
@@ -871,6 +872,7 @@ country_event = { # 1937 General Elections
 		ai_chance = { factor = 0 } # Easter Egg
 		trigger = {
 			has_country_flag = ROM_iron_guard_banned
+			NOT = { has_country_flag = ROM_banned_radicals }
 		}
 		set_politics = {
 			ruling_party = national_populist
@@ -1185,6 +1187,7 @@ country_event = { # The King's and Romania's Safety
 	option = { # The King orders the banning of radical parties
 		name = romania.23.b
 		add_stability = 0.15
+		set_country_flag = ROM_banned_radicals
 		add_popularity = {
 			ideology = vanguardist
 			popularity = -0.15

@@ -316,8 +316,13 @@ focus_tree = {
         prerequisite = { focus = ROM_the_radical_left_government }
         relative_position_id = ROM_the_radical_left_government
         completion_reward = {
+            set_cosmetic_tag = ROM_republic
+            swap_ideas = {
+                remove_idea = constitutional_monarchy
+                add_idea = workers_republic
+            }
             hidden_effect = {
-                set_cosmetic_tag = ROM_republic
+                
                 kill_ideology_leader = vanguardist
                 kill_ideology_leader = collectivist
                 kill_ideology_leader = libertarian_socialist
