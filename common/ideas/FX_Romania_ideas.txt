@@ -1158,9 +1158,6 @@ ideas = {
 
 		malaxa = {
 			allowed = { tag = ROM }
-			available = {
-				has_completed_focus = ROM_support_malaxa
-			}
 			cost = 100
 			traits = { industrial_manufacturer }
 			modifier = {
@@ -1241,7 +1238,6 @@ ideas = {
 		santierul_naval_constanta = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea santierul_naval_constanta"}
 			allowed = { tag = ROM }
-			available = { has_completed_focus = ROM_equip_galati }
 			traits = { small_ship_producer_offense_0 }
 			research_bonus = {
 				naval_equipment = 0.05
@@ -1249,7 +1245,6 @@ ideas = {
 		}
 		industria_aeronautica_romana = {
 			allowed = { tag = ROM }
-			available = { has_completed_focus = ROM_found_iar }
 			traits = { fighter_producer_offense_1 }
 			research_bonus = {
 				air_equipment = 0.05
