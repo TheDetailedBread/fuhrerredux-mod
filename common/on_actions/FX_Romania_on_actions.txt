@@ -1,0 +1,10 @@
+on_actions = {
+    on_new_term_election = {
+        effect = {
+            if = {
+                limit = { tag = ROM }
+                country_event = romania.17 # 1937 Elections
+            }
+        }
+    }
+}
