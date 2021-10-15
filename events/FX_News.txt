@@ -379,3 +379,168 @@ news_event = { # Coronation of Michael I
         name = news.20.a
     }
 }
+
+news_event = { # Coronation of Nicholas I
+    id = news.21
+    title = news.21.t
+    desc = news.21.d
+    picture = GFX_news_event_ENG_coronation
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.21.a
+    }
+}
+
+news_event = { # Coronation of Alexander I
+    id = news.22
+    title = news.22.t
+    desc = news.22.d
+    picture = GFX_news_event_ENG_coronation
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.22.a
+    }
+}
+
+news_event = { # PNL Wins Romanian Elections
+    id = news.23
+    title = news.23.t
+    desc = news.23.d
+    picture = GFX_news_event_election_vote
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.23.a
+    }
+}
+
+news_event = { # PSDR Wins Romanian Elections
+    id = news.24
+    title = news.24.t
+    desc = news.24.d
+    picture = GFX_news_event_election_vote
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.24.a
+    }
+}
+
+news_event = { # PNT Wins Romanian Elections
+    id = news.25
+    title = news.25.t
+    desc = news.25.d
+    picture = GFX_news_event_election_vote
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.25.a
+    }
+}
+
+news_event = { # Iron Guard Wins Romanian Elections
+    id = news.26
+    title = news.26.t
+    desc = news.26.d
+    picture = GFX_news_event_election_vote
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.26.a
+    }
+}
+
+news_event = { # PNC Wins Romanian Elections
+    id = news.27
+    title = news.27.t
+    desc = news.27.d
+    picture = GFX_news_event_election_vote
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.27.a
+    }
+}
+
+news_event = { # Iron Guard Assumes Control of Romania
+    id = news.28
+    title = news.28.t
+    desc = news.28.d
+    picture = GFX_news_event_061
+    major = yes
+    is_triggered_only = yes
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.28.a
+    }
+}
+
+news_event = { # Civil War in Romania
+    id = news.29
+    title = news.29.t
+    picture = GFX_news_event_056
+    major = yes
+    is_triggered_only = yes
+    
+    desc = {
+        text = news.29.d1
+        trigger = {
+            ROR = { has_government = valkist }
+        }
+    }
+    desc = {
+        text = news.29.d2
+        trigger = {
+            ROR = { has_government = paternal_autocrat }
+        }
+    }
+
+    show_major = {
+        NOT = { tag = ROM }
+    }
+
+    option = {
+        name = news.28.a
+    }
+}

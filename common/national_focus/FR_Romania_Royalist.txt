@@ -10,4 +10,212 @@ focus_tree = {
     shared_focus = ROM_the_romanian_army
     shared_focus = ROM_the_romanian_navy
     shared_focus = ROM_the_romanian_air_force
+
+    # Direct Rule from Bucharest
+    focus = {
+        id = ROM_direct_rule_from_bucharest_focus
+        icon = GFX_goal_ideology_paternal_autocrat
+        x = 20
+        y = 0
+        cost = 0
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = unlocked_later
+                always = no
+            }
+        }
+        bypass = {
+            has_country_flag = ROM_direct_rule_from_bucharest
+        }
+    }
+
+    # The Siguranta
+    focus = {
+        id = ROM_the_siguranta
+        icon = GFX_goal_secret_agents
+        x = -2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_direct_rule_from_bucharest_focus }
+        relative_position_id = ROM_direct_rule_from_bucharest_focus
+    }
+
+    # Eradicate the Remaining Legionnaires
+    focus = {
+        id = ROM_eradicate_the_remaining_legionnaires
+        icon = GFX_goal_generic_political_pressure
+        x = -2
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_siguranta }
+        relative_position_id = ROM_the_siguranta
+    }
+
+    # Arrest Socialist Leaders
+    focus = {
+        id = ROM_arrest_socialist_leaders
+        icon = GFX_goal_anti_comintern_pact
+        x = 0
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_the_siguranta }
+        relative_position_id = ROM_the_siguranta
+    }
+
+    # Royal Philantrophy
+    focus = {
+        id = ROM_royal_philantrophy_focus
+        icon = GFX_focus_rom_royal_dictatorship
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_eradicate_the_remaining_legionnaires }
+        prerequisite = { focus = ROM_arrest_socialist_leaders }
+        relative_position_id = ROM_eradicate_the_remaining_legionnaires
+    }
+
+    # Corporatism
+    focus = {
+        id = ROM_corporatism
+        icon = GFX_goal_factory_complex
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_direct_rule_from_bucharest_focus }
+        relative_position_id = ROM_direct_rule_from_bucharest_focus
+    }
+
+    # Reshaping the Country
+    focus = {
+        id = ROM_reshaping_the_country
+        icon = GFX_goal_generic_construct_infrastructure
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_corporatism }
+        relative_position_id = ROM_corporatism
+    }
+
+    # Electrical Ventures
+    focus = {
+        id = ROM_electrical_ventures
+        icon = GFX_goal_generic_lightbulb
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_corporatism }
+        relative_position_id = ROM_corporatism
+    }
+
+    # Corporate Subsidies
+    focus = {
+        id = ROM_corporate_subsidies
+        icon = GFX_goal_bag_of_money
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_reshaping_the_country }
+        relative_position_id = ROM_reshaping_the_country
+    }
+
+    # Government-Private Partnerships
+    focus = {
+        id = ROM_government_private_partnerships
+        icon = GFX_DAH_Topke
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_reshaping_the_country }
+        relative_position_id = ROM_reshaping_the_country
+    }
+
+    # Union Compromise
+    focus = {
+        id = ROM_union_compromise
+        icon = GFX_goal_production
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_reshaping_the_country }
+        relative_position_id = ROM_reshaping_the_country
+    }
+
+    # Cult of Personality
+    focus = {
+        id = ROM_cult_of_personality
+        icon = GFX_focus_generic_concessions
+        x = 3
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_direct_rule_from_bucharest_focus }
+        relative_position_id = ROM_direct_rule_from_bucharest_focus
+    }
+
+    # Enlightened Sovereign
+    focus = {
+        id = ROM_enlightened_sovereign
+        icon = GFX_goal_monarchism
+        x = 0
+        y = 2
+        cost = 6
+        prerequisite = { focus = ROM_cult_of_personality }
+        relative_position_id = ROM_cult_of_personality
+    }
+
+    # Royal Research Councils
+    focus = {
+        id = ROM_royal_research_councils
+        icon = GFX_goal_great_science
+        x = -1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_enlightened_sovereign }
+        relative_position_id = ROM_enlightened_sovereign
+    }
+
+    # Empower the Camarilla
+    focus = {
+        id = ROM_empower_the_camarilla
+        icon = GFX_focus_generic_home_defense
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_enlightened_sovereign }
+        relative_position_id = ROM_enlightened_sovereign
+    }
+
+    # Foreign Alignment
+    focus = {
+        id = ROM_foreign_alignment
+        icon = GFX_goal_generic_neutrality_focus
+        x = 5
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_direct_rule_from_bucharest_focus }
+        relative_position_id = ROM_direct_rule_from_bucharest_focus
+    }
+
+    # Choose the Entente
+    focus = {
+        id = ROM_choose_the_entente
+        icon = GFX_goal_natfrance
+        x = -1
+        y = 1
+        cost = 6
+        mutually_exclusive = { focus = ROM_favour_the_stahlpakt }
+        prerequisite = { focus = ROM_foreign_alignment }
+        relative_position_id = ROM_foreign_alignment
+    }
+
+    # Favour the Stahlpakt
+    focus = {
+        id = ROM_favour_the_stahlpakt
+        icon = GFX_goal_germany
+        x = 1
+        y = 1
+        cost = 6
+        mutually_exclusive = { focus = ROM_choose_the_entente }
+        prerequisite = { focus = ROM_foreign_alignment }
+        relative_position_id = ROM_foreign_alignment
+    }
 }
