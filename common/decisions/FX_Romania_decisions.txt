@@ -4,14 +4,10 @@ foreign_politics = {
         cost = 20
         days_remove = 4
         target_trigger = {
-            FROM = {
-                OR = {
-                    tag = FRA
-                    AND = {
-                        tag = ENG
-                        NOT = { is_in_faction_with = FRA }
-                    }
-                }
+            FROM = { 
+                tag = FRA
+                tag = GER
+                tag = SOV
             }
         }
         allowed = { original_tag = ROM }
@@ -20,11 +16,16 @@ foreign_politics = {
                 has_completed_focus = ROM_a_workers_paradise
                 has_completed_focus = ROM_business_is_booming
                 has_completed_focus = ROM_stable_democracy
+                has_completed_focus = ROM_join_the_internationale
+                has_completed_focus = ROM_join_the_stahlpakt
+                has_completed_focus = ROM_choose_the_entente
+                has_completed_focus = ROM_favour_the_stahlpakt
                 AND = {
-                    GER = {
-                        has_war_with = FRA
-                        has_war_with = ROOT
+                    FROM = {
+                        tag = FRA
+                        has_war_with = GER
                     }
+                    has_war_with = GER
                 }
             }
         }
@@ -33,7 +34,53 @@ foreign_politics = {
             is_subject = no
         }
         remove_effect = {
-            
+            FROM = {
+                country_event = { id = romania.38 days = 1 }
+            }
+        }
+    }
+}
+
+ROM_reclaimation_of_old_territories = {
+    ROM_attack_from = {
+        days_remove = 14
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = GRE
+                }
+            }
+        }
+        visible = {
+            OR = {
+                AND = {
+                    FROM = { # If Greece rejects the Athens Conference
+                        tag = GRE
+                        has_country_flag = ROM_failed_conference
+                    }
+                }
+                AND = {
+                    FROM = {
+                        NOT = { tag = GRE }
+                    }
+                    has_completed_focus = ROM_reclaim_the_territories
+                }
+                is_neighbor_of = FROM
+                NOT = { is_in_faction_with = FROM }
+            }
+        }
+        available = {
+            has_war = no
+            is_subject = no
+        }
+        complete_effect = {
+            # WIP event to from
+        }
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = annex_everything
+            }
         }
     }
 }

@@ -892,7 +892,7 @@ country_event = { # 1937 General Elections
 				news_event = { id = news.27 hours = 8 }
 			}
 			set_country_flag = ROM_natpop_romania
-			country_event = { id = romania.26 days = 30 }
+			load_focus_tree = FR_Romania_Nationalist
 		}
 	}
 }
@@ -1414,7 +1414,6 @@ country_event = { # The Monarch
 	title = romania.26.t
 	desc = romania.26.d
 	picture = GFX_report_event_generic_sign_treaty3
-	is_triggered_only = yes
 
 	trigger = {
 		tag = ROM
@@ -1428,6 +1427,10 @@ country_event = { # The Monarch
 				has_government = valkist
 			}
 		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
 	}
 
 	option = {
@@ -1806,6 +1809,230 @@ country_event = { # Civil War Over
 		every_owned_state = {
 			limit = { is_core_of = ROR }
 			remove_core_of = ROR
+		}
+	}
+}
+
+country_event = { # Join Faction
+	id = romania.38
+	title = romania.38.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	trigger = {
+		is_faction_leader = yes
+	}
+
+	desc = {
+		text = romania.38.d.entente
+		trigger = { tag = FRA }
+	}
+	desc = {
+		text = romania.38.d.stahlpakt
+		trigger = { tag = GER }
+	}
+	desc = {
+		text = romania.38.d.internationale
+		trigger = { tag = SOV }
+	}
+
+	option = {
+		name = romania.38.a
+		trigger = { tag = FRA }
+		add_political_power = 20
+
+		FROM = { country_event = { id = romania.39 days = 1 } }
+	}
+	option = {
+		name = romania.38.b
+		trigger = { tag = FRA }
+		add_political_power = -20
+
+		FROM = { country_event = { id = romania.40 days = 1 } }
+	}
+	option = {
+		name = romania.38.c
+		trigger = { tag = GER }
+		add_political_power = 20
+
+		FROM = { country_event = { id = romania.39 days = 1 } }
+	}
+	option = {
+		name = romania.38.e
+		trigger = { tag = GER }
+		add_political_power = -20
+		
+		FROM = { country_event = { id = romania.40 days = 1 } }
+	}
+	option = {
+		name = romania.38.f
+		trigger = { tag = SOV }
+		add_political_power = 20
+
+		FROM = { country_event = { id = romania.39 days = 1 } }
+	}
+	option = {
+		name = romania.38.g
+		trigger = { tag = SOV }
+		add_political_power = -20
+
+		FROM = { country_event = { id = romania.40 days = 1 } }
+	}
+}
+
+country_event = { # Accepted Faction Join
+	id = romania.39
+	title = romania.39.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	desc = {
+		text = romania.39.d.entente
+		trigger = { tag = FRA }
+	}
+	desc = {
+		text = romania.39.d.stahlpakt
+		trigger = { tag = GER }
+	}
+	desc = {
+		text = romania.39.d.internationale
+		trigger = { tag = SOV }
+	}
+
+	option = {
+		name = romania.39.a
+		trigger = { tag = FRA }
+
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+	option = {
+		name = romania.39.b
+		trigger = { tag = GER }
+
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+	option = {
+		name = romania.39.c
+		trigger = { tag = SOV }
+
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+country_event = { # Rejected Faction Join
+	id = romania.40
+	title = romania.40.t
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	desc = {
+		text = romania.40.d.entente
+		trigger = { tag = FRA }
+	}
+	desc = {
+		text = romania.40.d.stahlpakt
+		trigger = { tag = GER }
+	}
+	desc = {
+		text = romania.40.d.internationale
+		trigger = { tag = SOV }
+	}
+
+	option = {
+		name = romania.40.a
+		trigger = { tag = FRA }
+	}
+	option = {
+		name = romania.40.b
+		trigger = { tag = GER }
+	}
+	option = {
+		name = romania.40.c
+		trigger = { tag = SOV }
+	}
+}
+
+country_event = { # The Athens Conference
+	id = romania.41
+	title = romania.41.t
+	desc = romania.41.d
+	picture = GFX_report_event_romania_parliament
+	is_triggered_only = yes
+
+	option = { # Let's do it
+		name = romania.41.a
+		ROM = {
+			annex_country = {
+				target = PREV
+				transfer_troops = yes
+			}
+		}
+	}
+	option = { # We have other ideas
+		name = romania.41.b
+		FROM = {
+			country_event = { id = romania.42 hours = 8 }
+		}
+	}
+	option = { # No
+		name = romania.41.c
+		add_political_power = -50
+		set_country_flag = ROM_failed_conference
+	}
+}
+
+country_event = { # Reverse Uno Card
+	id = romania.42
+	title = romania.42.t
+	desc = romania.42.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	option = { # Romania is annexed
+		name = romania.42.a
+		GRE = {
+			annex_country = {
+				target = PREV
+				transfer_troops = yes
+			}
+		}
+	}
+	option = { # Romania says no
+		name = romania.42.b
+		country_event = { id = romania.43 hours = 0 }
+	}
+	option = { # Enough of this, we'll strike first
+		name = romania.42.c
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { # Greece: Romania said no
+	id = romania.43
+	title = romania.43.t
+	desc = romania.43.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	option = { # Shame
+		name = romania.43.a
+		add_political_power = -100
+		set_country_flag = ROM_failed_conference
+	}
+	option = { # We'll strike first
+		name = romania.43.b
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
 		}
 	}
 }

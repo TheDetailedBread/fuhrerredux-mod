@@ -80,8 +80,13 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
+        available = { is_subject = no }
+        bypass = { is_in_faction = yes }
         prerequisite = { focus = ROM_loyalty_to_the_conducator }
         relative_position_id = ROM_loyalty_to_the_conducator
+        completion_reward = {
+            custom_effect_tooltip = ROM_join_the_stahlpakt_tt
+        }
     }
 
     # Legionary Secret Police
