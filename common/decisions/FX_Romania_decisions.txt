@@ -47,24 +47,24 @@ ROM_reclaimation_of_old_territories = {
         target_trigger = {
             FROM = {
                 OR = {
-                    tag = GRE
+                    AND = {
+                        tag = GRE
+                        GRE = { has_country_flag = ROM_failed_conference }
+                    }
+                    AND = {
+                        OR = {
+                            tag = SER
+                            tag = BUL
+                            tag = TUR
+                        }
+                        NOT = { tag = GRE }
+                        has_completed_focus = ROM_reclaim_the_territories
+                    }
                 }
             }
         }
         visible = {
             OR = {
-                AND = {
-                    FROM = { # If Greece rejects the Athens Conference
-                        tag = GRE
-                        has_country_flag = ROM_failed_conference
-                    }
-                }
-                AND = {
-                    FROM = {
-                        NOT = { tag = GRE }
-                    }
-                    has_completed_focus = ROM_reclaim_the_territories
-                }
                 is_neighbor_of = FROM
                 NOT = { is_in_faction_with = FROM }
             }

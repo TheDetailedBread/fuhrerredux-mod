@@ -1167,6 +1167,9 @@ country_event = { # The King's and Romania's Safety
 				has_country_flag = ROM_autocrat_behavior
 			}
 		}
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_social_liberal
+		clr_country_flag = coalition_libertarian_socialist
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -1281,6 +1284,8 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+			load_focus_tree = FR_Romania_Iron_Guard
+			set_country_flag = ROM_valkist_romania
 			random_other_country = {
 				news_event = { id = news.28 hours = 8 }
 			}
@@ -1341,6 +1346,7 @@ country_event = { # Iron Guard Coups the Government!
 				has_country_flag = ROM_progressive_coalition
 				check_variable = { rom_conservative_strength > rom_progressive_strength }
 			}
+			clr_country_flag = coalition_social_liberal
 			set_politics = {
 				ruling_party = social_conservative
 				elections_allowed = yes
@@ -1353,6 +1359,11 @@ country_event = { # Iron Guard Coups the Government!
 				ROM_Gheorghe_Mironescu_eco_sco
 				ROM_Alexandru_Vaida_Voevod_sec_sco
 			}
+			clear_variable = rom_conservative_strength
+			clear_variable = rom_progressive_strength
+			clr_country_flag = ROM_conservative_coalition
+			clr_country_flag = ROM_progressive_coalition
+			set_country_flag = ROM_conservative_pnl
 		}
 		else_if = {
 			limit = {
@@ -1360,6 +1371,7 @@ country_event = { # Iron Guard Coups the Government!
 				has_country_flag = ROM_progressive_coalition
 				check_variable = { rom_progressive_strength > rom_conservative_strength }
 			}
+			clr_country_flag = coalition_social_conservative
 			set_politics = {
 				ruling_party = social_liberal
 				elections_allowed = yes
@@ -1372,10 +1384,19 @@ country_event = { # Iron Guard Coups the Government!
 				ROM_Gheorghe_Tatarescu_eco_mli
 				ROM_Victor_Iamandi_sec_mli
 			}
+			clear_variable = rom_conservative_strength
+			clear_variable = rom_progressive_strength
+			clr_country_flag = ROM_conservative_coalition
+			clr_country_flag = ROM_progressive_coalition
+			set_country_flag = ROM_progressive_pnl
 		}
 		else = {
 			remove_ideas_with_trait = head_of_government
 			add_ideas = ROM_Constantin_Angelescu_hog_mli
+			clear_variable = rom_conservative_strength
+			clear_variable = rom_progressive_strength
+			clr_country_flag = ROM_conservative_coalition
+			clr_country_flag = ROM_progressive_coalition
 		}
 	}
 	option = { # The Coup Succeeds
@@ -1387,6 +1408,8 @@ country_event = { # Iron Guard Coups the Government!
 				has_country_flag = ROM_valkist_behavior
 			}
 		}
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_social_liberal
 		set_politics = {
 			ruling_party = valkist
 			elections_allowed = no
@@ -1883,21 +1906,9 @@ country_event = { # Join Faction
 country_event = { # Accepted Faction Join
 	id = romania.39
 	title = romania.39.t
+	desc = romania.39.d
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
-
-	desc = {
-		text = romania.39.d.entente
-		trigger = { tag = FRA }
-	}
-	desc = {
-		text = romania.39.d.stahlpakt
-		trigger = { tag = GER }
-	}
-	desc = {
-		text = romania.39.d.internationale
-		trigger = { tag = SOV }
-	}
 
 	option = {
 		name = romania.39.a
@@ -1928,33 +1939,12 @@ country_event = { # Accepted Faction Join
 country_event = { # Rejected Faction Join
 	id = romania.40
 	title = romania.40.t
+	desc = romania.40.d
 	picture = GFX_report_event_generic_read_write
 	is_triggered_only = yes
 
-	desc = {
-		text = romania.40.d.entente
-		trigger = { tag = FRA }
-	}
-	desc = {
-		text = romania.40.d.stahlpakt
-		trigger = { tag = GER }
-	}
-	desc = {
-		text = romania.40.d.internationale
-		trigger = { tag = SOV }
-	}
-
 	option = {
 		name = romania.40.a
-		trigger = { tag = FRA }
-	}
-	option = {
-		name = romania.40.b
-		trigger = { tag = GER }
-	}
-	option = {
-		name = romania.40.c
-		trigger = { tag = SOV }
 	}
 }
 
@@ -2034,5 +2024,114 @@ country_event = { # Greece: Romania said no
 			target = FROM
 			type = annex_everything
 		}
+	}
+}
+
+country_event = { # 1941 Elections
+	id = romania.44
+	title = romania.44.t
+	desc = romania.44.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		date > 1941.1.1
+		date < 1942.1.1
+		has_elections = yes
+		NOT = { has_country_flag = ROM_had_1941_elections }
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = ROM_leftist_coalition
+			clr_country_flag = coalition_social_conservative
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_libertarian_socialist
+		}
+	}
+
+	option = { # PNT
+		name = romania.44.a
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+		}
+		increase_ruling_party_popularity_by_15 = yes
+		remove_every_minister = yes
+		add_ideas = {
+			ROM_Armand_Calinescu_hog_ade
+			ROM_Grigore_Niculescu_Buzesti_for_ade
+			ROM_Gheorghe_Potopeanu_eco_pau
+			ROM_Aurel_Aldea_sec_sco
+		}
+	}
+	option = { # PNL
+		name = romania.44.b
+		if = {
+			limit = { has_country_flag = ROM_conservative_pnl }
+			set_politics = {
+				ruling_party = social_conservative
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ideas = {
+				ROM_Alexandru_Vaida_Voevod_hog_sco
+				ROM_Savel_Radulescu_for_mli
+				ROM_Mitita_Constantinescu_eco_mli
+				ROM_Mihail_Ghelmegeanu_sec_sco
+			}
+			set_country_flag = ROM_had_1941_elections
+		}
+		else_if = {
+			limit = { has_country_flag = ROM_progressive_pnl }
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ideas = {
+				ROM_Iuliu_Maniu_hog_sli
+				ROM_Grigore_Gafencu_for_sli
+				ROM_Gheorghe_Tatarescu_eco_mli
+				ROM_Richard_Franasovici_sec_mli
+			}
+			set_country_flag = ROM_had_1941_elections
+		}
+		else = {
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ides = {
+				ROM_Constantin_Angelescu_hog_mli
+				ROM_Grigore_Gafencu_for_sli
+				ROM_Victor_Slavescu_eco_mli
+				ROM_Mihail_Ghelmegeanu_sec_sco
+			}
+			set_country_flag = ROM_had_1941_elections
+			set_country_flag = coalition_social_liberal
+			set_country_flag = coalition_social_conservative
+		}
+		
+	}
+	option = { # PSDR
+		name = romania.44.c
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+		remove_every_minister = yes
+		add_ideas = {
+			ROM_Virgil_Madgearu_hog_sde
+			ROM_Grigore_Gafencu_for_sli
+			ROM_Ion_Mihalache_eco_sde
+			ROM_Pantelimon_Halippa_sec_sde
+		}
+		set_country_flag = ROM_had_1941_elections
 	}
 }
