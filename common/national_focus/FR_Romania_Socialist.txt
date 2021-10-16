@@ -375,8 +375,13 @@ focus_tree = {
         x = -1
         y = 1
         cost = 6
+        available = { is_subject = no }
+        bypass = { is_in_faction = yes }
         prerequisite = { focus = ROM_fight_reactionaries }
         prerequisite = { focus = ROM_establish_the_securitate }
         relative_position_id = ROM_fight_reactionaries
+        completion_reward = {
+            custom_effect_tooltip = ROM_join_the_internationale_tt
+        }
     }
 }
