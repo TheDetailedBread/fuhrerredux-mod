@@ -34,6 +34,7 @@ country_event = { # The New Regent
 		set_country_flag = ROM_status_quo_regent
 		hidden_effect = {
 			country_event = { id = romania.29 days = 100 }
+			country_event = { id = romania.50 days = 340 }
 		}
 	}
 	option = { # Try courting the PNL
@@ -63,6 +64,7 @@ country_event = { # The New Regent
 		}
 		hidden_effect = {
 			country_event = { id = romania.8 days = 140 }
+			country_event = { id = romania.50 days = 340 }
 		}
 	}
 	option = { # Maybe a coalition with PSDR won't hurt
@@ -88,6 +90,7 @@ country_event = { # The New Regent
 		}
 		hidden_effect = {
 			country_event = { id = romania.7 days = 140 }
+			country_event = { id = romania.50 days = 340 }
 		}
 	}
 }
@@ -1777,10 +1780,10 @@ country_event = { # Royalists Launches Revolt
 				}
 				remove_every_minister = yes
 				add_ideas = {
-					GEN_hog_pau
-					GEN_for_pau
-					GEN_eco_pau
-					GEN_sec_pau
+					ROM_Alexandru_Cantacuzino_hog_pau
+					ROM_Grigore_Niculescu_Buzesti_for_ade
+					ROM_Gheorghe_Potopeanu_eco_pau
+					ROM_Horia_Sima_sec_npo
 				}
 
 				add_state_core = 76
@@ -2066,6 +2069,9 @@ country_event = { # 1941 Elections
 			ROM_Gheorghe_Potopeanu_eco_pau
 			ROM_Aurel_Aldea_sec_sco
 		}
+		hidden_effect = {
+			country_event = { id = romania.49 days = 5 }
+		}
 	}
 	option = { # PNL
 		name = romania.44.b
@@ -2118,7 +2124,9 @@ country_event = { # 1941 Elections
 			set_country_flag = coalition_social_liberal
 			set_country_flag = coalition_social_conservative
 		}
-		
+		hidden_effect = {
+			country_event = { id = romania.49 days = 5 }
+		}
 	}
 	option = { # PSDR
 		name = romania.44.c
@@ -2134,13 +2142,16 @@ country_event = { # 1941 Elections
 			ROM_Pantelimon_Halippa_sec_sde
 		}
 		set_country_flag = ROM_had_1941_elections
+		hidden_effect = {
+			country_event = { id = romania.49 days = 5 }
+		}
 	}
 }
 
 country_event = { # 1945 Elections
 	id = romania.45
-	title = romania.44.t
-	desc = romania.44.d
+	title = romania.45.t
+	desc = romania.45.d
 	picture = GFX_report_event_election_vote
 	is_triggered_only = yes
 
@@ -2162,7 +2173,7 @@ country_event = { # 1945 Elections
 	}
 
 	option = { # PNT
-		name = romania.44.a
+		name = romania.45.a
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = yes
@@ -2178,7 +2189,7 @@ country_event = { # 1945 Elections
 		}
 	}
 	option = { # PNL
-		name = romania.44.b
+		name = romania.45.b
 		if = {
 			limit = { has_country_flag = ROM_conservative_pnl }
 			set_politics = {
@@ -2231,7 +2242,7 @@ country_event = { # 1945 Elections
 		
 	}
 	option = { # PSDR
-		name = romania.44.c
+		name = romania.45.c
 		set_politics = {
 			ruling_party = social_democrat
 			elections_allowed = yes
@@ -2249,8 +2260,8 @@ country_event = { # 1945 Elections
 
 country_event = { # 1949 Elections
 	id = romania.46
-	title = romania.44.t
-	desc = romania.44.d
+	title = romania.46.t
+	desc = romania.46.d
 	picture = GFX_report_event_election_vote
 	is_triggered_only = yes
 
@@ -2272,7 +2283,7 @@ country_event = { # 1949 Elections
 	}
 
 	option = { # PNT
-		name = romania.44.a
+		name = romania.46.a
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = yes
@@ -2288,7 +2299,7 @@ country_event = { # 1949 Elections
 		}
 	}
 	option = { # PNL
-		name = romania.44.b
+		name = romania.46.b
 		if = {
 			limit = { has_country_flag = ROM_conservative_pnl }
 			set_politics = {
@@ -2341,12 +2352,13 @@ country_event = { # 1949 Elections
 		
 	}
 	option = { # PSDR
-		name = romania.44.c
+		name = romania.46.c
 		set_politics = {
 			ruling_party = social_democrat
 			elections_allowed = yes
 		}
 		remove_every_minister = yes
+		increase_ruling_party_popularity_by_15 = yes
 		add_ideas = {
 			ROM_Virgil_Madgearu_hog_sde
 			ROM_Grigore_Gafencu_for_sli
@@ -2354,5 +2366,330 @@ country_event = { # 1949 Elections
 			ROM_Pantelimon_Halippa_sec_sde
 		}
 		set_country_flag = ROM_had_1949_elections
+	}
+}
+
+country_event = { # 1953 Elections
+	id = romania.47
+	title = romania.47.t
+	desc = romania.47.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		date > 1953.1.1
+		date < 1954.1.1
+		has_elections = yes
+		NOT = { has_country_flag = ROM_had_1953_elections }
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = ROM_leftist_coalition
+			clr_country_flag = coalition_social_conservative
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_libertarian_socialist
+		}
+	}
+
+	option = { # PNT
+		name = romania.47.a
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+		}
+		increase_ruling_party_popularity_by_15 = yes
+		remove_every_minister = yes
+		set_country_flag = ROM_had_1953_elections
+		add_ideas = {
+			ROM_Armand_Calinescu_hog_ade
+			ROM_Grigore_Niculescu_Buzesti_for_ade
+			ROM_Gheorghe_Potopeanu_eco_pau
+			ROM_Aurel_Aldea_sec_sco
+		}
+	}
+	option = { # PNL
+		name = romania.47.b
+		if = {
+			limit = { has_country_flag = ROM_conservative_pnl }
+			set_politics = {
+				ruling_party = social_conservative
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ideas = {
+				ROM_Alexandru_Vaida_Voevod_hog_sco
+				ROM_Savel_Radulescu_for_mli
+				ROM_Mitita_Constantinescu_eco_mli
+				ROM_Mihail_Ghelmegeanu_sec_sco
+			}
+			set_country_flag = ROM_had_1953_elections
+		}
+		else_if = {
+			limit = { has_country_flag = ROM_progressive_pnl }
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ideas = {
+				ROM_Iuliu_Maniu_hog_sli
+				ROM_Grigore_Gafencu_for_sli
+				ROM_Gheorghe_Tatarescu_eco_mli
+				ROM_Richard_Franasovici_sec_mli
+			}
+			set_country_flag = ROM_had_1953_elections
+		}
+		else = {
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ides = {
+				ROM_Constantin_Angelescu_hog_mli
+				ROM_Grigore_Gafencu_for_sli
+				ROM_Victor_Slavescu_eco_mli
+				ROM_Mihail_Ghelmegeanu_sec_sco
+			}
+			set_country_flag = ROM_had_1953_elections
+			set_country_flag = coalition_social_liberal
+			set_country_flag = coalition_social_conservative
+		}
+		
+	}
+	option = { # PSDR
+		name = romania.47.c
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+		increase_ruling_party_popularity_by_15 = yes
+		remove_every_minister = yes
+		add_ideas = {
+			ROM_Virgil_Madgearu_hog_sde
+			ROM_Grigore_Gafencu_for_sli
+			ROM_Ion_Mihalache_eco_sde
+			ROM_Pantelimon_Halippa_sec_sde
+		}
+		set_country_flag = ROM_had_1953_elections
+	}
+}
+
+country_event = { # 1957 Elections
+	id = romania.48
+	title = romania.48.t
+	desc = romania.48.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		date > 1957.1.1
+		date < 1958.1.1
+		has_elections = yes
+		NOT = { has_country_flag = ROM_had_1957_elections }
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = ROM_leftist_coalition
+			clr_country_flag = coalition_social_conservative
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_libertarian_socialist
+		}
+	}
+
+	option = { # PNT
+		name = romania.48.a
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+		}
+		increase_ruling_party_popularity_by_15 = yes
+		remove_every_minister = yes
+		set_country_flag = ROM_had_1957_elections
+		add_ideas = {
+			ROM_Armand_Calinescu_hog_ade
+			ROM_Grigore_Niculescu_Buzesti_for_ade
+			ROM_Gheorghe_Potopeanu_eco_pau
+			ROM_Aurel_Aldea_sec_sco
+		}
+	}
+	option = { # PNL
+		name = romania.48.b
+		if = {
+			limit = { has_country_flag = ROM_conservative_pnl }
+			set_politics = {
+				ruling_party = social_conservative
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ideas = {
+				ROM_Alexandru_Vaida_Voevod_hog_sco
+				ROM_Savel_Radulescu_for_mli
+				ROM_Mitita_Constantinescu_eco_mli
+				ROM_Mihail_Ghelmegeanu_sec_sco
+			}
+			set_country_flag = ROM_had_1957_elections
+		}
+		else_if = {
+			limit = { has_country_flag = ROM_progressive_pnl }
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ideas = {
+				ROM_Iuliu_Maniu_hog_sli
+				ROM_Grigore_Gafencu_for_sli
+				ROM_Gheorghe_Tatarescu_eco_mli
+				ROM_Richard_Franasovici_sec_mli
+			}
+			set_country_flag = ROM_had_1957_elections
+		}
+		else = {
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = yes
+			}
+			increase_ruling_party_popularity_by_15 = yes
+			remove_every_minister = yes
+			add_ides = {
+				ROM_Constantin_Angelescu_hog_mli
+				ROM_Grigore_Gafencu_for_sli
+				ROM_Victor_Slavescu_eco_mli
+				ROM_Mihail_Ghelmegeanu_sec_sco
+			}
+			set_country_flag = ROM_had_1957_elections
+			set_country_flag = coalition_social_liberal
+			set_country_flag = coalition_social_conservative
+		}
+		
+	}
+	option = { # PSDR
+		name = romania.48.c
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+		increase_ruling_party_popularity_by_15 = yes
+		remove_every_minister = yes
+		add_ideas = {
+			ROM_Virgil_Madgearu_hog_sde
+			ROM_Grigore_Gafencu_for_sli
+			ROM_Ion_Mihalache_eco_sde
+			ROM_Pantelimon_Halippa_sec_sde
+		}
+		set_country_flag = ROM_had_1957_elections
+	}
+}
+
+country_event = { # King Meets with the New Governemnt
+	id = romania.49
+	title = romania.49.t
+	desc = romania.40.d
+	picture = GFX_report_event_romania_parliament
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_leader = {
+				name = "Regency Council"
+				ruling_only = no
+			}
+		}
+		NOT = {
+			OR = {
+				has_government = libertarian_socialist
+				has_government = valkist
+			}
+		}
+	}
+
+	option = {
+		name = romania.49.a
+		add_stability = 0.025
+	}
+}
+
+country_event = { # Codreanu Criticises the Government
+	id = romania.50
+	title = romania.50.t
+	desc = romania.50.d
+	picture = GFX_report_event_carol_meeting
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		NOT = { has_country_flag = ROM_had_1937_elections }
+		NOT = { has_country_flag = ROM_codreanu_exiled }
+		NOT = {
+			OR = {
+				has_government = libertarian_socialist
+				has_government = valkist
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+
+	option = {
+		name = romania.50.a
+		add_political_power = -20
+	}
+}
+
+country_event = { # Michael Tours Romania
+	id = romania.51
+	title = romania.51.t
+	desc = romania.51.d
+	picture = GFX_report_event_romania_poland_visit
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		date > 1938.3.1
+		NOT = { has_country_flag = ROM_michael_assassinated }
+		NOT = {
+			OR = {
+				has_government = libertarian_socialist
+				has_government = valkist
+			}
+		}
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = romania.51.a
+		add_stability = 0.05
+	}
+}
+
+country_event = { # Marraige of Michael I
+	id = romania.52
+	title = romania.52.a
+	desc = romania.52.d
+	picture = GFX_report_event_romania_poland_visit
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ROM
+		has_country_leader = {
+			name = "Michael I"
+			ruling_only = yes
+		}
+		date > 1948.6.10
+	}
+
+	option = {
+		name = romania.52.a
 	}
 }
