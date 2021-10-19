@@ -30,13 +30,12 @@ foreign_politics = {
             }
         }
         icon = GFX_decision_ger_mefo_bills
+        fire_only_once = yes
         target_trigger = {
             FROM = { tag = KNE }
         }
         available = {
-            any_country = {
-                num_of_civilian_factories > 50
-            }
+            is_major = yes
         }
         days_remove = 14
         visible = {

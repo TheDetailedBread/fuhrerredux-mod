@@ -1,7 +1,21 @@
 foreign_politics = {
     HOL_operation_fakkel_decision = {
         allowed = { original_tag = HOL }
-        visible = { has_completed_focus = HOL_operation_fakkel }
+        visible = { 
+            has_completed_focus = HOL_operation_fakkel
+            866 = {
+                OR = {
+                    owner = { NOT = { tag = ROOT } }
+                    is_controlled_by_ROOT_or_ally = no
+                }
+            }
+            867 = {
+                OR = {
+                    owner = { NOT = { tag = ROOT } }
+                    is_controlled_by_ROOT_or_ally = no
+                }
+            }
+        }
         available = {
             NOT = { has_war_with = BEL }
         }
