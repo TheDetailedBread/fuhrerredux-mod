@@ -1,35 +1,73 @@
 foreign_politics = {
-    ROM_join_faction = {
+    ROM_join_the_internationale = {
+        name = ROM_join_faction
         icon = GFX_decision_generic_civil_support
         cost = 20
         days_remove = 4
-        target_trigger = {
-            FROM = { 
-                tag = FRA
-                tag = GER
-                tag = SOV
+        target_trigger = { FROM = { tag = SOV } }
+        allowed = { original_tag = ROM }
+        visible = {
+            OR = {
+                has_completed_focus = ROM_join_the_internationale
+                has_war_with = FRA
+                has_war_with = GER
             }
         }
+        available = {
+            has_socialist_government = yes
+            is_in_faction = no
+            is_subject = no
+        }
+        remove_effect = {
+            FROM = {
+                country_event = { id = romania.38 days = 1 }
+            }
+        }
+    }
+    ROM_join_stahlpakt = {
+        name = ROM_join_faction
+        icon = GFX_decision_generic_civil_support
+        cost = 20
+        days_remove = 4
+        target_trigger = { FROM = { tag = GER } }
+        allowed = { original_tag = ROM }
+        visible = {
+            OR = {
+                has_completed_focus = ROM_join_the_stahlpakt
+                has_completed_focus = ROM_favour_the_stahlpakt
+                has_war_with = FRA
+                has_war_with = SOV
+            }
+        }
+        available = {
+            is_in_faction = no
+            is_subject = no
+        }
+        remove_effect = {
+            FROM = {
+                country_event = { id = romania.38 days = 1 }
+            }
+        }
+    }
+    ROM_join_entente = {
+        name = ROM_join_faction
+        icon = GFX_decision_generic_civil_support
+        cost = 20
+        days_remove = 4
+        target_trigger = { FROM = { tag = FRA } }
         allowed = { original_tag = ROM }
         visible = {
             OR = {
                 has_completed_focus = ROM_a_workers_paradise
                 has_completed_focus = ROM_business_is_booming
                 has_completed_focus = ROM_stable_democracy
-                has_completed_focus = ROM_join_the_internationale
-                has_completed_focus = ROM_join_the_stahlpakt
                 has_completed_focus = ROM_choose_the_entente
-                has_completed_focus = ROM_favour_the_stahlpakt
-                AND = {
-                    FROM = {
-                        tag = FRA
-                        has_war_with = GER
-                    }
-                    has_war_with = GER
-                }
+                has_war_with = GER
+                has_war_with = SOV
             }
         }
         available = {
+            NOT = { has_government = valkist }
             is_in_faction = no
             is_subject = no
         }
