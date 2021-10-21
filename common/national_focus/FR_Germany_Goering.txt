@@ -27,7 +27,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_absorming_remnants
-		icon = GFX_GER_goal_integrate_the_right
+		icon = GFX_goal_generic_political_pressure	
 		cost = 5
 		prerequisite = {
 			focus = GER_New_order
@@ -43,7 +43,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_formalize_freikorps
-		icon = GFX_GER_goal_formalize_freikorps
+		icon = GFX_goal_generic_axis_build_infantry
 		cost = 3
 		prerequisite = {
 			focus = GER_absorming_remnants
@@ -59,7 +59,7 @@ focus_tree = {
  
 	focus = {
 		id = GER_airforce_primacy
-		icon = GFX_GER_goal_luftwaffe_primacy
+		icon = GFX_goal_generic_build_airforce
 		cost = 3
 		prerequisite = {
 			focus = GER_absorming_remnants
@@ -76,7 +76,7 @@ focus_tree = {
    
 	focus = {
 		id = GER_commisars
-		icon = GFX_GER_goal_political_commisars
+		icon = GFX_goal_generic_demand_territory
 		cost = 5
 		prerequisite = {
 			focus = GER_formalize_freikorps
@@ -95,7 +95,7 @@ focus_tree = {
  
 	focus = {
 		id = GER_centralization_of_the_state
-		icon = GFX_GER_goal_centralization_state
+		icon = GFX_goal_government_icon
 		cost = 5
 		prerequisite = {
 			focus = GER_commisars
@@ -111,7 +111,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_streamline_the_government
-		icon = GFX_GER_goal_streamlining_gov
+		icon = GFX_focus_generic_self_management
 		cost = 5
 		prerequisite = {
 			focus = GER_commisars
@@ -130,7 +130,7 @@ focus_tree = {
   
 	focus = {
 		id = GER_absolute_power
-		icon = GFX_GER_goal_absolute_power
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 5
 		prerequisite = {
 			focus = GER_centralization_of_the_state
@@ -149,7 +149,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_Vierjahresplan 
-		icon = GFX_GER_goal_blood_and_soil
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 5
 		prerequisite = {
 			focus = GER_New_order
@@ -171,7 +171,7 @@ focus_tree = {
   
 	focus = {
 		id = GER_agriculture
-		icon = GFX_GER_goal_agriculture
+		icon = GFX_focus_AUS_agriculture
 		cost = 5
 		prerequisite = {
 			focus = GER_Vierjahresplan 
@@ -214,7 +214,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_mining
-		icon = GFX_GER_goal_mining
+		icon = GFX_goal_generic_construction2
 		cost = 5
 		prerequisite = {
 			focus = GER_Vierjahresplan 
@@ -264,7 +264,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_civilian_expention
-		icon = GFX_GER_goal_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 5
 		prerequisite = {
 			focus = GER_agriculture
@@ -326,7 +326,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_oil_refinement
-		icon = GFX_GER_goal_oil_refinement
+		icon = GFX_goal_further_oil
 		cost = 5
 		prerequisite = {
 			focus = GER_Vierjahresplan 
@@ -365,7 +365,7 @@ focus_tree = {
 		
 	focus = {
 		id = GER_military_expention
-		icon = GFX_GER_goal_military_build_up
+		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
 		prerequisite = {
 			focus = GER_oil_refinement
@@ -427,7 +427,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_port_expention
-		icon = GFX_GER_goal_port_expantion
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 5
 		prerequisite = {
 			focus = GER_civilian_expention
@@ -476,7 +476,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_oil_storage
-		icon = GFX_GER_goal_oil_storage
+		icon = GFX_goal_basic_oil
 		cost = 10
 		prerequisite = {
 			focus = GER_port_expention
@@ -516,7 +516,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_flaktowers
-		icon = GFX_GER_goal_flaktowers
+		icon = GFX_focus_generic_air_defense
 		cost = 10
 		prerequisite = {
 			focus = GER_port_expention
@@ -575,7 +575,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_airport_hubs
-		icon = GFX_GER_goal_air_expention
+		icon = GFX_goal_generic_air_production
 		cost = 10
 		prerequisite = {
 			focus = GER_port_expention
@@ -618,7 +618,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_renovation_infrastructure
-		icon = GFX_GER_goal_infrastructure_update
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		prerequisite = {
 			focus = GER_port_expention
@@ -722,7 +722,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_ready_for_war
-		icon = GFX_GER_goal_ready_for_war
+		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 3
 		prerequisite = {
 			focus = GER_oil_storage
