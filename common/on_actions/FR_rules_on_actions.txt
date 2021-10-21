@@ -58,6 +58,26 @@ on_actions = {
 			}
 			### Deustches Reich
 			GER = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = GER_mod_behavior
+							option = DEFAULT
+						}
+					}
+					set_country_flag = GER_VANILLA
+					load_focus_tree = FR_Germany_Default
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = GER_mod_behavior
+							option = VALKYRIE
+						}
+					}
+					set_country_flag = GER_VALKYRIE
+					load_focus_tree = FR_Germany_Valkyrie
+				}
 				if = { 
 					limit = {
 						has_game_rule = {

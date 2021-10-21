@@ -1,0 +1,752 @@
+focus_tree = {
+	id = FR_Germany_Goering
+	country = {
+		factor = 0
+	}
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 50 }
+
+    shared_focus = GER_assasination_dessler
+	shared_focus = GER_new_german_army
+	shared_focus = GER_Luftwaffe
+	shared_focus = GER_Kriegsmarine
+    shared_focus = GER_Germany_in_Europe
+	
+	focus = {
+		id = GER_New_order
+		icon = GFX_goal_ideology_national_populist
+		cost = 3
+		x = 8
+		y = 11
+		completion_reward = {
+		   log = "[GetDateText]: [Root.GetName]: Focus GER_New_order"
+           add_war_support = 0.1
+	   }
+	}
+	
+	focus = {
+		id = GER_absorming_remnants
+		icon = GFX_GER_goal_integrate_the_right
+		cost = 5
+		prerequisite = {
+			focus = GER_New_order
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_New_order
+	 	completion_reward = {
+		   log = "[GetDateText]: [Root.GetName]: Focus GER_absorming_remnants"
+		   add_popularity = { ideology = national_populist popularity = 0.2 }
+		}
+	}
+	
+	focus = {
+		id = GER_formalize_freikorps
+		icon = GFX_GER_goal_formalize_freikorps
+		cost = 3
+		prerequisite = {
+			focus = GER_absorming_remnants
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_absorming_remnants
+		completion_reward = {
+		   log = "[GetDateText]: [Root.GetName]: Focus GER_formalize_freikorps"
+           add_ideas = ger_freikorps_formalized
+		}
+	}	
+ 
+	focus = {
+		id = GER_airforce_primacy
+		icon = GFX_GER_goal_luftwaffe_primacy
+		cost = 3
+		prerequisite = {
+			focus = GER_absorming_remnants
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_absorming_remnants
+        completion_reward = {
+		   log = "[GetDateText]: [Root.GetName]: Focus GER_airforce_primacy"
+		   add_political_power = -150
+           add_ideas = ger_interservice_rivalry_air_strengthened
+	  	}
+ 	}	
+   
+	focus = {
+		id = GER_commisars
+		icon = GFX_GER_goal_political_commisars
+		cost = 5
+		prerequisite = {
+			focus = GER_formalize_freikorps
+		}
+		prerequisite = {
+			focus = GER_airforce_primacy
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_formalize_freikorps
+		completion_reward = {
+        	log = "[GetDateText]: [Root.GetName]: Focus GER_commisars"
+			swap_ideas = { remove_idea = ger_gestapo add_idea = ger_gestapo_2 }
+	  	}
+ 	}
+ 
+	focus = {
+		id = GER_centralization_of_the_state
+		icon = GFX_GER_goal_centralization_state
+		cost = 5
+		prerequisite = {
+			focus = GER_commisars
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_commisars
+		completion_reward = {
+        	log = "[GetDateText]: [Root.GetName]: Focus GER_centralization_of_the_state"
+			swap_ideas = { remove_idea = ger_charisma_and_strengh add_idea = ger_charisma_and_strengh_2 }
+	  	}
+  	}
+
+	focus = {
+		id = GER_streamline_the_government
+		icon = GFX_GER_goal_streamlining_gov
+		cost = 5
+		prerequisite = {
+			focus = GER_commisars
+		}
+		available = {
+			has_completed_focus = GER_centralization_of_the_state
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_commisars
+		completion_reward = {
+        	log = "[GetDateText]: [Root.GetName]: Focus GER_streamline_the_government"
+			swap_ideas = { remove_idea = ger_charisma_and_strengh_2 add_idea = ger_charisma_and_strengh_3 }
+	  	}
+  	}
+  
+	focus = {
+		id = GER_absolute_power
+		icon = GFX_GER_goal_absolute_power
+		cost = 5
+		prerequisite = {
+			focus = GER_centralization_of_the_state
+		}
+		prerequisite = {
+			focus = GER_streamline_the_government
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_centralization_of_the_state
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_absolute_power"
+			swap_ideas = { remove_idea = ger_charisma_and_strengh_3 add_idea = ger_charisma_and_strengh_4 }
+	  	}
+  	}
+	
+	focus = {
+		id = GER_Vierjahresplan 
+		icon = GFX_GER_goal_blood_and_soil
+		cost = 5
+		prerequisite = {
+			focus = GER_New_order
+		}
+		x = 3
+		y = 1
+		relative_position_id = GER_New_order
+		completion_reward = {
+        	log = "[GetDateText]: [Root.GetName]: Focus GER_Vierjahresplan"
+		 	add_ideas = ger_four_year_plan
+		 	add_tech_bonus = {
+				name = GER_Vierjahresplan
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+	   	}
+  	}
+  
+	focus = {
+		id = GER_agriculture
+		icon = GFX_GER_goal_agriculture
+		cost = 5
+		prerequisite = {
+			focus = GER_Vierjahresplan 
+		}
+		x = -2
+		y = 1
+		relative_position_id = GER_Vierjahresplan
+		completion_reward = {
+        	log = "[GetDateText]: [Root.GetName]: Focus GER_agriculture"
+			56 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			57 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			55 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			52 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			54 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			53 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			50 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		    60 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		    65 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_ideas = ger_agriculture
+	    }
+	}
+	
+	focus = {
+		id = GER_mining
+		icon = GFX_GER_goal_mining
+		cost = 5
+		prerequisite = {
+			focus = GER_Vierjahresplan 
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_Vierjahresplan
+		completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus GER_mining"
+		add_resource = {
+				type = oil
+				amount = 6
+				state = 59
+			}
+			add_resource = {
+				type = tungsten	
+				amount = 4
+				state = 60
+			}
+			add_resource = {
+				type = steel
+				amount = 9
+				state = 66
+			}
+			add_resource = {
+				type = aluminium
+				amount = 3
+				state = 66
+			}
+			add_resource = {
+				type = aluminium	
+				amount = 6
+				state = 53
+			}
+			add_resource = {
+				type = aluminium	
+				amount = 5
+				state = 50
+			}
+			add_resource = {
+				type = chromium	
+				amount = 4
+				state = 60
+           }
+	   }
+	}
+	
+	focus = {
+		id = GER_civilian_expention
+		icon = GFX_GER_goal_civilian_industry
+		cost = 5
+		prerequisite = {
+			focus = GER_agriculture
+		}
+		prerequisite = {
+			focus = GER_mining
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_agriculture
+   		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_oil_refinement
+		icon = GFX_GER_goal_oil_refinement
+		cost = 5
+		prerequisite = {
+			focus = GER_Vierjahresplan 
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_Vierjahresplan
+		completion_reward = {
+        	log = "[GetDateText]: [Root.GetName]: Focus GER_oil_refinement"
+		
+			add_tech_bonus = {
+				name = GER_oil_refinement
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+			
+			65 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+		      		level = 1
+					instant_build = yes
+				}
+    		}
+			59 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+		      		level = 1
+					instant_build = yes
+				}
+			}
+		}	
+	}	
+		
+	focus = {
+		id = GER_military_expention
+		icon = GFX_GER_goal_military_build_up
+		cost = 5
+		prerequisite = {
+			focus = GER_oil_refinement
+		}
+		prerequisite = {
+			focus = GER_mining
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_mining
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_port_expention
+		icon = GFX_GER_goal_port_expantion
+		cost = 5
+		prerequisite = {
+			focus = GER_civilian_expention
+		}
+		prerequisite = {
+			focus = GER_military_expention
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_civilian_expention
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+	    }
+	}
+	
+	focus = {
+		id = GER_oil_storage
+		icon = GFX_GER_goal_oil_storage
+		cost = 10
+		prerequisite = {
+			focus = GER_port_expention
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_port_expention
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+	 	    }
+			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+	 	    }
+			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+	 	    }
+	    }
+	}
+	
+	focus = {
+		id = GER_flaktowers
+		icon = GFX_GER_goal_flaktowers
+		cost = 10
+		prerequisite = {
+			focus = GER_port_expention
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_port_expention
+		completion_reward = {
+
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+	 	    }
+	    }
+	}
+	
+	focus = {
+		id = GER_airport_hubs
+		icon = GFX_GER_goal_air_expention
+		cost = 10
+		prerequisite = {
+			focus = GER_port_expention
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_port_expention
+   		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus GER_airport_hubs"
+		56 = {
+			add_building_construction = {
+				type = air_base
+				level = 5
+				instant_build = yes
+			}
+		}
+		52 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+			}
+		}
+		64 = {
+			add_building_construction = {
+				type = air_base
+				level = 3
+				instant_build = yes
+			}
+		}
+		85 = {
+			add_building_construction = {
+				type = air_base
+				level = 6
+				instant_build = yes
+			  }
+		  }
+	   }
+    }
+	
+	focus = {
+		id = GER_renovation_infrastructure
+		icon = GFX_GER_goal_infrastructure_update
+		cost = 10
+		prerequisite = {
+			focus = GER_port_expention
+		}
+		x = 3
+		y = 1
+		relative_position_id = GER_port_expention
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_renovation_infrastructure"
+		
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+		id = GER_ready_for_war
+		icon = GFX_GER_goal_ready_for_war
+		cost = 3
+		prerequisite = {
+			focus = GER_oil_storage
+		}
+		prerequisite = {
+			focus = GER_flaktowers
+		}
+		prerequisite = {
+			focus = GER_airport_hubs
+		}
+		prerequisite = {
+			focus = GER_renovation_infrastructure
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_port_expention
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_ready_for_war"
+			add_ideas = war_economy 
+			remove_ideas = ger_four_year_plan 
+			add_timed_idea = {
+				idea = ger_ready_for_total_war
+				days = 364
+			}
+	  	}
+   	}
+}
