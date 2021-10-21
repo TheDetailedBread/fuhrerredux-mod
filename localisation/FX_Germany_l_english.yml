@@ -1845,6 +1845,7 @@ ger.2070.b:0 "They'll be ruled directly by Germany."
 GER_fate_of_bohemia:0 "The Fate of Bohemia"
 GER_fate_of_bohemia_desc:0 "Now that we have conquered the pathetic nation of Bohemia we must decide an end to our military occupation and establish friendly regimes within the territory. Plans have established for the non-German territories of Bohemia, Slovakia, and Lemkowina."
 puppet_bohemia:0 "Install Valkist regime in Bohemia"
+puppet_bohemia_vk:0 "Liberation of Central Europe"
 puppet_bohemia_desc:0 "Before Hapsburg rule the Kingdom of Bohemia was one of the most prestigious states in all of Europe. We should respect this legacy and give the Czech people autonomy within the new European Order."
 puppet_slovakia:0 "Install Valkist regime in Slovakia"
 puppet_slovakia_desc:0 "As we come to control the former Bohemia lands known as Slovakia, we find ourselves holding territories of great ethnic tensions and struggle. While directly controlling these territories may be problematic for our government, if we were to grant them titular autonomy as our subjects, under the total guidance of the Reich, of course, we could get some use of their loyalty and men."
@@ -1861,6 +1862,7 @@ GER_fall_of_france:0 "Our victory over the French Republic has left us in contro
 puppet_france:0 "Install Valkist regime in France"
 puppet_france_regime:0 "France is a large and diverse nation with a long legacy. It is best for our nations if we quickly returned control of France to a local but friendly regime."
 puppet_italy:0 "Install Valkist regime in Italy"
+puppet_italy_vk:0 "Liberation of the Italy"
 puppet_italy_desc:0 "Italy is a large and diverse nation with a long legacy. It is best for our nations if we quickly returned control of Italy to a local but friendly regime."
 GER_fate_of_italy:0 "The Fate of Italy"
 GER_fate_of_italy_desc:0 "Now that we've conquered Italy we have to decide what to do with the land. We can form a puppet Valkist government under cooperative Italian general, Rudolfo Graziani, cutting the cost of prolonged occupation. We could also, however, continue our occupation and conquer the peninsula entirely."
@@ -1870,13 +1872,16 @@ GER_take_memel:0 "Lithuanian Autonomy"
 GER_fate_of_poland:0 "The Fate of Poland"
 GER_fate_of_east_europe:0 "The Fate of Eastern Europe"
 GER_ukainian_puppet:0 "The Fate of Ukraine"
+GER_ukainian_puppet_vk:0 "Liberation of Ukraine"
 GER_ukainian_puppet_desc:0 ""
 GER_belarus_puppet:0 "The Fate of Belarus"
+GER_belarus_puppet_vk:0 "Liberation of Belarus"
 GER_belarus_puppet_desc:0 ""
 GER_russian_puppet:0 "The Fate of Russia"
 GER_russian_puppet_desc:0 "Our country occupies vast swaths of formerly Soviet territory in Eastern Europe. It's is clear to most commanders that we can't continue a military government over such a large territory forever. Creating a civilian administration for Russia under our own supervision would help alleviate administrative maintenance of this region."
 GER_annex_poland:0 "Germanize Poland"
 GER_polish_puppet:0 "Autonomy for Poland"
+GER_polish_puppet_vk:0 "Liberation of Poland"
 GER_fate_of_britian:0 "Fate of Britain"
 GER_fate_of_britian_desc:0 "After the defeat of the United Kingdom we have a choice on what we should do with the British. We could puppet them under a Valkist Britain, consisting of all both Britain and Ireland. We could also choose to weaken the English and divide the islands into England, Scotland, and Ireland. Our final option would be to occupy it and use its industrial centers to fund our war effort."
 puppet_britian:0 "Autonomy in the British Isles"
@@ -1896,6 +1901,7 @@ GER_fate_of_denmark_dec_desc:0 "Now that we occupy the former nation of Denmark 
 annex_denmark:0 "Annexation of Denmark"
 annex_denmark_desc:0 "To protect our nothern coast we must keep full control over Denmark. The Danish will learn the Fuhrer's German soon enough."
 puppet_denmark:0 "Autonomy for Denmark"
+puppet_denmark_vk:0 "Liberation of Denmark"
 puppet_denmark_desc:0 "Danes have always been considered proper Germanisches Volk and must be respected as an equal partner in that repsect. Autonomy must be given to Denmark in the Great German Reich."
 
 ### German-Hungarian events ###
@@ -3166,449 +3172,235 @@ GER_go_to_war_tt:0 "§RThis might trigger the war that will engulf Europe once m
 GER_DEM:0 "Von Seeckt allowed a Democratic transition"
 
 ### Valkyrie
-GER_assasination_dessler:0 "A night to change the world"
+GER_assasination_dessler:0 "A Night to Change the World"
 GER_assasination_dessler_desc:0 "" 
-
 GER_germany_in_flame:0 "Germany in Flames"
 GER_germany_in_flame_desc:0 ""
-
-GER_officers_seize_power:0 "The Army storms Berlin"
+GER_officers_seize_power:0 "The Army Storms Berlin"
 GER_officers_seize_power_desc:0 ""
-
+# AuthDem
 GER_Von_Seek_Clique:0 "Von Seeckt's Clique"
 GER_Von_Seek_Clique_desc:0 ""
-
 GER_deploy_the_army:0 "Urban Military Police"
 GER_deploy_the_army_desc:0 ""
-
-GER_reassure_the_people:0 "Reassure the people"
+GER_reassure_the_people:0 "Reassure the People"
 GER_reassure_the_people_desc:0 ""
-
 GER_dissolve_the_Valkist_party:0 "Dissolve the Valkist Party"
 GER_dissolve_the_Valkist_party_desc:0 ""
-
-GER_end_martial_law:0 "Ending the martial law"
+GER_end_martial_law:0 "Ending the Martial Law"
 GER_end_martial_law_desc:0 ""
-
-GER_allow_local_elections:0 "Allowing local elections"
+GER_allow_local_elections:0 "Allowing Local Elections"
 GER_allow_local_elections_desc:0 ""
-
 GER_propaganda:0 "Distribution of Propaganda"
 GER_propaganda_desc:0 ""
-
-GER_watchful_eye_on_the_reichstag:0 "Keep a watchful eye on the Reichstag"
+GER_watchful_eye_on_the_reichstag:0 "Keep a Watchful Eye on the Reichstag"
 GER_watchful_eye_on_the_reichstag_desc:0 ""
-
 GER_the_Sphinx_velvet_glove:0 "The Sphinx's Velvet Glove"
 GER_the_Sphinx_velvet_glove_desc:0 ""
-
-GER_Hermann_dictatorship:0 "Hermann Göring's dictatorship"
+# Goering
+GER_Hermann_dictatorship:0 "Hermann Göring's Dictatorship"
 GER_Hermann_dictatorship_desc:0 ""
-
-GER_epuration_of_the_state:0 "Purging the state"
+GER_epuration_of_the_state:0 "Purging the State"
 GER_epuration_of_the_state_desc:0 ""
-
 GER_roaming_freikorps:0 "Roaming Frekorps"
 GER_roaming_freikorps_desc:0 ""
-
 GER_create_the_gestapo:0 "Create the Geheime Staatspolizei"
 GER_create_the_gestapo_desc:0 ""
-
 GER_blue_max_tour:0 "The Blue Max Tour"
 GER_blue_max_tour_desc:0 ""
-
 GER_charisma_and_strengh:0 "Charisma and Strengh"
 GER_charisma_and_strengh_desc:0 ""
-
-GER_popular_insurection:0 "Popular insurrection"
+GER_popular_insurection:0 "Popular Insurrection"
 GER_popular_insurection_desc:0 ""
-
+# LibSoc
 GER_fomation_of_popular_militias:0 "Fomation of Popular Militias"
 GER_fomation_of_popular_militias_desc:0 ""
-
 GER_purging_the_army:0 "Purging the Army"
 GER_purging_the_army_desc:0 ""
-
-GER_a_new_generation_of_politicians:0 "A new generation of politicians"
+GER_a_new_generation_of_politicians:0 "A New Generation of Politicians"
 GER_a_new_generation_of_politicians_desc:0 ""
-
-GER_stabilize_the_country:0 "Stabilize the country"
+GER_stabilize_the_country:0 "Stabilize the Country"
 GER_stabilize_the_country_desc:0 ""
-
 GER_freedom_of_press:0 "Freedom of Press"
 GER_freedom_of_press_desc:0 ""
-
 GER_freedom_of_speech:0 "Freedom of Speech"
 GER_freedom_of_speech_desc:0 ""
-
 GER_freedom_of_religion:0 "Freedom of Religion"
 GER_freedom_of_religion_desc:0 ""
-
 GER_A_new_and_better_Germany:0 "A New and Better Germany"
 GER_A_new_and_better_Germany_desc:0 ""
-
-
-
-
-
-
-
-GER_preparing_the_path:0 "The Eagle rises once more"
-
-GER_federalize_the_country:0 "Re-federalize the country"
-
-GER_reintroducing_imperial_symbolism:0 "Marriage of the deposed"
-
-GER_open_up_the_economy:0 "Open up the economy"
-
-GER_reintroduce_the_constitution_of_1871:0 "Reintroduce the constitution of 1871"
-
+# Kaiserreich
+GER_preparing_the_path:0 "The Eagle Rises Once More"
+GER_federalize_the_country:0 "Re-federalize the Country"
+GER_reintroducing_imperial_symbolism:0 "Marriage of the Deposed"
+GER_open_up_the_economy:0 "Open up the Economy"
+GER_reintroduce_the_constitution_of_1871:0 "Reintroduce the Constitution of 1871"
 GER_Nations_without_crowns:0 "Nations with no Crowns"
-
 GER_kingdom_with_no_king:0 "Kingdoms with no Kings"
-
 GER_old_world_order_strikes_back:0 "Enthrone the Kaiser"
-
-GER_elections:0 "Demokratie !"
-
-GER_relax_state_control:0 "Relax state control"
-
-GER_wave_of_privatization:0 "Wave of privatization"
-
-GER_cooperation_militaro_industrial_complex:0 "Militaro-Industrial complex"
-
-GER_Better_conditions_for_workers:0 "Improve conditions for the workers"
-
-GER_modernizing_the_roads:0 "Modernizing the roads"
-
-GER_airports:0 "Expanding the airports"
-
+GER_elections:0 "Demokratie!"
+GER_relax_state_control:0 "Relax State Control"
+GER_wave_of_privatization:0 "Wave of Privatization"
+GER_cooperation_militaro_industrial_complex:0 "Militaro-Industrial Complex"
+GER_Better_conditions_for_workers:0 "Improve Conditions for the Workers"
+GER_modernizing_the_roads:0 "Modernizing the Roads"
+GER_airports:0 "Expanding the Airports"
 GER_harbors:0 "New Harbors"
-
-GER_subsidising_heavy_industry:0 "Subsidising heavy industry"
-
-GER_government_build_work:0 "Public work programs"
-
+GER_subsidising_heavy_industry:0 "Subsidising Heavy Industry"
+GER_government_build_work:0 "Public Work Programs"
 GER_new_docks:0 "Expand the Dry-docks"
-
-GER_reinvest_in_the_civilian_departement:0 "Reinvest in the civilian department"
-
+GER_reinvest_in_the_civilian_departement:0 "Reinvest in the Civilian Department"
 GER_fund_RnD:0 "Invest in RnD"
-
-GER_safety_regulation:0 "Introduce new safety regulations"
-
-GER_better_tools:0 "New industry tooling"
-
-GER_new_military_manufactories:0 "Expand military manufactories"
-
-GER_encourage_compagnies_to_invest:0 "Encourage corporations to invest"
-
-GER_mechanization_farmlands:0 "Intensive national mechanization"
-
-
-
-
-
+GER_safety_regulation:0 "Introduce New Safety Regulations"
+GER_better_tools:0 "New Industry Tooling"
+GER_new_military_manufactories:0 "Expand Military Manufactories"
+GER_encourage_compagnies_to_invest:0 "Encourage Corporations to Invest"
+GER_mechanization_farmlands:0 "Intensive National Mechanization"
+# Nationalist
 GER_New_order:0 "The New Order"
-
 GER_absorming_remnants:0 "Unitarian Right Government"
-
 GER_formalize_freikorps:0 "Formalize the Freikorps"
-
-GER_airforce_primacy:0 "Assure airforce primacy"
-
+GER_airforce_primacy:0 "Assure Airforce Primacy"
 GER_commisars:0 "Formation of the General-Commisariat"
-
-GER_centralization_of_the_state:0 "Centralize the state"
-
-GER_streamline_the_government:0 "Streamline the government"
-
+GER_centralization_of_the_state:0 "Centralize the State"
+GER_streamline_the_government:0 "Streamline the Government"
 GER_absolute_power:0 "Assure Absolute Power"
-
 GER_Vierjahresplan:0 "Die Vierjahresplan"
-
 GER_agriculture:0 "Agricultural Expantion"
-
-GER_mining:0 "Intensify Mining operation"
-
-GER_civilian_expention:0 "Civilian investsment"
-
-GER_oil_refinement:0 "Fund Synthetic Oil research"
-
-GER_military_expention:0 "Military investsment"
-
-GER_port_expention:0 "Naval Expantion"
-
+GER_mining:0 "Intensify Mining Operations"
+GER_civilian_expention:0 "Civilian Investments"
+GER_oil_refinement:0 "Fund Synthetic Oil Research"
+GER_military_expention:0 "Military Investments"
+GER_port_expention:0 "Naval Expansion"
 GER_oil_storage:0 "Oil Storage Plan"
-
 GER_flaktowers:0 "Protect the Cities"
-
 GER_airport_hubs:0 "Airport Hubs"
-
-GER_renovation_infrastructure:0 "National Infrastructure renovation"
-
+GER_renovation_infrastructure:0 "National Infrastructure Renovation"
 GER_ready_for_war:0 "Ready for war"
-
-
-
-
-
-
-
+# Socialist
 GER_aftermath_revolution:0 "Aftermath of the Revolution"
-
 GER_great_experiment:0 "The Great Experiment"
-
 GER_appease_the_army:0 "Appease the Army"
-
 GER_break_the_army:0 "Break the Wehrmacht"
-
 GER_national_guards:0 "Länders National Guards"
-
 GER_federal_army:0 "Birth of the Federal Army"
-
 GER_encourage_social_change:0 "Road Toward Social Equality"
-
 GER_women_in_the_workforce:0 "Women in the Army"
-
 GER_national_popular_army:0 "Nationale Volksarmee"
-
 GER_new_world_old_traditions:0 "New World Old Traditions"
-
 GER_Loyal_blood_foolish_heart:0 "Veterant's experience"
-
 GER_limit_social_changes:0 "Limit Social Change"
-
 GER_Patriotic_propaganda:0 "Patriotic Propaganda"
-
 GER_socialist_yet_conservative:0 "New Wehrmacht"
-
 GER_new_german_economy:0 "The New German Economy"
-
-GER_for_the_worker_and_peasant:0 "For the Workers and Peasants !"
-
-GER_for_the_people:0 "For the People !"
-
-GER_for_the_republic:0 "For the Republic !"
-
+GER_for_the_worker_and_peasant:0 "For the Workers and Peasants!"
+GER_for_the_people:0 "For the People!"
+GER_for_the_republic:0 "For the Republic!"
 GER_comprehensif_agreement:0 "Nationalizing the Heavy Industry"
-
 GER_civil_service:0 "Establishing the Civil Service"
-
 GER_nationalize_part_military_industry:0 "Nationalizing the Armement Industry"
-
 GER_modernize_the_factories:0 "Factory Modernization"
-
 GER_overhaul_rural_infrastructures:0 "Overhauling the Rural Infrastructure"
-
 GER_rural_investsments:0 "Investing in the Countryside"
-
 GER_national_wrokshops:0 "Federal Workshops"
-
 GER_national_administation_of_guns:0 "Establish the Ministry of Armaments and War Production"
-
 GER_peace_at_home:0 "Peace at Home"
-
 GER_Volksarmme_loyalty:0 "Found the Engineering Bureau"
-
-GER_reduce_unemployement:0 "Reduce unemployement"
-
-
-
-
+GER_reduce_unemployement:0 "Reduce Unemployement"
+# Army
 GER_new_german_army:0 "New German Army"
-
 GER_veterants_army:0 "Reichswehr"
-
 GER_peoples_army:0 "Volksarmee"
-
 GER_modern_army:0 "Neu-Wehrmacht"
-
 GER_promote_experimented_officers:0 "Promote Weltkrieg Veterants"
-
 GER_promote_innovative_though:0 "Promote Army Innovation"
-
 GER_promote_mechanization:0 "Mechanization"
-
 GER_motorized_artillery:0 "Mobile Heavy Artillery"
-
 GER_new_face_of_war:0 "New Face of War"
-
 GER_the_guns_of_the_decade:0 "Adopt the Battlerifle"
-
 GER_logistics_of_men:0 "Logistics of War"
-
 GER_carring_for_the_wounded:0 "Carring for the wounded"
-
 GER_revisiting_the_shovel:0 "Revisiting the Shovel"
-
 GER_anti_tank_anti_air:0 "Multipurpose Artillery"
-
-GER_signal_compagnies:0 "Expand the Signal Compagnies"
-
+GER_signal_compagnies:0 "Expand the Signal Companies"
 GER_advanced_repair_shops:0 "Advance Repair Shops"
-
-
-
-
-
+# Air Force
 GER_Luftwaffe:0 "Luftwaffe Reforms"
-
-GER_close_air_support_doctrine:0 "Achtung Stuka !"
-
+GER_close_air_support_doctrine:0 "Achtung Stuka!"
 GER_fighter:0 "Replacement for the BF109"
-
 GER_goal_paratroopers:0 "Schnelle Fallschirmjägers"
-
 GER_close_air_support:0 "In Service of the Troopers"
-
-GER_Operational_integrity:0 "No mission too dangerous, No target too far away"
-
-GER_heavy_fighter:0 "A new type of Plane"
-
+GER_Operational_integrity:0 "Destruction Initiatives"
+GER_heavy_fighter:0 "A New Type of Plane"
 GER_tactical_bomber:0 "A Versatile Bomber"
-
 GER_doctrine_bonus_CAS:0 "Ambition and Strength"
-
-GER_doctrine_bonus_OI:0 "Bombs away !"
-
+GER_doctrine_bonus_OI:0 "Bombs away!"
 GER_plane_of_the_decade:0 "Breaking the Barrier of Sound"
-
 GER_expand_the_ministro_of_aviation:0 "Expand the Minister of Aviation"
-
-GER_goal_inest_in_nrw_technologies:0 "Invest in new Technologies"
-
+GER_goal_inest_in_nrw_technologies:0 "Invest in New Technologies"
 GER_goerings_reform:0 "Goering's Reforms"
-
-
-
-
+# Navy
 GER_Kriegsmarine:0 "Reforming the Kriegsmarine"
-
 GER_pride_of_germany:0 "Pride of Germany"
-
 GER_heavy_cruisers:0 "Heavy Cruisers"
-
 GER_superheavy_battleships:0 "Naval Fortresses"
-
-GER_biggest_guns_we_have:0 "With the Biggest Guns we have"
-
+GER_biggest_guns_we_have:0 "With the Biggest Guns We Have"
 GER_innovation_carrier:0 "Future of Naval Warfare"
-
 GER_cruisers:0 "Screen Cruisers"
-
-GER_carrier_protoype:0 "Germany's First aircraft carrier"
-
+GER_carrier_protoype:0 "Germany's First Aircraft Carrier"
 GER_naval_bomber:0 "Retrofitting the Naval Bombers"
-
-GER_silent_fleet:0 "The silent fleet"
- 
+GER_silent_fleet:0 "The Silent Fleet"
 GER_patrolling_the_north_sea:0 "Patrolling the North Sea"
-
-GER_speerheading_submarine_technology:0 "The next generation of Submarines"
-
+GER_speerheading_submarine_technology:0 "Deep Sea Killers"
 GER_armement_submarines:0 "Silent and Performant"
-
 GER_invest_dockyards:0 "National Naval Expantion"
-
-
-
-
-
-
-
+# Foreign
 GER_Realpolitics:0 "Finding Allies"
-
-GER_central_Europe:0 "Our weak neighbours..."
-
+GER_central_Europe:0 "Our Weak Neighbours..."
 GER_Western_Europe:0 "The Watch on the Rhine"
-
 GER_expantionism:0 "Alone in the Dark"
-
 GER_Germany_in_Europe:0 "Germany's Place in Europe"
-
 GER_United_Kingdom:0 "Old Enemy, New Friend"
-
 GER_the_sovier_union:0 "Comeradship of Nations"
-
 GER_finding_allies:0 "The Right Choice"
-
 GER_technology_sharing:0 "Technology Exchange"
-
 GER_splitting_Eastern_Europe:0 "Splitting Eastern Europe"
-
 GER_Poland:0 "The Shameful Creation of Versaille"
-
-GER_Eastern_Europe:0 "Enforce Brest-Litovk"
-
+GER_Eastern_Europe:0 "Enforce Brest-Litosvk"
 GER_hands_off_zones:0 "Hands-off Zones"
-
-GER_kings_visit_to_germany:0 "The King's visit to Germany"
-
+GER_kings_visit_to_germany:0 "The King's Visit to Germany"
 GER_accept_british_naval_dominance:0 "Accept British Naval Dominance"
-
 GER_anglo_german_training:0 "Anglo-German Military Exchange"
-
-GER_open_trade_space:0 "Coal and Steel agreement"
-
+GER_open_trade_space:0 "Coal and Steel Agreement"
 GER_German_claims:0 "Enforce our Rightful Claims"
-
 GER_end_Italy:0 "March on Rome"
-
 GER_end_France:0 "End the Gauls"
-
 GER_monarchism_is_back_in_fashion:0 "Monarchism is back in Fashion"
-
 GER_end_the_soviet_threat:0 "End the Soviet Threat"
-
 GER_Soviet_Germans:0 "The German Soviets"
-
 GER_a_helping_hand:0 "A Helping Hand"
-
 GER_economic_cooperation:0 "Birth of the Comecon"
-
 GER_soviet_diplomatic_assistance:0 "Soviet 'Diplomatic' Assistance"
-
 GER_the_revolution_in_France:0 "Bring the Revolution to France"
-
 GER_the_revolution_in_Britain:0 "Bring the Revolution to Britain"
-
 GER_red_dawn_over_europe:0 "Red Dawn"
-
 GER_covert_operations:0 "Covert Operations"
-
 GER_arm_the_loyalists:0 "Arm the Loyalists"
-
 GER_old_contacts:0 "Old Contacts"
-
 GER_start_the_uprising:0 "Start the Uprising"
-
 GER_referundum_rheinland:0 "Rheinish Ultimatum"
-
 GER_war_with_france:0 "Into the Ring once more"
-
 GER_throught_the_belux:0 "Schlieffen Plan"
-
 GER_the_austrian_coup:0 "Bring Austria in the fold!"
-
 GER_danish_intervention:0 "Danish Blitz"
-
 GER_secure_the_scandinavia:0 "Secure Scandinavia..."
-
-GER_invasion:0 "By Force !"
-
+GER_invasion:0 "By Force!"
 GER_guarentees_and_pacts:0 "By Trade Guarentees"
-
 GER_Polish_invasion:0 "Invade Poland"
-
 GER_ennemies_on_all_side:0 "Enemies on all Sides"
-
 GER_friends_out_east:0 "Friends in the East"
-
-GER_strike_the_soviet_union:0 "Strike the USSR !"
-
+GER_strike_the_soviet_union:0 "Strike the USSR!"
 GER_Czech_referundum:0 "End the Czechs"
-
 GER_throught_switzerland:0 "The Unthinkable..."
 
 ######################################################
@@ -3647,31 +3439,3 @@ central_european_revolution:0 "Invasion of Central Europe"
 rheinland_revolution:0 "Reclamation of the Rheinland"
 eastern_invasion:0 "Germano-Soviet Eastern Invasion"
 danish_social_intervention:0 "Hamburg Revolution"
-
-
-
-GER_fate_of_bohemia:0 "Zentrale Front"
-puppet_bohemia_vk:0 "Liberation of Central Europe"
-puppet_bohemia:0 "Fate of Bohemia"
-
-GER_fate_of_france:0 "Westfront"
-puppet_france:0 "Fate of France"
-
-GER_fate_of_italy:0 "Südfront"
-puppet_italy:0 "Fate of Italy"
-puppet_italy_vk:0 "Liberation of the Italy"
-
-GER_fate_of_denmark_dec:0 "Nordfront"
-puppet_denmark:0 "Fate of Denmark"
-puppet_denmark_vk:0 "Liberation of Denmark"
-
-GER_fate_of_east_europe:0 "Ostfront"
-GER_russian_puppet:0 "Fate of Russia"
-GER_ukainian_puppet:0 "Fate of Ukraine"
-GER_ukainian_puppet_vk:0 "Liberation of Ukraine"
-GER_belarus_puppet:0 "Fate of Belarus"
-GER_belarus_puppet_vk:0 "Liberation of Belarus"
-
-GER_fate_of_poland:0 "Polnische Front"
-GER_polish_puppet:0 "Fate of Poland"
-GER_polish_puppet_vk:0 "Liberation of Poland"

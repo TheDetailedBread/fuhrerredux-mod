@@ -2,7 +2,7 @@
 
   shared_focus = {
 		id = GER_assasination_dessler
-		icon = GFX_GER_goal_valkist_assasination
+		icon = GFX_goal_graveyard
 		cost = 2
 		x = 10
 		y = 0
@@ -19,7 +19,7 @@
 	}
 	shared_focus = {
 		id = GER_germany_in_flame
-		icon = GFX_GER_goal_in_flames
+		icon = GFX_goal_flames_of_rebellion
 		cost = 1
 		prerequisite = {
 			focus = GER_assasination_dessler
@@ -40,7 +40,7 @@
     }
 	shared_focus = {
 		id = GER_officers_seize_power
-		icon = GFX_GER_goal_military_coup
+		icon = GFX_focus_generic_military_mission
 		cost = 5
 		prerequisite = {
 			focus = GER_germany_in_flame
@@ -64,7 +64,7 @@
 	}
 	shared_focus = {
 		id = GER_Von_Seek_Clique
-		icon = GFX_GER_goal_seeckt_coup
+		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 2
 		prerequisite = {
 			focus = GER_officers_seize_power
@@ -89,7 +89,7 @@
 	
 	shared_focus = {
 		id = GER_deploy_the_army
-		icon = GFX_GER_goal_army_deploy_the_army
+		icon = GFX_goal_army_guy_2
 		cost = 1
 		prerequisite = {
 			focus = GER_Von_Seek_Clique
@@ -105,7 +105,7 @@
 	}
 	shared_focus = {
 		id = GER_reassure_the_people
-		icon = GFX_GER_goal_reassure_people
+		icon = GFX_focus_generic_concessions
 		cost = 1
 		prerequisite = {
 			focus = GER_Von_Seek_Clique
@@ -120,7 +120,7 @@
 	}
 	shared_focus = {
 		id = GER_dissolve_the_Valkist_party
-		icon = GFX_GER_goal_dissolve_the_valkist_party
+		icon = GFX_goal_step_on_skull
 		cost = 1
 		prerequisite = {
 			focus = GER_deploy_the_army
@@ -142,7 +142,7 @@
 	}
 	shared_focus = {
 		id = GER_end_martial_law
-		icon = GFX_GER_goal_martial_law_ends
+		icon = GFX_goal_skull_treaty
 		cost = 4
 		prerequisite = {
 			focus = GER_dissolve_the_Valkist_party
@@ -157,7 +157,7 @@
 	}
 	shared_focus = {
 		id = GER_allow_local_elections
-		icon = GFX_GER_local_elections
+		icon = GFX_goal_DOM_Call_Special_Election
 		cost = 4
 		prerequisite = {
 			focus = GER_dissolve_the_Valkist_party
@@ -175,7 +175,7 @@
 	}
  	shared_focus = {
 		id = GER_propaganda
-		icon = GFX_GER_goal_propaganda
+		icon = GFX_goal_big_news
 		cost = 4
 		prerequisite = {
 			focus = GER_dissolve_the_Valkist_party
@@ -193,7 +193,7 @@
 	}
 	shared_focus = {
 		id = GER_watchful_eye_on_the_reichstag
-		icon = GFX_GER_goal_watchful_eye_reichstag
+		icon = GFX_goal_government_icon
 		cost = 4
 		prerequisite = {
 			focus = GER_end_martial_law
@@ -214,7 +214,7 @@
 	}
 	shared_focus = {
 		id = GER_the_Sphinx_velvet_glove
-		icon = GFX_GER_goal_Von_Seeckt_velvetglove
+		icon = GFX_goal_ideology_paternal_autocrat
 		cost = 2
 		prerequisite = {
 			focus = GER_watchful_eye_on_the_reichstag
@@ -234,7 +234,7 @@
 	}
 	shared_focus = {
 		id = GER_Hermann_dictatorship
-		icon = GFX_GER_goal_hermann_clique
+		icon = GFX_goal_ideology_national_populist
 		cost = 2
 		prerequisite = {
 			focus = GER_officers_seize_power
@@ -258,7 +258,7 @@
 	}
 	shared_focus = {
 		id = GER_epuration_of_the_state
-		icon = GFX_GER_goal_epuration_of_the_state
+		icon = GFX_focus_generic_self_management
 		cost = 5
 		prerequisite = {
 			focus = GER_Hermann_dictatorship
@@ -281,7 +281,7 @@
 	}
 	shared_focus = {
 		id = GER_create_the_gestapo
-		icon = GFX_GER_goal_create_the_gestapo
+		icon = GFX_goal_secret_agents
 		cost = 5
 		prerequisite = {
 			focus = GER_epuration_of_the_state
@@ -297,7 +297,7 @@
 	}
 	shared_focus = {
 		id = GER_roaming_freikorps
-		icon = GFX_GER_goal_roaming_freikorps
+		icon = GFX_goal_generic_axis_build_infantry
 		cost = 5
 		available = {
 			has_completed_focus = GER_create_the_gestapo
@@ -315,7 +315,7 @@
 	}
 	shared_focus = {
 		id = GER_blue_max_tour
-		icon = GFX_GER_goal_blue_max_tour
+		icon = GFX_goal_generic_railroad
 		cost = 5
 		prerequisite = {
 			focus = GER_create_the_gestapo
@@ -333,7 +333,7 @@
 	}
 	shared_focus = {
 		id = GER_charisma_and_strengh
-		icon = GFX_GER_goal_charisma_and_strengh
+		icon = GFX_goal_generic_political_pressure
 		cost = 2
 		prerequisite = {
 			focus = GER_blue_max_tour
@@ -350,7 +350,7 @@
 	}
 	shared_focus = {
 		id = GER_popular_insurection
-		icon = GFX_GER_goal_popular_insurection
+		icon = GFX_focus_HOL_deal_with_right
 		cost = 5
 		prerequisite = {
 			focus = GER_germany_in_flame
@@ -373,7 +373,7 @@
 	}
 	shared_focus = {
 		id = GER_fomation_of_popular_militias
-		icon = GFX_GER_goal_fomation_of_popular_militias
+		icon = GFX_goal_army_guy_2
 		cost = 5
 		prerequisite = {
 			focus = GER_popular_insurection
@@ -388,7 +388,7 @@
 	}
 	shared_focus = {
 		id = GER_purging_the_army
-		icon = GFX_GER_goal_purging_the_army
+		icon = GFX_goal_backstab
 		cost = 6
 		prerequisite = {
 			focus = GER_popular_insurection
@@ -410,7 +410,7 @@
 	}
 	shared_focus = {
 		id = GER_a_new_generation_of_politicians
-		icon = GFX_GER_goal_a_new_generation_of_politicians
+		icon = GFX_goal_conspiracy
 		cost = 5
 		prerequisite = {
 			focus = GER_popular_insurection
@@ -428,7 +428,7 @@
 	}
 	shared_focus = {
 		id = GER_stabilize_the_country
-		icon = GFX_GER_goal_GER_stabilize_the_country
+		icon = GFX_goal_Centralised_Government
 		cost = 5
 		prerequisite = {
 			focus = GER_fomation_of_popular_militias
@@ -450,7 +450,7 @@
 	}
 	shared_focus = {
 		id = GER_freedom_of_press
-		icon = GFX_GER_goal_freedom_of_press
+		icon = GFX_goal_big_news
 		cost = 2
 		prerequisite = {
 			focus = GER_stabilize_the_country
@@ -469,7 +469,7 @@
 	}
 	shared_focus = {
 		id = GER_freedom_of_speech
-		icon = GFX_GER_goal_freedom_of_speech
+		icon = GFX_goal_volunteer_alliance
 		cost = 2
 		prerequisite = {
 			focus = GER_stabilize_the_country
@@ -488,7 +488,7 @@
 	}
 	shared_focus = {
 		id = GER_freedom_of_religion
-		icon = GFX_GER_goal_freedom_of_religion
+		icon = GFX_BEL_Improve_Catholic_Relations
 		cost = 2
 		prerequisite = {
 			focus = GER_stabilize_the_country
@@ -507,7 +507,7 @@
 	}
 	shared_focus = {
 		id = GER_A_new_and_better_Germany
-		icon = GFX_GER_goal_a_new_and_better_Germany
+		icon = GFX_goal_liberty
 		cost = 4
 		prerequisite = {
 			focus = GER_freedom_of_press
@@ -540,7 +540,7 @@
 
 	shared_focus = {
 		id = GER_new_german_army
-		icon = GFX_GER_goal_new_german_army
+		icon = GFX_goal_generic_axis_build_infantry
 		cost = 4
 		available = {
 			OR   {
@@ -561,7 +561,7 @@
 	}
 	shared_focus = {
 		id = GER_modern_army
-		icon = GFX_GER_goal_new_wehrmacht
+		icon = GFX_goal_offensive_army
 		cost = 5
 		prerequisite = {
 			focus = GER_new_german_army
@@ -583,7 +583,7 @@
 	}
 	shared_focus = {
 		id = GER_promote_mechanization
-		icon = GFX_GER_goal_mechanization
+		icon = GFX_goal_generic_army_motorized
 		cost = 8
 		prerequisite = {
 			focus = GER_modern_army
@@ -602,7 +602,7 @@
 	}
 	shared_focus = {
 		id = GER_new_face_of_war
-		icon = GFX_GER_goal_Blitzkrieg
+		icon = GFX_goal_generic_army_doctrines
 		cost = 8
 		prerequisite = {
 			focus = GER_promote_mechanization
@@ -621,7 +621,7 @@
 	}
 	shared_focus = {
 		id = GER_advanced_repair_shops
-		icon = GFX_GER_goal_advanced_repair_shops
+		icon = GFX_goal_generic_production2
 		cost = 8
 		prerequisite = {
 			focus = GER_promote_mechanization
@@ -639,7 +639,7 @@
 	}
 	shared_focus = {
 		id = GER_signal_compagnies
-		icon = GFX_GER_goal_signal_compagnies
+		icon = GFX_goal_radio
 		cost = 8
 		prerequisite = {
 			focus = GER_new_face_of_war
@@ -660,7 +660,7 @@
 	}
 	shared_focus = {
 		id = GER_veterants_army
-		icon = GFX_GER_goal_Imperial_army
+		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 5
 		prerequisite = {
 			focus = GER_new_german_army
@@ -689,7 +689,7 @@
 	}
 	shared_focus = {
 		id = GER_promote_experimented_officers
-		icon = GFX_GER_goal_promote_experience_officers
+		icon = GFX_focus_ger_oppose_hitler
 		cost = 5
 		prerequisite = {
 			focus = GER_veterants_army
@@ -703,7 +703,7 @@
 	}
 	shared_focus = {
 		id = GER_motorized_artillery
-		icon = GFX_GER_goal_Wurfrahmen
+		icon = GFX_goal_generic_army_artillery2
 		cost = 8
 		prerequisite = {
 			focus = GER_promote_experimented_officers
@@ -721,7 +721,7 @@
 	}
 	shared_focus = {
 		id = GER_anti_tank_anti_air
-		icon = GFX_GER_goal_anti_air_anti_tank
+		icon = GFX_goal_anti_air
 		cost = 12
 		prerequisite = {
 			focus = GER_promote_experimented_officers
@@ -739,7 +739,7 @@
 	}
 	shared_focus = {
 		id = GER_revisiting_the_shovel
-		icon = GFX_GER_goal_shovel
+		icon = GFX_goal_generic_construction2
 		cost = 8
 		prerequisite = {
 			focus = GER_motorized_artillery
@@ -760,7 +760,7 @@
 	}
 	shared_focus = {
 		id = GER_peoples_army
-		icon = GFX_GER_goal_Volksarmee
+		icon = GFX_goal_intergrate_the_militia
 		cost = 5
 		prerequisite = {
 			focus = GER_new_german_army
@@ -782,7 +782,7 @@
 	}
 	shared_focus = {
 		id = GER_promote_innovative_though
-		icon = GFX_GER_goal_innovative_though
+		icon = GFX_goal_brain
 		cost = 5
 		prerequisite = {
 			focus = GER_peoples_army
@@ -801,7 +801,7 @@
 	}
 	shared_focus = {
 		id = GER_carring_for_the_wounded
-		icon = GFX_GER_goal_carring_for_wounded
+		icon = GFX_goal_generic_medical
 		cost = 8
 		prerequisite = {
 			focus = GER_promote_innovative_though
@@ -820,7 +820,7 @@
 	}
 	shared_focus = {
 		id = GER_logistics_of_men
-		icon = GFX_GER_goal_logistics_of_men
+		icon = GFX_goal_generic_more_territorial_claims
 		cost = 8
 		prerequisite = {
 			focus = GER_promote_innovative_though
@@ -838,7 +838,7 @@
 	}
 	shared_focus = {
 		id = GER_the_guns_of_the_decade
-		icon = GFX_GER_goal_new_gun
+		icon = GFX_goal_generic_small_arms
 		cost = 8
 		prerequisite = {
 			focus = GER_carring_for_the_wounded
@@ -867,7 +867,7 @@
 	
 	shared_focus = {
 		id = GER_Luftwaffe
-		icon = GFX_GER_goal_luftwaffe
+		icon = GFX_goal_generic_build_airforce
 		cost = 4
 		x = 25
 		y = 6
@@ -889,7 +889,7 @@
 	}
 	shared_focus = {
 		id = GER_close_air_support
-		icon = GFX_GER_goal_close_air_support
+		icon = GFX_goal_generic_CAS
 		cost = 8
 		prerequisite = {
 			focus = GER_Luftwaffe
@@ -911,7 +911,7 @@
 	}
 	shared_focus = {
 		id = GER_close_air_support_doctrine
-		icon = GFX_GER_goal_stuka
+		icon = GFX_goal_generic_air_doctrine
 		cost = 8
 		prerequisite = {
 			focus = GER_close_air_support
@@ -930,7 +930,7 @@
 	}
 	shared_focus = {
 		id = GER_fighter
-		icon = GFX_GER_goal_messerchimits
+		icon = GFX_goal_generic_air_fighter
 		cost = 8
 		prerequisite = {
 			focus = GER_close_air_support
@@ -949,7 +949,7 @@
 	}
 	shared_focus = {
 		id = GER_goal_paratroopers
-		icon = GFX_GER_goal_fallschimjagers
+		icon = GFX_focus_generic_paratrooper
 		cost = 8
 		prerequisite = {
 			focus = GER_Operational_integrity
@@ -969,7 +969,7 @@
 	}
 	shared_focus = {
 		id = GER_Operational_integrity
-		icon = GFX_GER_goal_strategic_bomber
+		icon = GFX_goal_generic_occupy_start_war
 		cost = 8
 		prerequisite = {
 			focus = GER_Luftwaffe
@@ -990,7 +990,7 @@
 	}
 	shared_focus = {
 		id = GER_heavy_fighter
-		icon = GFX_GER_goal_bf110
+		icon = GFX_focus_usa_escort_fighters
 		cost = 8
 		prerequisite = {
 			focus = GER_Operational_integrity
@@ -1009,7 +1009,7 @@
 	}
 	shared_focus = {
 		id = GER_tactical_bomber
-		icon = GFX_GER_goal_he111
+		icon = GFX_goal_generic_air_bomber
 		cost = 8
 		prerequisite = {
 			focus = GER_Operational_integrity
@@ -1028,7 +1028,7 @@
 	}
 	shared_focus = {
 		id = GER_doctrine_bonus_OI
-		icon = GFX_GER_goal_doctrines
+		icon = GFX_goal_generic_air_doctrine
 		cost = 8
 		prerequisite = {
 			focus = GER_heavy_fighter
@@ -1049,7 +1049,7 @@
 	}
 	shared_focus = {
 		id = GER_goerings_reform
-		icon = GFX_GER_goal_Goering_reforms
+		icon = GFX_goal_generic_air_production
 		cost = 8
 		available = {
 			has_government = national_populist
@@ -1070,7 +1070,7 @@
 	}
 	shared_focus = {
 		id = GER_goal_inest_in_nrw_technologies
-		icon = GFX_GER_goal_fund_reseach
+		icon = GFX_goal_generic_scientific_exchange
 		cost = 8
 		prerequisite = {
 			focus = GER_goerings_reform
@@ -1084,7 +1084,7 @@
 	}
 	shared_focus = {
 		id = GER_doctrine_bonus_CAS
-		icon = GFX_GER_goal_doctrines
+		icon = GFX_goal_generic_position_armies
 		cost = 8
 		prerequisite = {
 			focus = GER_close_air_support_doctrine
@@ -1107,7 +1107,7 @@
 
 	shared_focus = {
 		id = GER_expand_the_ministro_of_aviation
-		icon = GFX_GER_goal_expand_the_minister_of_aviation
+		icon = GFX_goal_checkmate
 		cost = 8
 		prerequisite = {
 			focus = GER_goerings_reform
@@ -1121,7 +1121,7 @@
 	}
 	shared_focus = {
 		id = GER_plane_of_the_decade
-		icon = GFX_GER_goal_breaking_barrier_of_sound
+		icon = GFX_focus_rocketry
 		cost = 8
 		prerequisite = {
 			focus = GER_goal_inest_in_nrw_technologies
@@ -1149,7 +1149,7 @@
 
 	shared_focus = {
 		id = GER_Kriegsmarine
-		icon = GFX_GER_goal_kriegsmarine
+		icon = GFX_goal_generic_build_navy
 		cost = 4
 		available = {
 			OR = {
@@ -1171,7 +1171,7 @@
 	}
 	shared_focus = {
 		id = GER_pride_of_germany
-		icon = GFX_GER_goal_super_heavu_battleship
+		icon = GFX_goal_generic_navy_battleship3
 		cost = 8
 		prerequisite = {
 			focus = GER_Kriegsmarine
@@ -1193,7 +1193,7 @@
 	}
 	shared_focus = {
 		id = GER_heavy_cruisers
-		icon = GFX_GER_goal_heavy_cruiser
+		icon = GFX_goal_generic_navy_cruiser
 		cost = 8
 		prerequisite = {
 			focus = GER_pride_of_germany
@@ -1208,7 +1208,7 @@
 	}
 	shared_focus = {
 		id = GER_superheavy_battleships
-		icon = GFX_GER_goal_super_heavy_battleships
+		icon = GFX_goal_generic_navy_battleship3alt
 		cost = 8
 		prerequisite = {
 			focus = GER_pride_of_germany
@@ -1229,7 +1229,7 @@
 	}
 	shared_focus = {
 		id = GER_biggest_guns_we_have
-		icon = GFX_GER_goal_biggest_guns
+		icon = GFX_goal_poland_goal
 		cost = 4
 		prerequisite = {
 			focus = GER_heavy_cruisers
@@ -1250,7 +1250,7 @@
 	}
 	shared_focus = {
 		id = GER_innovation_carrier
-		icon = GFX_GER_goal_carrier_innovation
+		icon = GFX_goal_generic_coastal_navy2
 		cost = 8
 		prerequisite = {
 			focus = GER_Kriegsmarine
@@ -1272,7 +1272,7 @@
 	}
 	shared_focus = {
 		id = GER_cruisers
-		icon = GFX_GER_goal_destroyer
+		icon = GFX_goal_generic_navy_cruiser
 		cost = 8
 		prerequisite = {
 			focus = GER_innovation_carrier
@@ -1286,7 +1286,7 @@
 	}
 	shared_focus = {
 		id = GER_carrier_protoype
-		icon = GFX_GER_goal_prototype_carrier
+		icon = GFX_goal_generic_navy_carrier
 		cost = 8
 		prerequisite = {
 			focus = GER_innovation_carrier
@@ -1309,7 +1309,7 @@
 	}
 	shared_focus = {
 		id = GER_naval_bomber
-		icon = GFX_GER_goal_naval_bomber
+		icon = GFX_goal_generic_air_naval_bomber
 		cost = 4
 		prerequisite = {
 			focus = GER_cruisers
@@ -1331,7 +1331,7 @@
 	}
 	shared_focus = {
 		id = GER_silent_fleet
-		icon = GFX_GER_goal_silent_fleet
+		icon = GFX_goal_generic_navy_submarine
 		cost = 8
 		prerequisite = {
 			focus = GER_Kriegsmarine
@@ -1353,7 +1353,7 @@
     }
 	shared_focus = {
 		id = GER_patrolling_the_north_sea
-		icon = GFX_GER_goal_northsea_patrol
+		icon = GFX_goal_generic_navy_battleship
 		cost = 8
 		prerequisite = {
 			focus = GER_silent_fleet
@@ -1375,7 +1375,7 @@
 	}
 	shared_focus = {
 		id = GER_speerheading_submarine_technology
-		icon = GFX_GER_goal_speerheading_submarine_technology
+		icon = GFX_goal_generic_navy_submarine
 		cost = 8
 		prerequisite = {
 			focus = GER_silent_fleet
@@ -1397,7 +1397,7 @@
 	}
 	shared_focus = {
 		id = GER_armement_submarines
-		icon = GFX_GER_goal_torpedoes
+		icon = GFX_goal_generic_occupy_start_war
 		cost = 4
 		prerequisite = {
 			focus = GER_patrolling_the_north_sea
@@ -1418,7 +1418,7 @@
 	}
 	shared_focus = {
 		id = GER_invest_dockyards
-		icon = GFX_GER_goal_docks
+		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 6
 		prerequisite = {
 			focus = GER_biggest_guns_we_have
@@ -1523,7 +1523,7 @@
 
 	shared_focus = {
 		id = GER_Germany_in_Europe
-		icon = GFX_GER_goal_germanys_place_in_europe
+		icon = GFX_goal_volunteer_alliance
 		cost = 4
 		x = 34
 		y = 10
@@ -1541,7 +1541,7 @@
 	}
 	shared_focus = {
 		id = GER_expantionism
-		icon = GFX_GER_goal_expantionism
+		icon = GFX_goal_generic_attack_allies
 		cost = 4
 		available = {
             has_government = national_populist
@@ -1562,7 +1562,7 @@
 	}
 	shared_focus = {
 		id = GER_Western_Europe
-		icon = GFX_GER_goal_Western_Europe
+		icon = GFX_focus_RAJ_lions_of_the_great_war
 		cost = 4
 		prerequisite = {
 			focus = GER_expantionism
@@ -1602,7 +1602,7 @@
 	}
 	shared_focus = {
 		id = GER_arm_the_loyalists
-		icon = GFX_GER_give_guns
+		icon = GFX_focus_ger_oppose_hitler
 		cost = 4
 		prerequisite = {
 			focus = GER_covert_operations
@@ -1616,7 +1616,7 @@
 	}
 	shared_focus = {
 		id = GER_old_contacts
-		icon = GFX_GER_old_contacts
+		icon = GFX_focus_generic_diplomatic_treaty
 		cost = 4
 		prerequisite = {
 			focus = GER_covert_operations
@@ -1650,7 +1650,7 @@
 	
 	shared_focus = {
 		id = GER_referundum_rheinland
-		icon = GFX_GER_goal_ultimatum_rhineland
+		icon = GFX_goal_RHI_referendum
 		cost = 4
 		prerequisite = {
 			focus = GER_Western_Europe
@@ -1674,7 +1674,7 @@
 
 	shared_focus = {
 		id = GER_war_with_france
-		icon = GFX_Target_France
+		icon = GFX_focus_attack_france
 		cost = 4
 		prerequisite = {
 			focus = GER_start_the_uprising
@@ -1695,7 +1695,7 @@
 	}
 	shared_focus = {
 		id = GER_throught_the_belux
-		icon = GFX_goal_Reclaim_Place
+		icon = GFX_goal_generic_attack_belgium
 		cost = 4
 		prerequisite = {
 			focus = GER_war_with_france
@@ -1719,7 +1719,7 @@
 	}
 	shared_focus = {
 		id = GER_throught_switzerland
-		icon = GFX_Target_Switzerland
+		icon = GFX_goal_generic_attack_switzerland
 		cost = 4
 		prerequisite = {
 			focus = GER_war_with_france
@@ -1755,7 +1755,7 @@
 	}
 	shared_focus = {
 		id = GER_the_austrian_coup
-		icon = GFX_GER_goal_coup_Austria
+		icon = GFX_goal_generic_attack_austria
 		cost = 4
 		prerequisite = {
 			focus = GER_central_Europe
@@ -1790,7 +1790,7 @@
 	}
 	shared_focus = {
 		id = GER_danish_intervention
-		icon = GFX_GER_goal_invasion_of_Denmark
+		icon = GFX_goal_generic_attack_denmark
 		cost = 4
 		prerequisite = {
 			focus = GER_central_Europe
@@ -1807,7 +1807,7 @@
 	}
 	shared_focus = {
 		id = GER_secure_the_scandinavia
-		icon = GFX_GER_goal_scandinavian_problem
+		icon = GFX_goal_generic_attack_scandinavia
 		cost = 4
 		prerequisite = {
 			focus = GER_danish_intervention
@@ -1821,7 +1821,7 @@
 	}
 	shared_focus = {
 		id = GER_invasion
-		icon = GFX_GER_goal_invasion_of_scandinavia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 4
 		prerequisite = {
 			focus = GER_secure_the_scandinavia
@@ -1841,7 +1841,7 @@
 	}
 	shared_focus = {
 		id = GER_guarentees_and_pacts
-		icon = GFX_GER_goal_guarentees_and_pacts
+		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 4
 		prerequisite = {
 			focus = GER_secure_the_scandinavia
@@ -1865,7 +1865,7 @@
 
 	shared_focus = {
 		id = GER_Eastern_Europe
-		icon = GFX_GER_goal_Eastern_European_planning
+		icon = GFX_goal_ukraine
 		cost = 4
 		prerequisite = {
 			focus = GER_expantionism
@@ -1883,7 +1883,7 @@
 	}
 	shared_focus = {
 		id = GER_Polish_invasion
-		icon = GFX_GER_goal_invasion_of_poland
+		icon = GFX_goal_generic_attack_poland
 		cost = 4
 		prerequisite = {
 			focus = GER_Eastern_Europe
@@ -1899,7 +1899,7 @@
 	}
 	shared_focus = {
 		id = GER_ennemies_on_all_side
-		icon = GFX_GER_goal_ennemies_on_all_sides
+		icon = GFX_goal_revolution
 		cost = 4
 		prerequisite = {
 			focus = GER_Polish_invasion
@@ -1923,7 +1923,7 @@
 	}
 	shared_focus = {
 		id = GER_friends_out_east
-		icon = GFX_GER_goal_USSR_trap
+		icon = GFX_goal_generic_national_unity
 		cost = 4
 		prerequisite = {
 			focus = GER_Polish_invasion
@@ -1946,7 +1946,7 @@
 	}
 	shared_focus = {
 		id = GER_strike_the_soviet_union
-		icon = GFX_Cutdown_the_Soviet_Union
+		icon = GFX_focus_attack_soviet
 		cost = 4
 		prerequisite = {
 			focus = GER_friends_out_east
@@ -1964,7 +1964,7 @@
 	}
 	shared_focus = {
 		id = GER_Realpolitics
-		icon = GFX_GER_goal_realpolitics
+		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 4
 		available = {
 			OR = {
@@ -1993,7 +1993,7 @@
 	}
 	shared_focus = {
 		id = GER_finding_allies
-		icon = GFX_GER_goal_finding_allies
+		icon = GFX_goal_anschluss
 		cost = 4
 		prerequisite = {
 			focus = GER_Realpolitics
@@ -2007,7 +2007,7 @@
 	}
 	shared_focus = {
 		id = GER_United_Kingdom
-		icon = GFX_GER_goal_united_kingdom
+		icon = GFX_focus_eng_the_sun_never_sets
 		cost = 4
 		available = {
 			OR = {
@@ -2034,7 +2034,7 @@
 	}
 	shared_focus = {
 		id = GER_hands_off_zones
-		icon = GFX_GER_goal_no_attacking_benelux
+		icon = GFX_goal_GER_hands_off_zones
 		cost = 4
 		prerequisite = {
 			focus = GER_United_Kingdom
@@ -2048,7 +2048,7 @@
 	}
 	shared_focus = {
 		id = GER_kings_visit_to_germany
-		icon = GFX_GER_goal_royal_visit_to_Germany
+		icon = GFX_focus_eng_god_save_the_king
 		cost = 4
 		prerequisite = {
 			focus = GER_United_Kingdom
@@ -2062,7 +2062,7 @@
 	}
 	shared_focus = {
 		id = GER_accept_british_naval_dominance
-		icon = GFX_GER_goal_accept_uk_naval_dominance
+		icon = GFX_focus_ger_accept_british_naval_dominance
 		cost = 4
 		prerequisite = {
 			focus = GER_hands_off_zones
@@ -2079,7 +2079,7 @@
 	}
 	shared_focus = {
 		id = GER_open_trade_space
-		icon = GFX_GER_goal_open_trade_uk_ger
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 4
 		prerequisite = {
 			focus = GER_accept_british_naval_dominance
@@ -2095,7 +2095,7 @@
 	}
 	shared_focus = {
 		id = GER_anglo_german_training
-		icon = GFX_GER_goal_uk_ger_training
+		icon = GFX_goal_GER_british_german_military_exchange
 		cost = 4
 		prerequisite = {
 			focus = GER_accept_british_naval_dominance
@@ -2111,7 +2111,7 @@
 	}
 	shared_focus = {
 		id = GER_German_claims
-		icon = GFX_GER_goal_German_claims
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		cost = 4
 		prerequisite = {
 			focus = GER_open_trade_space
@@ -2133,7 +2133,7 @@
 	}
 	shared_focus = {
 		id = GER_end_France
-		icon = GFX_GER_goal_invade_france
+		icon = GFX_focus_attack_france
 		cost = 4
 		prerequisite = {
 			focus = GER_German_claims
@@ -2150,7 +2150,7 @@
 	}
 	shared_focus = {
 		id = GER_end_Italy
-		icon = GFX_GER_goal_invade_italy
+		icon = GFX_goal_generic_attack_italy
 		cost = 4
 		prerequisite = {
 			focus = GER_German_claims
@@ -2167,7 +2167,7 @@
 	}
 	shared_focus = {
 		id = GER_monarchism_is_back_in_fashion
-		icon = GFX_GER_goal_monarchy_is_back_in_fashion
+		icon = GFX_focus_rom_royal_dictatorship
 		cost = 4
 		prerequisite = {
 			focus = GER_end_Italy
@@ -2186,7 +2186,7 @@
 	}
 	shared_focus = {
 		id = GER_end_the_soviet_threat
-		icon = GFX_GER_goal_end_the_soviet_union
+		icon = GFX_focus_attack_soviet
 		cost = 4
 		prerequisite = {
 			focus = GER_monarchism_is_back_in_fashion
@@ -2205,7 +2205,7 @@
 
 	shared_focus = {
 		id = GER_the_sovier_union
-		icon = GFX_GER_goal_The_Soviet_Union
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		available = {
 			has_government = libertarian_socialist
 		}
@@ -2225,7 +2225,7 @@
 	}
 	shared_focus = {
 		id = GER_technology_sharing
-		icon = GFX_GER_goal_technological_exchange
+		icon = GFX_focus_generic_socialist_science
 		cost = 4
 		prerequisite = {
 			focus = GER_the_sovier_union
@@ -2239,7 +2239,7 @@
 	}
 	shared_focus = {
 		id = GER_splitting_Eastern_Europe
-		icon = GFX_GER_goal_Eastern_Europe
+		icon = GFX_goal_generic_position_armies
 		cost = 4
 		prerequisite = {
 			focus = GER_technology_sharing
@@ -2253,7 +2253,7 @@
 	}
 	shared_focus = {
 		id = GER_Poland
-		icon = GFX_GER_goal_conquer_poland
+		icon = GFX_goal_poland
 		cost = 4
 		prerequisite = {
 			focus = GER_splitting_Eastern_Europe
@@ -2267,7 +2267,7 @@
 	}
 	shared_focus = {
 		id = GER_Soviet_Germans
-		icon = GFX_GER_goal_Russo_Germans
+		icon = GFX_goal_generic_improve_relations
 		cost = 4
 		prerequisite = {
 			focus = GER_Poland
@@ -2281,7 +2281,7 @@
 	}
 	shared_focus = {
 		id = GER_a_helping_hand
-		icon = GFX_GER_goal_a_helping_hand
+		icon = GFX_goal_commune_politics
 		cost = 4
 		prerequisite = {
 			focus = GER_Poland
@@ -2296,7 +2296,7 @@
 	}
 	shared_focus = {
 		id = GER_economic_cooperation
-		icon = GFX_GER_goal_economic_cooperation
+		icon = GFX_goal_revolution_tools
 		cost = 4
 		prerequisite = {
 			focus = GER_Soviet_Germans
@@ -2333,7 +2333,7 @@
 	}
 	shared_focus = {
 		id = GER_soviet_diplomatic_assistance
-		icon = GFX_GER_goal_soviet_help
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 4
 		prerequisite = {
 			focus = GER_economic_cooperation
@@ -2355,7 +2355,7 @@
 	
 	shared_focus = {
 		id = GER_the_revolution_in_France
-		icon = GFX_GER_goal_Revolution_in_french
+		icon = GFX_goal_comfrance
 		cost = 4
 		prerequisite = {
 			focus = GER_soviet_diplomatic_assistance
@@ -2372,7 +2372,7 @@
 	}
 	shared_focus = {
 		id = GER_the_revolution_in_Britain
-		icon = GFX_GER_goal_revolution_britain
+		icon = GFX_goal_uobritain
 		cost = 4
 		prerequisite = {
 			focus = GER_soviet_diplomatic_assistance
@@ -2389,7 +2389,7 @@
 	}
 	shared_focus = {
 		id = GER_red_dawn_over_europe
-		icon = GFX_GER_goal_red_dawn
+		icon = GFX_focus_ger_great_red_menace
 		cost = 4
 		prerequisite = {
 			focus = GER_the_revolution_in_France
