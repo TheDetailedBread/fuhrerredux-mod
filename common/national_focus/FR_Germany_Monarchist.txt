@@ -1,0 +1,796 @@
+focus_tree = {
+	id = FR_Germany_Monarchist
+	country = {
+		factor = 0
+	}
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 50 }
+
+    shared_focus = GER_assasination_dessler
+	shared_focus = GER_new_german_army
+	shared_focus = GER_Luftwaffe
+	shared_focus = GER_Kriegsmarine
+    shared_focus = GER_Germany_in_Europe
+	
+	focus = {
+		id = GER_preparing_the_path
+		icon = GFX_GER_goal_preparing_monarchistpath
+		cost = 5
+		x = 8
+		y = 11
+		available = {
+			has_government = authoritarian_democrat
+			has_idea = ger_benevolence_and_tolerance
+		}		
+	}
+	
+	focus = {
+		id = GER_federalize_the_country
+		icon = GFX_GER_goal_federalization
+		cost = 8
+		prerequisite = {
+			focus = GER_preparing_the_path
+		}
+		x = -5
+		y = 1
+		relative_position_id = GER_preparing_the_path
+		completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_federalize_the_country"
+		   	add_political_power = -60
+			56 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			57 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			55 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			52 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			50 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		    65 = {
+				add_extra_state_shared_building_slots = 1
+			}
+	    }
+	}
+	
+	focus = {
+		id = GER_reintroducing_imperial_symbolism
+		icon = GFX_GER_goal_reintroducing_imperial_icons
+		cost = 8
+		prerequisite = {
+			focus = GER_preparing_the_path
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_preparing_the_path
+		completion_reward = {
+		   log = "[GetDateText]: [Root.GetName]: Focus GER_reintroducing_imperial_symbolism"
+	       country_event = valkyrie.11
+	   	}
+	}
+
+	focus = {
+		id = GER_open_up_the_economy
+		icon = GFX_GER_goal_opening_economy
+		cost = 8
+		prerequisite = {
+			focus = GER_preparing_the_path
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_preparing_the_path
+		 	completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_open_up_the_economy"
+		 	add_ideas = export_focus 
+	    }
+	}
+	
+	focus = {
+		id = GER_reintroduce_the_constitution_of_1871
+		icon = GFX_GER_goal_reintroduce_1871
+		cost = 1
+		prerequisite = {
+			focus = GER_federalize_the_country
+		}
+		prerequisite = {
+			focus = GER_reintroducing_imperial_symbolism
+		}
+		prerequisite = {
+			focus = GER_open_up_the_economy
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_reintroducing_imperial_symbolism
+		completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_reintroduce_the_constitution_of_1871"
+	       	country_event = valkyrie.9
+		}
+	}
+	
+	focus = {
+		id = GER_Nations_without_crowns
+		icon = GFX_GER_goal_nations_without_crowns
+		cost = 5
+		prerequisite = {
+			focus = GER_reintroduce_the_constitution_of_1871
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_reintroduce_the_constitution_of_1871
+		completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_reintroduce_the_constitution_of_1871"
+	       	country_event = valkyrie.10
+		}
+	}
+	
+	focus = {
+		id = GER_kingdom_with_no_king
+		icon = GFX_GER_goal_crown_with_no_head
+		cost = 5
+		prerequisite = {
+			focus = GER_reintroduce_the_constitution_of_1871
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_reintroduce_the_constitution_of_1871
+	    completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_kingdom_with_no_king"
+	       	country_event = valkyrie.12
+		}
+	}
+	focus = {
+		id = GER_old_world_order_strikes_back
+		icon = GFX_GER_goal_old_world_order
+		cost = 1
+		prerequisite = {
+			focus = GER_Nations_without_crowns
+		}
+		prerequisite = {
+			focus = GER_kingdom_with_no_king
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_Nations_without_crowns
+	    completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_old_world_order_strikes_back"
+	       	country_event = valkyrie.13
+		}
+	}
+	focus = {
+		id = GER_elections
+		icon = GFX_GER_goal_democracy
+		cost = 1
+		prerequisite = {
+			focus = GER_old_world_order_strikes_back
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_old_world_order_strikes_back
+		available = {
+			has_global_flag = GER_DEM
+		}
+	    completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_elections"
+	       	country_event = valkyrie.14
+		}
+	}
+	
+	focus = {
+		id = GER_relax_state_control
+		icon = GFX_GER_goal_relax_state_control
+		cost = 5
+		prerequisite = {
+			focus = GER_open_up_the_economy
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_open_up_the_economy
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_wave_of_privatization"
+			add_timed_idea = {
+				idea = ger_relax_state_control
+				days = 180
+        	}
+	  	}
+	}
+	
+	focus = {
+		id = GER_wave_of_privatization
+		icon = GFX_GER_goal_bag_of_money
+		cost = 5
+		prerequisite = {
+			focus = GER_open_up_the_economy
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_open_up_the_economy
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_wave_of_privatization"
+			add_timed_idea = {
+				idea = ger_privatization
+				days = 180
+        	}
+	  	}
+	}
+	
+	focus = {
+		id = GER_cooperation_militaro_industrial_complex
+		icon = GFX_GER_goal_military_industrial_complex
+		cost = 5
+		prerequisite = {
+			focus = GER_relax_state_control
+		}
+		prerequisite = {
+			focus = GER_wave_of_privatization
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_wave_of_privatization
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_cooperation_militaro_industrial_complex"
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+
+	focus = {
+		id = GER_Better_conditions_for_workers
+		icon = GFX_GER_goal_worker_rights
+		cost = 6
+		prerequisite = {
+			focus = GER_cooperation_militaro_industrial_complex
+		}
+		x = -3
+		y = 1
+		relative_position_id = GER_cooperation_militaro_industrial_complex
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_Better_conditions_for_workers"
+		 	add_ideas = { ger_worker_conditions }
+		}
+	}	
+	
+	focus = {
+		id = GER_modernizing_the_roads
+		icon = GFX_GER_goal_road_modernization
+		cost = 6
+		prerequisite = {
+			focus = GER_cooperation_militaro_industrial_complex
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_cooperation_militaro_industrial_complex
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_modernizing_the_roads"
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = GER 
+					is_controlled_by = GER
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+		id = GER_airports
+		icon = GFX_GER_goal_building_airports
+		cost = 5
+		prerequisite = {
+			focus = GER_modernizing_the_roads
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_modernizing_the_roads
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_airports"
+			59 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			55 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			50 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+	 	}
+  	}
+  
+	focus = {
+		id = GER_harbors
+		icon = GFX_GER_goal_harbors
+		cost = 5
+		prerequisite = {
+			focus = GER_modernizing_the_roads
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_modernizing_the_roads
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_harbors"
+      		56 = {
+				if = {
+					limit = {
+						is_owned_by = GER
+					}
+					add_building_construction = {
+						type = naval_base
+						province = 241
+						level = 2
+						instant_build = yes
+					}
+                   }
+            	}
+	  		61 = {
+				if = {
+					limit = {
+						is_owned_by = GER
+					}
+					add_building_construction = {
+						type = naval_base
+						province = 321
+						level = 2
+						instant_build = yes
+					}
+                }
+            }
+		}
+	}
+	
+	focus = {
+		id = GER_subsidising_heavy_industry
+		icon = GFX_GER_goal_heavy_industry
+		cost = 6
+		prerequisite = {
+			focus = GER_cooperation_militaro_industrial_complex
+		}
+		x = 5
+		y = 1
+		relative_position_id = GER_cooperation_militaro_industrial_complex
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_subsidising_heavy_industry"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    	random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+		id = GER_government_build_work
+		icon = GFX_GER_goal_government_work
+		cost = 6
+		prerequisite = {
+			focus = GER_subsidising_heavy_industry
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_subsidising_heavy_industry
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_government_build_work"
+          	add_ideas = ger_public_work_programs
+    	}
+	}
+	
+	focus = {
+		id = GER_new_docks
+		icon = GFX_GER_goal_docks
+		cost = 6
+		prerequisite = {
+			focus = GER_government_build_work
+		}
+		prerequisite = {
+			focus = GER_harbors
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_harbors
+		completion_reward = {
+		 	log = "[GetDateText]: [Root.GetName]: Focus GER_new_docks"
+			random_owned_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+			    }
+			random_owned_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+			    }
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_reinvest_in_the_civilian_departement
+		icon = GFX_GER_goal_civilian_invest
+		cost = 6
+		prerequisite = {
+			focus = GER_government_build_work
+		}
+		prerequisite = {
+			focus = GER_subsidising_heavy_industry
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_government_build_work
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_reinvest_in_the_civilian_departement"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+		id = GER_fund_RnD
+		icon = GFX_GER_goal_fund_rnd
+		cost = 6
+		prerequisite = {
+			focus = GER_Better_conditions_for_workers
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_Better_conditions_for_workers
+		completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_fund_RnD"
+			add_research_slot = 1
+       	}
+	}
+	
+	focus = {
+		id = GER_safety_regulation
+		icon = GFX_GER_goal_safety_regulation
+		cost = 6
+		prerequisite = {
+			focus = GER_fund_RnD
+		}
+		x = -1
+		y = 1
+		relative_position_id = GER_fund_RnD
+		completion_reward = {
+		   	log = "[GetDateText]: [Root.GetName]: Focus GER_safety_regulation"
+    		swap_ideas = { remove_idea = ger_worker_conditions add_idea = ger_worker_conditions_2 }
+	    }
+	}
+	
+	focus = {
+		id = GER_better_tools
+		icon = GFX_GER_goal_better_tools
+		cost = 6
+		prerequisite = {
+			focus = GER_fund_RnD
+		}
+		x = 1
+		y = 1
+		relative_position_id = GER_fund_RnD
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_better_tools"
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.25
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_new_military_manufactories
+		icon = GFX_GER_goal_military_factories
+		cost = 6
+		prerequisite = {
+			focus = GER_subsidising_heavy_industry
+		}
+		x = 2
+		y = 1
+		relative_position_id = GER_subsidising_heavy_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_new_military_manufactories"
+			random_owned_state = {
+				limit = {
+					is_controlled_by = GER
+					is_core_of = GER
+					OR = {
+						industrial_complex > 0
+						arms_factory > 0
+					}
+				}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = GER
+					is_core_of = GER
+					OR = {
+						industrial_complex > 0
+						arms_factory > 0
+					}
+				}	
+				add_extra_state_shared_building_slots = 1
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = GER
+					is_core_of = GER
+					OR = {
+						industrial_complex > 0
+						arms_factory > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	
+	focus = {
+		id = GER_encourage_compagnies_to_invest
+		icon = GFX_GER_goal_incourage_invest
+		cost = 6
+		prerequisite = {
+			focus = GER_new_military_manufactories
+		}
+		available = {
+			has_political_power > 100
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_new_military_manufactories
+		completion_reward = {
+			add_political_power = -100
+			random_owned_state = {
+				limit = {
+					is_controlled_by = GER
+					is_core_of = GER
+					OR = {
+						industrial_complex > 0
+						arms_factory > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+	   	}
+  	}
+  
+	focus = {
+		id = GER_mechanization_farmlands
+		icon = GFX_GER_goal_mechanization_farmland
+		cost = 6
+		prerequisite = {
+			focus = GER_better_tools
+		}
+		prerequisite = {
+			focus = GER_fund_RnD
+		}
+		x = 0
+		y = 2
+		relative_position_id = GER_fund_RnD
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_mechanization_farmlands"
+	    	add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+     	}
+	}
+}
