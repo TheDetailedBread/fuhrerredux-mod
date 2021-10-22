@@ -7,7 +7,14 @@ ideas = {
 	## German Ideas ##
 
 	country = {
-	
+
+	    FRA_government_in_exile = {#added when France escapes to Algiers in GW2
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_government_in_exile"}
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				conscription_factor = -0.50
+			}
+		}
 		GER_political_comissars = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_political_comissars"}
 			picture = totalist_charta
@@ -17,14 +24,6 @@ ideas = {
 			}
 		}
 		
-		FRA_government_in_exile = {#added when France escapes to Algiers in GW2
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_government_in_exile"}
-			picture = tfv_can_conscription_crisis
-			modifier = {
-				conscription_factor = -0.50
-			}
-		}		
-		
 		GER_internal_education = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_internal_education"}
 			picture = generic_research_bonus
@@ -33,7 +32,6 @@ ideas = {
 				synth_resources = 0.1
 			}
 		}
-		
 		GER_external_education = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_external_education"}
 			picture = generic_research_bonus
@@ -42,7 +40,6 @@ ideas = {
 				land_doctrine = 0.1
 			}
 		}
-		
 		GER_public_bonus = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_public_bonus"}
 			picture = generic_research_bonus
@@ -50,7 +47,6 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-	
 		GER_valkist_scandinavia = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_valkist_scandinavia"}
 			picture = generic_fascism_drift_bonus
@@ -58,7 +54,6 @@ ideas = {
 				valkist_drift = 0.1
 			}
 		}
-		
 		FRA_german_sanctions = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_german_sanctions"}
 			picture = HUN_treaty_of_triannon
@@ -68,9 +63,8 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.05
 				production_factory_max_efficiency_factor = -0.1
-			}
-		}
-		
+            }
+        }
 		FRA_austerity_measures = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_austerity_measures"}
 			picture = HUN_treaty_of_triannon
@@ -1454,367 +1448,158 @@ ideas = {
 				land_reinforce_rate = -0.1
 			}
 		}
-	
-	
-	
-	ger_political_collapse = {
+        #########################################
 
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.30
-				political_power_factor = -0.30
-			}
-		}
+        #########################################
+        ger_political_collapse = {
+            picture = chi_war_of_resistance3
+            allowed = { original_tag = GER }
+            modifier = {
+                stability_factor = -0.30
+                political_power_factor = -0.30
+            }
+        }
 		
-	ger_political_collapse_2_g = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+	    ger_political_collapse_2_g = {
+			picture = chi_war_of_resistance3
+            allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.25
 				political_power_factor = -0.20
 			}
 		}
 		
-	 ger_political_collapse_3_g = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_political_collapse_3_g = {
+			picture = chi_war_of_resistance2
+            allowed = { original_tag = GER }
 			modifier = {
 				stability_factor = -0.15
 				political_power_factor = -0.15
 			}
 		}
 		
-	 ger_political_collapse_4_g = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_political_collapse_4_g = {
+			picture = chi_war_of_resistance1
+            allowed = { original_tag = GER }
 			modifier = {
 				stability_factor = -0.05
 				political_power_factor = -0.05
 			}
 		}
 		
-	 ger_charisma_and_strengh = {
-
-			picture = GER_charisma_strengh
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_charisma_and_strengh = {
+			picture = generic_intel_bonus
+            allowed = { original_tag = GER }
 			modifier = {
 				stability_factor = 0.10
 				political_power_factor = 0.05
 			}
 		}
 		
-	 ger_gestapo = {
-
-			picture = GER_gestapo
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_gestapo = {
+			picture = generic_spy_intel
+            allowed = { original_tag = GER }
 			modifier = {
-				
-		decryption_factor = 0.10
-		encryption_factor = 0.10
-		
+		        decryption_factor = 0.10
+		        encryption_factor = 0.10
 			}
 		}
 		
-	  ger_gestapo_2 = {
-
-			picture = ger_gestapo
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				
-		decryption_factor = 0.20
-		encryption_factor = 0.20
-		
+	    ger_gestapo_2 = {
+            picture = generic_spy_intel
+            allowed = { original_tag = GER }
+            modifier = {
+		        decryption_factor = 0.20
+		        encryption_factor = 0.20
 			}
 		}
-		
-		
-		
-
-		
-		
-		
-		
 		
 		ger_political_collapse_1_s = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = chi_war_of_resistance3
+            allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.25
 				political_power_factor = -0.30
 			}
 		}
 		
 		ger_political_collapse_2_s = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = chi_war_of_resistance2
+            allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.20
 				political_power_factor = -0.30
 			}
 		}
 		
 		ger_political_collapse_3_s = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = chi_war_of_resistance2
+            allowed = { original_tag = GER }
+            mmodifier = {
 				stability_factor = -0.10
 				political_power_factor = -0.30
 			}
 		}
 		
-	 ger_political_collapse_4_s = {
-
+	    ger_political_collapse_4_s = {
 			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+            allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.10
 				political_power_factor = -0.20
 			}
 		}
 		
-	 ger_political_collapse_5_s = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+	    ger_political_collapse_5_s = {
+			picture = chi_war_of_resistance
+            allowed = { original_tag = GER }
+            mmodifier = {
 				stability_factor = -0.10
 				political_power_factor = -0.10
 			}
 		}
 		
 		 ger_benevolence_and_tolerance = {
-
-			picture = GER_benevolence_and_tolerance
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = german_advisors
+			allowed = { original_tag = GER }
+            modifier = {
 				authoritarian_democrat_drift = 0.01
 				social_conservative_drift = 0.01
 				army_morale_factor = 0.05
 			}
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		ger_political_collapse_1_soc = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = chi_war_of_resistance3
+			allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.20
 				political_power_factor = -0.30
 			}
 		}
 		
 		ger_political_collapse_2_soc = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = chi_war_of_resistance2
+			allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.20
 				political_power_factor = -0.20
 			}
 		}
 		
 		ger_political_collapse_3_soc = {
-
-			picture = GER_germany_bleeds
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = chi_war_of_resistance
+			allowed = { original_tag = GER }
+            modifier = {
 				stability_factor = -0.10
 				political_power_factor = -0.10
 			}
 		}
 		
 		ger_new_socialist_revolution = {
-
-			picture = GER_socialist_revolution
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = NOR_uob_support_idea
+			allowed = { original_tag = GER }
+            modifier = {
 				collectivist_drift = 0.01
 				libertarian_socialist_drift = 0.01
 				social_democrat_drift = 0.01
@@ -1826,20 +1611,9 @@ ideas = {
 		}
 		
 		ger_new_socialist_revolution_2 = {
-
-			picture = GER_socialist_revolution_secured
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+			picture = NOR_uob_support_idea
+			allowed = { original_tag = GER }
+            modifier = {
 				collectivist_drift = 0.01
 				libertarian_socialist_drift = 0.03
 				social_democrat_drift = 0.02
@@ -1851,85 +1625,39 @@ ideas = {
 		}
 		
 		
-	 ger_privatization = {
-
-			picture = GER_privatization
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				
+	    ger_privatization = {
+			picture = capital_outflow
+			allowed = { original_tag = GER }
+            modifier = {
 				consumer_goods_factor = -0.05
 				production_factory_max_efficiency_factor = -0.1
 				production_speed_buildings_factor = 0.10
 			}
 		}
 		
-	 ger_relax_state_control = {
-
-			picture = GER_relax_state_control
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_relax_state_control = {
+			picture = generic_neutrality_drift_bonus
+			allowed = { original_tag = GER }
 			modifier = {
-				
 				consumer_goods_factor = -0.05
 				production_factory_max_efficiency_factor = -0.05
 				local_resources_factor = -0.05
 			}
 		}
 		
-	  ger_worker_conditions = {
-
-			picture = ger_worker_right
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
+	    ger_worker_conditions = {
+			picture = generic_production_bonus
+            allowed = { original_tag = GER }
+            modifier = {
 			    consumer_goods_factor = 0.01
 				industrial_capacity_factory = 0.02
 				production_factory_max_efficiency_factor = 0.02
 			}
 		}
 				
-	  ger_worker_conditions_2 = {
-
-			picture = GER_worker_right_improved
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_worker_conditions_2 = {
+			picture = generic_production_bonus
+            allowed = { original_tag = GER }
 			modifier = {
 			    consumer_goods_factor = 0.03
 				industrial_capacity_factory = 0.05
@@ -1937,65 +1665,27 @@ ideas = {
 			}
 		}
 		
-	  ger_public_work_programs = {
-
-			picture = GER_work_sign
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_public_work_programs = {
+			picture = ast_all_in
+            allowed = { original_tag = GER }
 			modifier = {
 			   production_speed_buildings_factor = 0.10
 			}
 		}
 		
-	
-
-
-	  ger_freikorps_formalized = {
-
-			picture = GER_paramilitary_gendarmerie
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	    ger_freikorps_formalized = {
+			picture = generic_reserve_divisions
+            allowed = { original_tag = GER }
 			modifier = {
-			
-			training_time_army_factor = -0.2
-            army_core_defence_factor = 0.1
-		    army_core_attack_factor = 0.1
-			
+                training_time_army_factor = -0.2
+                army_core_defence_factor = 0.1
+                army_core_attack_factor = 0.1
 			}
 		}	
 		
-	  ger_interservice_rivalry_air_strengthened = {
-	  
-	        picture = GER_airforce_strenghtened
-	  
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
+	    ger_interservice_rivalry_air_strengthened = {
+	        picture = generic_air_payment
+            allowed = { original_tag = GER }
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = -0.1
@@ -2003,25 +1693,12 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				research_speed_factor = -0.025
 				experience_gain_air = 0.15
-
 			}
 		}
 		
-		
-		 ger_charisma_and_strengh_2 = {
-
-			picture = GER_charisma_strengh
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		ger_charisma_and_strengh_2 = {
+			picture = generic_intel_bonus
+            allowed = { original_tag = GER }
 			modifier = {
 				stability_factor = 0.10
 				political_power_factor = 0.10
@@ -2030,19 +1707,8 @@ ideas = {
 		
 		
 		 ger_charisma_and_strengh_3 = {
-
-			picture = GER_charisma_strengh
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+			picture = generic_intel_bonus
+            allowed = { original_tag = GER }
 			modifier = {
 				stability_factor = 0.15
 				political_power_factor = 0.20
@@ -2050,41 +1716,18 @@ ideas = {
 		}
 		
 		 ger_charisma_and_strengh_4 = {
-
-			picture = GER_charisma_strengh
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+			picture = generic_intel_bonus
+            allowed = { original_tag = GER }
 			modifier = {
 				stability_factor = 0.15
 				political_power_factor = 0.25
 			}
 		}
 		
-	  ger_four_year_plan = {
-
-			picture = GER_four_year_plan
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	  	ger_four_year_plan = {
+			picture = ger_mefo_bills
+            allowed = { original_tag = GER }
 			modifier = {
-				
 				consumer_goods_factor = -0.05
 				conscription_factor = -0.20
 				production_speed_buildings_factor = 0.20
@@ -2092,62 +1735,26 @@ ideas = {
 		}
 		
 	   ger_agriculture = {
-
-			picture = GER_agriculture
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+			picture = generic_agrarian_reform
+            allowed = { original_tag = GER }
 			modifier = {
-
-				MONTHLY_POPULATION = 0.1
+				monthly_population = 0.1
 			}
 		}
 		
-	 GER_ready_for_total_war = {
-
-			picture = GER_ready_for_war
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		GER_ready_for_total_war = {
+			picture = generic_license_production
+            allowed = { original_tag = GER }
 			modifier = {
-			
 				consumer_goods_factor = 0.05
 				army_morale_factor = 0.1
 				land_reinforce_rate = 0.05
 			}
 		}
 		
-		
-		 GER_national_guard = {
-
-			picture = GER_national_guard
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		GER_national_guard = {
+			picture = chi_army_corruption2
+            allowed = { original_tag = GER }
 			modifier = {
 				conscription_factor = 0.02
 				army_morale_factor = 0.1
@@ -2158,20 +1765,9 @@ ideas = {
 			}
 		}
 		
-	   GER_Improved_National_Guard = {
-
-			picture = GER_national_guard
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	   	GER_Improved_National_Guard = {
+			picture = chi_army_corruption3
+			allowed = { original_tag = GER }
 			modifier = {
 				conscription_factor = 0.1
 				army_morale_factor = 0.1
@@ -2182,20 +1778,9 @@ ideas = {
 			}
 		}
 		
-	  GER_Federal_Army = {
-
-			picture = GER_german_army
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	  	GER_Federal_Army = {
+			picture = general_staff
+			allowed = { original_tag = GER }
 			modifier = {
 				army_org_Factor = 0.05
 				max_planning = 0.10
@@ -2203,20 +1788,9 @@ ideas = {
 			}
 		}
 		
-	 GER_Women_in_the_workforce = {
-
-			picture = GER_womens_in_factories
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+	 	GER_Women_in_the_workforce = {
+			picture = generic_production_bonus
+			allowed = { original_tag = GER }
 			modifier = {
 				conscription_factor = 0.1
 				consumer_goods_factor = -0.05
@@ -2224,41 +1798,17 @@ ideas = {
 			}
 		}
 		
-		
-	GER_Women_in_the_army = {
-
-			picture = GER_women_army
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		GER_Women_in_the_army = {
+			picture = generic_manpower_bonus
+			allowed = { original_tag = GER }
 			modifier = {
 				conscription_factor = 0.25
 				MONTHLY_POPULATION = -0.1
 			}
 		}
 		
-	GER_proud_volksarmee = {
-
-			picture = GER_proud_volksarmee
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		GER_proud_volksarmee = {
+			picture = UoB_militia_idea
 			modifier = {
 				army_org_Factor = 0.05
 				conscription = 0.005
@@ -2269,41 +1819,15 @@ ideas = {
 		}
 		
 		GER_Christian_society = {
-
-			picture = GER_protestant_socialist
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+			picture = IRE_catholic
 			modifier = {
-			
-            political_power_gain = 0.1
-			stability_factor = 0.1
-			
+            	political_power_gain = 0.1
+				stability_factor = 0.1
 			}
 		}
 		
 		GER_nationalistic_society = {
-
-			picture = GER_national_yet_socialist
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+			picture = GER_imperial_pride
 			modifier = {
 				army_core_defence_factor = 0.1
 				army_core_attack_factor = 0.1
@@ -2312,21 +1836,8 @@ ideas = {
 		}
 		
 		GER_socialist_nationalist = {
-
-			picture = GER_national_yet_socialist
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+			picture = generic_syndicalist_medal
 			modifier = {
-			
 			    political_power_gain = -0.15
 				war_support_factor = 0.1
 				research_speed_factor = -0.05
@@ -2337,20 +1848,8 @@ ideas = {
 			}
 		}
 		
-	GER_new_german_economy = {
-		
-		picture = GER_new_german_economy
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+		GER_new_german_economy = {
+			picture = jap_the_unthinkable_option
 			modifier = {
 			    production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
@@ -2362,20 +1861,8 @@ ideas = {
 			}
 		}
 		
-   GER_new_german_economy_2 = {
-		
-		picture = GER_new_german_economy
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
+   		GER_new_german_economy_2 = {
+			picture = GER_new_german_economy
 			modifier = {
 			    production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
@@ -2387,55 +1874,26 @@ ideas = {
 			}
 		}
 		
-		
-	GER_public_work_service = {
-		
-		picture = GER_work_sign
-
-			allowed = {
-				original_tag = GER
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		GER_public_work_service = {
+			picture = generic_build_infrastructure
 			modifier = {
-			
-			conscription_factor = -0.10
-			production_speed_buildings_factor = 0.1
-			
-			 }
-		  }
-		  
-		  
-	GER_ministry_of_war_and_armement_production = {
-		
-		picture = GER_armement_and_war
-
-			allowed = {
-				original_tag = GER
+				conscription_factor = -0.10
+				production_speed_buildings_factor = 0.1
 			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		}
+		  
+		GER_ministry_of_war_and_armement_production = {
+			picture = generic_license_production
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.05
 			
-			 }
-		  }
+			}
+		}
 		  
-		  
-		  ENG_german_deal = {
+		ENG_german_deal = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_german_deal"}
-			picture = ger_trade_uk
+			picture = can_wartime_prices_and_trade_board
 			cancel = {
 				OR = {
 					ENG = {
@@ -2477,9 +1935,10 @@ ideas = {
 				}
 			}
 		}
+
 		GER_english_deal = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_english_deal"}
-			picture = ger_trade_uk
+			picture = can_wartime_prices_and_trade_board
 			cancel = {
 				OR = {
 					GER = {
@@ -2524,7 +1983,7 @@ ideas = {
 		
 		GER_shade_of_the_ern = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_shade_of_the_ern"}
-			picture = ger_chained_kriegsmarine
+			picture = generic_coastal_defense_ships
 			cancel = {
 				OR = {
 					GER = {
@@ -2555,49 +2014,1334 @@ ideas = {
 			}
 		}
 		
-	GER_german_soviet_exchange = {
-		
-		picture = ger_soviet_german_exchange
-
-			allowed = {
-				original_tag = GER
+		GER_german_soviet_exchange = {
+			picture = generic_secret_police
+            modifier = {
+				research_speed_factor = 0.05
+				MONTHLY_POPULATION = 0.05
+				political_power_gain = -0.10
 			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
+		}
+	
+		GER_comecon = {
+			picture = FRA_communard_spirit
 			modifier = {
-			
-            research_speed_factor = 0.05
-			MONTHLY_POPULATION = 0.05
-			political_power_gain = -0.10
-			
-			 }
+            	production_factory_max_efficiency_factor = 0.1
+				political_power_gain = -0.10
+	    	}
+		}
+  	}
+
+	head_of_government = {
+		GER_Otto_Grotewol_hog_lib = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_ambitious_union_boss
+			}
+		}
+		GER_Otto_Braun_hog_sde = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_democrat
+				hog_happy_amateur
+			}
+		}
+		GER_Erich_Koch_Weser_hog_sli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_liberal
+				hog_pragmatic_statesman
+			}
+		}
+		GER_Hans_von_Raumer_hog_mli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				market_liberal
+				hog_reformist_soldier
+			}
+		}
+		GER_Wilhelm_Marx_hog_sco = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_conservative
+				hog_silent_workhorse
+			}
+		}
+		GER_Ferdinand_von_Bredow_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_old_general
+			}
+		}
+		GER_Max_von_Baden_hog_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_naive_optimist
+			}
+		}
+		GER_Oskar_von_Hindenburg_hog_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_accomplished_diplomat
+			}
+		}
+		GER_Hans_Juergen_Graf_von_Blumenthal_hog_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_charismatic_charmer
+			}
+		}
+		GER_Wilhelm_Ritter_von_Leeb_hog_pau = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_flamboyant_tough_guy
+			}
+		}
+		GER_Wilhelm_Frick_hog_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				national_populist
+				hog_freikorps_veteran
+			}
+		}
+		GER_Heinrich_Behrmann_hog_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				national_populist
+				hog_local_tyrant
+			}
+		}
+		GER_Hermann_von_Goering_hog_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				national_populist
+				hog_old_air_marshal
+			}
+		}
+		GER_Rudolf_Sebottendorf_hog_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				valkist
+				hog_happy_amateur
+			}
+		}
+		GER_Julius_Schreck_hog_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				valkist
+				hog_reformist_soldier
+			}
+		}
+		GER_Erich_Schmidt_hog_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				valkist
+				hog_flamboyant_tough_guy
+			}
+		}
+		GER_Anton_Arco_auf_Valley_hog_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				valkist
+				hog_backroom_backstabber
+			}
+		}
+	}
+
+	foreign_minister = {
+		GER_Ernst_Toller_for_col = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				collectivist
+				for_apologetic_clerk
+			}
+		}
+		GER_Paul_Levi_for_col = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				collectivist
+				for_ideological_crusader
+			}
+		}
+		GER_Heinrich_Mann_for_lib = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_biased_intellectual
+			}
+		}
+		GER_Hans_Vogel_for_sde = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_democrat
+				for_general_staffer
+			}
+		}
+		GER_Albert_Dufour_Feronce_for_sli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_liberal
+				for_relations_expert
+			}
+		}
+		GER_Wilhelm_Roepke_for_mli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				market_liberal
+				for_great_compromiser
+			}
+		}
+		GER_Heinrich_von_Brentano_for_sco = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_conservative
+				for_hawkish_intervener
+			}
+		}
+		GER_Friedrich_Werner_von_der_Schulenberg_for_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_apologetic_clerk
+			}
+		}
+		GER_Walther_von_Brauchistch_for_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_foreign_sympathizer
+			}
+		}
+		GER_Franz_von_Papen_for_pau = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_moderate_among_radicals
+			}
+		}
+		GER_Konstantin_von_Neurath_for_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				national_populist
+				for_apologetic_clerk
+			}
+		}
+		GER_Max_Amann_for_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				valkist
+				for_general_staffer
+			}
+		}
+		GER_Alfred_Rosenburg_for_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				valkist
+				for_relations_expert
+			}
+		}
 	}
 	
-	GER_comecon = {
-		
-		picture = ger_comecon
-
-			allowed = {
-				original_tag = GER
+	economy_minister = {
+		GER_Ernst_Rohm_eco_van = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				vanguardist
+				eco_planned_economy_proponent
 			}
-
-			allowed_civil_war = {
-				always = yes
+		}
+		GER_Willi_Munzenburg_eco_van = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				vanguardist
+				eco_reformer
 			}
-
-			removal_cost = -1
-			
-		modifier = {
-			
-            production_factory_max_efficiency_factor = 0.1
-			political_power_gain = -0.10
-			
-	    }
+		}
+		GER_Willi_Stoph_eco_col = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				collectivist
+				eco_imbedded_unioneer
+			}
+		}
+		GER_Lujo_Brentano_eco_lib = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_reformer
+			}
+		}
+		GER_Kurt_Schumacher_eco_sde = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_democrat
+				eco_socred_economist
+			}
+		}
+		GER_Rudolf_Wissel_eco_sde = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_democrat
+				eco_the_minister_for_everything
+			}
+		}
+		GER_Hermann_Dietrich_eco_sli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_liberal
+				eco_trade_proponent
+			}
+		}
+		GER_Julius_Curtis_eco_mli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				market_liberal
+				eco_construction_magnate
+			}
+		}
+		GER_Adam_Stregerwald_eco_sco = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_conservative
+				eco_balanced_budget_economy
+			}
+		}
+		GER_Hjalmar_Schacht_eco_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_mixed_economy
+			}
+		}
+		GER_Paul_Lejune_Jung_eco_pau = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_military_entrepreneur
+			}
+		}
+		GER_Alfred_Hugenberg_eco_pau = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_devoted_monopoly_buster
+			}
+		}
+		GER_Gregor_Strasser_eco_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				valkist
+				eco_industrialiser
+			}
+		}
+		GER_Gernhard_Rossbach_eco_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				valkist
+				eco_balanced_budget_economy
+			}
+		}
+		GER_Otto_Strasser_eco_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				valkist
+				eco_reformer
+			}
+		}
+		GER_Adolf_Hitler_eco_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				valkist
+				eco_administrative_genius
+			}
+		}
 	}
-  }
+
+	security_minister = {
+		GER_Ludwig_Renn_sec_van = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				vanguardist
+				sec_back_stabber
+			}
+		}
+		GER_Eugen_Levine_sec_col = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				collectivist
+				sec_crime_fighter
+			}
+		}
+		GER_Hilde_Benjamin_sec_col = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				collectivist
+				sec_efficient_sociopath
+			}
+		}
+		GER_Otto_Grotewohl_sec_lib = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_regionalist
+			}
+		}
+		GER_Gustav_Noske_sec_sde = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_democrat
+				sec_silent_lawyer
+			}
+		}
+		GER_Otto_Gessler_sec_sli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+		GER_Wilhelm_Abegg_sec_mli = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				market_liberal
+				sec_great_soul
+			}
+		}
+		GER_Wilhelm_Goerner_sec_sco = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_conservative
+				sec_driven_recruiter
+			}
+		}
+		GER_Arthur_Nebe_sec_sco = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_conservative
+				sec_man_of_the_people
+			}
+		}
+		GER_Fritz_Dietlog_Schulenburg_sec_ade = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_secret_police_chief
+			}
+		}
+		GER_Roland_Freisler_sec_pau = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_crime_fighter
+			}
+		}
+		GER_Wilhelm_von_Gayl_sec_pau = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_efficient_sociopath
+			}
+		}
+		GER_Rudolf_Hess_sec_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				national_populist
+				sec_driven_recruiter
+			}
+		}
+		GER_Kurt_Deluge_sec_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				national_populist
+				sec_secret_police_chief
+			}
+		}
+		GER_Rudolf_Diels_sec_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				national_populist
+				sec_back_stabber
+			}
+		}
+		GER_Walter_Caspari_sec_npo = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				national_populist
+				sec_silent_lawyer
+			}
+		}
+		GER_Hermann_Ehrhardt_sec_val = {
+			allowed = { original_tag = GER }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				valkist
+				sec_secret_police_chief
+			}
+		}
+	}
+
+	chief_of_staff = {
+		GER_Hans_Speidel_cos_sco = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_staff
+				social_conservative
+				cos_school_of_fire_support
+			}
+		}
+		GER_Adolf_Heusinger_cos_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_mass_combat
+			}
+		}
+		GER_Erich_von_Manstein_cos_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_defence
+			}
+		}
+		GER_Erwin_von_Witzleben_cos_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_psychology
+			}
+		}
+		GER_Heinz_Guderian_cos_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_manoeuvre
+			}
+		}
+		GER_Ludwig_Beck_cos_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_commando_operations
+			}
+		}
+	}
+
+	chief_of_army = {
+		GER_Hans_Speidel_carm_sco = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_army
+				social_conservative
+				carm_doctrine_of_autonomy
+			}
+		}
+		GER_Adolf_Heusinger_carm_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_army 
+				authoritarian_democrat
+				carm_elastic_defence_doctrine
+			}
+		}
+		GER_Erich_Hoepner_carm_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_army
+				authoritarian_democrat
+				carm_armoured_spearhead_doctrine
+			}
+		}
+		GER_Erwin_von_Witzleben_carm_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_army
+				authoritarian_democrat
+				carm_guns_and_butter_doctrine
+			}
+		}
+		GER_Walther_von_Brauchitsch_carm_pau = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_static_defence_doctrine
+			}
+		}
+		GER_Wilhelm_Ritter_von_Leeb_carm_pau = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		GER_Erich_Koehler_cnav_mli = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_navy
+				market_liberal
+				cnav_power_projection_doctrine
+			}
+		}
+		GER_Karl_Doenitz_cnav_sco = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_navy
+				social_conservative
+				cnav_indirect_approach_doctrine
+			}
+		}
+		GER_Erich_Raeder_cnav_pau = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_navy
+				paternal_autocrat
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		GER_Alfred_Buelowius_cair_sco = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_air_force
+				social_conservative
+				cair_battlefield_support_doctrine
+			}
+		}
+		GER_Albert_Kesselring_cair_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_air_force
+				authoritarian_democrat
+				cair_air_superiority_doctrine
+			}
+		}
+		GER_Hermann_Koehl_cair_ade = {
+			allowed = { original_tag = GER }
+			traits = {
+				chief_of_air_force
+				authoritarian_democrat
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		GER_Albert_Kesselring_theo = {
+			allowed = { original_tag = GER }
+			traits = {
+				air_doctrine_theorist
+			}
+			research_bonus = {
+				air_doctrine = 0.1
+			}
+		}
+		GER_Karl_Doenitz_theo = {
+			allowed = { original_tag = GER }
+			traits = {
+				trade_interdiction_theorist
+			}
+			research_bonus = {
+				cat_trade_interdiction = 0.1
+			}
+		}
+		GER_Erich_Raeder_theo = {
+			allowed = { original_tag = GER }
+			traits = {
+				fleet_in_being_theorist_theorist
+			}
+			research_bonus = {
+				cat_fleet_in_being = 0.1
+			}
+		}
+		GER_Erwin_von_Witzleben_theo = {
+			allowed = { original_tag = GER }
+			traits = {
+				superior_firepower_theorist
+			}
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+		GER_Hans_Speidel_theo = {
+			allowed = { original_tag = GER }
+			traits = {
+				trench_warfare_theorist
+			}
+			research_bonus = {
+				cat_grand_battleplan = 0.1
+			}
+		}
+		GER_Heinz_Guderian_theo = {
+			allowed = { original_tag = GER }
+			traits = {
+				mobile_warfare_theorist
+			}
+			research_bonus = {
+				cat_mobile_warfare = 0.1
+			}
+		}
+	}
+
+	#### General ####
+industrial_concern = {
+
+		krupp = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea krupp"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = { industrial_manufacturer }
+
+		modifier = {
+			production_speed_arms_factory_factor = 0.10
+			production_speed_industrial_complex_factor = 0.10
+		}
+		research_bonus = {
+			industry = 0.10
+		}
+	}
+
+		aeg = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea aeg"}
+		allowed = { original_tag = GER }
+		traits = { electronics_manufacturer }
+		modifier = {
+			production_speed_radar_station_factor = 0.20
+		}
+		research_bonus = {
+			electronics = 0.05
+		}
+	}
+
+		ig_farben_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ig_farben_company"}
+		allowed = { original_tag = GER }
+		traits = { chemical_producer }
+		modifier = {
+			production_speed_synthetic_refinery_factor = 0.15
+		}
+		research_bonus = {
+			synth_resources = 0.1
+		}
+	}
+	
+		thyssen_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea thyssen_company"}
+		allowed = { original_tag = GER }
+		traits = { industrial_manufacturer }
+		modifier = {
+			production_speed_synthetic_refinery_factor = 0.15
+			production_speed_arms_factory_factor = 0.05
+			production_speed_industrial_complex_factor = 0.05
+		}
+		research_bonus = {
+			industry = 0.15
+		}
+	}
+
+		Hugenberg_Konzern_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Hugenberg_Konzern_company"}
+		allowed = { original_tag = GER }
+		traits = { }
+		modifier = {
+			political_power_gain = 0.20
+		}
+		research_bonus = {
+			industry = 0.15
+		}
+	}
+	
+		Braun_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Braun_company"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = { electronics_manufacturer }
+		modifier = {
+			production_speed_synthetic_refinery_factor = 0.15
+			production_speed_arms_factory_factor = 0.05
+			production_speed_industrial_complex_factor = 0.05
+		}
+		research_bonus = {
+			electronics = 0.15
+		}
+	}
+}
+
+#### Weapons ####
+weapons_manufacturer = {
+	designer = yes
+
+		mauser = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea mauser"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = {
+			infantry_equipment_producer_offense_2
+		}
+		research_bonus = {
+			infantry_weapons = 0.1
+		}
+		modifier = {}
+	}
+	
+		walther = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea walther"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = {
+			infantry_equipment_producer_allround_2
+		}
+		research_bonus = {
+			infantry_weapons = 0.1
+		}
+		modifier = {}
+	}
+
+		alkett = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea alkett"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			infantry_equipment_producer_defense_2
+		}
+		research_bonus = {
+			infantry_weapons = 0.1
+		}
+		modifier = {}
+	}
+
+		gebruder = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea gebruder"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			infantry_equipment_producer_mass_2
+		}
+		research_bonus = {
+			infantry_weapons = 0.1
+		}
+		modifier = {}
+	}
+
+		Pabst_Werke = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Pabst_Werke"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			infantry_equipment_producer_offense_2
+		}
+		research_bonus = {
+			infantry_weapons = 0.1
+		}
+		modifier = {}
+	}
+}
+
+#### Tanks ####	
+tank_manufacturer = {
+	designer = yes
+
+		rheinmetall = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea rheinmetall"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = {
+			artillery_producer_offense_2
+		}
+		research_bonus = {
+			artillery = 0.10
+		}
+		modifier = {}
+	}
+
+		opel = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea opel"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = {
+			motorised_equipment_producer_mass_2
+		}
+		research_bonus = {
+			motorized_equipment = 0.10
+		}
+		modifier = {}
+	}
+
+		Hanomag = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Hanomag"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			motorised_equipment_producer_offense_3
+		}
+		research_bonus = {
+			motorized_equipment = 0.10
+		}
+		modifier = {}
+	}
+	
+		henschel = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea henschel"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			heavy_tank_producer_offense_2
+		}
+		research_bonus = {
+			armor = 0.10
+		}
+		modifier = {}
+	}
+	
+		porsche = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea porsche"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			heavy_tank_producer_defense_2
+		}
+		research_bonus = {
+			armor = 0.10
+		}
+		modifier = {}
+	}
+
+		daimler_benz = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea daimler_benz"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			medium_tank_producer_offense_1
+		}
+		research_bonus = {
+			armor = 0.10
+		}
+		modifier = {}
+	}
+	
+		man_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea man_company"}
+		allowed = {
+			OR = {
+				original_tag = GER
+				original_tag = RHI
+			} 
+		}
+		traits = {
+			medium_tank_producer_offense_2
+		}
+		research_bonus = {
+			armor = 0.10
+		}
+		modifier = {}
+	}
+	
+		wegmann = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea wegmann"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			small_tank_producer_offense_2
+		}
+		research_bonus = {
+			armor = 0.10
+		}
+		modifier = {}
+	}
+	
+		vomag = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vomag"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			small_tank_producer_defense_2
+		}
+		research_bonus = {
+			armor = 0.10
+		}
+		modifier = {}
+	}
+}
+
+#### Air and Naval ####
+air_naval_manufacturer = {
+	designer = yes
+	
+		messerschmitt = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea messerschmitt"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			fighter_producer_defense_2
+		}
+		research_bonus = {
+			air_equipment = 0.1
+		}
+		modifier = {}
+	}
+	
+		heinkel = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea heinkel"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			bomber_producer_mass_2
+		}
+		research_bonus = {
+			air_equipment = 0.1
+		}
+		modifier = {}
+	}
+
+		junkers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea junkers"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			nav_cas_producer_offense_2
+		}
+		research_bonus = {
+			air_equipment = 0.1
+		}
+		modifier = {}
+	}
+	
+		focke_wulf = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea focke_wulf"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			nav_cas_producer_defense_2
+		}
+		research_bonus = {
+			air_equipment = 0.1
+		}
+		modifier = {}
+	}
+	
+		gothaer_waggonfabrik = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea gothaer_waggonfabrik"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			fighter_producer_mass_2
+		}
+		research_bonus = {
+			air_equipment = 0.1
+		}
+		modifier = {}
+	}
+	
+		arado = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea arado"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			nav_cas_producer_mass_2
+		}
+		research_bonus = {
+			air_equipment = 0.1
+		}
+		modifier = {}
+	}
+	
+		blohm_voss = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea blohm_voss"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			small_ship_producer_offense_2
+		}
+		research_bonus = {
+			naval_equipment = 0.05
+		}
+		modifier = {}
+	}
+	
+		germaniawerft = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea germaniawerft"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			capital_ship_producer_defense_2
+		}
+		research_bonus = {
+			naval_equipment = 0.05
+		}
+		modifier = {}
+	}
+	
+		vulcan_stettin = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vulcan_stettin"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			cruiser_producer_defense_2
+		}
+		research_bonus = {
+			naval_equipment = 0.05
+		}
+		modifier = {}
+	}
+	
+		Wesser = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Wesser"}
+		allowed = {
+			original_tag = GER
+		}
+		traits = {
+			cruiser_producer_mass_2
+		}
+		research_bonus = {
+			naval_equipment = 0.05
+		}
+		modifier = {}
+	}
+}
 }
