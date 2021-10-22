@@ -104,10 +104,10 @@ country_event = { #Chaos in the Country
 					dismantle_faction = yes
 			}
 			if = {
-					limit = {
-						is_in_faction  = yes
-					}
-					remove_from_faction = GER
+				limit = {
+					is_in_faction  = yes
+				}
+				remove_from_faction = GER
 			}
 		}
 	}
@@ -119,19 +119,12 @@ country_event = { #Chaos in the Country
 			ideology = authoritarian_democrat_subtype
 			traits = {}
 		}
-
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
-
+		remove_every_minister = yes
 		add_ideas = {
-			GER_Erwin_von_Witzleben_hog_ade
+			GER_Hans_Juergen_Graf_von_Blumenthal_hog_ade
 			GER_Walther_von_Brauchitsch_for_ade
 			GER_Hjalmar_Schacht_eco_ade
-			GER_Robert_Lehr_sec_ade
+			GER_Fritz_Dietlog_Schulenburg_sec_ade
 		}
 
 		set_global_flag = GER_ADECOUP
@@ -189,15 +182,9 @@ country_event = { #Chaos in the Country
 			traits = {}
 		}
 
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
-
+		remove_every_minister = yes
 		add_ideas = {
-			GER_Hermann_Goring_hog_npo
+			GER_Hermann_von_Goering_hog_npo
 			GER_Konstantin_von_Neurath_for_npo
 			GER_Alfred_Hugenberg_eco_pau
 			GER_Rudolf_Hess_sec_npo
@@ -269,18 +256,12 @@ country_event = { #Popular issurection
 			traits = {}
 		}
 
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
-		
+		remove_every_minister = yes
 		add_ideas = {
-			GER_Otto_Grotewohl_hog_lis
-			GER_Bernhard_Bastlein_for_col
-			GER_Kurt_Schumacher_eco_sde
-			GER_Otto_Gessler_sec_sli
+			GER_Otto_Grotewol_hog_lib
+			GER_Heinrich_Mann_for_lib
+			GER_Lujo_Brentano_eco_lib
+			GER_Hilde_Benjamin_sec_col
 		}
         set_cosmetic_tag = GER_socialism
     	set_global_flag = GER_PINS
@@ -551,14 +532,6 @@ country_event = { #Accession to the throne authdem/conservativism
 				desc = "Portrait_Germany_Wilhelm_III_DESC"
 				picture = "Portrait_Germany_William_III.tga"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = {}
 			}
@@ -630,14 +603,6 @@ country_event = { #Accession to the throne authdem/conservativism
 				desc = "Portrait_Germany_Wilhelm_III_DESC"
 				picture = "Portrait_Germany_William_III.tga"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = {}
 			}
@@ -676,17 +641,11 @@ country_event = { #First German election
 			elections_allowed = yes
 		}
 
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
-
+		remove_every_minister = yes
 		add_ideas = {
 			GER_Wilhelm_Marx_hog_sco
 			GER_Heinrich_von_Brentano_for_sco
-			GER_Hjalmar_Schacht_eco_ade
+			GER_Adam_Stregerwald_eco_sco
 			GER_Arthur_Nebe_sec_sco
 		}
   }
@@ -715,16 +674,10 @@ country_event = { #First German election
 			elections_allowed = yes
 		}
 		
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
-
+		remove_every_minister = yes
 		add_ideas = {
 			GER_Wilhelm_Marx_hog_sco
-			GER_Hans_Vogel_for_sdm
+			GER_Hans_Vogel_for_sde
 			GER_Kurt_Schumacher_eco_sde
 			GER_Wilhelm_Abegg_sec_mli
 		}
