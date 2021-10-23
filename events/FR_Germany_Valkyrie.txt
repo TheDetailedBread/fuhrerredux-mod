@@ -92,16 +92,13 @@ country_event = { #Chaos in the Country
 			elections_allowed = no
 		}
 
-	hidden_effect = {
-	
-		kill_country_leader = yes
-			
-		GER = {
+		hidden_effect = {
+			kill_country_leader = yes
 			if = {
 				limit = {
-						is_faction_leader = yes
-					}
-					dismantle_faction = yes
+					is_faction_leader = yes
+				}
+				dismantle_faction = yes
 			}
 			if = {
 				limit = {
@@ -109,8 +106,16 @@ country_event = { #Chaos in the Country
 				}
 				remove_from_faction = GER
 			}
+
+			if = {
+				limit = { has_idea = HOL_dutch_german_economic_cooperation }
+				remove_ideas = HOL_dutch_german_economic_cooperation
+			}
+			else_if = {
+				limit = { has_idea = HOL_dutch_german_economic_cooperation_1 }
+				remove_ideas = HOL_dutch_german_economic_cooperation_1
+			}
 		}
-	}
 
 		create_country_leader = {
 			name = "Hans von Seeckt"
@@ -532,6 +537,14 @@ country_event = { #Accession to the throne authdem/conservativism
 				desc = "Portrait_Germany_Wilhelm_III_DESC"
 				picture = "Portrait_Germany_William_III.tga"
 				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Wilhelm III"
+				desc = "Portrait_Germany_Wilhelm_III_DESC"
+				picture = "Portrait_Germany_William_III.tga"
+				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = {}
 			}
@@ -596,6 +609,14 @@ country_event = { #Accession to the throne authdem/conservativism
 				picture = "Portrait_Germany_William_III.tga"
 				expire = "1965.1.1"
 				ideology = social_conservative_subtype
+				traits = {}
+			}
+			create_country_leader = {
+				name = "Wilhelm III"
+				desc = "Portrait_Germany_Wilhelm_III_DESC"
+				picture = "Portrait_Germany_William_III.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
 				traits = {}
 			}
 			create_country_leader = {

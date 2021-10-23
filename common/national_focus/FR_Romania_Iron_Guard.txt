@@ -80,7 +80,10 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
-        available = { is_subject = no }
+        available = { 
+            is_subject = no
+            GER = { is_faction_leader = yes }
+        }
         bypass = { is_in_faction = yes }
         prerequisite = { focus = ROM_loyalty_to_the_conducator }
         relative_position_id = ROM_loyalty_to_the_conducator
