@@ -408,7 +408,69 @@ default_peace = {
 
 
 		### SPECIFIC COUNTRIES
-
+		#Nationalist Spain takes northern Spain
+		modifier = {
+			factor = 5
+			tag = SPF
+			SPM = { is_in_peace_conference = yes }
+			SPR = { is_in_peace_conference = yes }
+			SPA = { is_in_peace_conference = yes }
+			FROM = {
+				OR = {
+					state = 166 #West Aragon
+					state = 1005 #East Aragon
+					state = 854 #Andorra
+					state = 165 #Catalunya / Barcelona 
+				}
+			}
+		}
+		#Monarchist Spain takes southern Spain
+		modifier = {
+			factor = 5
+			tag = SPM
+			SPF = { is_in_peace_conference = yes }
+			SPR = { is_in_peace_conference = yes }
+			SPA = { is_in_peace_conference = yes }
+			FROM = {
+				OR = {
+					NOT = {
+						state = 166 #West Aragon
+						state = 1005 #East Aragon
+						state = 854 #Andorra
+						state = 165 #Catalunya / Barcelona
+					}
+					state = 174 #Granada
+					state = 168 #Murcia 
+				}
+			}
+		}
+		#Anarchist Spain takes eastern Spain
+		modifier = {
+			factor = 5
+			tag = SPA
+			SPF = { is_in_peace_conference = yes }
+			SPM = { is_in_peace_conference = yes }
+			SPR = { is_in_peace_conference = yes }
+			FROM = {
+				OR = {
+					state = 834 #Jaen
+				}
+			}
+		}
+		#Republican Spain takes western Spain
+		modifier = {
+			factor = 5
+			tag = SPR
+			SPF = { is_in_peace_conference = yes }
+			SPM = { is_in_peace_conference = yes }
+			SPA = { is_in_peace_conference = yes }
+			FROM = {
+				NOT = { 
+					state = 834 #Jaen 
+				}
+			}
+		}
+		
 	}
 
 	# ROOT = Taker, FROM = Giver
