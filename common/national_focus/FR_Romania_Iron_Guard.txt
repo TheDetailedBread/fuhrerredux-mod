@@ -106,17 +106,32 @@ focus_tree = {
         }
     }
 
-    # German Military Exercises
+    # Deal with Serbia
     focus = {
-        id = ROM_german_military_exercises
-        icon = GFX_goal_generic_military_sphere
+        id = ROM_deal_with_serbia
+        icon = GFX_goal_serbia
         x = -1
         y = 1
         cost = 6
+        available = {
+            is_subject = no
+            SER = { is_subject = no }
+        }
+        bypass = {
+            OR = {
+                SER = {
+                    is_in_faction_with = FROM
+                    is_subject_of = ROOT
+                }
+                is_subject_of = SER
+            }
+        }
         prerequisite = { focus = ROM_join_the_stahlpakt }
         relative_position_id = ROM_join_the_stahlpakt
         completion_reward = {
-            army_experience = 25
+            SER = {
+                country_event = { id = romania.53 hours = 12 }
+            }
         }
     }
 
@@ -128,9 +143,9 @@ focus_tree = {
         y = 1
         cost = 6
         prerequisite = { focus = ROM_criminalise_socialism }
-        prerequisite = { focus = ROM_german_military_exercises }
+        prerequisite = { focus = ROM_deal_with_serbia }
         prerequisite = { focus = ROM_legionary_secret_police }
-        relative_position_id = ROM_german_military_exercises
+        relative_position_id = ROM_deal_with_serbia
         completion_reward = {
             add_ideas = ROM_legionary_brotherhood
         }

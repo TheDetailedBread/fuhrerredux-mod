@@ -2709,5 +2709,55 @@ country_event = { # Marraige of Michael I
 
 	option = {
 		name = romania.52.a
+		add_political_power = 150
+	}
+}
+
+country_event = { # Create Alliance with Serbia
+	id = romania.53
+	title = romania.53.t
+	desc = romania.53.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = romania.53.a
+		add_political_power = 50
+		FROM = {
+			country_event = { id = romania.54 hours = 12 }
+		}
+	}
+	option = {
+		name = romania.53.b
+		FROM = {
+			country_event = { id = romania.55 hours = 12 }
+		}
+	}
+}
+
+country_event = { # Serbia Accepts
+	id = romania.54
+	title = romania.54.t
+	desc = romania.54.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = romania.54.t
+		create_faction = "Balkan Pact"
+		add_to_faction = FROM
+	}
+}
+
+country_event = { # Serbia Refuses
+	id = romania.55
+	title = romania.55.t
+	desc = romania.55.d
+	picture = GFX_report_event_soviet_german_soldier_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = romania.55.t
+		add_political_power = -20
 	}
 }
