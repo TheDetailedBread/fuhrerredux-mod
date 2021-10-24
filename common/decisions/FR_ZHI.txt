@@ -555,6 +555,38 @@ ZHI_china = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision zhi_form_china"
 			set_cosmetic_tag = ZHI_CHI
+			hidden_effect = {
+				every_state = {
+					limit = {
+						any_of = {
+							array = CHI.core_states
+							is_controlled_by = ZHI 
+						}
+					}
+					for_each_scope_loop = {
+						array = CHI.core_states
+						ZHI  = {
+							remove_state_claim = PREV
+							add_state_core = PREV
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						any_of = {
+							array = SIK.core_states
+							is_controlled_by = ZHI 
+						} 
+					}
+					for_each_scope_loop = {
+						array = SIK.core_states
+						ZHI  = {
+							remove_state_claim = PREV
+							add_state_core = PREV
+						}
+					}
+				}
+			}
 		}
 	}
 }
