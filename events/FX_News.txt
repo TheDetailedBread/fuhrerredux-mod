@@ -526,13 +526,19 @@ news_event = { # Civil War in Romania
     desc = {
         text = news.29.d1
         trigger = {
-            ROR = { has_government = valkist }
+            has_government = paternal_autocrat
         }
     }
     desc = {
         text = news.29.d2
         trigger = {
-            ROR = { has_government = paternal_autocrat }
+            has_government = valkist
+        }
+    }
+    desc = {
+        text = news.29.d3
+        trigger = {
+            has_government = libertarian_socialist
         }
     }
 
