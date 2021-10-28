@@ -20,7 +20,11 @@ shared_focus = {
     y = 1
     cost = 2
     ai_will_do = {
-        factor = 2000
+        factor = 200
+        modifier = {
+            factor = 10
+            has_idea = ROM_tensions_in_transylvania
+        }
     }
     available = { has_idea = ROM_tensions_in_transylvania }
     prerequisite = { focus = ROM_preservation_of_greater_romania }
@@ -28,6 +32,7 @@ shared_focus = {
     completion_reward = {
         custom_effect_tooltip = ROM_hungarian_suppression
         hidden_effect = {
+            country_event = { id = romania.60 days = 30 }
             remove_ideas = ROM_tensions_in_transylvania
             every_owned_state = {
                 limit = {
@@ -42,6 +47,8 @@ shared_focus = {
                     }
                 }
                 remove_dynamic_modifier = { modifier = ROM_hungarian_resistance }
+                remove_dynamic_modifier = { modifier = ROM_hungarian_resistance_1 }
+                
             }
         }
     }

@@ -283,6 +283,11 @@ country_event = { # Tensions in Transylvania
                 modifier = ROM_hungarian_resistance
             }
 		}
+		hidden_effect = {
+			HUN = {
+				country_event = { id = romania.61 days = 2 }
+			}
+		}
 	}
 }
 
@@ -691,6 +696,7 @@ country_event = { # 1937 General Elections
 			set_country_flag = ROM_democratic_romania
 			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
+			country_event = { id = romania.59 days = 5 }
 		}
 	}
 	option = { # PNL - MarLib
@@ -782,6 +788,7 @@ country_event = { # 1937 General Elections
 			set_country_flag = ROM_democratic_romania
 			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
+			country_event = { id = romania.59 days = 5 }
 		}
 	}
 	option = { # PSDR
@@ -830,6 +837,7 @@ country_event = { # 1937 General Elections
 			set_country_flag = ROM_democratic_romania
 			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.24 days = 100 }
+			country_event = { id = romania.59 days = 5 }
 		}
 	}
 	option = { # Iron Guard
@@ -970,6 +978,9 @@ country_event = { # Deploying troops in Transylvania
 	}
 	option = { # Let the local authorities handle it
 		name = romania.19.c
+		ai_chance = {
+			factor = 80
+		}
 		add_political_power = -100
 	}
 }
@@ -1853,6 +1864,20 @@ country_event = { # Civil War Over
 		every_owned_state = {
 			limit = { is_core_of = ROR }
 			remove_core_of = ROR
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_government = paternal_autocrat }
+				country_event = { id = romania.56 days = 3 }
+			}
+			else_if = {
+				limit = { has_government = libertarian_socialist }
+				country_event = { id = romania.57 days = 3 }
+			}
+			else_if = {
+				limit = { has_government = valkist }
+				country_event = { id = romania.58 days = 3 }
+			}
 		}
 	}
 }
@@ -2759,5 +2784,200 @@ country_event = { # Serbia Refuses
 	option = {
 		name = romania.55.t
 		add_political_power = -20
+	}
+}
+
+country_event = { # Civil War - Royalist Victory
+	id = romania.56
+	title = romania.56.t
+	desc = romania.56.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		has_government = paternal_autocrat
+	}
+
+	option = { # Execute the leaders, imprison the rest
+		name = romania.56.a
+		add_stability = -0.025
+		add_political_power = 50
+	}
+	option = { # Punish the leaders, release the rest
+		name = romania.56.b
+		add_stability = 0.025
+		add_political_power = 50
+	}
+	option = { # Hang everyone involved
+		name = romania.56.c
+		add_stability = 0.05
+		add_political_power = -100
+	}
+}
+
+country_event = { # Civil War - Socialist Victory
+	id = romania.57
+	title = romania.57.t
+	desc = romania.57.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		has_government = libertarian_socialist
+	}
+
+	option = { # Reeducate them!
+		name = romania.57.a
+		add_political_power = -50
+	}
+	option = { # Imprison them!
+		name = romania.57.b
+		add_stability = 0.025
+	}
+	option = { # Hang them all!
+		name = romania.57.c
+		add_political_power = -100
+		add_stability = 0.05
+	}
+}
+
+country_event = { # Civil War - Iron Guard Victory
+	id = romania.58
+	title = romania.58.t
+	desc = romania.58.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		has_government = valkist
+	}
+
+	option = { # Send them to work camps!
+		name = romania.58.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_political_power = -100
+	}
+	option = { # Imprison them
+		name = romania.58.b
+		add_political_power = 50
+	}
+	option = { # Execute them
+		name = romania.58.c
+		add_stability = 0.05
+	}
+}
+
+country_event = { # Prince Michael Congratulates the Winners
+	id = romania.59
+	title = romania.59.t
+	desc = romania.59.d
+	picture = GFX_report_event_carol_party
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ROM
+		NOT = { has_country_flag = ROM_michael_assassinated }
+	}
+
+	option = {
+		name = romania.59.a
+		add_political_power = 150
+	}
+}
+
+country_event = { # Reports from Transylvania
+	id = romania.60
+	title = romania.60.t
+	desc = romania.60.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	option = { # Order the troops to calm down
+		name = romania.60.a
+		add_political_power = 100
+	}
+	option = { # Censor this report!
+		name = romania.60.b
+		add_stability = 0.05
+	}
+}
+
+country_event = { # Hungary - Tensions in Transylvania
+	id = romania.61
+	title = romania.61.t
+	desc = romania.61.d
+	picture = GFX_report_event_hungary_gains_transylvania
+	is_triggered_only = yes
+
+	option = {
+		name = romania.61.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -2000
+			producer = HUN
+		}
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROM
+					OR = {
+						state = 762
+						state = 154
+						state = 84
+						state = 83
+						state = 82
+						state = 76
+					}
+				}
+
+				remove_dynamic_modifier = { modifier = ROM_hungarian_resistance}
+				add_dynamic_modifier = { modifier = ROM_hungarian_resistance_1 }
+			}
+		}
+	}
+	option = {
+		name = romania.61.b
+		decrease_ruling_party_popularity_by_5 = yes
+	}
+}
+
+country_event = { # Hungary Supported Transylvanian Riots
+	id = romania.62
+	title = romania.62.t
+	desc = romania.62.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	option = { # Cut off diplomatic ties!
+		name = romania.62.a
+		reverse_add_opinion_modifier = {
+			target = HUN
+			modifier = ROM_cut_off_relations
+		}
+		HUN = {
+			country_event = { id = romania.63 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = romania.63
+	title = romania.63.t
+	desc = romania.63.d
+	picture = GFX_report_event_romanian_soldiers
+	is_triggered_only = yes
+
+	option = {
+		name = romania.63.a
+		reverse_add_opinion_modifier = {
+			target = ROM
+			modifier = ROM_cut_off_relations
+		}
 	}
 }
