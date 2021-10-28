@@ -43,41 +43,11 @@ focus_tree = {
         }
     }
 
-    # Merge the Legion to the Army
-    focus = {
-        id = ROM_merge_the_legion_to_the_army
-        icon = GFX_goal_conscription
-        x = -3
-        y = 1
-        cost = 6
-        mutually_exclusive = { focus = ROM_the_legion_as_a_separate_force }
-        prerequisite = { focus = ROM_loyalty_to_the_conducator }
-        relative_position_id = ROM_loyalty_to_the_conducator
-        completion_reward = {
-            add_ideas = ROM_legion_army
-        }
-    }
-
-    # The Legion as a Separate Force
-    focus = {
-        id = ROM_the_legion_as_a_separate_force
-        icon = GFX_goal_army_guy_2
-        x = -1
-        y = 1
-        cost = 6
-        mutually_exclusive = { focus = ROM_merge_the_legion_to_the_army }
-        prerequisite = { focus = ROM_loyalty_to_the_conducator }
-        relative_position_id = ROM_loyalty_to_the_conducator
-        completion_reward = {
-            add_ideas = ROM_legion_support
-        }
-    }
-
     # Join the Stahlpakt
     focus = {
         id = ROM_join_the_stahlpakt
         icon = GFX_goal_ROM_join_stahlpakt
-        x = 1
+        x = -3
         y = 1
         cost = 6
         available = { 
@@ -85,24 +55,11 @@ focus_tree = {
             GER = { is_faction_leader = yes }
         }
         bypass = { is_in_faction = yes }
+        mutually_exclusive = { focus = ROM_deal_with_serbia }
         prerequisite = { focus = ROM_loyalty_to_the_conducator }
         relative_position_id = ROM_loyalty_to_the_conducator
         completion_reward = {
             custom_effect_tooltip = ROM_join_the_stahlpakt_tt
-        }
-    }
-
-    # Legionary Secret Police
-    focus = {
-        id = ROM_legionary_secret_police
-        icon = GFX_goal_secret_agents
-        x = -3
-        y = 1
-        cost = 6
-        prerequisite = { focus = ROM_join_the_stahlpakt }
-        relative_position_id = ROM_join_the_stahlpakt
-        completion_reward = {
-            add_ideas = ROM_legion_secret_police_idea
         }
     }
 
@@ -126,12 +83,58 @@ focus_tree = {
                 is_subject_of = SER
             }
         }
-        prerequisite = { focus = ROM_join_the_stahlpakt }
-        relative_position_id = ROM_join_the_stahlpakt
+        mutually_exclusive = { focus = ROM_join_the_stahlpakt }
+        prerequisite = { focus = ROM_loyalty_to_the_conducator }
+        relative_position_id = ROM_loyalty_to_the_conducator
         completion_reward = {
             SER = {
                 country_event = { id = romania.53 hours = 12 }
             }
+        }
+    }
+
+    # Legionary Secret Police
+    focus = {
+        id = ROM_legionary_secret_police
+        icon = GFX_goal_secret_agents
+        x = 1
+        y = 1
+        cost = 6
+        prerequisite = { focus = ROM_loyalty_to_the_conducator }
+        relative_position_id = ROM_loyalty_to_the_conducator
+        completion_reward = {
+            add_ideas = ROM_legion_secret_police_idea
+        }
+    }
+
+    
+    # Merge the Legion to the Army
+    focus = {
+        id = ROM_merge_the_legion_to_the_army
+        icon = GFX_goal_conscription
+        x = -1
+        y = 1
+        cost = 6
+        mutually_exclusive = { focus = ROM_the_legion_as_a_separate_force }
+        prerequisite = { focus = ROM_legionary_secret_police }
+        relative_position_id = ROM_legionary_secret_police
+        completion_reward = {
+            add_ideas = ROM_legion_army
+        }
+    }
+
+    # The Legion as a Separate Force
+    focus = {
+        id = ROM_the_legion_as_a_separate_force
+        icon = GFX_goal_army_guy_2
+        x = -3
+        y = 1
+        cost = 6
+        mutually_exclusive = { focus = ROM_merge_the_legion_to_the_army }
+        prerequisite = { focus = ROM_legionary_secret_police }
+        relative_position_id = ROM_legionary_secret_police
+        completion_reward = {
+            add_ideas = ROM_legion_support
         }
     }
 
@@ -143,9 +146,11 @@ focus_tree = {
         y = 1
         cost = 6
         prerequisite = { focus = ROM_criminalise_socialism }
-        prerequisite = { focus = ROM_deal_with_serbia }
-        prerequisite = { focus = ROM_legionary_secret_police }
-        relative_position_id = ROM_deal_with_serbia
+        prerequisite = { 
+            focus = ROM_the_legion_as_a_separate_force 
+            focus = ROM_merge_the_legion_to_the_army
+        }
+        relative_position_id = ROM_merge_the_legion_to_the_army
         completion_reward = {
             add_ideas = ROM_legionary_brotherhood
         }
