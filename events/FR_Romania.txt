@@ -34,7 +34,7 @@ country_event = { # The New Regent
 		set_country_flag = ROM_status_quo_regent
 		hidden_effect = {
 			country_event = { id = romania.29 days = 100 }
-			country_event = { id = romania.50 days = 340 }
+			country_event = { id = romania.50 days = 200 }
 		}
 	}
 	option = { # Try courting the PNL
@@ -64,7 +64,7 @@ country_event = { # The New Regent
 		}
 		hidden_effect = {
 			country_event = { id = romania.8 days = 140 }
-			country_event = { id = romania.50 days = 340 }
+			country_event = { id = romania.50 days = 200 }
 		}
 	}
 	option = { # Maybe a coalition with PSDR won't hurt
@@ -90,7 +90,7 @@ country_event = { # The New Regent
 		}
 		hidden_effect = {
 			country_event = { id = romania.7 days = 140 }
-			country_event = { id = romania.50 days = 340 }
+			country_event = { id = romania.50 days = 200 }
 		}
 	}
 }
@@ -694,7 +694,6 @@ country_event = { # 1937 General Elections
 				news_event = { id = news.25 hours = 8 }
 			}
 			set_country_flag = ROM_democratic_romania
-			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
 			country_event = { id = romania.59 days = 5 }
 		}
@@ -786,7 +785,6 @@ country_event = { # 1937 General Elections
 				news_event = { id = news.23 hours = 8 }
 			}
 			set_country_flag = ROM_democratic_romania
-			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.25 days = 100 }
 			country_event = { id = romania.59 days = 5 }
 		}
@@ -835,7 +833,6 @@ country_event = { # 1937 General Elections
 				news_event = { id = news.24 hours = 8 }
 			}
 			set_country_flag = ROM_democratic_romania
-			load_focus_tree = FR_Romania_Democratic
 			country_event = { id = romania.24 days = 100 }
 			country_event = { id = romania.59 days = 5 }
 		}
@@ -879,7 +876,6 @@ country_event = { # 1937 General Elections
 				news_event = { id = news.26 hours = 8 }
 			}
 			set_country_flag = ROM_valkist_romania
-			load_focus_tree = FR_Romania_Iron_Guard
 		}
 	}
 	option = { # PNC
@@ -1194,6 +1190,7 @@ country_event = { # The King's and Romania's Safety
 		}
 		increase_ruling_party_popularity_by_25 = yes
 		set_country_flag = ROM_direct_rule_from_bucharest
+		clr_country_flag = ROM_democratic_romania
 		remove_every_minister = yes
 		add_ideas = {
 			ROM_Alexandru_Cantacuzino_hog_pau
@@ -1206,7 +1203,6 @@ country_event = { # The King's and Romania's Safety
 				remove_idea = consitutional_monarchy
 				add_idea = absolute_monarchy
 			}
-			load_focus_tree = FR_Romania_Royalist
 		}
 	}
 	option = { # The King orders the banning of radical parties
@@ -1280,7 +1276,7 @@ country_event = { # Prime Minister Assassinated!
 		}
 		hidden_effect = {
 			set_country_flag = ROM_socialist_romania
-			load_focus_tree = FR_Romania_Socialist
+			clr_country_flag = ROM_democratic_romania
 			country_event = { id = romania.30 days = 2 }
 		}
 	}
@@ -1307,7 +1303,6 @@ country_event = { # Prime Minister Assassinated!
 		}
 		hidden_effect = {
 			add_idea = one_party_dictatorship
-			load_focus_tree = FR_Romania_Iron_Guard
 			set_country_flag = ROM_valkist_romania
 			random_other_country = {
 				news_event = { id = news.28 hours = 8 }
@@ -1451,7 +1446,7 @@ country_event = { # Iron Guard Coups the Government!
 				news_event = { id = news.28 hours = 8 }
 			}
 			set_country_flag = ROM_valkist_romania
-			load_focus_tree = FR_Romania_Iron_Guard
+			clr_country_flag = ROM_democratic_romania
 		}
 	}
 }
@@ -2664,8 +2659,30 @@ country_event = { # King Meets with the New Governemnt
 
 country_event = { # Codreanu Criticises the Government
 	id = romania.50
-	title = romania.50.t
-	desc = romania.50.d
+	title = {
+		text = romania.50.t
+		trigger = {
+			NOT = { has_country_flag = ROM_codreanu_exiled }
+		}
+	}
+	title = {
+		text = romania.50.t_mota
+		trigger = {
+			has_country_flag = ROM_codreanu_exiled
+		}
+	}
+	desc = {
+		text = romania.50.d
+		trigger = {
+			NOT = { has_country_flag = ROM_codreanu_exiled }
+		}
+	}
+	desc = {
+		text = romania.50.d_mota
+		trigger = {
+			has_country_flag = ROM_codreanu_exiled
+		}
+	}
 	picture = GFX_report_event_carol_meeting
 	is_triggered_only = yes
 
