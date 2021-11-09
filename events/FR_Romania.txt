@@ -690,6 +690,7 @@ country_event = { # 1937 General Elections
 			ROM_Aurel_Aldea_sec_sco
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			random_other_country = {
 				news_event = { id = news.25 hours = 8 }
 			}
@@ -781,6 +782,7 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			random_other_country = {
 				news_event = { id = news.23 hours = 8 }
 			}
@@ -829,6 +831,7 @@ country_event = { # 1937 General Elections
 			}
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			random_other_country = {
 				news_event = { id = news.24 hours = 8 }
 			}
@@ -868,6 +871,7 @@ country_event = { # 1937 General Elections
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			swap_ideas = {
 				remove_idea = consitutional_monarchy
 				add_idea = one_party_dictatorship
@@ -899,6 +903,7 @@ country_event = { # 1937 General Elections
 			ROM_Horia_Sima_sec_npo
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			random_other_country = {
 				news_event = { id = news.27 hours = 8 }
 			}
@@ -1021,7 +1026,7 @@ country_event = { # Coronation of Nicholas I
 		hidden_effect = {
 			if = {
 				limit = { has_country_flag = ROM_deployed_some_of_troops }
-				country_event = { id = romania.22 days = 7 }
+				country_event = { id = romania.22 days = 14 }
 			}
 			create_country_leader = {
 				name = "Nicholas I"
@@ -1199,6 +1204,7 @@ country_event = { # The King's and Romania's Safety
 			ROM_Horia_Sima_sec_npo
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			swap_ideas = {
 				remove_idea = consitutional_monarchy
 				add_idea = absolute_monarchy
@@ -1275,6 +1281,7 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Teohari_Georgescu_sec_van
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			set_country_flag = ROM_socialist_romania
 			clr_country_flag = ROM_democratic_romania
 			clr_country_flag = coalition_libertarian_socialist
@@ -1303,6 +1310,7 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			add_idea = one_party_dictatorship
 			set_country_flag = ROM_valkist_romania
 			random_other_country = {
@@ -1442,6 +1450,7 @@ country_event = { # Iron Guard Coups the Government!
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+			mark_focus_tree_layout_dirty = yes
 			add_ideas = one_party_dictatorship
 			random_other_country = {
 				news_event = { id = news.28 hours = 8 }
