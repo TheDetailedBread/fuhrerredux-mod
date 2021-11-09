@@ -1,4 +1,14 @@
-name="Führerredux"
+version="0.0.1"
+tags={
+	"Alternative History"
+	"Balance"
+	"Gameplay"
+	"Graphics"
+	"Ideologies"
+	"National Focuses"
+	"Technologies"
+	"Map"
+}
 replace_path="common/abilities"
 replace_path="common/ai_focuses"
 replace_path="common/ai_peace"
@@ -30,10 +40,5 @@ replace_path="history/units"
 replace_path="map/supplyareas"
 replace_path="map/strategicregions"
 replace_path="tests"
-version="0.1"
-tags={
-	"Alternative History"
-	"Map"
-	"Balance"
-}
+name="Fuhrerredux-DEV"
 supported_version="1.10.*"
