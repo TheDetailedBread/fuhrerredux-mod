@@ -15,7 +15,6 @@ country_event = { #January Plot
 		is_puppet = no
 		date > 1936.01.15
 		date < 1936.02.10
-		has_country_flag = GER_VALKYRIE
 		has_country_leader = {
 			ruling_only = yes
 			name = "Adam Dressler"
@@ -24,8 +23,16 @@ country_event = { #January Plot
 
 	option = {
 		name = valkyrie.1.a
+		set_country_flag = GER_VALKYRIE
+		mark_focus_tree_layout_dirty = yes
     	set_global_flag = GER_WHRM  
-     }
+    }
+	option = {
+		name = valkyrie.1.b
+		set_country_Flag = GER_VANILLA
+		mark_focus_tree_layout_dirty = yes
+		 add_political_power = -50
+	}
 }
 
 

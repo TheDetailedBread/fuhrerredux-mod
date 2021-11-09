@@ -15,7 +15,7 @@ focus_tree = {
 		}
 	}
 
-	continuous_focus_position = { x = 1870 y = 80 }	
+	continuous_focus_position = { x = 100 y = 1700 }	
 	
 ## Forming a government
 	focus = {
@@ -24,8 +24,13 @@ focus_tree = {
 		x = 6
 		y = 0
 		cost = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				has_country_flag = GER_VANILLA
+			}
+		}
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = { has_country_flag = GER_VALKYRIE }
 		}
 		ai_will_do = {
@@ -462,7 +467,6 @@ focus_tree = {
 		y = 13
 		cost = 4
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -5752,7 +5756,6 @@ focus_tree = {
 		y = 7
 		cost = 4
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -6281,7 +6284,6 @@ focus_tree = {
 		y = 6
 		cost = 4
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -6835,7 +6837,6 @@ focus_tree = {
 		y = 10
 		cost = 5
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = { has_country_flag = GER_VALKYRIE }
 		}
 		ai_will_do = {
@@ -8272,7 +8273,6 @@ focus_tree = {
 		y = 7
 		cost = 5
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -8802,7 +8802,6 @@ focus_tree = {
 		y = 0
 		cost = 10
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -9330,7 +9329,6 @@ focus_tree = {
 		y = 0
 		cost = 10
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -9830,7 +9828,6 @@ focus_tree = {
 		y = 0
 		cost = 10
 		allow_branch = {
-			has_country_flag = GER_VANILLA
 			NOT = {
 				has_country_flag = GER_VALKYRIE
 			}
@@ -10562,7 +10559,6 @@ focus_tree = {
 		relative_position_id = GER_watchful_eye_on_the_reichstag
 		completion_reward = {
 			custom_effect_tooltip = GER_unlock_seeckt_path_tt
-			set_country_flag = GER_unlocked_monarchist_path
 			mark_focus_tree_layout_dirty = yes
 			log = "[GetDateText]: [Root.GetName]: Focus GER_propaganda"
 			remove_ideas = ger_political_collapse_5_s
@@ -10680,7 +10676,6 @@ focus_tree = {
 		relative_position_id = GER_blue_max_tour
 		completion_reward = {
 			custom_effect_tooltip = GER_unlock_goering_path_tt
-			set_country_flag = GER_unlocked_goering_path
 			mark_focus_tree_layout_dirty = yes
 			remove_ideas = ger_political_collapse_4_g
 			add_ideas = ger_charisma_and_strengh
@@ -10862,7 +10857,6 @@ focus_tree = {
 		relative_position_id = GER_freedom_of_speech
 		completion_reward = {
 		    custom_effect_tooltip = GER_unlock_libertarians_path_tt
-			set_country_flag = GER_unlocked_socialist_path
 			mark_focus_tree_layout_dirty = yes
 			log = "[GetDateText]: [Root.GetName]: Focus GER_A_new_and_better_Germany"
 		    swap_ideas = { remove_idea = ger_new_socialist_revolution add_idea = ger_new_socialist_revolution_2 }
@@ -10888,7 +10882,7 @@ focus_tree = {
 				has_completed_focus = GER_charisma_and_strengh 
 			}
 		}
-		x = 24
+		x = 25
 		y = 0
 		completion_reward = {
 			add_tech_bonus = {
@@ -11864,7 +11858,7 @@ focus_tree = {
 		id = GER_Germany_in_Europe
 		icon = GFX_goal_volunteer_alliance
 		cost = 4
-		x = 34
+		x = 36
 		y = 10
 		allow_branch = {
 			has_country_flag = GER_VALKYRIE
@@ -12758,14 +12752,14 @@ focus_tree = {
 		id = GER_New_order
 		icon = GFX_goal_ideology_national_populist
 		cost = 3
-		x = 8
+		x = 14
 		y = 11
 		allow_branch = {
-			has_country_flag = GER_unlocked_goering_path
+			has_completed_focus = GER_charisma_and_strengh
 			NOT = {
-				has_country_flag = GER_unlocked_monarchist_path
-				has_country_flag = GER_unlocked_socialist_path
 				has_country_flag = GER_VANILLA
+				has_completed_focus = GER_the_Sphinx_velvet_glove
+				has_completed_focus = GER_A_new_and_better_Germany
 			}
 		}
 		completion_reward = {
@@ -13506,13 +13500,13 @@ focus_tree = {
 		id = GER_preparing_the_path
 		icon = GFX_goal_ideology_authoritarian_democrat
 		cost = 5
-		x = 8
+		x = 14
 		y = 11
 		allow_branch = {
-			has_country_flag = GER_unlocked_monarchist_path
+			has_completed_focus = GER_the_Sphinx_velvet_glove
 			NOT = {
-				has_country_flag = GER_unlocked_goering_path
-				has_country_flag = GER_unlocked_socialist_path
+				has_completed_focus = GER_charisma_and_strengh
+				has_completed_focus = GER_A_new_and_better_Germany
 				has_country_flag = GER_VANILLA
 			}
 		}
@@ -13758,7 +13752,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_cooperation_militaro_industrial_complex
 		}
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_cooperation_militaro_industrial_complex
 		completion_reward = {
@@ -13894,7 +13888,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_cooperation_militaro_industrial_complex
 		}
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = GER_cooperation_militaro_industrial_complex
 		completion_reward = {
@@ -14299,13 +14293,13 @@ focus_tree = {
 		id = GER_aftermath_revolution
 		icon = GFX_goal_red_star_green_wreath
 		cost = 5
-		x = 8
+		x = 16
 		y = 12
 		allow_branch = {
-			has_country_flag = GER_unlocked_socialist_path
+			has_completed_focus = GER_A_new_and_better_Germany
 			NOT = {
-				has_country_flag = GER_unlocked_goering_path
-				has_country_flag = GER_unlocked_monarchist_path
+				has_completed_focus = GER_the_Sphinx_velvet_glove
+				has_completed_focus = GER_charisma_and_strengh
 				has_country_flag = GER_VANILLA
 			}
 		}
@@ -14321,7 +14315,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_aftermath_revolution
 		}
-		x = -6
+		x = -4
 		y = 1
 		relative_position_id = GER_aftermath_revolution
 	    completion_reward = {
@@ -14342,7 +14336,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_appease_the_army
 		}
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = GER_great_experiment
 		completion_reward = {
@@ -14446,7 +14440,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_break_the_army
 		}
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_great_experiment
 		completion_reward = {
@@ -14548,7 +14542,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_aftermath_revolution
 		}
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = GER_aftermath_revolution
 		completion_reward = {
@@ -14864,7 +14858,7 @@ focus_tree = {
 		available = {
 			has_political_power > 75
 		}	
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = GER_for_the_republic
 		completion_reward = {
@@ -14906,7 +14900,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_nationalize_part_military_industry
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = GER_nationalize_part_military_industry
 		completion_reward = {
