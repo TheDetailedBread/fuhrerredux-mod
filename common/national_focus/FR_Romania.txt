@@ -3100,16 +3100,30 @@ focus_tree = {
                 add_idea = workers_republic
             }
             hidden_effect = {
-                kill_ideology_leader = vanguardist
-                kill_ideology_leader = collectivist
-                kill_ideology_leader = libertarian_socialist
-                kill_ideology_leader = social_democrat
-                kill_ideology_leader = social_liberal
-                kill_ideology_leader = market_liberal
-                kill_ideology_leader = social_conservative
-                kill_ideology_leader = authoritarian_democrat
-                kill_ideology_leader = paternal_autocrat
-                kill_ideology_leader = national_populist
+                create_country_leader = {
+                    name = "Gheorghe Gheorghiu"
+                    desc = "POLITICS_GHEORGHE_GHEORGHIU_DESC"
+                    picture = "Portrait_Romania_Gheorghe_Gheorghiu.tga"
+                    expire = "1965.1.1"
+                    ideology = vanguardist_subtype
+                    traits = { charismatic }
+                }
+                create_country_leader = {
+                    name = "Petru Groza"
+                    desc = "POLITICS_PETRU_GROZA_DESC"
+                    picture = "Portrait_Romania_Petru_Groza.tga"
+                    expire = "1965.1.1"
+                    ideology = collectivist_subtype
+                    traits = { }
+                }
+                create_country_leader = {
+                    name = "Mihai Dumitru Ralea"
+                    desc = "POLITICS_MIHAI_DUMITRU_RALEA_DESC"
+                    picture = "Portrait_Romania_Mihai_Ralea.tga"
+                    expire = "1965.1.1"
+                    ideology = libertarian_socialist_subtype
+                    traits = {  }
+                }
             }
         }
     }
