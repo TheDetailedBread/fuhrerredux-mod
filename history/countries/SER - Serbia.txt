@@ -1,4 +1,4 @@
-﻿
+﻿#made by Fokeu
 capital = 107
 
 oob = "SER_1936"
@@ -62,32 +62,36 @@ add_ideas = {
 	GEN_sec_ade
 	GEN_entente_member
 	constitutional_monarchy
+	ser_ethnic_nationalism
+	ser_albanian_insurgency
+	ser_economic_crisis
+	ser_anti_democratic_constitution
 }
 
 set_politics = {
-    ruling_party = authoritarian_democrat
+    ruling_party = social_conservative
     last_election = "1935.9.8"
     election_frequency = 36
-    elections_allowed = no
+    elections_allowed = yes
 }
 
 set_popularities = {
     vanguardist = 0
     collectivist = 0
-    libertarian_socialist = 0
+    libertarian_socialist = 20
     social_democrat = 0
-    social_liberal = 16
-    market_liberal = 0
-    social_conservative = 18
-    authoritarian_democrat = 51
-    paternal_autocrat = 13
-    national_populist = 1
-    valkist = 1
+    social_liberal = 0
+    market_liberal = 30
+    social_conservative = 40
+    authoritarian_democrat = 0
+    paternal_autocrat = 0
+    national_populist = 5
+    valkist = 5
 }
 
-set_stability = 0.70
+puppet = CRO
 
-
+set_stability = 0.50
 
 create_country_leader = {
 	name = "Pétar Stambolić"

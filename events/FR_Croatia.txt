@@ -1,0 +1,467 @@
+
+add_namespace = cro
+
+country_event = {
+	id = cro.1 #crisis
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cro.1"}
+	title = cro.1.t
+	desc = cro.1.d
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		original_tag = CRO
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 10
+	}	
+
+	option = {
+		name = cro.1.a
+		add_political_power = -25
+		
+		hidden_effect = {
+			ROOT = {
+				country_event = { id = cro.2 days = 10 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cro.2 #oh god oh fuck
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cro.2"}
+	title = cro.2.t
+	desc = cro.2.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes	
+
+	option = {
+		name = cro.2.a
+		add_political_power = -100
+		
+		hidden_effect = {
+			ROOT = {
+				country_event = { id = cro.3 days = 15 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cro.3 #coup
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cro.3"}
+	title = cro.3.t
+	desc = cro.3.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes	
+
+	option = {
+		name = cro.3.a
+		109 = { set_demilitarized_zone = yes }
+		789 = { set_demilitarized_zone = yes }
+		set_country_flag = CRO_INDEPENDENCE
+		set_politics = {
+			ruling_party = paternal_autocrat
+			election_frequency = 60
+			elections_allowed = no
+		}
+		set_popularities = {
+			paternal_autocrat = 100
+		}
+		add_ideas = military_junta
+		remove_ideas = CRO_italian_influence
+		remove_ideas = CRO_serbia_controlled_goverment
+		remove_ideas = GEN_entente_member
+		add_ideas = CRO_war_of_independence 
+		SER = {
+			end_puppet = CRO
+		}
+		hidden_effect = {
+			ROOT = {
+				country_event = { id = cro.4 days = 10 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = cro.4 #war with serbia
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cro.4"}
+	title = cro.4.t
+	desc = cro.4.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes	
+
+	option = {
+		name = cro.4.a
+		add_political_power = 100
+		CRO = { transfer_state = 109 }
+		CRO = { transfer_state = 789 }
+		add_state_core = 778
+		add_state_core = 104
+		add_manpower = 50000
+		add_stability = 0.20
+		remove_ideas = GRO_italian_influence
+		SER = {
+			declare_war_on = {
+				target = CRO
+				type = annex_everything
+			    }
+			}
+		}
+		load_oob = CRO_warwithserbiasexo
+		789 = { set_demilitarized_zone = no }
+		109 = { set_demilitarized_zone = no }
+	    }
+	}
+}
+
+#remove serbia
+
+country_event = {
+	id = cro.5
+	immediate = { white_peace = SER }
+	title = cro.5.t
+	desc = cro.5.d
+	picture = GFX_report_event_communists_cheer
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CRO
+		104 = { is_controlled_by = CRO }
+		104 = { is_owned_by = SER }
+		CRO = { has_war_with = SER } 
+	}
+
+	mean_time_to_happen = {days = 1}
+
+	option = {
+		name = cro.5.a
+		CRO = { transfer_state = 104 }
+		CRO = { transfer_state = 788 }
+		add_ideas = CRO_no_international_recognition
+		SER = {
+			country_event = { id = srb.3 }
+		}
+		CRO = {
+			set_country_flag = ELE
+		}
+	}
+}
+
+#elections
+
+country_event = {
+	id = cro.6
+	title = cro.6.t
+	desc = cro.6.d
+	picture = GFX_report_event_communists_cheer
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = ELE
+	}
+	option = {
+		name = cro.6.a #colectivism
+		set_country_flag = CRO_COL
+		set_politics = {
+			ruling_party = vanguardist
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			vanguardist = 22
+			market_liberal = 22
+			authoritarian_democrat = 11
+			national_populist = 22
+			social_conservative = 23
+		}
+	}
+	option = {
+		name = cro.6.b #national populism
+		set_country_flag = CRO_NATPOP
+		set_politics = {
+			ruling_party = national_populist
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			collectivist = 22
+			market_liberal = 22
+			authoritarian_democrat = 11
+			national_populist = 22
+			social_conservative = 23
+		}
+	}
+	option = {
+		name = cro.6.c #conservatism 
+		set_country_flag = CRO_CON
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			collectivist = 22
+			market_liberal = 22
+			authoritarian_democrat = 11
+			national_populist = 22
+			social_conservative = 23
+		}
+	}
+	option = { #liberalism
+		name = cro.6.e
+		set_country_flag = CRO_LIB
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		set_popularities = {
+			collectivist = 22
+			market_liberal = 22
+			authoritarian_democrat = 11
+			national_populist = 22
+			social_conservative = 23
+		}
+	}
+}
+
+#join stahlpakt
+
+country_event = {
+	id = cro.7
+	title = cro.7.t
+	desc = cro.7.d
+	picture = diplomacy4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.7.a
+		ai_chance = { base = 80 }
+		add_political_power = 20
+		add_to_faction = CRO
+		CRO = {
+			country_event = { id = cro.8 }
+		}
+	}
+	
+	option = {
+		name = cro.7.b
+		ai_chance = { base = 20 }
+		add_political_power = -20
+		CRO = {
+			country_event = { id = cro.9 }
+		}
+	}
+}
+
+country_event = {
+	id = cro.8
+	title = cro.8.t
+	desc = cro.8.d
+	picture = diplomacy4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.8.a
+		add_opinion_modifier = { target = GER modifier = in_faction }
+	}
+}
+
+country_event = {
+	id = cro.9
+	title = cro.9.t
+	desc = cro.9.d
+	picture = GFX_report_event_people_rioting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.9.a
+		add_opinion_modifier = { target = GER modifier = betrayed_guarantee }
+	}
+}
+
+#internationale
+
+country_event = {
+	id = cro.10
+	title = cro.10.t
+	desc = cro.10.d
+	picture = diplomacy4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.10.a
+		ai_chance = { base = 80 }
+		add_political_power = 20
+		add_to_faction = CRO
+		CRO = {
+			country_event = { id = cro.11 }
+		}
+	}
+	
+	option = {
+		name = cro.10.b
+		ai_chance = { base = 20 }
+		add_political_power = -20
+		CRO = {
+			country_event = { id = cro.12 }
+		}
+	}
+}
+
+country_event = {
+	id = cro.11
+	title = cro.11.t
+	desc = cro.11.d
+	picture = diplomacy4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.11.a
+		add_opinion_modifier = { target = SOV modifier = in_faction }
+	}
+}
+
+country_event = {
+	id = cro.12
+	title = cro.12.t
+	desc = cro.12.d
+	picture = GFX_report_event_people_rioting
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.12.a
+		add_opinion_modifier = { target = SOV modifier = betrayed_guarantee }
+	}
+}
+
+#diplomacy
+
+country_event = {
+	id = cro.13
+	title = cro.13.t
+	desc = ccro.13.d
+	picture = diplomacy4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.13.a
+		ai_chance = { base = 80 }
+		add_political_power = 20
+		give_guarantee = CRO #TO CHANGE
+		add_opinion_modifier = { target = CRO modifier = large_increase }
+	}
+	
+	option = {
+		name = cro.10.b
+		ai_chance = { base = 20 }
+		add_political_power = -20
+		add_opinion_modifier = { target = CRO modifier = medium_decrease }
+	}
+}
+
+country_event = {
+	id = cro.14
+	title = cro.14.t
+	desc = ccro.14.d
+	picture = diplomacy4
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = cro.14.a
+		ai_chance = { base = 80 }
+		add_political_power = 20
+		give_guarantee = CRO #TO CHANGE
+		add_opinion_modifier = { target = CRO modifier = large_increase }
+	}
+	
+	option = {
+		name = cro.14.b
+		ai_chance = { base = 20 }
+		add_political_power = -20
+		add_opinion_modifier = { target = CRO modifier = medium_decrease }
+	}
+}
+
+#demanding zara
+
+country_event = {
+	id = cro.16
+	title = cro.16.t
+	desc = cro.16.d
+	picture = diplomacy4
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = cro.16.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				has_war = yes
+				add = 40
+			}
+		}
+		add_political_power = -20
+		CRO = {
+			transfer_state = 917
+			transfer_state = 1033
+			transfer_state = 163
+		}
+	}
+	
+	option = {
+		name = cro.16.b
+		ai_chance = { base = 80 }
+		add_political_power = 20
+		CRO = {
+			create_wargoal = {
+				type = annex_wargoal_focus
+				target = ITA
+			}
+		}
+	}
+}
+
+#colectivism flavour
+
+#national populism flavour
+
+#conservatism flavour
+
+#liberalism flavour
+
+
