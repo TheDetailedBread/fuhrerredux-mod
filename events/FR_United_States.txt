@@ -740,10 +740,10 @@ country_event = { # Surrender to Mexico
             limit = { FROM = { is_faction_leader = yes } }
             every_country = {
                 limit = { is_in_faction_with = FROM }
-                whitepeace = ROOT
+                white_peace = ROOT
             }
         }
-        FROM = { whitepeace = ROOT }
+        FROM = { white_peace = ROOT }
 
         transfer_state = 375 # Texas
         transfer_state = 376 # New Mexico
@@ -1550,7 +1550,7 @@ country_event = { # Concerns in Share our Wealth
             popularity = 0.05
         }
         add_popularity = {
-            ideology - social_liberal
+            ideology = social_liberal
             popularity = 0.05
         }
     }
@@ -1561,7 +1561,7 @@ country_event = { # Concerns in Share our Wealth
             popularity = 0.05
         }
         add_popularity = {
-            ideology - social_conservative
+            ideology = social_conservative
             popularity = 0.05
         }
     }
