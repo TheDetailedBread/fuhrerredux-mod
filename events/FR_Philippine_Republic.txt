@@ -920,6 +920,7 @@ country_event = { # Civil War!
                     target = PHR
                     type = annex_everything
                 }
+                add_civil_war_target = PHR
             }
         }
     }
@@ -966,46 +967,19 @@ country_event = { # Nacionalista Nominations
     option = { # Quezon
         name = phi.24.a
         hidden_effect = {
-            kill_ideology_leader = social_conservative
             set_country_flag = PHI_quezon_nominated
-        }
-        create_country_leader = {
-            name = "Manuel Luis Quezón"
-            desc = "POLITICS_MANUEL_LUIS_QUEZON_DESC"
-            picture = "Portrait_Philippines_Manuel_Luis_Quezon_KR.tga"
-            expire = "1964.2.6"
-            ideology = social_conservative_subtype
-            traits = { war_industrialist }
         }
     }
     option = { # Osmena
         name = phi.24.b
         hidden_effect = {
-            kill_ideology_leader = social_conservative
             set_country_flag = PHI_osmena_nominated
-        }
-        create_country_leader = {
-            name = "Sergio P. Osmeña"
-            desc = "POLITICS_SERGIO_P_OSMENA_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Sergio_Osmena.tga"
-            expire = "1964.2.6"
-            ideology = social_conservative_subtype
-            traits = { }
         }
     }
     option = { # Rodriguez
         name = phi.24.c
         hidden_effect = {
-            kill_ideology_leader = social_conservative
             set_country_flag = PHI_rodriguez_nominated
-        }
-        create_country_leader = {
-            name = "Eulogio Rodriguez Sr."
-            desc = "POLITICS_EULOGIO_RODRIGUEZ_SR_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Eulogio_Rodriguez_Sr.tga"
-            expire = "1964.2.6"
-            ideology = social_conservative_subtype
-            traits = { }
         }
     }
 }
@@ -1045,48 +1019,21 @@ country_event = { # Liberal Nominations
     }
 
     option = { # Roxas
-        name = phi.24.a
+        name = phi.25.a
         hidden_effect = {
-            kill_ideology_leader = market_liberal
             set_country_flag = PHI_roxas_nominated
-        }
-        create_country_leader = {
-            name = "Manuel A. Roxas"
-            desc = "POLITICS_MANUEL_A_ROXAS_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Manuel_Roxas.tga"
-            expire = "1955.2.1"
-            ideology = market_liberal_subtype
-            traits = { }
         }
     }
     option = { # Quirino
-        name = phi.24.b
+        name = phi.25.b
         hidden_effect = {
-            kill_ideology_leader = social_liberal
             set_country_flag = PHI_quirino_nominated
-        }
-        create_country_leader = {
-            name = "Elpidio Quirino"
-            desc = "POLITICS_ELPIDIO_QUIRINO_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Elpidio_Quirino.tga"
-            expire = "1955.2.1"
-            ideology = social_liberal_subtype
-            traits = { }
         }
     }
     option = { # Araneta
-        name = phi.24.c
+        name = phi.25.c
         hidden_effect = {
-            kill_ideology_leader = market_liberal
             set_country_flag = PHI_araneta_nominated
-        }
-        create_country_leader = {
-            name = "J. Antonio Araneta"
-            desc = "POLITICS_J_ANTONIO_ARANETA_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_J_Antonio_Araneta.tga"
-            expire = "1955.2.1"
-            ideology = market_liberal_subtype
-            traits = { }
         }
     }
 }
@@ -1120,46 +1067,19 @@ country_event = { # Democrata Nominations
     option = { # Sumulong
         name = phi.26.a
         hidden_effect = {
-            kill_ideology_leader = social_democrat
             set_country_flag = PHI_sumulong_nominated
-        }
-        create_country_leader = {
-            name = "Juan Sumulong"
-            desc = "POLITICS_JUAN_SUMULONG_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Juan_Sumulong.tga"
-            expire = "1946.6.2"
-            ideology = social_democrat_subtype
-            traits = { }
         }
     }
     option = { # Santos
         name = phi.26.b
         hidden_effect = {
-            kill_ideology_leader = social_democrat
             set_country_flag = PHI_santos_inaugurated
-        }
-        create_country_leader = {
-            name = "Lope K. Santos"
-            desc = "POLITICS_LOPE_K_SANTOS_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Lope_K_Santos.tga"
-            expire = "1946.6.2"
-            ideology = social_democrat_subtype
-            traits = { popular_figurehead }
         }
     }
     option = { # Feleo
         name = phi.26.c
         hidden_effect = {
-            kill_ideology_leader = social_democrat
             set_country_flag = PHI_feleo_inaugurated
-        }
-        create_country_leader = {
-            name = "Juan Feleo"
-            desc = "POLITICS_JUAN_FELEO_DESC"
-            picture = "gfx/leaders/PHI/Portrait_Philippines_Juan_Feleo.tga"
-            expire = "1946.6.2"
-            ideology = social_democrat_subtype
-            traits = { }
         }
     }
 }
@@ -1185,6 +1105,7 @@ country_event = { # 1940 Presidential Elections
         name = phi.27.a
         set_politics = {
             ruling_party = social_conservative
+            elections_allowed = yes
         }
         add_popularity = {
             ideology = social_conservative
@@ -1199,6 +1120,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Jose_G_David_eco_sco
                 PHI_Tirano_Craveza_sec_sco
             }
+            create_country_leader = {
+                name = "Manuel Luis Quezón"
+                desc = "POLITICS_MANUEL_LUIS_QUEZON_DESC"
+                picture = "Portrait_Philippines_Manuel_Luis_Quezon_KR.tga"
+                expire = "1964.2.6"
+                ideology = social_conservative_subtype
+                traits = { war_industrialist }
+            }
         }
         else_if = {
             limit = { has_country_flag = PHI_osmena_nominated }
@@ -1207,6 +1136,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Manuel_Quadrino_for_sco
                 PHI_Jose_G_David_eco_sco
                 PHI_Tirano_Craveza_sec_sco
+            }
+            create_country_leader = {
+                name = "Sergio P. Osmeña"
+                desc = "POLITICS_SERGIO_P_OSMENA_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Sergio_Osmena.tga"
+                expire = "1964.2.6"
+                ideology = social_conservative_subtype
+                traits = { }
             }
         }
         else_if = {
@@ -1217,6 +1154,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Jose_G_David_eco_sco
                 PHI_Tirano_Craveza_sec_sco
             }
+            create_country_leader = {
+                name = "Eulogio Rodriguez Sr."
+                desc = "POLITICS_EULOGIO_RODRIGUEZ_SR_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Eulogio_Rodriguez_Sr.tga"
+                expire = "1964.2.6"
+                ideology = social_conservative_subtype
+                traits = { }
+            }
         }
         hidden_effect = {
             PHI_reset_nominations = yes
@@ -1225,12 +1170,14 @@ country_event = { # 1940 Presidential Elections
     }
     option = { # Liberal
         name = phi.27.b
-        set_politics = {
-            ruling_party = market_liberal
-        }
+        
         remove_every_minister = yes
         if = {
             limit = { has_country_flag = PHI_roxas_nominated }
+            set_politics = {
+                ruling_party = market_liberal
+                elections_allowed = yes
+            }
             add_popularity = {
                 ideology = market_liberal
                 popularity = 0.05
@@ -1241,9 +1188,21 @@ country_event = { # 1940 Presidential Elections
                 PHI_Antonio_de_las_Alas_eco_sli
                 PHI_Roman_Apolinario_sec_mli
             }
+            create_country_leader = {
+                name = "Manuel A. Roxas"
+                desc = "POLITICS_MANUEL_A_ROXAS_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Manuel_Roxas.tga"
+                expire = "1955.2.1"
+                ideology = market_liberal_subtype
+                traits = { }
+            }
         }
         else_if = {
             limit = { has_country_flag = PHI_quirino_nominated }
+            set_politics = {
+                ruling_party = social_liberal
+                elections_allowed = yes
+            }
             add_popularity = {
                 ideology = social_liberal
                 popularity = 0.15
@@ -1254,9 +1213,21 @@ country_event = { # 1940 Presidential Elections
                 PHI_Manuel_Quadrino_eco_sli
                 PHI_Alberto_Ramos_sec_sli
             }
+            create_country_leader = {
+                name = "Elpidio Quirino"
+                desc = "POLITICS_ELPIDIO_QUIRINO_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Elpidio_Quirino.tga"
+                expire = "1955.2.1"
+                ideology = social_liberal_subtype
+                traits = { }
+            }
         }
         else_if = {
             limit = { has_country_flag = PHI_araneta_nominated }
+            set_politics = {
+                ruling_party = market_liberal
+                elections_allowed = yes
+            }
             add_popularity = {
                 ideology = market_liberal
                 popularity = 0.05
@@ -1266,6 +1237,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Quentin_Paredes_for_mli
                 PHI_Ramon_Magsaysay_eco_mli
                 PHI_Ramon_Quisumbing_sec_mli
+            }
+            create_country_leader = {
+                name = "J. Antonio Araneta"
+                desc = "POLITICS_J_ANTONIO_ARANETA_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_J_Antonio_Araneta.tga"
+                expire = "1955.2.1"
+                ideology = market_liberal_subtype
+                traits = { }
             }
         }
         hidden_effect = {
@@ -1277,6 +1256,7 @@ country_event = { # 1940 Presidential Elections
         name = phi.27.c
         set_politics = {
             ruling_party = social_democrat
+            elections_allowed = yes
         }
         add_popularity = {
             ideology = social_democrat
@@ -1291,6 +1271,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Carlos_P_Garcia_eco_sde
                 PHI_Jose_M_Crisol_sec_sde
             }
+            create_country_leader = {
+                name = "Juan Sumulong"
+                desc = "POLITICS_JUAN_SUMULONG_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Juan_Sumulong.tga"
+                expire = "1946.6.2"
+                ideology = social_democrat_subtype
+                traits = { }
+            }
         }
         else_if = {
             limit = { has_country_flag = PHI_santos_nominated }
@@ -1300,6 +1288,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Diosdado_P_Macapagal_eco_sde
                 PHI_Pardo_de_Tavera_sec_sde
             }
+            create_country_leader = {
+                name = "Lope K. Santos"
+                desc = "POLITICS_LOPE_K_SANTOS_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Lope_K_Santos.tga"
+                expire = "1946.6.2"
+                ideology = social_democrat_subtype
+                traits = { popular_figurehead }
+            }
         }
         else_if = {
             limit = { has_country_flag = PHI_feleo_nominated }
@@ -1308,6 +1304,14 @@ country_event = { # 1940 Presidential Elections
                 PHI_Rafael_Liwanag_for_sde
                 PHI_Carlos_P_Garcia_eco_sde
                 PHI_Pardo_de_Tavera_sec_sde
+            }
+            create_country_leader = {
+                name = "Juan Feleo"
+                desc = "POLITICS_JUAN_FELEO_DESC"
+                picture = "gfx/leaders/PHI/Portrait_Philippines_Juan_Feleo.tga"
+                expire = "1946.6.2"
+                ideology = social_democrat_subtype
+                traits = { }
             }
         }
         hidden_effect = {
@@ -1532,19 +1536,27 @@ country_event = { # Trade Treaty Accepted
         name = phi.104.a
         hidden_effect = {
             if = {
-                limit = { FROM = ENG }
+                limit = { 
+                    FROM = { tag = ENG }
+                }
                 set_country_flag = PHI_british_trade
             }
             else_if = {
-                limit = { FROM = USA }
+                limit = { 
+                    FROM = { tag = USA }
+                }
                 set_country_flag = PHI_american_trade
             }
             else_if = {
-                limit = { FROM = GER }
+                limit = { 
+                    FROM = { tag = GER }
+                }
                 set_country_flag = PHI_german_trade
             }
             else_if = {
-                limit = { FROM = JAP }
+                limit = { 
+                    FROM = { tag = JAP }
+                }
                 set_country_flag = PHI_japanese_trade
             }
         }
@@ -1995,9 +2007,9 @@ country_event = { # Whitepeace Event
 
     option = {
         name = phi.120.a
-        random_country = {
+        every_country = {
             limit = { is_in_faction_with = PREV }
-            whitepeace = PHI
+            white_peace = PHI
         }
     }
     option = {

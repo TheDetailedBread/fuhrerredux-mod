@@ -54,66 +54,76 @@ if = {
 
 add_ideas = {
 	GEN_entente_member
-	rom_regency
-	GEN_hog_sde
-	GEN_FOR_Sde
-	GEN_eco_sde
-	GEN_sec_sde
+	ROM_the_iron_guard
+	ROM_economic_modernization
+
+	ROM_Position_Vacant_hog
+	ROM_Grigore_Niculescu_Buzesti_for_ade
+	ROM_Gheorghe_Potopeanu_eco_pau
+	ROM_Aurel_Aldea_sec_sco
 	constitutional_monarchy
 }
 
 set_convoys = 17
 
 set_politics = {	
-	ruling_party = social_democrat
+	ruling_party = authoritarian_democrat
 	last_election = "1933.3.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 5
+    vanguardist = 0
+    collectivist = 2
     libertarian_socialist = 3
-    social_democrat = 42
-    social_liberal = 14
-    market_liberal = 0
-    social_conservative = 16
-    authoritarian_democrat = 0
-    paternal_autocrat = 3
-    national_populist = 15
-    valkist = 0
+    social_democrat = 9
+    social_liberal = 10
+    market_liberal = 8
+    social_conservative = 12
+    authoritarian_democrat = 38
+    paternal_autocrat = 0
+    national_populist = 3
+    valkist = 15
 }
+
+country_event = { id = romania.0 days = 1 } # Intro
+country_event = { id = romania.1 days = 14 } # Appointing a Regent
+country_event = { id = romania.5 days = 30 } # Tensions in Translyvania
+country_event = { id = romania.18 days = 80 } # North Railway Station Fire
+country_event = { id = romania.19 days = 280 } # Troops Deployment
+country_event = { id = romania.2 days = 663 } # Coronation of King Michael
 
 ######### LEADERS
 
+
 create_country_leader = {
-	name = "Nicolae Ceauşescu"
-	desc = "POLITICS_NICOLAE_CEAUSESCU_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_3.tga"
-	expire = "1965.1.1"
+	name = "Regency Council"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
+	picture = "Portrait_Romania_Regency_Council.tga"
+	expire = "2017.12.5"
 	ideology = vanguardist_subtype
-	traits = { charismatic }
+	traits = { }
 }
 create_country_leader = {
-	name = "Petru Groza"
-	desc = "POLITICS_PETRU_GROZA_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_13.tga"
-	expire = "1965.1.1"
+	name = "Regency Council"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
+	picture = "Portrait_Romania_Regency_Council.tga"
+	expire = "2017.12.5"
 	ideology = collectivist_subtype
 	traits = { }
 }
 create_country_leader = {
-	name = "Mihai Dumitru Ralea"
-	desc = "POLITICS_MIHAI_DUMITRU_RALEA_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_17.tga"
-	expire = "1965.1.1"
+	name = "Regency Council"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
+	picture = "Portrait_Romania_Regency_Council.tga"
+	expire = "2017.12.5"
 	ideology = libertarian_socialist_subtype
-	traits = {  }
+	traits = { }
 }
 create_country_leader = {
 	name = "Regency Council"
-	desc = "POLITICS_REGENCY_COUNCIL_DESC"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
 	picture = "Portrait_Romania_Regency_Council.tga"
 	expire = "2017.12.5"
 	ideology = social_democrat_subtype
@@ -121,7 +131,7 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "Regency Council"
-	desc = "POLITICS_REGENCY_COUNCIL_DESC"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
 	picture = "Portrait_Romania_Regency_Council.tga"
 	expire = "2017.12.5"
 	ideology = social_liberal_subtype
@@ -129,7 +139,7 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "Regency Council"
-	desc = "POLITICS_REGENCY_COUNCIL_DESC"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
 	picture = "Portrait_Romania_Regency_Council.tga"
 	expire = "2017.12.5"
 	ideology = market_liberal_subtype
@@ -137,7 +147,7 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "Regency Council"
-	desc = "POLITICS_REGENCY_COUNCIL_DESC"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
 	picture = "Portrait_Romania_Regency_Council.tga"
 	expire = "2017.12.5"
 	ideology = social_conservative_subtype
@@ -145,7 +155,7 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "Regency Council"
-	desc = "POLITICS_REGENCY_COUNCIL_DESC"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
 	picture = "Portrait_Romania_Regency_Council.tga"
 	expire = "2017.12.5"
 	ideology = authoritarian_democrat_subtype
@@ -153,32 +163,24 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "Regency Council"
-	desc = "POLITICS_REGENCY_COUNCIL_DESC"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
 	picture = "Portrait_Romania_Regency_Council.tga"
 	expire = "2017.12.5"
 	ideology = paternal_autocrat_subtype
 	traits = { }
 }
 create_country_leader = {
-	name = "Nicholas I"
-	desc = "POLITICS_NICHOLAS_I_DESC"
-	picture = "Portrait_Romania_Nicholas_I.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Corneliu Codreanu"
-	desc = "POLITICS_CODREANU_DESC"
-	picture = "Portrait_Romania_Corneliu_Zelea_Codreanu.tga"
-	expire = "1965.1.1"
+	name = "Regency Council"
+	desc = "POLITICS_REGENCY_COUNCIL_ROMANIA_DESC"
+	picture = "Portrait_Romania_Regency_Council.tga"
+	expire = "2017.12.5"
 	ideology = national_populist_subtype
 	traits = { }
 }
 create_country_leader = {
-	name = "Mircea Eliade"
-	desc = "POLITICS_MIRCEA_ELIADE_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_17.tga"
+	name = "Corneliu Zelea Codreanu"
+	desc = "POLITICS_CORNELIU_ZELEA_CODREANU_DESC"
+	picture = "Portrait_Romania_Corneliu_Zelea_Codreanu.tga"
 	expire = "1965.1.1"
 	ideology = valkist_subtype
 	traits = { }
@@ -209,7 +211,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Gheorghe Argeseanu"
-	portrait_path = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Argeseanu.tga"
+	portrait_path = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Argesanu.tga"
 	traits = { politically_connected }
 	skill = 3
 	attack_skill = 2
