@@ -255,6 +255,26 @@ focus_tree = {
         x = -1
         y = 1
         cost = 6
+        available = {
+            BEL = {
+                controls_state = 866
+                controls_state = 867
+            }
+        }
+        bypass = {
+            866 = {
+                OR = {
+                    owner = { tag = ROOT }
+                    is_controlled_by_ROOT_or_ally = yes
+                }
+            }
+            867 = {
+                OR = {
+                    owner = { tag = ROOT }
+                    is_controlled_by_ROOT_or_ally = yes
+                }
+            }
+        }
         prerequisite = { focus = HOL_cult_of_personality }
         prerequisite = { focus = HOL_investments_from_siemens }
         relative_position_id = HOL_cult_of_personality
@@ -302,7 +322,7 @@ focus_tree = {
         x = 1
         y = 1
         cost = 6
-        available = { has_idea = HOL_unrecognized_government_1 }
+        available = { has_completed_focus = HOL_trade_expansion }
         prerequisite = { focus = HOL_operation_fakkel }
         prerequisite = { focus = HOL_align_nationalist_industrialists }
         relative_position_id = HOL_operation_fakkel
@@ -338,7 +358,6 @@ focus_tree = {
         y = 1
         cost = 6
         available = {
-            date > 1939.3.10
             BEL = {
                 exists = yes
                 NOT = { is_in_faction_with = ROOT }

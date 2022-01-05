@@ -216,29 +216,25 @@ country_event = { # Mexican Response
             target = MEX
             type = annex_everything
         }
-        news_event = { id = worldnews.104 }
+        random_other_country = {
+            news_event = { id = worldnews.104 }
+        }
     }
 }
 
-country_event = { # Some triggering event-ask the FR devs
+country_event = { # Hurricane Floods
     id = usa.6
     title = usa.6.t
     desc = usa.6.d
-    fire_only_once = yes
-    hidden = yes
-    immediate = { news_event = news.8 }
-    mean_time_to_happen = { days = 0 }
-
-    trigger = {
-        original_tag = USA
-        date > 1938.5.1
-    }
+    is_triggered_only = yes
 
     option = {
         name = usa.6.a
-        hidden_effect = {
-            country_event = { id = usa.7 days = 2 }
-        }
+        add_stability = 0.025
+    }
+    option = {
+        name = usa.6.b
+        add_stability = -0.025
     }
 }
 
@@ -247,9 +243,24 @@ country_event = { # Border Skirmish
 	title = usa.7.t
 	desc = usa.7.d
 	picture = report_event_merchant_ship_01
-	is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        date > 1938.5.1
+        NOT = { has_war_with = MEX }
+    }
+
+    mean_time_to_happen = {
+        days = 0
+    }
 
 	immediate = { 
+        hidden_effect = {
+            random_other_country = {
+                news_event = news.8 
+            }
+        }
         modify_country_flag = { flag = border_clashes value = 1 }
     }
 
@@ -729,10 +740,10 @@ country_event = { # Surrender to Mexico
             limit = { FROM = { is_faction_leader = yes } }
             every_country = {
                 limit = { is_in_faction_with = FROM }
-                whitepeace = ROOT
+                white_peace = ROOT
             }
         }
-        FROM = { whitepeace = ROOT }
+        FROM = { white_peace = ROOT }
 
         transfer_state = 375 # Texas
         transfer_state = 376 # New Mexico
@@ -1539,7 +1550,7 @@ country_event = { # Concerns in Share our Wealth
             popularity = 0.05
         }
         add_popularity = {
-            ideology - social_liberal
+            ideology = social_liberal
             popularity = 0.05
         }
     }
@@ -1550,7 +1561,7 @@ country_event = { # Concerns in Share our Wealth
             popularity = 0.05
         }
         add_popularity = {
-            ideology - social_conservative
+            ideology = social_conservative
             popularity = 0.05
         }
     }

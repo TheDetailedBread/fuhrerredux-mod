@@ -1,0 +1,1143 @@
+#########################
+#Belgium ideas by SibCDC#
+#########################
+ideas = {
+	country = {
+###Starting ideas
+		BEL_pillarized_society = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_pillarized_society"}
+			picture = BEL_pillarized_society
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.2
+			}
+		}
+
+		BEL_national_unity_government = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_national_unity_government"}
+			picture = BEL_national_unity_government
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_cost = -0.08
+			}
+		}
+
+		BEL_linguistic_debacle = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_linguistic_debacle"}
+			picture = BEL_linguistic_debacle
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = -0.05
+				max_planning = -0.1
+				planning_speed = -0.2
+			}
+		}
+
+###Through Events
+
+		BEL_black_wednesday = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_black_wednesday"}
+			picture = BEL_black_wednesday
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+			}
+		}
+
+###Through Focus Tree
+		BEL_improved_working_conditions = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_improved_working_conditions"}
+			picture = BEL_improved_working_conditions
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.08
+				stability_factor = 0.05
+			}
+		}
+
+		BEL_subsidized_boerenbond = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_subsidized_boerenbond"}
+			picture = BEL_subsidized_boerenbond
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.03
+			}
+		}
+
+		BEL_conge_paye = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_conge_paye"}
+			picture = BEL_conge_paye
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.08
+				stability_factor = 0.05
+			}
+		}
+
+		BEL_large_state_investments = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_large_state_investments"}
+			picture = BEL_large_state_investments
+			removal_cost = -1
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		BEL_deregulated_industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_deregulated_industry"}
+			picture = BEL_deregulated_industry
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+
+		BEL_strong_middle_class = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_strong_middle_class"}
+			picture = BEL_strong_middle_class
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		BEL_women_suffrage = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_women_suffrage"}
+			picture = BEL_women_suffrage
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		BEL_debased_currency = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_debased_currency"}
+			picture = BEL_debased_currency
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.02
+			}
+		}
+
+		BEL_vlaamse_wacht = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_vlaamse_wacht"}
+			picture = BEL_vlaamse_wacht
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.03
+			}
+		}
+
+		BEL_purging_opposition = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_purging_opposition"}
+			picture = BEL_purging_opposition
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+			}
+		}
+
+		BEL_nationalizing_pillars = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_nationalizing_pillars"}
+			picture = BEL_nationalizing_pillars
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		BEL_better_research = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_better_research"}
+			picture = BEL_better_research
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		BEL_diamond_trade = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_diamond_trade"}
+			picture = BEL_diamond_trade
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+
+		BEL_small_arms_factory = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_small_arms_factory"}
+			picture = BEL_small_arms_factory
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = { }
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		BEL_bilingualism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_bilingualism"}
+			picture = BEL_linguistic_problems_solved
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				planning_speed = 0.15
+				supply_consumption_factor = -0.1
+			}
+		}
+
+		BEL_separate_divisions = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_separate_divisions"}
+			picture = BEL_linguistic_problems_solved
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				max_planning = 0.15
+			}
+		}
+
+		BEL_armed_neutrality = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_armed_neutrality"}
+			picture = BEL_armed_neutrality
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+				join_faction_tension = 1.00
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+			}
+		}
+
+		BEL_profits_from_congo = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_profits_from_congo"}
+			picture = BEL_profits_from_congo
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		BEL_economic_secretariats = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_economic_secretariats"}
+			picture = BEL_economic_secretariats
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.08
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		BEL_union_of_craftsmen_and_intellectuals = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_union_of_craftsmen_and_intellectuals"}
+			picture = BEL_union_of_craftsmen_and_intellectuals
+			removal_cost = -1
+			modifier = {
+				conscription = 0.02
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		BEL_bwp_integrated = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_bwp_integrated"}
+			picture = BEL_bwp_integrated
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+
+		BEL_communist_brigades = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_communist_brigades"}
+			picture = BEL_communist_brigades
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+				send_volunteers_tension = 0.10
+			}
+		}
+		BEL_dominer_pour_servir = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BEL_dominer_pour_servir"}
+			picture = BEL_dominer_pour_servir
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+			}
+		}
+	}
+
+	head_of_government = {
+		BEL_Julien_Lahaut_hog_van = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				vanguardist
+				hog_ambitious_union_boss
+			}
+		}
+		BEL_Joseph_Jacquemotte_hog_col = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				collectivist
+				hog_sincere_internationalist
+			}
+		}
+		BEL_War_van_Overstraeten_hog_col = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				collectivist
+				hog_privileged_socialist
+			}
+		}
+		BEL_Lucie_Dejardin_hog_lib = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_red_chairmen
+			}
+		}
+		BEL_Achille_Van_Acker_hog_sde = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_democrat
+				hog_silent_workhorse
+			}
+		}
+		BEL_Hendrik_de_Man_hog_sde = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_democrat
+				hog_naive_optimist
+			}
+		}
+		BEL_Victor_de_Laveleye_hog_sli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_liberal
+				hog_happy_amateur
+			}
+		}
+		BEL_Paul_Emile_Janson_hog_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				market_liberal
+				hog_accomplished_diplomat
+			}
+		}
+		BEL_Frans_Van_Cauwelaert_hog_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_conservative
+				hog_corporate_suit
+			}
+		}
+		BEL_Hubert_Pierlot_hog_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_conservative
+				hog_old_compromiser
+			}
+		}
+		BEL_Paul_Van_Zeeland_hog_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				social_conservative
+				hog_silent_workhorse
+			}
+		}
+		BEL_Dr_August_Borms_hog_ade = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_charismatic_charmer
+			}
+		}
+		BEL_Joris_Van_Severen_hog_pau = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_flamboyant_tough_guy
+			}
+		}
+		BEL_Staf_De_Clercq_hog_npo = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				national_populist
+				hog_determined_populist
+			}
+		}
+		BEL_Leon_Degrelle_hog_val = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_hog = no }
+			cancel_if_invalid = no
+			traits = {
+				head_of_government
+				valkist
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+
+	foreign_minister = {
+		BEL_Edgar_Lalmand_for_van = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				vanguardist
+				for_biased_intellectual
+			} 
+		}
+		BEL_War_van_Overstraeten_for_col = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				collectivist
+				for_foreign_sympathizer
+			}
+		}
+		BEL_Louis_Paul_Boon_for_lib = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_apologetic_clerk
+			}
+		}
+		BEL_Camille_Huysmans_for_sde = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_democrat
+				for_general_staffer
+			}
+		}
+		BEL_Jules_Pire_for_sde = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_democrat
+				for_great_compromiser
+			}
+		}
+		BEL_Eugene_Soudan_for_sli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_liberal
+				for_radical_among_moderates
+			}
+		}
+		BEL_Paul_Henri_Spaak_for_sli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_liberal
+				for_apologetic_clerk
+			}
+		}
+		BEL_Roger_Motz_for_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				market_liberal
+				for_apologetic_clerk
+			}
+		}
+		BEL_Frans_Van_Cauwelaert_for_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_conservative
+				for_general_staffer
+			}
+		}
+		BEL_Gaston_Eyskens_for_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_conservative
+				for_ideological_crusader
+			}
+		}
+		BEL_Hubert_Pierlot_for_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_conservative
+				for_biased_intellectual
+			}
+		}
+		BEL_Paul_Van_Zeeland_for_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				social_conservative
+				for_relations_expert
+			}
+		}
+		BEL_Charles_d'Aspremont_Lynden_for_ade = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_radical_among_moderates
+			}
+		}
+		BEL_Ward_Hermans_for_pau = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_great_compromiser
+			}
+		}
+		BEL_Jef_Francois_for_npo = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
+		BEL_Leon_Degrelle_for_val = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				foreign_minister
+				valkist
+				for_biased_intellectual
+			}
+		}
+	}
+
+	economy_minister = {
+		BEL_Albert_Marteaux_eco_van = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				vanguardist
+				eco_planned_economy_proponent
+			}
+		}
+		BEL_Abraham_Leon_eco_col = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				collectivist
+				eco_reformer
+			}
+		}
+		BEL_Adhemar_Henneaut_eco_lib = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_balanced_budget_economy
+			}
+		}
+		BEL_Albert_Wauters_eco_sde = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_democrat
+				eco_mixed_economy
+			}
+		}
+		BEL_Charles_Pomaret_eco_sde = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
+			}
+		}
+		BEL_Jules_Merlot_eco_sli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_liberal
+				eco_balanced_budget_economy
+			}
+		}
+		BEL_Alexandre_Galopin_eco_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				market_liberal
+				eco_bank_president
+			}
+		}
+		BEL_Franz_de_Voghel_eco_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				market_liberal
+				eco_construction_magnate
+			}
+		}
+		BEL_Maurice_Lippens_eco_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				market_liberal
+				eco_imbedded_unioneer
+			}
+		}
+		BEL_Georges_Theunis_eco_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_conservative
+				eco_industrialiser
+			}
+		}
+		BEL_Gustaaf_Sap_eco_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_conservative
+				eco_railway_magnate
+			}
+		}
+		BEL_Hendrik_Heyman_eco_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_conservative
+				eco_infantry_proponent
+			}
+		}
+		BEL_Jean_Duvieusart_eco_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				social_conservative
+				eco_bank_president
+			}
+		}
+		BEL_Joris_Van_Severen_eco_pau = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_resource_industrialist
+			}
+		}
+		BEL_Rene_Lambrichts_eco_pau = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_trade_proponent
+			}
+		}
+		BEL_Leon_Degrelle_eco_val = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				economy_minister
+				valkist
+				eco_reformer
+			}
+		}
+	}
+
+	security_minister = {
+		BEL_Jean_Terfve_sec_van = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				vanguardist
+				sec_compassionate_gentleman
+			}
+		}
+		BEL_Abraham_Leon_sec_col = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				collectivist
+				sec_crime_fighter
+			}
+		}
+		BEL_Willem_Eekelers_sec_col = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				collectivist
+				sec_efficient_sociopath
+			}
+		}
+		BEL_Felix_Van_den_Bergh_sec_lib = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_silent_lawyer
+			}
+		}
+		BEL_Adolphe_Van_Glabbeke_sec_sli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_liberal
+				sec_back_stabber
+			}
+		}
+		BEL_Albert_Deveze_sec_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				market_liberal
+				sec_crime_fighter
+			}
+		}
+		BEL_Victor_Maistriau_sec_mli = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				market_liberal
+				sec_crooked_kleptocrat
+			}
+		}
+		BEL_Albert_Janssen_sec_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_conservative
+				sec_health_and_safety
+			}
+		}
+		BEL_August_De_Schryver_sec_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_conservative
+				sec_compassionate_gentleman
+			}
+		}
+		BEL_Francois_Bovesse_sec_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_conservative
+				sec_back_stabber
+			}
+		}
+		BEL_Jean_Rey_sec_sco = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				social_conservative
+				sec_secret_police_chief
+			}
+		}
+		BEL_Georges_Thone_sec_ade = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_efficient_sociopath
+			}
+		}
+		BEL_Emiel_Thiers_sec_pau = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_prince_of_terror
+			}
+		}
+		BEL_Paul_Ouwerx_sec_npo = {
+			allowed = { original_tag = BEL }
+			available = { can_replace_minister = no }
+			cancel_if_invalid = no
+			traits = {
+				security_minister
+				national_populist
+				sec_regionalist
+			}
+		}
+	}
+
+	chief_of_staff = {
+		BEL_Adolphe_Cumont_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+		}
+		BEL_Auguste_Baesens_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+		BEL_Georges_Deffontaine_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+		}
+		BEL_Georges_Vereecken_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_mass_combat
+			}
+		}
+		BEL_Gustave_Fromont_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+		BEL_Joris_Van_Severen_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+		}
+		BEL_Leon_Degrelle_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+		}
+		BEL_Olivier_Derousseaux_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+		BEL_Oscar_Michiels_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_mass_combat
+			}
+		}
+		BEL_Victor_van_Strydonck_cos = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+	}
+
+	chief_of_army = {
+		BEL_Charles_Bastin_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_commando_doctrine
+			}
+		}
+		BEL_Edouard_Van_Den_Bergen_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_doctrine_of_autonomy
+			}
+		}
+		BEL_Georges_Vereecken_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_decisive_battle_doctrine
+			}
+		}
+		BEL_Lambert_Chardome_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+		}
+		BEL_Leon_Degrelle_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+		}
+		BEL_Oscar_Michiels_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_static_defence_doctrine
+			}
+		}
+		BEL_Raoul_van_Overstraeten_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+		}
+		BEL_Rene_Lagrou_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_commando_doctrine
+			}
+		}
+		BEL_Victor_van_Strydonck_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+		}
+		BEL_Yvan_Gerard_carm = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_army
+				carm_static_defence_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		BEL_Etienne_Glorie_cnav = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_navy
+				cnav_decisive_battle_doctrine
+			}
+		}
+		BEL_Fritz_Conrad_cnav = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_navy
+				cnav_indirect_approach_doctrine
+			}
+		}
+		BEL_G_Timmermans_cnav = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+		}
+		BEL_Georges_Vereecken_cnav = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+		}
+		BEL_Henri_Decarpentrie_cnav = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_navy
+				cnav_base_control_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		BEL_Edouard_Blondeel_cair = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+		}
+		BEL_Felix_Iserentant_cair = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+		BEL_Fritz_Lob_cair = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+		BEL_LFE_Wouters_cair = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_air_force
+				cair_naval_aviation_doctrine
+			}
+		}
+		BEL_Paul_Nothomb_cair = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_air_force
+				cair_the_red_baron
+			}
+		}
+		BEL_Rene_Legros_cair = {
+			allowed = { original_tag = BEL }
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+}

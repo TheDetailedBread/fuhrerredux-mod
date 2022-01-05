@@ -596,8 +596,8 @@ country_event = {
                     NOT = { is_core_of = ROOT }
                     NOT = { is_claimed_by = ROOT }
                 }
-                WLL = { transfer_state = PREV }
             }
+            WLL = { transfer_state = PREV }
         }
         every_owned_state = {
             limit = {
@@ -3402,6 +3402,8 @@ country_event = {
     trigger = {
         NOT = {
             tag = INS
+            tag = BEA
+            tag = DEI
             has_country_flag = INS_OCCUPIED
             country_exists = INS
         }
