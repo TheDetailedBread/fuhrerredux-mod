@@ -74,32 +74,12 @@ ideas = {
                 industrial_capacity_dockyard = -0.3
             }
         }
-        USA_the_greater_depression_5 = {
-            allowed = { original_tag = USA }
-            picture = generic_economic_turmoil
-            modifier = {
-                consumer_goods_factor = 0.35
-                production_factory_max_efficiency_factor = -0.2
-                industrial_capacity_factory = -0.25
-                industrial_capacity_dockyard = -0.25
-            }
-        }
         USA_the_greater_depression_6 = {
             allowed = { original_tag = USA }
             picture = generic_economic_turmoil
             modifier = {
                 consumer_goods_factor = 0.3
                 production_factory_max_efficiency_factor = -0.2
-                industrial_capacity_factory = -0.25
-                industrial_capacity_dockyard = -0.25
-            }
-        }
-        USA_the_greater_depression_7 = {
-            allowed = { original_tag = USA }
-            picture = generic_economic_turmoil
-            modifier = {
-                consumer_goods_factor = 0.3
-                production_factory_max_efficiency_factor = -0.15
                 industrial_capacity_factory = -0.25
                 industrial_capacity_dockyard = -0.25
             }
@@ -677,7 +657,12 @@ ideas = {
             allowed = { original_tag = USA }
             available = { can_replace_hog = no }
             visible = { 
-                USA_union_has_collapsed = yes
+                OR = {
+                    country_exists = NEE
+                    country_exists = CLB
+                    country_exists = RBL
+                    country_exists = CAS
+                }
                 NOT = { has_country_flag = USA_macarthur_retired }
             }
             cancel_if_invalid = no
@@ -1286,8 +1271,6 @@ ideas = {
             }
         }
     }
-<<<<<<< HEAD
-=======
     ### Industrial Companies ###
 	industrial_concern = {
 		fx_att = { #AT&T
@@ -1901,5 +1884,4 @@ ideas = {
 			research_bonus = { air_equipment = 0.05 }
 		}
 	}
->>>>>>> 82351f3cfc64c97697174ea38e31475b0e2fd38c
 }
