@@ -24,11 +24,6 @@ foreign_politics = {
     }
 
     KNE_invest_in_the_exiles = {
-        allowed = {
-            any_country = {
-                is_in_faction_with = KNE
-            }
-        }
         icon = GFX_decision_ger_mefo_bills
         fire_only_once = yes
         target_trigger = {
@@ -39,7 +34,8 @@ foreign_politics = {
         }
         days_remove = 14
         visible = {
-            FROM = { is_in_faction_with = ROOT }
+            FROM = { is_in_faction_with = KNE }
+            NOT = { tag = KNE }
         }
         ai_will_do = { factor = 200 }
         remove_effect = {

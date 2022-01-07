@@ -956,13 +956,15 @@ shared_focus = {
 	relative_position_id = USA_cruiser_modernization
 	completion_reward = {
 		378 = {
-			limit = { 
-				free_building_slots = { 
-					building = dockyard
-					size > 0
-					include_locked = yes 
-				}
-			}
+			if = {
+        limit = { 
+          free_building_slots = { 
+            building = dockyard
+            size > 0
+            include_locked = yes 
+          }
+        }
+      }
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = dockyard
@@ -986,13 +988,15 @@ shared_focus = {
 	relative_position_id = USA_cruiser_modernization
 	completion_reward = {
 		357 = {
-			limit = { 
-				free_building_slots = { 
-					building = dockyard
-					size > 0
-					include_locked = yes 
-				}
-			}
+			if = {
+        limit = { 
+          free_building_slots = { 
+            building = dockyard
+            size > 0
+            include_locked = yes 
+          }
+        }
+      }
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = dockyard

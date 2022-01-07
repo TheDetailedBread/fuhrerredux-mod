@@ -1234,12 +1234,14 @@ shared_focus = {
     relative_position_id = PHI_start_naval_buildup
     completion_reward = {
         327 = {
-            limit = {
+            if = {
+              limit = {
                 free_building_slots = {
                     building = dockyard
                     size > 0
                     include_locked = yes
                 }
+              }
             }
 
             add_extra_state_shared_building_slots = 1
@@ -1264,12 +1266,14 @@ shared_focus = {
     relative_position_id = PHI_expand_manila_harbour
     completion_reward = {
         626 = {
-            limit = {
+            if = {
+              limit = {
                 free_building_slots = {
                     building = dockyard
                     size > 0
                     include_locked = yes
                 }
+              }
             }
 
             add_extra_state_shared_building_slots = 1
@@ -1294,12 +1298,14 @@ shared_focus = {
     relative_position_id = PHI_expand_manila_harbour
     completion_reward = {
         627 = {
-            limit = {
+            if = {
+              limit = {
                 free_building_slots = {
                     building = dockyard
                     size > 0
                     include_locked = yes
                 }
+              }
             }
 
             add_extra_state_shared_building_slots = 1

@@ -676,8 +676,15 @@ ideas = {
             allowed = { original_tag = USA }
             available = { can_replace_hog = no }
             visible = {
-                USA_union_collapsed = yes
-                has_country_flag = USA_macarthur_retired
+                OR = {
+                    country_exists = NEE
+                    country_exists = CLB
+                    country_exists = RBL
+                    country_exists = CAS
+                }
+                NOT = {
+                    has_country_flag = USA_macarthur_retired
+                }
             }
             cancel_if_invalid = no
             traits = {

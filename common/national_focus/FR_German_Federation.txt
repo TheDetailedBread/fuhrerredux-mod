@@ -344,19 +344,13 @@ focus_tree = {
         y = 0
         cost = 5
         available = {
-            NOT = {
-                OR = {
-                    has_idea = GRP_valkist_society
-                    has_idea = GRP_valkist_economy
-                    has_idea = GRP_valkist_bureaucracy
-                    has_idea = GRP_steady_economic_recovery
-                    has_idea = GRP_economic_downhill
-                }
-            }
+          custom_trigger_tooltip = {
+            tooltip = unlocked_later
+            has_completed_focus = GRP_finish_reforms
+          }
         }
         completion_reward = {
             add_political_power = 100
-            PHI = { end_puppet = GRP }
         }
     }
 
@@ -1039,7 +1033,7 @@ focus_tree = {
                     country_event = { id = GRP.7 }
                 }
             }
-            URK = {
+            UKR = {
                 if = {
                     limit = {
                         exists = yes

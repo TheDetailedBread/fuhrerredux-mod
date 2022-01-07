@@ -240,7 +240,7 @@ foreign_politics = {
             has_completed_focus = NAR_reclaim_corporate_lands
         }
         available = {
-            FROM = { can_declare_war = yes }
+            can_declare_war_on = FROM
         }
         complete_effect = {
             create_wargoal = { target = FROM type = annex_everything }
@@ -263,7 +263,7 @@ foreign_politics = {
             has_completed_focus = NAR_the_carribean_shipyards
         }
         available = {
-            FROM = { can_declare_war = yes }
+            can_declare_war_on = FROM
         }
         complete_effect = {
             create_wargoal = { target = FROM type = annex_everything }
@@ -286,7 +286,7 @@ foreign_politics = {
             has_completed_focus = NAR_the_coffee_plantations
         }
         available = {
-            FROM = { can_declare_war = yes }
+            can_declare_war_on = FROM
         }
         complete_effect = {
             create_wargoal = { target = FROM type = annex_everything }
@@ -310,7 +310,7 @@ foreign_politics = {
             FROM = { has_socialist_government = yes }
         }
         available = {
-            FROM = { can_declare_war = yes }
+            can_declare_war_on = FROM
         }
         complete_effect = {
             create_wargoal = { target = FROM type = annex_everything }
@@ -362,7 +362,9 @@ NAR_unification_of_america = {
         visible = { 
             FROM = {
                 is_neighbor_of = ROOT
-                any_owned_state = { is_core_of = ROOT }
+                any_owned_state = { 
+                  is_core_of = ROOT 
+                }
             }
         }
         available = { 
