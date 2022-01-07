@@ -351,8 +351,8 @@ focus_tree = {
 	
 		id = CEN_hacha_authority
 		icon = GFX_goal_generic_political_pressure
-		available = { OR { has_country_flag = CEN_ripka_madlad has_country_flag = CEN_benes_failed has_country_flag = CEN_osusky_failed } }
-		available = { NOT { has_country_flag = CEN_ripka_failed  } }
+		available = { OR = { has_country_flag = CEN_ripka_madlad has_country_flag = CEN_benes_failed has_country_flag = CEN_osusky_failed } }
+		available = { NOT = { has_country_flag = CEN_ripka_failed  } }
 		prerequisite = { focus = CEN_free_elections }
 	
 		x = 8
@@ -570,8 +570,8 @@ focus_tree = {
 		id = CEN_hodza_liberalism
 		icon = GFX_goal_generic_neutrality_focus
 	
-		available = { OR { has_country_flag = CEN_osusky_madlad has_country_flag = CEN_ripka_failed has_country_flag = CEN_benes_failed } }
-		available = { NOT { has_country_flag = CEN_osusky_failed } }
+		available = { OR = { has_country_flag = CEN_osusky_madlad has_country_flag = CEN_ripka_failed has_country_flag = CEN_benes_failed } }
+		available = { NOT = { has_country_flag = CEN_osusky_failed } }
 		prerequisite = { focus = CEN_free_elections }
 		
 		x = 12
@@ -755,8 +755,8 @@ focus_tree = {
 		id = CEN_najda_reform
 		icon = GFX_focus_generic_soviet_politics
 		
-		available = { OR { has_country_flag = CEN_benes_madlad has_country_flag = CEN_osusky_failed has_country_flag = CEN_ripka_failed } }
-		available = { NOT { has_country_flag = CEN_benes_failed } }
+		available = { OR = { has_country_flag = CEN_benes_madlad has_country_flag = CEN_osusky_failed has_country_flag = CEN_ripka_failed } }
+		available = { NOT = { has_country_flag = CEN_benes_failed } }
 		prerequisite = { focus = CEN_free_elections }
 		
 		x = 16

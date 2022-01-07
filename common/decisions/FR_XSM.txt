@@ -915,7 +915,7 @@ XSM_chinese_unification_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision XSM_claim_to_be_Beijing_government"
 			add_stability = 0.2
-			set_capital = 608
+			set_capital = { state = 608 }
 			set_cosmetic_tag = ZHI_BEI
 			custom_effect_tooltip = core_land
 				870 = { add_core_of = ROOT }
@@ -1025,7 +1025,7 @@ XSM_chinese_unification_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision XSM_unite_china"
 			add_stability = 0.2
-			set_capital = 608
+			set_capital = { state = 608 }
 			set_cosmetic_tag = CHI_UNI
 			custom_effect_tooltip = core_land
 			    616 = { add_core_of = ROOT }

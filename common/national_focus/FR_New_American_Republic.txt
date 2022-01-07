@@ -2063,7 +2063,7 @@ focus_tree = {
         y = 1
         cost = 6
         available = {
-            MEX = { can_declare_war = yes }
+            can_declare_war_on = MEX
         }
         bypass = {
             NOT = { country_exists = MEX }
@@ -2140,7 +2140,7 @@ focus_tree = {
         y = 2
         cost = 6
         available = {
-            UBR = { can_declare_war = yes }
+            can_declare_war_on = UBR
             NOT = { country_exists = BPS }
         }
         mutually_exclusive = { focus = NAR_support_the_state }
