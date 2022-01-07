@@ -64,6 +64,9 @@ ideas = {
         }
         CRU_general_staff = {
             allowed = { original_tag = CRU }
+            available = {
+              NOT = { has_war_with = GER }
+            }
             picture = german_advisors
             modifier = {
                 max_planning_factor = 0.15
