@@ -1,0 +1,542 @@
+characters = {
+	HOL_Izaak_Reynders = {
+		name = "Izaak Reynders"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Izaak_Reynders.tga"
+			}
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Izaak_Reynders.tga"
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = HOL_Izaak_Reynders_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_happy_amateur
+			}
+		}
+	}
+	HOL_Henri_Nicolas_Alfred_Swart = {
+		name = "Henri Nicolas Alfred Swart"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Henri_Nicolas_Alfred_Swart.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = HOL_Henri_Nicolas_Alfred_Swart_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_charismatic_charmer
+			}
+		}
+	}
+	HOL_Cornelis_van_Geelkerken = {
+		name = "Cornelis van Geelkerken"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Cornelis_van_Geelkerken.tga"
+			}
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Cornelis_van_Geelkerken.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = HOL_Cornelis_van_Geelkerken_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_determined_populist
+			}
+		}
+	}
+	HOL_Jan_Baars = {
+		name = "Jan Baars"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Jan_Baars.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Jan_Baars_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_relations_expert
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Jan_Baars_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_infantry_proponent
+			}
+		}
+	}
+	HOL_Willem_Bernard_Engelbrecht = {
+		name = "Willem Bernard Engelbrecht"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Willem_Bernard_Engelbrecht.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Willem_Bernard_Engelbrecht_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_iron_fisted_brute
+			}
+		}
+	}
+	HOL_Henri_Johannes_ter_Hal = {
+		name = "Henri Johannes ter Hal"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Henri_Johannes_ter_Hal.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Henri_Johannes_ter_Hal_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_administrative_genius
+			}
+		}
+	}
+	HOL_Alfred_Haighton = {
+		name = "Alfred Haighton"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Alfred_Haighton.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Alfred_Haighton_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_military_entrepreneur
+			}
+		}
+	}
+	HOL_Gerrit_van_Burink = {
+		name = "Gerrit van Burink"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Gerrit_van_Burink.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Gerrit_van_Burink_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_resource_industrialist
+			}
+		}
+	}
+	HOL_Frederik_Carel_Gerretson = {
+		name = "Frederik Carel Gerretson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Frederik_Carel_Gerretson.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Frederik_Carel_Gerretson_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_man_of_the_people
+			}
+		}
+	}
+	HOL_Johannes_Linthorst_Homan = {
+		name = "Johannes Linthorst Homan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Johannes_Linthorst_Homan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Johannes_Linthorst_Homan_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_prince_of_terror
+			}
+		}
+	}
+	HOL_AJ_van_der_Hoeven = {
+		name = "A.J. van der Hoeven"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_AJ_van_der_Hoeven.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_AJ_van_der_Hoeven_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	HOL_Gerhardus_Dieters = {
+		name = "Gerhardus Dieters"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Gerhardus_Dieters.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = HOL_Gerhardus_Dieters_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_silent_lawyer
+			}
+		}
+	}
+	HOL_Hendrik_Seyffardt = {
+		name = "Hendrik Seyffardt"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Hendrik_Seyffardt.tga"
+				small = "gfx/interface/ministers/HOL/HOL_Hendrik_Seyffardt.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = HOL_Hendrik_Seyffardt_cos_pau
+			traits = {
+				chief_of_staff
+				paternal_autocrat
+				cos_school_of_psychology
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = HOL_Hendrik_Seyffardt_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	HOL_Godfried_van_Voorst_tot_Voorst = {
+		name = "Godfried van Voorst tot Voorst"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Godfried_van_Voorst_tot_Voorst.tga"
+				small = "gfx/interface/ministers/HOL/HOL_Godfried_van_Voorst_tot_Voorst.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = HOL_Godfried_van_Voorst_tot_Voorst_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_commando_doctrine
+			}
+		}
+	}
+	HOL_Herman_van_Voorst_tot_Voorst = {
+		name = "Herman van Voorst tot Voorst"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Herman_van_Voorst_tot_Voorst.tga"
+				small = "gfx/interface/ministers/HOL/HOL_Herman_van_Voorst_tot_Voorst.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = HOL_Herman_van_Voorst_tot_Voorst_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	HOL_Adrianus_Zondervan = {
+		name = "Adrianus Zondervan"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/HOL/HOL_Adrianus_Zondervan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = HOL_Adrianus_Zondervan_carm_npo
+			traits = {
+				chief_of_army
+				national_populist
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	HOL_Johan_Furstner = {
+		name = "Johan Furstner"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Johan_Furstner.tga"
+				small = "gfx/interface/ministers/HOL/HOL_Johan_Furstner.tga"
+			}
+		}
+		admiral = {
+			traits = { }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = HOL_Johan_Furstner_cnav_pau
+			traits = {
+				chief_of_navy
+				paternal_autocrat
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	HOL_Pieter_Koenraad = {
+		name = "Pieter Koenraad"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/HOL/HOL_Pieter_Koenraad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = HOL_Pieter_Koenraad_cnav_pau
+			traits = {
+				chief_of_navy
+				paternal_autocrat
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	HOL_Julius_Zegers = {
+		name = "Julius Zegers"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/HOL/HOL_Julius_Zegers.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = HOL_Julius_Zegers_cair_ade
+			traits = {
+				chief_of_air_force
+				authoritarian_democrat
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	HOL_Willem_Drees = {
+		name = "Willem Drees"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Willem_Drees.tga"
+			}
+		}
+	}
+	HOL_Bernhard_of_the_Netherlands = {
+		name = "Bernhard of the Netherlands"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Bernhard_of_the_Netherlands.tga"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = {
+				prince_of_the_people
+			}
+		}
+    country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = {
+				prince_of_the_people
+			}
+		}
+    country_leader = {
+			ideology = national_populist_subtype
+			traits = {
+				prince_of_the_people
+			}
+		}
+	}
+	HOL_Jan_Beelaerts_van_Blokland = {
+		name = "Jan Beelaerts van Blokland"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Jan_Beelaerts_van_Blokland.tga"
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	HOL_Kees_van_Eendenburg = {
+		name = "Kees van Eendenburg"
+		portraits = {
+			army = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Kees_van_Eendenburg.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	HOL_Conrad_Helfrich = {
+		name = "Conrad Helfrich"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Conrad_Helfrich.tga"
+			}
+		}
+		admiral = {
+			traits = {
+			traits = { }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+	HOL_Alfred_de_Booy = {
+		name = "Alfred de Booy"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Alfred_de_Booy.tga"
+			}
+		}
+	}
+	HOL_Karel_Doorman = {
+		name = "Karel Doorman"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/HOL/Portrait_HOL_Karel_Doorman.tga"
+			}
+		}
+	}
+}
