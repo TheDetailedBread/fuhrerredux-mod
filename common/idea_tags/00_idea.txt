@@ -14,7 +14,7 @@ idea_categories = {
 	}
 
 	country = {
-		national_spirit = yes
+		type = national_spirit
 		
 		cost = 0
 		removal_cost = -1
@@ -34,10 +34,10 @@ idea_categories = {
 	}
 	
 	minister = {
-		slot = head_of_government
-		slot = foreign_minister
-		slot = economy_minister
-		slot = security_minister
+		character_slot = head_of_government
+		character_slot = foreign_minister
+		character_slot = economy_minister
+		character_slot = security_minister
 		
 		cost = 150
 		removal_cost = -1 # works
@@ -46,11 +46,11 @@ idea_categories = {
 	}
 	
 	military_staff = {	
-		slot = chief_of_staff
-		slot = chief_of_army
-		slot = chief_of_navy
-		slot = chief_of_air_force
-		slot = theorist
+		character_slot = chief_of_staff
+		character_slot = chief_of_army
+		character_slot = chief_of_navy
+		character_slot = chief_of_air_force
+		character_slot = theorist
 		
 		cost = 150
 		removal_cost = 0
