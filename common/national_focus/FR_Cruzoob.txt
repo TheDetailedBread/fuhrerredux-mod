@@ -391,8 +391,11 @@ focus_tree = {
         y = 2
         cost = 6
         available = { 
-            NOT = { country_exists = MEX }
-            owns_state = 277
+            OR = {
+                NOT = { country_exists = MEX }
+                MEX = { is_subject = yes }
+                owns_state = 277
+            }
         }
         prerequisite = { focus = CRU_waiting_and_preparing }
         relative_position_id = CRU_waiting_and_preparing 

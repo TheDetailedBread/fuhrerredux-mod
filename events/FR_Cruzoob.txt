@@ -707,3 +707,62 @@ country_event = { # Trade Refused
         add_political_power = -15
     }
 }
+
+country_event = { # Sent Financial Aid
+    id = cruzoob.119
+    title = cruzoob.119.t
+    desc = cruzoon.119.d
+    picture = GFX_report_event_france_tank_production
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.119.a
+        add_offsite_building = {
+            type = industrial_complex
+            level = 1
+        }
+    }
+}
+
+country_event = { # Sent Industrial Aid
+    id = cruzoob.120
+    title = cruzoob.120.t
+    desc = cruzoon.120.d
+    picture = GFX_report_event_france_tank_production
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.120.a
+        add_offsite_building = {
+            type = industrial_complex
+            level = 1
+        }
+    }
+}
+
+country_event = { # Defeat of Mexico
+    id = cruzoob.121
+    title = cruzoob.121.t
+    desc = cruzoon.121.d
+    picture = GFX_report_event_spr_poum_militia
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.121.a
+        add_political_power = 150
+        
+    }
+}
+
+country_event = { # Defeat of Cruzoob
+    id = cruzoob.122
+    title = cruzoob.122.t
+    desc = cruzoon.122.d
+    picture = GFX_report_event_spr_poum_militia
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.122.a
+        add_political_power = 150
+    }
+}
