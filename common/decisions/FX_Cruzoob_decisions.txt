@@ -266,3 +266,142 @@ CRU_spreading_our_culture = { # Integrate the Occupied States
         }
     }
 }
+
+CRU_mexican_yucateco_war = {
+    CRU_support_a_side = {
+        icon = GFX_decision_generic_tank
+        cost = 50
+        target_trigger = {
+            FROM = { 
+                OR = {
+                    tag = MEX
+                    tag = CRU
+                }
+            }
+        }
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+                original_tag = GER
+                original_tag = ITA
+                original_tag = POR
+            }
+        }
+        visible = {
+            NOT = { has_country_flag = CRU_supported_mexico }
+            NOT = { has_country_flag = CRU_supported_cruzoob }
+        }
+        complete_effect = {
+            custom_effect_tooltip = CRU_support_a_side_tt
+            hidden_effect = {
+                if = {
+                    limit = {
+                        FROM = { tag = CRU }
+                    }
+                    set_country_flag = CRU_supported_cruzoob
+                }
+                else_if = {
+                    limit = {
+                        FROM = { tag = MEX }
+                    }
+                    set_country_flag = CRU_supported_mexico
+                }
+            }
+        }
+    }
+    CRU_send_financial_aid = {
+        icon = GFX_decision_ger_mefo_bills
+        days_remove = 7
+        days_re_enable = 45
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = MEX
+                    tag = CRU
+                }
+            }
+        }
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+                original_tag = GER
+                original_tag = ITA
+                original_tag = POR
+            }
+        }
+        visible = {
+            OR = {
+                FROM = {
+                    AND = {
+                        tag = CRU
+                        ROOT = {
+                            has_country_flag = CRU_supported_cruzoob
+                        }
+                    }
+                }
+                FROM = {
+                    AND = {
+                        tag = MEX
+                        ROOT = {
+                            has_country_flag = CRU_supported_mexico
+                        }
+                    }
+                }
+            }
+        }
+        remove_effect = {
+            FROM = {
+                country_event = { id = cruzoob.119 days = 1 }
+            }
+        }
+    }
+    CRU_send_industrial_aid = {
+        icon = GFX_decision_ger_mefo_bills
+        days_remove = 7
+        days_re_enable = 45
+        target_trigger = {
+            FROM = {
+                OR = {
+                    tag = MEX
+                    tag = CRU
+                }
+            }
+        }
+        allowed = {
+            OR = {
+                original_tag = ENG
+                original_tag = FRA
+                original_tag = GER
+                original_tag = ITA
+                original_tag = POR
+            }
+        }
+        visible = {
+            OR = {
+                FROM = {
+                    AND = {
+                        tag = CRU
+                        ROOT = {
+                            has_country_flag = CRU_supported_cruzoob
+                        }
+                    }
+                }
+                FROM = {
+                    AND = {
+                        tag = MEX
+                        ROOT = {
+                            has_country_flag = CRU_supported_mexico
+                        }
+                    }
+                }
+            }
+        }
+        remove_effect = {
+            FROM = {
+                country_event = { id = cruzoob.120 days = 1 }
+            }
+        }
+    }
+}
