@@ -1,4 +1,4 @@
-﻿capital = 7
+capital = 7
 
 oob = "HOL"
 
@@ -71,11 +71,6 @@ add_ideas = {
 	HOL_revaunchist_state
 	HOL_dutch_german_economic_cooperation
 	HOL_unrecognized_government
-
-	HOL_Cornelis_van_Geelkerken_hog_npo
-	HOL_Willem_Bernard_Engelbrecht_for_npo
-	HOL_Gerrit_van_Burink_eco_npo
-	HOL_Gerhardus_Dieters_sec_npo
 	one_party_dictatorship
 }
 
@@ -110,135 +105,6 @@ country_event = { id = dutchstate.21 days = 467 }
 country_event = { id = dutchstate.23 days = 628 }
 country_event = { id = dutchstate.22 days = 1025 }
 country_event = { id = dutchstate.19 days = 1204 }
-
-create_country_leader = {
-	name = "Willem Drees"
-	desc = "POLITICS_WILLEM_DREES_DESC"
-	picture = "Portrait_Netherlands_Willem_Drees.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bernhard of the Netherlands"
-	desc = "POLITICS_PRINCE_BERNHARD_DESC"
-	picture = "Portrait_Netherlands_Bernhard.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { prince_of_the_people }
-}
-create_country_leader = {
-	name = "Bernhard of the Netherlands"
-	desc = "POLITICS_PRINCE_BERNHARD_DESC"
-	picture = "Portrait_Netherlands_Bernhard.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { prince_of_the_people }
-}
-create_country_leader = {
-	name = "Bernhard of the Netherlands"
-	desc = "POLITICS_PRINCE_BERNHARD_DESC"
-	picture = "Portrait_Netherlands_Bernhard.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { prince_of_the_people }
-}
-
-
-create_field_marshal = {
-	name = "Jan Beelaerts van Blokland"
-	picture = "Portrait_Netherlands_Jan_Beelaerts_van_Blokland.tga"
-	traits = { offensive_doctrine inflexible_strategist career_officer }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-create_field_marshal = {
-	name = "Izaäk Reijnders"
-	picture = "Portrait_Netherlands_Reynders.tga"
-	traits = { trait_reckless }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Kees van Eendenburg"
-	picture = "Portrait_Netherlands_Kees_van_Eendenburg.tga"
-	traits = { trait_cautious inflexible_strategist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Cornelis van Geelkerken"
-	picture = "Portrait_Netherlands_Cornelis_van_Geelkerken.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "H. van Voorst tot Voorst"
-	picture = "Portrait_Netherlands_van_Voorst_tot_Voorst_H_.tga"
-	traits = { trait_engineer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "G. van Voorst tot Voorst"
-	picture = "Portrait_Netherlands_van_Voorst_tot_Voorst_J_.tga"
-	traits = { trickster }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Hendrik Seyffardt"
-	picture = "Portrait_Netherlands_Seyffardt.tga"
-	traits = {
-		old_guard
-		politically_connected
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Conrad Helfrich"
-	picture = "Portrait_Netherlands_Conrad_Helfrich.tga"
-	traits = { seawolf }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-create_navy_leader = {
-	name = "Johannes Fürstner"
-	picture = "Portrait_Netherlands_Johannes_Furstner.tga"
-	traits = { ironside }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
 
 ### VARIANTS ###
 # 1936 Start #
@@ -401,3 +267,29 @@ if = {
 	}
 }
 
+recruit_character = HOL_Izaak_Reynders
+recruit_character = HOL_Henri_Nicolas_Alfred_Swart
+recruit_character = HOL_Cornelis_van_Geelkerken
+recruit_character = HOL_Jan_Baars
+recruit_character = HOL_Willem_Bernard_Engelbrecht
+recruit_character = HOL_Henri_Johannes_ter_Hal
+recruit_character = HOL_Alfred_Haighton
+recruit_character = HOL_Gerrit_van_Burink
+recruit_character = HOL_Frederik_Carel_Gerretson
+recruit_character = HOL_Johannes_Linthorst_Homan
+recruit_character = HOL_AJ_van_der_Hoeven
+recruit_character = HOL_Gerhardus_Dieters
+recruit_character = HOL_Hendrik_Seyffardt
+recruit_character = HOL_Godfried_van_Voorst_tot_Voorst
+recruit_character = HOL_Herman_van_Voorst_tot_Voorst
+recruit_character = HOL_Adrianus_Zondervan
+recruit_character = HOL_Johan_Furstner
+recruit_character = HOL_Pieter_Koenraad
+recruit_character = HOL_Julius_Zegers
+recruit_character = HOL_Willem_Drees
+recruit_character = HOL_Bernhard_of_the_Netherlands
+recruit_character = HOL_Jan_Beelaerts_van_Blokland
+recruit_character = HOL_Kees_van_Eendenburg
+recruit_character = HOL_Conrad_Helfrich
+recruit_character = HOL_Alfred_de_Booy
+recruit_character = HOL_Karel_Doorman
