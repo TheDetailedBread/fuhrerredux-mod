@@ -1801,7 +1801,7 @@ country_event = { # Italian Civil War - Commies
 					GEN_sec_van
 					revolutionary_movement
 				}
-				set_capital = 159
+				set_capital = { state = 159 }
 				add_popularity = {
 					ideology = vanguardist
 					popularity = 0.4
@@ -1872,7 +1872,7 @@ country_event = { # Italian Civil War - Nationalists
 					GEN_sec_val
 					revolutionary_movement
 				}
-				set_capital = 117
+				set_capital = { state = 117 }
 				every_state = {
 					limit = {
 						is_core_of = ITA
@@ -7012,39 +7012,39 @@ country_event = { # Bulgaria - Italy seeks an alliance
 		ai_chance = {
 			factor = 80
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 24
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 49
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.25
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.5
 			}
 		}
@@ -7110,28 +7110,28 @@ country_event = { # Bulgaria - Italy seeks an alliance
 		ai_chance = {
 			factor = 40
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value < -25
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > -50
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value > 50
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value > 50
@@ -7220,39 +7220,39 @@ country_event = { # Hungary - Italy seeks an alliance
 		ai_chance = {
 			factor = 80
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 24
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 49
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.25
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.5
 			}
 		}
@@ -7315,28 +7315,28 @@ country_event = { # Hungary - Italy seeks an alliance
 		ai_chance = {
 			factor = 40
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value < -25
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > -50
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value > 50
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value > 50

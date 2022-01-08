@@ -677,7 +677,7 @@ country_event = { # French Intervention of the Dutch Declaration of War
             factor = 80
         }
         declare_war_on = {
-            tag = HOL
+            target = HOL
             type = annex_everything
         }
     }
@@ -770,7 +770,7 @@ country_event = {
         name = dutchstate.31.a
         army_experience = 30
         random_unit_leader = {
-            limit = { id = 3 }
+            limit = { has_id = 3 }
             set_nationality = GER
         }
     }

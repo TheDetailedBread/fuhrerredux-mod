@@ -18,28 +18,28 @@ country_event = {
 
 #country_event = {
 	#id = siambw.1
-	title = "Effects from Black Wednesday"
-	desc = siambw.1
-	immediate = { ROOT = { set_country_flag = royal_market_crash } }
-	is_triggered_only = yes
-	option = {
-		name = "Khun Pra!!"
-		swap_ideas = {
-			remove_idea = foreign_company_investment
-			add_idea = black_wednesday
-		}
-		swap_ideas = {
-			remove_idea = stable_bureaucrat
-			add_idea = limited_bureaucrat
-		}
-		hidden_effect = { 
-			country_event = {
-				id = siamcivilwar.1
-				days = 1
-			}
-		}
-		SIA_swap_the_focus = yes
-	}
+	# title = "Effects from Black Wednesday"
+	# desc = siambw.1
+	# immediate = { ROOT = { set_country_flag = royal_market_crash } }
+	# is_triggered_only = yes
+	# option = {
+	# 	name = "Khun Pra!!"
+	# 	swap_ideas = {
+	# 		remove_idea = foreign_company_investment
+	# 		add_idea = black_wednesday
+	# 	}
+	# 	swap_ideas = {
+	# 		remove_idea = stable_bureaucrat
+	# 		add_idea = limited_bureaucrat
+	# 	}
+	# 	hidden_effect = { 
+	# 		country_event = {
+	# 			id = siamcivilwar.1
+	# 			days = 1
+	# 		}
+	# 	}
+	# 	SIA_swap_the_focus = yes
+	# }
 #}
 country_event = {
 	id = siambw.2

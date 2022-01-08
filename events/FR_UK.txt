@@ -3162,7 +3162,7 @@ country_event = {
 			transfer_state = 815
 			transfer_state = 816
 			load_oob = IRE_rising1
-			set_capital = 135
+			set_capital = { state = 135 }
 			set_stability = 0.5
 			set_cosmetic_tag = IRE_FREE
 		}
@@ -3272,7 +3272,7 @@ country_event = {
 		}
 		IRE = { 
 			set_cosmetic_tag = IRE_ENG 
-			set_capital = 815
+			set_capital = { state = 815 }
 			create_country_leader = { 
 				name = "James Matthew Dillon" 
 				desc = "POLITICS_JAMES_DILLON_DESC" 
@@ -3367,7 +3367,7 @@ country_event = {
 		}
 		remove_ideas = ENG_irb2
 		IRE = { 
-			set_capital = 815 
+			set_capital = { state = 815 }
 			create_country_leader = { 
 				name = "James Matthew Dillon" 
 				desc = "POLITICS_JAMES_DILLON_DESC" 
@@ -3552,7 +3552,7 @@ country_event = {
 			white_peace = ITA
 		}
 		drop_cosmetic_tag = yes
-		set_capital = 815
+		set_capital = { state = 815 }
 	}
 	
 	option = {
@@ -4878,7 +4878,7 @@ country_event = {
 			transfer_state = 815
 			transfer_state = 816
 			load_oob = IRE_rising1
-			set_capital = 135
+			set_capital = { state = 135 }
 			set_stability = 0.5
 			set_cosmetic_tag = IRE_FREE
 		}
@@ -14910,7 +14910,7 @@ country_event = {
 #			transfer_state = 864
 #				add_state_core = 864
 #			load_oob = ZAF_boerwar
-#			set_capital = 275
+#			set_capital = { state = 275 }
 #			set_stability = 0.5
 #			set_politics = { ruling_party = national_populist elections_allowed = no }
 #			create_country_leader = {

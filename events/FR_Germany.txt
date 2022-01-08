@@ -9480,7 +9480,7 @@ country_event = { # Germany forms Ostland
 
 	option = {
 		name = ger.253.a
-		set_capital = 757
+		set_capital = { state = 757 }
 		add_political_power = 100
 		set_cosmetic_tag = LIT_ostland
 		
@@ -11224,7 +11224,7 @@ country_event = { # France Capitulates to North Africa
 				transfer_state = 665
 			}
 			MOR = {
-				set_capital = 898
+				set_capital = { state = 898 }
 			}
 		}
 
@@ -11261,7 +11261,7 @@ country_event = { # France Capitulates to North Africa
 			}
 		}
 
-		set_capital = 459
+		set_capital = { state = 459 }
 		458 = {
 			add_core_of = FRA
 		}
@@ -11708,7 +11708,7 @@ country_event = { # France - liberation of the mainland
     option = {
         name = ger.407.a
 		remove_ideas = FRA_government_in_exile
-		set_capital = 16
+		set_capital = { state = 16 }
 		hidden_effect = {
 			1 = {
 				add_core_of = FRA
@@ -12155,7 +12155,7 @@ country_event = { # Italy Capitulates to North Africa
 				transfer_state = 448
 			}
 			LBA = {
-				set_capital = 450
+				set_capital = { state = 450 }
 			}
 		}
 
@@ -12170,7 +12170,7 @@ country_event = { # Italy Capitulates to North Africa
 			}
 		}
 
-		set_capital = 448
+		set_capital = { state = 448 }
 		448 = {
 			add_core_of = ITA
 		}
@@ -12758,7 +12758,7 @@ country_event = { # Italy - liberation of the mainland NEEDS MORE STATES
 
     option = {
         name = ger.417.a
-		set_capital = 2
+		set_capital = { state = 2 }
 			hidden_effect = {
 				2 = {
 					add_core_of = ITA
@@ -12989,7 +12989,7 @@ country_event = { # England Capitulates to Canada? will edit
 		}
 	}
 
-		set_capital = 331
+		set_capital = { state = 331 }
 		331 = {
 			add_core_of = ENG
 		}
@@ -13053,7 +13053,7 @@ country_event = { # England Capitulates to Canada? will edit
 	name = ger.420.a
 		ENG = {
 			annex_country = { target = CAN transfer_troops = yes }
-			set_capital = 276
+			set_capital = { state = 276 }
 			add_ideas = ENG_government_in_exile
 		}
 
@@ -14254,7 +14254,7 @@ country_event = { # United Kingdom - liberation of the mainland
     option = {
         name = ger.427.a
 		remove_ideas = ENG_government_in_exile
-		set_capital = 126
+		set_capital = { state = 126 }
 			hidden_effect = {
 				126 = {
 					add_core_of = ENG
