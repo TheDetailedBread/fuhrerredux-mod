@@ -151,7 +151,12 @@ CRU_find_allies = {
 }
 
 CRU_germany_send_volunteers = {
-    allowed = { original_tag = GER }
+    allowed = {
+        OR = {
+            tag = GER
+            tag = HOL
+        }
+    }
     enable = {
         GER = {
             has_war = no
@@ -163,19 +168,19 @@ CRU_germany_send_volunteers = {
     }
     abort_when_not_enabled = yes
 
-    ai_strategy = {
+  ai_strategy = {
 		type = befriend
 		id = "CRU"
-		value = 100
+		value = 400
 	}
 	ai_strategy = {
 		type = protect
 		id = "CRU"
-		value = 100
+		value = 400
 	}
-    ai_strategy = {
-        type = send_volunteers_desire
-        id = "CRU"
-        value = 200
-    }
+  ai_strategy = {
+    type = send_volunteers_desire
+    id = "CRU"
+    value = 400
+  }
 }
