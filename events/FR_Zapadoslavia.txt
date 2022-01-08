@@ -905,19 +905,17 @@ country_event = { #UNREST RISES
 		name = cen.38.a #use police
 		add_stability = 0.05
 		hidden_effect = {
-		random_list = {
-		country_event = { id = cen.39 days = 7 }
-			}
+      country_event = { id = cen.39 days = 7 }
 		}
 	}
 	option = {
 		name = cen.38.b #wait them out
 		add_stability = -0.05
 		hidden_effect = {
-		country_event = { id = cen.42 days = 7 }
-			}
-		}
-	}
+		  country_event = { id = cen.42 days = 7 }
+    }
+  }
+}
 country_event = { #using the police, failed to contain
 	id = cen.39
 	title = cen.39.t

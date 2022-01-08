@@ -929,7 +929,7 @@ country_event = { #flee to Algeria
 
 	option = { #leave to Africa
 		name = fra.24.a
-		set_capital = 459
+		set_capital = { state = 459 }
 		459 = {
 			add_core_of = FRA
 		}
@@ -949,7 +949,7 @@ country_event = { #flee to Algeria
 		name = fra.24.b
 		custom_effect_tooltip = fra_gaulle_mad
 		custom_effect_tooltip = fra_blank
-		set_capital = 459
+		set_capital = { state = 459 }
 
 	}
 }
@@ -6677,8 +6677,8 @@ country_event = { #fate of the British Isles ~~~NOT THE REST OF THE EMPIRE~~~
 				if = {
 					limit = {
 						FRA = { has_country_flag = FRA_monarchy }
-						set_cosmetic_tag = WLS_FRA_puppet_monarchy
 					}
+          set_cosmetic_tag = WLS_FRA_puppet_monarchy
 				}
 				else = {
 					set_cosmetic_tag = WLS_FRA_puppet_republic
@@ -6725,8 +6725,8 @@ country_event = { #fate of the British Isles ~~~NOT THE REST OF THE EMPIRE~~~
 				if = {
 					limit = {
 						FRA = { has_country_flag = FRA_monarchy }
-						set_cosmetic_tag = SCO_FRA_puppet_monarchy
 					}
+          set_cosmetic_tag = SCO_FRA_puppet_monarchy
 				}
 				else = {
 					set_cosmetic_tag = SCO_FRA_puppet_republic
@@ -6767,8 +6767,8 @@ country_event = { #fate of the British Isles ~~~NOT THE REST OF THE EMPIRE~~~
 				if = {
 					limit = {
 						FRA = { has_country_flag = FRA_monarchy }
-						set_cosmetic_tag = IRE_FRA_puppet_monarchy
 					}
+					set_cosmetic_tag = IRE_FRA_puppet_monarchy
 				}
 				else = {
 					set_cosmetic_tag = IRE_FRA_puppet_republic
@@ -6810,8 +6810,8 @@ country_event = { #fate of the British Isles ~~~NOT THE REST OF THE EMPIRE~~~
 				if = {
 					limit = {
 						FRA = { has_country_flag = FRA_monarchy }
-						set_cosmetic_tag = ENG_FRA_puppet_monarchy
 					}
+					set_cosmetic_tag = ENG_FRA_puppet_monarchy
 				}
 				else = {
 					set_cosmetic_tag = ENG_FRA_puppet_republic

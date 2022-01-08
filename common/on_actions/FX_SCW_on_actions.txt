@@ -177,7 +177,7 @@ on_actions = {
 						FROM = {
 							any_of = {
 								array = SPA.core_states
-								PREV = { num_owned_states > 3 }
+								PREV = { num_occupied_states > 3 }
 							}
 						}
 					}
@@ -189,7 +189,7 @@ on_actions = {
 					limit = {
 						country_exists = SPA 
 						SPA = {
-							num_owned_states < 1
+							num_occupied_states < 1
 						}
 					}
 					FROM = {

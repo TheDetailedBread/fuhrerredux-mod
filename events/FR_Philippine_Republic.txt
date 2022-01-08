@@ -890,7 +890,7 @@ country_event = { # Civil War!
                     disband = yes
                 }
 
-                set_capital = 623
+                set_capital = { state = 623}
                 load_oob = PHI_civil_war
                 add_ideas = PHI_the_filipino_civil_war
                 every_owned_state = {
@@ -1403,7 +1403,7 @@ country_event = { # Ask for Investments
             }
             modifier = {
                 factor = 2
-                has_opinion > 50
+                has_opinion = { target = ROOT value > 50 }
             }
             modifier = {
                 factor = 0.2
