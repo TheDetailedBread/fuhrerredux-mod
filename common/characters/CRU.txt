@@ -275,10 +275,10 @@ characters = {
 		corps_commander = {
 			traits = { }
 			skill = 1
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 1
 		}
 		advisor = {
 			cost = 150
@@ -377,11 +377,11 @@ characters = {
 		}
 		field_marshal = {
 			traits = { }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 4
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
 			planning_skill = 3
-			logistics_skill = 3
+			logistics_skill = 2
 		}
 		advisor = {
 			cost = 150
@@ -776,6 +776,88 @@ characters = {
 				security_minister
 				libertarian_socialist
 				sec_health_and_safety
+			}
+		}
+	}
+	CRU_Enrique_Goroztieta_Velarde = {
+		name = "Enrique Goroztieta Velarde"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CRU/Portrait_CRU_Enrique_Goroztieta_Velarde.tga"
+				small = "gfx/interface/ministers/CRU/CRU_Enrique_Goroztieta_Velarde.tga"
+			}
+			army = {
+				large = "gfx/leaders/CRU/Portrait_CRU_Enrique_Goroztieta_Velarde.tga"
+				small = "gfx/interface/ministers/CRU/CRU_Enrique_Goroztieta_Velarde.tga"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CRU_Enrique_Goroztieta_Velarde_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_fire_support
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CRU_Enrique_Goroztieta_Velarde_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_spiritual_leader
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CRU_Enrique_Goroztieta_Velarde_carm_ade
+			traits = {
+				chief_of_army
+				authoritarian_democrat
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	CRU_Manuel_Castilla_Brito = {
+		name = "Manuel Castilla Brito"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CRU/Portrait_CRU_Manuel_Castilla_Brito.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	CRU_Pakal_III = {
+		name = "Pakal III"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CRU/Portrait_CRU_Pakal_III.tga"
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-﻿capital = 361
+capital = 361
 oob = "USA"
 
 if = {
@@ -110,11 +110,6 @@ add_ideas = {
 	USA_failed_offensive
 
 	limited_conscription
-
-	USA_Charles_Curtis_hog_mli
-	USA_Henry_Morgenthau_Jr_for_mli
-	USA_Daniel_Calhoun_Roper_eco_mli
-	USA_Alben_W_Barkley_sec_mli
 	presidential_republic
 }
 
@@ -166,444 +161,6 @@ set_autonomy = {
 }
 
 country_event = { id = usa.0 days = 2 }
-
-create_country_leader = {
-	name = "Earl Browder"
-	desc = "POLITICS_EARL_BROWDER_DESC"
-	picture = "Portrait_USA_Earl_Browder_fx.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Elizabeth Gurley Flynn"
-	desc = "POLITICS_ELIZABETH_GURLEY_FLYNN_DESC"
-	picture = "Portrait_USA_Elizabeth_Gurley_Flynn.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Eugene Debs"
-	desc = "POLITICS_EUGENE_DEBS_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_9.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Huey Long"
-	desc = "POLITICS_HUEY_LONG_DESC"
-	picture = "Portrait_USA_Huey_Long.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Quentin Roosevelt"
-	desc = "POLITICS_QUENTIN_ROOSEVELT_DESC"
-	picture = "Portrait_USA_Quentin_Roosevelt.tga"
-	expire = "1947.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Charles Curtis"
-	desc = "POLITICS_CHARLES_CURTIS_DESC"
-	picture = "Portrait_USA_Charles_Curtis.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "John Nance Garner"
-	desc = "POLITICS_JOHN_NANCE_GARNER_DESC"
-	picture = "Portrait_USA_John_Nance_Garner.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Council of Patriots"
-	desc = "POLITICS_COUNCIL_OF_PATRIOTS_DESC"
-	picture = "Portrait_USA_Council_of_Patriots.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Virgil Effinger"
-	desc = "POLITICS_VIRGIL_EFFINGER_DESC"
-	picture = "Portrait_USA_Virgil_Effinger.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Hiram Evans"
-	desc = "POLITICS_HIRAM_EVANS_DESC"
-	picture = "Portrait_USA_Hiram_Evans.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "William Dudley Pelley"
-	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-	picture = "Portrait_USA_William_Dudley_Pelley_fx.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-
-### Field Marshal
-create_field_marshal = {
-	name = "Dwight D. Eisenhower"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Dwight_Eisenhower_fx.tga"
-	traits = { logistics_wizard organizer offensive_doctrine trait_cautious armor_officer politically_connected }
-	skill = 5
-	id = 51
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill = 5
-}
-create_field_marshal = {
-	name = "Douglas MacArthur"
-	id = 50
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur_fx.tga"
-	traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-### Corp Commanders
-create_corps_commander = {
-	name = "George S. Patton"
-	id = 52
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_S_Patton.tga"
-	traits = {  trickster armor_officer panzer_leader war_hero trait_reckless }
-	skill = 5
-	attack_skill = 7
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Omar Bradley"
-	id = 53
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Omar_Bradley_fx.tga"
-	traits = {  trait_engineer trait_cautious brilliant_strategist harsh_leader }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Geoffrey Keyes"
-	id = 54
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Geoffrey_Keyes_fx.tga"
-	traits = { armor_officer career_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Lucian Truscott"
-	id = 55
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Lucian_Truscott_fx.tga"
-	traits = { trait_engineer commando cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Mark Clark"
-	id = 56
-	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Mark_Clark.tga"
-	traits = { infantry_officer trait_reckless }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Walter Krueger"
-	id = 57
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Walter_Krueger_fx.tga"
-	traits = { armor_officer career_officer brilliant_strategist }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Lloyd Fredendall"
-	id = 58
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Lloyd_Fredendall_fx.tga"
-	traits = { old_guard infantry_officer inflexible_strategist }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Leslie McNair"
-	id = 59
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Lesley_McNair_fx.tga"
-	traits = {  old_guard career_officer armor_officer }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Jonathan Wainwright"
-	id = 60
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Jonathan_Wainwright_fx.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Edwin Harding"
-	id = 61
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Edwin_Harding.tga"
-	traits = { infantry_officer }
-	skill = 1
-	rank = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Leonard Gerow"
-	id = 62
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Leonard_T_Gerow_fx.tga"
-	traits = { infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Edward Brooks"
-	id = 63
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Edward_Brooks_fx.tga"
-	traits = { armor_officer trait_reckless }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Clarence Huebner"
-	id = 64
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Clarence_Huebner_fx.tga"
-	traits = { old_guard harsh_leader }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Alexander Patch"
-	id = 65
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Alexander_Patch_fx.tga"
-	traits = {  commando infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "William Simpson"
-	id = 66
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_William_Simpson.tga"
-	traits = { infantry_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "J. Lawton Collins"
-	id = 67
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Joseph_Collins.tga"
-	traits = {  trickster career_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Courtney Hodges"
-	id = 68
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Courtney_Hicks_Hodges.tga"
-	traits = {  panzer_leader career_officer infantry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Joseph Stilwell"
-	id = 69
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Joseph_Stilwell_fx.tga"
-	traits = { politically_connected infantry_officer career_officer harsh_leader }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = e
-}
-create_corps_commander = {
-	name = "Oscar Griswold"
-	id = 70
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Oscar_Griswold_fx.tga"
-	traits = { infantry_officer  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Maurice Rose"
-	id = 71
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Maurice_Rose_fx.tga"
-	traits = { armor_officer trait_reckless brilliant_strategist  }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-### Admirals
-create_navy_leader = {
-	name = "Ernest King"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Earnest_King_fx.tga"
-	traits = { blockade_runner superior_tactician }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 4
-	id = 72
-}
-create_navy_leader = {
-	name = "Chester W. Nimitz"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Chester_W_Nimitz_fx.tga"
-	traits = { superior_tactician spotter }
-	skill = 5
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 73
-}
-create_navy_leader = {
-	name = "William Halsey, Jr."
-	portrait_path = "gfx/leaders/USA/Portrait_USA_William_Halsey_Jr_fx.tga"
-	traits = { superior_tactician spotter }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-	id = 74
-}
-create_navy_leader = {
-	name = "Frank Jack Fletcher"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Frank_Jack_Fletcher_fx.tga"
-	traits = { superior_tactician spotter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 1
-	id = 75
-}
-create_navy_leader = {
-	name = "Raymond A. Spruance"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Raymond_A_Spruance_fx.tga"
-	traits = { superior_tactician }
-	skill = 4
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 76
-}
-create_navy_leader = {
-	name = "Harold Rainsford Stark"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Harold_Rainsford_Stark_fx.tga"
-	traits = { blockade_runner spotter }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 77
-}
-create_navy_leader = {
-	name = "Arleigh Burke"
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Arleigh_Burke_fx.tga"
-	traits = { old_guard_navy superior_tactician }
-	skill = 4
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 78
-}
-create_navy_leader = {
-	name = "Charles M. Cooke, Jr."
-	portrait_path = "gfx/leaders/USA/Portrait_USA_Charles_M_Cooke_fx.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 79
-}
-create_navy_leader = {
-	name = "Thomas Kinkaid"
-	portrait_path = "gfx/leaders/NEE/Portrait_NEE_Thomas_Kinkaid.tga"
-	traits = { spotter superior_tactician }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 2
-	id = 80
-}
 
 IF = {
 	limit = {
@@ -996,3 +553,113 @@ IF = {
 		obsolete = yes
 	}
 }
+
+recruit_character = USA_Jack_Reed
+recruit_character = USA_Glen_H_Taylor
+recruit_character = USA_Henry_Wallace
+recruit_character = USA_Philip_La_Follette
+recruit_character = USA_Huey_Long
+recruit_character = USA_Earl_Warren
+recruit_character = USA_Harold_Stassen
+recruit_character = USA_Herbert_Hoover
+recruit_character = USA_John_W_Bricker
+recruit_character = USA_Quentin_Roosevelt
+recruit_character = USA_Quentin_Roosevelt_II
+recruit_character = USA_Thomas_Dewey
+recruit_character = USA_Charles_L_McNary
+recruit_character = USA_Adlai_Stevenson
+recruit_character = USA_Charles_Curtis
+recruit_character = USA_Alben_W_Barkley
+recruit_character = USA_Dwight_D_Eisenhower
+recruit_character = USA_Alf_Landon
+recruit_character = USA_Harry_Truman
+recruit_character = USA_James_E_Murray
+recruit_character = USA_Wendell_Willkie
+recruit_character = USA_William_Averell_Harriman
+recruit_character = USA_Douglas_MacArthur
+recruit_character = USA_Happy_Chandler
+recruit_character = USA_Harry_F_Byrd
+recruit_character = USA_James_Eastland
+recruit_character = USA_John_Nance_Garner
+recruit_character = USA_John_Sparkman
+recruit_character = USA_Richard_Russell_Jr
+recruit_character = USA_Strom_Thurmond
+recruit_character = USA_Eugene_Dennis
+recruit_character = USA_Adolf_Augustus_Berle_Jr
+recruit_character = USA_George_Catlett_Marshall_Jr
+recruit_character = USA_Hugh_Simons_Gibson
+recruit_character = USA_Henry_Lewis_Stimson
+recruit_character = USA_John_Bassett_Moore
+recruit_character = USA_Cordell_Hull
+recruit_character = USA_Henry_Morgenthau_Jr
+recruit_character = USA_Dean_Gooderham_Acheson
+recruit_character = USA_James_Watson_Gerard_Jr
+recruit_character = USA_Charles_Coughlin
+recruit_character = USA_John_Davison_Rockefeller_Jr
+recruit_character = USA_John_William_Davis
+recruit_character = USA_Paul_Mattick
+recruit_character = USA_Hjalmar_Petersen
+recruit_character = USA_Jesse_Holman_Jones
+recruit_character = USA_Charles_Edison
+recruit_character = USA_Alfred_Emanuel_Smith
+recruit_character = USA_Daniel_Calhoun_Roper
+recruit_character = USA_William_Daniel_Leahy
+recruit_character = USA_Robert_Abercrombie_Lovett
+recruit_character = USA_William_Harrison_Standley
+recruit_character = USA_John_Abt
+recruit_character = USA_Elmer_Austin_Benson
+recruit_character = USA_Konrad_Knute_Solberg
+recruit_character = USA_Charles_Douglas_Jackson
+recruit_character = USA_Charles_Evans_Hughes_Sr
+recruit_character = USA_Robert_Ferdinand_Wagner_I
+recruit_character = USA_Martin_Dies_Jr
+recruit_character = USA_Joel_Bennett_Clark
+recruit_character = USA_William_Randolph_Hearst_Sr
+recruit_character = USA_Malin_Craig
+recruit_character = USA_Omar_Nelson_Bradley
+recruit_character = USA_Walter_Bedell_'Beetle'_Smith
+recruit_character = USA_Alexander_Vandegrift
+recruit_character = USA_Joseph_T_McNarney
+recruit_character = USA_Kenneth_George_Althaus
+recruit_character = USA_Samuel_D_Sturgis_Jr
+recruit_character = USA_Chester_William_Nimitz_Sr
+recruit_character = USA_Ernest_Joseph_King
+recruit_character = USA_Frank_Jack_Fletcher
+recruit_character = USA_Samuel_Murray_Robinson
+recruit_character = USA_Thomas_Charles_Hart
+recruit_character = USA_William_Halsey_Jr
+recruit_character = USA_Carl_Andrew_Spaatz
+recruit_character = USA_Edward_Vernon_Rickenbacker
+recruit_character = USA_Hoyt_Sanford_Vandenberg
+recruit_character = USA_Ira_Clarence_Eaker
+recruit_character = USA_James_Harold_Doolittle
+recruit_character = USA_Joseph_Warren_Stilwell
+recruit_character = USA_Nathan_Bedford_Forrest_III
+recruit_character = USA_Geoffrey_Keyes
+recruit_character = USA_Lucian_Truscott
+recruit_character = USA_Walter_Krueger
+recruit_character = USA_Lloyd_Fredendall
+recruit_character = USA_Leslie_McNair
+recruit_character = USA_George_S_Patton
+recruit_character = USA_Mark_Clark
+recruit_character = USA_Jonathan_Wainwright
+recruit_character = USA_Edwin_Harding
+recruit_character = USA_Leonard_Gerow
+recruit_character = USA_Edward_Brooks
+recruit_character = USA_Clarence_Huebner
+recruit_character = USA_Alexander_Patch
+recruit_character = USA_William_Simpson
+recruit_character = USA_J_Lawton_Collins
+recruit_character = USA_Courtney_Hodges
+recruit_character = USA_Joseph_Stilwell
+recruit_character = USA_Oscar_Griswold
+recruit_character = USA_Maurice_Rose
+recruit_character = USA_Raymond_A_Spruance
+recruit_character = USA_Harold_Rainsford_Stark
+recruit_character = USA_Arleigh_Burke
+recruit_character = USA_Charles_M_Cooke_Jr
+recruit_character = USA_Earl_Browder
+recruit_character = USA_Elizabeth_Gurley_Flynn
+recruit_character = USA_Eugene_Debs
+recruit_character = USA_Virgil_Effinger
+recruit_character = USA_Hiram_Evans

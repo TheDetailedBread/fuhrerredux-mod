@@ -636,14 +636,17 @@ focus_tree = {
         completion_reward = {
             set_cosmetic_tag = CRU_empire
             hidden_effect = {
-                kill_ideology_leader = valkist
-                create_country_leader = { # Literally Pech in his regal name
-                    name = "Pakal III"
-                    desc = "POLITICS_PAKAL_III_DESC"
-                    picture = "Portrait_Cruzoob_Pakal_III.tga"
-                    expire = "1965.1.1"
+                remove_country_leader_role = {
+                    character = CRU_Francisco_May_Pech
                     ideology = valkist_subtype
-                    traits = { }
+                }
+                add_country_leader_role = {
+                    character = CRU_Pakal_III
+                    promote_leader = yes
+                    country_leader = {
+                        ideology = valkist_subtype
+                        traits = { }
+                    }
                 }
             }
         }
