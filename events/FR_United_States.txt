@@ -97,7 +97,10 @@ country_event = { # 1936 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1936_elections
-            kill_ideology_leader = market_liberal
+            remove_country_leader_role = {
+				character = USA_Charles_Curtis
+				ideology = market_liberal_subtype
+			}
             create_country_leader = {
                 name = "Alf Landon"
                 desc = "POLITICS_ALF_LANDON_DESC"
@@ -715,13 +718,17 @@ country_event = { # Death of Eugene Debs
 
 	option = {
 		name = usa.26.a
-        kill_ideology_leader = libertarian_socialist
-        create_country_leader = {
-            name = "Jack Reed"
-            desc = "POLITICS_JACK_REED_DESC"
-            picture = "Portrait_USA_Jack_Reed.tga"
-            expire = "1965.1.1"
-            ideology = libertarian_socialist_subtype
+        remove_country_leader_role = {
+            character = USA_Eugene_Debs
+            ideology = libertarian_socialist
+        }
+        add_country_leader_role = {
+            character = USA_Jack_Reed
+            promote_leader = yes
+            country_leader = {
+                ideology = libertarian_socialist_subtype
+                traits = {}
+            }
         }
 	}
 }
@@ -848,15 +855,15 @@ country_event = { # 1940 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1940_elections
-            kill_ideology_leader = market_liberal
-            create_country_leader = {
-                name = "Wendell Willkie"
-                desc = "POLITICS_WENDELL_WILLKIE_DESC"
-                picture = "Portrait_USA_Wendell_Willkie_fx.tga"
-                expire = "1965.1.1"
-                ideology = market_liberal_subtype
-                traits = { }
-            }
+            retire_ideology_leader = market_liberal
+						add_country_leader_role = {
+								character = USA_Wendell_Willkie
+								promote_leader = yes
+								country_leader = {
+										ideology = market_liberal_subtype
+										traits = { }
+								}
+						}
         }
     }
     option = { # Garner
@@ -989,7 +996,7 @@ country_event = { # MacArthur Retires in the Philippines
         name = usa.33.a
         hidden_effect = {
             set_country_flag = USA_macarthur_retired
-            remove_unit_leader = 50
+            retire_character = USA_Douglas_MacArthur
             PHI = { country_event = { id = usa.34 days = 2 } }
         }
     }
@@ -1004,16 +1011,7 @@ country_event = { # MacArthur Offers Services
 
     option = { # Accept his offer
         name = usa.34.a
-        create_field_marshal = {
-            name = "Douglas MacArthur"
-            portrait_path = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur_fx.tga"
-            traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
-            skill = 4
-            attack_skill = 4
-            defense_skill = 3
-            planning_skill = 4
-            logistics_skill = 2
-        }
+        recruit_character = USA_Douglas_MacArthur
     }
     option = { # Isn't he retired already?
         name = usa.34.b
@@ -1237,15 +1235,15 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            kill_ideology_leader = social_democrat
-            create_country_leader = {
-                name = "Henry Wallace"
-                desc = "POLITICS_HENRY_WALLACE_DESC"
-                picture = "Portrait_USA_Henry_Wallace.tga"
-                expire = "1965.1.1"
-                ideology = social_democrat_subtype
-                traits = { }
-            }
+            retire_ideology_leader = social_democrat
+						add_country_leader_role = {
+								character = USA_Henry_Wallace
+								promote_leader = yes
+								country_leader = {
+										ideology = social_democrat
+										traits = {}
+								}
+						}
         }
     }
     option = { # Dewey
@@ -1267,15 +1265,15 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            kill_ideology_leader = social_liberal
-            create_country_leader = {
-                name = "Thomas Dewey"
-                desc = "POLITICS_THOMAS_DEWEY_DESC"
-                picture = "Portrait_USA_Thomas_Dewey_fx.tga"
-                expire = "1965.1.1"
-                ideology = social_liberal_subtype
-                traits = { }
-            }
+            retire_ideology_leader = social_liberal
+            add_country_leader_role = {
+								character = USA_Thomas_Dewey
+								promote_leader = yes
+								country_leader = {
+										ideology = social_liberal_subtype
+										traits = { }
+								}
+						}
         }
     }
     option = { # Barkley
@@ -1297,15 +1295,15 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            kill_ideology_leader = social_democrat
-            create_country_leader = {
-                name = "Alben W. Barkley"
-                desc = "POLITICS_ALBEN_W_BARKLEY_DESC"
-                picture = "Portrait_USA_Alben_W_Barkley.tga"
-                expire = "1965.1.1"
-                ideology = market_liberal_subtype
-                traits = { }
-            }
+            retire_ideology_leader = market_liberal
+						add_country_leader_role = {
+								character = USA_Alben_W_Barkley
+								promote_leader = yes
+								country_leader = {
+										ideology = market_liberal_subtype
+										traits = {}
+								}
+						}
         }
     }
     option = { # Russell
@@ -1327,15 +1325,15 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            kill_ideology_leader = social_democrat
-            create_country_leader = {
-                name = "Richard Russell Jr."
-                desc = "POLITICS_RICHARD_RUSSELL_JR_DESC"
-                picture = "Portrait_USA_Richard_Russell_Jr.tga"
-                expire = "1965.1.1"
-                ideology = social_conservative_subtype
-                traits = { }
-            }
+            retire_ideology_leader = social_conservative
+						add_country_leader_role = {
+								character = USA_Richard_Russell_Jr
+								promote_leader = yes
+								country_leader = {
+										ideology = social_conservative_subtype
+										traits = {}
+								}
+						}
         }
     }
 }
@@ -1373,15 +1371,15 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1948_elections
-            kill_ideology_leader = social_democrat
-            create_country_leader = {
-                name = "Philip La Follette"
-                desc = "POLITICS_PHILIP_LA_FOLLETTE_DESC"
-                picture = "Portrait_USA_Philip_La_Follette.tga"
-                expire = "1965.1.1"
-                ideology = social_democrat_subtype
-                traits = { }
-            }
+            retire_ideology_leader = social_democrat
+            add_country_leader_role = {
+								character = USA_Philip_La_Follette
+								promote_leader = yes
+								add_country_leader_role = {
+										ideology = social_democrat_subtype
+										traits = {}
+								}
+						}
         }
     }
     option = { # Bricker
@@ -1403,15 +1401,15 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1948_elections
-            kill_ideology_leader = social_liberal
-            create_country_leader = {
-                name = "John Bricker"
-                desc = "POLITICS_JOHN_BRICKER_DESC"
-                picture = "Portrait_USA_John_Bricker.tga"
-                expire = "1965.1.1"
-                ideology = social_liberal_subtype
-                traits = { }
-            }
+						retire_ideology_leader = social_liberal_subtype
+            add_country_leader_role = {
+								character = USA_John_W_Bricker
+								promote_leader = yes
+								add_country_leader_role = {
+										ideology = social_liberal
+										traits = {}
+								}
+						}
         }
     }
     option = { # Stassen
@@ -1433,15 +1431,15 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1948_elections
-            kill_ideology_leader = market_liberal
-            create_country_leader = {
-                name = "Harold Stassen"
-                desc = "POLITICS_HAROLD_STASSEN_DESC"
-                picture = "Portrait_USA_Harold Stassen.tga"
-                expire = "1965.1.1"
-                ideology = market_liberal_subtype
-                traits = { }
-            }
+            retire_ideology_leader = market_liberal
+            add_country_leader_role = {
+								character = USA_Harold_Stassen
+								promote_leader = yes
+								add_country_leader_role = {
+										ideology = market_liberal_subtype
+										traits = {}
+								}
+						}
         }
     }
     option = { # Russell
@@ -1463,15 +1461,15 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            kill_ideology_leader = social_democrat
-            create_country_leader = {
-                name = "Richard Russell Jr."
-                desc = "POLITICS_RICHARD_RUSSELL_JR_DESC"
-                picture = "Portrait_USA_Richard_Russell_Jr.tga"
-                expire = "1965.1.1"
-                ideology = social_conservative_subtype
-                traits = { }
-            }
+            retire_ideology_leader = social_conservative
+            add_country_leader_role = {
+								character = USA_Richard_Russell_Jr
+								promote_leader = yes
+								add_country_leader_role = {
+										ideology = social_conservative
+										traits = {}
+								}
+						}
         }
     }
 }
@@ -1688,9 +1686,11 @@ country_event = { # New England Seceeds
                     }
                 }
             }
-            NEE = { load_oob = "NEE" }
-            remove_unit_leader = 56 # Mark Clark
-            remove_unit_leader = 80 # Thomas Kinkaid
+						retire_character = USA_Mark_Clark
+            NEE = { 
+								load_oob = "NEE"
+								recruit_character = USA_Mark_Clark
+						}	
         }
     }
 
@@ -1811,11 +1811,17 @@ country_event = { # Rust Belt
                     }
                 }
             }
-            NAR = { load_oob = "NAR" }
-            remove_unit_leader = 52 # George Patton
-            remove_unit_leader = 66 # William Simpson
-            remove_unit_leader = 67 # J Lawton Collins
-            remove_unit_leader = 68 # Courtney Hicks Hodges
+						retire_character = USA_George_S_Patton
+						retire_character = USA_William_Simpson
+						retire_character = USA_J_Lawton_Collins
+						retire_character = USA_Courtney_Hodges
+            NAR = { 
+								load_oob = "NAR"
+								recruit_character = USA_George_S_Patton
+								recruit_character = USA_William_Simpson
+								recruit_character = USA_J_Lawton_Collins
+								recruit_character = USA_Courtney_Hodges
+						}
         }
     }
 
@@ -1967,24 +1973,24 @@ country_event = { # Emergency Congress Session
                 limit = {
                     NOT = { has_country_flag = USA_macarthur_retired }
                 }
-                create_country_leader = {
-                    name = "Douglas MacArthur"
-                    desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
-                    picture = "Portrait_USA_Douglas_MacArthur_fx.tga"
-                    expire = "1965.1.1"
-                    ideology = paternal_autocrat_subtype
-                    traits = { grand_marshal }
-                }
+                add_country_leader_role = {
+										character = USA_Douglas_MacArthur
+										promote_leader = yes
+										country_leader = {
+												ideology = paternal_autocrat_subtype
+												traits = {}
+										}
+								}
             }
             else = {
-                create_country_leader = {
-                    name = "Dwight Eisenhower"
-                    desc = "POLITICS_DWIGHT_EISENHOWER_DESC"
-                    picture = "Portrait_USA_Dwight_Eisenhower_fx.tga"
-                    expire = "1965.1.1"
-                    ideology = paternal_autocrat_subtype
-                    traits = { popular_figurehead }
-                }
+                add_country_leader_role = {
+										character = USA_Dwight_D_Eisenhower
+										promote_leader = yes
+										country_leader = {
+												ideology = paternal_autocrat_subtype
+												traits = {}
+										}
+								}
             }
             
             set_country_flag = USA_military_junta
@@ -2237,21 +2243,20 @@ country_event = { # New Elections!
         increase_ruling_party_popularity_by_15 = yes
         remove_every_minister = yes
         add_ideas = {
-            USA_Floyd_B_Olson_hog_sde
+            USA_Henry_Wallace_hog_sde
             USA_Hugh_Simons_Gibson_for_sde
             USA_Jesse_Holman_Jones_eco_sde
             USA_Konrad_Knute_Solberg_sec_sde
         }
         hidden_effect = {
-            kill_ideology_leader = social_democrat
-            create_country_leader = {
-                name = "Floyd B. Olson"
-                desc = "POLITICS_FLOYD_B_OLSON_DESC"
-                picture = "Portrait_USA_Floyd_Olson.tga"
-                expire = "1965.1.1"
-                ideology = social_democrat_subtype
-                traits = { }
-            }
+            add_country_leader_role = {
+								character = USA_Henry_Wallace
+								promote_leader = yes
+								country_leader = {
+										ideology = social_democrat
+										traits = {}
+								}
+						}
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
@@ -2277,15 +2282,14 @@ country_event = { # New Elections!
             USA_Charles_Evans_Hughes_Sr_sec_sli
         }
         hidden_effect = {
-            kill_ideology_leader = social_liberal
-            create_country_leader = {
-                name = "Earl Warren"
-                desc = "POLITICS_EARL_WARREN_DESC"
-                picture = "Portrait_USA_Earl_Warren.tga"
-                expire = "1965.1.1"
-                ideology = social_liberal_subtype
-                traits = { }
-            }
+            add_country_leader_role = {
+								character = USA_Earl_Warren
+								promote_leader = yes
+								country_leader = {
+										ideology = social_liberal_subtype
+										traits = {}
+								}
+						}
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
@@ -2311,15 +2315,14 @@ country_event = { # New Elections!
             USA_Alben_W_Barkley_sec_mli
         }
         hidden_effect = {
-            kill_ideology_leader = market_liberal
-            create_country_leader = {
-                name = "Harry S. Truman"
-                desc = "POLITICS_HARRY_S_TRUMAN_DESC"
-                picture = "Portrait_USA_Harry_Truman_fx.tga"
-                expire = "1965.1.1"
-                ideology = market_liberal_subtype
-                traits = { }
-            }
+            add_country_leader_role = {
+								character = USA_Harry_Truman
+								promote_leader = yes
+								country_leader = {
+										ideology = market_liberal
+										traits = {}
+								}
+						}
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
@@ -2344,15 +2347,14 @@ country_event = { # New Elections!
             USA_Martin_Dies_Jr_sec_sco
         }
         hidden_effect = {
-            kill_ideology_leader = social_conservative
-            create_country_leader = {
-                name = "Richard Russell Jr."
-                desc = "POLITICS_RICHARD_RUSSEL_JR_DESC"
-                picture = "Portrait_USA_Richard_Russell_Jr.tga"
-                expire = "1965.1.1"
-                ideology = social_conservative_subtype
-                traits = { }
-            }
+            add_country_leader_role = {
+								character = USA_Richard_Russell_Jr
+								promote_leader = yes
+								country_leader = {
+										ideology = social_conservative_subtype
+										traits = {}
+								}
+						}
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
