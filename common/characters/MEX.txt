@@ -158,11 +158,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { }
-			skill = 4
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 2
 		}
 		advisor = {
 			cost = 150
@@ -242,17 +242,19 @@ characters = {
 		name = "Abelardo L. Rodríguez"
 		portraits = {
 			civilian = {
-        large = "gfx/leaders/MEX/Portrait_MEX_Abelardo_L_Rodríguez.tga"
 				small = "gfx/interface/ministers/MEX/MEX_Abelardo_L_Rodríguez.tga"
+			}
+			army = {
+				large = "gfx/leaders/MEX/Portrait_MEX_Abelardo_L_Rodríguez.tga"
 			}
 		}
 		corps_commander = {
 			traits = { }
-			skill = 2
-			attack_skill = 3
+			skill = 3
+			attack_skill = 2
 			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
 		}
 		advisor = {
 			cost = 150
@@ -270,7 +272,7 @@ characters = {
 		name = "Lázaro Cárdenas"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/MEX/Portrait_MEX_Lázaro_Cárdenas_fx.tga"
+				large = "gfx/interface/ministers/MEX_Lázaro_Cárdenas.tga"
 				small = "gfx/interface/ministers/MEX/MEX_Lázaro_Cárdenas.tga"
 			}
 		}
@@ -313,7 +315,7 @@ characters = {
 		name = "Plutarco Elías Calles"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/MEX/Portrait_MEX_Plutarco_Elías_Calles.tga"
+				large = "gfx/leaders/MEX/Portrait_MEX_Plutarco_Elías_Calles_fx.tga"
 				small = "gfx/interface/ministers/MEX/MEX_Plutarco_Elías_Calles.tga"
 			}
 		}
@@ -1453,19 +1455,16 @@ characters = {
 		name = "Luis Farell"
 		portraits = {
 			army = {
-				small = "gfx/interface/ministers/MEX/MEX_Luis_Farell.tga"
+				large = "gfx/leaders/MEX/Portrait_MEX_Luis_Farell_fx.tga"
 			}
 		}
-		advisor = {
-			cost = 150
-			slot = chief_of_air_force
-			available = { can_replace_minister = no }
-			idea_token = MEX_Luis_Farell_cair
-			traits = {
-				chief_of_air_force
-				
-				cair_battlefield_support_doctrine
-			}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
 	MEX_Othon_Blanco_Nunez_de_Caceres = {
@@ -1479,8 +1478,8 @@ characters = {
 			traits = { }
 			skill = 1
 			attack_skill = 4
-			defense_skill = 1
-			maneuvering_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 1
 			coordination_skill = 3
 		}
 	}
@@ -1493,11 +1492,11 @@ characters = {
 		}
 		navy_leader = {
 			traits = { }
-			skill = 1
+			skill = 3
 			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 2
-			coordination_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 1
+			coordination_skill = 3
 		}
 	}
 	MEX_Juan_G_Cabral = {
@@ -1509,8 +1508,8 @@ characters = {
 		}
 		corps_commander = {
 			traits = { }
-			skill = 1
-			attack_skill = 2
+			skill = 3
+			attack_skill = 3
 			defense_skill = 4
 			planning_skill = 4
 			logistics_skill = 3
@@ -1525,11 +1524,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { }
-			skill = 4
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 2
+			skill = 1
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
 		}
 	}
 	MEX_Joaquín_Amaro_Dominguez = {
@@ -1541,11 +1540,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { }
-			skill = 4
-			attack_skill = 2
+			skill = 3
+			attack_skill = 4
 			defense_skill = 1
 			planning_skill = 4
-			logistics_skill = 3
+			logistics_skill = 2
 		}
 	}
 	MEX_Francisco_Luis_Urquizo = {
@@ -1557,10 +1556,10 @@ characters = {
 		}
 		corps_commander = {
 			traits = { }
-			skill = 1
-			attack_skill = 4
-			defense_skill = 1
-			planning_skill = 2
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
 			logistics_skill = 2
 		}
 	}
@@ -1573,11 +1572,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = { }
-			skill = 1
+			skill = 2
 			attack_skill = 4
 			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
 	MEX_Nicolas_Rodriguez_Carrasco = {
@@ -1601,6 +1600,34 @@ characters = {
 		}
 		country_leader = {
 			ideology = national_populist_subtype
+			traits = { }
+		}
+	}
+	MEX_Gilardo_Magana = {
+		name = "Gilardo Magana"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MEX/Portrait_MEX_Gilardo_Magana.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	MEX_Ignacio_Bonillas = {
+		name = "Ignacio Bonillas"
+		portraits = {
+			civilian = {
+				large = "gfx/leader/Generic/Portrait_South_America_Generic_new_1.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
 			traits = { }
 		}
 	}
