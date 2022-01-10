@@ -110,7 +110,7 @@ country_event = { # 1936 Elections
                 traits = { }
             }
             random_other_country = {
-                news_event = { id = news.13 hours = 12 }
+                news_event = { id = news.13 days = 1 }
             }
         }
     }
@@ -1050,8 +1050,8 @@ country_event = { # Strikes
         name = usa.36.b
         add_ideas = USA_strikes
         hidden_effect = {
-            50 = { country_event = { id = usa.38 days = 7 } }
-            50 = { country_event = { id = usa.39 days = 7 } }
+            50 = { ROOT = { country_event = { id = usa.38 days = 7 } } }
+            50 = { ROOT = { country_event = { id = usa.39 days = 7 } } }
         }
     }
 }
@@ -1375,7 +1375,7 @@ country_event = { # 1948 Elections
             add_country_leader_role = {
 								character = USA_Philip_La_Follette
 								promote_leader = yes
-								add_country_leader_role = {
+								country_leader = {
 										ideology = social_democrat_subtype
 										traits = {}
 								}
@@ -1405,7 +1405,7 @@ country_event = { # 1948 Elections
             add_country_leader_role = {
 								character = USA_John_W_Bricker
 								promote_leader = yes
-								add_country_leader_role = {
+								country_leader = {
 										ideology = social_liberal
 										traits = {}
 								}
@@ -1435,7 +1435,7 @@ country_event = { # 1948 Elections
             add_country_leader_role = {
 								character = USA_Harold_Stassen
 								promote_leader = yes
-								add_country_leader_role = {
+								country_leader = {
 										ideology = market_liberal_subtype
 										traits = {}
 								}
@@ -1465,7 +1465,7 @@ country_event = { # 1948 Elections
             add_country_leader_role = {
 								character = USA_Richard_Russell_Jr
 								promote_leader = yes
-								add_country_leader_role = {
+								country_leader = {
 										ideology = social_conservative
 										traits = {}
 								}
