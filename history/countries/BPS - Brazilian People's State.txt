@@ -1,4 +1,4 @@
-﻿capital = 500
+capital = 500
 
 
 oob = "BRA_1936"
@@ -46,55 +46,12 @@ set_popularities = {
     libertarian_socialist = 6
     authoritarian_democrat = 5
 }
-
-create_country_leader = {
-	name = "Plinio Correa"
-	desc = "POLITICS_PLINIO_CORREA_DESC"
-	picture = "gfx/leaders/BRA/Portrait_Brazil_Plinio_Correa.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-
 set_convoys = 40
 set_stability = 0.60
 set_war_support = 0.90
 
-
-
-create_field_marshal = {
-	name = "Pedro Aurélio de Góis Monteiro"
-	portrait_path = "gfx/leaders/BRA/Portrait_Brazil_Gois_Monteiro.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Plínio Tourinho"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
-	traits = {  jungle_rat }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_navy_leader = {
-	name = "Augusto Rademaker"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
-	traits = {  }
-	skill = 3
-}
-create_navy_leader = {
-	name = "João Cândido"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
-	traits = {  }
-	skill = 3
-}
-
-
-
-
+recruit_character = BPS_Plinio_Correa
+recruit_character = BPS_Pedro_Aurelio_de_Gois_Monteiro
+recruit_character = BPS_Plinio_Tourinho
+recruit_character = BPS_Augusto_Rademaker
+recruit_character = BPS_Joao_Candido
