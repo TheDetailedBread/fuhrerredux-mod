@@ -98,16 +98,16 @@ country_event = { # 1936 Elections
         hidden_effect = {
             set_country_flag = USA_had_1936_elections
             remove_country_leader_role = {
-				character = USA_Charles_Curtis
-				ideology = market_liberal_subtype
-			}
-            create_country_leader = {
-                name = "Alf Landon"
-                desc = "POLITICS_ALF_LANDON_DESC"
-                picture = "Portrait_USA_Alf_Landon_fx.tga"
-                expire = "1965.1.1"
+              character = USA_Charles_Curtis
+              ideology = market_liberal_subtype
+            }
+            add_country_leader_role = {
+              character = USA_Alf_Landon
+              promote_leader = yes
+              country_leader = {
                 ideology = market_liberal_subtype
-                traits = { }
+                traits = {}
+              }
             }
             random_other_country = {
                 news_event = { id = news.13 days = 1 }
@@ -855,7 +855,6 @@ country_event = { # 1940 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1940_elections
-            retire_ideology_leader = market_liberal
 						add_country_leader_role = {
 								character = USA_Wendell_Willkie
 								promote_leader = yes
@@ -1235,12 +1234,11 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            retire_ideology_leader = social_democrat
 						add_country_leader_role = {
 								character = USA_Henry_Wallace
 								promote_leader = yes
 								country_leader = {
-										ideology = social_democrat
+										ideology = social_democrat_subtype
 										traits = {}
 								}
 						}
@@ -1265,7 +1263,6 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            retire_ideology_leader = social_liberal
             add_country_leader_role = {
 								character = USA_Thomas_Dewey
 								promote_leader = yes
@@ -1295,7 +1292,6 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            retire_ideology_leader = market_liberal
 						add_country_leader_role = {
 								character = USA_Alben_W_Barkley
 								promote_leader = yes
@@ -1325,7 +1321,6 @@ country_event = { # 1944 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            retire_ideology_leader = social_conservative
 						add_country_leader_role = {
 								character = USA_Richard_Russell_Jr
 								promote_leader = yes
@@ -1371,7 +1366,6 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1948_elections
-            retire_ideology_leader = social_democrat
             add_country_leader_role = {
 								character = USA_Philip_La_Follette
 								promote_leader = yes
@@ -1401,12 +1395,11 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1948_elections
-						retire_ideology_leader = social_liberal_subtype
             add_country_leader_role = {
 								character = USA_John_W_Bricker
 								promote_leader = yes
 								country_leader = {
-										ideology = social_liberal
+										ideology = social_liberal_subtype
 										traits = {}
 								}
 						}
@@ -1431,7 +1424,6 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1948_elections
-            retire_ideology_leader = market_liberal
             add_country_leader_role = {
 								character = USA_Harold_Stassen
 								promote_leader = yes
@@ -1461,12 +1453,11 @@ country_event = { # 1948 Elections
         }
         hidden_effect = {
             set_country_flag = USA_had_1944_elections
-            retire_ideology_leader = social_conservative
             add_country_leader_role = {
 								character = USA_Richard_Russell_Jr
 								promote_leader = yes
 								country_leader = {
-										ideology = social_conservative
+										ideology = social_conservative_subtype
 										traits = {}
 								}
 						}
@@ -2253,7 +2244,7 @@ country_event = { # New Elections!
 								character = USA_Henry_Wallace
 								promote_leader = yes
 								country_leader = {
-										ideology = social_democrat
+										ideology = social_democrat_subtype
 										traits = {}
 								}
 						}
@@ -2319,7 +2310,7 @@ country_event = { # New Elections!
 								character = USA_Harry_Truman
 								promote_leader = yes
 								country_leader = {
-										ideology = market_liberal
+										ideology = market_liberal_subtype
 										traits = {}
 								}
 						}
