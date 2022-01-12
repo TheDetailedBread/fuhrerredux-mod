@@ -362,3 +362,20 @@ news_event = { # United Kingdom of the Netherlands Proclaimed
         }
     }
 }
+
+news_event = { # Dutch Exiles Joins in Entente
+  id = news.20
+  title = news.20.t
+  desc = news.20.d
+  picture = GFX_news_event_ast_army
+  major = yes
+  is_triggered_only = yes
+
+  show_major = {
+    NOT = { tag = KNE }
+  }
+
+  option = {
+    name = news.20.a
+  }
+}
