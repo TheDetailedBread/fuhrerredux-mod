@@ -108,69 +108,54 @@ country_event = { #coup fails
 			popularity = 0.3
 		}
 		hidden_effect = {
-				create_field_marshal = {
-			name = "Santos Marka T'ula"
-			picture = "Portrait_BOL_Santos_Marka.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-
-			id= 943
-		}	
-		create_field_marshal = {
-			name = "Francisco Imaña"
-			picture = "Portrait_BOL_Francisco_Imana.tga"
-			traits = {}
-			skill = 2
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Dionisio Choque"
-			picture = "Portrait_BOL_Dionisio_Choque.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Joaquin Quispe"
-			picture = "Portrait_BOL_Joaquin_Quispe.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 2
-		}	
-		create_corps_commander = {
-			name = "Mariano Poma"
-			picture = "Portrait_BOL_Mariano_Poma.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Francisco Saire"
-			picture = "Portrait_BOL_Francisco_Saire.tga"
-			traits = {panzer_leader}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			}			
-		}
+      add_field_marshal_role = {
+        character = BOL_Santos_Marka_T_ula
+        skill = 3
+        attack_skill = 3
+        defense_skill = 2
+        planning_skill = 3
+        logistics_skill = 3
+      }
+      add_field_marshal_role = {
+        character = BOL_Francisco_Imana
+        skill = 2
+        attack_skill = 3
+        defense_skill = 3
+        planning_skill = 2
+        logistics_skill = 3
+      }
+      add_corps_commander_role = {
+        character = BOL_Dionisio_Choque
+        skill = 3
+        attack_skill = 2
+        defense_skill = 2
+        planning_skill = 4
+        logistics_skill = 3
+      }
+      add_corps_commander_role = {
+        character = BOL_Joaquin_Quispe
+        skill = 3
+        attack_skill = 2
+        defense_skill = 3
+        planning_skill = 4
+        logistics_skill = 2
+      }
+      add_corps_commander_role = {
+        character = BOL_Mariano_Poma
+        skill = 3
+        attack_skill = 2
+        defense_skill = 3
+        planning_skill = 4
+        logistics_skill = 3
+      }
+      add_corps_commander_role = {
+        character = BOL_Francisco_Saire
+        skill = 3
+        attack_skill = 3
+        defense_skill = 2
+        planning_skill = 3
+        logistics_skill = 3
+      }
 		add_ideas = one_party_dictatorship
 		set_politics = { ruling_party = valkist elections_allowed = no }
 		remove_every_minister = yes
