@@ -1,12 +1,12 @@
 # News Events
 # created by: dax0102
 
-add_namespace = news
+add_namespace = fxnews
 
 news_event = { # Laurel Assassinated
-    id = news.1
-    title = news.1.t
-    desc = news.1.d
+    id = fxnews.1
+    title = fxnews.1.t
+    desc = fxnews.1.d
     picture = GFX_news_event_assassination
     major = yes
     is_triggered_only = yes
@@ -16,14 +16,14 @@ news_event = { # Laurel Assassinated
     }
 
     option = { 
-        name = news.1.a
+        name = fxnews.1.a
     }
 }
 
 news_event = { # Quezon Inaugurated
-    id = news.2
-    title = news.2.t
-    desc = news.2.d
+    id = fxnews.2
+    title = fxnews.2.t
+    desc = fxnews.2.d
     picture = GFX_news_event_PHI_quezon_inaugurated
     major = yes
     is_triggered_only = yes
@@ -33,14 +33,14 @@ news_event = { # Quezon Inaugurated
     }
 
     option = { 
-        name = news.2.a
+        name = fxnews.2.a
     }
 }
 
 news_event = { # Roxas Inaugurated
-    id = news.3
-    title = news.3.t
-    desc = news.3.d
+    id = fxnews.3
+    title = fxnews.3.t
+    desc = fxnews.3.d
     picture = GFX_news_event_PHI_roxas_inaugurated
     major = yes
     is_triggered_only = yes
@@ -50,14 +50,14 @@ news_event = { # Roxas Inaugurated
     }
 
     option = { 
-        name = news.3.a
+        name = fxnews.3.a
     }
 }
 
 news_event = { # Sakdalista Inaugurated
-    id = news.4
-    title = news.4.t
-    desc = news.4.d
+    id = fxnews.4
+    title = fxnews.4.t
+    desc = fxnews.4.d
     picture = GFX_news_event_PHI_ramos_inaugurated
     major = yes
     is_triggered_only = yes
@@ -67,14 +67,14 @@ news_event = { # Sakdalista Inaugurated
     }
 
     option = { 
-        name = news.3.a
+        name = fxnews.3.a
     }
 }
 
 news_event = { # Aguinaldo Coup
-    id = news.5
-    title = news.5.t
-    desc = news.5.d
+    id = fxnews.5
+    title = fxnews.5.t
+    desc = fxnews.5.d
     picture = GFX_news_event_PHI_aguinaldo_coup
     major = yes
     is_triggered_only = yes
@@ -84,14 +84,14 @@ news_event = { # Aguinaldo Coup
     }
 
     option = { 
-        name = news.5.a
+        name = fxnews.5.a
     }
 }
 
 news_event = { # Army Takes Power in the Philippines
-    id = news.6
-    title = news.6.t
-    desc = news.6.d
+    id = fxnews.6
+    title = fxnews.6.t
+    desc = fxnews.6.d
     picture = GFX_news_event_PHI_army_coup
     major = yes
     is_triggered_only = yes
@@ -101,14 +101,14 @@ news_event = { # Army Takes Power in the Philippines
     }
 
     option = { 
-        name = news.5.a
+        name = fxnews.5.a
     }
 }
 
 news_event = { # Civil War in the Philippines
-    id = news.7
-    title = news.7.t
-    desc = news.7.d
+    id = fxnews.7
+    title = fxnews.7.t
+    desc = fxnews.7.d
     picture = GFX_news_event_PHI_manila_uprising
     major = yes
     is_triggered_only = yes
@@ -118,15 +118,15 @@ news_event = { # Civil War in the Philippines
     }
 
     option = { 
-        name = news.5.a
+        name = fxnews.5.a
     }
 }
 
 news_event = { # Southern Agitation
-	id = news.8
-	immediate = {log = "[GetDateText]: [Root.GetName]: event usanews.1"}
-	title = news.8.t
-	desc = news.8.d
+	id = fxnews.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event usafxnews.1"}
+	title = fxnews.8.t
+	desc = fxnews.8.d
 	picture = GFX_news_event_USA_southern_agitation
 	major = yes
 	is_triggered_only = yes
@@ -138,7 +138,7 @@ news_event = { # Southern Agitation
 				tag = MEX
 			}
 		}
-		name = news.8.a
+		name = fxnews.8.a
 		hidden_effect = {
 			if = {
 				limit = { original_tag = MEX }
@@ -162,14 +162,14 @@ news_event = { # Southern Agitation
 				NOT = { tag = MEX }
 			}
 		}
-		name = news.8.b
+		name = fxnews.8.b
 	}
 }
 
 news_event = { # Collapse of the United States
-    id = news.9
-    title = news.9.t
-    desc = news.9.d
+    id = fxnews.9
+    title = fxnews.9.t
+    desc = fxnews.9.d
     picture = GFX_report_news_event_USA_collapse
     major = yes
     is_triggered_only = yes
@@ -179,14 +179,14 @@ news_event = { # Collapse of the United States
     }
 
     option = { 
-        name = news.9.a
+        name = fxnews.9.a
     }
 }
 
 news_event = { # End the American Democracy
-    id = news.10
-    title = news.10.t
-    desc = news.10.d
+    id = fxnews.10
+    title = fxnews.10.t
+    desc = fxnews.10.d
     picture = GFX_report_news_event_USA_macarthur
     major = yes
     is_triggered_only = yes
@@ -196,14 +196,14 @@ news_event = { # End the American Democracy
     }
 
     option = { 
-        name = news.10.a
+        name = fxnews.10.a
     }
 }
 
 news_event = { # President Long
-    id = news.11
-    title = news.11.t
-    desc = news.11.d
+    id = fxnews.11
+    title = fxnews.11.t
+    desc = fxnews.11.d
     picture = GFX_report_news_event_USA_huey_long
     major = yes
     is_triggered_only = yes
@@ -213,14 +213,14 @@ news_event = { # President Long
     }
 
     option = { 
-        name = news.11.a
+        name = fxnews.11.a
     }
 }
 
 news_event = { # President Roosevelt
-    id = news.12
-    title = news.12.t
-    desc = news.12.d
+    id = fxnews.12
+    title = fxnews.12.t
+    desc = fxnews.12.d
     picture = GFX_report_news_event_USA_quentin_roosevelt
     major = yes
     is_triggered_only = yes
@@ -230,14 +230,14 @@ news_event = { # President Roosevelt
     }
 
     option = { 
-        name = news.12.a
+        name = fxnews.12.a
     }
 }
 
 news_event = { # President Landon
-    id = news.13
-    title = news.13.t
-    desc = news.13.d
+    id = fxnews.13
+    title = fxnews.13.t
+    desc = fxnews.13.d
     picture = GFX_report_news_event_USA_alf_landon
     major = yes
     is_triggered_only = yes
@@ -247,14 +247,14 @@ news_event = { # President Landon
     }
 
     option = { 
-        name = news.13.a
+        name = fxnews.13.a
     }
 }
 
 news_event = { # President Garner
-    id = news.14
-    title = news.14.t
-    desc = news.14.d
+    id = fxnews.14
+    title = fxnews.14.t
+    desc = fxnews.14.d
     picture = GFX_report_news_event_USA_john_nance_garner
     major = yes
     is_triggered_only = yes
@@ -264,14 +264,14 @@ news_event = { # President Garner
     }
 
     option = { 
-        name = news.14.a
+        name = fxnews.14.a
     }
 }
 
 news_event = { # Restoration of Democracy in the US
-    id = news.15
-    title = news.15.t
-    desc = news.15.d
+    id = fxnews.15
+    title = fxnews.15.t
+    desc = fxnews.15.d
     picture = GFX_report_news_event_USA_victory_celebration
     major = yes
     is_triggered_only = yes
@@ -281,14 +281,14 @@ news_event = { # Restoration of Democracy in the US
     }
 
     option = { 
-        name = news.15.a
+        name = fxnews.15.a
     }
 }
 
 news_event = { # Abdülmecid II Assassinated
-    id = news.16
-    title = news.16.t
-    desc = news.16.d
+    id = fxnews.16
+    title = fxnews.16.t
+    desc = fxnews.16.d
     picture = GFX_news_event_assassination
     major = yes
     is_triggered_only = yes
@@ -298,14 +298,14 @@ news_event = { # Abdülmecid II Assassinated
     }
 
     option = { 
-        name = news.16.a
+        name = fxnews.16.a
     }
 }
 
 news_event = { # Revolt in the New American Republic
-    id = news.17
-    title = news.17.t
-    desc = news.17.d
+    id = fxnews.17
+    title = fxnews.17.t
+    desc = fxnews.17.d
     picture = GFX_news_event_capture_chicago
     major = yes
     is_triggered_only = yes
@@ -316,14 +316,14 @@ news_event = { # Revolt in the New American Republic
     }
 
     option = {
-        name = news.17.a
+        name = fxnews.17.a
     }
 }
 
 news_event = { # SRA Victorious!
-    id = news.18
-    title = news.18.t
-    desc = news.18.d
+    id = fxnews.18
+    title = fxnews.18.t
+    desc = fxnews.18.d
     picture = GFX_news_event_capture_chicago
     major = yes
     is_triggered_only = yes
@@ -333,14 +333,14 @@ news_event = { # SRA Victorious!
     }
 
     option = {
-        name = news.18.a
+        name = fxnews.18.a
     }
 }
 
 news_event = { # United Kingdom of the Netherlands Proclaimed
-    id = news.19
-    title = news.19.t
-    desc = news.19.d
+    id = fxnews.19
+    title = fxnews.19.t
+    desc = fxnews.19.d
     picture = GFX_news_event_herman_goring
     major = yes
     is_triggered_only = yes
@@ -350,13 +350,13 @@ news_event = { # United Kingdom of the Netherlands Proclaimed
     }
 
     option = {
-        name = news.19.a
+        name = fxnews.19.a
         trigger = {
             NOT = { tag = KNE }
         }
     }
     option = {
-        name = news.19.b
+        name = fxnews.19.b
         trigger = {
             tag = KNE
         }
@@ -364,9 +364,9 @@ news_event = { # United Kingdom of the Netherlands Proclaimed
 }
 
 news_event = { # Dutch Exiles Joins in Entente
-  id = news.20
-  title = news.20.t
-  desc = news.20.d
+  id = fxnews.20
+  title = fxnews.20.t
+  desc = fxnews.20.d
   picture = GFX_news_event_ast_army
   major = yes
   is_triggered_only = yes
@@ -376,6 +376,6 @@ news_event = { # Dutch Exiles Joins in Entente
   }
 
   option = {
-    name = news.20.a
+    name = fxnews.20.a
   }
 }
