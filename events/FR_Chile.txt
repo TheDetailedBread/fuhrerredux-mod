@@ -211,14 +211,14 @@ country_event = { #40 elections
 		}
 		hidden_effect = {
 			set_global_flag = JARWON
-			create_country_leader = {
-				name = "Juan Antonio Rios"
-				desc = "POLITICS_JUAN_ANTONIO_RIOS"
-				picture = "Portrait_Chile_Juan_Antonio_Rios.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
+      add_country_leader_role = {
+        character = CHL_Juan_Antonio_Rios
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -303,14 +303,14 @@ country_event = { #Blanche takes over
 		hidden_effect = {
 			set_country_flag = BLANCHEPATER
 			set_politics = { ruling_party = paternal_autocrat }
-			create_country_leader = {
-				name = "Bartolomé Blanche"
-				desc = "POLITICS_BARTOLOME_BLANCHE"
-				picture = "Portrait_Chile_Bartolome_Blanche.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = { }
-			}
+      add_country_leader_role = {
+        character = CHL_Bartolome_Blanche
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -443,14 +443,14 @@ country_event = { #blanche open elections
 		}
 		set_global_flag = JARWON
 		hidden_effect = {
-			create_country_leader = {
-				name = "Juan Antonio Rios"
-				desc = "POLITICS_JUAN_ANTONIO_RIOS"
-				picture = "Portrait_Chile_Juan_Antonio_Rios.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
+			add_country_leader_role = {
+        character = CHL_Juan_Antonio_Rios
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -521,14 +521,14 @@ country_event = { #blanche no left elections
 		}
 		set_global_flag = JARWON
 		hidden_effect = {
-			create_country_leader = {
-				name = "Juan Antonio Rios"
-				desc = "POLITICS_JUAN_ANTONIO_RIOS"
-				picture = "Portrait_Chile_Juan_Antonio_Rios.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
+			add_country_leader_role = {
+        character = CHL_Juan_Antonio_Rios
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
