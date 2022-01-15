@@ -1142,55 +1142,27 @@ country_event = { # Commies win
 		clr_country_flag = coalition_valkist
 		clr_country_flag = coalition_social_conservative
 		clr_country_flag = coalition_market_liberal
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-				}
-			}
 		hidden_effect = {
-			create_corps_commander = { # Commie
-				name = "Pompeo Colajanni"
-				picture = "Portrait_Italy_Pompeo_Colajanni.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Ettore Troilo"
-				picture = "Portrait_Italy_Ettore_Troilo.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Mario Musolesi"
-				picture = "Portrait_Italy_Mario_Musolesi.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Pier Luigi Bellini delle Stelle"
-				picture = "Portrait_Italy_Pier_Luigi_Bellini_delle_Stelle.dds"
-				traits = { }
-				skill = 2
-			}
+      add_corps_commander_role = {
+        character = ITA_Pompeo_Colajanni
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Ettore_Troilo
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Mario_Musolesi
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Pier_Luigi_Bellini_della_Stelle
+        skill = 1
+      }
 			
-			#remove_unit_leader = 310
-			#remove_unit_leader = 311
-			#remove_unit_leader = 312
-			#remove_unit_leader = 313
-			
-			every_country = {
-				limit = {
-					is_ai = no
-				}
-				news_event = { id = itanews.20 } 
-			}
+      random_other_country = {
+        news_event = { id = itanews.20 }
+      }
 			remove_every_minister = yes
 			add_ideas = {
 				ITA_Antonio_Gramsci_hog_col
@@ -1220,55 +1192,32 @@ country_event = { # Commies win
 		clr_country_flag = coalition_valkist
 		clr_country_flag = coalition_social_conservative
 		clr_country_flag = coalition_market_liberal
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-				}
-			}		
 		hidden_effect = {
-			create_corps_commander = { # Commie
-				name = "Pompeo Colajanni"
-				picture = "Portrait_Italy_Pompeo_Colajanni.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Ettore Troilo"
-				picture = "Portrait_Italy_Ettore_Troilo.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Mario Musolesi"
-				picture = "Portrait_Italy_Mario_Musolesi.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Pier Luigi Bellini delle Stelle"
-				picture = "Portrait_Italy_Pier_Luigi_Bellini_delle_Stelle.dds"
-				traits = { }
-				skill = 2
-			}
+			add_corps_commander_role = {
+        character = ITA_Pompeo_Colajanni
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Ettore_Troilo
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Mario_Musolesi
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Pier_Luigi_Bellini_della_Stelle
+        skill = 1
+      }
 			
 			#remove_unit_leader = 310
 			#remove_unit_leader = 311
 			#remove_unit_leader = 312
 			#remove_unit_leader = 313
 			
-			every_country = {
-				limit = {
-					is_ai = no
-				}
-				news_event = { id = itanews.20 } 
-			}
+			random_other_country = {
+        news_event = { id = itanews.20 }
+      }
 			remove_every_minister = yes
 			add_ideas = {
 				ITA_Pietro_Nenni_hog_lib
@@ -1328,17 +1277,6 @@ country_event = { # Soc Dem win
 		clr_country_flag = coalition_social_democrat
 		clr_country_flag = coalition_national_populist
 		clr_country_flag = coalition_valkist
-		hidden_effect = {
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-				}
-			}
-		}
 		every_country = {
 			limit = {
 				is_ai = no
@@ -1414,16 +1352,6 @@ country_event = { # liberal win
 			}
 			set_country_flag = coalition_social_conservative
 		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {		
-				}
-			}
 			every_country = {
 				limit = {
 					is_ai = no
@@ -1435,9 +1363,8 @@ country_event = { # liberal win
 				ITA_Manlio_Brosio_for_mli
 				ITA_Marcello_Soleri_eco_mli
 				ITA_Manlio_Brosio_sec_mli
-			}
-		}
-	}
+    }
+  }
 }
 
 country_event = { # conservative win
@@ -1502,15 +1429,6 @@ country_event = { # conservative win
 		}
 		add_political_power = 50
 		hidden_effect = {
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-				}
-			}
 			every_country = {
 				limit = {
 					is_ai = no
@@ -1592,15 +1510,6 @@ country_event = { # nationalist win
 		}
 		
 		add_political_power = 50
-		create_country_leader = {
-			name = "Victor Emmanuel III"
-			desc = "EMMANUEL_III_DESC"
-			picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-			}
-		}
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -1640,15 +1549,6 @@ country_event = { # nationalist win
 				has_country_flag = ITA_right_coalition
 			}
 			set_country_flag = coalition_social_conservative
-		}
-		create_country_leader = {
-			name = "Victor Emmanuel III"
-			desc = "EMMANUEL_III_DESC"
-			picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-			}
 		}
 		hidden_effect = {
 			every_country = {
@@ -1810,22 +1710,21 @@ country_event = { # Italian Civil War - Commies
 					ruling_party = vanguardist
 					elections_allowed = no
 				}
-				create_country_leader = {
-					name = "Palmiro Togliatti"
-					desc = "PALMIRO_TOGLIATTI_DESC"
-					picture = "gfx/leaders/ITA/Portrait_Italy_Palmiro_Togliatti.dds"
-					expire = "1965.1.1"
-					ideology = vanguardist_subtype
-					traits = {
-					}
-				}
+        add_country_leader_role = {
+          character = ITA_Palmiro_Togliatti
+          promote_leader = yes
+          country_leader = {
+            ideology = vanguardist_subtype
+            traits = { }
+          }
+        }
+        load_oob = PIE_socialist
 			}
 			transfer_state = 158
 			transfer_state = 159
 			transfer_state = 161
 			transfer_state = 162
 			transfer_state = 851
-			load_oob = PIE_socialist
 			declare_war_on ={
 				target = ITA
 				type = annex_everything
