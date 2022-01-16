@@ -1,4 +1,4 @@
-﻿capital = 540
+capital = 540
 
 oob = "PRR"
 
@@ -81,48 +81,6 @@ add_ideas = {
 	parliamentary_republic
 }
 
-create_country_leader = {
-	name = "Alfonso Costa"
-	desc = "POLITICS_COSTA_DESC"
-	picture = "Portrait_Alfonso_Costa.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Bento Gonçalves"
-	desc = "POLITICS_BENTO_GONCALVES_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Francisco de Barcelos Rolão Preto"
-	desc = "POLITICS_FRANSISCO_BARCELOS_ROLAO_PRETO_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-
-create_corps_commander = {
-	name = "José Vicente de Freitas"
-	picture = "Portrait_Jose_Freitas.dds"
-	traits = {  }
-	skill = 3
-
-}
-
 ### VARIANTS ###
 # 1936 Start #
 if = {
@@ -178,3 +136,8 @@ if = {
 		}
 	}
 }
+
+recruit_character = PRR_Alfonso_Costa
+recruit_character = PRR_Bento_Goncalves
+recruit_character = PRR_Francisco_de_Barcelos_Rolao_Preto
+recruit_character = PRR_Jose_Vicente_de_Freitas
