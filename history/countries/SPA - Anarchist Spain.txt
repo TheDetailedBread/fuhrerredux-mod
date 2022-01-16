@@ -1,4 +1,4 @@
-﻿capital = 165
+capital = 165
 
 oob = "SPA_1936"
 
@@ -97,190 +97,6 @@ set_convoys = 150
 set_stability = 0.65
 set_war_support = 0.80
 
-create_country_leader = {
-	name = "José Cazorla Maure"
-	desc = "POLITICS_JOSE_CAZORLA_MAURE_DESC"
-	picture = "Portrait_SPA_Jose_Cazorla_Maure.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "José Díaz Ramos"
-	desc = "POLITICS_JOSE_DIAZ_RAMOS_DESC"
-	picture = "Portrait_SPA_Jose_Diaz_Ramos.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Francisco Largo Caballero"
-	desc = "POLITICS_FRANCISCO_LARGO_CABALLERO_DESC"
-	picture = "Portrait_SPA_Francisco_Largo_Caballero.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Juan Negrín"
-	desc = "POLITICS_JUAN_NEGRIN_DESC"
-	picture = "Portrait_SPA_Juan_Negrin.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Niceto Alcalá-Zamora"
-	desc = "POLITICS_NICETO_ALCALA-ZAMORA_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Niceto_Alcala-Zamora.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Niceto Alcalá-Zamora"
-	desc = "POLITICS_NICETO_ALCALA-ZAMORA_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Niceto_Alcala-Zamora.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Niceto Alcalá-Zamora"
-	desc = "POLITICS_NICETO_ALCALA-ZAMORA_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Niceto_Alcala-Zamora.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Niceto Alcalá-Zamora"
-	desc = "POLITICS_NICETO_ALCALA-ZAMORA_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Niceto_Alcala-Zamora.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "José María Albiñana"
-	desc = "POLITICS_JOSE_MARIA_ALBINANA_DESC"
-	picture = "gfx/leaders/SPF/Portrait_SPF_Jose_Maria_Albinana.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "José Antonio Primo de Rivera"
-	desc = "POLITICS_JOSE_ANTONIO_PRIMO_DE_RIVERA_DESC"
-	picture = "gfx/leaders/SPF/Portrait_SPF_Jose_Antonie.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ramiro Ledesma Ramos"
-	desc = "POLITICS_RAMIRO_LEDESMA_DESC"
-	picture = "gfx/leaders/SPF/Portrait_SPF_Ramiro_Ledesma.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-### Field Marshals ###
-
-create_field_marshal = {
-	name = "Juan Modesto"
-	picture = "Portrait_SPA_Juan_Modesto.tga"
-	traits = {
-		trickster
-		urban_assault_specialist
-	}
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-### Generals ###
-
-create_corps_commander = {
-	name = "Buenaventura Durruti"
-	picture = "Portrait_SPA_Buenaventura_Durruti.tga"
-	traits = {
-		trickster
-		urban_assault_specialist
-		expert_improviser
-	}
-	skill = 3
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Cipriano Mera Sanz"
-	picture = "Portrait_SPA_Cipriano_Mera_Sanz.tga"
-	traits = {
-		infantry_leader
-		ambusher
-		politically_connected
-	}
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Enrique Líster Forján"
-	picture = "Portrait_SPA_Enrique_Lister_Forjan.tga"
-	traits = {
-		urban_assault_specialist
-		politically_connected
-	}
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-
 ### Ship Variants ###
 
 create_equipment_variant = {
@@ -304,3 +120,21 @@ create_equipment_variant = {
 		ship_anti_air_upgrade = 1
 	}
 }
+
+
+
+
+
+
+recruit_character = SPA_Jose_Cazorla_Maure
+recruit_character = SPA_Jose_Diaz_Ramos
+recruit_character = SPA_Francisco_Largo_Caballero
+recruit_character = SPA_Juan_Negrin
+recruit_character = SPA_Juan_Modesto
+recruit_character = SPA_Buenaventura_Durruti
+recruit_character = SPA_Cipriano_Mera_Sanz
+recruit_character = SPA_Enrique_Lister_Forjan
+recruit_character = SPA_The_CNT_FAI_Congress
+recruit_character = SPA_Dolores_Ibarruri
+recruit_character = SPA_Joaquin_Maurin
+recruit_character = SPA_Andres_Nin_Perez
