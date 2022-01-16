@@ -196,15 +196,14 @@ country_event = { # Balbo wants to return to Rome
 
 	option = {
 		name = lba.6.a
-		create_country_leader = {
-			name = "Rodolfo Graziani"
-			desc = "RODOLFO_GRAZIANI_DESC"
-			picture = "gfx/leaders/ITA/portrait_italy_radolfo_graziani.dds"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-			}
-		}		
+    add_country_leader_role = {
+      character = LBA_Rodolfo_Graziani
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }	
 		ITA = {
 			country_event = lba.7
 		}
@@ -332,14 +331,14 @@ country_event = { # Italy installs Idris
 	
 	option = {
 		name = lba.11.a
-		create_country_leader = {
-			name = "Idris I"
-			desc = "POLITICS_IDRIS_DESC"
-			picture = "Portrait_LBA_Idris.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = {}
-		}
+		add_country_leader_role = {
+      character = LBA_Idris_Senussi
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
 		add_ideas = {
 			GEN_hog_sco
 			GEN_for_sco
