@@ -23,6 +23,7 @@ characters = {
 		portraits = {
 			civilian = {
 				small = "gfx/interface/ministers/PRU/PRU_Victor_Raul_Haya_de_la_Torre.tga"
+        large = "gfx/leaders/PRU/Portrait_PRU_Victor_Raul_Haya_de_la_Torre.tga"
 			}
 		}
 		advisor = {
@@ -35,6 +36,10 @@ characters = {
 				collectivist
 				hog_happy_amateur
 			}
+		}
+    country_leader = {
+			ideology = vanguardist_subtype
+			traits = { }
 		}
 	}
 	PRU_Jose_Galvez_Barrenechea = {
@@ -278,6 +283,9 @@ characters = {
 			civilian = {
 				small = "gfx/interface/ministers/PRU/PRU_Carlos_Miro_Quesada.tga"
 			}
+      army = {
+				large = "gfx/leaders/PRU/Portrait_PRU_Carlos_Miro_Quesada.tga"
+			}
 		}
 		advisor = {
 			cost = 150
@@ -289,6 +297,14 @@ characters = {
 				national_populist
 				hog_happy_amateur
 			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
 	PRU_Eloy_G_Ureta = {
@@ -696,25 +712,6 @@ characters = {
 			}
 		}
 	}
-	PRU_Nicolas_Lindley_Lopez = {
-		name = "Nicolás Lindley López"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/PRU/PRU_Nicolas_Lindley_Lopez.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = economy_minister
-			available = { can_replace_minister = no }
-			idea_token = PRU_Nicolas_Lindley_Lopez_eco_pau
-			traits = {
-				economy_minister
-				paternal_autocrat
-				eco_administrative_genius
-			}
-		}
-	}
 	PRU_Alejandro_Peralta = {
 		name = "Alejandro Peralta"
 		portraits = {
@@ -930,6 +927,9 @@ characters = {
 			navy = {
 				small = "gfx/interface/ministers/PRU/PRU_Nicolas_Lindley_Lopez.tga"
 			}
+      civilian = {
+				small = "gfx/interface/ministers/PRU/PRU_Nicolas_Lindley_Lopez.tga"
+			}
 		}
 		advisor = {
 			cost = 150
@@ -938,7 +938,6 @@ characters = {
 			idea_token = PRU_Nicolas_Lindley_Lopez_cos
 			traits = {
 				chief_of_staff
-				
 				cos_school_of_defence
 			}
 		}
@@ -949,8 +948,18 @@ characters = {
 			idea_token = PRU_Nicolas_Lindley_Lopez_cnav
 			traits = {
 				chief_of_navy
-				
 				cnav_power_projection_doctrine
+			}
+		}
+    advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = PRU_Nicolas_Lindley_Lopez_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_administrative_genius
 			}
 		}
 	}
@@ -1068,18 +1077,6 @@ characters = {
 			}
 		}
 	}
-	PRU_Victor_Raul_Haya_de_la_Torre = {
-		name = "Víctor Raúl Haya de la Torre"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/PRU/Portrait_PRU_Victor_Raul_Haya_de_la_Torre.tga"
-			}
-		}
-		country_leader = {
-			ideology = vanguardist_subtype
-			traits = { }
-		}
-	}
 	PRU_Jose_Bustamante_y_Rivero = {
 		name = "José Bustamante y Rivero"
 		portraits = {
@@ -1172,22 +1169,6 @@ characters = {
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 3
-		}
-	}
-	PRU_Carlos_Miro_Quesada = {
-		name = "Carlos Miro Quesada"
-		portraits = {
-			army = {
-				large = "gfx/leaders/PRU/Portrait_PRU_Carlos_Miro_Quesada.tga"
-			}
-		}
-		corps_commander = {
-			traits = { }
-			skill = 3
-			attack_skill = 1
-			defense_skill = 1
 			planning_skill = 4
 			logistics_skill = 3
 		}
