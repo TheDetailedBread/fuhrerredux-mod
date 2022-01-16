@@ -6755,14 +6755,14 @@ country_event = { #fate of the British Isles ~~~NOT THE REST OF THE EMPIRE~~~
 					ideology = authoritarian_democrat
 					popularity = 0.20
 				}
-				create_country_leader = {
-					name = "Maurice Gamelin"
-					desc = "POLITICS_VICEROY_GAMELIN_DESC"
-					picture = "Portrait_Ireland_Maurice_Gamelin.tga"
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {  }
-				}
+				add_country_leader_role = {
+          character = IRE_Maurice_Gamelin
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
 
 				if = {
 					limit = {
