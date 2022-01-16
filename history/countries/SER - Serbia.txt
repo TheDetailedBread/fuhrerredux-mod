@@ -1,4 +1,4 @@
-﻿
+
 capital = 107
 
 oob = "SER_1936"
@@ -87,201 +87,6 @@ set_popularities = {
 
 set_stability = 0.70
 
-
-
-create_country_leader = {
-	name = "Pétar Stambolić"
-	desc = "POLITICS_PETAR_STAMBOLIC_DESC"
-	picture = "gfx/leaders/SER/Petar_Stambolic.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Josip Broz Tito"
-	desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
-	picture = "gfx/leaders/SER/Portrait_Yugoslavia_Josip_Broz_Tito.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Zivorad Jovanovic"
-	desc = "POLITICS_ZIVORAD_JOVANOVIC_DESC"
-	picture = "gfx/leaders/SER/Zivorad_Jovanovic.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Dragiša Vasić"
-	desc = "POLITICS_DRAGISA_VASIC_DESC"
-	picture = "gfx/leaders/SER/Dragisa_Vasic.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Milan Grol"
-	desc = "POLITICS_MILAN_GROL_DESC"
-	picture = "gfx/leaders/SER/Portrait_Yugoslavia_Milan_Grol.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ljubomir Davidović"
-	desc = "POLITICS_LJUBOMIR_DAVIDOVIC_DESC"
-	picture = "gfx/leaders/SER/Ljubomir_Davidovic.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Anton Korošec"
-	desc = "POLITICS_ANTON_KOROSEC_DESC"
-	picture = "gfx/leaders/SER/Anton_Korosec.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Alexander I"
-	desc = "POLITICS_ALEXANDER_I_DESC"
-	picture = "Portrait_Serbia_Alexander.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-        name = "Alexander I"
-	desc = "POLITICS_ALEXANDER_I_DESC"
-	picture = "Portrait_Serbia_Alexander.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Prince Paul"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "gfx/leaders/SER/Portrait_Yugoslavia_Prince_Paul.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Milan Stojadinović"
-	desc = "POLITICS_MILAN_STOJADINOVIC_DESC"
-	picture = "gfx/leaders/SER/Portrait_Yugoslavia_Milan_Stojadinovic.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-##################################
-
-create_field_marshal = {
-	name = "Petar Bojović"
-	picture = "Portrait_Serbia_Petar_Bojovic.tga"
-	traits = { old_guard thorough_planner }
-	skill = 4
-}
-
-create_field_marshal = {
-	name = "Alexander I"
-	portrait_path = "gfx/leaders/SER/Portrait_Serbia_Alexander.tga"
-	traits = { old_guard inspirational_leader }
-	skill = 4
-}
-
-#create_corps_commander = {
-#	name = "Danilo Kalafatović"
-#	picture = "Portrait_Danilo_Kalafatovic.tga"
-#	skill = 2
-#}
-
-create_corps_commander = {
-	name = "Draža Mihailović"
-	picture = "Portrait_Serbia_Draza_Mihailovic.tga"
-	traits = { old_guard }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "Dušan Simović"
-	picture = "Portrait_Serbia_Dusan_Simovic.tga"
-	traits = { career_officer }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "Milorad Petrović"
-	picture = "Portrait_Serbia_Milorad_Petrovic.tga"
-	traits = { ranger }
-	skill = 1
-}
-
-create_corps_commander = {
-	name = "Dušan Trifunović"
-	picture = "Portrait_Serbia_Dusan_Trifunovic.tga"
-	traits = { old_guard trait_mountaineer }
-	skill = 2
-}
-
-#create_corps_commander = {
-#	name = "Petar Kosić"
-#	picture = "Portrait_Petar_Kosic.tga"
-#	skill = 2
-#}
-
-#create_corps_commander = {
-#	name = "Svetozar Hadžić"
-#	picture = "Portrait_Svetozar_Hadzic.tga"
-#	traits = { hill_fighter }
-#	skill = 3
-#}
-
-###############
-
-#create_navy_leader = {
-#	name = "Dušan Simović"
-#	picture = "Portrait_Serbia_Dusan_Simovic.tga"
-#	traits = { blockade_runner }
-#	skill = 2
-#}
-
 ### VARIANTS ###
 # 1936 Start #
 if = {
@@ -360,3 +165,22 @@ if = {
 		}
 	}
 }
+
+recruit_character = SER_Petar_Stambolić
+recruit_character = SER_Josip_Broz_Tito
+recruit_character = SER_Zivorad_Jovanovic
+recruit_character = SER_Dragisa_Vasić
+recruit_character = SER_Milan_Grol
+recruit_character = SER_Ljubomir_Davidović
+recruit_character = SER_Anton_Korosec
+recruit_character = SER_Alexander_I
+recruit_character = SER_Prince_Paul
+recruit_character = SER_Milan_Stojadinović
+recruit_character = SER_Petar_Bojović
+recruit_character = SER_Danilo_Kalafatović
+recruit_character = SER_Draza_Mihailović
+recruit_character = SER_Dusan_Simović
+recruit_character = SER_Milorad_Petrović
+recruit_character = SER_Dusan_Trifunović
+recruit_character = SER_Petar_Kosić
+recruit_character = SER_Svetozar_Hadzić
