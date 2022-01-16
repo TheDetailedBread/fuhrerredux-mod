@@ -1710,14 +1710,6 @@ country_event = { # Italian Civil War - Commies
 					ruling_party = vanguardist
 					elections_allowed = no
 				}
-        add_country_leader_role = {
-          character = ITA_Palmiro_Togliatti
-          promote_leader = yes
-          country_leader = {
-            ideology = vanguardist_subtype
-            traits = { }
-          }
-        }
         load_oob = PIE_socialist
 			}
 			transfer_state = 158
@@ -1731,6 +1723,7 @@ country_event = { # Italian Civil War - Commies
 			}			
 		}
 		ITA = {
+      retire_character = ITA_Palmiro_Togliatti
 			add_popularity = {
 				ideology = vanguardist
 				popularity = -0.05
@@ -1788,15 +1781,6 @@ country_event = { # Italian Civil War - Nationalists
 					ruling_party = valkist
 					elections_allowed = no
 				}
-				create_country_leader = {
-					name = "Gabriele D'Annunzio"
-					desc = "Gabriele_Annunzio_DESC"
-					picture = "gfx/leaders/ITA/Portrait_ITA_Gabriele_Anunnzio.tga"
-					expire = "1965.1.1"
-					ideology = valkist_subtype
-					traits = {
-					}
-				}
 			}
 			transfer_state = 850
 			transfer_state = 117
@@ -1810,6 +1794,7 @@ country_event = { # Italian Civil War - Nationalists
 			}			
 		}
 		ITA = {
+      retire_character = ITA_Gabrielle_D_Annunzio
 			add_popularity = {
 				ideology = valkist
 				popularity = -0.05
@@ -2384,15 +2369,14 @@ country_event = { # Nat Italy - France ultimatum
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
-		create_country_leader = {
-			name = "Amadeo Aosta"
-			desc = "AMADEO_AOSTA_DESC"
-			picture = "gfx/leaders/ITA/Portrait_Italy_Amadeo_Aosta.dds"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Amadeo_di_Savoia_Aosta
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		FRA = {
 			country_event = ita.40
 		}
@@ -5216,15 +5200,6 @@ country_event = { # France/Italy - Corsican declares independence
 				ideology = national_populist
 				popularity = 0.2
 			}			
-			create_country_leader = {
-				name = "Petru Giovacchini"
-				desc = "Petru_Giovacchini_DESC"
-				picture = "Portrait_COR_Petru_Giovacchini.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-				}
-			}
 			hidden_effect = {
 				load_oob = ITA_corsican_rebels
 			}
@@ -14969,14 +14944,14 @@ country_event = { # Fate of the Left
 		name = itasoc.2.a
 		set_country_flag = ITA_commies_picked
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Palmiro Togliatti"
-			picture = "Portrait_Italy_Palmiro_Togliatti.dds"
-			expire = "1965.1.1"
-			ideology = vanguardist_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Palmiro_Togliatti
+      promote_leader = yes
+      country_leader = {
+        ideology = vanguardist_subtype
+        traits = {}
+      }
+    }
 		clr_country_flag = coalition_social_democrat
 		clr_country_flag = coalition_libertarian_socialist
 		add_popularity = {
@@ -15021,14 +14996,14 @@ country_event = { # Fate of the Left
 		name = itasoc.2.b
 		set_country_flag = ITA_commies_picked
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Amedeo Bordiga"
-			picture = "Portrait_Italy_Amedeo_Bordiga.dds"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = {
-			}
-		}
+    add_country_leader_role = {
+      character = ITA_Amadeo_Bordiga
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
 		clr_country_flag = coalition_social_democrat
 		clr_country_flag = coalition_libertarian_socialist
 		add_popularity = {
@@ -15073,14 +15048,14 @@ country_event = { # Fate of the Left
 		name = itasoc.2.c
 		set_country_flag = ITA_commies_picked
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Antonio Gramsci"
-			picture = "Portrait_Italy_Vittorio_Antonio_Gramsci.dds"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Antonio_Gramsci
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
 		clr_country_flag = coalition_social_democrat
 		add_popularity = {
 			ideology = collectivist
@@ -15384,14 +15359,14 @@ country_event = { # Libya - Balbo returns to Libya
 
 	option = { # 
 		name = itasoc.9.a
-		create_country_leader = {
-			name = "Italo Balbo"
-			desc = "ITALO_BALBO_DESC"
-			picture = "gfx/leaders/ITA/Portrait_ITA_Italo_Balbo.tga"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = LBA_Italo_Balbo
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }	
 	}	
 }
 
@@ -15764,15 +15739,14 @@ country_event = { #Italy - D'Annunzio fuckin dies
 		add_political_power = -100
 		add_stability = -0.1
 		#kill_country_leader = yes
-		create_country_leader = {
-			name = "Arengo del Italia"
-			picture = "gfx/leaders/ALB/Portrait_Regency_Council.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}
+    add_country_leader_role = {
+      character = ITA_Arengo_del_Italia
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			ITA = {
 				country_event = { 
@@ -15797,15 +15771,14 @@ country_event = { #Italy - D'Annunzio's successor
 		name = itasyn.4.a
 		add_political_power = 50
 		add_stability = 0.1
-		create_country_leader = {
-			name = "Alceste de Ambris"
-			picture = "Portrait_SRI_Alceste_de_Ambris.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}
+    add_country_leader_role = {
+      character = ITA_Alceste_De_Ambris
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			ITA = {
 				country_event = { 
@@ -15820,30 +15793,28 @@ country_event = { #Italy - D'Annunzio's successor
 		name = itasyn.4.b
 		add_political_power = 50
 		add_stability = 0.1
-		create_country_leader = {
-			name = "Edmondo Rossoni"
-			picture = "Portrait_SRI_Edmondo_Rossoni.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}	
+		add_country_leader_role = {
+      character = ITA_Edmondo_Rossoni
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 	}
 
 	option = { # Cianetti
 		name = itasyn.4.c
 		add_political_power = 50
 		add_stability = 0.1
-		create_country_leader = {
-			name = "Tullio Cianetti"
-			picture = "Portrait_ITA_Tullio_Cianetti.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Tullio_Cianetti
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			ITA = {
 				country_event = {
