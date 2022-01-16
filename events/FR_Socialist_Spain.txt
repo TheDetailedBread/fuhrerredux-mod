@@ -742,16 +742,14 @@ country_event = {
 				long_name = SPA_CNT_FAI_party_long 
 				name = SPA_CNT_FAI_party 
 			}
-			create_country_leader = {
-				name = "The CNT-FAI Congress"
-				desc = "POLITICS_CNT_FAI_CONGRESS_DESC"
-				picture = "Portrait_SPA_CNT_FAI_Congress.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_The_CNT_FAI_Congress
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -1805,16 +1803,14 @@ country_event = {
 		custom_effect_tooltip  = SPA_ibarruri_elected_tooltip
 		hidden_effect = {
 			load_focus_tree = FR_Socialist_Spain_Ibarruri
-			create_country_leader = {
-				name = "Dolores Ibárruri"
-				desc = "POLITICS_DOLORES_IBARRURI_DESC"
-				picture = "Portrait_SPA_Dolores_Ibarruri.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_Dolores_Ibarruri
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -1988,16 +1984,14 @@ country_event = {
 		clr_country_flag = SPA_nin_flag
 		hidden_effect = {
 			country_event = { id = socspain.132 days = 2 }
-			create_country_leader = {
-				name = "Juan Modesto"
-				desc = "POLITICS_JUAN_MODESTO_DESC"
-				picture = "Portrait_SPA_Juan_Modesto.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_Juan_Modesto
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 			add_popularity = { ideology = collectivist popularity = -0.05 }
 		}
 	}
@@ -2104,16 +2098,14 @@ country_event = {
 		custom_effect_tooltip  = SPA_ramos_elected_tooltip
 		hidden_effect = {
 			load_focus_tree = FR_Socialist_Spain_Ramos
-			create_country_leader = {
-				name = "José Díaz Ramos"
-				desc = "POLITICS_JOSE_DIAZ_RAMOS_DESC"
-				picture = "Portrait_SPA_Jose_Diaz_Ramos.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_Jose_Diaz_Ramos
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 			add_stability = 0.05
 		}
 	}
@@ -2174,16 +2166,14 @@ country_event = {
 				ruling_party = libertarian_socialist elections_allowed = no
 			}
 			add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
-			create_country_leader = {
-				name = "Joaquín Maurín"
-				desc = "POLITICS_JOAQUIN_MAURIN_DESC"
-				picture = "Portrait_SPA_Joaquin_Maurin.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_Joaquin_Maurin
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -2273,16 +2263,14 @@ country_event = {
 				long_name = SPA_PCE_trot_party_long 
 				name = SPA_PCE_trot_party 
 			}
-			create_country_leader = {
-				name = "Andrés Nin Pérez"
-				desc = "POLITICS_ANDRES_NIN_PEREZ_DESC"
-				picture = "Portrait_SPA_Andres_Nin_Perez.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_Andres_Nin_Perez
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -2308,16 +2296,14 @@ country_event = {
 		custom_effect_tooltip  = SPA_ramos_elected_tooltip
 		hidden_effect = {
 			load_focus_tree = FR_Socialist_Spain_Ramos
-			create_country_leader = {
-				name = "José Díaz Ramos"
-				desc = "POLITICS_JOSE_DIAZ_RAMOS_DESC"
-				picture = "Portrait_SPA_Jose_Diaz_Ramos.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPA_Jose_Diaz_Ramos
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 			add_stability = 0.05
 		}
 	}

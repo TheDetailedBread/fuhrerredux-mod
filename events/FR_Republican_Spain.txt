@@ -465,16 +465,14 @@ country_event = {
 				long_name = SPR_military_party_long 
 				name = SPR_military_party 
 			}
-			create_country_leader = {
-				name = "Niceto Alcalá-Zamora"
-				desc = "POLITICS_NICETO_ALCALA-ZAMORA_DESC"
-				picture = "Portrait_SPR_Niceto_Alcala-Zamora.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPR_Niceto_Alcala_Zamora
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			remove_ideas_with_trait = head_of_government
 			add_ideas = SPR_Vicente_Rojo_Lluch_hog_ade
 			country_event = { id = repspain.15 days = 20 }
@@ -556,46 +554,26 @@ country_event = {
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		add_popularity = { ideology = social_liberal popularity = 0.02 }
 		hidden_effect = {
-			create_country_leader = {
-				name = "Manuel Azaña"
-				desc = "POLITICS_MANUEL_AZANA_DESC"
-				picture = "Portrait_SPR_Manuel_Azana.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Manuel Azaña"
-				desc = "POLITICS_MANUEL_AZANA_DESC"
-				picture = "Portrait_SPR_Manuel_Azana.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Manuel Azaña"
-				desc = "POLITICS_MANUEL_AZANA_DESC"
-				picture = "Portrait_SPR_Manuel_Azana.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Manuel Azaña"
-				desc = "POLITICS_MANUEL_AZANA_DESC"
-				picture = "Portrait_SPR_Manuel_Azana.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPR_Manuel_Azana
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
 			if = {
 				limit = {
 					has_idea = SPR_Manuel_Azana_Diaz_hog_sli
@@ -624,46 +602,26 @@ country_event = {
 		add_popularity = { ideology = market_liberal popularity = 0.02 }
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		hidden_effect = {
-			create_country_leader = {
-				name = "Alejandro Lerroux"
-				desc = "POLITICS_ALEJANDRO_LERROUX_DESC"
-				picture = "Portrait_SPR_Alejandro_Lerroux.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Alejandro Lerroux"
-				desc = "POLITICS_ALEJANDRO_LERROUX_DESC"
-				picture = "Portrait_SPR_Alejandro_Lerroux.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Alejandro Lerroux"
-				desc = "POLITICS_ALEJANDRO_LERROUX_DESC"
-				picture = "Portrait_SPR_Alejandro_Lerroux.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Alejandro Lerroux"
-				desc = "POLITICS_ALEJANDRO_LERROUX_DESC"
-				picture = "Portrait_SPR_Alejandro_Lerroux.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPR_Alejandro_Lerroux
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -691,16 +649,14 @@ country_event = {
 				long_name = SPR_military_party_long 
 				name = SPR_military_party 
 			}
-			create_country_leader = {
-				name = "Niceto Alcalá-Zamora"
-				desc = "POLITICS_NICETO_ALCALA-ZAMORA_DESC"
-				picture = "Portrait_SPR_Niceto_Alcala-Zamora.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SPR_Niceto_Alcala_Zamora
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			remove_ideas_with_trait = head_of_government
 			add_ideas = SPR_Vicente_Rojo_Lluch_hog_ade
 			country_event = { id = repspain.15 days = 20 }
