@@ -86,18 +86,9 @@ add_ideas = {
 	constitutional_monarchy
 }
 
-if = { 
-	limit = { NOT = { has_dlc = "Together for Victory" } }
-	set_cosmetic_tag = CAN_ALY
-}
-if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_cosmetic_tag = CAN_UK
-	#add_to_tech_sharing_group = commonwealth_research
-}
+set_cosmetic_tag = CAN_UK
 
 set_politics = {
-
 	ruling_party = social_conservative
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -110,8 +101,8 @@ set_popularities = {
     libertarian_socialist = 0
     social_democrat = 16
     social_liberal = 0
-    market_liberal = 6
-    social_conservative = 61
+    market_liberal = 11
+    social_conservative = 56
     authoritarian_democrat = 1
     paternal_autocrat = 0
     national_populist = 16
