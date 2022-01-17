@@ -115,96 +115,87 @@ country_event = { # Michael's Coronation
 	option = {
 		name = romania.2.a
 		hidden_effect = {
-			kill_ideology_leader = vanguardist
-			kill_ideology_leader = collectivist
-			kill_ideology_leader = libertarian_socialist
-			kill_ideology_leader = social_democrat
-			kill_ideology_leader = social_liberal
-			kill_ideology_leader = market_liberal
-			kill_ideology_leader = social_conservative
-			kill_ideology_leader = authoritarian_democrat
-			kill_ideology_leader = paternal_autocrat
-			kill_ideology_leader = national_populist
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = vanguardist_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = collectivist_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = libertarian_socialist_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = social_democrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = market_liberal_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = social_conservative_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = authoritarian_democrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = paternal_autocrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Michael I"
-				desc = "POLITICS_MICHAEL_I_DESC"
-				picture = "Portrait_Romania_Michael_I.tga"
-				expire = "2017.12.5"
-				ideology = national_populist_subtype
-				traits = { }
-			}
+			retire_character = ROM_Regency_Council
+			add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Michael_I
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 			random_other_country = {
 				news_event = { id = fxnews.20 hours = 8 }
 			}
@@ -1008,6 +999,7 @@ country_event = { # Prince Michael Assassinated!
 		name = romania.20.a
 		set_country_flag = ROM_michael_assassinated
 		hidden_effect = {
+      retire_character = ROM_Michael_I
 			country_event = { id = romania.32 days = 7 } # The Empty Romanian Throne
 		}
 	}
@@ -1027,86 +1019,86 @@ country_event = { # Coronation of Nicholas I
 				limit = { has_country_flag = ROM_deployed_some_of_troops }
 				country_event = { id = romania.22 days = 14 }
 			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = vanguardist_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = collectivist_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = libertarian_socialist_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = social_democrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = market_liberal_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = social_conservative_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = authoritarian_democrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = paternal_autocrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Nicholas I"
-				desc = "POLITICS_NICHOLAS_I_DESC"
-				picture = "Portrait_Romania_Nicholas_I.tga"
-				expire = "2017.12.5"
-				ideology = national_populist_subtype
-				traits = { }
-			}
+			add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ROM_Nicholas_I
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 			random_other_country = {
 				news_event = { id = fxnews.21 hours = 8 }
 			}
@@ -1146,15 +1138,15 @@ country_event = { # Iron Guard Behind Assassination
 		name = romania.22.b
 		add_political_power = 100
 		set_country_flag = ROM_codreanu_exiled
-		kill_ideology_leader = valkist
-		create_country_leader = {
-			name = "Ion Mota"
-			desc = "POLITICS_ION_MOTA_DESC"
-			picture = "Portrait_Romania_Ion_Mota.tga"
-			expire = "2017.12.5"
-			ideology = valkist_subtype
-			traits = { }
-		}
+    retire_character = ROM_Corneliu_Zelea_Codreanu
+		add_country_leader_role = {
+      character = ROM_Ion_Mota
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			country_event = { id = romania.23 days = 3 }
 			GER = {
@@ -1517,86 +1509,86 @@ country_event = { # Coronation of Alexander I
 
 	option = { # God Save the King!
 		name = romania.27.a
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = vanguardist_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = collectivist_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = libertarian_socialist_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = social_democrat_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = social_liberal_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = market_liberal_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = social_conservative_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = authoritarian_democrat_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = paternal_autocrat_subtype
-			traits = { }
-		}
-		create_country_leader = {
-			name = "Alexander I"
-			desc = "POLITICS_ALEXANDER_I_DESC"
-			picture = "Portrait_Romania_Alexandru_Cantacuzino.tga"
-			expire = "2017.12.5"
-			ideology = national_populist_subtype
-			traits = { }
-		}
+		add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = vanguardist
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = ROM_Alexander_I
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
 		random_other_country = {
 			news_event = { id = fxnews.22 hours = 8 }
 		}
