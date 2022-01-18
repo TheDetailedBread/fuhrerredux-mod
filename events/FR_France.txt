@@ -438,14 +438,14 @@ country_event = { #Petain's power is questioned
 
 	option = { # Charles Maurras and the AF
 		name = fra.13.b
-		create_country_leader = {
-			name = "Charles Maurras"
-			desc = "POLITICS_CHARLES_MAURRAS_DESC"
-			picture = "Portrait_France_Charles_Maurras.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {}
-		}
+		add_country_leader_role = {
+      character = FRA_Charles_Maurras
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		set_country_flag = fra_prov_bad
 		set_country_flag = fra_monarchist_france
 		hidden_effect = {
@@ -499,14 +499,14 @@ country_event = { #restoration of the monarchy
 			FRA_Eugene_Schueller_eco_pau
 			FRA_George_Lamirand_sec_pau
 		}
-		create_country_leader = {
-			name = "Jean III"
-			desc = "POLITICS_KING_JEAN_DESC"
-			picture = "Portrait_France_Jean_d_Orleans.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {  }
-		}
+		add_country_leader_role = {
+      character = FRA_Jean_III
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			set_country_flag = FRA_monarchy_flag
 			set_variable = { #This ticks up via hidden event (fra.82) once a week, and is used to subdue/enter negotiations with the rebellious provinces. Once all provinces are subdued this variable is no longer needed.
@@ -3518,14 +3518,14 @@ country_event = { #1940 election
 			ideology = social_democrat
 			popularity = 0.05
 		}
-		create_country_leader = {
-			name = "Félix Gouin"
-			desc = "POLITICS_FELIX_GOUIN_DESC"
-			picture = "Portrait_France_Felix_Gouin.tga"
-			expire = "1965.1.1"
-			ideology = social_democrat_subtype
-			traits = {  }
-		}
+    add_country_leader_role = {
+      character = FRA_Felix_Gouin
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
 	}
 
 	option = {
@@ -3570,14 +3570,6 @@ country_event = { #1940 election
 			FRA_Andre_Tardieu_eco_mli
 			FRA_Albert_Sarraut_sec_sli
 		}
-		create_country_leader = {
-			name = "Pierre-Étienne Flandin"
-			desc = "POLITICS_PIERRE_FLANDIN_DESC"
-			picture = "Portrait_France_Pierre_Etienne_Flandin.tga"
-			expire = "1965.1.1"
-			ideology = market_liberal_subtype
-			traits = {  }
-		}
 	}
 
 	option = {
@@ -3600,14 +3592,14 @@ country_event = { #1940 election
 			FRA_Pierre_Etienne_Flandin_eco_mli
 			FRA_Jean_Fabry_sec_sli
 		}
-		create_country_leader = {
-			name = "Joseph Laniel"
-			desc = "POLITICS_JOSEPH_LANIEL_DESC"
-			picture = "Portrait_France_Joseph_Laniel.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = {  }
-		}
+		add_country_leader_role = {
+      character = FRA_Joseph_Laniel
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
 	}
 }
 
@@ -3746,14 +3738,14 @@ country_event = { #Petain takes control of Free France
 
 	option = {
 		name = fra.100.a
-		create_country_leader = {
-			name = "Philippe Petain"
-			desc = "POLITICS_PHILIPPE_PETAIN_DESC"
-			picture = "Portrait_France_Philippe_Petain.tga"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {  }
-		}
+    add_country_leader_role = {
+      character = FRA_Philippe_Petain
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no

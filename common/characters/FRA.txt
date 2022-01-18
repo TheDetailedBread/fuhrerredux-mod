@@ -1,0 +1,1868 @@
+characters = {
+	FRA_Marcel_Deat = {
+		name = "Marcel Déat"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Marcel_Deat.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Marcel_Deat.tga"
+			}
+		}
+		country_leader = {
+			ideology = vanguardist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Marcel_Deat_eco_van
+			traits = {
+				economy_minister
+				vanguardist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	FRA_Maurice_Thorez = {
+		name = "Maurice Thorez"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Maurice_Thorez_fx.tga"
+			}
+		}
+		country_leader = {
+			ideology = collectivist_subtype
+			traits = { }
+		}
+	}
+	FRA_Sebastien_Faure = {
+		name = "Sébastien Faure"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Sebastien_Faure.tga"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_socialist_subtype
+			traits = { }
+		}
+	}
+	FRA_Leon_Blum = {
+		name = "Léon Blum"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Leon_Blum_fx.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Leon_Blum.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Leon_Blum_hog_sde
+			traits = {
+				head_of_government
+				social_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	FRA_Camille_Chautemps = {
+		name = "Camille Chautemps"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Camille_Chautemps.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	FRA_Pierre_Etienne_Flandin = {
+		name = "Pierre-Étienne Flandin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Pierre_Etienne_Flandin.tga"
+			}
+		}
+		country_leader = {
+			ideology = market_liberal_subtype
+			traits = { }
+		}
+	}
+	FRA_Louis_Marin = {
+		name = "Louis Marin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Louis_Marin.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Louis_Marin.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Louis_Marin_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	FRA_Francois_de_La_Rocque = {
+		name = "François de La Rocque"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Francois_de_La_Rocque_fx.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Francois_de_La_Rocque.tga"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Francois_de_La_Rocque_sec_ade
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_man_of_the_people
+			}
+		}
+	}
+	FRA_Philippe_Petain = {
+		name = "Philippe Pétain"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Philippe_Petain_fx.tga"
+			}
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Philippe_Petain_fx.tga"
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		field_marshal = {
+			traits = {
+				old_guard
+				organisational_leader
+				inspirational_leader
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	FRA_Philippe_Henriot = {
+		name = "Philippe Henriot"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Philippe_Henriot.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
+		}
+	}
+	FRA_Marcel_Bucard = {
+		name = "Marcel Bucard"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Marcel_Bucard.tga"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	FRA_Maurice_Gamelin = {
+		name = "Maurice Gamelin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Maurice_Gamelin_fx.tga"
+			}
+		}
+		field_marshal = {
+			traits = {
+				defensive_doctrine
+				offensive_doctrine
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	FRA_Alphonse_Juin = {
+		name = "Alphonse Juin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Alphonse_Juin_fx.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Alphonse_Juin.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				organisational_leader
+				inspirational_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Alphonse_Juin_carm
+			traits = {
+				chief_of_army
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	FRA_Maurice_Janin = {
+		name = "Maurice Janin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Maurice_Janin.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Maurice_Janin.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				harsh_leader
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Maurice_Janin_carm
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	FRA_Charles_de_Gaulle = {
+		name = "Charles de Gaulle"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Charles_de_Gaulle_fx.tga"
+			}
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Charles_de_Gaulle_fx.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Charles_de_Gaulle.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				urban_assault_specialist
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Charles_de_Gaulle_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	FRA_Jean_de_Lattre_de_Tassigny = {
+		name = "Jean de Lattre de Tassigny"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Jean_de_Lattre_de_Tassigny_fx.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Jean_de_Lattre_de_Tassigny.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+				naval_invader
+				jungle_rat
+			}
+			skill = 4
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_de_Lattre_de_Tassigny_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_de_Lattre_de_Tassigny_carm
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	FRA_Maxime_Weygand = {
+		name = "Maxime Weygand"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Maxime_Weygand_fx.tga"
+			}
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Maxime_Weygand_fx.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Maxime_Weygand.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Maxime_Weygand_carm
+			traits = {
+				chief_of_army
+				carm_commando_doctrine
+			}
+		}
+	}
+	FRA_Philippe_Leclerc = {
+		name = "Philippe Leclerc"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Philippe_Leclerc_fx.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				desert_fox
+			}
+			skill = 1
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	FRA_Francois_Sevez = {
+		name = "François Sevez"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Francois_Sevez.tga"
+			}
+		}
+	}
+	FRA_Albert_d_Amade = {
+		name = "Albert d'Amade"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Albert_d_Amade.tga"
+			}
+		}
+	}
+	FRA_Antoine_Bethouart = {
+		name = "Antoine Béthouart"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Antoine_Bethouart.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Antoine_Bethouart.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Antoine_Bethouart_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+	}
+	FRA_Jacques_Massu = {
+		name = "Jacques Massu"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Jacques_Massu.tga"
+			}
+		}
+	}
+	FRA_Edgard_de_Larminat = {
+		name = "Edgard de Larminat"
+		portraits = {
+			army = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Edgard_de_Larminat.tga"
+			}
+		}
+	}
+	FRA_Francois_Darlan = {
+		name = "François Darlan"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Francois_Darlan_fx.tga"
+			}
+		}
+		navy_leader = {
+			traits = {
+				superior_tactician
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+	}
+	FRA_Jean_Marie_Charles_Abrial = {
+		name = "Jean-Marie Charles Abrial"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Jean_Marie_Charles_Abrial.tga"
+			}
+		}
+		navy_leader = {
+			traits = {
+				superior_tactician
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 1
+			coordination_skill = 3
+		}
+	}
+	FRA_Jean_Pierre_Esteva = {
+		name = "Jean-Pierre Esteva"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Jean_Pierre_Esteva_fx.tga"
+			}
+		}
+		navy_leader = {
+			traits = {
+				seawolf
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 1
+			coordination_skill = 3
+		}
+	}
+	FRA_Rene_Emile_Godfroy = {
+		name = "René-Émile Godfroy"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Rene_Emile_Godfroy.tga"
+			}
+		}
+		navy_leader = {
+			traits = {
+				old_guard_navy
+				spotter
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 2
+		}
+	}
+	FRA_Georges_Valois = {
+		name = "Georges Valois"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Georges_Valois.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Georges_Valois_hog_van
+			traits = {
+				head_of_government
+				vanguardist
+				hog_red_chairmen
+			}
+		}
+	}
+	FRA_Benoit_Frachon = {
+		name = "Benoît Frachon"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Benoit_Frachon.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Benoit_Frachon_hog_col
+			traits = {
+				head_of_government
+				collectivist
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	FRA_Marceau_Pivert = {
+		name = "Marceau Pivert"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Marceau_Pivert.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Marceau_Pivert_hog_col
+			traits = {
+				head_of_government
+				collectivist
+				hog_naive_optimist
+			}
+		}
+	}
+	FRA_Benoit_Broutchoux = {
+		name = "Benoît Broutchoux"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Benoit_Broutchoux.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Benoit_Broutchoux_hog_lib
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_happy_amateur
+			}
+		}
+	}
+	FRA_Daniel_Guerin = {
+		name = "Daniel Guérin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Daniel_Guerin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Daniel_Guerin_hog_lib
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_sincere_internationalist
+			}
+		}
+	}
+	FRA_Paul_Ramadier = {
+		name = "Paul Ramadier"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Paul_Ramadier.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Paul_Ramadier_hog_sde
+			traits = {
+				head_of_government
+				social_democrat
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	FRA_Edouard_Daladier = {
+		name = "Edouard Daladier"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Edouard_Daladier.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Edouard_Daladier_hog_sli
+			traits = {
+				head_of_government
+				social_liberal
+				hog_happy_amateur
+			}
+		}
+	}
+	FRA_Paul_Reynaud = {
+		name = "Paul Reynaud"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Paul_Reynaud.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Paul_Reynaud_hog_mli
+			traits = {
+				head_of_government
+				market_liberal
+				hog_democratic_tyrant
+			}
+		}
+	}
+	FRA_Jean_Ybarnegaray = {
+		name = "Jean Ybarnégaray"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Ybarnegaray.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Ybarnegaray_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_charismatic_charmer
+			}
+		}
+	}
+	FRA_Francois_de_la_Rocque = {
+		name = "François de la Rocque"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Francois_de_la_Rocque.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Francois_de_la_Rocque_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	FRA_Jean_Mermoz = {
+		name = "Jean Mermoz"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Mermoz.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Mermoz_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_naive_optimist
+			}
+		}
+	}
+	FRA_Ernest_Mercier = {
+		name = "Ernest Mercier"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Ernest_Mercier.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Ernest_Mercier_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_accomplished_diplomat
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Ernest_Mercier_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_silent_lawyer
+			}
+		}
+	}
+	FRA_Louis_Franchet_d_Esperey = {
+		name = "Louis Franchet d'Esperey"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Louis_Franchet_d_Esperey.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Louis_Franchet_d_Esperey.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Louis_Franchet_d_Esperey_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_old_general
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Louis_Franchet_d_Esperey_cos_pau
+			traits = {
+				chief_of_staff
+				paternal_autocrat
+				cos_school_of_psychology
+			}
+		}
+	}
+	FRA_Louis_Alexandre_Audibert = {
+		name = "Louis-Alexandre Audibert"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Louis_Alexandre_Audibert.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Louis_Alexandre_Audibert_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_backroom_backstabber
+			}
+		}
+	}
+	FRA_Charles_Maurras = {
+		name = "Charles Maurras"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Charles_Maurras.tga"
+				small = "gfx/interface/ministers/FRA/FRA_Charles_Maurras.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Charles_Maurras_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	FRA_Jacques_Doriot = {
+		name = "Jacques Doriot"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Jacques_Doriot.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jacques_Doriot_hog_val
+			traits = {
+				head_of_government
+				valkist
+				hog_underground_figurehead
+			}
+		}
+	}
+	FRA_Jacques_Duclos = {
+		name = "Jacques Duclos"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Jacques_Duclos.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jacques_Duclos_for_van
+			traits = {
+				foreign_minister
+				vanguardist
+				for_iron_fisted_brute
+			}
+		}
+	}
+	FRA_Charles_Rappoport = {
+		name = "Charles Rappoport"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Charles_Rappoport.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Charles_Rappoport_for_col
+			traits = {
+				foreign_minister
+				collectivist
+				for_radical_among_moderates
+			}
+		}
+	}
+	FRA_Nestor_Makhno = {
+		name = "Nestor Makhno"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Nestor_Makhno.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Nestor_Makhno_for_lib
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_ideological_crusader
+			}
+		}
+	}
+	FRA_Pierre_Laval = {
+		name = "Pierre Laval"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Pierre_Laval.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Pierre_Laval_for_sde
+			traits = {
+				foreign_minister
+				social_democrat
+				for_relations_expert
+			}
+		}
+	}
+	FRA_George_Bonnet = {
+		name = "George Bonnet"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_George_Bonnet.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_George_Bonnet_for_sli
+			traits = {
+				foreign_minister
+				social_liberal
+				for_moderate_among_radicals
+			}
+		}
+	}
+	FRA_Camille_Barrere = {
+		name = "Camille Barrère"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Camille_Barrere.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Camille_Barrere_for_sco
+			traits = {
+				foreign_minister
+				social_conservative
+				for_iron_fisted_brute
+			}
+		}
+	}
+	FRA_Georges_Mandel = {
+		name = "Georges Mandel"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Georges_Mandel.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Georges_Mandel_for_sco
+			traits = {
+				foreign_minister
+				social_conservative
+				for_relations_expert
+			}
+		}
+	}
+	FRA_Paul_Baudouin = {
+		name = "Paul Baudouin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Paul_Baudouin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Paul_Baudouin_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	FRA_Joseph_Darnand = {
+		name = "Joseph Darnand"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Joseph_Darnand.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Joseph_Darnand_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_apologetic_clerk
+			}
+		}
+	}
+	FRA_Maurice_Pujo = {
+		name = "Maurice Pujo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Maurice_Pujo.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Maurice_Pujo_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_general_staffer
+			}
+		}
+	}
+	FRA_Daniel_Renoult = {
+		name = "Daniel Renoult"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Daniel_Renoult.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Daniel_Renoult_eco_col
+			traits = {
+				economy_minister
+				collectivist
+				eco_reformer
+			}
+		}
+	}
+	FRA_Leon_Jouhaux = {
+		name = "Léon Jouhaux"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Leon_Jouhaux.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Leon_Jouhaux_eco_col
+			traits = {
+				economy_minister
+				collectivist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	FRA_Henri_Tanguy = {
+		name = "Henri Tanguy"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Tanguy.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Tanguy_eco_lib
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_devoted_monopoly_buster
+			}
+		}
+	}
+	FRA_Jean_Zay = {
+		name = "Jean Zay"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Zay.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Zay_eco_sde
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
+			}
+		}
+	}
+	FRA_Andre_Tardieu = {
+		name = "André Tardieu"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Andre_Tardieu.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Andre_Tardieu_eco_mli
+			traits = {
+				economy_minister
+				market_liberal
+				eco_construction_magnate
+			}
+		}
+	}
+	FRA_Pierre_Etienne_Flandin = {
+		name = "Pierre Etienne Flandin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Pierre_Etienne_Flandin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Pierre_Etienne_Flandin_eco_mli
+			traits = {
+				economy_minister
+				market_liberal
+				eco_national_liberal
+			}
+		}
+	}
+	FRA_Charles_Vallin = {
+		name = "Charles Vallin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Charles_Vallin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Charles_Vallin_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_bank_president
+			}
+		}
+	}
+	FRA_Marie_Eugene_Debeney = {
+		name = "Marie-Eugène Debeney"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Marie_Eugene_Debeney.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Marie_Eugene_Debeney_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	FRA_Eugene_Schueller = {
+		name = "Eugène Schueller"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Eugene_Schueller.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Eugene_Schueller_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_resource_industrialist
+			}
+		}
+	}
+	FRA_Francois_Coty = {
+		name = "François Coty"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Francois_Coty.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Francois_Coty_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_industrialiser
+			}
+		}
+	}
+	FRA_Eugene_Deloncle = {
+		name = "Eugène Deloncle"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Eugene_Deloncle.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Eugene_Deloncle_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_industrial_chemist
+			}
+		}
+	}
+	FRA_Claudine_Chomat = {
+		name = "Claudine Chomat"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Claudine_Chomat.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Claudine_Chomat_sec_van
+			traits = {
+				security_minister
+				vanguardist
+				sec_back_stabber
+			}
+		}
+	}
+	FRA_Henri_Bonnet = {
+		name = "Henri Bonnet"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Bonnet.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Bonnet_sec_col
+			traits = {
+				security_minister
+				collectivist
+				sec_silent_lawyer
+			}
+		}
+	}
+	FRA_Henri_Gourdeaux = {
+		name = "Henri Gourdeaux"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Gourdeaux.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Gourdeaux_sec_col
+			traits = {
+				security_minister
+				collectivist
+				sec_health_and_safety
+			}
+		}
+	}
+	FRA_May_Picqueray = {
+		name = "May Picqueray"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_May_Picqueray.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_May_Picqueray_sec_lib
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_crime_fighter
+			}
+		}
+	}
+	FRA_Albert_Sarraut = {
+		name = "Albert Sarraut"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Albert_Sarraut.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Albert_Sarraut_sec_sli
+			traits = {
+				security_minister
+				social_liberal
+				sec_prince_of_terror
+			}
+		}
+	}
+	FRA_Jean_Fabry = {
+		name = "Jean Fabry"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Fabry.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Fabry_sec_sli
+			traits = {
+				security_minister
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	FRA_George_Lamirand = {
+		name = "George Lamirand"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_George_Lamirand.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_George_Lamirand_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_driven_recruiter
+			}
+		}
+	}
+	FRA_Louis_Renault = {
+		name = "Louis Renault"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Louis_Renault.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Louis_Renault_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_prince_of_terror
+			}
+		}
+	}
+	FRA_Henri_Massis = {
+		name = "Henri Massis"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Massis.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Massis_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	FRA_Henri_Amiel = {
+		name = "Henri Amiel"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Amiel.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Amiel_cos_sli
+			traits = {
+				chief_of_staff
+				social_liberal
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	FRA_Bernard_Serrigny = {
+		name = "Bernard Serrigny"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Bernard_Serrigny.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Bernard_Serrigny_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	FRA_Charles_Huntzinger = {
+		name = "Charles Huntzinger"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Charles_Huntzinger.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Charles_Huntzinger_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_psychology
+			}
+		}
+	}
+	FRA_Eugene_Bridoux = {
+		name = "Eugène Bridoux"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Eugene_Bridoux.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Eugene_Bridoux_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_defence
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Eugene_Bridoux_carm_ade
+			traits = {
+				chief_of_army
+				authoritarian_democrat
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	FRA_Henri_Albert_Niessel = {
+		name = "Henri Albert Niessel"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Albert_Niessel.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Albert_Niessel_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	FRA_Henri_Dentz = {
+		name = "Henri Dentz"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Dentz.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Dentz_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	FRA_Philippe_de_Hauteclocque = {
+		name = "Philippe de Hauteclocque"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Philippe_de_Hauteclocque.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = FRA_Philippe_de_Hauteclocque_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	FRA_Gabriel_Puaux = {
+		name = "Gabriel Puaux"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Gabriel_Puaux.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Gabriel_Puaux_carm_sli
+			traits = {
+				chief_of_army
+				social_liberal
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	FRA_Jean_Touzet_du_Vigier = {
+		name = "Jean Touzet du Vigier"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Touzet_du_Vigier.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Touzet_du_Vigier_carm_sco
+			traits = {
+				chief_of_army
+				social_conservative
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	FRA_Joseph_de_Goislard_de_Monsabert = {
+		name = "Joseph de Goislard de Monsabert"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Joseph_de_Goislard_de_Monsabert.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = FRA_Joseph_de_Goislard_de_Monsabert_carm_sco
+			traits = {
+				chief_of_army
+				social_conservative
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	FRA_Francois_Carre_de_Lusancay = {
+		name = "François Carré de Lusançay"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/FRA/FRA_Francois_Carre_de_Lusancay.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = FRA_Francois_Carre_de_Lusancay_cnav_sli
+			traits = {
+				chief_of_navy
+				social_liberal
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	FRA_Louis_Finet = {
+		name = "Louis Finet"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/FRA/FRA_Louis_Finet.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = FRA_Louis_Finet_cnav_sli
+			traits = {
+				chief_of_navy
+				social_liberal
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	FRA_Georges_Thierry_d_Argenlieu = {
+		name = "Georges Thierry d'Argenlieu"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/FRA/FRA_Georges_Thierry_d_Argenlieu.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = FRA_Georges_Thierry_d_Argenlieu_cnav_ade
+			traits = {
+				chief_of_navy
+				authoritarian_democrat
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	FRA_Jean_Esteva = {
+		name = "Jean Esteva"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Esteva.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Esteva_cnav_ade
+			traits = {
+				chief_of_navy
+				authoritarian_democrat
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	FRA_Jean_Marie_Abrial = {
+		name = "Jean Marie Abrial"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Marie_Abrial_fx.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Marie_Abrial_cnav_ade
+			traits = {
+				chief_of_navy
+				authoritarian_democrat
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	FRA_Marie_Jean_Lucien_Lacaze = {
+		name = "Marie-Jean-Lucien Lacaze"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/FRA/FRA_Marie_Jean_Lucien_Lacaze.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = FRA_Marie_Jean_Lucien_Lacaze_cnav_ade
+			traits = {
+				chief_of_navy
+				authoritarian_democrat
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	FRA_Henri_Soulat = {
+		name = "Henri Soulat"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Henri_Soulat.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = FRA_Henri_Soulat_cair_sli
+			traits = {
+				chief_of_air_force
+				social_liberal
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	FRA_Antonin_Brocard = {
+		name = "Antonin Brocard"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Antonin_Brocard.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = FRA_Antonin_Brocard_cair_mli
+			traits = {
+				chief_of_air_force
+				market_liberal
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+	FRA_Marie_Charles_Duval = {
+		name = "Marie Charles Duval"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Marie_Charles_Duval.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = FRA_Marie_Charles_Duval_cair_sco
+			traits = {
+				chief_of_air_force
+				social_conservative
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	FRA_Jean_Bergeret = {
+		name = "Jean Bergeret"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Jean_Bergeret.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = FRA_Jean_Bergeret_cair_ade
+			traits = {
+				chief_of_air_force
+				authoritarian_democrat
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	FRA_Rene_Paul_Fonck = {
+		name = "René Paul Fonck"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/FRA/FRA_Rene_Paul_Fonck.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = FRA_Rene_Paul_Fonck_cair_ade
+			traits = {
+				chief_of_air_force
+				authoritarian_democrat
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	FRA_Lionel_Groulx = {
+		name = "Lionel Groulx"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Lionel_Groulx.tga"
+			}
+		}
+	}
+	FRA_Joseph_Laniel = {
+		name = "Joseph Laniel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Joseph_Laniel.tga"
+			}
+		}
+	}
+	FRA_Felix_Gouin = {
+		name = "Félix Gouin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Felix_Gouin.tga"
+			}
+		}
+	}
+	FRA_Jean_III = {
+		name = "Jean III"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Jean_III.tga"
+			}
+		}
+	}
+}
