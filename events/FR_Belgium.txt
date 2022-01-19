@@ -41,21 +41,97 @@ country_event = { #King Albert dies
 	option = { #Leopold III becomes King
 		name = bel.2.a
 		set_country_flag = Albert_I_Belgium_dead
-		hidden_effect = { kill_country_leader = yes }
-		create_country_leader = {
-				name = "King Leopold III"
-				desc = "POLITICS_LEOPOLD_III_DESC"
-				picture = "Portrait_Belgium_Leopold_III.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-		}
-		create_country_leader = {
-				name = "King Leopold III"
-				desc = "POLITICS_LEOPOLD_III_DESC"
-				picture = "Portrait_Belgium_Leopold_III.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-		}
+		retire_character = BEL_King_Albert_I
+    hidden_effect = {
+      add_country_leader_role = {
+        character = BEL_Hendrik_de_Man
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Julien_Lahaut
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Joseph_Jacquemotte
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_King_Leopold_III
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_King_Leopold_III
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_King_Leopold_III
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_King_Leopold_III
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_King_Leopold_III
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_King_Leopold_III
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Staf_de_Clercq
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Leon_Degrelle
+        promote_leader = yes
+        country_leader = {
+          ideology = valkist_subtype
+          traits = {}
+        }
+      }
+    }
 	}
 }
 
@@ -182,7 +258,7 @@ country_event = { #Election results are in
 			complete_national_focus = BEL_goal_elections
 		}
 		add_ideas = BEL_Dr_August_Borms_hog_ade
-		add_ideas = BEL_Charles_d'Aspremont_Lynden_for_ade
+		add_ideas = BEL_Charles_d_Aspremont_Lynden_for_ade
 		add_ideas = BEL_Joris_Van_Severen_eco_pau
 		add_ideas = BEL_Georges_Thone_sec_ade
 		remove_ideas = BEL_national_unity_government
@@ -292,20 +368,57 @@ country_event = { #Communist uprising
 			ruling_party = social_conservative
 			elections_allowed = no
 		}
-		create_country_leader = {
-				name = "Paul van Zeeland"
-				desc = "POLITICS_PAUL_VAN_ZEELAND_DESC"
-				picture = "Portrait_Belgium_Paul_van_Zeeland.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-		}
-		create_country_leader = {
-				name = "Prince Karel"
-				desc = "POLITICS_PRINCE_KAREL_DESC"
-				picture = "Portrait_Belgium_Karel.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-		}
+    retire_character = BEL_King_Leopold_III
+    hidden_effect = {
+      add_country_leader_role = {
+        characer = BEL_Paul_Henri_Spaak
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        characer = BEL_Leonie_La_Fontaine
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        characer = BEL_Paul_Emile_Janson
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Paul_van_Zeeland
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Prince_Karel
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = BEL_Joris_Van_Severen
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+    }
 	}
 }
 
@@ -407,13 +520,6 @@ country_event = { #BWP-KP Coalition
 			add_ideas = BEL_Hubert_Pierlot_for_sco
 			add_ideas = BEL_Albert_Wauters_eco_sde
 			add_ideas = BEL_Adolphe_Van_Glabbeke_sec_sli
-			create_country_leader = {
-				name = "King Leopold III"
-				desc = "POLITICS_LEOPOLD_III_DESC"
-				picture = "Portrait_Belgium_Leopold_III.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-			}
 		}
 	}
 
@@ -522,13 +628,6 @@ country_event = { #KP-LP-PP Coalition
 			add_ideas = BEL_Eugene_Soudan_for_sli
 			add_ideas = BEL_Alexandre_Galopin_eco_mli
 			add_ideas = BEL_August_De_Schryver_sec_sco
-			create_country_leader = {
-				name = "King Leopold III"
-				desc = "POLITICS_LEOPOLD_III_DESC"
-				picture = "Portrait_Belgium_Leopold_III.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-			}
 		}
 	}
 
@@ -579,13 +678,6 @@ country_event = { #KP-LP-PP Coalition
 			add_ideas = BEL_Roger_Motz_for_mli
 			add_ideas = BEL_Jules_Merlot_eco_sli
 			add_ideas = BEL_August_De_Schryver_sec_sco
-			create_country_leader = {
-				name = "Leopold III"
-				desc = "POLITICS_LEOPOLD_III_DESC"
-				picture = "Portrait_Belgium_Leopold_III.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-			}
 		}
 	}
 }
