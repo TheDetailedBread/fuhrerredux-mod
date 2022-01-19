@@ -83,18 +83,6 @@ characters = {
 			traits = { }
 		}
 	}
-	FRA_Pierre_Etienne_Flandin = {
-		name = "Pierre-Étienne Flandin"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/FRA/Portrait_FRA_Pierre_Etienne_Flandin.tga"
-			}
-		}
-		country_leader = {
-			ideology = market_liberal_subtype
-			traits = { }
-		}
-	}
 	FRA_Louis_Marin = {
 		name = "Louis Marin"
 		portraits = {
@@ -130,6 +118,17 @@ characters = {
 		country_leader = {
 			ideology = authoritarian_democrat_subtype
 			traits = { }
+		}
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = FRA_Francois_de_la_Rocque_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
 		}
 		advisor = {
 			cost = 150
@@ -694,25 +693,6 @@ characters = {
 			}
 		}
 	}
-	FRA_Francois_de_la_Rocque = {
-		name = "François de la Rocque"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/FRA/FRA_Francois_de_la_Rocque.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = { can_replace_minister = no }
-			idea_token = FRA_Francois_de_la_Rocque_hog_ade
-			traits = {
-				head_of_government
-				authoritarian_democrat
-				hog_silent_workhorse
-			}
-		}
-	}
 	FRA_Jean_Mermoz = {
 		name = "Jean Mermoz"
 		portraits = {
@@ -1142,8 +1122,13 @@ characters = {
 		name = "Pierre Etienne Flandin"
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/FRA/Portrait_FRA_Pierre_Etienne_Flandin.tga"
 				small = "gfx/interface/ministers/FRA/FRA_Pierre_Etienne_Flandin.tga"
 			}
+		}
+    country_leader = {
+			ideology = market_liberal_subtype
+			traits = { }
 		}
 		advisor = {
 			cost = 150
