@@ -746,71 +746,106 @@ country_event = {
 		name = "More than a King, a father of a great family."
 		hidden_effect = {
 			set_country_flag = kgv_dead
-			retire_country_leader = yes
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = valkist_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = national_populist_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = social_conservative_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = social_democrat_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = social_liberal_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = market_liberal_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = authoritarian_democrat_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-				traits = { meddler charismatic } 
-			}
+			retire_character = ENG_George_V
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = vanguardist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = collectivist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = libertarian_socialist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = social_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = social_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = market_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = social_conservative_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = authoritarian_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = paternal_autocrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = national_populist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = valkist_subtype
+          traits = { meddler charismatic }
+        }
+      }
 		}
 		hidden_effect = {
 			IF = {
@@ -909,71 +944,95 @@ country_event = {
 		add_political_power = -100
 		add_stability = -0.1
 		hidden_effect = {
-			retire_country_leader = yes
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = valkist_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = national_populist_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1"  
-				ideology = social_conservative_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = social_democrat_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1"  
-				ideology = social_liberal_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = market_liberal_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = authoritarian_democrat_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-				traits = {  } 
-			}
+			retire_character = ENG_King_Edward_VIII
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = valkist_subtype
+          traits = { meddler charismatic }
+        }
+      }
 		}
 		hidden_effect = {
 			FRA = { news_event = { id = uknews.14 } }
@@ -5422,15 +5481,30 @@ country_event = {
 				}
 				add_popularity = { ideology = libertarian_socialist popularity = 0.10 }
 			}
-			retire_country_leader = yes
-			create_country_leader = { 
-				name = "Oswald Mosley" 
-				desc = "POLITICS_MOSLEY_DESC" 
-				picture = "Portrait_Britain_Oswald_Mosley.tga" 
-				expire = "1965.1.1" 
-				ideology = libertarian_socialist_subtype
-				traits = {  } 
-			}
+			add_country_leader_role = {
+        character = ENG_Jock_Haston
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_Arthur_MacManus
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_Oswald_Mosley
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
