@@ -120,7 +120,7 @@ country_event = { # Michael's Coronation
         character = ROM_Michael_I
         promote_leader = yes
         country_leader = {
-          ideology = vanguardist
+          ideology = vanguardist_subtype
           traits = {}
         }
       }
@@ -865,7 +865,7 @@ country_event = { # 1937 General Elections
 			mark_focus_tree_layout_dirty = yes
 			swap_ideas = {
 				remove_idea = constitutional_monarchy
-				add_ideas = one_party_dictatorship
+				add_idea = one_party_dictatorship
 			}
 			random_other_country = {
 				news_event = { id = fxnews.26 hours = 8 }
@@ -1023,7 +1023,7 @@ country_event = { # Coronation of Nicholas I
         character = ROM_Nicholas_I
         promote_leader = yes
         country_leader = {
-          ideology = vanguardist
+          ideology = vanguardist_subtype
           traits = {}
         }
       }
@@ -1198,7 +1198,7 @@ country_event = { # The King's and Romania's Safety
 			mark_focus_tree_layout_dirty = yes
 			swap_ideas = {
 				remove_idea = constitutional_monarchy
-				add_ideas = absolute_monarchy
+				add_idea = absolute_monarchy
 			}
 		}
 	}
@@ -1513,7 +1513,7 @@ country_event = { # Coronation of Alexander I
       character = ROM_Alexander_I
       promote_leader = yes
       country_leader = {
-        ideology = vanguardist
+        ideology = vanguardist_subtype
         traits = {}
       }
     }
