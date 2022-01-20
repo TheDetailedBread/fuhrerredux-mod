@@ -49,16 +49,15 @@ country_event = { #Assassination Dressler
 		name = valkyrie.2.a
 		remove_ideas = GER_divided_govt
 		add_ideas = ger_political_collapse
-		
-		kill_country_leader = yes
-		
-		create_country_leader = {
-			name = "Grand Council of Valkists"
-			desc = "POLITICS_SENATE_DESC"
-			picture = "Portrait_Germany_Valkist_Council.tga"
-			ideology = valkist_subtype
-			expire = "1965.1.1"
-		}
+		retire_character = GER_Adam_Dressler
+    add_country_leader_role = {
+      character = GER_Valkist_Council
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		
 		set_country_flag = GER_DRSLR_DEATH
 	}
@@ -125,13 +124,14 @@ country_event = { #Chaos in the Country
 			set_cosmetic_tag = GER_kaiserreich
 		}
 
-		create_country_leader = {
-			name = "Hans von Seeckt"
-			picture = "Portrait_GER_Hans_Von_Seeckt.tga"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {}
-		}
+		add_country_leader_role = {
+      character = GER_Hans_von_Seeckt
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
 		remove_every_minister = yes
 		add_ideas = {
 			GER_Hans_Juergen_Graf_von_Blumenthal_hog_ade
@@ -186,14 +186,6 @@ country_event = { #Chaos in the Country
 			}
 		}
 	}
-
-		create_country_leader = {
-			name = "Hermann Göring"
-			picture = "Portrait_Germany_Hermann_Goring_fx.tga"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {}
-		}
 
 		remove_every_minister = yes
 		add_ideas = {
@@ -261,13 +253,14 @@ country_event = { #Popular issurection
 		}
 	}
 
-		create_country_leader = {
-			name = "Allgemeine Deutsche Gewerkschaftsbund"
-			picture = "Portrait_GER_Social_council.tga"
-			expire = "1965.1.1"
-			ideology = libertarian_socialist_subtype
-			traits = {}
-		}
+		add_country_leader_role = {
+      character = GER_Willy_Brandt
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = {}
+      }
+    }
 
 		remove_every_minister = yes
 		add_ideas = {
@@ -489,7 +482,7 @@ country_event = { #Accession to the throne authdem/conservativism
 	is_triggered_only = yes
 	option = {
 	
-	retire_country_leader = yes
+	retire_character = GER_Hans_von_Seeckt
 			
 	    name = valkyrie.13.a
 		add_popularity = {
@@ -500,62 +493,54 @@ country_event = { #Accession to the throne authdem/conservativism
 			ideology = paternal_autocrat
 			popularity = 0.05
 		}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = radical_socialist_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {}
-			}
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
        set_cosmetic_tag = GER_monarchist
 	}
 	option = {
@@ -579,62 +564,54 @@ country_event = { #Accession to the throne authdem/conservativism
 			ideology = social_democrat
 			popularity = 0.1
 		}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = radical_socialist_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Wilhelm III"
-				desc = "Portrait_Germany_Wilhelm_III_DESC"
-				picture = "Portrait_Germany_William_III.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {}
-			}
+add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GER_Wilhelm_III
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		set_cosmetic_tag = GER_monarchist
 		set_global_flag = GER_DEM
 	}
@@ -2775,14 +2752,6 @@ country_event = { #German Socialist invasion of Danish peninsula if Hamburg revo
 		set_cosmetic_tag = SHO_puppet_communist
 		
 		kill_country_leader = yes
-		
-		create_country_leader = {
-			name = "Socialist Council of Holstein"
-			desc = "POLITICS_PIO_FILIPPANI_DESC"
-			picture = "Portrait_GER_Social_council_Holstein.tga"
-			expire = "1965.1.1"
-			ideology = libertarian_socialist_subtype
-		}
 	}
 	
 	GER = {
@@ -2994,15 +2963,6 @@ country_event = { #General strike event
 		RHI = {
 		    load_focus_tree = generic_focus
         }
-			
-			create_country_leader = {
-				 name = "Worker's Council of the Rheinland"
-				 desc = ""
-				 picture = "gfx/leaders/VLK/Portrait_GER_Social_council_Volkommisariat_Rheinland.tga"
-				 expire = "1965.1.1"
-				 ideology = libertarian_socialist_subtype
-				 traits = { }
-			}
 			 
 		remove_ideas = RHI_S_rhineland_coal
 		remove_ideas = RHI_S_political_powderkeg
@@ -3185,15 +3145,6 @@ country_event = { #Germany funded rebels in the Rhineland
 		RHI = {
 		    load_focus_tree = generic_focus
         }
-			
-			create_country_leader = {
-				 name = "Worker's Council of the Rheinland"
-				 desc = ""
-				 picture = "gfx/leaders/VLK/Portrait_GER_Social_council_Volkommisariat_Rheinland.tga"
-				 expire = "1965.1.1"
-				 ideology = libertarian_socialist_subtype
-				 traits = { }
-			}
 			 
 		remove_ideas = RHI_S_rhineland_coal
 		remove_ideas = RHI_S_political_powderkeg
@@ -4074,27 +4025,14 @@ country_event = {
 			puppet = AUS
 		}
 		load_focus_tree = generic_focus
-		create_country_leader = {
-		name = "Ernst Kaltenbrunner"
-		desc = ""
-		picture = "AUS_Portrait_Ernst_Kaltenbrunner.tga"
-		ideology = national_populist_subtype
-		traits = { }
-		}
-		create_country_leader = {
-		name = "Ernst Kaltenbrunner"
-		desc = ""
-		picture = "AUS_Portrait_Ernst_Kaltenbrunner.tga"
-		ideology = authoritarian_democrat_subtype
-		traits = { }
-		}
-		create_country_leader = {
-		name = "Ernst Kaltenbrunner"
-		desc = ""
-		picture = "AUS_Portrait_Ernst_Kaltenbrunner.tga"
-		ideology = paternal_autocrat_subtype
-		traits = { }
-		}
+    add_country_leader_role = {
+      character = AUS_Ernst_Kaltenbrunner
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
 		custom_effect_tooltip = FRA_council_sub5
 		FRA = {
 			subtract_from_variable = { # Members lose confidence
@@ -5240,17 +5178,6 @@ country_event = {
 			
 			POL = {
                 kill_country_leader = yes
-			}
-			
-			POL = {
-				create_country_leader = {
-				name = "Polish Socialist Council"
-				desc = "POLITICS_FRITS_CLAUSEN_DESC"
-				picture = "Portrait_GER_Social_council_Poland.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = { }
-			}
 	    }
 	}
 	option = {
@@ -5490,21 +5417,6 @@ country_event = {
 			
 			hidden_effect  = {
 			
-			DEN = {
-			    kill_country_leader = yes 
-			} 
-			
-			DEN = {
-				create_country_leader = {
-				name = "Frits Clausen"
-				desc = "POLITICS_FRITS_CLAUSEN_DESC"
-				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = { }
-				}
-			}
-			
 		   138 = { add_claim_by = DEN }
 	       139 = { add_claim_by = DEN }
 	       140 = { add_claim_by = DEN }
@@ -5631,21 +5543,6 @@ country_event = {
 			GER = {
 				puppet = DEN
 			}
-
-			DEN = {
-				kill_country_leader = yes
-			}
-			
-			DEN = {
-				create_country_leader = {
-				name = "Scandinavian Socialist Council"
-				desc = "POLITICS_FRITS_CLAUSEN_DESC"
-				picture = "Portrait_GER_Social_council_Scandinavia.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = { }
-				}
-			}	
 				
 	       138 = { add_claim_by = DEN }
 	       139 = { add_claim_by = DEN }
@@ -5751,19 +5648,6 @@ country_event = {
 					limited_conscription
 				}
         }
-			ITA = {
-				kill_country_leader = yes
-			}
-
-            ITA = {
-				create_country_leader = {
-					name = "Socialist Council of Italy"
-					desc = "POLITICS_PIO_FILIPPANI_DESC"
-					picture = "Portrait_GER_Social_council_Italy.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-				}
-            }
 			
 			ITA = {
 				load_focus_tree = generic_focus
@@ -5941,60 +5825,44 @@ country_event = { # Germany - The fate for occupied Britian
 
 option = { # Puppet Britain
     name = valkyrie.10012.a
-	
-	
-	
-	
-	
-	
-		EGL = {
-				create_country_leader = {
-				name = "British Socialist Council"
-				desc = "POLITICS_FRITS_CLAUSEN_DESC"
-				picture = "Portrait_GER_Social_council_Britain.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = { }
-		    }
-		}
 		
 		GER = {
-            puppet = EGL
+      puppet = EGL
+    }
+	  EGL = {
+      transfer_state = 125
+      transfer_state = 126
+      transfer_state = 127
+      transfer_state = 123
+      transfer_state = 338
+      transfer_state = 129
+      transfer_state = 128
+      transfer_state = 122
+      transfer_state = 132
+      transfer_state = 130
+      transfer_state = 131
+      transfer_state = 121
+      transfer_state = 133
+      transfer_state = 136
+      transfer_state = 120
+		if = {
+      limit = {
+        IRE = {
+          OR = {
+            NOT = {
+              owns_state = 816
+            }
+            is_puppet_of = ENG
+          }
         }
-	EGL = {
-            transfer_state = 125
-            transfer_state = 126
-            transfer_state = 127
-            transfer_state = 123
-            transfer_state = 338
-            transfer_state = 129
-            transfer_state = 128
-            transfer_state = 122
-            transfer_state = 132
-            transfer_state = 130
-            transfer_state = 131
-            transfer_state = 121
-            transfer_state = 133
-            transfer_state = 136
-            transfer_state = 120
-			if = {
-				limit = {
-					IRE = {
-						OR = {
-							NOT = {
-								owns_state = 816
-							}
-							is_puppet_of = ENG
-						}
-					}
-				}
+      }
 			transfer_state = 113
 			transfer_state = 119
 			transfer_state = 134
 			transfer_state = 135
 			transfer_state = 815
 			transfer_state = 816
-			}
+		}
 
 		set_cosmetic_tag = EGL_puppet
 
