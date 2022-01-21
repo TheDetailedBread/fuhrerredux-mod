@@ -63,26 +63,65 @@ country_event = {
 			}
 			add_ideas = TUR_political_turmoil
 		}
-
-		create_country_leader = {
-			name = "The General Assembly"
-			desc = "POLITICS_GENERAL_ASSEMBLY_DESC"
-			picture = "Portrait_TUR_General_Assembly.tga"
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-			traits = {}
-		}
+    retire_character = TUR_Abdulmecid_II
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_The_General_Assembly
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
 
 		hidden_effect = {
-			create_country_leader = {
-				name = "The General Assembly"
-				desc = "POLITICS_GENERAL_ASSEMBLY_DESC"
-				picture = "Portrait_TUR_General_Assembly.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {}
-			}
-			
 			random_country = {
 				limit = { 
 					NOT = {
@@ -237,15 +276,7 @@ country_event = {
 			TUR = {
 				country_event = { id = tur.6 days = 5 }
 			}
-
-			create_country_leader = {
-				name = "Ahmed IV"
-				desc = "POLITICS_AHMED_NIHAD_DESC"
-				picture = "Portrait_TUR_Ahmed_Nihad.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
+      retire_character = TUR_The_General_Assembly
 		}
 	}
 
@@ -315,15 +346,7 @@ country_event = {
 			TUR = {
 				country_event = { id = tur.6 days = 5 }
 			}
-
-			create_country_leader = {
-				name = "Ahmed IV"
-				desc = "POLITICS_AHMED_NIHAD_DESC"
-				picture = "Portrait_TUR_Ahmed_Nihad.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
+      retire_character = TUR_The_General_Assembly
 		}
 	}
 }
@@ -362,23 +385,63 @@ country_event = {
 				TUR_Berc_Keresteciyan_Bey_eco_sli
 				TUR_Agaoglu_Ahmed_Pasa_sec_sli
 			}
-
-			create_country_leader = {
-				name = "Ahmed IV"
-				desc = "POLITICS_AHMED_NIHAD_DESC"
-				picture = "Portrait_TUR_Ahmed_Nihad.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Ahmed IV"
-				desc = "POLITICS_AHMED_NIHAD_DESC"
-				picture = "Portrait_TUR_Ahmed_Nihad.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = { }
-			}
+      retire_character = TUR_The_General_Assembly
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ahmed_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 
 			add_ideas = TUR_a_moderate_empire_idea
 
@@ -415,25 +478,63 @@ country_event = {
 				}
 				remove_unit_leader = 680
 			}
-
-			create_country_leader = {
-				name = "Osman IV"
-				desc = "POLITICS_OSMAN_FUAD_DESC"
-				picture = "Portrait_TUR_Osman_Fuad.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = { }
-			}
-			create_country_leader = {
-				name = "Prens Mehmed Sabâhaddin Efendi"
-				desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-				picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
+      retire_character = TUR_The_General_Assembly
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Osman_IV
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 
 			add_ideas = TUR_a_revanchist_empire_idea
 
@@ -489,29 +590,22 @@ country_event = {
 				long_name = "Millet Fırkası"
 				name = "MF"
 			}
-
-			create_country_leader = {
-				name = "Prens Mehmed Sabâhaddin Efendi"
-				desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-				picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Yusuf Hikmet Bey"
-				desc = "POLITICS_YUSUF_HIKMET_BAYUR_DESC"
-				picture = "Portrait_TUR_Yusuf_Hikmet_Bayur.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-
-				}
-			}
-
+      add_country_leader_role = {
+        character = TUR_Prens_Sabahaddin_Efendi
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Yusuf_Hikmet_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 			TUR = {
 				country_event = { id = tur.7 days = 2 }
 			}
@@ -560,28 +654,22 @@ country_event = {
 				long_name = "Millet Fırkası"
 				name = "MF"
 			}
-
-			create_country_leader = {
-				name = "Prens Mehmed Sabâhaddin Efendi"
-				desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-				picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Yusuf Hikmet Bey"
-				desc = "POLITICS_YUSUF_HIKMET_BAYUR_DESC"
-				picture = "Portrait_TUR_Yusuf_Hikmet_Bayur.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-
-				}
-			}
+      add_country_leader_role = {
+        character = TUR_Prens_Sabahaddin_Efendi
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Yusuf_Hikmet_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 
 			TUR = {
 				country_event = { id = tur.7 days = 2 }
@@ -631,29 +719,22 @@ country_event = {
 				long_name = "Millet Fırkası"
 				name = "MF"
 			}
-
-			create_country_leader = {
-				name = "Prens Mehmed Sabâhaddin Efendi"
-				desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-				picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Yusuf Hikmet Bey"
-				desc = "POLITICS_YUSUF_HIKMET_BAYUR_DESC"
-				picture = "Portrait_TUR_Yusuf_Hikmet_Bayur.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-
-				}
-			}
-
+      add_country_leader_role = {
+        character = TUR_Prens_Sabahaddin_Efendi
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Yusuf_Hikmet_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 			TUR = {
 				country_event = { id = tur.7 days = 2 }
 			}
@@ -1410,51 +1491,39 @@ country_event = {
 					long_name = "Hürriyet ve İtilaf Fırkası"
 					name = "Hürriyet ve İtilaf"
 				}
-
 				set_party_name = {
 					ideology = authoritarian_democrat
 					long_name = "Kemalist Fırkası"
 					name = "Kemalistler"
 				}
+        add_country_leader_role = {
+          character = TUR_Mustafa_İsmet_Paşa
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TUR_Yusuf_Hikmet_Bey
+          promote_leader = yes
+          country_leader = {
+            ideology = national_populist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TUR_Prens_Sabahaddin_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = national_populist_subtype
+            traits = {}
+          }
+        }
 
-				create_country_leader = {
-					name = "Mustafa İsmet Paşa"
-					desc = "POLITICS_ISMET_INONU_DESC"
-					picture = "Portrait_TRT_Ismet_Pasa.tga"
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {
-
-					}
-				}
-
-				create_country_leader = {
-					name = "Hüseyin Nihâl Bey"
-					desc = "POLITICS_NIHAL_ATSIZ_DESC"
-					picture = "Portrait_TRT_Nihal_Atsiz.tga"
-					expire = "1965.1.1"
-					ideology = national_populist_subtype
-					traits = {
-						
-					}
-				}
-
-				create_country_leader = {
-					name = "Prens Mehmed Sabâhaddin Efendi"
-					desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-					picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						
-					}
-				}
-
-				create_corps_commander = {
-					name = "Mehmet Kâzım Paşa"
-					picture = "Portrait_TUR_Kazim_Orbay.tga"
-					id = 8490
-					traits = { 
+        add_field_marshal_role = {
+          character = TUR_Mehmet_Kazım_Paşa
+          traits = { 
 						career_officer
 						skilled_staffer
 						expert_delegator
@@ -1465,12 +1534,9 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 3
 					logistics_skill = 3
-				}
-
-				create_corps_commander = {
-					name = "Cemil Cahit Paşa"
-					picture = "Portrait_TUR_Cemil_Cahit_Toydemir.tga"
-					id = 1284
+        }
+				add_corps_commander_role = {
+          character = TUR_Cemil_Cahid_Paşa
 					traits = { 
 						career_officer
 						infantry_leader
@@ -1481,12 +1547,9 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 2
 					logistics_skill = 3
-				}
-
-				create_corps_commander = {
-					name = "Mustafa Paşa"
-					picture = "Portrait_TUR_Mustafa_Muglali.tga"
-					id = 674
+        }
+        add_corps_commander_role = {
+          character = TUR_Mustafa_Paşa
 					traits = { 
 						career_officer
 						commando
@@ -1498,53 +1561,49 @@ country_event = {
 					defense_skill = 3
 					planning_skill = 2
 					logistics_skill = 3
-				}
+        }
 			}
 
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Hasan Bey"
-				desc = "POLITICS_OSMAN_BOLUKBASI_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-
-				}
-			}
-
-			create_country_leader = {
-				name = "Aslan Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Mehmed Cavid Bey"
-				desc = "POLITICS_MEHMET_CAVID_DESC"
-				picture = "Portrait_TUR_Mehmed_Cavid.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					
-				}
-			}
-
+      add_country_leader_role = {
+        character = TUR_Ali_Adnan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Ali_Adnan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Huseyin_Nihal_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Mehmed_Cavid_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Mustafa_Paşa
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			random_country = {
 				limit = { 
 					NOT = {
@@ -1581,165 +1640,121 @@ country_event = {
 
 		add_political_power = -150
 
-		create_country_leader = {
-			name = "İsmet Reşitoğlu"
-			desc = "POLITICS_ISMET_INONU_DESC"
-			picture = "Portrait_TUR_Ismet_Pasa.tga"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Nihal Atsız"
-			desc = "POLITICS_NIHAL_ATSIZ_DESC"
-			picture = "Portrait_TUR_Nihal_Atsiz.tga"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Mehmet Cavid Yalçın"
-			desc = "POLITICS_MEHMET_CAVID_DESC"
-			picture = "Portrait_TUR_Mehmed_Cavid.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Mehmet Sabâhattin"
-			desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-			picture = ""
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Şefik Hüsnü"
-			desc = "POLITICS_ŞEFİK_HÜSNÜ_DESC"
-			picture = "Portrait_TUR_Sefik_Husnu.tga"
-			expire = "1965.1.1"
-			ideology = vanguardist_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Reşat Fuat Baraner"
-			desc = "POLITICS_REŞAD_FUAD_DESC"
-			picture = "Portrait_TUR_Resat_Fuat.tga"
-			expire = "1965.1.1"
-			ideology = libertarian_socialist_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Yusuf Hikmet Bayur"
-			desc = "POLITICS_YUSUF_HIKMET_BAYUR_DESC"
-			picture = "Portrait_TUR_Yusuf_Hikmet_Bayur.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-
-			}
-		}
-
-		create_country_leader = {
-			name = "Adnan Menderes"
-			desc = "POLITICS_ADNAN_MENDERES_DESC"
-			picture = "Portrait_TUR_Adnan_Menderes.tga"
-			expire = "1965.1.1"
-			ideology = market_liberal_subtype
-			traits = {
-
-			}
-		}
-
-		create_country_leader = {
-			name = "Hasan Ali Yücel"
-			desc = "POLITICS_ADNAN_MENDERES_DESC"
-			picture = "Portrait_TUR_Hasan_Ali_Yucel.tga"
-			expire = "1965.1.1"
-			ideology = social_democrat_subtype
-			traits = {
-
-			}
-		}
+		add_country_leader_role = {
+      character = TUR_Mustafa_İsmet_Paşa
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Mehmet_Cavid_Yalcın
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Ali_Adnan_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Şefik_Husnu_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = vanguardist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Reşad_Fuad_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Yusuf_Hikmet_Bayur
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Adnan_Menderes
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TUR_Hasan_Ali_Yucel
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
 
 		set_party_name = {
 			ideology = valkist
 			long_name = "Valkist Partisi"
 			name = "VP"
 		}
-
 		set_party_name = {
 			ideology = national_populist
 			long_name = "Turancı Partisi"
 			name = "Turancılar"
 		}
-
 		set_party_name = {
 			ideology = paternal_autocrat
 			long_name = "Millet Partisi"
 			name = "MP"
 		}
-
 		set_party_name = {
 			ideology = authoritarian_democrat
 			long_name = "Cumhuriyet Halk Partisi"
 			name = "CHP"
 		}
-
 		set_party_name = {
 			ideology = social_conservative
 			long_name = "Teceddüt Partisi"
 			name = "Teceddüt"
 		}
-
 		set_party_name = {
 			ideology = market_liberal
 			long_name = "Ahrar Partisi"
 			name = "AP"
 		}
-
 		set_party_name = {
 			ideology = social_liberal
 			long_name = "Hürriyet ve İtilaf Partisi"
 			name = "Hürriyet ve İtilaf"
 		}
-
 		set_party_name = {
 			ideology = social_democrat
 			long_name = "Sosyal Demokrat Partisi"
 			name = "Sosyal Demokratlar"
 		}
-
 		set_party_name = {
 			ideology = libertarian_socialist
 			long_name = "Komünist Partisi"
 			name = "Komünistler"
 		}
-
 		set_party_name = {
 			ideology = collectivist
 			long_name = "Ahali Partisi"
 			name = "AP"
 		}
-
 		set_party_name = {
 			ideology = vanguardist
 			long_name = "Türkiye İşçi ve Çiftçi Sosyalist Partisi"
@@ -2561,16 +2576,14 @@ country_event = {
 			}
 		}
 
-		create_country_leader = {
-			name = "Kadir Bey"
-			desc = "POLITICS_RIZA_NUR_DESC"
-			picture = ""
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-			traits = {
-				
-			}
-		}
+    add_country_leader_role = {
+      character = TUR_Kadir_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
 
 		TRT = {
 			transfer_state = 49
@@ -2632,35 +2645,28 @@ country_event = {
 				transfer_technology = yes
 
 				load_focus_tree = turkish_revolt_ottoman_focus
-
-				create_country_leader = {
-					name = "Osman Fuad Efendi"
-					desc = "POLITICS_OSMAN_FUAD_DESC"
-					picture = "Portrait_TRT_Osman_Fuad.tga"
-					expire = "1965.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = {
-
-					}
-				}
-
-				create_country_leader = {
-					name = "Prens Mehmed Sabâhaddin Efendi"
-					desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-					picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						
-					}
-				}
+        add_country_leader_role = {
+          character = TUR_Osman_Fuad_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TUR_Prens_Sabahaddin_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 
 				set_party_name = {
 					ideology = paternal_autocrat
 					long_name = "Selamet-i Osmaniye Fırkası"
 					name = "Selamet-i Osmaniye"
 				}
-
 				set_party_name = {
 					ideology = social_liberal
 					long_name = "Hürriyet ve İtilaf Fırkası"
@@ -2673,9 +2679,7 @@ country_event = {
 				}
 
 				set_country_flag = TRT_empire_retention
-
 				set_country_flag = TRT_revanchist_path_unlocked
-
 				set_country_flag = TRT_economic_downturn
 
 				set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
@@ -2694,9 +2698,10 @@ country_event = {
 					TUR_Mehmed_Sefik_Pasa_eco_pau
 				}
 
-				create_field_marshal = {
-					name = "Osman Fuad Efendi"
-					picture = "Portrait_TRT_Osman_Fuad.tga"
+
+
+				add_field_marshal_role = {
+          character = TUR_Osman_Fuad_Efendi
 					traits = {
 						offensive_doctrine
 						inspirational_leader
@@ -2707,10 +2712,8 @@ country_event = {
 					planning_skill = 3
 					logistics_skill = 4
 				}
-
-				create_corps_commander = {
-					name = "İsmail Hakkı Paşa"
-					picture = "Portrait_TUR_Ismail_Hakki_Berkok.tga"
+				add_corps_commander_role = {
+          character = TUR_İsmail_Hakkı_Paşa
 					traits = {
 						career_officer
 						commando
@@ -2721,10 +2724,8 @@ country_event = {
 					planning_skill = 4
 					logistics_skill = 2
 				}
-
-				create_corps_commander = {
-					name = "Ömer Fahreddin Paşa"
-					picture = "Portrait_TUR_Omer_Fahrettin_Turkkan.tga"
+				add_corps_commander_role = {
+          character = TUR_Omer_Fahreddin_Paşa
 					traits = {
 						old_guard
 						war_hero
@@ -2737,10 +2738,8 @@ country_event = {
 					planning_skill = 3
 					logistics_skill = 4
 				}
-
-				create_corps_commander = {
-					name = "Ömer Faruk Efendi"
-					picture = "Portrait_TRT_Omer_Faruk.tga"
+				add_corps_commander_role = {
+					character = TUR_Omer_Faruk_Efendi
 					traits = {
 					}
 					skill = 2
@@ -2749,10 +2748,8 @@ country_event = {
 					planning_skill = 1
 					logistics_skill = 1
 				}
-
-				create_navy_leader = {
-					name = "Necdet Paşa"
-					picture = "Portrait_TUR_Necdet_Uran.tga"
+				add_navy_leader_role = {
+					character = TUR_Necdet_Paşa
 					traits = {
 						superior_tactician
 					}
@@ -2765,15 +2762,13 @@ country_event = {
 					name = "Fazilet Fırkası"
 				}
 
-				create_country_leader = {
-					name = "Aslan Bey"
-					desc = "POLITICS_RIZA_NUR_DESC"
-					picture = ""
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {
-						
-					}
+				add_country_leader_role = {
+          character = TUR_Aslan_Bey
+          promote_leader = yes
+          character = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
 				}
 			}
 
@@ -3606,13 +3601,11 @@ country_event = {
 			long_name = "Hürriyet Fırkası"
 			name = "Hürriyet Fırkası"
 		}
-
 		set_party_name = {
 			ideology = social_conservative
 			long_name = "Osmanlı Demokrat Fırkası"
 			name = "Demokrat Fırkası"
 		}
-
 		set_party_name = {
 			ideology = authoritarian_democrat
 			long_name = "Teceddüd Fırkası"
@@ -3715,35 +3708,33 @@ country_event = {
 					name = "CKMF"
 				}
 
-				create_country_leader = {
-					name = "Mustafa İsmet Paşa"
-					desc = "POLITICS_ISMET_INONU_DESC"
-					picture = "Portrait_TRT_Ismet_Pasa.tga"
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = { }
-				}
-				create_country_leader = {
-					name = "Prens Mehmed Sabâhaddin Efendi"
-					desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-					picture = "Portrait_TUR_Mehmet_Sabahaddin.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = { }
-				}
-				create_country_leader = {
-					name = "Osman Bey"
-					desc = "POLITICS_OSMAN_BOLUKBASI_DESC"
-					picture = ""
-					expire = "1965.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = { }
-				}
+        add_country_leader_role = {
+          character = TUR_Mustafa_İsmet_Paşa
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TUR_Prens_Sabahaddin_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TUR_Osman_Bey
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
 				
-				create_field_marshal = {
-					name = "Mustafa Fevzi Paşa"
-					picture = "Portrait_TUR_Fevzi_Cakmak.tga"
-					id = 5893
+				add_field_marshal_role = {
+          character = TUR_Mustafa_Fevzi_Paşa
 					traits = {
 						career_officer
 						skilled_staffer
@@ -3754,11 +3745,8 @@ country_event = {
 					planning_skill = 2
 					logistics_skill = 3
 				}
-
-				create_corps_commander = {
-					name = "Cemil Cahid Paşa"
-					picture = "Portrait_TUR_Cemil_Cahit_Toydemir.tga"
-					id = 1284
+				add_corps_commander_role = {
+          character = TUR_Cemil_Cahid_Paşa
 					traits = { 
 						career_officer
 						infantry_leader
@@ -3770,12 +3758,9 @@ country_event = {
 					planning_skill = 2
 					logistics_skill = 3
 				}
-
 				## Navy Leaders
-				create_navy_leader = {
-					name = "Hüseyin Rauf Paşa"
-					picture = "Portrait_TUR_Rauf_Orbay.tga"
-					id = 9841
+				add_navy_leader_role = {
+          character = TUR_Huseyin_Rauf_Paşa
 					traits = {
 						old_guard_navy
 					}
@@ -3783,28 +3768,22 @@ country_event = {
 				}
 			}
 
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
+			add_country_leader_role = {
+        character = TUR_Kadir_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
 			}
-
-			create_country_leader = {
-				name = "Aslan Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					
-				}
-			}
-
+      add_country_leader_role = {
+        character = TUR_Aslan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			random_country = {
 				limit = { 
 					NOT = {
@@ -4199,68 +4178,46 @@ country_event = {
 				long_name = "Hürriyet Fırkası"
 				name = "Hürriyet Fırkası"
 			}
-
 			set_party_name = {
 				ideology = social_conservative
 				long_name = "Osmanlı Demokrat Fırkası"
 				name = "Demokrat Fırkası"
 			}
-
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Teceddüd Fırkası"
 				name = "Teceddüd"
 			}
-
 			set_party_name = {
 				ideology = national_populist
 				long_name = "İttihad-ı Muhammedi Fırkası"
 				name = "İttihad-ı Muhammedi"
 			}
 
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Hasan Bey"
-				desc = "POLITICS_OSMAN_BOLUKBASI_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-
-				}
-			}
-
-			create_country_leader = {
-				name = "Aslan Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Mehmed Cavid Bey"
-				desc = "POLITICS_MEHMET_CAVID_DESC"
-				picture = "Portrait_TUR_Mehmed_Cavid.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					
-				}
-			}
+			add_country_leader_role = {
+        character = TUR_Kadir_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Hasan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Aslan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
 		}
 
 		if = {
@@ -4302,16 +4259,14 @@ country_event = {
 				}
 			}
 
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
+			add_country_leader_role = {
+        character = TUR_Kadir_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 
 		if = {
@@ -4346,38 +4301,30 @@ country_event = {
 				name = "Teceddüd"
 			}
 
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Aslan Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Mehmed Cavid Bey"
-				desc = "POLITICS_MEHMET_CAVID_DESC"
-				picture = "Portrait_TUR_Mehmed_Cavid.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					
-				}
-			}
+			add_country_leader_role = {
+        character = TUR_Kadir_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Aslan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TUR_Mehmed_Cavid_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
