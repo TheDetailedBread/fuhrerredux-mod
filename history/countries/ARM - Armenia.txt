@@ -1,4 +1,4 @@
-﻿capital = 230 #Yerevan, Armenia
+capital = 230 #Yerevan, Armenia
 
 oob = "ARM"
 
@@ -100,29 +100,6 @@ create_country_leader = {
 		
 	}
 }
-
-create_country_leader = {
-	name = "Hovhannes Kajaznuni"
-	desc = ""
-	picture = "Portrait_ARM_Hovhannes_Kajaznuni.tga"
-	expire = "1953.3.1"
-	ideology = social_conservative_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Grigor Harutyunyan"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1953.3.1"
-	ideology = collectivist_subtype
-	traits = {
-		
-	}
-}
-
 if = {
 	limit = { has_dlc = "Man the Guns" } 
 	### Ship Variants ###
@@ -143,3 +120,7 @@ if = {
 		}
 	}
 }
+
+recruit_character = ARM_Drastamat_Kanayan
+recruit_character = ARM_Hovhannes_Kajaznuni
+recruit_character = ARM_Grigor_Harutyunyan
