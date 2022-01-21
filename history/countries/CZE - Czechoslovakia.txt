@@ -1,4 +1,4 @@
-﻿capital = 9
+capital = 9
 
 oob = "CZE"
 
@@ -38,7 +38,6 @@ set_politics = {
 	last_election = "1934.6.12"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {
@@ -55,197 +54,76 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "Josef Šnejdárek"
-	desc = "POLITICS_JOSEF_SNEJDAREK_DESC"
-	picture = "JosefSnejdarek.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Edvard Beneš"
-	desc = "POLITICS_EDVARD_BENES_DESC"
-	picture = "Portrait_CZE_Edvard_Benes.png"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Radola Gajda"
-	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_CEN_Radola_Gajda.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Rudolf Beran"
-	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_CZE_Rudolf_Beran.png"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Jan Rys-Rozsévač"
-	desc = "POLITICS_JAN_RYS_DESC"
-	picture = "JanRys.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Klement Gottwald"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Czech_Klement_Gottwald_fx.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Antonín Hampl"
-	desc = "POLITICS_Antonin_Hampl_DESC"
-	picture = "AntoninHampl.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Viktor Dyk"
-	desc = "POLITICS_Antonin_Hampl_DESC"
-	picture = "ViktorDyk.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Vojtěch Luža"
-	picture = "VojtechLuza.tga"
-	traits = { fast_planner offensive_doctrine }
-	skill = 3
-	attack_skill = 3
-    	defense_skill = 2
-   	planning_skill = 3
-  	logistics_skill = 2
-	id = 6806
-}
-
-create_field_marshal = {
-	name = "Josef Šnejdárek"
-	picture = "JosefSnejdarek.tga"
-	traits = { thorough_planner defensive_doctrine }
-	skill = 3
-	attack_skill = 2
-    	defense_skill = 4
-   	planning_skill = 2
-  	logistics_skill = 2
-	id = 6805
-}
-create_field_marshal = {
-	name = "Ludvík Svoboda"
-	picture = "Svoboda.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 4
-    	defense_skill = 3
-   	planning_skill = 1
-  	logistics_skill = 2
-	id = 6804
-}
-create_corps_commander = {
-	name = "Karel Klapálek"
-	picture = "KarelKlapalek.tga"
-	traits = { panzer_leader }
-	skill = 2
-	attack_skill = 2
-    	defense_skill = 1
-   	planning_skill = 1
-  	logistics_skill = 3
-	id = 6803
-}
-create_corps_commander = {
-	name = "Richard Tesařík"
-	picture = "Tesarik.tga"
-	traits = { panzer_leader }
-	skill = 2
-	attack_skill = 2
-    	defense_skill = 1
-   	planning_skill = 3
-  	logistics_skill = 1
-	id = 6802
-}
-
-create_corps_commander = {
-	name = "Sergej Vojcechovský"
-	picture = "Vojcechovsky.tga"
-	traits = { winter_specialist }
-	skill = 3
-	attack_skill = 3
-    	defense_skill = 2
-   	planning_skill = 2
-  	logistics_skill = 3
-	id = 6801
-}
-create_corps_commander = {
-	name = "Radola Gajda"
-	picture = "Portrait_CEN_Radola_Gajda.tga"
-	traits = { panzer_leader scavenger trait_reckless commando }
-	skill = 2
-	attack_skill = 2
-    	defense_skill = 1
-   	planning_skill = 3
-  	logistics_skill = 1
-	id = 6807
-}
-create_corps_commander = {
-	name = "Emanuel Moravec"
-	picture = "EmanuelMoravec.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-    	defense_skill = 2
-   	planning_skill = 1
-  	logistics_skill = 2
-	id = 6808
-}
-#if = {
-#	limit = {
-#		has_dlc = "Death or Dishonor"
-#	}
-#	add_ideas = {
-#		CZE_skoda_works
-#		CZE_divided_nation
-#}
-#	give_guarantee = YUG
-#	give_guarantee = ROM
-#}
-#
-#if = {
-#	limit = {
-#		NOT = { has_dlc = "Death or Dishonor" }
-#	}
-#	add_ideas = {
-#		CZE_fortification_focus
-#	}
-#
+recruit_character = CZE_Josef_Snejdarek
+recruit_character = CZE_Edvard_Benes
+recruit_character = CZE_Radola_Gajda
+recruit_character = CZE_Rudolf_Beran
+recruit_character = CZE_Jan_Rys_Rozsevač
+recruit_character = CZE_Klement_Gottwald
+recruit_character = CZE_Antonin_Hampl
+recruit_character = CZE_Viktor_Dyk
+recruit_character = CZE_Vojtěch_Luza
+recruit_character = CZE_Ludvik_Svoboda
+recruit_character = CZE_Karel_Klapalek
+recruit_character = CZE_Richard_Tesařik
+recruit_character = CZE_Sergej_Vojcechovsky
+recruit_character = CZE_Emanuel_Moravec
+recruit_character = CZE_Bohuslav_Vrbensky
+recruit_character = CZE_Vilem_Brodecky
+recruit_character = CZE_Jan_Garrigue_Masaryk
+recruit_character = CZE_Rudolf_Mlčoch
+recruit_character = CZE_Bedřich_Homola
+recruit_character = CZE_Jan_Sramek
+recruit_character = CZE_Jan_Černy
+recruit_character = CZE_Emil_Hacha
+recruit_character = CZE_Alois_Elias
+recruit_character = CZE_Frantisek_Mikulas_Mlčoch
+recruit_character = CZE_Rudolf_Slansky
+recruit_character = CZE_Artur_London
+recruit_character = CZE_Gertruda_Sekaninova_Čakrtova
+recruit_character = CZE_Arnost_Heidrich
+recruit_character = CZE_Frantisek_Josef_Kinsky
+recruit_character = CZE_Kamil_Krofta
+recruit_character = CZE_Petr_Zenkl
+recruit_character = CZE_Bedřich_Neumann
+recruit_character = CZE_Michael_Rustler_von_Neuenacker
+recruit_character = CZE_Josef_Svagrovsky
+recruit_character = CZE_Frantisek_Chvalkovsky
+recruit_character = CZE_Augustin_Kliment
+recruit_character = CZE_Zdeněk_Nejedly
+recruit_character = CZE_Frantiska_Plaminkova
+recruit_character = CZE_Ludwig_Czech
+recruit_character = CZE_Emil_Franke
+recruit_character = CZE_Josef_Kalfus
+recruit_character = CZE_Jiři_Hejda
+recruit_character = CZE_Vladislav_Brdlik
+recruit_character = CZE_Vladimir_Kajdos
+recruit_character = CZE_Jiři_Střibrny
+recruit_character = CZE_Bruno_Kohler
+recruit_character = CZE_Antonin_Srba
+recruit_character = CZE_Alfred_Meissner
+recruit_character = CZE_Rudolf_Bechyně
+recruit_character = CZE_Prokop_Drtina
+recruit_character = CZE_Jaroslav_Stransky
+recruit_character = CZE_Jan_Kapras
+recruit_character = CZE_Robert_Mayr_Harting
+recruit_character = CZE_Frantisek_Machnik
+recruit_character = CZE_Josef_Jezek
+recruit_character = CZE_Ladislav_Kobsinek
+recruit_character = CZE_Ludvik_Svoboda
+recruit_character = CZE_Bruno_Sklenovsky
+recruit_character = CZE_Jan_Sergej_Ingr
+recruit_character = CZE_Jaroslav_Čihak
+recruit_character = CZE_Frantisek_Bartos
+recruit_character = CZE_Bohumil_Bosek
+recruit_character = CZE_Frantisek_Zaviska
+recruit_character = CZE_Ludvik_Krejči
+recruit_character = CZE_Jaroslav_Eminger
+recruit_character = CZE_Jan_Syrovy
+recruit_character = CZE_Otto_Blaha
+recruit_character = CZE_Antonin_Hasal
+recruit_character = CZE_Robert_Rychtrmoc
+recruit_character = CZE_Jan_Prokop
+recruit_character = CZE_Josef_Frantisek
+recruit_character = CZE_Karel_Janousek
+recruit_character = CZE_Karel_Kuttelwascher

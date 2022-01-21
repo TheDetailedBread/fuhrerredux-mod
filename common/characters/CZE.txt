@@ -1,0 +1,1440 @@
+characters = {
+	CZE_Josef_Snejdarek = {
+		name = "Josef Šnejdárek"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Josef_Snejdarek.tga"
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+	}
+	CZE_Edvard_Benes = {
+		name = "Edvard Beneš"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Edvard_Benes_fx.tga"
+			}
+		}
+		country_leader = {
+			ideology = market_liberal_subtype
+			traits = { }
+		}
+	}
+	CZE_Radola_Gajda = {
+		name = "Radola Gajda"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Radola_Gajda.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Radola_Gajda.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				scavenger
+				trait_reckless
+				commando
+			}
+			skill = 4
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Radola_Gajda_cos_npo
+			traits = {
+				chief_of_staff
+				national_populist
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	CZE_Rudolf_Beran = {
+		name = "Rudolf Beran"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Rudolf_Beran.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	CZE_Jan_Rys_Rozsevač = {
+		name = "Jan Rys-Rozsévač"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Jan_Rys_Rozsevač.tga"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	CZE_Klement_Gottwald = {
+		name = "Klement Gottwald"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Klement_Gottwald_fx.tga"
+				small = "gfx/interface/ministers/CZE/CZE_Klement_Gottwald.tga"
+			}
+		}
+		country_leader = {
+			ideology = collectivist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Klement_Gottwald_hog_col
+			traits = {
+				head_of_government
+				collectivist
+				hog_red_chairmen
+			}
+		}
+	}
+	CZE_Antonin_Hampl = {
+		name = "Antonín Hampl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Antonin_Hampl.tga"
+				small = "gfx/interface/ministers/CZE/CZE_Antonin_Hampl.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Antonin_Hampl_hog_sde
+			traits = {
+				head_of_government
+				social_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	CZE_Viktor_Dyk = {
+		name = "Viktor Dyk"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Viktor_Dyk.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = { }
+		}
+	}
+	CZE_Vojtěch_Luza = {
+		name = "Vojtěch Luža"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Vojtěch_Luza.tga"
+			}
+		}
+		field_marshal = {
+			traits = {
+				fast_planner
+				offensive_doctrine
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	CZE_Ludvik_Svoboda = {
+		name = "Ludvík Svoboda"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Ludvik_Svoboda.tga"
+			}
+		}
+		field_marshal = {
+			traits = {
+				thorough_planner
+				defensive_doctrine
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	CZE_Karel_Klapalek = {
+		name = "Karel Klapálek"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Karel_Klapalek.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CZE_Richard_Tesařik = {
+		name = "Richard Tesařík"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Richard_Tesařik.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+			}
+			skill = 1
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	CZE_Sergej_Vojcechovsky = {
+		name = "Sergej Vojcechovský"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Sergej_Vojcechovsky.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				winter_specialist
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	CZE_Emanuel_Moravec = {
+		name = "Emanuel Moravec"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CZE/Portrait_CZE_Emanuel_Moravec.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	CZE_Bohuslav_Vrbensky = {
+		name = "Bohuslav Vrbenský"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Bohuslav_Vrbensky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bohuslav_Vrbensky_hog_col
+			traits = {
+				head_of_government
+				collectivist
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	CZE_Vilem_Brodecky = {
+		name = "Vilém Brodecký"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Vilem_Brodecky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Vilem_Brodecky_hog_lib
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_backroom_backstabber
+			}
+		}
+	}
+	CZE_Jan_Garrigue_Masaryk = {
+		name = "Jan Garrigue Masaryk"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Garrigue_Masaryk.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Garrigue_Masaryk_hog_sli
+			traits = {
+				head_of_government
+				social_liberal
+				hog_silent_workhorse
+			}
+		}
+	}
+	CZE_Rudolf_Mlčoch = {
+		name = "Rudolf Mlčoch"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Rudolf_Mlčoch.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Rudolf_Mlčoch_hog_mli
+			traits = {
+				head_of_government
+				market_liberal
+				hog_charismatic_charmer
+			}
+		}
+	}
+	CZE_Bedřich_Homola = {
+		name = "Bedřich Homola"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Bedřich_Homola.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Bedřich_Homola.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bedřich_Homola_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_corporate_suit
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bedřich_Homola_carm_sco
+			traits = {
+				chief_of_army
+				social_conservative
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	CZE_Jan_Sramek = {
+		name = "Jan Šrámek"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Sramek.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Sramek_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_silent_workhorse
+			}
+		}
+	}
+	CZE_Jan_Černy = {
+		name = "Jan Černý"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Černy.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Černy_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_smiling_oilman
+			}
+		}
+	}
+	CZE_Emil_Hacha = {
+		name = "Emil Hácha"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Emil_Hacha.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Emil_Hacha_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_accomplished_diplomat
+			}
+		}
+	}
+	CZE_Alois_Elias = {
+		name = "Alois Eliáš"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Alois_Elias.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Alois_Elias.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Alois_Elias_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_backroom_backstabber
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Alois_Elias_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	CZE_Frantisek_Mikulas_Mlčoch = {
+		name = "František Mikuláš Mlčoch"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantisek_Mikulas_Mlčoch.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantisek_Mikulas_Mlčoch_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	CZE_Rudolf_Slansky = {
+		name = "Rudolf Slánský"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Rudolf_Slansky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Rudolf_Slansky_for_van
+			traits = {
+				foreign_minister
+				vanguardist
+				for_biased_intellectual
+			}
+		}
+	}
+	CZE_Artur_London = {
+		name = "Artur London"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Artur_London.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Artur_London_for_col
+			traits = {
+				foreign_minister
+				collectivist
+				for_ideological_crusader
+			}
+		}
+	}
+	CZE_Gertruda_Sekaninova_Čakrtova = {
+		name = "Gertruda Sekaninova-Čakrtová"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Gertruda_Sekaninova_Čakrtova.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Gertruda_Sekaninova_Čakrtova_for_lib
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_radical_among_moderates
+			}
+		}
+	}
+	CZE_Arnost_Heidrich = {
+		name = "Arnošt Heidrich"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Arnost_Heidrich.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Arnost_Heidrich_for_sde
+			traits = {
+				foreign_minister
+				social_democrat
+				for_general_staffer
+			}
+		}
+	}
+	CZE_Frantisek_Josef_Kinsky = {
+		name = "František Josef Kinský"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantisek_Josef_Kinsky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantisek_Josef_Kinsky_for_sli
+			traits = {
+				foreign_minister
+				social_liberal
+				for_relations_expert
+			}
+		}
+	}
+	CZE_Kamil_Krofta = {
+		name = "Kamil Krofta"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Kamil_Krofta.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Kamil_Krofta_for_mli
+			traits = {
+				foreign_minister
+				market_liberal
+				for_iron_fisted_brute
+			}
+		}
+	}
+	CZE_Petr_Zenkl = {
+		name = "Petr Zenkl"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Petr_Zenkl.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Petr_Zenkl_for_sco
+			traits = {
+				foreign_minister
+				social_conservative
+				for_apologetic_clerk
+			}
+		}
+	}
+	CZE_Bedřich_Neumann = {
+		name = "Bedřich Neumann"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Bedřich_Neumann.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bedřich_Neumann_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_great_compromiser
+			}
+		}
+	}
+	CZE_Michael_Rustler_von_Neuenacker = {
+		name = "Michael Rustler von Neuenacker"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Michael_Rustler_von_Neuenacker.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Michael_Rustler_von_Neuenacker_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_moderate_among_radicals
+			}
+		}
+	}
+	CZE_Josef_Svagrovsky = {
+		name = "Josef Švagrovský"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Josef_Svagrovsky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Josef_Svagrovsky_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_ideological_crusader
+			}
+		}
+	}
+	CZE_Frantisek_Chvalkovsky = {
+		name = "František Chvalkovský"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantisek_Chvalkovsky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantisek_Chvalkovsky_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	CZE_Augustin_Kliment = {
+		name = "Augustin Kliment"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Augustin_Kliment.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Augustin_Kliment_eco_van
+			traits = {
+				economy_minister
+				vanguardist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	CZE_Zdeněk_Nejedly = {
+		name = "Zdeněk Nejedlý"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Zdeněk_Nejedly.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Zdeněk_Nejedly_eco_col
+			traits = {
+				economy_minister
+				collectivist
+				eco_mixed_economy
+			}
+		}
+	}
+	CZE_Frantiska_Plaminkova = {
+		name = "Frantiska Plaminkova"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantiska_Plaminkova.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantiska_Plaminkova_eco_lib
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_reformer
+			}
+		}
+	}
+	CZE_Ludwig_Czech = {
+		name = "Ludwig Czech"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Ludwig_Czech.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Ludwig_Czech_eco_sde
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
+			}
+		}
+	}
+	CZE_Emil_Franke = {
+		name = "Emil Franke"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Emil_Franke.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Emil_Franke_eco_sli
+			traits = {
+				economy_minister
+				social_liberal
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	CZE_Josef_Kalfus = {
+		name = "Josef Kalfus"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Josef_Kalfus.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Josef_Kalfus_eco_mli
+			traits = {
+				economy_minister
+				market_liberal
+				eco_infantry_proponent
+			}
+		}
+	}
+	CZE_Jiři_Hejda = {
+		name = "Jiří Hejda"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jiři_Hejda.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jiři_Hejda_eco_sco
+			traits = {
+				economy_minister
+				social_conservative
+				eco_industrialiser
+			}
+		}
+	}
+	CZE_Vladislav_Brdlik = {
+		name = "Vladislav Brdlík"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Vladislav_Brdlik.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Vladislav_Brdlik_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_oil_baron
+			}
+		}
+	}
+	CZE_Vladimir_Kajdos = {
+		name = "Vladimír Kajdoš"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Vladimir_Kajdos.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Vladimir_Kajdos.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Vladimir_Kajdos_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_steel_magnate
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Vladimir_Kajdos_cos_pau
+			traits = {
+				chief_of_staff
+				paternal_autocrat
+				cos_school_of_defence
+			}
+		}
+	}
+	CZE_Jiři_Střibrny = {
+		name = "Jiří Stříbrný"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jiři_Střibrny.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Jiři_Střibrny.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jiři_Střibrny_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_oil_baron
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jiři_Střibrny_cos_npo
+			traits = {
+				chief_of_staff
+				national_populist
+				cos_school_of_defence
+			}
+		}
+	}
+	CZE_Bruno_Kohler = {
+		name = "Bruno Kohler"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Bruno_Kohler.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bruno_Kohler_sec_van
+			traits = {
+				security_minister
+				vanguardist
+				sec_back_stabber
+			}
+		}
+	}
+	CZE_Antonin_Srba = {
+		name = "Antonín Srba"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Antonin_Srba.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Antonin_Srba_sec_col
+			traits = {
+				security_minister
+				collectivist
+				sec_prince_of_terror
+			}
+		}
+	}
+	CZE_Alfred_Meissner = {
+		name = "Alfréd Meissner"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Alfred_Meissner.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Alfred_Meissner_sec_lib
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	CZE_Rudolf_Bechyně = {
+		name = "Rudolf Bechyně"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Rudolf_Bechyně.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Rudolf_Bechyně_sec_sde
+			traits = {
+				security_minister
+				social_democrat
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	CZE_Prokop_Drtina = {
+		name = "Prokop Drtina"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Prokop_Drtina.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Prokop_Drtina_sec_sli
+			traits = {
+				security_minister
+				social_liberal
+				sec_silent_lawyer
+			}
+		}
+	}
+	CZE_Jaroslav_Stransky = {
+		name = "Jaroslav Stránský"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jaroslav_Stransky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jaroslav_Stransky_sec_mli
+			traits = {
+				security_minister
+				market_liberal
+				sec_secret_police_chief
+			}
+		}
+	}
+	CZE_Jan_Kapras = {
+		name = "Jan Kapras"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Kapras.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Kapras_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_man_of_the_people
+			}
+		}
+	}
+	CZE_Robert_Mayr_Harting = {
+		name = "Robert Mayr-Harting"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Robert_Mayr_Harting.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Robert_Mayr_Harting_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	CZE_Frantisek_Machnik = {
+		name = "František Machník"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantisek_Machnik.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantisek_Machnik_sec_ade
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_efficient_sociopath
+			}
+		}
+	}
+	CZE_Josef_Jezek = {
+		name = "Josef Ježek"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Josef_Jezek.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Josef_Jezek_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_silent_lawyer
+			}
+		}
+	}
+	CZE_Ladislav_Kobsinek = {
+		name = "Ladislav Kobsinek"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/CZE/CZE_Ladislav_Kobsinek.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = CZE_Ladislav_Kobsinek_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_media_magnate
+			}
+		}
+	}
+	CZE_Ludvik_Svoboda = {
+		name = "Ludvik Svoboda"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Ludvik_Svoboda.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Ludvik_Svoboda_cos_van
+			traits = {
+				chief_of_staff
+				vanguardist
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	CZE_Bruno_Sklenovsky = {
+		name = "Bruno Sklenovský"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Bruno_Sklenovsky.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bruno_Sklenovsky_cos_mli
+			traits = {
+				chief_of_staff
+				market_liberal
+				cos_school_of_fire_support
+			}
+		}
+	}
+	CZE_Jan_Sergej_Ingr = {
+		name = "Jan Sergej Ingr"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Sergej_Ingr.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Sergej_Ingr_cos_mli
+			traits = {
+				chief_of_staff
+				market_liberal
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	CZE_Jaroslav_Čihak = {
+		name = "Jaroslav Čihák"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Jaroslav_Čihak.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jaroslav_Čihak_cos_mli
+			traits = {
+				chief_of_staff
+				market_liberal
+				cos_school_of_psychology
+			}
+		}
+	}
+	CZE_Frantisek_Bartos = {
+		name = "František Bartoš"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantisek_Bartos.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantisek_Bartos_cos_ade
+			traits = {
+				chief_of_staff
+				authoritarian_democrat
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	CZE_Bohumil_Bosek = {
+		name = "Bohumil Bošek"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Bohumil_Bosek.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Bohumil_Bosek_carm_mli
+			traits = {
+				chief_of_army
+				market_liberal
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	CZE_Frantisek_Zaviska = {
+		name = "František Záviška"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Frantisek_Zaviska.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Frantisek_Zaviska_carm_mli
+			traits = {
+				chief_of_army
+				market_liberal
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	CZE_Ludvik_Krejči = {
+		name = "Ludvík Krejčí"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Ludvik_Krejči.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Ludvik_Krejči_carm_mli
+			traits = {
+				chief_of_army
+				market_liberal
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	CZE_Jaroslav_Eminger = {
+		name = "Jaroslav Eminger"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Jaroslav_Eminger.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jaroslav_Eminger_carm_sco
+			traits = {
+				chief_of_army
+				social_conservative
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	CZE_Jan_Syrovy = {
+		name = "Jan Syrový"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Syrovy.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Syrovy_carm_ade
+			traits = {
+				chief_of_army
+				authoritarian_democrat
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	CZE_Otto_Blaha = {
+		name = "Otto Bláha"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Otto_Blaha.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = CZE_Otto_Blaha_carm_npo
+			traits = {
+				chief_of_army
+				national_populist
+				carm_commando_doctrine
+			}
+		}
+	}
+	CZE_Antonin_Hasal = {
+		name = "Antonín Hasal"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/CZE/CZE_Antonin_Hasal.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = CZE_Antonin_Hasal_cnav_mli
+			traits = {
+				chief_of_navy
+				market_liberal
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	CZE_Robert_Rychtrmoc = {
+		name = "Robert Rychtrmoc"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/CZE/CZE_Robert_Rychtrmoc.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = CZE_Robert_Rychtrmoc_cnav_npo
+			traits = {
+				chief_of_navy
+				national_populist
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	CZE_Jan_Prokop = {
+		name = "Jan Prokop"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Jan_Prokop.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = CZE_Jan_Prokop_cair_van
+			traits = {
+				chief_of_air_force
+				vanguardist
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	CZE_Josef_Frantisek = {
+		name = "Josef František"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Josef_Frantisek.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = CZE_Josef_Frantisek_cair_mli
+			traits = {
+				chief_of_air_force
+				market_liberal
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+	CZE_Karel_Janousek = {
+		name = "Karel Janoušek"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Karel_Janousek.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = CZE_Karel_Janousek_cair_mli
+			traits = {
+				chief_of_air_force
+				market_liberal
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	CZE_Karel_Kuttelwascher = {
+		name = "Karel Kuttelwascher"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/CZE/CZE_Karel_Kuttelwascher.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = CZE_Karel_Kuttelwascher_cair_mli
+			traits = {
+				chief_of_air_force
+				market_liberal
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+  CZE_Jan_Sverma = {
+    name = "Jan Šverma"
+    portraits = {
+      civilian = {
+        large = "gfx/leaders/CZE/Portrait_CZE_Jan_Sverma.tga"
+      }
+    }
+  }
+}
