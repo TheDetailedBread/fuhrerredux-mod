@@ -1,0 +1,2068 @@
+characters = {
+	NOR_Olav_Scheflo = {
+		name = "Olav Scheflo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Olav_Scheflo.tga"
+			}
+		}
+		country_leader = {
+			ideology = vanguardist_subtype
+			traits = { }
+		}
+	}
+	NOR_Martin_Tranmæl = {
+		name = "Martin Tranmæl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Martin_Tranmæl.tga"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_socialist_subtype
+			traits = { }
+		}
+	}
+	NOR_Johan_Nygaardsvold = {
+		name = "Johan Nygaardsvold"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Johan_Nygaardsvold.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Johan_Nygaardsvold.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Johan_Nygaardsvold_hog_sde
+			traits = {
+				head_of_government
+				social_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	NOR_Johan_Ludwig_Mowinckel = {
+		name = "Johan Ludwig Mowinckel"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Johan_Ludwig_Mowinckel.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	NOR_Ingolf_Elster_Christensen = {
+		name = "Ingolf Elster Christensen"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Ingolf_Elster_Christensen.tga"
+			}
+		}
+		country_leader = {
+			ideology = market_liberal_subtype
+			traits = { }
+		}
+	}
+	NOR_Jens_Hundseid = {
+		name = "Jens Hundseid"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Jens_Hundseid.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = { }
+		}
+	}
+	NOR_Victor_Mogens = {
+		name = "Victor Mogens"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Victor_Mogens.tga"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
+		}
+	}
+	NOR_HM_King_Haakon_VII = {
+		name = "H.M. King Haakon VII"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_HM_King_Haakon_VII.tga"
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+	}
+	NOR_Vidkun_Quisling = {
+		name = "Vidkun Quisling"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Vidkun_Quisling.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
+		}
+	}
+	NOR_Stein_Barth_Heyerdahl = {
+		name = "Stein Barth-Heyerdahl"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Stein_Barth_Heyerdahl.tga"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	NOR_Kristian_Laake = {
+		name = "Kristian Laake"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Kristian_Laake.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Kristian_Laake.tga"
+			}
+		}
+		field_marshal = {
+			traits = {
+				old_guard
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = NOR_Kristian_Laake_carm
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	NOR_Carl_Gustav_Fleischer = {
+		name = "Carl Gustav Fleischer"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Carl_Gustav_Fleischer.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Carl_Gustav_Fleischer.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+				winter_specialist
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = NOR_Carl_Gustav_Fleischer_carm
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	NOR_Otto_Ruge = {
+		name = "Otto Ruge"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Otto_Ruge.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Otto_Ruge.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				winter_specialist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = NOR_Otto_Ruge_carm
+			traits = {
+				chief_of_army
+				carm_commando_doctrine
+			}
+		}
+	}
+	NOR_William_Steffens = {
+		name = "William Steffens"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_NOR_William_Steffens.tga"
+				small = "gfx/interface/ministers/NOR/NOR_William_Steffens.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				hill_fighter
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NOR_William_Steffens_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+		}
+	}
+	NOR_Wilhelm_von_Tangen_Hansteen = {
+		name = "Wilhelm von Tangen Hansteen"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Wilhelm_von_Tangen_Hansteen.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Wilhelm_von_Tangen_Hansteen.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NOR_Wilhelm_von_Tangen_Hansteen_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+	}
+	NOR_Hans_Reidar_Holtermann = {
+		name = "Hans Reidar Holtermann"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Hans_Reidar_Holtermann.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+				hill_fighter
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	NOR_Elias_Corneliussen = {
+		name = "Elias Corneliussen"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Elias_Corneliussen.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Elias_Corneliussen.tga"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NOR_Elias_Corneliussen_cnav
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	NOR_Edvard_Christian_Danielsen = {
+		name = "Edvard Christian Danielsen"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Edvard_Christian_Danielsen.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Edvard_Christian_Danielsen.tga"
+			}
+		}
+		navy_leader = {
+			traits = {
+				seawolf
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NOR_Edvard_Christian_Danielsen_cnav
+			traits = {
+				chief_of_navy
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	NOR_Henry_Diesen = {
+		name = "Henry Diesen"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Henry_Diesen.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Henry_Diesen.tga"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 4
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NOR_Henry_Diesen_cnav
+			traits = {
+				chief_of_navy
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	NOR_Carsten_Tank_Nielsen = {
+		name = "Carsten Tank-Nielsen"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Carsten_Tank_Nielsen.tga"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 4
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 1
+		}
+	}
+	NOR_Odd_Isaachsen_Willoch = {
+		name = "Odd Isaachsen Willoch"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NOR/Portrait_NOR_Odd_Isaachsen_Willoch.tga"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 2
+		}
+	}
+	NOR_Hakon_Meyer = {
+		name = "Håkon Meyer"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Hakon_Meyer.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Hakon_Meyer_hog_van
+			traits = {
+				head_of_government
+				vanguardist
+				hog_red_chairmen
+			}
+		}
+	}
+	NOR_Halvard_Olsen = {
+		name = "Halvard Olsen"
+		portraits = {
+			civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Halvard_Olsen.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Halvard_Olsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Halvard_Olsen_hog_van
+			traits = {
+				head_of_government
+				vanguardist
+				hog_backroom_backstabber
+			}
+		}
+	}
+	NOR_Haakon_Lie = {
+		name = "Haakon Lie"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Haakon_Lie.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Haakon_Lie_hog_col
+			traits = {
+				head_of_government
+				collectivist
+				hog_charismatic_charmer
+			}
+		}
+	}
+	NOR_Konrad_Nordahl = {
+		name = "Konrad Nordahl"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Konrad_Nordahl.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Konrad_Nordahl_hog_col
+			traits = {
+				head_of_government
+				collectivist
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	NOR_Sverre_Stostad = {
+		name = "Sverre Støstad"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Sverre_Stostad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Sverre_Stostad_hog_lib
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_naive_optimist
+			}
+		}
+	}
+	NOR_Magnus_Nilssen = {
+		name = "Magnus Nilssen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Magnus_Nilssen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Magnus_Nilssen_hog_sde
+			traits = {
+				head_of_government
+				social_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	NOR_Hakon_Five = {
+		name = "Håkon Five"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Hakon_Five.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Hakon_Five_hog_sli
+			traits = {
+				head_of_government
+				social_liberal
+				hog_charismatic_charmer
+			}
+		}
+	}
+	NOR_Carl_Joachim_Hambro = {
+		name = "Carl Joachim Hambro"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Carl_Joachim_Hambro.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Carl_Joachim_Hambro_hog_mli
+			traits = {
+				head_of_government
+				market_liberal
+				hog_corporate_suit
+			}
+		}
+	}
+	NOR_Johan_Henrik_Andresen = {
+		name = "Johan Henrik Andresen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Johan_Henrik_Andresen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Johan_Henrik_Andresen_hog_mli
+			traits = {
+				head_of_government
+				market_liberal
+				hog_smiling_oilman
+			}
+		}
+	}
+	NOR_Einar_Borch = {
+		name = "Einar Borch"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Einar_Borch.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Einar_Borch_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_happy_amateur
+			}
+		}
+	}
+	NOR_Carl_Gulbranson = {
+		name = "Carl Gulbranson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Carl_Gulbranson.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Carl_Gulbranson_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	NOR_Johan_Bernhard_Hjort = {
+		name = "Johan Bernhard Hjort"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Johan_Bernhard_Hjort.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Johan_Bernhard_Hjort_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_backroom_backstabber
+			}
+		}
+	}
+	NOR_Gulbrand_Lunde = {
+		name = "Gulbrand Lunde"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Gulbrand_Lunde.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Gulbrand_Lunde_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_charismatic_charmer
+			}
+		}
+	}
+	NOR_Jonas_Lie = {
+		name = "Jonas Lie"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Jonas_Lie.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Jonas_Lie_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_corporate_suit
+			}
+		}
+	}
+	NOR_Karl_Marthinsen = {
+		name = "Karl Marthinsen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Karl_Marthinsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NOR_Karl_Marthinsen_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_local_tyrant
+			}
+		}
+	}
+	NOR_Albin_Eines = {
+		name = "Albin Eines"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Albin_Eines.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Albin_Eines_for_van
+			traits = {
+				foreign_minister
+				vanguardist
+				for_ideological_crusader
+			}
+		}
+	}
+	NOR_Elias_Volan = {
+		name = "Elias Volan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Elias_Volan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Elias_Volan_for_van
+			traits = {
+				foreign_minister
+				vanguardist
+				for_radical_among_moderates
+			}
+		}
+	}
+	NOR_Arnulf_Overland = {
+		name = "Arnulf Øverland"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Arnulf_Overland.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Arnulf_Overland_for_col
+			traits = {
+				foreign_minister
+				collectivist
+				for_hawkish_intervener
+			}
+		}
+	}
+	NOR_Arvid_Gilbert_Hansen = {
+		name = "Arvid Gilbert Hansen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Arvid_Gilbert_Hansen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Arvid_Gilbert_Hansen_for_col
+			traits = {
+				foreign_minister
+				collectivist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	NOR_Nordahl_Grieg = {
+		name = "Nordahl Grieg"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Nordahl_Grieg.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Nordahl_Grieg_for_lib
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_biased_intellectual
+			}
+		}
+	}
+	NOR_Wilhelm_Morgenstierne = {
+		name = "Wilhelm Morgenstierne"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Wilhelm_Morgenstierne.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Wilhelm_Morgenstierne_for_lib
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_great_compromiser
+			}
+		}
+	}
+	NOR_Halvdan_Koht = {
+		name = "Halvdan Koht"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Halvdan_Koht.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Halvdan_Koht_for_sde
+			traits = {
+				foreign_minister
+				social_democrat
+				for_great_compromiser
+			}
+		}
+	}
+	NOR_Trygve_Lie = {
+		name = "Trygve Lie"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Trygve_Lie.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Trygve_Lie_for_sde
+			traits = {
+				foreign_minister
+				social_democrat
+				for_relations_expert
+			}
+		}
+	}
+	NOR_Erik_Colban = {
+		name = "Erik Colban"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Erik_Colban.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Erik_Colban_for_sli
+			traits = {
+				foreign_minister
+				social_liberal
+				for_everything
+			}
+		}
+	}
+	NOR_Jacob_Worm_Muller = {
+		name = "Jacob Worm-Müller"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Jacob_Worm_Muller.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Jacob_Worm_Muller_for_sli
+			traits = {
+				foreign_minister
+				social_liberal
+				for_ideological_crusader
+			}
+		}
+	}
+	NOR_Arne_Scheel = {
+		name = "Arne Scheel"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Arne_Scheel.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Arne_Scheel_for_mli
+			traits = {
+				foreign_minister
+				market_liberal
+				for_apologetic_clerk
+			}
+		}
+	}
+	NOR_Ivar_Lykke = {
+		name = "Ivar Lykke"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Ivar_Lykke.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ivar_Lykke_for_mli
+			traits = {
+				foreign_minister
+				market_liberal
+				for_iron_fisted_brute
+			}
+		}
+	}
+	NOR_Birger_Braadland = {
+		name = "Birger Braadland"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Birger_Braadland.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Birger_Braadland_for_sco
+			traits = {
+				foreign_minister
+				social_conservative
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	NOR_Jon_Leirfall = {
+		name = "Jon Leirfall"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Jon_Leirfall.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Jon_Leirfall_for_sco
+			traits = {
+				foreign_minister
+				social_conservative
+				for_relations_expert
+			}
+		}
+	}
+	NOR_Adolf_Hoel = {
+		name = "Adolf Hoel"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Adolf_Hoel.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Adolf_Hoel_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_moderate_among_radicals
+			}
+		}
+	}
+	NOR_Albert_Viljam_Hagelin = {
+		name = "Albert Viljam Hagelin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Albert_Viljam_Hagelin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Albert_Viljam_Hagelin_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_iron_fisted_brute
+			}
+		}
+	}
+	NOR_Finn_Storen = {
+		name = "Finn Støren"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Finn_Storen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Finn_Storen_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_ideological_crusader
+			}
+		}
+	}
+	NOR_Axel_Stang = {
+		name = "Axel Stang"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Axel_Stang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Axel_Stang_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_general_staffer
+			}
+		}
+	}
+	NOR_Johan_Lippestad = {
+		name = "Johan Lippestad"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Johan_Lippestad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Johan_Lippestad_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	NOR_Haavard_Langseth = {
+		name = "Haavard Langseth"
+		portraits = {
+			civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Haavard_Langseth.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Haavard_Langseth.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Haavard_Langseth_eco_van
+			traits = {
+				economy_minister
+				vanguardist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	NOR_Johan_Strand_Johansen = {
+		name = "Johan Strand Johansen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Johan_Strand_Johansen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Johan_Strand_Johansen_eco_van
+			traits = {
+				economy_minister
+				vanguardist
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	NOR_Fredrik_Monsen = {
+		name = "Fredrik Monsen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Fredrik_Monsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Fredrik_Monsen_eco_col
+			traits = {
+				economy_minister
+				collectivist
+				eco_reformer
+			}
+		}
+	}
+	NOR_Ole_Colbjornsen = {
+		name = "Ole Colbjørnsen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Ole_Colbjornsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ole_Colbjornsen_eco_col
+			traits = {
+				economy_minister
+				collectivist
+				eco_industrialiser
+			}
+		}
+	}
+	NOR_Adolf_Indrebo = {
+		name = "Adolf Indrebø"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Adolf_Indrebo.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Adolf_Indrebo_eco_lib
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	NOR_Ragnar_Frisch = {
+		name = "Ragnar Frisch"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Ragnar_Frisch.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ragnar_Frisch_eco_lib
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_imbedded_unioneer
+			}
+		}
+	}
+	NOR_Kornelius_Bergsvik = {
+		name = "Kornelius Bergsvik"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Kornelius_Bergsvik.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Kornelius_Bergsvik_eco_sde
+			traits = {
+				economy_minister
+				social_democrat
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	NOR_Oscar_Torp = {
+		name = "Oscar Torp"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Oscar_Torp.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Oscar_Torp_eco_sde
+			traits = {
+				economy_minister
+				social_democrat
+				eco_administrative_genius
+			}
+		}
+	}
+	NOR_Jens_Isak_Kobro = {
+		name = "Jens Isak Kobro"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Jens_Isak_Kobro.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Jens_Isak_Kobro_eco_sli
+			traits = {
+				economy_minister
+				social_liberal
+				eco_infantry_proponent
+			}
+		}
+	}
+	NOR_Per_Berg_Lund = {
+		name = "Per Berg Lund"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Per_Berg_Lund.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Per_Berg_Lund_eco_sli
+			traits = {
+				economy_minister
+				social_liberal
+				eco_the_minister_for_everything
+			}
+		}
+	}
+	NOR_Ole_Bæroe = {
+		name = "Ole Bærøe"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Ole_Bæroe.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ole_Bæroe_eco_mli
+			traits = {
+				economy_minister
+				market_liberal
+				eco_mixed_economy
+			}
+		}
+	}
+	NOR_Sven_Nielsen = {
+		name = "Sven Nielsen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Sven_Nielsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Sven_Nielsen_eco_mli
+			traits = {
+				economy_minister
+				market_liberal
+				eco_construction_magnate
+			}
+		}
+	}
+	NOR_Jon_Sundby = {
+		name = "Jon Sundby"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Jon_Sundby.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Jon_Sundby_eco_sco
+			traits = {
+				economy_minister
+				social_conservative
+				eco_industrial_chemist
+			}
+		}
+	}
+	NOR_Nicolai_Rygg = {
+		name = "Nicolai Rygg"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Nicolai_Rygg.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Nicolai_Rygg_eco_sco
+			traits = {
+				economy_minister
+				social_conservative
+				eco_military_entrepreneur
+			}
+		}
+	}
+	NOR_Alf_Larsen_Whist = {
+		name = "Alf Larsen Whist"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Alf_Larsen_Whist.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Alf_Larsen_Whist_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_bank_president
+			}
+		}
+	}
+	NOR_Axel_Aubert = {
+		name = "Axel Aubert"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Axel_Aubert.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Axel_Aubert_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_national_liberal
+			}
+		}
+	}
+	NOR_Eivind_Blehr = {
+		name = "Eivind Blehr"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Eivind_Blehr.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Eivind_Blehr_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_reformer
+			}
+		}
+	}
+	NOR_Frederik_Prytz = {
+		name = "Frederik Prytz"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Frederik_Prytz.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Frederik_Prytz_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_resource_industrialist
+			}
+		}
+	}
+	NOR_Carl_Frolich_Hanssen = {
+		name = "Carl Frølich Hanssen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Carl_Frolich_Hanssen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Carl_Frolich_Hanssen_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_railway_magnate
+			}
+		}
+	}
+	NOR_Tormod_Hustad = {
+		name = "Tormod Hustad"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Tormod_Hustad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Tormod_Hustad_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_the_minister_for_everything
+			}
+		}
+	}
+	NOR_Henry_Wilhelm_Kristiansen = {
+		name = "Henry Wilhelm Kristiansen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Henry_Wilhelm_Kristiansen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Henry_Wilhelm_Kristiansen_sec_van
+			traits = {
+				security_minister
+				vanguardist
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	NOR_Sverre_Krogh = {
+		name = "Sverre Krogh"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Sverre_Krogh.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Sverre_Krogh_sec_van
+			traits = {
+				security_minister
+				vanguardist
+				sec_crime_fighter
+			}
+		}
+	}
+	NOR_Emil_Stang = {
+		name = "Emil Stang"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Emil_Stang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Emil_Stang_sec_col
+			traits = {
+				security_minister
+				collectivist
+				sec_back_stabber
+			}
+		}
+	}
+	NOR_Olav_Hindahl = {
+		name = "Olav Hindahl"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Olav_Hindahl.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Olav_Hindahl_sec_col
+			traits = {
+				security_minister
+				collectivist
+				sec_silent_lawyer
+			}
+		}
+	}
+	NOR_Alfred_Madsen = {
+		name = "Alfred Madsen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Alfred_Madsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Alfred_Madsen_sec_lib
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_secret_police_chief
+			}
+		}
+	}
+	NOR_Jakob_Friis = {
+		name = "Jakob Friis"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Jakob_Friis.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Jakob_Friis_sec_lib
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_prince_of_terror
+			}
+		}
+	}
+	NOR_Paul_Hartmann = {
+		name = "Paul Hartmann"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Paul_Hartmann.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Paul_Hartmann_sec_sde
+			traits = {
+				security_minister
+				social_democrat
+				sec_man_of_the_people
+			}
+		}
+	}
+	NOR_Terje_Wold = {
+		name = "Terje Wold"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Terje_Wold.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Terje_Wold_sec_sde
+			traits = {
+				security_minister
+				social_democrat
+				sec_health_and_safety
+			}
+		}
+	}
+	NOR_Arne_Sunde = {
+		name = "Arne Sunde"
+		portraits = {
+			civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Arne_Sunde.tga"
+				small = "gfx/interface/ministers/NOR/NOR_Arne_Sunde.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Arne_Sunde_sec_sli
+			traits = {
+				security_minister
+				social_liberal
+				sec_great_soul
+			}
+		}
+	}
+	NOR_Haakon_Sund = {
+		name = "Haakon Sund"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Haakon_Sund.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Haakon_Sund_sec_sli
+			traits = {
+				security_minister
+				social_liberal
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+	NOR_Harald_Gram = {
+		name = "Harald Gram"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Harald_Gram.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Harald_Gram_sec_mli
+			traits = {
+				security_minister
+				market_liberal
+				sec_health_and_safety
+			}
+		}
+	}
+	NOR_Odd_Klingenberg = {
+		name = "Odd Klingenberg"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Odd_Klingenberg.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Odd_Klingenberg_sec_mli
+			traits = {
+				security_minister
+				market_liberal
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	NOR_Ivar_Kirkeby_Garstad = {
+		name = "Ivar Kirkeby-Garstad"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Ivar_Kirkeby_Garstad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ivar_Kirkeby_Garstad_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_silent_lawyer
+			}
+		}
+	}
+	NOR_Nils_Trædal = {
+		name = "Nils Trædal"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Nils_Trædal.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Nils_Trædal_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_man_of_the_people
+			}
+		}
+	}
+	NOR_Herman_Harris_Aall = {
+		name = "Herman Harris Aall"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Herman_Harris_Aall.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Herman_Harris_Aall_sec_ade
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+	NOR_Ragnar_Skancke = {
+		name = "Ragnar Skancke"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Ragnar_Skancke.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ragnar_Skancke_sec_ade
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_efficient_sociopath
+			}
+		}
+	}
+	NOR_Per_von_Hirsch = {
+		name = "Per von Hirsch"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Per_von_Hirsch.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Per_von_Hirsch_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	NOR_Rolf_Jorgen_Fuglesang = {
+		name = "Rolf Jørgen Fuglesang"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Rolf_Jorgen_Fuglesang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Rolf_Jorgen_Fuglesang_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_back_stabber
+			}
+		}
+	}
+	NOR_Arnvid_Vasbotten = {
+		name = "Arnvid Vasbotten"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Arnvid_Vasbotten.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Arnvid_Vasbotten_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_preserver_of_culture
+			}
+		}
+	}
+	NOR_Sverre_Riisnæs = {
+		name = "Sverre Riisnæs"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NOR/NOR_Sverre_Riisnæs.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NOR_Sverre_Riisnæs_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	NOR_Andreas_Wettre = {
+		name = "Andreas Wettre"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Andreas_Wettre.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NOR_Andreas_Wettre_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	NOR_Carl_Johan_Erichsen = {
+		name = "Carl Johan Erichsen"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Carl_Johan_Erichsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NOR_Carl_Johan_Erichsen_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+	}
+	NOR_Arne_Gausla = {
+		name = "Arne Gauslå"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Arne_Gausla.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = NOR_Arne_Gausla_carm
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	NOR_Oliver_Moystad = {
+		name = "Oliver Møystad"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Oliver_Moystad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = NOR_Oliver_Moystad_carm
+			traits = {
+				chief_of_army
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	NOR_Olaf_Kullmann = {
+		name = "Olaf Kullmann"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/NOR/NOR_Olaf_Kullmann.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NOR_Olaf_Kullmann_cnav_col
+			traits = {
+				chief_of_navy
+				collectivist
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	NOR_Kjeld_Stub_Irgens = {
+		name = "Kjeld Stub Irgens"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/NOR/NOR_Kjeld_Stub_Irgens.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NOR_Kjeld_Stub_Irgens_cnav
+			traits = {
+				chief_of_navy
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	NOR_Georg_Jacob_Falck_Bull = {
+		name = "Georg Jacob Falck Bull"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Georg_Jacob_Falck_Bull.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NOR_Georg_Jacob_Falck_Bull_cair
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	NOR_Bjarne_Oen = {
+		name = "Bjarne Øen"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Bjarne_Oen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NOR_Bjarne_Oen_cair
+			traits = {
+				chief_of_air_force
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+	NOR_Ole_Reistad = {
+		name = "Ole Reistad"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Ole_Reistad.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NOR_Ole_Reistad_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	NOR_Birger_Fredrik_Motzfeldt = {
+		name = "Birger Fredrik Motzfeldt"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Birger_Fredrik_Motzfeldt.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NOR_Birger_Fredrik_Motzfeldt_cair
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	NOR_Hjalmar_Riiser_Larsen = {
+		name = "Hjalmar Riiser-Larsen"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Hjalmar_Riiser_Larsen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NOR_Hjalmar_Riiser_Larsen_cair
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+	NOR_Tryggve_Gran = {
+		name = "Tryggve Gran"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NOR/NOR_Tryggve_Gran.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NOR_Tryggve_Gran_cair
+			traits = {
+				chief_of_air_force
+				cair_the_red_baron
+			}
+		}
+	}
+  NOR_Ragnvald_Hvoslef = {
+    portraits = {
+      civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Ragnvald_Hvoslef.tga"
+      }
+      army = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Ragnvald_Hvoslef.tga"
+      }
+    }
+  }
+  NOR_Olav_V = {
+    portraits = {
+      civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Olav_V.tga"
+      }
+    }
+  }
+  NOR_Einar_Gerhardsen = {
+    portraits = {
+      civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Einar_Gerhardsen.tga"
+      }
+    }
+  }
+  NOR_Arthur_Nordlie = {
+    portraits = {
+      civilian = {
+        large = "gfx/leaders/NOR/Portrait_NOR_Arthur_Nordlie.tga"
+      }
+    }
+  }
+}
