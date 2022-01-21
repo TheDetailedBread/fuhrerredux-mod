@@ -13,7 +13,7 @@ guiTypes = {
 	
 	positionType = {
 		name = "countrystateview_weathericons_position"
-		position = { x = 186 y= -31 }
+		position = { x = 384 y= -31 }
 	}
 
 	positionType = {
@@ -45,22 +45,22 @@ guiTypes = {
 						
 			instantTextboxType = {
 				name = "state_name"
-				position = { x = 60 y = 5 }
+				position = { x = 80 y = 5 }
 				textureFile = ""
 				font = "hoi_36header"
 				text = "STATE_NAME_TEST"
-				maxWidth = 320
+				maxWidth = 330
 				maxHeight = 30
 				format = center
 			}
 			
 			gridBoxType = {
 				name = "state_building_entries"
-				position = { x = 155 y = 43 }
+				position = { x = 155 y = 45 }
 				size = { width = 480 height = 105 }
 				format = "UPPER_LEFT"
-				slotsize = { width = 137 height = 52 }
-				max_slots_horizontal = 2
+				slotsize = { width = 60 height = 52 }
+				max_slots_horizontal = 5
 			}
 			
 			instantTextboxType = {
@@ -76,22 +76,22 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "state_shared_slot_building_entries"
-				position = { x = 152 y = 168 }
+				position = { x = 153 y = 170 }
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
-				slotsize = { width = 55 height = 46 }
+				slotsize = { width = 58 height = 46 }
 				max_slots_horizontal = 5
 			}
 
 			iconType ={
 				name ="victory_points_bg"
 				spriteType = "GFX_victorypoint_stateview_bg"
-				position = { x = 17 y = 12 }
+				position = { x = 17 y = 15 }
 			}
 			
 			instantTextboxType = {
 				name = "victory_points"
-				position = { x = -13 y = 15 }
+				position = { x = -13 y = 18 }
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = ""
@@ -102,7 +102,7 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "claims"
-				position = { x = 15 y = 97 }
+				position = { x = 15 y = 99 }
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = ""
@@ -135,7 +135,7 @@ guiTypes = {
 			buttonType = {
 				name = "owner_flag"
 				quadTextureSprite ="GFX_flag_small2"
-				position = { x= 34 y = 63 }
+				position = { x= 35 y = 63 }
 			}
 			
 			iconType ={
@@ -148,7 +148,7 @@ guiTypes = {
 			buttonType = {
 				name = "controller_flag"
 				quadTextureSprite = "GFX_flag_small2"
-				position = { x= 74 y = 63 }
+				position = { x= 75 y = 63 }
 			}	
 			
 			iconType ={
@@ -160,7 +160,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "state_resources"
-				position = { x= 22 y=301}
+				position = { x= 26 y=301}
 				size = { width=135 height=99 }
 				
 				
@@ -171,10 +171,10 @@ guiTypes = {
 			
 				gridBoxType = {
 					name = "state_resources_entries"
-					position = { x = -42 y = -3 }
+					position = { x = -42 y = -2 }
 					size = { width = 132 height = 60 }
 					format = "UPPER_LEFT"
-					slotsize = { width = 52 height = 30 }
+					slotsize = { width = 50 height = 31 }
 					max_slots_horizontal = 2
 					max_slots_vertical = 3
 					
@@ -273,7 +273,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "province_info_window"
-			position = { x = 5 y = 435 }
+			position = { x = 20 y = 435 }
 			size = { width=480 height=29%% }
 			
 			iconType = {
@@ -282,11 +282,11 @@ guiTypes = {
 				spriteType = "GFX_terrain_default"
 				Orientation = "UPPER_LEFT"
 			}
-
+			
 			containerWindowType = {
 				name = "custom_icon_container"
 				size = { width=100% height=100% }
-				position = { x = -176 y= 4 }
+				position = { x = -374 y= 4 }
 	
 				iconType = {
 					name = "terrain_paris_icon"
@@ -445,8 +445,8 @@ guiTypes = {
 				}
 				
 				iconType = {
-					name = "terrain_tsaritsyn_icon"
-					spriteType = "GFX_terrain_tsaritsyn"
+					name = "terrain_volgograd_icon"
+					spriteType = "GFX_terrain_volgograd"
 					alwaystransparent = yes
 				}
 				
@@ -641,7 +641,7 @@ guiTypes = {
 					spriteType = "GFX_terrain_istanbul"
 					alwaystransparent = yes
 				}
-				
+
 				iconType = {
 					name = "terrain_izmir_icon"
 					spriteType = "GFX_terrain_izmir"
@@ -911,11 +911,12 @@ guiTypes = {
 					spriteType = "GFX_terrain_plymouth"
 					alwaystransparent = yes
 				}
+				# VANILLA
 				
 				iconType = {
 					name = "terrain_palawan_icon"
 					spriteType = "GFX_terrain_palawan"
-					alwaystransparent = yes
+					alwaystransparent = yes	
 				}
 				
 				iconType = {
@@ -2545,502 +2546,274 @@ guiTypes = {
 				}
 				
 				iconType = {
-					name = "terrain_anqing_icon"
-					spriteType = "GFX_terrain_anqing"
+					name = "terrain_portland_icon"
+					spriteType = "GFX_terrain_portland"
 					alwaystransparent = yes
 				}
-				
-				iconType = {
-					name = "terrain_weihaiwei_icon"
-					spriteType = "GFX_terrain_weihaiwei"
-					alwaystransparent = yes
-				}
-				
-				iconType = {
-					name = "terrain_medina_icon"
-					spriteType = "GFX_terrain_medina"
-					alwaystransparent = yes
-				}
-				
-				iconType = {
-					name = "terrain_mosul_icon"
-					spriteType = "GFX_terrain_mosul"
-					alwaystransparent = yes
-				}
-				
-				iconType = {
-					name = "terrain_utrecht_icon"
-					spriteType = "GFX_terrain_utrecht"
-					alwaystransparent = yes
-				}
-				
-				iconType = {
-					name = "terrain_eindhoven_icon"
-					spriteType = "GFX_terrain_eindhoven"
-					alwaystransparent = yes
-				}
-				
-				iconType = {
-					name = "terrain_groningen_icon"
-					spriteType = "GFX_terrain_groningen"
-					alwaystransparent = yes
-				}
-				
-				iconType = {
-					name = "terrain_leeuwarden_icon"
-					spriteType = "GFX_terrain_leeuwarden"
-					alwaystransparent = yes
-				}
-				
+
 				iconType = {
-					name = "terrain_toulon_icon"
-					spriteType = "GFX_terrain_toulon"
+					name = "terrain_fiume_icon"
+					spriteType = "GFX_terrain_fiume"
 					alwaystransparent = yes
 				}
-				
+
 				iconType = {
-					name = "terrain_le_havre_icon"
-					spriteType = "GFX_terrain_le_havre"
+					name = "terrain_dubrovnik_icon"
+					spriteType = "GFX_terrain_dubrovnik"
 					alwaystransparent = yes
 				}
 				
-				iconType = {
-					name = "terrain_brest_icon"
-					spriteType = "GFX_terrain_brest"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_bizerte_icon"
-					spriteType = "GFX_terrain_bizerte"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_luanda_icon"
-					spriteType = "GFX_terrain_luanda"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_luxor_icon"
-					spriteType = "GFX_terrain_luxor"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_port_said_icon"
-					spriteType = "GFX_terrain_port_said"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_aswan_icon"
-					spriteType = "GFX_terrain_aswan"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_asyut_icon"
-					spriteType = "GFX_terrain_asyut"
-					alwaystransparent = yes
-				}
 				
+				#### BOTDE ####
 				iconType = {
-					name = "terrain_khartoum_icon"
-					spriteType = "GFX_terrain_khartoum"
+					name = "terrain_olomouc_icon"
+					spriteType = "GFX_terrain_olomouc"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_oran_icon"
-					spriteType = "GFX_terrain_oran"
+					name = "terrain_munkacs_icon"
+					spriteType = "GFX_terrain_munkacs"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_constantine_icon"
-					spriteType = "GFX_terrain_constantine"
+					name = "terrain_banska_bystrica_icon"
+					spriteType = "GFX_terrain_banska_bystrica"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_basra_icon"
-					spriteType = "GFX_terrain_basra"
+					name = "terrain_pardubice_icon"
+					spriteType = "GFX_terrain_pardubice"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_conarky_icon"
-					spriteType = "GFX_terrain_conarky"
+					name = "terrain_zlin_icon"
+					spriteType = "GFX_terrain_zlin"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_dakar_icon"
-					spriteType = "GFX_terrain_dakar"
+					name = "terrain_karlsbad_icon"
+					spriteType = "GFX_terrain_karlsbad"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_lome_icon"
-					spriteType = "GFX_terrain_lome"
+					name = "terrain_aussig_icon"
+					spriteType = "GFX_terrain_aussig"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_swakopmund_icon"
-					spriteType = "GFX_terrain_swakopmund"
+					name = "terrain_reichenberg_icon"
+					spriteType = "GFX_terrain_reichenberg"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_windhoek_icon"
-					spriteType = "GFX_terrain_windhoek"
+					name = "terrain_presov_icon"
+					spriteType = "GFX_terrain_presov"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_freetown_icon"
-					spriteType = "GFX_terrain_freetown"
+					name = "terrain_ungvar_icon"
+					spriteType = "GFX_terrain_ungvar"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_lorenzo_marques_icon"
-					spriteType = "GFX_terrain_lorenzo_marques"
+					name = "terrain_trnava_icon"
+					spriteType = "GFX_terrain_trnava"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_salisbury_icon"
-					spriteType = "GFX_terrain_salisbury"
+					name = "terrain_trencin_icon"
+					spriteType = "GFX_terrain_trencin"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_zanzibar_icon"
-					spriteType = "GFX_terrain_zanzibar"
+					name = "terrain_ceske_budejovice_icon"
+					spriteType = "GFX_terrain_ceske_budejovice"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_antananarivo_icon"
-					spriteType = "GFX_terrain_antananarivo"
+					name = "terrain_jihlava_icon"
+					spriteType = "GFX_terrain_jihlava"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_la_plata_icon"
-					spriteType = "GFX_terrain_la_plata"
+					name = "terrain_ostrava_icon"
+					spriteType = "GFX_terrain_ostrava"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_macao_icon"
-					spriteType = "GFX_terrain_macao"
+					name = "terrain_nitra_icon"
+					spriteType = "GFX_terrain_nitra"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_mendoza_icon"
-					spriteType = "GFX_terrain_mendoza"
+					name = "terrain_hradec_kralove_icon"
+					spriteType = "GFX_terrain_hradec_kralove"
 					alwaystransparent = yes
 				}
 				
 				iconType = {
-					name = "terrain_port_of_spain_icon"
-					spriteType = "GFX_terrain_port_of_spain"
+					name = "terrain_kladno_icon"
+					spriteType = "GFX_terrain_kladno"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_rosario_icon"
-					spriteType = "GFX_terrain_rosario"
+					name = "terrain_pribram_icon"
+					spriteType = "GFX_terrain_pribram"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_valparaiso_icon"
-					spriteType = "GFX_terrain_valparaiso"
+					name = "terrain_znaim_icon"
+					spriteType = "GFX_terrain_znaim"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_accra_icon"
-					spriteType = "GFX_terrain_accra"
+					name = "terrain_prostejov_icon"
+					spriteType = "GFX_terrain_prostejov"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_georgetown_icon"
-					spriteType = "GFX_terrain_georgetown"
+					name = "terrain_mlada_boleslav_icon"
+					spriteType = "GFX_terrain_mlada_boleslav"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_lagos_icon"
-					spriteType = "GFX_terrain_lagos"
+					name = "terrain_troppau_icon"
+					spriteType = "GFX_terrain_troppau"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_maracaibo_icon"
-					spriteType = "GFX_terrain_maracaibo"
+					name = "terrain_brux_icon"
+					spriteType = "GFX_terrain_brux"
 					alwaystransparent = yes
 				}
 				
-				iconType = {
-					name = "terrain_quetta_icon"
-					spriteType = "GFX_terrain_quetta"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_skopje_icon"
-					spriteType = "GFX_terrain_skopje"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_lucknow_icon"
-					spriteType = "GFX_terrain_lucknow"
-					alwaystransparent = yes
-				}
 				
 				iconType = {
-					name = "terrain_allahabad_icon"
-					spriteType = "GFX_terrain_allahabad"
+					name = "terrain_brody_icon"
+					spriteType = "GFX_terrain_brody"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_mar_del_plata_icon"
-					spriteType = "GFX_terrain_mar_del_plata"
+					name = "terrain_martin_icon"
+					spriteType = "GFX_terrain_martin"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_bamako_icon"
-					spriteType = "GFX_terrain_bamako"
+					name = "terrain_poprad_icon"
+					spriteType = "GFX_terrain_poprad"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_fez_icon"
-					spriteType = "GFX_terrain_fez"
+					name = "terrain_suceava_icon"
+					spriteType = "GFX_terrain_suceava"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_rabat_icon"
-					spriteType = "GFX_terrain_rabat"
+					name = "terrain_czernowitz_icon"
+					spriteType = "GFX_terrain_czernowitz"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_durban_icon"
-					spriteType = "GFX_terrain_durban"
+					name = "terrain_kolomea_icon"
+					spriteType = "GFX_terrain_kolomea"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_johannesburg_icon"
-					spriteType = "GFX_terrain_johannesburg"
+					name = "terrain_strom_icon"
+					spriteType = "GFX_terrain_strom"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_port_elizabeth_icon"
-					spriteType = "GFX_terrain_port_elizabeth"
+					name = "terrain_tarnopol_icon"
+					spriteType = "GFX_terrain_tarnopol"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_pietermaritzburg_icon"
-					spriteType = "GFX_terrain_pietermaritzburg"
+					name = "terrain_rawa_ruska_icon"
+					spriteType = "GFX_terrain_rawa_ruska"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_bloemfontein_icon"
-					spriteType = "GFX_terrain_bloemfontein"
+					name = "terrain_premissel_icon"
+					spriteType = "GFX_terrain_premissel"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_kimberly_icon"
-					spriteType = "GFX_terrain_kimberly"
+					name = "terrain_zsolna_icon"
+					spriteType = "GFX_terrain_zsolna"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_east_london_icon"
-					spriteType = "GFX_terrain_east_london"
+					name = "terrain_szolyva_icon"
+					spriteType = "GFX_terrain_szolyva"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_batumi_icon"
-					spriteType = "GFX_terrain_batumi"
+					name = "terrain_jaworow_icon"
+					spriteType = "GFX_terrain_jaworow"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_bursa_icon"
-					spriteType = "GFX_terrain_bursa"
+					name = "terrain_resche_icon"
+					spriteType = "GFX_terrain_resche"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_lamia_icon"
-					spriteType = "GFX_terrain_lamia"
+					name = "terrain_tarnow_icon"
+					spriteType = "GFX_terrain_tarnow"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_tampere_icon"
-					spriteType = "GFX_terrain_tampere"
+					name = "terrain_bielitz_biala_icon"
+					spriteType = "GFX_terrain_bielitz_biala"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_arensburg_icon"
-					spriteType = "GFX_terrain_arensburg"
+					name = "terrain_drohobych_icon"
+					spriteType = "GFX_terrain_drohobych"
 					alwaystransparent = yes
 				}
-				
 				iconType = {
-					name = "terrain_dorpat_icon"
-					spriteType = "GFX_terrain_dorpat"
+					name = "terrain_neusandez_icon"
+					spriteType = "GFX_terrain_neusandez"
 					alwaystransparent = yes
 				}
 				
-				iconType = {
-					name = "terrain_mitau_icon"
-					spriteType = "GFX_terrain_mitau"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_pernau_icon"
-					spriteType = "GFX_terrain_pernau"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_adana_icon"
-					spriteType = "GFX_terrain_adana"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_antalya_icon"
-					spriteType = "GFX_terrain_antalya"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_antep_icon"
-					spriteType = "GFX_terrain_antep"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_kars_icon"
-					spriteType = "GFX_terrain_kars"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_kirkuk_icon"
-					spriteType = "GFX_terrain_kirkuk"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_malatya_icon"
-					spriteType = "GFX_terrain_malatya"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_mersin_icon"
-					spriteType = "GFX_terrain_mersin"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_rize_icon"
-					spriteType = "GFX_terrain_rize"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_trabzond_icon"
-					spriteType = "GFX_terrain_trabzond"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_zonguldak_icon"
-					spriteType = "GFX_terrain_zonguldak"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_kuwait_icon"
-					spriteType = "GFX_terrain_kuwait"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_rodos_icon"
-					spriteType = "GFX_terrain_rodos"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_abu_dhabi_icon"
-					spriteType = "GFX_terrain_abu_dhabi"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_ajdabiya_icon"
-					spriteType = "GFX_terrain_ajdabiya"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_benghazi_icon"
-					spriteType = "GFX_terrain_benghazi"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_jaghbub_icon"
-					spriteType = "GFX_terrain_jaghbub"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_jeddah_icon"
-					spriteType = "GFX_terrain_jeddah"
-					alwaystransparent = yes
-				}
 				
-				iconType = {
-					name = "terrain_manama_icon"
-					spriteType = "GFX_terrain_manama"
-					alwaystransparent = yes
-				}
 				
 				# VANILLA
-				
+
 				iconType = {
 					name = "flooded_icon"
-					spriteType = "GFX_modifiers_flooded_icon"		
+					spriteType = "GFX_modifiers_flooded_icon"
+					position = { x = 0 y = 0 }
+					Orientation = "UPPER_LEFT"			
 				}
 
 				iconType = {
@@ -3080,49 +2853,61 @@ guiTypes = {
 				name = "modifiers_mud_icon"
 				position = { x = 0 y= 0 }
 				spriteType = "GFX_modifiers_mud_icon"
-				Orientation = "CENTER"
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType = {
+				name = "modifiers_snow_icons"
+				position = { x = 0 y= 0 }
+				spriteType = "GFX_modifiers_snow_icons"
+				Orientation = "UPPER_LEFT"
+				frame = 1
 			}
 
 			iconType = {
-				name = "impassability_icon"
-				position = { x = 50 y= 0 }
-				spriteType = "GFX_impassable_icon"
-				Orientation = "CENTER"
+				name = "modifiers_weather_icons"
+				position = { x = 0 y= 0 }
+				spriteType = "GFX_modifiers_weather_icons"
+				Orientation = "UPPER_LEFT"
+				frame = 1
 			}
 
 			iconType = {
 				name = "temperature_icons"
 				position = { x = 0 y= 0 }
 				spriteType = "GFX_temperature_icons"
-				Orientation = "CENTER"
+				Orientation = "UPPER_LEFT"
 				frame = 1				
 			}
-			
+
 			iconType = {
-				name = "modifiers_weather_icons"
-				position = { x = 30 y= 0 }
-				spriteType = "GFX_modifiers_weather_icons"
-				Orientation = "CENTER"
-				frame = 1
-				#centerposition = yes
+				name = "impassability_icon"
+				position = { x = 0 y= 0 }
+				spriteType = "GFX_impassable_icon"
+				Orientation = "UPPER_LEFT"
 			}
+			
+			
 			
 			gridBoxType = {
 				name = "dynamic_modifiers_grid"
-				position = { x = 362 y = 68 }
+				position = { x = 423 y = 71 }
 				size = { width = 0 height = 0 }
 				format = "LOWER_LEFT"
-				slotsize = { width = 0 height = 47 }
+				slotsize = { width = 40 height = 47 }
 				max_slots_vertical = 1
 			}
 			
+			
+			
+			
 			gridBoxType = {
 				name = "province_building_entries"
-				position = { x = 12 y = 52 }
+				position = { x = -2 y = 48 }
 				size = { width = 480 height = 90%% }
 				format = "UPPER_LEFT"
-				slotsize = { width = 130 height = 54 }
-				max_slots_horizontal = 3
+				slotsize = { width = 109 height = 54 }
+				max_slots_horizontal = 4
 			}
 			
 			buttonType = {
@@ -3144,17 +2929,26 @@ guiTypes = {
 				position = { x=15 y= -6 }	
 			}				
 			
+			
 		}	
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -36 y = 11 }
+			position = { x = -4 y = 12 }
 			quadTextureSprite ="GFX_closebutton_small"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
+		}
+
+		buttonType = {
+			name = "scorched_earth_state_button"
+			position = { x = -31 y = 135 }
+			quadTextureSprite ="GFX_scorched_earth"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_RIGHT"
 		}
 	}
 	
@@ -3166,14 +2960,14 @@ guiTypes = {
 		guibuttonType = {
 			name = "core_country_flag"
 			quadTextureSprite ="GFX_flag_small2"
-			position = { x= 0 y = 0 }
+			position = { x= 0 y = 1 }
 			#Orientation = "UPPER_LEFT"
 		}
 		
 		iconType ={
 			name ="core_flag_border"
 			quadTextureSprite = "GFX_small_flag_frame_thin"
-			position = { x= -2 y = -1 }
+			position = { x= -3 y = -1 }
 			alwaystransparent = yes
 		}
 	}
@@ -3186,20 +2980,20 @@ guiTypes = {
 		
 		background = {
 			name = "Background"
-			spriteType ="GFX_building_entry_stateview"
+			spriteType ="GFX_building_standing_entry_stateview"
 		}
 		
 		iconType = {
 			name = "level_bg"
-			position = { x=65 y=11 }	
-			spriteType = "GFX_generic_text_bg_60"
+			position = { x=5 y=60 }	
+			spriteType = "GFX_generic_text_bg_48"
 		}
 		
 		instantTextboxType = {
 			name = "level"
-			position = { x = 45 y = 14 }
+			position = { x = -1 y = 63 }
 			font = "hoi_20b"
-			maxWidth = 100
+			maxWidth = 60
 			maxHeight = 20
 			format = center
 			alwaystransparent = yes
@@ -3207,14 +3001,14 @@ guiTypes = {
 		
 		buttonType = {
 			name = "building_picture"
-			position = { x = 13 y = 3 }
+			position = { x = 12 y = 5 }
 			quadTextureSprite ="GFX_buildings_strip"
 		}
 		
 		iconType = {
 			name = "damage_bar"
 			spriteType = "GFX_damage_bar"
-			position = { x=10 y=36 }
+			position = { x=10 y=41 }
 			rotation = 1.5708		
 		}	
 	}
@@ -3272,13 +3066,13 @@ guiTypes = {
 		
 		iconType = {
 			name = "level_bg"
-			position = { x=65 y=11 }	
-			spriteType = "GFX_generic_text_bg_60"
+			position = { x=58 y=11 }	
+			spriteType = "GFX_generic_text_bg_48"
 		}
 		
 		instantTextboxType = {
 			name = "level"
-			position = { x = 45 y = 14 }
+			position = { x = 32 y = 14 }
 			font = "hoi_20b"
 			maxWidth = 100
 			maxHeight = 100
@@ -3288,14 +3082,14 @@ guiTypes = {
 
 		buttonType = {
 			name = "building_picture"
-			position = { x = 13 y = 3 }
+			position = { x = 10 y = 3 }
 			quadTextureSprite ="GFX_buildings_strip"
 		}
 		
 		iconType = {
 			name = "damage_bar"
 			spriteType = "GFX_damage_bar"
-			position = { x=10 y=39  }
+			position = { x=9 y=38  }
 			rotation = 1.5708		
 		}
 	}
@@ -3315,7 +3109,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 70 y = 12 }
+			position = { x = 70 y = 11 }
 			font = "hoi_20b"
 			maxWidth = 37
 			maxHeight = 18
@@ -3393,7 +3187,7 @@ guiTypes = {
 		
 		iconType = {
 			name = "flag"
-			position = { x = 18 y = 45 }
+			position = { x = 25 y = 25 }
 			quadTextureSprite ="GFX_mapicon_unit_flag_stripe"
 			orientation = "UPPER_LEFT"
 		}
