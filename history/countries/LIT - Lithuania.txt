@@ -1,4 +1,4 @@
-﻿capital = 96
+capital = 96
 
 oob = "LIT"
 if = {
@@ -94,56 +94,6 @@ set_popularities = {
     valkist = 0
 }
 
-#create_country_leader = {
-#	name = "Antanas Smetona"
-#	desc = "POLITICS_ANTANAS_SMETONA_DESC"
-#	picture = "GFX_Portrait_lithuania_antanas_smetona"
-#	expire = "1965.1.1"
-#	ideology = paternal_autocrat_subtype
-#	traits = {
-#		#
-#	}
-#}
-
-create_country_leader = {
-	name = "Stanisław Narutowicz"
-	desc = "POLITICS_PROTECTORATE_DESC"
-	picture = "Portrait_Lithuania_Stanislaw_Narutowicz.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Antanas Snieckus"
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Augustinas Voldemaras"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_LIT_Augustinas_Voldemaras.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-create_navy_leader = {
-	name = "Antanas Kaskelis"
-		picture = "Portrait_LIT_Antanas_Kaskelis.tga"
-	traits = { spotter }
-	skill = 2
-}
-
 ### VARIANTS ###
 # 1936 Start #
 if = {
@@ -201,3 +151,8 @@ if = {
 		obsolete = yes
 	}
 }
+
+recruit_character = LIT_Stanisław_Narutowicz
+recruit_character = LIT_Antanas_Snieckus
+recruit_character = LIT_Augustinas_Voldemaras
+recruit_character = LIT_Antanas_Kaskelis
