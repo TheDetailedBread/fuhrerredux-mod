@@ -2277,16 +2277,14 @@ country_event = {
 		remove_ideas = DEN_danish_republicanism_idea
 		hidden_effect = {
 			remove_ideas = DEN_danish_republicanism1_idea
-			create_country_leader = {
-				name = "Thorvald Stauning"
-				desc = "POLITICS_THORVALD_STAUNING_DESC"
-				picture = "Portrait_Denmark_Thorvald_Stauning_fx.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = DEN_Thorvald_Stauning
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
 			set_country_flag = DEN_republic_flag
 		}
 	}
@@ -2316,56 +2314,46 @@ country_event = {
 			set_country_flag = coalition_market_liberal
 			set_country_flag = coalition_social_conservative
 			set_country_flag = coalition_paternal_autocrat
-			create_country_leader = {
-				name = "Christian X"
-				desc = "POLITICS_CHRISTIAN_X_DESC"
-				picture = "Portrait_Denmark_Christian_X.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Christian X"
-				desc = "POLITICS_CHRISTIAN_X_DESC"
-				picture = "Portrait_Denmark_Christian_X.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Christian X"
-				desc = "POLITICS_CHRISTIAN_X_DESC"
-				picture = "Portrait_Denmark_Christian_X.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Christian X"
-				desc = "POLITICS_CHRISTIAN_X_DESC"
-				picture = "Portrait_Denmark_Christian_X.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Christian X"
-				desc = "POLITICS_CHRISTIAN_X_DESC"
-				picture = "Portrait_Denmark_Christian_X.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = DEN_Christian_X
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = DEN_Christian_X
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = DEN_Christian_X
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = DEN_Christian_X
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = DEN_Christian_X
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			set_country_flag = DEN_king_christian_x_flag
 			add_ideas = DEN_Arne_Soerensen_hog_ade
 			add_ideas = DEN_J_Christmas_Moeller_for_sco
@@ -2567,16 +2555,14 @@ country_event = {
 		add_popularity = { ideology = social_liberal popularity = 0.05 }
 		add_popularity = { ideology = market_liberal popularity = 0.02 }
 		hidden_effect = {
-			create_country_leader = {
-				name = "Carl Theodor Zahle"
-				desc = "POLITICS_CARL_THEODOR_ZAHLE_DESC"
-				picture = "Portrait_Denmark_Carl_Theodore_Zahle.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = DEN_Carl_Theodor_Zahle
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 			add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
 			set_country_flag = coalition_market_liberal
 			clr_country_flag = coalition_vanguardist

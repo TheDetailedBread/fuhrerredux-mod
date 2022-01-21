@@ -642,74 +642,55 @@ country_event = {
 		add_political_power = -20
 		add_stability = -0.05
 		hidden_effect = {
-			if = {
-				limit = {
-					SWE = {
-						has_government = social_conservative
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = social_conservative_subtype
-					traits = {
-						#
-					}
-				}
-			}
-			if = {
-				limit = {
-					SWE = {
-						has_government = authoritarian_democrat
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {
-						#
-					}
-				}
-			}
-			if = {
-				limit = {
-					SWE = {
-						has_government = paternal_autocrat
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = {
-						#
-					}
-				}
-			}
-			if = {
-				limit = {
-					SWE = {
-						has_government = national_populist
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = national_populist_subtype
-					traits = {
-						#
-					}
-				}
-			}
+      retire_character = SWE_Gustaf_V
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+			add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 			country_event = { days = 10 id = sweden.21 }
 		}
 	}
@@ -1497,74 +1478,55 @@ country_event = {
 		add_political_power = -20
 		add_stability = -0.05
 		hidden_effect = {
-			if = {
-				limit = {
-					SWE = {
-						has_government = social_conservative
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = social_conservative_subtype
-					traits = {
-						#
-					}
-				}
-			}
-			if = {
-				limit = {
-					SWE = {
-						has_government = authoritarian_democrat
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {
-						#
-					}
-				}
-			}
-			if = {
-				limit = {
-					SWE = {
-						has_government = paternal_autocrat
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = {
-						#
-					}
-				}
-			}
-			if = {
-				limit = {
-					SWE = {
-						has_government = national_populist
-					}
-				}
-				create_country_leader = {
-					name = "Gustaf VI Adolf"
-					desc = ""
-					picture = "Portrait_Sweden_Gustaf_VI.tga"
-					expire = "1965.1.1"
-					ideology = national_populist_subtype
-					traits = {
-						#
-					}
-				}
-			}
+      retire_character = SWE_Gustaf_V
+			add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+			add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = SWE_Gustaf_VI_Adolf
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 			country_event = { days = 10 id = sweden.45 }
 		}
 	}
@@ -1608,16 +1570,14 @@ country_event = {
 				relation = guarantee
 				active = no
 			}
-			create_country_leader = {
-				name = "Per Engdahl"
-				desc = ""
-				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = SWE_Per_Engdahl
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 			clr_country_flag = coalition_social_liberal
 			clr_country_flag = coalition_market_liberal
 			clr_country_flag = coalition_social_conservative
@@ -1860,22 +1820,23 @@ country_event = {
 						}
 					}
 				}
-				create_country_leader = {
-					name = "Per Albin Hansson"
-					desc = "POLITICS_PER_ALBIN_HANSSON_DESC"
-					picture = "Portrait_Sweden_Per_Albin_Hansson.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = { }
-				}
-				create_country_leader = {
-					name = "Gösta Bagge"
-					desc = "POLITICS_GOSTA_BAGGE_DESC"
-					picture = "Portrait_Sweden_Gosta_Bagge.tga"
-					expire = "1965.1.1"
-					ideology = social_conservative_subtype
-					traits = { }
-				}
+        retire_character = SWE_Gustaf_V
+        add_country_leader_role = {
+          character = SWE_Per_Albin_Hansson
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = SWE_Gosta_Bagge
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -2756,16 +2717,14 @@ country_event = {
 		ai_chance = { base = 25 }
 		add_stability = -0.08
 		hidden_effect = {
-			create_country_leader = {
-				name = "Per Engdahl"
-				desc = ""
-				picture = "Portrait_Sweden_Pehr_Engdahl.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = SWE_Per_Engdahl
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
