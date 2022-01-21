@@ -1673,15 +1673,13 @@ country_event = { #factionsomglol
         name = cze.146.a
         ai_chance = { factor = 60 }
         retire_country_leader = yes
-        create_country_leader = {
-            name = "Jan Šverma"
-            desc = "POLITICS_JAN_SVERMA_DESC"
-            picture = "JanSverma.tga"
-            expire = "1965.1.1"
+        cadd_country_leader_role = {
+          character = CZE_Jan_Sverma
+          promote_leader = yes
+          country_leader = {
             ideology = collectivist_subtype
-            traits = {
-                #
-            }
+            traits = {}
+          }
         }
         hidden_effect = {
             remove_ideas_with_trait = head_of_government
@@ -1699,16 +1697,13 @@ country_event = { #factionsomglol
     option = {
         name = cze.147.a
         ai_chance = { factor = 60 }
-        retire_country_leader = yes
-        create_country_leader = {
-            name = "Ludvík Svoboda"
-            desc = "POLITICS_LUDVIK_SVOBODA_DESC"
-            picture = "Svoboda.tga"
-            expire = "1965.1.1"
+        add_country_leader_role = {
+          character = CZE_Ludvik_Svoboda
+          promote_leader = yes
+          country_leader = {
             ideology = collectivist_subtype
-            traits = {
-                #
-            }
+            traits = {}
+          }
         }
         hidden_effect = {
             remove_ideas_with_trait = head_of_government
@@ -1719,20 +1714,17 @@ country_event = { #factionsomglol
     option = {
         name = cze.147.b
         ai_chance = { factor = 50 }
-        retire_country_leader = yes
-        create_country_leader = {
-            name = "Richard Tesařík"
-            desc = "POLITICS_RICHARD_TESARIK_DESC"
-            picture = "Tesarik.tga"
-            expire = "1965.1.1"
+        add_country_leader_role = {
+          character = CZE_Richard_Tesařik
+          promote_leader = yes
+          country_leader = {
             ideology = collectivist_subtype
-            traits = {
-                #
-            }
+            traits = {}
+          }
         }
         hidden_effect = {
-            remove_ideas_with_trait = head_of_government
-            }
+          remove_ideas_with_trait = head_of_government
+        }
         add_ideas = CZE_Bohuslav_Vrbensky_hog_col
     }
 }
@@ -1979,15 +1971,13 @@ country_event = { #waityo
     option = {
         name = cze.166.a
         kill_country_leader = yes
-        create_country_leader = {
-            name = "Emanuel Moravec"
-            desc = "POLITICS_EMANUEL_MORAVEC_DESC"
-            picture = "EmanuelMoravec.tga"
-            expire = "1965.1.1"
-            ideology = national_populist_subtype
-            traits = {
-            #
-            }
+        add_country_leader_role = {
+          character = CZE_Emanuel_Moravec
+          promote_leader = yes
+          country_leader = {
+            ideology = CZE_Emanuel_Moravec
+            traits = {}
+          }
         }
         hidden_effect = {
             remove_ideas_with_trait = head_of_government
@@ -1997,15 +1987,13 @@ country_event = { #waityo
     option = {
         name = cze.166.b
         kill_country_leader = yes
-        create_country_leader = {
-            name = "Jan Rys-Rozsévač"
-            desc = "POLITICS_JAN_RYS_DESC"
-            picture = "JanRys.tga"
-            expire = "1965.1.1"
+        add_country_leader_role = {
+          character = CZE_Jan_Rys_Rozsevač
+          promote_leader = yes
+          country_leader = {
             ideology = valkist_subtype
-            traits = {
-            #
-            }
+            traits = {}
+          }
         }
 		add_ideas = one_party_dictatorship
         set_politics = {
@@ -2209,15 +2197,13 @@ country_event = { #waityo
     option = {
         name = cze.176.a
         kill_country_leader = yes
-        create_country_leader = {
-            name = "Jan Rys-Rozsévač"
-            desc = "POLITICS_JAN_RYS_DESC"
-            picture = "JanRys.tga"
-            expire = "1965.1.1"
+        add_country_leader_role = {
+          character = CZE_Jan_Rys_Rozsevač
+          promote_leader = yes
+          country_leader = {
             ideology = valkist_subtype
-            traits = {
-            #
-            }
+            traits = {}
+          }
         }
 		add_ideas = one_party_dictatorship
         set_politics = {
@@ -2254,15 +2240,13 @@ country_event = { #waityo
         name = cze.177.a
         add_political_power = -50
         kill_country_leader = yes
-        create_country_leader = {
-            name = "Emanuel Moravec"
-            desc = "POLITICS_EMANUEL_MORAVEC_DESC"
-            picture = "EmanuelMoravec.tga"
-            expire = "1965.1.1"
+        add_country_leader_role = {
+          character = CZE_Emanuel_Moravec
+          promote_leader = yes
+          country_leader = {
             ideology = national_populist_subtype
-            traits = {
-            #
-            }
+            traits = {}
+          }
         }
 		add_ideas = one_party_dictatorship
         set_politics = {
