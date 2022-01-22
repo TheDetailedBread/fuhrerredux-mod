@@ -1,4 +1,4 @@
-﻿capital = 327
+capital = 327
 
 oob = "PHI"
 
@@ -57,10 +57,6 @@ add_ideas = {
 	PHI_agriculture_economy
 	PHI_marxist_professors
 
-	PHI_Jose_P_Laurel_hog_ade
-	PHI_Ferdinand_Marcos_for_ade
-	PHI_Serafin_Fausto_eco_ade
-	PHI_Benigno_Aquino_Sr_sec_ade
 	presidential_republic
 }
 
@@ -85,164 +81,6 @@ set_popularities = {
     authoritarian_democrat = 22
     national_populist = 4
     valkist = 4
-}
-
-recruit_character = PHI_Pedro_Abad_Santos
-recruit_character = PHI_Luis_Taruc
-recruit_character = PHI_Crisanto_Evangelista
-recruit_character = PHI_Juan_Sumulong
-recruit_character = PHI_Elpidio_Quirino
-recruit_character = PHI_Manuel_Roxas
-recruit_character = PHI_Manuel_Luis_Quezón
-recruit_character = PHI_Jose_P_Laurel
-recruit_character = PHI_Basilio_J._Valdez
-recruit_character = PHI_Benigno_Ramos
-
-### Field Marshal
-
-create_field_marshal = {
-	name = "Vicente P. Lim"
-	picture = "Portrait_Philippines_Vicente_P_Lim.tga"
-	traits = { career_officer brilliant_strategist infantry_officer trickster }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-} 
-create_field_marshal = {
-	name = "Basilio J. Valdez"
-	picture = "Portrait_Philippines_Basilio_J_Valdez.tga"
-	traits = { career_officer media_personality organisational_leader }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 2
-	planning_skill = 3
-    logistics_skill = 2
-}
-
-
-# Corps Commander
-create_corps_commander = {
-	name = "Alfredo M. Santos"
-	picture = "Portrait_Philippines_Alfredo_M_Santos.tga"
-	traits = { trickster trait_engineer hill_fighter skilled_staffer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Paulino Santos"
-	picture = "Portrait_Philippines_Paulino_Santos.tga"
-	traits = { brilliant_strategist infantry_leader jungle_rat skilled_staffer }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 3
-}
-create_corps_commander = { 
-	name = "Mateo Capinpin"
-	picture = "Portrait_Philippines_Mateo_Capinpin.tga"
-	traits = { trait_engineer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Rafael Jalandoni"
-	picture = "Portrait_Philippines_Rafael_Jalandoni.tga"
-	traits = { war_hero career_officer trait_mountaineer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Manuel F. Cabal"
-	picture = "Portrait_Philippines_Manuel_F_Cabal.tga"
-	traits = { brilliant_strategist trickster }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 5
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Carlos P. Romulo"
-	picture = "Portrait_Philippines_Carlos_P_Romulo.tga"
-	traits = { media_personality infantry_officer war_hero skilled_staffer }
-	skill = 1
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Salipada Pendatun"
-	picture = "Portrait_Philippines_Salipada_Pendatun.tga"
-	traits = { armor_officer commando }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Ruperto Kangleon"
-	picture = "Portrait_Philippines_Ruperto_Kangleon.tga"
-	traits = { infantry_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Leopoldo Salcedo"
-	picture = "Portrait_Philippines_Leopoldo_Salcedo.tga"
-	traits = { artillery_expert }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Santiago Nuval"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
-	traits = { bold aviation_enthusiast spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-create_navy_leader = {
-	name = "Eustacio Orobia"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
-	traits = { blue_water_expert }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-create_navy_leader = {
-	name = "Jose V. Andrada"
-	portrait_path = "gfx/leaders/JAP/Portrait_Japan_Generic_navy_3.dds"
-	traits = { superior_tactician navy_career_officer gunnery_expert }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 5
-	coordination_skill = 3
 }
 
 if = {
@@ -336,3 +174,74 @@ if = {
 		}
 	}
 }
+
+recruit_character = PHI_Luis_Taruc
+recruit_character = PHI_Pedro_Abad_Santos
+recruit_character = PHI_Crisanto_Evangelista
+recruit_character = PHI_Lope_K_Santos
+recruit_character = PHI_Elpidio_Quirino
+recruit_character = PHI_Manuel_Roxas
+recruit_character = PHI_Manuel_Luis_Quezon
+recruit_character = PHI_Jose_P_Laurel
+recruit_character = PHI_Basilio_J_Valdez
+recruit_character = PHI_Emilio_Aguinaldo
+recruit_character = PHI_Benigno_Ramos
+recruit_character = PHI_Vicente_P_Lim
+recruit_character = PHI_Alfredo_M_Santos
+recruit_character = PHI_Paulino_Santos
+recruit_character = PHI_Mateo_Capinpin
+recruit_character = PHI_Rafael_Jalandoni
+recruit_character = PHI_Manuel_F_Cabal
+recruit_character = PHI_Carlos_P_Romulo
+recruit_character = PHI_Salipada_Pendatun
+recruit_character = PHI_Ruperto_Kangleon
+recruit_character = PHI_Leopoldo_Salcedo
+recruit_character = PHI_Santiago_Nuval
+recruit_character = PHI_Eustacio_Orobia
+recruit_character = PHI_Jose_V_Andrada
+recruit_character = PHI_Juan_Sumulong
+recruit_character = PHI_Juan_Feleo
+recruit_character = PHI_J_Antonio_Araneta
+recruit_character = PHI_Sergio_P_Osmena
+recruit_character = PHI_Eulogio_Rodriguez_Sr
+recruit_character = PHI_Gregorio_Aglipay
+recruit_character = PHI_Benigno_Aquino_Sr
+recruit_character = PHI_Casto_Alejandrino
+recruit_character = PHI_Rafael_Liwanag
+recruit_character = PHI_Joaquin_Elizalde
+recruit_character = PHI_Quentin_Paredes
+recruit_character = PHI_Manuel_Quadrino
+recruit_character = PHI_Ferdinand_E_Marcos
+recruit_character = PHI_Herminegildo_Cruz
+recruit_character = PHI_Carlos_P_Garcia
+recruit_character = PHI_Diosdado_P_Macapagal
+recruit_character = PHI_Antonio_de_las_Alas
+recruit_character = PHI_Ramon_Quisumbing
+recruit_character = PHI_Ramon_Magsaysay
+recruit_character = PHI_Jose_G_David
+recruit_character = PHI_Serafin_Fausto
+recruit_character = PHI_Ramon_A_Alcaraz
+recruit_character = PHI_Guillermo_Capadocia
+recruit_character = PHI_Mariano_Balgos
+recruit_character = PHI_Jose_M_Crisol
+recruit_character = PHI_Pardo_de_Tavera
+recruit_character = PHI_Alberto_Ramos
+recruit_character = PHI_Leoncio_S_Tan
+recruit_character = PHI_Roman_Apolinario
+recruit_character = PHI_Teofisto_Sison
+recruit_character = PHI_Tirano_Craveza
+recruit_character = PHI_Jose_Yulo
+recruit_character = PHI_Jose_G_Lukban
+recruit_character = PHI_Augusto_Jurado
+recruit_character = PHI_Quirinto_P_Evangelista
+recruit_character = PHI_Benito_N_Ebuen
+recruit_character = PHI_Heraclio_Alano
+recruit_character = PHI_Mateo_M_Capinpin
+recruit_character = PHI_Joe_Rogers
+recruit_character = PHI_Basilio_Fernando
+recruit_character = PHI_Edwin_Andrews
+recruit_character = PHI_Pelagio_Cruz
+recruit_character = PHI_Victor_H_Dizon
+recruit_character = PHI_Felix_Pestana
+recruit_character = PHI_Jesus_Lava
+recruit_character = PHI_Legislative_Assembly
