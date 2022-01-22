@@ -379,3 +379,20 @@ news_event = { # Dutch Exiles Joins in Entente
     name = fxnews.20.a
   }
 }
+
+news_event = { # Gunshots in Berlin
+  id = fxnews.21
+  title = fxnews.21.t
+  desc = fxnews.21.d
+  picture = GFX_news_event_GER_dressler
+  major = yes
+  is_triggered_only = yes
+
+  show_major = {
+    NOT = { tag = GER }
+  }
+
+  option = {
+    name = fxnews.21.a
+  }
+}
