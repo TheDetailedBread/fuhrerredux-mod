@@ -895,8 +895,8 @@ leader_traits = {
 
 	sec_man_of_the_people = {
 		stability_factor = 0.1
-		resistance_tick = -0.2
-
+    resistance_decay_on_our_occupied_states = 0.5
+    
 		random = no
 	}
 
@@ -936,7 +936,7 @@ leader_traits = {
 
 	sec_secret_police_chief = {
 		political_power_gain = 0.1
-		resistance_tick = -0.15
+    compliance_growth_on_our_occupied_states = 0.1
 		encryption_factor = 0.05
 		decryption = 0.5
 

@@ -56,7 +56,7 @@ PHI_seato_decisions = {
             country_exists = FROM
             NOT = { is_in_faction_with = FROM }
             if = {
-                limit = { FROM = SIA }
+                limit = { FROM = { tag = SIA } }
                 SIA = { has_country_flag = PHI_can_invite }
             }
         }

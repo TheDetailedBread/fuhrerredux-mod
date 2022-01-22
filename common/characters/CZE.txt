@@ -170,6 +170,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/CZE/Portrait_CZE_Ludvik_Svoboda.tga"
+				small = "gfx/interface/ministers/CZE/CZE_Ludvik_Svoboda.tga"
 			}
 		}
 		field_marshal = {
@@ -182,6 +183,17 @@ characters = {
 			defense_skill = 1
 			planning_skill = 4
 			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = CZE_Ludvik_Svoboda_cos_van
+			traits = {
+				chief_of_staff
+				vanguardist
+				cos_school_of_manoeuvre
+			}
 		}
 	}
 	CZE_Karel_Klapalek = {
@@ -1103,25 +1115,6 @@ characters = {
 				security_minister
 				national_populist
 				sec_media_magnate
-			}
-		}
-	}
-	CZE_Ludvik_Svoboda = {
-		name = "Ludvik Svoboda"
-		portraits = {
-			army = {
-				small = "gfx/interface/ministers/CZE/CZE_Ludvik_Svoboda.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_staff
-			available = { can_replace_minister = no }
-			idea_token = CZE_Ludvik_Svoboda_cos_van
-			traits = {
-				chief_of_staff
-				vanguardist
-				cos_school_of_manoeuvre
 			}
 		}
 	}

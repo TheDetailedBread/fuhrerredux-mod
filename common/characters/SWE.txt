@@ -103,11 +103,23 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/SWE/Portrait_SWE_Sven_Olov_Lindholm.tga"
+				small = "gfx/interface/ministers/SWE/SWE_Sven_Olov_Lindholm.tga"
 			}
 		}
 		country_leader = {
 			ideology = valkist_subtype
 			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = SWE_Sven_Olov_Lindholm_for_npo
+			traits = {
+				foreign_minister
+				valkist
+				for_radical_among_moderates
+			}
 		}
 	}
 	SWE_Olof_Thornell = {
@@ -1245,25 +1257,6 @@ characters = {
 				foreign_minister
 				paternal_autocrat
 				for_biased_intellectual
-			}
-		}
-	}
-	SWE_Sven_Olov_Lindholm = {
-		name = "Sven Olov-Lindholm"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SWE/SWE_Sven_Olov_Lindholm.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = { can_replace_minister = no }
-			idea_token = SWE_Sven_Olov_Lindholm_for_npo
-			traits = {
-				foreign_minister
-				national_populist
-				for_radical_among_moderates
 			}
 		}
 	}
