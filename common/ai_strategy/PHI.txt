@@ -102,7 +102,9 @@ PHI_invade_indochina = {
     enable = {
         PHI = {
             any_owned_state = {
-                limit = { is_core_of = ROOT }
+                if = {
+                    limit = { is_core_of = ROOT }
+                }
                 has_full_control_of_state = PREV
             }
         }
@@ -130,7 +132,9 @@ PHI_invade_east_indies = {
     enable = {
         PHI = {
             any_owned_state = {
-                limit = { is_core_of = ROOT }
+                if = {
+                  limit = { is_core_of = ROOT }
+                }
                 has_full_control_of_state = PREV
             }
         }
@@ -164,7 +168,7 @@ PHI_help_civil_war = {
     enable = {
         ROOT = {
             has_war = no
-            NOT = { set_country_flag = USA_union_collapsed }
+            NOT = { has_country_flag = USA_union_collapsed }
             has_socialist_government = no
         }
         PHI = {

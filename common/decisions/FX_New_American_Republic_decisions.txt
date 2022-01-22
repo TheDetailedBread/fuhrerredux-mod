@@ -63,7 +63,6 @@ NAR_the_racial_issue = {
         available = { NAR_is_conducting_operations = no }
         visible = { has_idea = NAR_racial_issue }
         modifier = {
-            production_speed_costal_bunker_factor = 0.15
             production_speed_bunker_factor = 0.15
             weekly_manpower = -10
         }
@@ -394,7 +393,9 @@ NAR_state_reintegration = {
 
         visible = {
             NOT = { country_exists = CLB }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -420,7 +421,9 @@ NAR_state_reintegration = {
 
         visible = {
             NOT = { country_exists = NEE }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -446,7 +449,9 @@ NAR_state_reintegration = {
 
         visible = {
             NOT = { country_exists = SNE }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -472,7 +477,9 @@ NAR_state_reintegration = {
 
         visible = {
             NOT = { country_exists = ORE }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -499,7 +506,9 @@ NAR_state_reintegration = {
 
         visible = {
             NOT = { country_exists = USA }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {

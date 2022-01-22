@@ -227,7 +227,9 @@ USA_state_reintegration = {
 
         visible = {
             NOT = { country_exists = CLB }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -253,7 +255,9 @@ USA_state_reintegration = {
 
         visible = {
             NOT = { country_exists = NEE }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -279,7 +283,9 @@ USA_state_reintegration = {
 
         visible = {
             NOT = { country_exists = NAR }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -305,7 +311,9 @@ USA_state_reintegration = {
 
         visible = {
             NOT = { country_exists = SNE }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
@@ -331,7 +339,9 @@ USA_state_reintegration = {
 
         visible = {
             NOT = { country_exists = ORE }
-            NOT = { is_core_of = ROOT }
+            FROM = {
+                NOT = { is_core_of = ROOT }
+            }
         }
         available = { controls_state = FROM }
         remove_effect = {
