@@ -1,4 +1,4 @@
-﻿capital = 111
+capital = 111
 
 oob = "FIN"
 
@@ -57,10 +57,6 @@ if = {
 add_ideas = {
 	party_pop_0_40
 	limited_conscription
-	FIN_Juho_Sunila_hog_sli
-	FIN_Eljas_Erkko_for_mli
-	FIN_Juho_Sunila_eco_sli
-	FIN_Oskari_Lehtonen_sec_sco
 	parliamentary_republic
 	
 	FIN_finland_marches_on_idea
@@ -92,270 +88,6 @@ set_popularities = {
     paternal_autocrat = 8
     national_populist = 2
     valkist = 2
-}
-
-create_country_leader = {
-	name = "Otto Wille Kuusinen"
-	desc = "POLITICS_OTTO_WILLE_KUUSINEN_DESC"
-	picture = "Portrait_Finland_Otto_Wille_Kuusinen.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Kullervo Manner"
-	desc = "POLITICS_KULLERVO_MANNER_DESC"
-	picture = "Portrait_Finland_Kullervo_Manner.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Oskari Tokoi"
-	desc = "POLITICS_OSKARI_TOKOI_DESC"
-	picture = "Portrait_Finland_Oskari_Tokoi.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Väinö Tanner"
-	desc = "POLITICS_VAINO_TANNER_DESC"
-	picture = "Portrait_Finland_Vaino_Tanner.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Pehr Evind Svinhufvud"
-	desc = "POLITICS_PER_EVIND_SVINHUFVUD_DESC"
-	picture = "Portrait_Finland_Pehr_Evind_Svinhufvud.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Risto Heikki Ryti"
-	desc = "POLITICS_RISTO_HEIKKI_RYTI_DESC"
-	picture = "Portrait_Finland_Risto_Heikki_Ryti.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Pehr Evind Svinhufvud"
-	desc = "POLITICS_PER_EVIND_SVINHUFVUD_DESC"
-	picture = "Portrait_Finland_Pehr_Evind_Svinhufvud.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Carl Gustav Mannerheim"
-	desc = "POLITICS_CARL_GUSTAV_MANNERHEIM_DESC"
-	picture = "Portrait_Finland_Carl_Gustav_Mannerheim.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		hog_field_marshal_baron
-	}
-}
-
-create_country_leader = {
-	name = "Vihtori Kosola"
-	desc = "POLITICS_VIHTORI_KOSOLA_DESC"
-	picture = "Portrait_Finland_Vihtori_Kosola.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Vilho Annala"
-	desc = "POLITICS_VILHO_ANNALA_DESC"
-	picture = "Portrait_Finland_Vilho_Annala.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Vilho Helanen"
-	desc = "POLITICS_VILHO_HELANEN_DESC"
-	picture = "Portrait_Finland_Vilho_Helanen.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Carl Gustav Mannerheim"
-	picture = "Portrait_Finland_Carl_Gustav_Mannerheim.tga"
-	traits = { war_hero defensive_doctrine logistics_wizard }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 5
-	logistics_skill = 4
-}
-
-create_field_marshal = {
-	name = "Karl Lennart Oesch"
-	picture = "Portrait_Finland_Karl_Lennart_Oesch.tga"
-	traits = { organisational_leader brilliant_strategist skilled_staffer organizer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Erik Heinrichs"
-	picture = "Portrait_Finland_Erik_Heinrichs.tga"
-	traits = { career_officer ranger politically_connected }
-	skill = 4
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Vilho Petter Nenonen"
-	picture = "Portrait_Finland_Vilho_Petter_Nenonen.tga"
-	traits = { winter_specialist commando bearer_of_artillery }
-	skill = 3
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Lauri Malmberg"
-	picture = "Portrait_Finland_Lauri_Malmberg.tga"
-	traits = { career_officer skilled_staffer }
-	skill = 3
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Aarne Sihvo"
-	picture = "Portrait_Finland_Aarne_Sihvo.tga"
-	traits = { career_officer skilled_staffer infantry_leader }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Aksel Airo"
-	picture = "Portrait_Finland_Aksel_Airo.tga"
-	traits = { skilled_staffer bearer_of_artillery }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Ruben Lagus"
-	picture = "Portrait_Finland_Ruben_Lagus.tga"
-	traits = { infantry_officer }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Hjalmar Siilasvuo"
-	picture = "Portrait_Finland_Hjalmar_Siilasvuo.tga"
-	traits = { cavalry_officer skilled_staffer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Väinö Valve"
-	picture = "Portrait_Finland_Vaino_Valve.tga"
-	traits = { blockade_runner }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Eero Rahola"
-	picture = "Portrait_Finland_Eero_Rahola.tga"
-	traits = { spotter }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Svante Sundman"
-	picture = "Portrait_Finland_Svante_Sundman.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 1
-}
-
-create_navy_leader = {
-	name = "Eino Iisakki Järvinen"
-	picture = "Portrait_Finland_Eino_Iisakki_Jarvinen.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 1
 }
 
 ### VARIANTS ###
@@ -409,3 +141,81 @@ if = {
 		}
 	}
 }
+
+recruit_character = FIN_Otto_Wille_Kuusinen
+recruit_character = FIN_Kullervo_Manner
+recruit_character = FIN_Oskari_Tokoi
+recruit_character = FIN_Vaino_Tanner
+recruit_character = FIN_Pehr_Evind_Svinhufvud
+recruit_character = FIN_Risto_Heikki_Ryti
+recruit_character = FIN_Carl_Gustav_Mannerheim
+recruit_character = FIN_Vihtori_Kosola
+recruit_character = FIN_Vilho_Annala
+recruit_character = FIN_Vilho_Helanen
+recruit_character = FIN_Karl_Lennart_Oesch
+recruit_character = FIN_Erik_Heinrichs
+recruit_character = FIN_Vilho_Petter_Nenonen
+recruit_character = FIN_Lauri_Malmberg
+recruit_character = FIN_Aarne_Sihvo
+recruit_character = FIN_Aksel_Airo
+recruit_character = FIN_Ruben_Lagus
+recruit_character = FIN_Hjalmar_Siilasvuo
+recruit_character = FIN_Vaino_Valve
+recruit_character = FIN_Eero_Rahola
+recruit_character = FIN_Svante_Sundman
+recruit_character = FIN_Eino_Iisakki_Jarvinen
+recruit_character = FIN_Arvo_Tuominen
+recruit_character = FIN_Tuomas_Hyrskymurto
+recruit_character = FIN_Adolf_Taimi
+recruit_character = FIN_Jaakko_Kivi
+recruit_character = FIN_Karl_August_Fagerholm
+recruit_character = FIN_Juho_Sunila
+recruit_character = FIN_Aimo_Cajander
+recruit_character = FIN_Oskari_Mantere
+recruit_character = FIN_Edwin_Linkomies
+recruit_character = FIN_Juho_Kusti_Paasikivi
+recruit_character = FIN_Paavo_Virkkunen
+recruit_character = FIN_Karl_Fredrik_Wilkama
+recruit_character = FIN_Rafael_Erich
+recruit_character = FIN_Bruno_Salmiala
+recruit_character = FIN_Ville_Pessi
+recruit_character = FIN_Yrjo_Sirola
+recruit_character = FIN_Hannes_Pulkkinen
+recruit_character = FIN_Vaino_Voionmaa
+recruit_character = FIN_Urho_Kekkonen
+recruit_character = FIN_Eljas_Erkko
+recruit_character = FIN_Toivo_Mikael_Kivimaki
+recruit_character = FIN_Aarno_Yrjo_Koskinen
+recruit_character = FIN_Kaarle_Nestor_Rantakari
+recruit_character = FIN_Paavo_Hynninen
+recruit_character = FIN_Arne_Somersalo
+recruit_character = FIN_Eero_Haapalainen
+recruit_character = FIN_Edvard_Gylling
+recruit_character = FIN_Elin_Airamo
+recruit_character = FIN_Frans_Hiilos
+recruit_character = FIN_Hannes_Ryoma
+recruit_character = FIN_Mauno_Pekkala
+recruit_character = FIN_Vaino_Salovaara
+recruit_character = FIN_Albin_Manner
+recruit_character = FIN_Eemil_Linna
+recruit_character = FIN_Juho_Vennola
+recruit_character = FIN_Risto_Ryti
+recruit_character = FIN_Kyosti_Jarvinen
+recruit_character = FIN_Oskari_Lehtonen
+recruit_character = FIN_Jarl_Lundqvist
+recruit_character = FIN_Karl_Alfred_Paloheimo
+recruit_character = FIN_Jussi_Muilu
+recruit_character = FIN_Rafael_Haarla
+recruit_character = FIN_Akseli_Anttila
+recruit_character = FIN_Eino_Rahja
+recruit_character = FIN_Evert_Eloranta
+recruit_character = FIN_Toivo_Alavirta
+recruit_character = FIN_Kaarlo_Heinonen
+recruit_character = FIN_Vaino_Hakkila
+recruit_character = FIN_Juho_Niukkanen
+recruit_character = FIN_Urho_Castren
+recruit_character = FIN_Hjalmar_Procope
+recruit_character = FIN_Elias_Simojoki
+recruit_character = FIN_Martti_Pihkala
+recruit_character = FIN_Hugo_Osterman
+recruit_character = FIN_Vaino_Vuori
