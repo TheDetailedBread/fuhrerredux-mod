@@ -174,7 +174,7 @@ characters = {
 		name = "Neil Ritchie"
 		portraits = {
 			army = {
-				large = "gfx/leaders/ENG/Portrait_ENG_Neil_Ritchie.tga"
+				large = "gfx/leaders/ENG/Portrait_ENG_Neil_Ritchie_fx.tga"
 			}
 		}
 		corps_commander = {
@@ -237,22 +237,6 @@ characters = {
 			skill = 2
 			attack_skill = 3
 			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 4
-		}
-	}
-	ENG_William_Platt = {
-		name = "William Platt"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ENG/Portrait_ENG_William_Platt.tga"
-			}
-		}
-		corps_commander = {
-			traits = { }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 1
 			planning_skill = 4
 			logistics_skill = 4
 		}
@@ -390,7 +374,7 @@ characters = {
 		name = "Henry Pownall"
 		portraits = {
 			army = {
-				large = "gfx/leaders/ENG/Portrait_ENG_Henry_Pownall.tga"
+				large = "gfx/leaders/ENG/Portrait_ENG_Henry_Pownall_fx.tga"
 			}
 		}
 		corps_commander = {
@@ -402,25 +386,6 @@ characters = {
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 1
-		}
-	}
-	ENG_John_Vereker_Lord_Gort = {
-		name = "John Vereker Lord Gort"
-		portraits = {
-			army = {
-				large = "gfx/leaders/ENG/Portrait_ENG_John_Vereker_Lord_Gort.tga"
-			}
-		}
-		corps_commander = {
-			traits = {
-				politically_connected
-				trait_cautious
-			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 3
 		}
 	}
 	ENG_Henry_Wilson = {
@@ -504,7 +469,7 @@ characters = {
 		name = "Miles Dempsey"
 		portraits = {
 			army = {
-				large = "gfx/leaders/ENG/Portrait_ENG_Miles_Dempsey.tga"
+				large = "gfx/leaders/ENG/Portrait_ENG_Miles_Dempsey_fx.tga"
 				small = "gfx/interface/ministers/ENG/ENG_Miles_Dempsey.tga"
 			}
 		}
@@ -711,7 +676,7 @@ characters = {
 		name = "Charles Forbes"
 		portraits = {
 			navy = {
-				large = "gfx/leaders/ENG/Portrait_ENG_Charles_Forbes.tga"
+				large = "gfx/leaders/ENG/Portrait_ENG_Charles_Forbes_fx.tga"
 			}
 		}
 		navy_leader = {
@@ -1775,11 +1740,15 @@ characters = {
 		name = "John Vereker"
 		portraits = {
 			army = {
+				large = "gfx/leaders/ENG/Portrait_ENG_John_Vereker_fx.tga"
 				small = "gfx/interface/ministers/ENG/ENG_John_Vereker.tga"
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = {
+				politically_connected
+				trait_cautious
+			}
 			skill = 3
 			attack_skill = 3
 			defense_skill = 1
