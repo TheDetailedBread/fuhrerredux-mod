@@ -1,4 +1,4 @@
-﻿capital = 202 #Kiev
+capital = 202 #Kiev
 
 oob = "UKR_1936"
 
@@ -69,10 +69,7 @@ add_ideas = {
 	party_pop_0_30
 	UKR_famine_spook
 	UKR_language_problem
-	UKR_Andrey_Livytskyi_hog_sde
-	UKR_Nikolai_Skrypnik_for_sde
-	UKR_Nikolai_Shrag_eco_sli
-	UKR_Ivan_Feshenko_Chopovsky_sec_sli
+	
 	parliamentary_republic
 }
 
@@ -97,193 +94,87 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "The Central Committee"
-	picture = "Portrait_UKR_central_committee.dds"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "The Central Committee"
-	picture = "Portrait_UKR_central_committee.dds"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "The Central Committee"
-	picture = "Portrait_UKR_central_committee.dds"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Andriy Livytskyi"
-	desc = "POLITICS_ANDRIY_LIVYTSKYI_DESC"
-	picture = "Portrait_Ukraine_Andriy_Livytskyi.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Serhij Jefremov"
-	desc = "POLITICS_SERHIJ_JEFREMOV_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_2.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Serhiy Ostapenko"
-	desc = "POLITICS_SERHIY_OSTAPENKO_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_12.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Oleksander Shulhyn"
-	desc = "POLITICS_OLEKSANDER_SHULHYN_DESC"
-	picture = "Portrait_Ukraine_Oleksandr_Shumskyi.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Pavlo Skoropadskyi"
-	desc = "POLITICS_PAVLO_SKOROPADSKYI_DESC"
-	picture = "Portrait_Ukraine_Pavlo_Skoropadsky.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Ivan Chernyakhovsky"
-	desc = "POLITICS_IVAN_CHERNYAKHOVSKY_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_11.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Dmitri Dontsov"
-	desc = "POLITICS_DMITRI_DONTSOV_DESC"
-	picture = "Portrait_Ukraine_Dmitri_Dontsov.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Volodymyr Shayan"
-	desc = "POLITICS_VOLODYMYR_SHAYAN_DESC"
-	picture = "Portrait_Ukraine_Volodymyr_Shayan.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
 
-create_field_marshal = {
-	name = "Semen Goruk"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Semen_Goruk.tga"
-	traits = { war_hero armor_officer fortress_buster }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_field_marshal = {
-	name = "Mykola Kapustiansky"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Mykola_Kapustiansky.tga"
-	traits = { defensive_doctrine infantry_officer  }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_field_marshal = {
-	name = "Arnold Wolf"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Arnold_Wolf.tga"
-	traits = { harsh_leader old_guard winter_specialist }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_field_marshal = {
-	name = "Vasyl Dmytrovych Bilinchak"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Vasyl_Dmytrovych_Bilinchak.tga"
-	traits = { trickster trait_engineer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Dmytro Bilinchuck"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Dmytro_Bilinchuck.tga"
-	traits = { trait_mountaineer }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Dmytro Vitivsky"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Dmytro_Vitivsky.tga"
-	traits = { trait_cautious armor_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Osyp Bukszovanyj"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Osyp_Bukszovanyj.tga"
-	traits = { commando }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Ivan Kedulich"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Ivan_Kedulich.tga"
-	traits = { career_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Sergii Sydorenko"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Sergii_Sydorenko.tga"
-	traits = { politically_connected }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Svatoslav Shramenko"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Svatoslav_Shramenko.tga"
-	traits = {  }
-	skill = 4
-}
-create_navy_leader = {
-	name = "Volodimir Savchenco-Bilinskii"
-	portrait_path = "gfx/leaders/UKR/Portrait_Ukraine_Volodimir_Savchenco-Bilinskii.tga"
-	traits = { old_guard_navy }
-	skill = 4
-}
+recruit_character = UKR_The_Central_Committee
+recruit_character = UKR_Andriy_Livytskyi
+recruit_character = UKR_Serhij_Jefremov
+recruit_character = UKR_Serhiy_Ostapenko
+recruit_character = UKR_Oleksander_Shulhyn
+recruit_character = UKR_Pavlo_Skoropadskyi
+recruit_character = UKR_Ivan_Chernyakhovsky
+recruit_character = UKR_Dmitri_Dontsov
+recruit_character = UKR_Volodymyr_Shayan
+recruit_character = UKR_Semen_Goruk
+recruit_character = UKR_Mykola_Kapustiansky
+recruit_character = UKR_Arnold_Wolf
+recruit_character = UKR_Vasyl_Dmytrovych_Bilinchak
+recruit_character = UKR_Dmytro_Bilinchuck
+recruit_character = UKR_Dmytro_Vitivsky
+recruit_character = UKR_Osyp_Bukszovanyj
+recruit_character = UKR_Ivan_Kedulich
+recruit_character = UKR_Sergii_Sydorenko
+recruit_character = UKR_Svatoslav_Shramenko
+recruit_character = UKR_Volodimir_Savchenco_Bilinskii
+recruit_character = UKR_Oleksander_Shumsky
+recruit_character = UKR_Vladimir_Vynnychenko
+recruit_character = UKR_Andrey_Livytskyi
+recruit_character = UKR_Boris_Martos
+recruit_character = UKR_Mikhail_Bulgakov
+recruit_character = UKR_Nikolai_Boretsky
+recruit_character = UKR_Patriarch_Mstyslav
+recruit_character = UKR_Vyacheslav_Prokopovich
+recruit_character = UKR_Pavlo_Skoropadsky
+recruit_character = UKR_Stanislav_Kosior
+recruit_character = UKR_Vlas_Chubar
+recruit_character = UKR_Grigori_Sokolnikov
+recruit_character = UKR_Nikolai_Skrypnik
+recruit_character = UKR_Alexander_Shulgin
+recruit_character = UKR_Konstantin_Prisovsky
+recruit_character = UKR_Yuri_Lipa
+recruit_character = UKR_Dmitri_Doroshenko
+recruit_character = UKR_Mikola_Lebed
+recruit_character = UKR_Grigorij_Petrovsky
+recruit_character = UKR_Panas_P_Lyubchenko
+recruit_character = UKR_Yuri_Kotsiubinsky
+recruit_character = UKR_Nikolai_Shrag
+recruit_character = UKR_Vladimir_Tarnovsky
+recruit_character = UKR_Kirill_Osmak
+recruit_character = UKR_Sergei_Ostapenko
+recruit_character = UKR_Mikola_Stsiborsky
+recruit_character = UKR_Emanoil_Kviring
+recruit_character = UKR_Leonid_Melnikov
+recruit_character = UKR_Khrystian_G_Rakovsky
+recruit_character = UKR_Vladimir_Antonov_Ovseyenko
+recruit_character = UKR_Ivan_Feshenko_Chopovsky
+recruit_character = UKR_Daniil_Skoropadsky
+recruit_character = UKR_Igor_Kistyakovsky
+recruit_character = UKR_Vladimir_Chekhovsky
+recruit_character = UKR_Vladimir_Khitrovo
+recruit_character = UKR_Sergei_Kubiyovich
+recruit_character = UKR_Mikhaylo_Kolodzinsky
+recruit_character = UKR_Vitaly_Primakov
+recruit_character = UKR_Emelian_Volokh
+recruit_character = UKR_Sydor_Kovpak
+recruit_character = UKR_Mikhail_Omelianovych_Pavlenko
+recruit_character = UKR_Vsevolod_Petrov
+recruit_character = UKR_Yan_Gamarnik
+recruit_character = UKR_Veniamin_Ruvinski
+recruit_character = UKR_Vladimir_Salski
+recruit_character = UKR_Vladislav_Dashkevich_Gorbatsky
+recruit_character = UKR_Alexander_Dolgorukov
+recruit_character = UKR_Pavlo_Shandruk
+recruit_character = UKR_Vladimir_Sinkler
+recruit_character = UKR_Taras_Bulba_Borovets
+recruit_character = UKR_Vladimir_Sikevich
+recruit_character = UKR_Roman_Shukhevich
+recruit_character = UKR_Ivan_Isakov
+recruit_character = UKR_Sergei_Gorshkov
+recruit_character = UKR_Vladimir_Pilipenko
+recruit_character = UKR_Andrey_Pokrovsky
+recruit_character = UKR_Nikolai_Maximov
+recruit_character = UKR_Vladimir_Savchenko_Belski
+recruit_character = UKR_Grigori_Shtern
+recruit_character = UKR_Vyacheslav_Tkachev
+recruit_character = UKR_Stanislav_Kosior
+recruit_character = UKR_Nikita_Khruschev
+recruit_character = UKR_Nestor_Makhno
