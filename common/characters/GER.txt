@@ -1720,22 +1720,33 @@ characters = {
 			}
 		}
 	}
-	GER_Walther_von_Brauchistch = {
-		name = "Walther von Brauchistch"
+	GER_Walther_von_Brauchistsch = {
+		name = "Walther von Brauchistsch"
 		portraits = {
 			civilian = {
-				small = "gfx/interface/ministers/GER/GER_Walther_von_Brauchistch.tga"
+				small = "gfx/interface/ministers/GER/GER_Walther_von_Brauchistsch.tga"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = foreign_minister
 			available = { can_replace_minister = no }
-			idea_token = GER_Walther_von_Brauchistch_for_ade
+			idea_token = GER_Walther_von_Brauchistsch_for_ade
 			traits = {
 				foreign_minister
 				authoritarian_democrat
 				for_general_staffer
+			}
+		}
+    advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = GER_Walther_von_Brauchitsch_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_elastic_defence_doctrine
 			}
 		}
 	}
@@ -2499,25 +2510,6 @@ characters = {
 			traits = {
 				chief_of_army
 				authoritarian_democrat
-				carm_elastic_defence_doctrine
-			}
-		}
-	}
-	GER_Walther_von_Brauchitsch = {
-		name = "Walther von Brauchitsch"
-		portraits = {
-			army = {
-				small = "gfx/interface/ministers/GER/GER_Walther_von_Brauchitsch.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_army
-			available = { can_replace_minister = no }
-			idea_token = GER_Walther_von_Brauchitsch_carm_pau
-			traits = {
-				chief_of_army
-				paternal_autocrat
 				carm_elastic_defence_doctrine
 			}
 		}
