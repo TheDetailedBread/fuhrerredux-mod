@@ -1,4 +1,4 @@
-﻿capital = 284
+capital = 284
 
 oob = "NZL"
 
@@ -79,87 +79,6 @@ set_popularities = {
     valkist = 2
 }
 
-create_country_leader = {
-	name = "Lord Monckton-Arundell"
-	desc = "POLITICS_MONCKTON_ARUNDELL_DESC"
-	picture = "Lord_Monckton_Arundell.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Lord Monckton-Arundell"
-	desc = "POLITICS_MONCKTON_ARUNDELL_DESC"
-	picture = "Lord_Monckton_Arundell.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "John Ormond"
-	desc = "POLITICS_JOHN_ORMOND_DESC"
-	picture = "GFX_NZL_john_ormond"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Elsie Farrelly"
-	desc = "POLITICS_JOHN_ORMOND_DESC"
-	picture = "GFX_NZL_elsie_farrelly"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-set_convoys = 70
-
-create_corps_commander = {
-	name = "Bernard Freyberg"
-	gfx = "GFX_NZL_bernard_freyberg"
-	traits = {  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Robert Row"
-	gfx = "GFX_NZL_robert_row"
-	traits = { naval_invader }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "William Stevens"
-	gfx = "GFX_NZL_william_stevens"
-	traits = {  }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Edmund Rupert Drummond"
-	gfx = "GFX_NZL_edmund_drummond"
-	traits = { }
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Peter Phipps"
-	gfx = "GFX_NZL_peter_phipps"
-	traits = { }
-	skill = 3
-}
-
 ### Ship Variants ###
 
 create_equipment_variant = {
@@ -172,3 +91,12 @@ create_equipment_variant = {
 		ship_anti_air_upgrade = 2
 	}
 }
+
+recruit_character = NZL_Lord_Monckton_Arundell
+recruit_character = NZL_John_Ormond
+recruit_character = NZL_Elsie_Farrelly
+recruit_character = NZL_Bernard_Freyberg
+recruit_character = NZL_Robert_Row
+recruit_character = NZL_William_Stevens
+recruit_character = NZL_Edmund_Rupert_Drummond
+recruit_character = NZL_Peter_Phipps
