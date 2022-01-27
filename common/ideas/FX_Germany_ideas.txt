@@ -1893,7 +1893,7 @@ ideas = {
 		  
 		ENG_german_deal = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_german_deal"}
-			picture = can_wartime_prices_and_trade_board
+			picture = GER_trade_uk
 			cancel = {
 				OR = {
 					ENG = {
@@ -1938,7 +1938,7 @@ ideas = {
 
 		GER_english_deal = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_english_deal"}
-			picture = can_wartime_prices_and_trade_board
+			picture = GER_trade_uk
 			cancel = {
 				OR = {
 					GER = {
@@ -2016,7 +2016,7 @@ ideas = {
 		
 		GER_german_soviet_exchange = {
 			picture = generic_secret_police
-            modifier = {
+      modifier = {
 				research_speed_factor = 0.05
 				MONTHLY_POPULATION = 0.05
 				political_power_gain = -0.10
@@ -2026,14 +2026,14 @@ ideas = {
 		GER_comecon = {
 			picture = FRA_communard_spirit
 			modifier = {
-            	production_factory_max_efficiency_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
 				political_power_gain = -0.10
-	    	}
+	    }
 		}
-  	}
+  }
 
 	#### General ####
-industrial_concern = {
+  industrial_concern = {
 
 		krupp = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea krupp"}

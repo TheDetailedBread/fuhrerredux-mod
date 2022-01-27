@@ -1009,8 +1009,13 @@ country_event = { # MacArthur Offers Services
     is_triggered_only = yes
 
     option = { # Accept his offer
-        name = usa.34.a
-        recruit_character = USA_Douglas_MacArthur
+      name = usa.34.a
+      USA = {
+        set_nationality = {
+          target_country = PHI
+          character = USA_Douglas_MacArthur
+        }
+      }
     }
     option = { # Isn't he retired already?
         name = usa.34.b
@@ -1032,27 +1037,27 @@ country_event = { # Support to Brazil
 }
 
 country_event = { # Strikes
-    id = usa.36
-    title = usa.36.t
-    desc = usa.36.d
-    picture = GFX_report_event_worker_protests
-    is_triggered_only = yes
+  id = usa.36
+  title = usa.36.t
+  desc = usa.36.d
+  picture = GFX_report_event_worker_protests
+  is_triggered_only = yes
 
-    option = {
-        name = usa.36.a
-        add_ideas = USA_strikes
-        hidden_effect = {
-            country_event = { id = usa.37 days = 7 }
-        }
+  option = {
+    name = usa.36.a
+    add_ideas = USA_strikes
+    hidden_effect = {
+        country_event = { id = usa.37 days = 7 }
     }
-    option = {
-        name = usa.36.b
-        add_ideas = USA_strikes
-        hidden_effect = {
-            50 = { ROOT = { country_event = { id = usa.38 days = 7 } } }
-            50 = { ROOT = { country_event = { id = usa.39 days = 7 } } }
-        }
-    }
+  }
+  option = {
+      name = usa.36.b
+      add_ideas = USA_strikes
+      hidden_effect = {
+          50 = { ROOT = { country_event = { id = usa.38 days = 7 } } }
+          50 = { ROOT = { country_event = { id = usa.39 days = 7 } } }
+      }
+  }
 }
 
 country_event = { # Negotiations Successfull
@@ -1639,65 +1644,67 @@ country_event = { # Internal Political Turmoil
 }
 
 country_event = { # New England Seceeds
-    id = usa.102
-    title = usa.102.t
-    desc = usa.102.d
-    picture = GFX_report_event_generic_norman_thomas
-    is_triggered_only = yes
+  id = usa.102
+  title = usa.102.t
+  desc = usa.102.d
+  picture = GFX_report_event_generic_norman_thomas
+  is_triggered_only = yes
 
-    trigger = {
-        NOT = { country_exists = NEE }
-    }
+  trigger = {
+      NOT = { country_exists = NEE }
+  }
 
-    immediate = {
-        hidden_effect = {
-            every_owned_state = {
-                limit = {
-                    OR = {
-                        state = 357
-                        state = 358
-                        state = 359
-                        state = 837
-                        state = 838
-                        state = 839
-                        state = 840
-                        state = 841 
-                    }
-                }
-                NEE = {
-                    add_state_core = PREV
-                    transfer_state = PREV
-                }
-                USA = {
-                    remove_state_core = PREV
-                    add_state_claim = PREV
-                    delete_unit = {
-                        state = PREV
-                        disband = no
-                    }
-                }
-            }
-						retire_character = USA_Mark_Clark
-            NEE = { 
-								load_oob = "NEE"
-								recruit_character = USA_Mark_Clark
-						}	
+  immediate = {
+    hidden_effect = {
+      every_owned_state = {
+        limit = {
+          OR = {
+            state = 357
+            state = 358
+            state = 359
+            state = 837
+            state = 838
+            state = 839
+            state = 840
+            state = 841 
+          }
         }
+        NEE = {
+          add_state_core = PREV
+          transfer_state = PREV
+        }
+        USA = {
+          remove_state_core = PREV
+          add_state_claim = PREV
+          delete_unit = {
+            state = PREV
+            disband = no
+          }
+        }
+      }
+      set_nationality = {
+        character = USA_Mark_Clark
+        target = NEE
+      }
+      NEE = {
+        load_oob = "NEE"
+      }
     }
+  }
 
-    option = {
-        name = usa.102.a
-        hidden_effect = {
-            country_event = { id = usa.103 days = 5 }
-        }
+  option = {
+    name = usa.102.a
+    hidden_effect = {
+      country_event = { id = usa.103 days = 5 }
     }
-    option = {
-        name = usa.102.b
-        hidden_effect = {
-            country_event = { id = usa.103 days = 5 }
-            NEE = { change_tag_from = ROOT }
-        }
+  }
+  option = {
+    name = usa.102.b
+    hidden_effect = {
+      country_event = { id = usa.103 days = 5 }
+      NEE = { change_tag_from = ROOT }
     }
+  }
 }
 
 country_event = { # Midwest Seceeds
@@ -1744,7 +1751,6 @@ country_event = { # Midwest Seceeds
                 }
             }
             CLB = { load_oob = "CLB" }
-            kill_ideology_leader = valkist
         }
     }
 
@@ -1802,17 +1808,22 @@ country_event = { # Rust Belt
                     }
                 }
             }
-						retire_character = USA_George_S_Patton
-						retire_character = USA_William_Simpson
-						retire_character = USA_J_Lawton_Collins
-						retire_character = USA_Courtney_Hodges
-            NAR = { 
-								load_oob = "NAR"
-								recruit_character = USA_George_S_Patton
-								recruit_character = USA_William_Simpson
-								recruit_character = USA_J_Lawton_Collins
-								recruit_character = USA_Courtney_Hodges
-						}
+            set_nationality = {
+              character = USA_George_S_Patton
+              target = NAR
+            }
+            set_nationality = {
+              character = USA_William_Simpson
+              target = NAR
+            }
+            set_nationality = {
+              character = USA_J_Lawton_Collins
+              target = NAR
+            }
+            set_nationality = {
+              character = USA_Courtney_Hodges
+              target = NAR
+            }
         }
     }
 
