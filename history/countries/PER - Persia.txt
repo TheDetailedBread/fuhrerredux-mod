@@ -1,4 +1,4 @@
-﻿capital = 266
+capital = 266
 
 oob = "PER_1936"
 
@@ -60,240 +60,77 @@ set_popularities = {
 
 add_ideas = {
 	party_pop_0_30
-	#limited_conscription
 	free_trade
 	
 	PER_british_influence_iran_idea
 	PER_underground_revolutionaries_idea
 	PER_primitive_military_idea
-	PER_Mohammad_Reza_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	military_junta
 }
 
-create_country_leader = {
-	name = "Fazlollah Zahedi"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Fazlollah_Zahedi.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Fazlollah Zahedi"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Fazlollah_Zahedi.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Reza Khan"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Reza_Khan.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ahmad Qavam"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Ahmad_Qavam.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ahmad Qavam"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Ahmad_Qavam.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mohammad Ali Foroughi"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "PER_AUTDEM.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ali Dashti"
-	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-	picture = "Portrait_Ali_Dashti.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mohammad Mosaddegh"
-	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
-	picture = "Portrait_Mohammad_Mosaddegh.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mostafa Fateh"
-	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
-	picture = "Portrait_Mostafa_Fateh.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Iraj Eskandari"
-	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
-	picture = "Portrait_Iraj_Eskandari.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Iraj Eskandari"
-	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
-	picture = "Portrait_Iraj_Eskandari.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-#create_country_leader = {
-#	name = "Mohammad Hassan Mirza"
-#	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
-#	picture = "PER_PATAUT.tga"
-#	expire = "1965.1.1"
-#	ideology = paternal_autocrat_subtype
-#	traits = {
-#		#
-#	}
-#}
-
-create_field_marshal = {
-	name = "Haj Ali Razmara"
-	portrait_path = "gfx/leaders/PER/Portrait_Haj_Ali_Razmara.tga"
-	traits = { organisational_leader }
-	skill = 3
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Amanullah Jahanbani"
-	portrait_path = "gfx/leaders/PER/Portrait_NOR_Otto_Ruge.tga"
-	traits = { cavalry_officer }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Ahmad Amir-Ahmadi"
-	portrait_path = "gfx/leaders/PER/Portrait_Ahmad_Amir_Ahmadi.tga"
-	traits = { old_guard }
-	skill = 4
-	attack_skill = 3
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Karim Buzarjomehri"
-	portrait_path = "gfx/leaders/PER/Portrait_PER_Karim_Buzarjomehri.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Hasan Arfa"
-	portrait_path = "gfx/leaders/PER/Portrait_Hasan_Arfa.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
-	#id = 2098
-}
-
-create_corps_commander = {
-	name = "Fazlollah Zahedi"
-	portrait_path = "gfx/leaders/PER/Portrait_Fazlollah_Zahedi.tga"
-	traits = { politically_connected }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Bahram Aryana"
-	portrait_path = "gfx/leaders/PER/Portrait_PER_Bahram Aryana.tga"
-	traits = { politically_connected }
-	skill = 2
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Mohammad Reza"
-	portrait_path = "gfx/leaders/PER/Portrait_Mohammad_Reza_Khan.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-	#id = 2099
-}
-
-
-
+recruit_character = PER_Fazlollah_Zahedi
+recruit_character = PER_Reza_Khan
+recruit_character = PER_Ahmad_Qavam
+recruit_character = PER_Mohammad_Ali_Foroughi
+recruit_character = PER_Ali_Dashti
+recruit_character = PER_Mohammad_Mosaddegh
+recruit_character = PER_Mostafa_Fateh
+recruit_character = PER_Iraj_Eskandari
+recruit_character = PER_Mohammad_Hassan_Mirza
+recruit_character = PER_Haj_Ali_Razmara
+recruit_character = PER_Amanullah_Jahanbani
+recruit_character = PER_Ahmad_Amir_Ahmadi
+recruit_character = PER_Karim_Buzarjomehri
+recruit_character = PER_Hasan_Arfa
+recruit_character = PER_Bahram_Aryana
+recruit_character = PER_Mohammad_Reza
+recruit_character = PER_Soleyman_Mirza_Eskandari
+recruit_character = PER_Mostowfi_ol_Mamalek
+recruit_character = PER_Sayyed_Hasan_Taqizādeh
+recruit_character = PER_Hassan_Pirnia
+recruit_character = PER_Abdolhossein_Teymūrtāsh
+recruit_character = PER_Ali_Akbar_Dāvar
+recruit_character = PER_Hosein_Alā
+recruit_character = PER_Mohsen_Sadr
+recruit_character = PER_Prince_Abbas_Mirza_Farman_Farmaian_Qajar
+recruit_character = PER_Ahmad_Matin_Daftari
+recruit_character = PER_Avetis_Sultan_Zade
+recruit_character = PER_Reza_Rousta
+recruit_character = PER_Abdol_Hossein_Sardari
+recruit_character = PER_Allah_Yar_Saleh
+recruit_character = PER_Khalil_Maleki
+recruit_character = PER_Karim_Sanjabi
+recruit_character = PER_Abdullah_Entezam
+recruit_character = PER_Ali_Mansur
+recruit_character = PER_Mohammad_Ali_Foroughi_Zoka_ol_Molk
+recruit_character = PER_Muhammad_Sa_ed_Maraghei
+recruit_character = PER_Ahmad_Qavām
+recruit_character = PER_Ali_Soheili
+recruit_character = PER_Nasrollah_Entezam
+recruit_character = PER_Ja_far_Pishevari
+recruit_character = PER_Ali_Shayegan
+recruit_character = PER_Keikhosrow_Shahrokh
+recruit_character = PER_Ali_Amini
+recruit_character = PER_Habib_Nafisi
+recruit_character = PER_Mehdi_Qoli_Khan_Hedayat
+recruit_character = PER_Abdolhosein_Hazhir
+recruit_character = PER_Mahmoud_Modir_al_Molk_Djam
+recruit_character = PER_Sepahbod_Ahmad_Amir_Ahmadi
+recruit_character = PER_Abdol_Samad_Kambakhsh
+recruit_character = PER_Mohammad_Taqi_Khan_Pessian
+recruit_character = PER_Mohammad_Taqi_Bahar
+recruit_character = PER_Qazi_Muhammad
+recruit_character = PER_Allameh_Ali_Akbar_Dehkhodā
+recruit_character = PER_Esmail_Khan_Merat
+recruit_character = PER_Sayyed_Abu_l_Qāsem_Kāsāni
+recruit_character = PER_Reza_Maxim_Khan
+recruit_character = PER_Abdollah_Khan_Amir_Tahmasebi
+recruit_character = PER_Karim_Agha_Khan_Buzarjomehri
+recruit_character = PER_Mahmud_Khan_Pulādeen
+recruit_character = PER_Gholamali_Bayandor
+recruit_character = PER_Ahmad_Khan_Nakhjaavan
+recruit_character = PER_Ahmad_Mirza_Khosravani
+recruit_character = PER_Mir_Mohammad_Mohanna
+recruit_character = PER_Mohammad_Hossein_Firooz
+recruit_character = PER_Reza_Mizani
+recruit_character = PER_Sharafaldin_Ghahremani

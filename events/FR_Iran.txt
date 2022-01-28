@@ -110,16 +110,14 @@ country_event = {
 			country_event = {
 				id = iran.4 days = 3
 			}
-			create_country_leader = {
-				name = "Haj Ali Razmara"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Haj_Ali_Razmara.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = PER_Haj_Ali_Razmara
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -423,55 +421,17 @@ country_event = {
 			419 = { set_demilitarized_zone = no }
 			420 = { set_demilitarized_zone = no }
 			set_capital = { state = 266 }
-			create_country_leader = {
-				name = "Mohammad Reza Khan"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Mohammad_Reza_Khan.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = PER_Mohammad_Reza
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
-    }
+  }
 }
-
-#country_event = {
-#	id = iran.13
-#	title = iran.13.t
-#	desc = iran.13.d
-#	#picture = NOR_black_monday_2
-#
-#	is_triggered_only = yes
-#	
-#	fire_only_once = yes
-#
-#	option = {
-#		name = iran.13.a
-#		add_stability = 0.05
-#		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
-#		add_popularity = { ideology = social_democrat popularity = -0.02 }
-#		add_popularity = { ideology = social_liberal popularity = -0.02 }
-#		set_country_flag = PER_military_flag
-#		set_country_flag = PER_progressive_regime_flag
-#		hidden_effect = {
-#			419 = { set_demilitarized_zone = no }
-#			420 = { set_demilitarized_zone = no }
-#			set_capital = { state = 266 }
-#			create_country_leader = {
-#				name = "Mohammad Reza Khan"
-#				desc = "POLITICS_HASSAN_MIRZA_DESC"
-#				picture = "Portrait_Mohammad_Reza_Khan.tga"
-#				expire = "1965.1.1"
-#				ideology = paternal_autocrat_subtype
-#				traits = {
-#					#
-#				}
-#			}
-#		}
-#    }
-#}
 
 country_event = {
 	id = iran.14
@@ -493,7 +453,7 @@ country_event = {
 			}
 			266 = { set_demilitarized_zone = no }
 		}
-    }
+  }
 }
 
 country_event = {
@@ -542,21 +502,19 @@ country_event = {
 		set_country_flag = PER_progressive_regime_flag
 		hidden_effect = {
 			set_capital = { state = 266 }
-			create_country_leader = {
-				name = "Mohammad Reza Khan"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Mohammad_Reza_Khan.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = PER_Mohammad_Reza
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
-    }
+  }
 	
 	option = {
-        name = iran.16.b
+    name = iran.16.b
 		ai_chance = { base = 50 }
 		add_stability = 0.05
 		add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
@@ -566,16 +524,14 @@ country_event = {
 		set_country_flag = PER_conservative_regime_flag
 		hidden_effect = {
 			set_capital = { state = 266 }
-			create_country_leader = {
-				name = "Hasan Arfa"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Hasan_Arfa.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = PER_Hasan_Arfa
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -661,18 +617,16 @@ country_event = {
 		hidden_effect = {
 			419 = { set_demilitarized_zone = no }
 			420 = { set_demilitarized_zone = no }
-			create_country_leader = {
-				name = "Hasan Arfa"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Hasan_Arfa.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = PER_Hasan_Arfa
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
-    }
+  }
 	
 	option = {
         name = iran.19.b
@@ -1072,7 +1026,7 @@ country_event = {
 		create_wargoal = { type = annex_everything target = PER }
 		add_stability = -0.07
 		add_political_power = 25
-    }
+  }
 	
 	option = {
         name = iran.106.b
@@ -1444,21 +1398,19 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		
 		hidden_effect = {
-			create_country_leader = {
-				name = "Mohammad Reza Khan"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Mohammad_Reza_Khan.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = PER_Mohammad_Reza
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
 		}
-    }
+  }
 	
 	option = {
-        name = iran.123.b
+    name = iran.123.b
 		ai_chance = { base = 50 }
 		add_ideas = presidential_republic
 		set_politics = {
@@ -1471,16 +1423,14 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		
 		hidden_effect = {
-			create_country_leader = {
-				name = "Mohammad Reza Khan"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Mohammad_Reza_Khan.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = PER_Mohammad_Reza
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -1510,21 +1460,19 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		
 		hidden_effect = {
-			create_country_leader = {
-				name = "Hasan Arfa"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Hasan_Arfa.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = PER_Mohammad_Reza
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
-    }
+  }
 	
 	option = {
-        name = iran.124.b
+    name = iran.124.b
 		ai_chance = { base = 50 }
 		add_ideas = presidential_republic
 		set_politics = {
@@ -1538,16 +1486,14 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		
 		hidden_effect = {
-			create_country_leader = {
-				name = "Hasan Arfa"
-				desc = "POLITICS_HASSAN_MIRZA_DESC"
-				picture = "Portrait_Hasan_Arfa.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = PER_Hasan_Arfa
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
