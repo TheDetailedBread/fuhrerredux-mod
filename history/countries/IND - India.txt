@@ -1,4 +1,4 @@
-﻿capital = 439
+capital = 439
 
 # Set province controls for units
 #set_province_controller = 12137
@@ -88,132 +88,11 @@ add_ideas = {
 	IND_indian_rebels
 }
 
-# REVISIT Unclear if appropriate for this ideology
-create_country_leader = {
-	name = "V. D. Savarkar"
-	desc = "POLITICS_VD_SAVARKAR_DESC"
-	picture = "Veer_Savarkar.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "P. Krishna Pillai"
-	desc = "POLITICS_P_KRISHNA_PILLAI_DESC"
-	picture = "GFX_RAJ_krishna_pillai"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "B. P. Sitaramayya"
-	desc = "POLITICS_B_P_SITARAMAYYA_DESC"
-	picture = "GFX_RAJ_pattabhi_sitaramayya"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Provisional Government"
-	desc = "POLITICS_DELHI_PROVISIONAL_DESC"
-	picture = "Secretariat_building.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-
-	}
-}
-
-create_field_marshal = { #Auto-Generated
-	name = "Subhas Chandra Bose"
-	portrait_path = "gfx/leaders/INC/Chandra_Bose.tga"
-	traits = {
-		politically_connected
-		offensive_doctrine
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-	id = 1000
-}
-
-create_field_marshal = {
-	name = "Mohan Singh"
-	picture = "Mohan_Singh.tga"
-	id = 1001
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Prem Sahgal"
-	picture = "Prem_Sahgal.tga"
-	id = 1002
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-
-create_corps_commander = {
-	name = "Raja Habib ur Rahman Khan"
-	picture = "Raja_Habib_ur_Rahman_Khan.tga"
-	id = 1003
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Lakshmi Sahgal"
-	portrait_path = "gfx/leaders/INC/Lakshmi_Sahgal.tga"
-	traits = {}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-	id = 1004
-	female = yes
-}
-
-create_corps_commander = {
-	name = "Mohammed Zaman Kiani"
-	picture = "Mohammed_Zaman_Kiani.tga"
-	id = 1005
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-
-create_navy_leader = {
-	name = "Herbert Fitzherbert"
-	gfx = "GFX_RAJ_herbert_fitzherbert"
-	traits = { }
-	skill = 3
-}
+recruit_character = IND_V_D_Savarkar
+recruit_character = IND_Provisional_Government
+recruit_character = IND_Subhas_Chandra_Bose
+recruit_character = IND_Mohan_Singh
+recruit_character = IND_Prem_Sahgal
+recruit_character = IND_Raja_Habib_ur_Rahman_Khan
+recruit_character = IND_Lakshmi_Sahgal
+recruit_character = IND_Mohammed_Zaman_Kiani
