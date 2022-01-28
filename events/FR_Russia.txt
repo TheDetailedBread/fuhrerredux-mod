@@ -344,36 +344,38 @@ country_event = {   #Creation of Democracy
 	option = {
 		name = "Long live Democracy!"
 		add_stability = 0.20
-        kill_country_leader = yes
-        add_political_power = 100
-        add_ideas = RUS_corruption
-        load_focus_tree = rus_democracy
-        remove_ideas = RUS_democratic_opposition
-          hidden_effect = {
-            remove_unit_leader = 404
-            remove_unit_leader = 403
-            set_capital = { state =  408 }
-      	    create_country_leader = {
-       		name = "National Council of Salvation"
-        	desc = "POLITICS_NATIONAL_COUNCIL_OF_SALVATION_DESC"
-        	picture = "Portrait_Russia_The_Senate.tga"
-        	expire = "1965.1.1"
-       	    ideology = social_conservative_subtype
-    		}
-			add_ideas = parliamentary_republic
-        	set_politics = {
-        	ruling_party = social_conservative
-        	elections_allowed = no
-    		}
-			country_event = { id = rus.17 days = 20 }
-			set_country_flag = coalition_paternal_autocrat
-			set_country_flag = coalition_valkist
-			set_country_flag = coalition_market_liberal
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_democrat
-        } 
-    }
+      kill_country_leader = yes
+      add_political_power = 100
+      add_ideas = RUS_corruption
+      load_focus_tree = rus_democracy
+      remove_ideas = RUS_democratic_opposition
+      hidden_effect = {
+        remove_unit_leader = 404
+        remove_unit_leader = 403
+        set_capital = { state =  408 }
+      }
+      add_country_leader_role = {
+        character = RUS_National_Council_of_Salvation
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_ideas = parliamentary_republic
+        set_politics = {
+        ruling_party = social_conservative
+        elections_allowed = no
+      }
+    country_event = { id = rus.17 days = 20 }
+    set_country_flag = coalition_paternal_autocrat
+    set_country_flag = coalition_valkist
+    set_country_flag = coalition_market_liberal
+    set_country_flag = coalition_social_liberal
+    set_country_flag = coalition_social_democrat
+  } 
 }
+
 
 country_event = {   #National Council of Salvation Event 1
 	id = rus.17
@@ -930,22 +932,22 @@ country_event = {
 			last_election = "1937.6.13"
 			election_frequency = 72
 			}
-		create_country_leader = {
-			name = "Spiridon Dionisovich Merkulov"
-			desc = "POLITICS_SPIRIDON_MERKULOV_DESC"
-			picture = "Portrait_Russia_Spiridon_Dionisovich_Merkulov.tga"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {}
- 		        }	
-            hidden_effect = {
- 		        load_focus_tree = rus_np
- 		        news_event = {
+      add_country_leader_role = {
+        character = RUS_Spiridon_Dionisovich_Merkulov
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      hidden_effect = {
+ 		    load_focus_tree = rus_np
+ 		      news_event = {
 					id = worldnews.115
 				}
-            }
-	    }
-    }
+      }
+	  }
+  }
 
 country_event = {   
 	id = rusnp.3
@@ -1038,18 +1040,18 @@ country_event = {
 	is_triggered_only = yes 
 
 	option = {
-		name = "Rest in Peace"	
-		create_country_leader = {
-			name = "Mikhail Diterikhs"
-			desc = "POLITICS_MIKHAIL_DITERKIHS_DESC"
-			picture = "Portrait_Russia_Mikhail_Diterikhs.tga"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {}
- 		}
+		name = "Rest in Peace"
+    add_country_leader_role = {
+      character = RUS_Mikhail_Diterikhs
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
 		set_country_flag = RUS_victory_japan
-			}
-        }
+	}
+}
 
 country_event = {   
 	id = rusnp.6
@@ -1139,48 +1141,48 @@ country_event = {
 		add_stability = -1
 		add_war_support = -1
         hidden_effect = {
-        set_party_name = { 
-            ideology = social_democrat
-            long_name = RUS_national_maximalist_long 
-            name = RUS_national_maximalist
-            }
-        set_party_name = { 
-            ideology = social_liberal
-            long_name = RUS_UDDF_long
-            name = RUS_UDDF
-            }
-        set_party_name = { 
-            ideology = social_conservative
-            long_name = RUS_oktoberist_long 
-            name = RUS_oktoberist
-            }
-        add_ideas = RUS_Vasily_G_Boldyrev_hog_sco
-        add_ideas = RUS_Vasily_G_Boldyrev_for_sco
-        add_ideas = RUS_Vladimir_von_Kappel_eco_sco
-        add_ideas = RUS_Vasily_Shulgin_sec_sco
-		add_popularity = { 
-		    ideology = social_conservative 
-		    popularity = 0.3
-		}
-		add_ideas = parliamentary_republic
-		set_politics = {
-			ruling_party = social_conservative
-			elections_allowed = no
-			last_election = "1937.6.13"
-			election_frequency = 72
-			}
-		create_country_leader = {
-			name = "Anton Denikin"
-			desc = "POLITICS_ANTON_DENIKIN_DESC"
-			picture = "Portrait_Russia_Anton_Iwanowitsch_Denikin.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = {}
- 		        }	
- 		      load_focus_tree = rus_coup
-            }
-	    }
+          set_party_name = { 
+              ideology = social_democrat
+              long_name = RUS_national_maximalist_long 
+              name = RUS_national_maximalist
+              }
+          set_party_name = { 
+              ideology = social_liberal
+              long_name = RUS_UDDF_long
+              name = RUS_UDDF
+              }
+          set_party_name = { 
+              ideology = social_conservative
+              long_name = RUS_oktoberist_long 
+              name = RUS_oktoberist
+              }
+          add_ideas = RUS_Vasily_G_Boldyrev_hog_sco
+          add_ideas = RUS_Vasily_G_Boldyrev_for_sco
+          add_ideas = RUS_Vladimir_von_Kappel_eco_sco
+          add_ideas = RUS_Vasily_Shulgin_sec_sco
+      add_popularity = { 
+          ideology = social_conservative 
+          popularity = 0.3
+      }
+      add_ideas = parliamentary_republic
+      set_politics = {
+        ruling_party = social_conservative
+        elections_allowed = no
+        last_election = "1937.6.13"
+        election_frequency = 72
+        }
+      add_country_leader_role = {
+        character = RUS_Anton_Denikin
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      load_focus_tree = rus_coup
     }
+	}
+}
 
 
 country_event = {   
@@ -1230,14 +1232,14 @@ country_event = {
         	#add_ideas = 
         	#add_ideas = 
         	#add_ideas = 
-			create_country_leader = {
-				name = "Arkadiy Stolypin"
-				desc = "POLITICS_ARKADIY_STOLYPIN_DESC"
-				picture = "Portrait_Russia_Arkadiy_Stolypin.tga"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = {}
- 			}	
+      add_country_leader_role = {
+        character = RUS_Arkadiy_Stolypin
+        promote_leader = yes
+        country_leader = {
+          ideology = valkist_subtype
+          traits = {}
+        }
+      }
  		load_focus_tree = rus_neo_stolypinist
     	}
 	}
@@ -1262,14 +1264,14 @@ country_event = {
         	#add_ideas = 
         	#add_ideas = 
         	#add_ideas = 
-			create_country_leader = {
-				name = "Vladimir Romanov-Krasinsky"
-				desc = "POLITICS_VLADIMIR_ROMANOV_KRASINSKY_DESC"
-				picture = "Portrait_Russia_Vladimir_Romanov_Krasinsky.tga"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = {}
- 			}
+      add_country_leader_role = {
+        character = RUS_Vladimir_Romanov_Krasinsky
+        promote_leader = yes
+        country_leader = {
+          ideology = valkist_subtype
+          traits = {}
+        }
+      }
  		load_focus_tree = rus_young_russia
         }
 	}
@@ -1291,18 +1293,18 @@ country_event = {
 		}
 		name = "This didn't go as planned"
 		set_country_flag = RUS_attempt_to_rule_failed
-        hidden_effect = {
-		create_country_leader = {
-			name = "Pyotr Wrangel"
-			desc = "POLITICS_PYOTR_WRANGEL_DESC"
-			picture = "Portrait_Russia_Pytor_Wrangel.tga"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = {}
- 		        }	
-            }
-	    }
+    hidden_effect = {
+      add_country_leader_role = {
+        character = RUS_Pyotr_Wrangel
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
     }
+  }
+}
 
 country_event = {   
 	id = ruscoup.4
@@ -1315,30 +1317,30 @@ country_event = {
 	is_triggered_only = yes 
 	immediate = {
 		hidden_effect = {
-			create_country_leader = {
-				name = "Boris Savinkov"
-				desc = "POLITICS_BORIS_SAVINKOV_DESC"
-				picture = "Portrait_Russia_Boris_Savinkov_civ.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Yury Alexeevich Shrinsky Shikmatov"
-				desc = "POLITICS_YURY_SHIKMATOV_DESC"
-				picture = "Portrait_Russia_Yury_Alexeevich_Shirinsky_Shikhmatov.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {}
-			}
-			create_country_leader = {
-				name = "Pyotr Wrangel"
-				desc = "POLITICS_PYOTR_WRANGEL_DESC"
-				picture = "Portrait_Russia_Pytor_Wrangel.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {}
-			}
+      add_country_leader_role = {
+        character = RUS_Boris_Savinkov
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = RUS_Yury_Alexeevich_Shrinsky_Shikmatov
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = RUS_Pyotr_Wrangel
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	option = {
