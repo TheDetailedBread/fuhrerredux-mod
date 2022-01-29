@@ -621,17 +621,14 @@ country_event = {
 			add_idea = ZHI_no_marshal 
 			remove_idea = ZHI_jade_marshall
 		}
-		kill_country_leader = yes
-		create_country_leader = {
-			name = "Sun Chuanfang"
-			desc = ""
-			picture = "Portrait_ZHI_Sun_Chuanfang.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-				#
-			}
-		}
+		add_country_leader_role = {
+      character = ZHI_Sun_Chuanfang
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		remove_unit_leader = 45006
 		add_ideas = ZHI_Sun_Chuanfang_hog
 		add_ideas = ZHI_Gao_Lingwei_eco
@@ -647,17 +644,14 @@ country_event = {
 			add_idea = ZHI_no_marshal 
 			remove_idea = ZHI_jade_marshall
 		}
-		kill_country_leader = yes
-		create_country_leader = {
-			name = "No Clear Leader"
-			desc = ""
-			picture = "Portrait_ZHI_Cao_Who.tga"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-				#
-			}
-		}
+		add_country_leader_role = {
+      character = ZHI_No_Clear_Leader
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.4
