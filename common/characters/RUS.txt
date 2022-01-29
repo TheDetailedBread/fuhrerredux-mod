@@ -213,6 +213,17 @@ characters = {
 				carm_doctrine_of_autonomy
 			}
 		}
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = RUS_Anton_Denikin_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_reformist_soldier
+			}
+		}
 	}
 	RUS_Anatoly_Pepelyaev = {
 		name = "Anatoly Pepelyaev"
@@ -485,6 +496,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/RUS/Portrait_RUS_Anton_Turkul.tga"
+				small = "gfx/interface/ministers/RUS/RUS_Anton_Turkul.tga"
 			}
 		}
 		corps_commander = {
@@ -498,6 +510,16 @@ characters = {
 			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = RUS_Anton_Turkul_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
 		}
 	}
 	RUS_Mitrofan_Nezhentsev = {
@@ -1263,25 +1285,6 @@ characters = {
 				head_of_government
 				social_conservative
 				hog_smiling_oilman
-			}
-		}
-	}
-	RUS_Anton_I_Denikin = {
-		name = "Anton I. Denikin"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/RUS/RUS_Anton_I_Denikin.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = { can_replace_minister = no }
-			idea_token = RUS_Anton_I_Denikin_hog_sco
-			traits = {
-				head_of_government
-				social_conservative
-				hog_reformist_soldier
 			}
 		}
 	}
@@ -2954,24 +2957,6 @@ characters = {
 			traits = {
 				chief_of_air_force
 				cair_naval_aviation_doctrine
-			}
-		}
-	}
-	RUS_Anton_V_Turkul = {
-		name = "Anton V. Turkul"
-		portraits = {
-			army = {
-				small = "gfx/interface/ministers/RUS/RUS_Anton_V_Turkul.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_air_force
-			available = { can_replace_minister = no }
-			idea_token = RUS_Anton_V_Turkul_cair
-			traits = {
-				chief_of_air_force
-				cair_battlefield_support_doctrine
 			}
 		}
 	}
