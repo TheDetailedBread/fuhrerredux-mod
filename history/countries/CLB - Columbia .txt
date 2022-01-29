@@ -90,11 +90,6 @@ set_popularities = {
 add_ideas = {
 	party_pop_0_20
 	limited_conscription
-
-	GEN_hog_val
-    GEN_for_val
-    GEN_eco_val
-    GEN_sec_val
 	theocratic_republic
 
 	CLB_enemies_on_all_sides
@@ -104,139 +99,16 @@ add_ideas = {
 	CLB_spliting_at_seems
 }
 
-create_country_leader = {
-	name = "George W. Norris"
-	desc = "POLITICS_TOWNSEND_DESC"
-	picture = "Portrait_CLB_George_W_Norris.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-
-create_country_leader = {
-	name = "Francis Townsend"
-	desc = "POLITICS_TOWNSEND_DESC"
-	picture = "Portrait_CLB_Townsend.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-
-create_country_leader = {
-	name = "Charles Coughlin"
-	desc = "POLITICS_Coughlin_DESC"
-	picture = "Portrait_CLB_Charles_Coughlin.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-
-create_country_leader = {
-	name = "William Dudley Pelley"
-	desc = "POLITICS_WILLLIAM_DUDLEY_PELLEY_DESC"
-	picture = "Portrait_CLB_William_Dudley_Pelley.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { american_dressler }
-}
-
-create_country_leader = {
-	name = "Gerald L.K. Smith"
-	desc = "POLITICS_GERALD_LK_SMITH_DESC"
-	picture = "Portrait_CLB_gearld_k_smith.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-
-create_country_leader = {
-	name = "Gerald L.K. Smith"
-	desc = "POLITICS_GERALD_LK_SMITH_DESC"
-	picture = "Portrait_CLB_gerald_k_smith.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-
-create_country_leader = {
-	name = "Henry Allen"
-	desc = "POLITICS_HENRY_ALLEN_DESC"
-	picture = "Portrait_CLB_henry_allen.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-### Field Marshals
-create_field_marshal = {
-	name = "Joseph T. McNarney"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Joseph_McNarey.tga"
-	traits = { trait_reckless artillery_officer artillery_specialist }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-### Corp Commanders
-create_corps_commander = {
-	name = "Claire Lee Chennault"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Claire_Chennault.tga"
-	traits = { trait_cautious career_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Walton Walker"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Walton_Walker.tga"
-	traits = { politically_connected career_officer panzer_leader }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Clifton B. Cates"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Clifton_Cates.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Lewis Burwell Puller"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Chesty_Puller.tga"
-	traits = { harsh_leader career_officer commando }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Pedro del Valle"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Pedro_Del_Valle.tga"
-	traits = { harsh_leader commando }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Demas T. Craw"
-	portrait_path = "gfx/leaders/CLB/Portrait_CLB_Thurlow_Craw.tga"
-	traits = { trickster }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
+recruit_character = CLB_George_W_Norris
+recruit_character = CLB_Francis_Townsend
+recruit_character = CLB_Charles_Coughlin
+recruit_character = CLB_William_Dudley_Pelley
+recruit_character = CLB_Gerald_LK_Smith
+recruit_character = CLB_Henry_Allen
+recruit_character = CLB_Joseph_T_McNarney
+recruit_character = CLB_Claire_Lee_Chennault
+recruit_character = CLB_Walton_Walker
+recruit_character = CLB_Clifton_B_Cates
+recruit_character = CLB_Lewis_Burwell_Puller
+recruit_character = CLB_Pedro_del_Valle
+recruit_character = CLB_Demas_T_Craw
