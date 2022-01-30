@@ -378,7 +378,7 @@ country_event = { # Mexican Nationalists Attacked Border Area
             base = 80
         }
 		hidden_effect = {
-			MEX = { country_event = { id = usa.10 hours = 8 } }
+			MEX = { country_event = { id = usa.10 days = 1 } }
 		}
 	}
 }
@@ -395,7 +395,7 @@ country_event = { # US Troops Rebuke our Attack!
         ai_chance = {
             base = 60
         }
-        USA = { country_event = usa.11 hours = 14 }
+        USA = { country_event = usa.11 days = 1 }
 	}
 	option = { # Show our plight to the masses
 		name = usa.10.b
@@ -720,7 +720,7 @@ country_event = { # Death of Eugene Debs
 		name = usa.26.a
         remove_country_leader_role = {
             character = USA_Eugene_Debs
-            ideology = libertarian_socialist
+            ideology = libertarian_socialist_subtype
         }
         add_country_leader_role = {
             character = USA_Jack_Reed
@@ -1684,7 +1684,7 @@ country_event = { # New England Seceeds
       }
       set_nationality = {
         character = USA_Mark_Clark
-        target = NEE
+        target_country = NEE
       }
       NEE = {
         load_oob = "NEE"
@@ -1810,19 +1810,19 @@ country_event = { # Rust Belt
             }
             set_nationality = {
               character = USA_George_S_Patton
-              target = NAR
+              target_country = NAR
             }
             set_nationality = {
               character = USA_William_Simpson
-              target = NAR
+              target_country = NAR
             }
             set_nationality = {
               character = USA_J_Lawton_Collins
-              target = NAR
+              target_country = NAR
             }
             set_nationality = {
               character = USA_Courtney_Hodges
-              target = NAR
+              target_country = NAR
             }
         }
     }
