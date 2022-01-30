@@ -2765,24 +2765,14 @@ country_event = {
 				add_country_leader_role = {
           character = TUR_Aslan_Bey
           promote_leader = yes
-          character = {
+          country_leader = {
             ideology = authoritarian_democrat_subtype
             traits = {}
           }
 				}
 			}
 
-			random_country = {
-				limit = { 
-					NOT = {
-						OR = {
-							tag = TUR
-							tag = TRT
-							original_tag = TUR
-							original_tag = TRT
-						} 
-					} 
-				}
+			random_other_country = {
 				news_event = { id = worldnews.103 days = 5 } 
 			}
 		}
@@ -3759,7 +3749,7 @@ country_event = {
 					logistics_skill = 3
 				}
 				## Navy Leaders
-				add_navy_leader_role = {
+				add_naval_commander_role = {
           character = TUR_Huseyin_Rauf_Paşa
 					traits = {
 						old_guard_navy

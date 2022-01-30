@@ -764,14 +764,14 @@ country_event = {   #I created this just because of people like you
 
 	option = {
 		name = "Rest in Peace"
-        hidden_effect = {
-			set_country_flag = Boris_V_Savinkov_dead
-			swap_ideas = {
-				remove_idea = RUS_Boris_V_Savinkov_sec_sde
-				add_idea = RUS_Vasily_A_Kharlamov_sec_mli
-			}
-        }
-    }   
+    hidden_effect = {
+      retire_character = RUS_Boris_Savinkov
+      remove_ideas_with_trait = security_minister
+      add_ideas = {
+        RUS_Vasily_A_Kharlamov_sec_mli
+      }
+    }
+  }   
 } 
 
 ########################

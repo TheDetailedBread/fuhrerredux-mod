@@ -114,7 +114,7 @@ country_event = {
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = SOV }
 		if = {
 			limit = { owns_state = 497 }
-			set_capital = 497
+			set_capital = { state = 497 }
 		}
 		declare_war_on = {
 			target = BRA
@@ -245,7 +245,7 @@ country_event = {
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = GER }
 		if = {
 			limit = { owns_state = 502 }
-			set_capital = 502
+			set_capital = { state = 502 }
 		}
 		declare_war_on = {
 			target = BRA
