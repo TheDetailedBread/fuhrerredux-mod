@@ -1,0 +1,1077 @@
+characters = {
+	NAR_Maria_Spiridonova = {
+		name = "Maria Spiridonova"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Maria_Spiridonova.tga"
+			}
+		}
+		country_leader = {
+			ideology = vanguardist_subtype
+			traits = { }
+		}
+		country_leader = {
+			ideology = collectivist_subtype
+			traits = { }
+		}
+		country_leader = {
+			ideology = libertarian_socialist_subtype
+			traits = { }
+		}
+	}
+	NAR_Henry_Ford = {
+		name = "Henry Ford"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Henry_Ford.tga"
+				small = "gfx/interface/ministers/NAR/NAR_Henry_Ford.tga"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_Henry_Ford_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_corporate_suit
+			}
+		}
+	}
+	NAR_Walter_C_Teagle = {
+		name = "Walter C. Teagle"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Walter_C_Teagle.tga"
+				small = "gfx/interface/ministers/NAR/NAR_Walter_C_Teagle.tga"
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_Walter_C_Teagle_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	NAR_William_Joseph_Simmons = {
+		name = "William Joseph Simmons"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAR/Portrait_NAR_William_Joseph_Simmons.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
+		}
+	}
+	NAR_David_Curtis_Stephenson = {
+		name = "David Curtis Stephenson"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAR/Portrait_NAR_David_Curtis_Stephenson.tga"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	NAR_George_Van_Horn_Moseley = {
+		name = "George Van Horn Moseley"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NAR/Portrait_NAR_George_Van_Horn_Moseley.tga"
+			}
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_George_Van_Horn_Moseley.tga"
+				small = "gfx/interface/ministers/NAR/NAR_George_Van_Horn_Moseley.tga"
+			}
+		}
+		field_marshal = {
+			traits = {
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NAR_George_Van_Horn_Moseley_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+	}
+	NAR_Jacob_L_Devers = {
+		name = "Jacob L. Devers"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Jacob_L_Devers.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 4
+		}
+	}
+	NAR_Matthew_Ridgway = {
+		name = "Matthew Ridgway"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Matthew_Ridgway.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	NAR_Bruce_C_Clarke = {
+		name = "Bruce C. Clarke"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Bruce_C_Clarke.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	NAR_Fox_Conner = {
+		name = "Fox Conner"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Fox_Conner.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	NAR_Henry_I_Hodes = {
+		name = "Henry I. Hodes"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Henry_I_Hodes.tga"
+			}
+		}
+		corps_commander = {
+			traits = {
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	NAR_Arthur_L_Bristol = {
+		name = "Arthur L. Bristol"
+		portraits = {
+			army = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Arthur_L_Bristol.tga"
+			}
+		}
+		navy_leader = {
+			traits = {
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			maneuvering_skill = 4
+			coordination_skill = 1
+		}
+	}
+	NAR_Francis_L_Garrett = {
+		name = "Francis L. Garrett"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Francis_L_Garrett.tga"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 4
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+	}
+	NAR_Mickey_Cochrane = {
+		name = "Mickey Cochrane"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/NAR/Portrait_NAR_Mickey_Cochrane.tga"
+				small = "gfx/interface/ministers/NAR/NAR_Mickey_Cochrane.tga"
+			}
+		}
+		navy_leader = {
+			traits = { }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NAR_Mickey_Cochrane_cnav
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	NAR_James_Francis_Byrnes = {
+		name = "James Francis Byrnes"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_James_Francis_Byrnes.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_James_Francis_Byrnes_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_happy_amateur
+			}
+		}
+	}
+	NAR_John_Elliott_Rankin = {
+		name = "John Elliott Rankin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_John_Elliott_Rankin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_John_Elliott_Rankin_hog_pau
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_smiling_oilman
+			}
+		}
+	}
+	NAR_Edward_L_Jackson = {
+		name = "Edward L. Jackson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Edward_L_Jackson.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_Edward_L_Jackson_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_determined_populist
+			}
+		}
+	}
+	NAR_Herbert_W_Armstrong = {
+		name = "Herbert W. Armstrong"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Herbert_W_Armstrong.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_Herbert_W_Armstrong_hog_npo
+			traits = {
+				head_of_government
+				national_populist
+				hog_backroom_backstabber
+			}
+		}
+	}
+	NAR_Richard_Girnt_Butler = {
+		name = "Richard Girnt Butler"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Richard_Girnt_Butler.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = NAR_Richard_Girnt_Butler_hog_val
+			traits = {
+				head_of_government
+				valkist
+				hog_ruthless_warlord
+			}
+		}
+	}
+	NAR_Arthur_Cherep_Spiridovich = {
+		name = "Arthur Cherep Spiridovich"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Arthur_Cherep_Spiridovich.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_Cherep_Spiridovich_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_biased_intellectual
+			}
+		}
+	}
+	NAR_William_Bell_Riley = {
+		name = "William Bell Riley"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_William_Bell_Riley.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_William_Bell_Riley_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_general_staffer
+			}
+		}
+	}
+	NAR_George_Sylvester_Viereck = {
+		name = "George Sylvester Viereck"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_George_Sylvester_Viereck.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_George_Sylvester_Viereck_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_ideological_crusader
+			}
+		}
+	}
+	NAR_Alma_Bridwell_White = {
+		name = "Alma Bridwell White"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Alma_Bridwell_White.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Alma_Bridwell_White_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_hawkish_intervener
+			}
+		}
+	}
+	NAR_Arthur_J_Smith = {
+		name = "Arthur J. Smith"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Arthur_J_Smith.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_J_Smith_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+	}
+	NAR_Arthur_Raymond_Robinson = {
+		name = "Arthur Raymond Robinson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Arthur_Raymond_Robinson.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_Raymond_Robinson_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_great_compromiser
+			}
+		}
+	}
+	NAR_AN_Dugger = {
+		name = "A.N. Dugger"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_AN_Dugger.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_AN_Dugger_for_val
+			traits = {
+				foreign_minister
+				valkist
+				for_radical_among_moderates
+			}
+		}
+	}
+	NAR_Fred_Koch = {
+		name = "Fred Koch"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Fred_Koch.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Fred_Koch_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_administrative_genius
+			}
+		}
+	}
+	NAR_Ellison_Smith = {
+		name = "Ellison Smith"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Ellison_Smith.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Ellison_Smith_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_mixed_economy
+			}
+		}
+	}
+	NAR_Charles_Emil_Sorensen = {
+		name = "Charles Emil Sorensen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Charles_Emil_Sorensen.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Charles_Emil_Sorensen_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_oil_baron
+			}
+		}
+	}
+	NAR_Louis_Thomas_McFadden = {
+		name = "Louis Thomas McFadden"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Louis_Thomas_McFadden.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Louis_Thomas_McFadden_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_railway_magnate
+			}
+		}
+	}
+	NAR_William_H_Murray = {
+		name = "William H. Murray"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_William_H_Murray.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_William_H_Murray_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_laissez_faire_capitalist
+			}
+		}
+	}
+	NAR_Arthur_Kent_White = {
+		name = "Arthur Kent White"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Arthur_Kent_White.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_Kent_White_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_bank_president
+			}
+		}
+	}
+	NAR_George_W_Christians = {
+		name = "George W. Christians"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_George_W_Christians.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_George_W_Christians_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_oil_baron
+			}
+		}
+	}
+	NAR_Gerald_Burton_Winrod = {
+		name = "Gerald Burton Winrod"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Gerald_Burton_Winrod.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Gerald_Burton_Winrod_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_industrial_chemist
+			}
+		}
+	}
+	NAR_John_Geraerdt_Crommelin_Jr = {
+		name = "John Geraerdt Crommelin Jr."
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_John_Geraerdt_Crommelin_Jr.tga"
+			}
+			navy = {
+				small = "gfx/interface/ministers/NAR/NAR_John_Geraerdt_Crommelin_Jr.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_John_Geraerdt_Crommelin_Jr_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_steel_magnate
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = NAR_John_Geraerdt_Crommelin_Jr_cnav_npo
+			traits = {
+				chief_of_navy
+				national_populist
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	NAR_Robert_Rice_Reynolds = {
+		name = "Robert Rice Reynolds"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Robert_Rice_Reynolds.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Robert_Rice_Reynolds_eco_npo
+			traits = {
+				economy_minister
+				national_populist
+				eco_resource_industrialist
+			}
+		}
+	}
+	NAR_Clare_E_Hoffman = {
+		name = "Clare E. Hoffman"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Clare_E_Hoffman.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Clare_E_Hoffman_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_efficient_sociopath
+			}
+		}
+	}
+	NAR_DW_Griffith = {
+		name = "D.W. Griffith"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_DW_Griffith.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_DW_Griffith_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	NAR_Eugene_Talmadge = {
+		name = "Eugene Talmadge"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Eugene_Talmadge.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Eugene_Talmadge_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_silent_lawyer
+			}
+		}
+	}
+	NAR_Theophilus_Eugene_Connor = {
+		name = "Theophilus Eugene Connor"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Theophilus_Eugene_Connor.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Theophilus_Eugene_Connor_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_prince_of_terror
+			}
+		}
+	}
+	NAR_William_David_Upshaw = {
+		name = "William David Upshaw"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_William_David_Upshaw.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_William_David_Upshaw_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_man_of_the_people
+			}
+		}
+	}
+	NAR_Addison_Thompson = {
+		name = "Addison Thompson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Addison_Thompson.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Addison_Thompson_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+	NAR_Arlene_White_Lawrence = {
+		name = "Arlene White Lawrence"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Arlene_White_Lawrence.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arlene_White_Lawrence_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_secret_police_chief
+			}
+		}
+	}
+	NAR_CO_Dodd = {
+		name = "C.O. Dodd"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_CO_Dodd.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_CO_Dodd_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_crime_fighter
+			}
+		}
+	}
+	NAR_Coleman_Livingston_Blease = {
+		name = "Coleman Livingston Blease"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Coleman_Livingston_Blease.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Coleman_Livingston_Blease_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_health_and_safety
+			}
+		}
+	}
+	NAR_Elizabeth_Eloise_Kirkpatrick_Dilling = {
+		name = "Elizabeth Eloise Kirkpatrick Dilling"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Elizabeth_Eloise_Kirkpatrick_Dilling.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Elizabeth_Eloise_Kirkpatrick_Dilling_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_driven_recruiter
+			}
+		}
+	}
+	NAR_George_Edward_Deatherage = {
+		name = "George Edward Deatherage"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_George_Edward_Deatherage.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_George_Edward_Deatherage_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	NAR_John_Franklyn_Norris = {
+		name = "John Franklyn Norris"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_John_Franklyn_Norris.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_John_Franklyn_Norris_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_back_stabber
+			}
+		}
+	}
+	NAR_Samuel_Green = {
+		name = "Samuel Green"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Samuel_Green.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Samuel_Green_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_preserver_of_culture
+			}
+		}
+	}
+	NAR_Theodore_G_Bilbo = {
+		name = "Theodore G. Bilbo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_Theodore_G_Bilbo.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_Theodore_G_Bilbo_sec_val
+			traits = {
+				security_minister
+				valkist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	NAR_William_Shephard = {
+		name = "William Shephard"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/NAR/NAR_William_Shephard.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = NAR_William_Shephard_sec_val
+			traits = {
+				security_minister
+				valkist
+				sec_great_soul
+			}
+		}
+	}
+	NAR_Arthur_Hornbui_Bell = {
+		name = "Arthur Hornbui Bell"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NAR/NAR_Arthur_Hornbui_Bell.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_Hornbui_Bell_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	NAR_Arthur_K_Smith = {
+		name = "Arthur K. Smith"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NAR/NAR_Arthur_K_Smith.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_K_Smith_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+	}
+	NAR_Bert_Hall = {
+		name = "Bert Hall"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NAR/NAR_Bert_Hall.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NAR_Bert_Hall_cair
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	NAR_Charles_Lindbergh = {
+		name = "Charles Lindbergh"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NAR/NAR_Charles_Lindbergh.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NAR_Charles_Lindbergh_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	NAR_Martin_James_Monti = {
+		name = "Martin James Monti"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/NAR/NAR_Martin_James_Monti.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = NAR_Martin_James_Monti_cair
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+}

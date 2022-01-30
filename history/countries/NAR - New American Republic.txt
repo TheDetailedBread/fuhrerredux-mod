@@ -105,203 +105,62 @@ add_ideas = {
 	NAR_unstable_bureaucracy
 	NAR_illegitimate_government
 
-	NAR_Walter_C_Teagle_hog_pau
-	NAR_William_Bell_Riley_for_pau
-	NAR_Charles_Emil_Sorensen_eco_pau
-	NAR_Clare_Eugene_Hoffman_sec_pau
-	
 	republican_dictatorship
 }
 
-create_country_leader = {
-	name = "Maria Spiridonova"
-	desc = "POLITICS_MARIA_SPIRIDONOVA_DESC"
-	picture = "Portrait_NAR_Maria_Spiridonova.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Maria Spiridonova"
-	desc = "POLITICS_MARIA_SPIRIDONOVA_DESC"
-	picture = "Portrait_NAR_Maria_Spiridonova.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Maria Spiridonova"
-	desc = "POLITICS_MARIA_SPIRIDONOVA_DESC"
-	picture = "Portrait_NAR_Maria_Spiridonova.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Henry Ford"
-	desc = "POLITICS_HENRY_FORD_DESC"
-	picture = "Portrait_NAR_Henry_Ford.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Walter C. Teagle"
-	desc = "POLITICS_WALTER_C_TEAGLE_DESC"
-	picture = "Portrait_NAR_Walter_C_Teagle.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "William Joseph Simmons"
-	desc = "POLITICS_WILLIAM_JOSEPH_SIMMONS_DESC"
-	picture = "Portrait_NAR_William_Joseph_Simmons.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "David Curtis Stephenson"
-	desc = "POLITICS_DAVID_CURTIS_STEPHENSON_DESC"
-	picture = "Portrait_NAR_David_Curtis_Stephenson.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-### Field Marshal
-create_field_marshal = {
-	name = "George Van Horn Moseley"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_Van_Horn_Moseley.tga"
-	traits = { trait_reckless artillery_officer artillery_specialist }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_field_marshal = {
-	name = "George S. Patton"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_George_S_Patton.tga"
-	traits = { trickster armor_officer panzer_leader war_hero trait_reckless }
-	skill = 5
-	attack_skill = 7
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-### Corp Commanders
-create_corps_commander = {
-	name = "Jacob L. Devers"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Jacob_Devers.tga"
-	traits = { trait_reckless artillery_officer artillery_specialist }
-	skill = 5
-	attack_skill = 7
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "William Simpson"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_William_Simpson.tga"
-	traits = { infantry_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "J. Lawton Collins"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Joseph_Collins.tga"
-	traits = { trickster career_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Courtney Hodges"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Courtney_Hicks_Hodges.tga"
-	traits = { panzer_leader career_officer infantry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Matthew Ridgway"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Matthew_Ridgway.tga"
-	traits = { inflexible_strategist trait_cautious commando }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Bruce C. Clarke"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Bruce_Clarke.tga"
-	traits = { harsh_leader panzer_leader }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Fox Conner"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Fox_Conner.tga"
-	traits = { politically_connected career_officer panzer_leader }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Henry I. Hodes"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Henry_Hodes.tga"
-	traits = { trait_reckless infantry_leader }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-### Admirals
-create_navy_leader = {
-	name = "Arthur L. Bristol"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Arthur_Bristol.tga"
-	traits = { air_controller }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-create_navy_leader = {
-	name = "Francis L. Garrett"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Francis_L_Garrett.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
-create_navy_leader = {
-	name = "Mickey Cochrane"
-	portrait_path = "gfx/leaders/NAR/Portrait_NAR_Mickey_Cochrane.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
+recruit_character = NAR_Maria_Spiridonova
+recruit_character = NAR_Henry_Ford
+recruit_character = NAR_Walter_C_Teagle
+recruit_character = NAR_William_Joseph_Simmons
+recruit_character = NAR_David_Curtis_Stephenson
+recruit_character = NAR_George_Van_Horn_Moseley
+recruit_character = NAR_Jacob_L_Devers
+recruit_character = NAR_Matthew_Ridgway
+recruit_character = NAR_Bruce_C_Clarke
+recruit_character = NAR_Fox_Conner
+recruit_character = NAR_Henry_I_Hodes
+recruit_character = NAR_Arthur_L_Bristol
+recruit_character = NAR_Francis_L_Garrett
+recruit_character = NAR_Mickey_Cochrane
+recruit_character = NAR_James_Francis_Byrnes
+recruit_character = NAR_John_Elliott_Rankin
+recruit_character = NAR_Edward_L_Jackson
+recruit_character = NAR_Herbert_W_Armstrong
+recruit_character = NAR_Richard_Girnt_Butler
+recruit_character = NAR_Arthur_Cherep_Spiridovich
+recruit_character = NAR_William_Bell_Riley
+recruit_character = NAR_George_Sylvester_Viereck
+recruit_character = NAR_Alma_Bridwell_White
+recruit_character = NAR_Arthur_J_Smith
+recruit_character = NAR_Arthur_Raymond_Robinson
+recruit_character = NAR_AN_Dugger
+recruit_character = NAR_Fred_Koch
+recruit_character = NAR_Ellison_Smith
+recruit_character = NAR_Charles_Emil_Sorensen
+recruit_character = NAR_Louis_Thomas_McFadden
+recruit_character = NAR_William_H_Murray
+recruit_character = NAR_Arthur_Kent_White
+recruit_character = NAR_George_W_Christians
+recruit_character = NAR_Gerald_Burton_Winrod
+recruit_character = NAR_John_Geraerdt_Crommelin_Jr
+recruit_character = NAR_Robert_Rice_Reynolds
+recruit_character = NAR_Clare_E_Hoffman
+recruit_character = NAR_DW_Griffith
+recruit_character = NAR_Eugene_Talmadge
+recruit_character = NAR_Theophilus_Eugene_Connor
+recruit_character = NAR_William_David_Upshaw
+recruit_character = NAR_Addison_Thompson
+recruit_character = NAR_Arlene_White_Lawrence
+recruit_character = NAR_CO_Dodd
+recruit_character = NAR_Coleman_Livingston_Blease
+recruit_character = NAR_Elizabeth_Eloise_Kirkpatrick_Dilling
+recruit_character = NAR_George_Edward_Deatherage
+recruit_character = NAR_John_Franklyn_Norris
+recruit_character = NAR_Samuel_Green
+recruit_character = NAR_Theodore_G_Bilbo
+recruit_character = NAR_William_Shephard
+recruit_character = NAR_Arthur_Hornbui_Bell
+recruit_character = NAR_Arthur_K_Smith
+recruit_character = NAR_Bert_Hall
+recruit_character = NAR_Charles_Lindbergh
+recruit_character = NAR_Martin_James_Monti
