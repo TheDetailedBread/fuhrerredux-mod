@@ -456,6 +456,16 @@ characters = {
 				for_the_cloak_n_dagger_schemer
 			}
 		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = NAR_Arthur_J_Smith_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
 	}
 	NAR_Arthur_Raymond_Robinson = {
 		name = "Arthur Raymond Robinson"
@@ -999,24 +1009,6 @@ characters = {
 			traits = {
 				chief_of_staff
 				cos_school_of_manoeuvre
-			}
-		}
-	}
-	NAR_Arthur_K_Smith = {
-		name = "Arthur K. Smith"
-		portraits = {
-			army = {
-				small = "gfx/interface/ministers/NAR/NAR_Arthur_K_Smith.tga"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_staff
-			available = { can_replace_minister = no }
-			idea_token = NAR_Arthur_K_Smith_cos
-			traits = {
-				chief_of_staff
-				cos_school_of_fire_support
 			}
 		}
 	}

@@ -371,7 +371,7 @@ country_event = { #Communist uprising
     retire_character = BEL_King_Leopold_III
     hidden_effect = {
       add_country_leader_role = {
-        characer = BEL_Paul_Henri_Spaak
+        character = BEL_Paul_Henri_Spaak
         promote_leader = yes
         country_leader = {
           ideology = social_democrat_subtype
@@ -379,7 +379,7 @@ country_event = { #Communist uprising
         }
       }
       add_country_leader_role = {
-        characer = BEL_Leonie_La_Fontaine
+        character = BEL_Leonie_La_Fontaine
         promote_leader = yes
         country_leader = {
           ideology = social_liberal_subtype
@@ -387,7 +387,7 @@ country_event = { #Communist uprising
         }
       }
       add_country_leader_role = {
-        characer = BEL_Paul_Emile_Janson
+        character = BEL_Paul_Emile_Janson
         promote_leader = yes
         country_leader = {
           ideology = market_liberal_subtype
@@ -1168,7 +1168,7 @@ country_event = { #Henrik De Man becomes leader
 		}
 		hidden_effect = {
 			add_ideas = one_party_dictatorship
-			set_capital = 6
+			set_capital = { state = 6 }
 			add_popularity = {
 				ideology = vanguardist
 				popularity = 0.4
@@ -1190,7 +1190,7 @@ country_event = { #Jacquemotte becomes leader
 	option = {
 		name = bel.32.a
 		hidden_effect = {
-			set_capital = 6
+			set_capital = { state = 6 }
 		}
 	}
 }

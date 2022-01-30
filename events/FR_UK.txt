@@ -5392,7 +5392,10 @@ country_event = {
 		add_political_power = -100
 		hidden_effect = {
 			country_event = { id = uk.146 days = 14 }
-			swap_ideas = { remove_idea = ENG_Arthur_Greenwood_hog_sde add_idea = ENG_Oswald_Mosley_hog_lib }
+			remove_ideas_with_trait = head_of_government
+      add_ideas = {
+        ENG_Oswald_Mosley_hog_lib
+      }
 		}
 	}
 }
@@ -16332,10 +16335,10 @@ country_event = {
 		hidden_effect = { country_event = { id = ukadm.10 days = 30 } }
 		hidden_effect = { 
 			load_focus_tree = british_focus_adm 
-			swap_ideas = {
-				remove_idea = ENG_Samuel_Hoare_hog_sco 
-				add_idea = ENG_Anthony_Eden_hog_sco
-			}
+      remove_ideas_with_trait = head_of_government
+      add_ideas = {
+        ENG_Anthony_Eden_hog_sco
+      }
 		}
 	}
 }

@@ -50,7 +50,7 @@ country_event = { # 1936 Elections
         hidden_effect = {
             set_country_flag = USA_had_1936_elections
             random_other_country = {
-                news_event = { id = fxnews.11 hours = 12 }
+                news_event = { id = fxnews.11 days = 1 }
             }
         }
     }
@@ -74,7 +74,7 @@ country_event = { # 1936 Elections
         hidden_effect = {
             set_country_flag = USA_had_1936_elections
             random_other_country = {
-                news_event = { id = fxnews.12 hours = 12 }
+                news_event = { id = fxnews.12 days = 1 }
             }
         }
     }
@@ -134,7 +134,7 @@ country_event = { # 1936 Elections
         hidden_effect = {
             set_country_flag = USA_had_1936_elections
             random_other_country = {
-                news_event = { id = fxnews.14 hours = 12 }
+                news_event = { id = fxnews.14 days = 1 }
             }
         }
     }
@@ -1117,7 +1117,7 @@ country_event = { # 'Modern Times' released
     }
 
     mean_time_to_happen = {
-        hours = 12
+        days = 1
     }
 
     option = {
@@ -1139,7 +1139,7 @@ country_event = { # Demand Return of Free Government
             factor = 20
         }
         add_political_power = -100
-        FROM = { country_event = { id = usa.42 hours = 12 } }
+        FROM = { country_event = { id = usa.42 days = 1 } }
         hidden_effect = {
             random_list = {
                 25 = {
@@ -1163,7 +1163,7 @@ country_event = { # Demand Return of Free Government
         ai_chance = {
             factor = 80
         }
-        FROM = { country_event = { id = usa.43 hours = 12 } }
+        FROM = { country_event = { id = usa.43 days = 1 } }
     }
 }
 
@@ -1875,8 +1875,8 @@ country_event = { # UK Seizes Cascadia, Puerto Rico, Alaska
     option = {
         name = usa.105.a
         hidden_effect = {
-            country_event = { id = usa.106 hours = 12 }
-            PAN = { country_event = { id = usa.108 hours = 12 } }
+            country_event = { id = usa.106 days = 1 }
+            PAN = { country_event = { id = usa.108 days = 2 } }
             ENG = { country_event = { id = usa.110 days = 2 } }
         }
     }
@@ -1903,7 +1903,7 @@ country_event = { # Collapse of the Union
             load_focus_tree = usa_emergency_focus
             country_event = { id = usa.107 days = 3 }
             random_other_country = {
-                news_event = { id = fxnews.9 hours = 12 }
+                news_event = { id = fxnews.9 days = 1 }
             }
             NAR = {
                 if = {
@@ -2002,7 +2002,7 @@ country_event = { # Emergency Congress Session
                 long_name = USA_emergency_government_party_long
             }
             random_other_country = {
-                news_event = { id = fxnews.10 hours = 12 }
+                news_event = { id = fxnews.10 days = 1 }
             }
         }
         set_politics = {
@@ -2262,7 +2262,7 @@ country_event = { # New Elections!
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
-                    news_event = { id = fxnews.15 hours = 12 }
+                    news_event = { id = fxnews.15 days = 1 }
                 }
                 clr_country_flag = USA_military_junta
             }
@@ -2295,7 +2295,7 @@ country_event = { # New Elections!
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
-                    news_event = { id = fxnews.15 hours = 12 }
+                    news_event = { id = fxnews.15 days = 1 }
                 }
                 clr_country_flag = USA_military_junta
             }
@@ -2328,7 +2328,7 @@ country_event = { # New Elections!
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
-                    news_event = { id = fxnews.15 hours = 12 }
+                    news_event = { id = fxnews.15 days = 1 }
                 }
                 clr_country_flag = USA_military_junta
             }
@@ -2360,7 +2360,7 @@ country_event = { # New Elections!
             if = {
                 limit = { has_country_flag = USA_military_junta }
                 random_other_country = {
-                    news_event = { id = fxnews.15 hours = 12 }
+                    news_event = { id = fxnews.15 days = 1 }
                 }
                 clr_country_flag = USA_military_junta
             }
