@@ -223,6 +223,37 @@ ENG_economy = {
 ENG_the_empire = {
 
 	##### Imperial Coordination #####
+
+  ENG_secure_suez = {
+    fire_only_once = yes
+    icon = GFX_decision_generic_tank
+    days_remove = 14
+    target_trigger = {
+      FROM = {
+        tag = EGY
+      }
+    }
+    available = {
+      original_tag = ENG
+      FROM = {
+        NOT = { is_subject_of = ENG }
+      }
+      OR = {
+        has_completed_focus = ENG_national_effort
+        has_completed_focus = ENG_end_austerity
+        has_completed_focus = ENG_liberate_markets
+      }
+    }
+    ai_will_do = {
+      factor = 800
+    }
+    remove_effect = {
+      declare_war_on = {
+        target = EGY
+        type = annex_everything
+      }
+    }
+  }
 	
 	ENG_pax_britannica = {
 	

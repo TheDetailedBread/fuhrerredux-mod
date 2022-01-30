@@ -20,8 +20,17 @@ default = no
 focus = { 
 	id = RHI_watch_on_the_rhine
 	icon = GFX_RHI_Interallied_Gov
-	bypass = {has_global_flag=RHI_F_crisis_end} 
-	available = {has_global_flag=RHI_F_crisis_end}
+	bypass = {
+    hidden_trigger = {
+      has_global_flag=RHI_F_crisis_end
+    }
+  } 
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_crisis_end
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 50   
 		completion_reward = {
@@ -40,7 +49,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_mandate_1} 
 	mutually_exclusive = { focus = RHI_valkist_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_independent}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag = RHI_F_independent
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1   
 		completion_reward = {
@@ -113,7 +127,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_mandate_1} 
 	mutually_exclusive = { focus = RHI_valkist_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_autonomous}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_autonomous
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1  
 		completion_reward = {
@@ -203,7 +222,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_independence_1} 
 	mutually_exclusive = { focus = RHI_valkist_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_mandate}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_mandate
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1   
 		completion_reward = {
@@ -294,7 +318,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_mandate_1} 
 	mutually_exclusive = { focus = RHI_independence_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_valkist}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_valkist
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1   
 		completion_reward = {
@@ -1593,7 +1622,7 @@ focus = {
 #Focus for French Military Mandate 
 focus = { 
 	id = RHI_french_military_mandate 
-	icon = GFX_Rhineland_French
+	icon = GFX_RHI_Mandate_Flag
 	bypass = {} 
 	mutually_exclusive = { focus = RHI_rhenish_armed_forces} 
 	mutually_exclusive = { focus =RHI_rhenish_french_cooperation} 
