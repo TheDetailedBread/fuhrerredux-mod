@@ -1,0 +1,1219 @@
+characters = {
+	MAN_Tang_Hualong = {
+		name = "Tang Hualong"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Tang_Hualong.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			traits = { }
+		}
+	}
+	MAN_Tang_Shaoyi = {
+		name = "Tang Shaoyi"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Tang_Shaoyi.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	MAN_TV_Soong = {
+		name = "T.V. Soong"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_TV_Soong.tga"
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = { }
+		}
+	}
+	MAN_Zhang_Zuolin = {
+		name = "Zhang Zuolin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Zuolin.tga"
+				small = "gfx/interface/ministers/MAN/MAN_Zhang_Zuolin.tga"
+			}
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Zuolin.tga"
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
+		}
+		field_marshal = {
+			traits = { }
+			skill = 4
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zhang_Zuolin_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_old_general
+			}
+		}
+	}
+	MAN_Cao_Rulin = {
+		name = "Cao Rulin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Cao_Rulin.tga"
+				small = "gfx/interface/ministers/MAN/MAN_Cao_Rulin.tga"
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Cao_Rulin_for_npo
+			traits = {
+				foreign_minister
+				national_populist
+				for_hawkish_intervener
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Cao_Rulin_sec_npo
+			traits = {
+				security_minister
+				national_populist
+				sec_compassionate_gentleman
+			}
+		}
+	}
+	MAN_Zhang_Zongchang = {
+		name = "Zhang Zongchang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Zongchang.tga"
+			}
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Zongchang.tga"
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		field_marshal = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+		}
+	}
+	MAN_Feng_Zhanhai = {
+		name = "Feng Zhanhai"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Feng_Zhanhai.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	MAN_Zhang_Haipeng = {
+		name = "Zhang Haipeng"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Haipeng.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	MAN_Ma_Zhanshan = {
+		name = "Ma Zhanshan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Ma_Zhanshan.tga"
+			}
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Ma_Zhanshan.tga"
+				small = "gfx/interface/ministers/MAN/MAN_Ma_Zhanshan.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Ma_Zhanshan_sec
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Ma_Zhanshan_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	MAN_Zhang_Jinghui = {
+		name = "Zhang Jinghui"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Jinghui.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	MAN_Su_Bingwen = {
+		name = "Su Bingwen"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Su_Bingwen.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+		}
+	}
+	MAN_Liu_Zhennian = {
+		name = "Liu Zhennian"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Liu_Zhennian.tga"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	MAN_Zhang_Council = {
+		name = "Zhang Council"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Council.tga"
+			}
+		}
+	}
+	MAN_Zhang_Xueliang = {
+		name = "Zhang Xueliang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Xueliang.tga"
+				small = "gfx/interface/ministers/MAN/MAN_Zhang_Xueliang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zhang_Xueliang_hog
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zhang_Xueliang_eco
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+		}
+	}
+	MAN_Chang_Yonghui = {
+		name = "Chang Yonghui"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Chang_Yonghui.tga"
+			}
+		}
+	}
+	MAN_Zhang_Shixi = {
+		name = "Zhang Shixi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Zhang_Shixi.tga"
+			}
+		}
+	}
+	MAN_Local_Warlords = {
+		name = "Local Warlords"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Local_Warlords.tga"
+			}
+		}
+	}
+	MAN_Interim_Government = {
+		name = "Interim Government"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MAN/Portrait_MAN_Interim_Government.tga"
+			}
+		}
+	}
+	MAN_Ruan_Zhenduo = {
+		name = "Ruan Zhenduo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Ruan_Zhenduo.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Ruan_Zhenduo_hog_sde
+			traits = {
+				head_of_government
+				social_democrat
+				hog_pragmatic_statesman
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Ruan_Zhenduo_for_sde
+			traits = {
+				foreign_minister
+				social_democrat
+				for_foreign_sympathizer
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Ruan_Zhenduo_eco_sde
+			traits = {
+				economy_minister
+				social_democrat
+				eco_industrialiser
+			}
+		}
+	}
+	MAN_Yang_Yuting = {
+		name = "Yang Yuting"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Yang_Yuting.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Yang_Yuting.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yang_Yuting_hog_mli
+			traits = {
+				head_of_government
+				market_liberal
+				hog_corporate_suit
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yang_Yuting_sec_mli
+			traits = {
+				security_minister
+				market_liberal
+				sec_man_of_the_people
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yang_Yuting_cos_mli
+			traits = {
+				chief_of_staff
+				market_liberal
+				cos_school_of_manoeuvre
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yang_Yuting_carm_mli
+			traits = {
+				chief_of_army
+				market_liberal
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	MAN_Liang_Shiyi = {
+		name = "Liang Shiyi"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Liang_Shiyi.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Liang_Shiyi_hog_sco
+			traits = {
+				head_of_government
+				social_conservative
+				hog_happy_amateur
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Liang_Shiyi_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_silent_lawyer
+			}
+		}
+	}
+	MAN_Chen_Jiongming = {
+		name = "Chen Jiongming"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Chen_Jiongming.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Chen_Jiongming_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_charismatic_charmer
+			}
+		}
+	}
+	MAN_Huang_Fu = {
+		name = "Huang Fu"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Huang_Fu.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Huang_Fu_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Huang_Fu_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_ideological_crusader
+			}
+		}
+	}
+	MAN_Jin_Yunpeng = {
+		name = "Jin Yunpeng"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Jin_Yunpeng.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Jin_Yunpeng_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_flamboyant_tough_guy
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Jin_Yunpeng_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_resource_industrialist
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Jin_Yunpeng_sec_ade
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_secret_police_chief
+			}
+		}
+	}
+	MAN_Wang_Yitang = {
+		name = "Wang Yitang"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Wang_Yitang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wang_Yitang_hog_ade
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_naive_optimist
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wang_Yitang_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_moderate_among_radicals
+			}
+		}
+	}
+	MAN_Yu_Zhishan = {
+		name = "Yu Zhishan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Yu_Zhishan.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Yu_Zhishan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yu_Zhishan_for_mli
+			traits = {
+				foreign_minister
+				market_liberal
+				for_iron_fisted_brute
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yu_Zhishan_eco_mli
+			traits = {
+				economy_minister
+				market_liberal
+				eco_balanced_budget_economy
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yu_Zhishan_carm_mli
+			traits = {
+				chief_of_army
+				market_liberal
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	MAN_Wu_Jinglian = {
+		name = "Wu Jinglian"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Wu_Jinglian.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wu_Jinglian_for_ade
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_apologetic_clerk
+			}
+		}
+	}
+	MAN_Sun_Qichang = {
+		name = "Sun Qichang"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Sun_Qichang.tga"
+			}
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Sun_Qichang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Sun_Qichang_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_great_compromiser
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Sun_Qichang_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_bank_president
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Sun_Qichang_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	MAN_Wang_Yintai = {
+		name = "Wang Yintai"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Wang_Yintai.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wang_Yintai_for_pau
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_general_staffer
+			}
+		}
+	}
+	MAN_Li_Shaogeng = {
+		name = "Li Shaogeng"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Li_Shaogeng.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Li_Shaogeng_eco_sco
+			traits = {
+				economy_minister
+				social_conservative
+				eco_balanced_budget_economy
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Li_Shaogeng_sec_sco
+			traits = {
+				security_minister
+				social_conservative
+				sec_efficient_sociopath
+			}
+		}
+	}
+	MAN_Lu_Ronghuan = {
+		name = "Lu Ronghuan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Lu_Ronghuan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Lu_Ronghuan_eco_sco
+			traits = {
+				economy_minister
+				social_conservative
+				eco_railway_magnate
+			}
+		}
+	}
+	MAN_Pan_Fu = {
+		name = "Pan Fu"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Pan_Fu.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Pan_Fu_eco_ade
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_construction_magnate
+			}
+		}
+	}
+	MAN_Tang_Yulin = {
+		name = "Tang Yulin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Tang_Yulin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Tang_Yulin_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_infantry_proponent
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Tang_Yulin_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_prince_of_terror
+			}
+		}
+	}
+	MAN_Yuan_Jinkai = {
+		name = "Yuan Jinkai"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Yuan_Jinkai.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yuan_Jinkai_eco_pau
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_administrative_genius
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yuan_Jinkai_sec_pau
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+	MAN_Ding_Jianxiu = {
+		name = "Ding Jianxiu"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/MAN/MAN_Ding_Jianxiu.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = { can_replace_minister = no }
+			idea_token = MAN_Ding_Jianxiu_sec_sde
+			traits = {
+				security_minister
+				social_democrat
+				sec_back_stabber
+			}
+		}
+	}
+	MAN_Zhou_Ziqi = {
+		name = "Zhou Ziqi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Zhou_Ziqi.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zhou_Ziqi_cos_sco
+			traits = {
+				chief_of_staff
+				social_conservative
+				cos_school_of_fire_support
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zhou_Ziqi_carm_sco
+			traits = {
+				chief_of_army
+				social_conservative
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	MAN_Wu_Junsheng = {
+		name = "Wu Junsheng"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Wu_Junsheng.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wu_Junsheng_cos_pau
+			traits = {
+				chief_of_staff
+				paternal_autocrat
+				cos_school_of_psychology
+			}
+		}
+	}
+	MAN_Zang_Shiyi = {
+		name = "Zang Shiyi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Zang_Shiyi.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zang_Shiyi_cos_pau
+			traits = {
+				chief_of_staff
+				paternal_autocrat
+				cos_school_of_defence
+			}
+		}
+	}
+	MAN_Cao_Linsheng = {
+		name = "Cao Linsheng"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Cao_Linsheng.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Cao_Linsheng_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	MAN_Wang_Chengzhi = {
+		name = "Wang Chengzhi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Wang_Chengzhi.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wang_Chengzhi_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+	}
+	MAN_Wen_Yingxing = {
+		name = "Wen Yingxing"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Wen_Yingxing.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wen_Yingxing_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+	}
+	MAN_Zou_Zuohua = {
+		name = "Zou Zuohua"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Zou_Zuohua.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zou_Zuohua_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+		}
+	}
+	MAN_Bao_Wenyue = {
+		name = "Bao Wenyue"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Bao_Wenyue.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Bao_Wenyue_carm_mli
+			traits = {
+				chief_of_army
+				market_liberal
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	MAN_Wan_Fulin = {
+		name = "Wan Fulin"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Wan_Fulin.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Wan_Fulin_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	MAN_Zhang_Zuoxiang = {
+		name = "Zhang Zuoxiang"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Zhang_Zuoxiang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Zhang_Zuoxiang_carm_pau
+			traits = {
+				chief_of_army
+				paternal_autocrat
+				carm_commando_doctrine
+			}
+		}
+	}
+	MAN_Xu_Zuyi = {
+		name = "Xu Zuyi"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Xu_Zuyi.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			available = { can_replace_minister = no }
+			idea_token = MAN_Xu_Zuyi_carm
+			traits = {
+				chief_of_army
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	MAN_Shen_Honglie = {
+		name = "Shen Honglie"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/MAN/MAN_Shen_Honglie.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = MAN_Shen_Honglie_cnav_sco
+			traits = {
+				chief_of_navy
+				social_conservative
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	MAN_Yin_Tsuo_chien = {
+		name = "Yin Tsuo-chien"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/MAN/MAN_Yin_Tsuo_chien.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = MAN_Yin_Tsuo_chien_cnav_ade
+			traits = {
+				chief_of_navy
+				authoritarian_democrat
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	MAN_Jiang_Xiyuan = {
+		name = "Jiang Xiyuan"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/MAN/MAN_Jiang_Xiyuan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = MAN_Jiang_Xiyuan_cnav
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	MAN_Meng_Tieqiao = {
+		name = "Meng Tieqiao"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/MAN/MAN_Meng_Tieqiao.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = MAN_Meng_Tieqiao_cnav
+			traits = {
+				chief_of_navy
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+	MAN_Xie_Gangzhe = {
+		name = "Xie Gangzhe"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/MAN/MAN_Xie_Gangzhe.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy
+			available = { can_replace_minister = no }
+			idea_token = MAN_Xie_Gangzhe_cnav
+			traits = {
+				chief_of_navy
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	MAN_Gao_Zhihang = {
+		name = "Gao Zhihang"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Gao_Zhihang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = MAN_Gao_Zhihang_cair_sco
+			traits = {
+				chief_of_air_force
+				social_conservative
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	MAN_Li_Guidan = {
+		name = "Li Guidan"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Li_Guidan.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = MAN_Li_Guidan_cair
+			traits = {
+				chief_of_air_force
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+	MAN_Liu_Cuigang = {
+		name = "Liu Cuigang"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Liu_Cuigang.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = MAN_Liu_Cuigang_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	MAN_Tong_Yanbo = {
+		name = "Tong Yanbo"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/MAN/MAN_Tong_Yanbo.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force
+			available = { can_replace_minister = no }
+			idea_token = MAN_Tong_Yanbo_cair
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+}
