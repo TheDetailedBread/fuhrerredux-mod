@@ -311,14 +311,13 @@ country_event = { # Moseley Coup
         name = newamerica.11.a
         hidden_effect = {
             set_country_flag = NAR_path_pataut
-            kill_ideology_leader = paternal_autocrat
-            create_country_leader = {
-                name = "George Van Horn Moseley"
-                desc = "POLITICS_GEORGE_VAN_HORN_MOSELEY_DESC"
-                picture = "Portrait_NAR_George_Van_Horn_Moseley.tga"
-                expire = "1965.1.1"
+            add_country_leader_role = {
+              character = NAR_George_Van_Horn_Moseley
+              promote_leader = yes
+              country_leader = {
                 ideology = paternal_autocrat_subtype
-                traits = { }
+                traits = {}
+              }
             }
             drop_cosmetic_tag = yes
             set_cosmetic_tag = NAR_nationalist
