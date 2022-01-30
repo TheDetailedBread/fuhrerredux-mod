@@ -55,17 +55,18 @@ country_event = { #coup succeeds
 		name = bol.2.a 
 
 		if = {
-				limit = { has_idea = BOL_shameful_defeat }
-				remove_ideas = BOL_shameful_defeat
-			}
+      limit = { has_idea = BOL_shameful_defeat }
+      remove_ideas = BOL_shameful_defeat
+    }
 		set_country_flag = BOL_revolutionary
 		set_global_flag = BOL_left
 		set_cosmetic_tag = BOL_communism
 		add_ideas = workers_republic
 		set_politics = {
 			ruling_party = collectivist
+      elections_allowed = no
 		}
-			add_popularity = {
+		add_popularity = {
 				ideology = collectivist 
 				popularity = 0.15
 		}

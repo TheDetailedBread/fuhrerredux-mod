@@ -144,7 +144,7 @@ country_event = { #Chaos in the Country
 			GER_Hjalmar_Schacht_eco_ade
 			GER_Fritz_Dietlog_Schulenburg_sec_ade
 		}
-		set_cosmetic_tag = GER_
+		set_cosmetic_tag = GER_kaiserreich
 		set_global_flag = GER_ADECOUP
   }
 	option = {
@@ -171,27 +171,7 @@ country_event = { #Chaos in the Country
 			ruling_party = national_populist
 			elections_allowed = no
 		}
-
-	hidden_effect = {
-	
-		kill_country_leader = yes
-			
-		GER = {
-			if = {
-				limit = {
-						is_faction_leader = yes
-					}
-					dismantle_faction = yes
-			}
-			if = {
-					limit = {
-						is_in_faction  = yes
-					}
-					remove_from_faction = GER
-			}
-		}
-	}
-
+    retire_character = GER_Valkist_Council
 		remove_every_minister = yes
 		add_ideas = {
 			GER_Hermann_von_Goering_hog_npo
@@ -238,48 +218,31 @@ country_event = { #Popular issurection
 			elections_allowed = no
 		}
 
-	hidden_effect = {
-	
-		kill_country_leader = yes
-			
-		GER = {
-			if = {
-				limit = {
-						is_faction_leader = yes
-					}
-					dismantle_faction = yes
-			}
-			if = {
-					limit = {
-						is_in_faction  = yes
-					}
-					remove_from_faction = GER
-			}
-		}
-	}
-
-		add_country_leader_role = {
-      character = GER_Willy_Brandt
-      promote_leader = yes
-      country_leader = {
-        ideology = libertarian_socialist_subtype
-        traits = {}
+	  hidden_effect = {
+      add_country_leader_role = {
+        character = GER_Willy_Brandt
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
       }
-    }
 
-		remove_every_minister = yes
-		add_ideas = {
-			GER_Otto_Grotewol_hog_lib
-			GER_Heinrich_Mann_for_lib
-			GER_Lujo_Brentano_eco_lib
-			GER_Hilde_Benjamin_sec_col
-		}
-        set_cosmetic_tag = GER_socialism
-    	set_global_flag = GER_PINS
+      remove_every_minister = yes
+      add_ideas = {
+        GER_Otto_Grotewol_hog_lib
+        GER_Heinrich_Mann_for_lib
+        GER_Lujo_Brentano_eco_lib
+        GER_Hilde_Benjamin_sec_col
+      }
+      set_cosmetic_tag = GER_socialism
+      set_global_flag = GER_PINS
+    }
   }
-  	option = {
+
+  option = {
 		name = valkyrie.4.b
-    	set_global_flag = GER_ARMY
+    set_global_flag = GER_ARMY
   } 
 }
 

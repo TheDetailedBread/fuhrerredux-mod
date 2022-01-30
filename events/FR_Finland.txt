@@ -493,16 +493,14 @@ country_event = {
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 			clr_country_flag = coalition_market_liberal
 			clr_country_flag = coalition_social_conservative
-			create_country_leader = {
-				name = "Carl Gustav Mannerheim"
-				desc = "POLITICS_CARL_GUSTAV_MANNERHEIM_DESC"
-				picture = "Portrait_Finland_Carl_Gustav_Mannerheim.png"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					hog_field_marshal_baron
-				}
-			}
+      add_country_leader_role = {
+        character = FIN_Carl_Gustav_Mannerheim
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			add_ideas = FIN_Erik_Heinrichs_hog_ade
 			add_ideas = FIN_Aarne_Sihvo_for_ade
 			add_ideas = FIN_Jarl_Lundqvist_eco_ade
@@ -1468,16 +1466,14 @@ country_event = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.10 }
 			add_popularity = { ideology = libertarian_socialist popularity = -0.20 }
 			add_popularity = { ideology = social_democrat popularity = -0.10 }
-			create_country_leader = {
-				name = "Carl Gustav Mannerheim"
-				desc = "POLITICS_CARL_GUSTAV_MANNERHEIM_DESC"
-				picture = "Portrait_Finland_Carl_Gustav_Mannerheim.png"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					hog_field_marshal_baron
-				}
-			}
+			add_country_leader_role = {
+        character = FIN_Carl_Gustav_Mannerheim
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 			country_event = {
 				id = finland.32 days = 40
 			}
