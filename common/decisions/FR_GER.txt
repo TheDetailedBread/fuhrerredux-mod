@@ -135,14 +135,6 @@ GER_fate_of_bohemia = {
 				set_politics = {
 					ruling_party = valkist elections_allowed = no
 				}
-				create_country_leader = {
-				name = "Jan Rys-Rozsévač"
-				desc = ""
-				picture = "gfx/leaders/CZE/JanRys.png"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
-				}
 				add_popularity = {
 					ideology = valkist
 					popularity = 0.30
@@ -266,15 +258,7 @@ GER_fate_of_austria = {
 			puppet = AUS
 			AUS = {
 				set_cosmetic_tag = AUS_puppet
-				load_focus_tree = generic_focus
-				create_country_leader = {
-				name = "Ernst Kaltenbrunner"
-				desc = ""
-				picture = "AUS_Portrait_Ernst_Kaltenbrunner.png"
-				ideology = valkist_subtype
-				traits = { }
-				}				
-				#country_event = { id = ger.10511 }
+				load_focus_tree = generic_focus			
 			}
 		}
 
@@ -444,156 +428,6 @@ GER_take_memel = {
 	
 GER_fate_of_poland = {
 
-#	puppet_goralenland = {
-
- #       icon = generic_industry
-
-#		available = {
-#			AND = {	
-#				controls_state = 91
-#				controls_state = 89
-#			}
-#		}
-
- #       visible = {
-	#		AND = {
-	#			OR = {
-	#				has_war_with = POL
-	#				controls_state = 10
-	#			}
-	#			NOT = {
-	#				OR = {
-	#					GRL = {
-	#						is_puppet_of = GER
-	#					}
-	#				}
-	#			}
-	#		}
-	#	}
-		
-#        cost = 25
-
-#        ai_will_do = {
-#            factor = 10
-#        }
-
-#        fire_only_once = yes
-#
-#		complete_effect = {
-#			GRL = {
-#				set_cosmetic_tag = GRL_puppet
-#				transfer_state = 89
-#				transfer_state = 91
-#				add_state_core = 91
-#				add_state_core = 89
-#				add_state_core = 93
-#				add_state_core = 199
-#			}
-#			if = {
-#				limit = {
-#					GER = {
-#						controls_state = 201
-#						}
-#					}
-#					GRL = {
-#						transfer_state = 201
-#						add_state_core = 201
-#					}
-#			}
-#			if = {
-#				limit = {
-#					GER = {
-#						controls_state = 93
-#						}
-#					}
-#					GRL = {
-#						transfer_state = 93
-#					}
-#			}
-#			if = {
-#				limit = {
-#					GER = {
-#						controls_state = 199
-#						}
-#					}
-#					GRL = {
-#						transfer_state = 199
-#					}
-#			}
-
-#			GER = {
-#				puppet = GRL
-#			}
-#			GRL = {
-#				set_politics = { ruling_party = valkist }
-#				add_popularity = {
-#					ideology = valkist
-#					popularity = 0.20
-#				}
-#				set_country_flag = grl_independence
-#				create_country_leader = {
-#				name = "Wacław Krzeptowski"
-#				desc = "Wacław_Krzeptowski_disc"
-#				picture = "gfx/leaders/GRL/leader_grl_Waclaw_Krz.png"
-#				expire = "1965.1.1"
-#				ideology = valkist_subtype
-#				traits = { }
-#				}
-#			}
-#		}
-#	}
-
-	# GER_annex_poland = {
-
-        # icon = oppression
-
-		# available = {
-			# GER = {
-				# controls_state = 10
-			# }
-		# }
-
-        # visible = {
-			# original_tag = GER
-			# OR = {
-				# GER = {
-					# controls_state = 10
-				# }
-				# GER = {
-					# has_war_with = POL
-				# }
-				# POL = {
-					# exists = no
-				# }
-			# }
-		# }
-		
-        # cost = 30
-
-        # ai_will_do = {
-            # factor = 25
-        # }
-
-        # fire_only_once = yes
-
-		# complete_effect = {
-		# set_country_flag = POL_is_done
-		# add_ideas = GER_polish_occupation
-			# 86 = {
-				# add_core_of = GER
-			# }
-			# 66 = {	
-				# add_core_of = GER
-			# }
-			# 67 = {	
-				# add_core_of = GER
-			# }
-			# 752 = {	
-				# add_core_of = GER
-			# }
-		# }
-    # }
-
 	GER_polish_puppet = {
 	
 		icon = oppression
@@ -670,14 +504,6 @@ GER_fate_of_poland = {
 				set_politics = {
 					ruling_party = valkist elections_allowed = no
 				}
-				create_country_leader = {
-				name = "Wacław Krzeptowski"
-				desc = ""
-				picture = "gfx/leaders/POL/Portrait_Poland_Waclaw_Krzeptowski.png"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
-				}
 				set_cosmetic_tag = POL_puppet
 			}
 		}
@@ -737,14 +563,6 @@ GER_fate_of_east_europe = {
 				set_politics = {
 					ruling_party = valkist elections_allowed = no
 				}
-				create_country_leader = {
-				name = "Stepan Bandera"
-				desc = ""
-				picture = "gfx/leaders/UKR/leader_UKR_Stepan_Bandera.png"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
-				}
 				set_cosmetic_tag = GER_UKR_rk
 			}
 		}
@@ -803,14 +621,6 @@ GER_fate_of_east_europe = {
 				copy_government_idea_of_ROOT = yes
 				set_politics = {
 					ruling_party = valkist elections_allowed = no
-				}
-				create_country_leader = {
-				name = "Radasłaŭ Astroŭski"
-				desc = ""
-				picture = "gfx/leaders/BLR/Portrait_BLR_Radaslau_Astrouski.png"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
 				}
 				set_cosmetic_tag = GER_BLR_rk
 			}
@@ -1189,14 +999,6 @@ GER_fate_of_denmark_dec = {
 				copy_government_idea_of_ROOT = yes
 				set_politics = {
 					ruling_party = valkist elections_allowed = no
-				}
-				create_country_leader = {
-				name = "Frits Clausen"
-				desc = "POLITICS_FRITS_CLAUSEN_DESC"
-				picture = "gfx/leaders/DEN/Portrait_Denmark_Frits_Clausen.png"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
 				}
 			}
 			GER = {

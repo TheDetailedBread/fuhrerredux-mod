@@ -2621,11 +2621,7 @@ focus = {
 	id = POL_look_west
 	icon = GFX_focus_chi_reach_out_to_france
 	ai_will_do = {
-		factor = 30
-		modifier = {
-			date > 1937.6.1
-			factor = 2
-		}
+		factor = 0
 	}
 	available = {
 		OR = {
@@ -2857,11 +2853,7 @@ focus = {
 	id = POL_regional_superpower
 	icon = GFX_focus_generic_polish_deal
 	ai_will_do = {
-		factor = 20
-		modifier = {
-			date > 1937.6.1
-			factor = 3
-		}
+		factor = 200
 	}
 	available = {
 		is_in_faction = no
