@@ -15,15 +15,10 @@ set_war_support = 0.50
 
 add_ideas = {
 	party_pop_0_60
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	absolute_monarchy
 }
 
 set_politics = {
-
 	ruling_party = authoritarian_democrat
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -31,26 +26,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 5
-    social_democrat = 4
-    social_liberal = 0
-    market_liberal = 0
-    social_conservative = 6
-    authoritarian_democrat = 61
-    paternal_autocrat = 16
-    national_populist = 8
-    valkist = 0
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 5
+  social_democrat = 4
+  social_liberal = 0
+  market_liberal = 0
+  social_conservative = 6
+  authoritarian_democrat = 61
+  paternal_autocrat = 16
+  national_populist = 8
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Abdulaziz Ibn Saud"
-	desc = "POLITICS_ABDULAZIZ_DESC"
-	picture = "Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.png"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = SAU_Abdulazis_Ibn_Saud
