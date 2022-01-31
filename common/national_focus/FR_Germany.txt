@@ -15,13 +15,16 @@ focus_tree = {
 		}
 	}
 
+  initial_show_position = {
+    focus = GER_form_govt
+  }
 	continuous_focus_position = { x = 100 y = 1700 }	
 	
-## Forming a government
+  ## Forming a Government
 	focus = {
 		id = GER_form_govt
 		icon = GFX_goal_GER_government
-		x = 6
+		x = 0
 		y = 0
 		cost = 2
 		available = {
@@ -47,22 +50,19 @@ focus_tree = {
 	focus = {
 		id = GER_great_purge
 		icon = GFX_goal_purges
-		x = 6
+		x = 0
 		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		available = {
 			has_country_flag = GER_valkist_path
 		}
-		
 		prerequisite = {
 			focus = GER_form_govt
 		}
-		
+    relative_position_id = GER_form_govt
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_great_purge"
 			add_stability = 0.1
@@ -76,22 +76,19 @@ focus_tree = {
 	focus = {
 		id = GER_purge_democrats
 		icon = GFX_goal_generic_grim_reaper
-		x = 3
-		y = 2
+		x = -3
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		mutually_exclusive = {
 			focus = GER_purge_ambitious
 		}
-		
 		prerequisite = {
 			focus = GER_great_purge
 		}
-		
+    relative_position_id = GER_great_purge
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_purge_democrats"
 			add_popularity = {
@@ -104,22 +101,19 @@ focus_tree = {
 	focus = {
 		id = GER_kill_Schleicher
 		icon = GFX_goal_kill_kurt
-		x = 2
-		y = 3
+		x = -1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		mutually_exclusive = {
 			focus = GER_kill_Bose
 		}
-		
 		prerequisite = {
 			focus = GER_purge_democrats
 		}
-		
+    relative_position_id = GER_purge_democrats
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_kill_Schleicher"
 			remove_ideas = GER_divided_govt
@@ -130,22 +124,19 @@ focus_tree = {
 	focus = {
 		id = GER_kill_Bose
 		icon = GFX_goal_kill_bose
-		x = 4
-		y = 3
+		x = 1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		mutually_exclusive = {
 			focus = GER_kill_Schleicher
 		}
-		
 		prerequisite = {
 			focus = GER_purge_democrats
 		}
-		
+		relative_position_id = GER_purge_democrats
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_kill_Bose"
 			remove_ideas = GER_divided_govt
@@ -156,18 +147,16 @@ focus_tree = {
 	focus = {
 		id = GER_state_papers
 		icon = GFX_goal_big_news
-		x = 5
-		y = 4
+		x = 1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 10
 		}
-		
 		prerequisite = {
 			focus = GER_kill_Bose
 		}
-		
+		relative_position_id = GER_kill_Bose
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_state_papers"
 			add_ideas = GER_news_paper
@@ -177,19 +166,17 @@ focus_tree = {
 	focus = {
 		id = GER_ban_political_parties
 		icon = GFX_goal_Centralised_Government
-		x = 3
-		y = 4
+		x = 1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		prerequisite = {
 			focus = GER_kill_Bose
 			focus = GER_kill_Schleicher
 		}
-		
+		relative_position_id = GER_kill_Schleicher
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_ban_political_parties"
 			add_stability = -0.10
@@ -200,22 +187,19 @@ focus_tree = {
 	focus = {
 		id = GER_purge_ambitious
 		icon = GFX_goal_backstab
-		x = 9
-		y = 2
+		x = 2
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		mutually_exclusive = {
 			focus = GER_purge_democrats
 		}
-		
 		prerequisite = {
 			focus = GER_great_purge
 		}
-		
+		relative_position_id = GER_great_purge
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_purge_ambitious"
 			add_timed_idea = {
@@ -228,22 +212,19 @@ focus_tree = {
 	focus = {
 		id = GER_kill_Wessel
 		icon = GFX_goal_kill_wessel
-		x = 8
-		y = 3
+		x = -1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		mutually_exclusive = {
 			focus = GER_kill_Goring
 		}
-		
 		prerequisite = {
 			focus = GER_purge_ambitious
 		}
-		
+		relative_position_id = GER_purge_ambitious
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_kill_Wessel"
 			add_timed_idea = {
@@ -256,26 +237,22 @@ focus_tree = {
 	focus = {
 		id = GER_kill_Goring
 		icon = GFX_goal_goering_dead
-		x = 10
-		y = 3
+		x = 1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 		}
-		
 		mutually_exclusive = {
 			focus = GER_kill_Wessel
 		}
-		
 		prerequisite = {
 			focus = GER_purge_ambitious
 		}
-		
+    relative_position_id = GER_purge_ambitious
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_kill_Goring"
-			kill_ideology_leader = national_populist
-			set_country_flag = Hermann_Goring_dead
+			retire_character = GER_Hermann_Goring
 			add_popularity = {
 				ideology = national_populist
 				popularity = -0.10
@@ -290,19 +267,17 @@ focus_tree = {
 	focus = {
 		id = GER_loyatly_oath
 		icon = GFX_Valkist_Germany
-		x = 9
-		y = 4
+		x = -1
+		y = 1
 		cost = 5
-
 		ai_will_do = {
 			factor = 40
 		}
-		
 		prerequisite = {
 			focus = GER_kill_Goring
 			focus = GER_kill_Wessel
 		}
-		
+    relative_position_id = GER_kill_Goring
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_loyatly_oath"
 			remove_ideas = GER_divided_govt
@@ -314,19 +289,17 @@ focus_tree = {
 	focus = {
 		id = GER_form_tst
 		icon = GFX_goal_GER_expand_tst
-		x = 6
-		y = 5
+		x = 1
+		y = 1
 		cost = 4
-	
 		ai_will_do = {
 			factor = 40
 		}
-		
 		prerequisite = {
 			focus = GER_loyatly_oath
 			focus = GER_ban_political_parties
 		}
-		
+		relative_position_id = GER_state_papers
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_form_tst"
 			add_stability = 0.1
@@ -335,131 +308,7 @@ focus_tree = {
 		}
 	}
 	
-#	focus = {
-#		id = GER_anti_commie
-#		icon = GFX_goal_collectivism_banned
-#		x = 10
-#		y = 7
-#		cost = 5
-		
-#		ai_will_do = {
-#			factor = 10
-#		}
-		
-#		prerequisite = {
-#			focus = GER_loyatly_oath
-#			focus = GER_ban_political_parties
-#			focus = GER_4_year_plan
-#		}
-		
-#		completion_reward = {
-#			every_country = {
-#				limit = {
-#					OR = {
-#						has_government = collectivist
-#						has_government = vanguardist
-#						has_government = libertarian_socialist
-#					}
-#				}
-#				add_opinion_modifier = { target = GER modifier = GER_heck_the_commies }
-#			}
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_ban_unions
-#		icon = GFX_goal_UK_ban_unions
-#		x = 9
-#		y = 8
-#		cost = 5
-		
-#		ai_will_do = {
-#			factor = 10
-#		}
-		
-#		mutually_exclusive = {
-#			focus = GER_state_unions
-#		}
-		
-#		prerequisite = {
-#			focus = GER_anti_commie
-#		}
-		
-#		completion_reward = {
-#			add_ideas = GER_no_unions
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_state_unions
-#		icon = GFX_State_Controlled_Unions
-#		x = 11
-#		y = 8
-#		cost = 5
-		
-#		ai_will_do = {
-#			factor = 10
-#		}
-		
-#		mutually_exclusive = {
-#			focus = GER_ban_unions
-#		}
-		
-#		prerequisite = {
-#			focus = GER_anti_commie
-#		}
-		
-#		completion_reward = {
-#			add_ideas = GER_yes_unions
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_ban_left_books
-#		icon = GFX_goal_HOL_progressive_tax
-#		x = 10
-#		y = 6
-#		cost = 5
-		
-#		ai_will_do = {
-#			factor = 10
-#		}
-		
-#		prerequisite = {
-#			focus = GER_state_unions
-#			focus = GER_ban_unions
-#		}
-		
-#		completion_reward = {
-#			add_ideas = GER_no_lefties
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_no_commies
-#		icon = GFX_goal_collectivism_banned
-#		x = 10
-#		y = 6
-#		cost = 5
-		
-#		ai_will_do = {
-#			factor = 10
-#		}
-		
-#		prerequisite = {
-#			focus = GER_state_unions
-#			focus = GER_ban_unions
-#		}
-		
-#		completion_reward = {
-#			add_popularity = {
-#				ideology = collectivist
-#				popularity = -0.10
-#			}
-#		}
-#	}
-	
-## Valkist diplomacy #
+  ## Valkist diplomacy #
 	focus = {
 		id = GER_pangerman
 		icon = GFX_Germany_Pan
@@ -729,36 +578,6 @@ focus_tree = {
 			set_country_flag = GER_anti_brit
 		}
 	}
-	
-#	focus = {
-#		id = GER_usa_support
-#		icon = GFX_goal_generic_demand_territory
-#		x = -15
-#		y = 14
-#		cost = 5
-#		
-#		available = {
-#			AND = {
-#				USA = {
-#					has_war_with = ENG
-#				}
-#				GER = {
-#					NOT = {
-#						has_war_with = USA
-#					}
-#				}
-#			}
-#		}
-#		
-#		prerequisite = {
-#			focus = GER_anti_british
-#		}
-#		
-#		completion_reward = {
-#			set_country_flag = GER_support_states
-#			country_event = ger.1001
-#			}
-#		}
 	
 	focus = {
 		id = GER_naval_buildup
@@ -6325,7 +6144,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_ban_rhine_workers
-		icon = GFX_Rhineland_French
+		icon = GFX_goal_GER_ban_rhenish_workers
 		x = -8
 		y = 8
 		cost = 5
@@ -8187,8 +8006,8 @@ focus_tree = {
 	focus = {
 		id = GER_german_spirit
 		icon = GFX_Valkist_Germany
-		x = 26
-		y = 7
+		x = 12
+		y = 0
 		cost = 5
 		allow_branch = {
 			NOT = {
@@ -8202,232 +8021,21 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		available = {
 			has_country_flag = GER_formed_tst #GER_formed_tst
 		}
-		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_german_spirit"
 			add_political_power = 100
 		}
 	}
 	
-#	focus = {
-#		id = GER_berlin_olympics
-#		icon = GFX_goal_support_democracy
-#		x = 85
-#		y = 7
-#		cost = 5
-#		
-#		prerequisite = {
-#			focus = GER_german_spirit
-#		}
-#		
-#		completion_reward = {
-#			news_event = { id = worldnews.45 days = 1 }
-#		}
-#	}
-
-#	focus = {
-#		id = GER_construct_reichssportfeld
-#		icon = GFX_goal_generic_construct_civilian
-#		x = 85
-#		y = 8
-#		cost = 5
-		
-#		prerequisite = {
-#			focus = GER_berlin_olympics
-#		}
-		
-#		completion_reward = {
-#			64 = {
-#			add_extra_state_shared_building_slots = 2
-#				add_building_construction = {
-#					type = industrial_complex
-#					level = 2
-#					instant_build = yes
-#				}
-#				add_building_construction = {
-#					type = infrastructure 
-#					level = 2
-#					instant_build = yes
-#				}
-#			}				
-#		}
-#	}
-#	
-#	focus = {
-#		id = GER_televise_events
-#		icon = GFX_goal_generic_radar
-#		x = 85
-#		y = 9
-#		cost = 5
-#		
-#		prerequisite = {
-#			focus = GER_construct_reichssportfeld
-#		}
-#		
-#		completion_reward = {
-#			add_tech_bonus = {
-#				bonus = 0.50
-#				uses = 2
-#				category = radar_tech
-#			}
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_construct_airship
-#		icon = GFX_goal_generic_air_production
-#		x = 21
-#		y = 7
-#		cost = 5
-#		
-#		prerequisite = {
-#			focus = GER_german_spirit
-#		}
-#		
-#		completion_reward = {
-#			set_country_flag = GER_big_air_boi
-#			country_event = { id = ger.1080 hours = 1 }	
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_valkist_tour
-#		icon = GFX_goal_valkist_supreme
-#		x = 20
-#		y = 8
-#		cost = 5
-#		
-#		available = {
-#			GER = {
-#				has_war = no
-#			}
-#		}
-#		
-#		mutually_exclusive = {
-#			focus = GER_high_espionage
-#		}
-#		
-#		prerequisite = {
-#			focus = GER_construct_airship
-#		}
-#		
-#		completion_reward = {
-#			ENG = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			FRA = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			RHI = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			ITA = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			USA = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			MEX = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			CAN = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#			JAP = {
-#				add_popularity = { ideology = valkist popularity = 0.03 }
-#			}
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_high_espionage
-#		icon = GFX_goal_generic_build_airforce
-#		x = 22
-#		y = 8
-#		cost = 5
-#		
-#		bypass = {
-#			has_country_flag = GER_big_air_boi
-#		}
-#		
-#		mutually_exclusive = {
-#			focus = GER_valkist_tour
-#		}
-#		
-#		prerequisite = {
-#			focus = GER_construct_airship
-#		}
-#		
-#		completion_reward = {
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_british_mission
-#		icon = GFX_ENG_statute_west
-#		x = 21
-#		y = 9
-#		cost = 5
-#		
-#		mutually_exclusive = {
-#			focus = GER_ussr_mission
-#		}
-#		
-#		prerequisite = {
-#			focus = GER_high_espionage
-#		}
-		
-#		completion_reward = {
-#			air_experience = 25
-#			ENG = {
-#				set_country_flag = GER_they_know_our_shit
-#			}
-#		}
-#	}
-	
-#	focus = {
-#		id = GER_ussr_mission
-#		icon = GFX_Soviet_Union
-#		x = 23
-#		y = 9
-#		cost = 5
-#		
-#		mutually_exclusive = {
-#			focus = GER_british_mission
-#		}
-#		
-#		prerequisite = {
-#			focus = GER_high_espionage
-#		}
-#		
-#		completion_reward = {
-#			air_experience = 25
-#			SOV = {
-#				set_country_flag = GER_they_know_our_shit
-#			}
-#			UKR = {
-#				set_country_flag = GER_they_know_our_shit
-#			}
-#			BLR = {
-#				set_country_flag = GER_they_know_our_shit
-#			}
-#			EST = {
-#				set_country_flag = GER_they_know_our_shit
-#			}
-#		}
-#	}
-	
 	focus = {
 		id = GER_volkdeutsch_jugend
 		icon = GFX_goal_refugee_management
-		x = 23
-		y = 8
+		x = -3
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8435,11 +8043,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_german_spirit
 		}
-		
+		relative_position_id = GER_german_spirit
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_volkdeutsch_jugend"
 			add_popularity = { ideology = valkist popularity = 0.1 }
@@ -8450,10 +8057,9 @@ focus_tree = {
 	focus = {
 		id = GER_youth_military
 		icon = GFX_Valkist_Army
-		x = 22
-		y = 9
+		x = -1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8461,11 +8067,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_volkdeutsch_jugend
 		}
-		
+		relative_position_id = GER_volkdeutsch_jugend
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_youth_military"
 			add_ideas = GER_youth_soldiers
@@ -8475,10 +8080,9 @@ focus_tree = {
 	focus = {
 		id = GER_youth_support
 		icon = GFX_goal_generic_construction2
-		x = 22
-		y = 10
+		x = 0
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8486,11 +8090,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_youth_military
 		}
-		
+		relative_position_id = GER_youth_military
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_youth_support"
 			add_ideas = GER_youth_support_role
@@ -8500,10 +8103,9 @@ focus_tree = {
 	focus = {
 		id = GER_civil_engineering
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 25
-		y = 9
+		x = 2
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8511,11 +8113,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_volkdeutsch_jugend
 		}
-		
+    relative_position_id = GER_volkdeutsch_jugend
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civil_engineering"
 			add_ideas = GER_youth_infrastructure
@@ -8525,10 +8126,9 @@ focus_tree = {
 	focus = {
 		id = GER_community_projects
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 24
-		y = 10
+		x = -1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8536,11 +8136,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_civil_engineering
 		}
-		
+		relative_position_id = GER_civil_engineering
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_community_projects"
 			add_ideas = GER_youth_civillian
@@ -8550,10 +8149,9 @@ focus_tree = {
 	focus = {
 		id = GER_family_farms
 		icon = GFX_IRE_farms
-		x = 26
-		y = 10
+		x = 1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8561,11 +8159,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_civil_engineering
 		}
-		
+		relative_position_id = GER_civil_engineering
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_family_farms"
 			add_ideas = GER_youth_farms
@@ -8611,10 +8208,9 @@ focus_tree = {
 	focus = {
 		id = GER_valkist_education
 		icon = GFX_Germany_Pan
-		x = 29
-		y = 8
+		x = 3
+		y = 1
 		cost = 5
-
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8622,11 +8218,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_german_spirit
 		}
-		
+    relative_position_id = GER_german_spirit
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_valkist_education"
 			add_research_slot = 1
@@ -8637,10 +8232,9 @@ focus_tree = {
 	focus = {
 		id = GER_germanic_research
 		icon = GFX_focus_research4
-		x = 28
-		y = 9
+		x = -1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8648,11 +8242,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_valkist_education
 		}
-		
+    relative_position_id = GER_valkist_education
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_germanic_research"
 			add_popularity = {
@@ -8665,10 +8258,9 @@ focus_tree = {
 	focus = {
 		id = GER_archeology_mission
 		icon = GFX_goal_NOR_scandinavia
-		x = 28
-		y = 10
+		x = 0
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8676,11 +8268,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_germanic_research
 		}
-		
+		relative_position_id = GER_germanic_research
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_archeology_mission"
 			country_event = ger.1083			
@@ -8690,10 +8281,9 @@ focus_tree = {
 	focus = {
 		id = GER_experimental_research
 		icon = GFX_Split_the_Atom
-		x = 30
-		y = 9
+		x = 1
+		y = 1
 		cost = 5
-		
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -8701,11 +8291,10 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		
 		prerequisite = {
 			focus = GER_valkist_education
 		}
-		
+		relative_position_id = GER_valkist_education
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_experimental_research"
 			country_event = ger.1082	
