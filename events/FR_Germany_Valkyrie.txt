@@ -24,12 +24,19 @@ country_event = { #January Plot
 	option = {
 		name = valkyrie.1.a
 		set_country_flag = GER_VALKYRIE
+    ai_change = {
+      factor = 200
+    }
+    custom_effect_tooltip = new_focus_tree_unlocked
 		mark_focus_tree_layout_dirty = yes
     	set_global_flag = GER_WHRM  
     }
 	option = {
 		name = valkyrie.1.b
 		set_country_Flag = GER_VANILLA
+    ai_chance = {
+      factor = 800
+    }
 		mark_focus_tree_layout_dirty = yes
 		 add_political_power = -50
 	}
@@ -174,7 +181,7 @@ country_event = { #Chaos in the Country
     retire_character = GER_Valkist_Council
 		remove_every_minister = yes
 		add_ideas = {
-			GER_Hermann_von_Goering_hog_npo
+			GER_Hermann_Goring_hog_npo
 			GER_Konstantin_von_Neurath_for_npo
 			GER_Alfred_Hugenberg_eco_pau
 			GER_Rudolf_Hess_sec_npo
