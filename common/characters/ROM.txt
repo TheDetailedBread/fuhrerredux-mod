@@ -50,8 +50,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Regency_Council_hog_pau_hired }
+			}
 			idea_token = ROM_Regency_Council_hog_pau
+			on_add = { set_country_flag = ROM_Regency_Council_hog_pau_hired }
+			on_remove = { clr_country_flag = ROM_Regency_Council_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -74,8 +78,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Corneliu_Zelea_Codreanu_hog_val_hired }
+			}
 			idea_token = ROM_Corneliu_Zelea_Codreanu_hog_val
+			on_add = { set_country_flag = ROM_Corneliu_Zelea_Codreanu_hog_val_hired }
+			on_remove = { clr_country_flag = ROM_Corneliu_Zelea_Codreanu_hog_val_hired }
 			traits = {
 				head_of_government
 				valkist
@@ -118,8 +126,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ion_Antonescu_cos_hired }
+			}
 			idea_token = ROM_Ion_Antonescu_cos
+			on_add = { set_country_flag = ROM_Ion_Antonescu_cos_hired }
+			on_remove = { clr_country_flag = ROM_Ion_Antonescu_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_fire_support
@@ -145,8 +157,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Argeseanu_cos_hired }
+			}
 			idea_token = ROM_Gheorghe_Argeseanu_cos
+			on_add = { set_country_flag = ROM_Gheorghe_Argeseanu_cos_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Argeseanu_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_commando_operations
@@ -236,8 +252,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Constantin_Pantazi_cos_hired }
+			}
 			idea_token = ROM_Constantin_Pantazi_cos
+			on_add = { set_country_flag = ROM_Constantin_Pantazi_cos_hired }
+			on_remove = { clr_country_flag = ROM_Constantin_Pantazi_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_psychology
@@ -375,8 +395,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Horia_Macellariu_cnav_hired }
+			}
 			idea_token = ROM_Horia_Macellariu_cnav
+			on_add = { set_country_flag = ROM_Horia_Macellariu_cnav_hired }
+			on_remove = { clr_country_flag = ROM_Horia_Macellariu_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_base_control_doctrine
@@ -393,8 +417,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Apostol_hog_col_hired }
+			}
 			idea_token = ROM_Gheorghe_Apostol_hog_col
+			on_add = { set_country_flag = ROM_Gheorghe_Apostol_hog_col_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Apostol_hog_col_hired }
 			traits = {
 				head_of_government
 				collectivist
@@ -412,8 +440,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Virgil_Madgearu_hog_sde_hired }
+			}
 			idea_token = ROM_Virgil_Madgearu_hog_sde
+			on_add = { set_country_flag = ROM_Virgil_Madgearu_hog_sde_hired }
+			on_remove = { clr_country_flag = ROM_Virgil_Madgearu_hog_sde_hired }
 			traits = {
 				head_of_government
 				social_democrat
@@ -431,8 +463,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Iuliu_Maniu_hog_sli_hired }
+			}
 			idea_token = ROM_Iuliu_Maniu_hog_sli
+			on_add = { set_country_flag = ROM_Iuliu_Maniu_hog_sli_hired }
+			on_remove = { clr_country_flag = ROM_Iuliu_Maniu_hog_sli_hired }
 			traits = {
 				head_of_government
 				social_liberal
@@ -450,8 +486,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Constantin_Bratianu_hog_mli_hired }
+			}
 			idea_token = ROM_Constantin_Bratianu_hog_mli
+			on_add = { set_country_flag = ROM_Constantin_Bratianu_hog_mli_hired }
+			on_remove = { clr_country_flag = ROM_Constantin_Bratianu_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -469,8 +509,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Constantin_Angelescu_hog_mli_hired }
+			}
 			idea_token = ROM_Constantin_Angelescu_hog_mli
+			on_add = { set_country_flag = ROM_Constantin_Angelescu_hog_mli_hired }
+			on_remove = { clr_country_flag = ROM_Constantin_Angelescu_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -488,8 +532,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Alexandru_Vaida_Voevod_hog_sco_hired }
+			}
 			idea_token = ROM_Alexandru_Vaida_Voevod_hog_sco
+			on_add = { set_country_flag = ROM_Alexandru_Vaida_Voevod_hog_sco_hired }
+			on_remove = { clr_country_flag = ROM_Alexandru_Vaida_Voevod_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -507,8 +555,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Armand_Calinescu_hog_ade_hired }
+			}
 			idea_token = ROM_Armand_Calinescu_hog_ade
+			on_add = { set_country_flag = ROM_Armand_Calinescu_hog_ade_hired }
+			on_remove = { clr_country_flag = ROM_Armand_Calinescu_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -526,8 +578,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Alexandru_Cantacuzino_hog_pau_hired }
+			}
 			idea_token = ROM_Alexandru_Cantacuzino_hog_pau
+			on_add = { set_country_flag = ROM_Alexandru_Cantacuzino_hog_pau_hired }
+			on_remove = { clr_country_flag = ROM_Alexandru_Cantacuzino_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -545,8 +601,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Horia_Sima_hog_npo_hired }
+			}
 			idea_token = ROM_Horia_Sima_hog_npo
+			on_add = { set_country_flag = ROM_Horia_Sima_hog_npo_hired }
+			on_remove = { clr_country_flag = ROM_Horia_Sima_hog_npo_hired }
 			traits = {
 				head_of_government
 				national_populist
@@ -565,8 +625,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ion_Mota_hog_val_hired }
+			}
 			idea_token = ROM_Ion_Mota_hog_val
+			on_add = { set_country_flag = ROM_Ion_Mota_hog_val_hired }
+			on_remove = { clr_country_flag = ROM_Ion_Mota_hog_val_hired }
 			traits = {
 				head_of_government
 				valkist
@@ -584,8 +648,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ana_Pauker_for_col_hired }
+			}
 			idea_token = ROM_Ana_Pauker_for_col
+			on_add = { set_country_flag = ROM_Ana_Pauker_for_col_hired }
+			on_remove = { clr_country_flag = ROM_Ana_Pauker_for_col_hired }
 			traits = {
 				foreign_minister
 				collectivist
@@ -603,8 +671,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Grigore_Gafencu_for_sli_hired }
+			}
 			idea_token = ROM_Grigore_Gafencu_for_sli
+			on_add = { set_country_flag = ROM_Grigore_Gafencu_for_sli_hired }
+			on_remove = { clr_country_flag = ROM_Grigore_Gafencu_for_sli_hired }
 			traits = {
 				foreign_minister
 				social_liberal
@@ -622,8 +694,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Tatarescu_for_mli_hired }
+			}
 			idea_token = ROM_Gheorghe_Tatarescu_for_mli
+			on_add = { set_country_flag = ROM_Gheorghe_Tatarescu_for_mli_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Tatarescu_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
@@ -641,8 +717,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Savel_Radulescu_for_mli_hired }
+			}
 			idea_token = ROM_Savel_Radulescu_for_mli
+			on_add = { set_country_flag = ROM_Savel_Radulescu_for_mli_hired }
+			on_remove = { clr_country_flag = ROM_Savel_Radulescu_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
@@ -660,8 +740,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Viorel_Tilea_for_sco_hired }
+			}
 			idea_token = ROM_Viorel_Tilea_for_sco
+			on_add = { set_country_flag = ROM_Viorel_Tilea_for_sco_hired }
+			on_remove = { clr_country_flag = ROM_Viorel_Tilea_for_sco_hired }
 			traits = {
 				foreign_minister
 				social_conservative
@@ -679,8 +763,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Grigore_Niculescu_Buzesti_for_ade_hired }
+			}
 			idea_token = ROM_Grigore_Niculescu_Buzesti_for_ade
+			on_add = { set_country_flag = ROM_Grigore_Niculescu_Buzesti_for_ade_hired }
+			on_remove = { clr_country_flag = ROM_Grigore_Niculescu_Buzesti_for_ade_hired }
 			traits = {
 				foreign_minister
 				authoritarian_democrat
@@ -698,8 +786,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Constantin_Papanace_for_npo_hired }
+			}
 			idea_token = ROM_Constantin_Papanace_for_npo
+			on_add = { set_country_flag = ROM_Constantin_Papanace_for_npo_hired }
+			on_remove = { clr_country_flag = ROM_Constantin_Papanace_for_npo_hired }
 			traits = {
 				foreign_minister
 				national_populist
@@ -717,8 +809,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Mihail_Sturdza_for_npo_hired }
+			}
 			idea_token = ROM_Mihail_Sturdza_for_npo
+			on_add = { set_country_flag = ROM_Mihail_Sturdza_for_npo_hired }
+			on_remove = { clr_country_flag = ROM_Mihail_Sturdza_for_npo_hired }
 			traits = {
 				foreign_minister
 				national_populist
@@ -736,8 +832,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Radu_Mironovici_for_npo_hired }
+			}
 			idea_token = ROM_Radu_Mironovici_for_npo
+			on_add = { set_country_flag = ROM_Radu_Mironovici_for_npo_hired }
+			on_remove = { clr_country_flag = ROM_Radu_Mironovici_for_npo_hired }
 			traits = {
 				foreign_minister
 				national_populist
@@ -755,8 +855,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Miron_Constantinescu_eco_van_hired }
+			}
 			idea_token = ROM_Miron_Constantinescu_eco_van
+			on_add = { set_country_flag = ROM_Miron_Constantinescu_eco_van_hired }
+			on_remove = { clr_country_flag = ROM_Miron_Constantinescu_eco_van_hired }
 			traits = {
 				economy_minister
 				vanguardist
@@ -774,8 +878,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ion_Mihalache_eco_sde_hired }
+			}
 			idea_token = ROM_Ion_Mihalache_eco_sde
+			on_add = { set_country_flag = ROM_Ion_Mihalache_eco_sde_hired }
+			on_remove = { clr_country_flag = ROM_Ion_Mihalache_eco_sde_hired }
 			traits = {
 				economy_minister
 				social_democrat
@@ -793,8 +901,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Victor_Slavescu_eco_mli_hired }
+			}
 			idea_token = ROM_Victor_Slavescu_eco_mli
+			on_add = { set_country_flag = ROM_Victor_Slavescu_eco_mli_hired }
+			on_remove = { clr_country_flag = ROM_Victor_Slavescu_eco_mli_hired }
 			traits = {
 				economy_minister
 				market_liberal
@@ -812,8 +924,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Mitita_Constantinescu_eco_mli_hired }
+			}
 			idea_token = ROM_Mitita_Constantinescu_eco_mli
+			on_add = { set_country_flag = ROM_Mitita_Constantinescu_eco_mli_hired }
+			on_remove = { clr_country_flag = ROM_Mitita_Constantinescu_eco_mli_hired }
 			traits = {
 				economy_minister
 				market_liberal
@@ -831,8 +947,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Mironescu_eco_sco_hired }
+			}
 			idea_token = ROM_Gheorghe_Mironescu_eco_sco
+			on_add = { set_country_flag = ROM_Gheorghe_Mironescu_eco_sco_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Mironescu_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -850,8 +970,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Potopeanu_eco_pau_hired }
+			}
 			idea_token = ROM_Gheorghe_Potopeanu_eco_pau
+			on_add = { set_country_flag = ROM_Gheorghe_Potopeanu_eco_pau_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Potopeanu_eco_pau_hired }
 			traits = {
 				economy_minister
 				paternal_autocrat
@@ -869,8 +993,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ilie_Garneata_eco_npo_hired }
+			}
 			idea_token = ROM_Ilie_Garneata_eco_npo
+			on_add = { set_country_flag = ROM_Ilie_Garneata_eco_npo_hired }
+			on_remove = { clr_country_flag = ROM_Ilie_Garneata_eco_npo_hired }
 			traits = {
 				economy_minister
 				national_populist
@@ -888,8 +1016,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Mihail_Manoilescu_eco_npo_hired }
+			}
 			idea_token = ROM_Mihail_Manoilescu_eco_npo
+			on_add = { set_country_flag = ROM_Mihail_Manoilescu_eco_npo_hired }
+			on_remove = { clr_country_flag = ROM_Mihail_Manoilescu_eco_npo_hired }
 			traits = {
 				economy_minister
 				national_populist
@@ -907,8 +1039,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Clime_eco_val_hired }
+			}
 			idea_token = ROM_Gheorghe_Clime_eco_val
+			on_add = { set_country_flag = ROM_Gheorghe_Clime_eco_val_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Clime_eco_val_hired }
 			traits = {
 				economy_minister
 				valkist
@@ -926,8 +1062,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Teohari_Georgescu_sec_van_hired }
+			}
 			idea_token = ROM_Teohari_Georgescu_sec_van
+			on_add = { set_country_flag = ROM_Teohari_Georgescu_sec_van_hired }
+			on_remove = { clr_country_flag = ROM_Teohari_Georgescu_sec_van_hired }
 			traits = {
 				security_minister
 				vanguardist
@@ -945,8 +1085,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Pantelimon_Halippa_sec_sde_hired }
+			}
 			idea_token = ROM_Pantelimon_Halippa_sec_sde
+			on_add = { set_country_flag = ROM_Pantelimon_Halippa_sec_sde_hired }
+			on_remove = { clr_country_flag = ROM_Pantelimon_Halippa_sec_sde_hired }
 			traits = {
 				security_minister
 				social_democrat
@@ -964,8 +1108,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Victor_Iamandi_sec_mli_hired }
+			}
 			idea_token = ROM_Victor_Iamandi_sec_mli
+			on_add = { set_country_flag = ROM_Victor_Iamandi_sec_mli_hired }
+			on_remove = { clr_country_flag = ROM_Victor_Iamandi_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -983,8 +1131,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Richard_Franasovici_sec_mli_hired }
+			}
 			idea_token = ROM_Richard_Franasovici_sec_mli
+			on_add = { set_country_flag = ROM_Richard_Franasovici_sec_mli_hired }
+			on_remove = { clr_country_flag = ROM_Richard_Franasovici_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1002,8 +1154,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Mihail_Ghelmegeanu_sec_sco_hired }
+			}
 			idea_token = ROM_Mihail_Ghelmegeanu_sec_sco
+			on_add = { set_country_flag = ROM_Mihail_Ghelmegeanu_sec_sco_hired }
+			on_remove = { clr_country_flag = ROM_Mihail_Ghelmegeanu_sec_sco_hired }
 			traits = {
 				security_minister
 				social_conservative
@@ -1021,8 +1177,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Aurel_Aldea_sec_sco_hired }
+			}
 			idea_token = ROM_Aurel_Aldea_sec_sco
+			on_add = { set_country_flag = ROM_Aurel_Aldea_sec_sco_hired }
+			on_remove = { clr_country_flag = ROM_Aurel_Aldea_sec_sco_hired }
 			traits = {
 				security_minister
 				social_conservative
@@ -1040,8 +1200,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ion_Belgea_sec_val_hired }
+			}
 			idea_token = ROM_Ion_Belgea_sec_val
+			on_add = { set_country_flag = ROM_Ion_Belgea_sec_val_hired }
+			on_remove = { clr_country_flag = ROM_Ion_Belgea_sec_val_hired }
 			traits = {
 				security_minister
 				valkist
@@ -1059,8 +1223,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ioan_Ilcus_cos_sli_hired }
+			}
 			idea_token = ROM_Ioan_Ilcus_cos_sli
+			on_add = { set_country_flag = ROM_Ioan_Ilcus_cos_sli_hired }
+			on_remove = { clr_country_flag = ROM_Ioan_Ilcus_cos_sli_hired }
 			traits = {
 				chief_of_staff
 				social_liberal
@@ -1078,8 +1246,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Mihail_Racovita_cos_sli_hired }
+			}
 			idea_token = ROM_Mihail_Racovita_cos_sli
+			on_add = { set_country_flag = ROM_Mihail_Racovita_cos_sli_hired }
+			on_remove = { clr_country_flag = ROM_Mihail_Racovita_cos_sli_hired }
 			traits = {
 				chief_of_staff
 				social_liberal
@@ -1097,8 +1269,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Costin_Ionascu_carm_sli_hired }
+			}
 			idea_token = ROM_Costin_Ionascu_carm_sli
+			on_add = { set_country_flag = ROM_Costin_Ionascu_carm_sli_hired }
+			on_remove = { clr_country_flag = ROM_Costin_Ionascu_carm_sli_hired }
 			traits = {
 				chief_of_army
 				social_liberal
@@ -1116,8 +1292,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Constantin_Sanatescu_carm_ade_hired }
+			}
 			idea_token = ROM_Constantin_Sanatescu_carm_ade
+			on_add = { set_country_flag = ROM_Constantin_Sanatescu_carm_ade_hired }
+			on_remove = { clr_country_flag = ROM_Constantin_Sanatescu_carm_ade_hired }
 			traits = {
 				chief_of_army
 				authoritarian_democrat
@@ -1135,8 +1315,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Mihail_carm_ade_hired }
+			}
 			idea_token = ROM_Gheorghe_Mihail_carm_ade
+			on_add = { set_country_flag = ROM_Gheorghe_Mihail_carm_ade_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Mihail_carm_ade_hired }
 			traits = {
 				chief_of_army
 				authoritarian_democrat
@@ -1154,8 +1338,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ilie_Steflea_carm_pau_hired }
+			}
 			idea_token = ROM_Ilie_Steflea_carm_pau
+			on_add = { set_country_flag = ROM_Ilie_Steflea_carm_pau_hired }
+			on_remove = { clr_country_flag = ROM_Ilie_Steflea_carm_pau_hired }
 			traits = {
 				chief_of_army
 				paternal_autocrat
@@ -1173,8 +1361,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Alexandru_Ioanitiu_carm_npo_hired }
+			}
 			idea_token = ROM_Alexandru_Ioanitiu_carm_npo
+			on_add = { set_country_flag = ROM_Alexandru_Ioanitiu_carm_npo_hired }
+			on_remove = { clr_country_flag = ROM_Alexandru_Ioanitiu_carm_npo_hired }
 			traits = {
 				chief_of_army
 				national_populist
@@ -1192,8 +1384,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Nicolae_Sova_cnav_ade_hired }
+			}
 			idea_token = ROM_Nicolae_Sova_cnav_ade
+			on_add = { set_country_flag = ROM_Nicolae_Sova_cnav_ade_hired }
+			on_remove = { clr_country_flag = ROM_Nicolae_Sova_cnav_ade_hired }
 			traits = {
 				chief_of_navy
 				authoritarian_democrat
@@ -1211,8 +1407,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ioan_Georgescu_cnav_pau_hired }
+			}
 			idea_token = ROM_Ioan_Georgescu_cnav_pau
+			on_add = { set_country_flag = ROM_Ioan_Georgescu_cnav_pau_hired }
+			on_remove = { clr_country_flag = ROM_Ioan_Georgescu_cnav_pau_hired }
 			traits = {
 				chief_of_navy
 				paternal_autocrat
@@ -1230,8 +1430,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Gheorghe_Jienescu_cair_ade_hired }
+			}
 			idea_token = ROM_Gheorghe_Jienescu_cair_ade
+			on_add = { set_country_flag = ROM_Gheorghe_Jienescu_cair_ade_hired }
+			on_remove = { clr_country_flag = ROM_Gheorghe_Jienescu_cair_ade_hired }
 			traits = {
 				chief_of_air_force
 				authoritarian_democrat
@@ -1249,8 +1453,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Paul_Teodorescu_cair_ade_hired }
+			}
 			idea_token = ROM_Paul_Teodorescu_cair_ade
+			on_add = { set_country_flag = ROM_Paul_Teodorescu_cair_ade_hired }
+			on_remove = { clr_country_flag = ROM_Paul_Teodorescu_cair_ade_hired }
 			traits = {
 				chief_of_air_force
 				authoritarian_democrat
@@ -1268,8 +1476,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ermil_Gheorghiu_cair_pau_hired }
+			}
 			idea_token = ROM_Ermil_Gheorghiu_cair_pau
+			on_add = { set_country_flag = ROM_Ermil_Gheorghiu_cair_pau_hired }
+			on_remove = { clr_country_flag = ROM_Ermil_Gheorghiu_cair_pau_hired }
 			traits = {
 				chief_of_air_force
 				paternal_autocrat

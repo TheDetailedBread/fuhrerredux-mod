@@ -38,8 +38,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
+			}
 			idea_token = NOR_Johan_Nygaardsvold_hog_sde
+			on_add = { set_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
+			on_remove = { clr_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
 			traits = {
 				head_of_government
 				social_democrat
@@ -152,8 +156,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Kristian_Laake_carm_hired }
+			}
 			idea_token = NOR_Kristian_Laake_carm
+			on_add = { set_country_flag = NOR_Kristian_Laake_carm_hired }
+			on_remove = { clr_country_flag = NOR_Kristian_Laake_carm_hired }
 			traits = {
 				chief_of_army
 				carm_armoured_spearhead_doctrine
@@ -182,8 +190,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Carl_Gustav_Fleischer_carm_hired }
+			}
 			idea_token = NOR_Carl_Gustav_Fleischer_carm
+			on_add = { set_country_flag = NOR_Carl_Gustav_Fleischer_carm_hired }
+			on_remove = { clr_country_flag = NOR_Carl_Gustav_Fleischer_carm_hired }
 			traits = {
 				chief_of_army
 				carm_guns_and_butter_doctrine
@@ -211,8 +223,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Otto_Ruge_carm_hired }
+			}
 			idea_token = NOR_Otto_Ruge_carm
+			on_add = { set_country_flag = NOR_Otto_Ruge_carm_hired }
+			on_remove = { clr_country_flag = NOR_Otto_Ruge_carm_hired }
 			traits = {
 				chief_of_army
 				carm_commando_doctrine
@@ -240,8 +256,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_William_Steffens_cos_hired }
+			}
 			idea_token = NOR_William_Steffens_cos
+			on_add = { set_country_flag = NOR_William_Steffens_cos_hired }
+			on_remove = { clr_country_flag = NOR_William_Steffens_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_defence
@@ -267,8 +287,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Wilhelm_von_Tangen_Hansteen_cos_hired }
+			}
 			idea_token = NOR_Wilhelm_von_Tangen_Hansteen_cos
+			on_add = { set_country_flag = NOR_Wilhelm_von_Tangen_Hansteen_cos_hired }
+			on_remove = { clr_country_flag = NOR_Wilhelm_von_Tangen_Hansteen_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_fire_support
@@ -312,8 +336,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Elias_Corneliussen_cnav_hired }
+			}
 			idea_token = NOR_Elias_Corneliussen_cnav
+			on_add = { set_country_flag = NOR_Elias_Corneliussen_cnav_hired }
+			on_remove = { clr_country_flag = NOR_Elias_Corneliussen_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_power_projection_doctrine
@@ -341,8 +369,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Edvard_Christian_Danielsen_cnav_hired }
+			}
 			idea_token = NOR_Edvard_Christian_Danielsen_cnav
+			on_add = { set_country_flag = NOR_Edvard_Christian_Danielsen_cnav_hired }
+			on_remove = { clr_country_flag = NOR_Edvard_Christian_Danielsen_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_indirect_approach_doctrine
@@ -368,8 +400,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Henry_Diesen_cnav_hired }
+			}
 			idea_token = NOR_Henry_Diesen_cnav
+			on_add = { set_country_flag = NOR_Henry_Diesen_cnav_hired }
+			on_remove = { clr_country_flag = NOR_Henry_Diesen_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_base_control_doctrine
@@ -418,8 +454,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Hakon_Meyer_hog_van_hired }
+			}
 			idea_token = NOR_Hakon_Meyer_hog_van
+			on_add = { set_country_flag = NOR_Hakon_Meyer_hog_van_hired }
+			on_remove = { clr_country_flag = NOR_Hakon_Meyer_hog_van_hired }
 			traits = {
 				head_of_government
 				vanguardist
@@ -438,8 +478,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Halvard_Olsen_hog_van_hired }
+			}
 			idea_token = NOR_Halvard_Olsen_hog_van
+			on_add = { set_country_flag = NOR_Halvard_Olsen_hog_van_hired }
+			on_remove = { clr_country_flag = NOR_Halvard_Olsen_hog_van_hired }
 			traits = {
 				head_of_government
 				vanguardist
@@ -457,8 +501,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Haakon_Lie_hog_col_hired }
+			}
 			idea_token = NOR_Haakon_Lie_hog_col
+			on_add = { set_country_flag = NOR_Haakon_Lie_hog_col_hired }
+			on_remove = { clr_country_flag = NOR_Haakon_Lie_hog_col_hired }
 			traits = {
 				head_of_government
 				collectivist
@@ -476,8 +524,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
+			}
 			idea_token = NOR_Konrad_Nordahl_hog_col
+			on_add = { set_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
+			on_remove = { clr_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
 			traits = {
 				head_of_government
 				collectivist
@@ -495,8 +547,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
+			}
 			idea_token = NOR_Sverre_Stostad_hog_lib
+			on_add = { set_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
+			on_remove = { clr_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
 			traits = {
 				head_of_government
 				libertarian_socialist
@@ -514,8 +570,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
+			}
 			idea_token = NOR_Magnus_Nilssen_hog_sde
+			on_add = { set_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
+			on_remove = { clr_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
 			traits = {
 				head_of_government
 				social_democrat
@@ -533,8 +593,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Hakon_Five_hog_sli_hired }
+			}
 			idea_token = NOR_Hakon_Five_hog_sli
+			on_add = { set_country_flag = NOR_Hakon_Five_hog_sli_hired }
+			on_remove = { clr_country_flag = NOR_Hakon_Five_hog_sli_hired }
 			traits = {
 				head_of_government
 				social_liberal
@@ -552,8 +616,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
+			}
 			idea_token = NOR_Carl_Joachim_Hambro_hog_mli
+			on_add = { set_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
+			on_remove = { clr_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -571,8 +639,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
+			}
 			idea_token = NOR_Johan_Henrik_Andresen_hog_mli
+			on_add = { set_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
+			on_remove = { clr_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -590,8 +662,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Einar_Borch_hog_sco_hired }
+			}
 			idea_token = NOR_Einar_Borch_hog_sco
+			on_add = { set_country_flag = NOR_Einar_Borch_hog_sco_hired }
+			on_remove = { clr_country_flag = NOR_Einar_Borch_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -609,8 +685,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
+			}
 			idea_token = NOR_Carl_Gulbranson_hog_ade
+			on_add = { set_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
+			on_remove = { clr_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -628,8 +708,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
+			}
 			idea_token = NOR_Johan_Bernhard_Hjort_hog_ade
+			on_add = { set_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
+			on_remove = { clr_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -647,8 +731,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
+			}
 			idea_token = NOR_Gulbrand_Lunde_hog_pau
+			on_add = { set_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
+			on_remove = { clr_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -666,8 +754,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Jonas_Lie_hog_npo_hired }
+			}
 			idea_token = NOR_Jonas_Lie_hog_npo
+			on_add = { set_country_flag = NOR_Jonas_Lie_hog_npo_hired }
+			on_remove = { clr_country_flag = NOR_Jonas_Lie_hog_npo_hired }
 			traits = {
 				head_of_government
 				national_populist
@@ -685,8 +777,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
+			}
 			idea_token = NOR_Karl_Marthinsen_hog_npo
+			on_add = { set_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
+			on_remove = { clr_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
 			traits = {
 				head_of_government
 				national_populist
@@ -704,8 +800,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Albin_Eines_for_van_hired }
+			}
 			idea_token = NOR_Albin_Eines_for_van
+			on_add = { set_country_flag = NOR_Albin_Eines_for_van_hired }
+			on_remove = { clr_country_flag = NOR_Albin_Eines_for_van_hired }
 			traits = {
 				foreign_minister
 				vanguardist
@@ -723,8 +823,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Elias_Volan_for_van_hired }
+			}
 			idea_token = NOR_Elias_Volan_for_van
+			on_add = { set_country_flag = NOR_Elias_Volan_for_van_hired }
+			on_remove = { clr_country_flag = NOR_Elias_Volan_for_van_hired }
 			traits = {
 				foreign_minister
 				vanguardist
@@ -742,8 +846,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Arnulf_Overland_for_col_hired }
+			}
 			idea_token = NOR_Arnulf_Overland_for_col
+			on_add = { set_country_flag = NOR_Arnulf_Overland_for_col_hired }
+			on_remove = { clr_country_flag = NOR_Arnulf_Overland_for_col_hired }
 			traits = {
 				foreign_minister
 				collectivist
@@ -761,8 +869,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
+			}
 			idea_token = NOR_Arvid_Gilbert_Hansen_for_col
+			on_add = { set_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
+			on_remove = { clr_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
 			traits = {
 				foreign_minister
 				collectivist
@@ -780,8 +892,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
+			}
 			idea_token = NOR_Nordahl_Grieg_for_lib
+			on_add = { set_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
+			on_remove = { clr_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
 			traits = {
 				foreign_minister
 				libertarian_socialist
@@ -799,8 +915,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
+			}
 			idea_token = NOR_Wilhelm_Morgenstierne_for_lib
+			on_add = { set_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
+			on_remove = { clr_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
 			traits = {
 				foreign_minister
 				libertarian_socialist
@@ -818,8 +938,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Halvdan_Koht_for_sde_hired }
+			}
 			idea_token = NOR_Halvdan_Koht_for_sde
+			on_add = { set_country_flag = NOR_Halvdan_Koht_for_sde_hired }
+			on_remove = { clr_country_flag = NOR_Halvdan_Koht_for_sde_hired }
 			traits = {
 				foreign_minister
 				social_democrat
@@ -837,8 +961,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Trygve_Lie_for_sde_hired }
+			}
 			idea_token = NOR_Trygve_Lie_for_sde
+			on_add = { set_country_flag = NOR_Trygve_Lie_for_sde_hired }
+			on_remove = { clr_country_flag = NOR_Trygve_Lie_for_sde_hired }
 			traits = {
 				foreign_minister
 				social_democrat
@@ -856,8 +984,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Erik_Colban_for_sli_hired }
+			}
 			idea_token = NOR_Erik_Colban_for_sli
+			on_add = { set_country_flag = NOR_Erik_Colban_for_sli_hired }
+			on_remove = { clr_country_flag = NOR_Erik_Colban_for_sli_hired }
 			traits = {
 				foreign_minister
 				social_liberal
@@ -875,8 +1007,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
+			}
 			idea_token = NOR_Jacob_Worm_Muller_for_sli
+			on_add = { set_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
+			on_remove = { clr_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
 			traits = {
 				foreign_minister
 				social_liberal
@@ -894,8 +1030,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Arne_Scheel_for_mli_hired }
+			}
 			idea_token = NOR_Arne_Scheel_for_mli
+			on_add = { set_country_flag = NOR_Arne_Scheel_for_mli_hired }
+			on_remove = { clr_country_flag = NOR_Arne_Scheel_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
@@ -913,8 +1053,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ivar_Lykke_for_mli_hired }
+			}
 			idea_token = NOR_Ivar_Lykke_for_mli
+			on_add = { set_country_flag = NOR_Ivar_Lykke_for_mli_hired }
+			on_remove = { clr_country_flag = NOR_Ivar_Lykke_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
@@ -932,8 +1076,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Birger_Braadland_for_sco_hired }
+			}
 			idea_token = NOR_Birger_Braadland_for_sco
+			on_add = { set_country_flag = NOR_Birger_Braadland_for_sco_hired }
+			on_remove = { clr_country_flag = NOR_Birger_Braadland_for_sco_hired }
 			traits = {
 				foreign_minister
 				social_conservative
@@ -951,8 +1099,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Jon_Leirfall_for_sco_hired }
+			}
 			idea_token = NOR_Jon_Leirfall_for_sco
+			on_add = { set_country_flag = NOR_Jon_Leirfall_for_sco_hired }
+			on_remove = { clr_country_flag = NOR_Jon_Leirfall_for_sco_hired }
 			traits = {
 				foreign_minister
 				social_conservative
@@ -970,8 +1122,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Adolf_Hoel_for_ade_hired }
+			}
 			idea_token = NOR_Adolf_Hoel_for_ade
+			on_add = { set_country_flag = NOR_Adolf_Hoel_for_ade_hired }
+			on_remove = { clr_country_flag = NOR_Adolf_Hoel_for_ade_hired }
 			traits = {
 				foreign_minister
 				authoritarian_democrat
@@ -989,8 +1145,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
+			}
 			idea_token = NOR_Albert_Viljam_Hagelin_for_pau
+			on_add = { set_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
+			on_remove = { clr_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
 			traits = {
 				foreign_minister
 				paternal_autocrat
@@ -1008,8 +1168,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Finn_Storen_for_pau_hired }
+			}
 			idea_token = NOR_Finn_Storen_for_pau
+			on_add = { set_country_flag = NOR_Finn_Storen_for_pau_hired }
+			on_remove = { clr_country_flag = NOR_Finn_Storen_for_pau_hired }
 			traits = {
 				foreign_minister
 				paternal_autocrat
@@ -1027,8 +1191,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Axel_Stang_for_npo_hired }
+			}
 			idea_token = NOR_Axel_Stang_for_npo
+			on_add = { set_country_flag = NOR_Axel_Stang_for_npo_hired }
+			on_remove = { clr_country_flag = NOR_Axel_Stang_for_npo_hired }
 			traits = {
 				foreign_minister
 				national_populist
@@ -1046,8 +1214,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Johan_Lippestad_for_npo_hired }
+			}
 			idea_token = NOR_Johan_Lippestad_for_npo
+			on_add = { set_country_flag = NOR_Johan_Lippestad_for_npo_hired }
+			on_remove = { clr_country_flag = NOR_Johan_Lippestad_for_npo_hired }
 			traits = {
 				foreign_minister
 				national_populist
@@ -1066,8 +1238,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Haavard_Langseth_eco_van_hired }
+			}
 			idea_token = NOR_Haavard_Langseth_eco_van
+			on_add = { set_country_flag = NOR_Haavard_Langseth_eco_van_hired }
+			on_remove = { clr_country_flag = NOR_Haavard_Langseth_eco_van_hired }
 			traits = {
 				economy_minister
 				vanguardist
@@ -1085,8 +1261,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
+			}
 			idea_token = NOR_Johan_Strand_Johansen_eco_van
+			on_add = { set_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
+			on_remove = { clr_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
 			traits = {
 				economy_minister
 				vanguardist
@@ -1104,8 +1284,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
+			}
 			idea_token = NOR_Fredrik_Monsen_eco_col
+			on_add = { set_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
+			on_remove = { clr_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
 			traits = {
 				economy_minister
 				collectivist
@@ -1123,8 +1307,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
+			}
 			idea_token = NOR_Ole_Colbjornsen_eco_col
+			on_add = { set_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
+			on_remove = { clr_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
 			traits = {
 				economy_minister
 				collectivist
@@ -1142,8 +1330,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
+			}
 			idea_token = NOR_Adolf_Indrebo_eco_lib
+			on_add = { set_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
+			on_remove = { clr_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
 			traits = {
 				economy_minister
 				libertarian_socialist
@@ -1161,8 +1353,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
+			}
 			idea_token = NOR_Ragnar_Frisch_eco_lib
+			on_add = { set_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
+			on_remove = { clr_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
 			traits = {
 				economy_minister
 				libertarian_socialist
@@ -1180,8 +1376,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
+			}
 			idea_token = NOR_Kornelius_Bergsvik_eco_sde
+			on_add = { set_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
+			on_remove = { clr_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
 			traits = {
 				economy_minister
 				social_democrat
@@ -1199,8 +1399,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Oscar_Torp_eco_sde_hired }
+			}
 			idea_token = NOR_Oscar_Torp_eco_sde
+			on_add = { set_country_flag = NOR_Oscar_Torp_eco_sde_hired }
+			on_remove = { clr_country_flag = NOR_Oscar_Torp_eco_sde_hired }
 			traits = {
 				economy_minister
 				social_democrat
@@ -1218,8 +1422,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
+			}
 			idea_token = NOR_Jens_Isak_Kobro_eco_sli
+			on_add = { set_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
+			on_remove = { clr_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
 			traits = {
 				economy_minister
 				social_liberal
@@ -1237,8 +1445,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
+			}
 			idea_token = NOR_Per_Berg_Lund_eco_sli
+			on_add = { set_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
+			on_remove = { clr_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
 			traits = {
 				economy_minister
 				social_liberal
@@ -1256,8 +1468,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
+			}
 			idea_token = NOR_Ole_Bæroe_eco_mli
+			on_add = { set_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
+			on_remove = { clr_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
 			traits = {
 				economy_minister
 				market_liberal
@@ -1275,8 +1491,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
+			}
 			idea_token = NOR_Sven_Nielsen_eco_mli
+			on_add = { set_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
+			on_remove = { clr_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
 			traits = {
 				economy_minister
 				market_liberal
@@ -1294,8 +1514,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Jon_Sundby_eco_sco_hired }
+			}
 			idea_token = NOR_Jon_Sundby_eco_sco
+			on_add = { set_country_flag = NOR_Jon_Sundby_eco_sco_hired }
+			on_remove = { clr_country_flag = NOR_Jon_Sundby_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -1313,8 +1537,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
+			}
 			idea_token = NOR_Nicolai_Rygg_eco_sco
+			on_add = { set_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
+			on_remove = { clr_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -1332,8 +1560,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
+			}
 			idea_token = NOR_Alf_Larsen_Whist_eco_ade
+			on_add = { set_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
+			on_remove = { clr_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
 			traits = {
 				economy_minister
 				authoritarian_democrat
@@ -1351,8 +1583,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Axel_Aubert_eco_ade_hired }
+			}
 			idea_token = NOR_Axel_Aubert_eco_ade
+			on_add = { set_country_flag = NOR_Axel_Aubert_eco_ade_hired }
+			on_remove = { clr_country_flag = NOR_Axel_Aubert_eco_ade_hired }
 			traits = {
 				economy_minister
 				authoritarian_democrat
@@ -1370,8 +1606,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
+			}
 			idea_token = NOR_Eivind_Blehr_eco_pau
+			on_add = { set_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
+			on_remove = { clr_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
 			traits = {
 				economy_minister
 				paternal_autocrat
@@ -1389,8 +1629,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
+			}
 			idea_token = NOR_Frederik_Prytz_eco_pau
+			on_add = { set_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
+			on_remove = { clr_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
 			traits = {
 				economy_minister
 				paternal_autocrat
@@ -1408,8 +1652,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
+			}
 			idea_token = NOR_Carl_Frolich_Hanssen_eco_npo
+			on_add = { set_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
+			on_remove = { clr_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
 			traits = {
 				economy_minister
 				national_populist
@@ -1427,8 +1675,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
+			}
 			idea_token = NOR_Tormod_Hustad_eco_npo
+			on_add = { set_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
+			on_remove = { clr_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
 			traits = {
 				economy_minister
 				national_populist
@@ -1446,8 +1698,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
+			}
 			idea_token = NOR_Henry_Wilhelm_Kristiansen_sec_van
+			on_add = { set_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
+			on_remove = { clr_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
 			traits = {
 				security_minister
 				vanguardist
@@ -1465,8 +1721,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Sverre_Krogh_sec_van_hired }
+			}
 			idea_token = NOR_Sverre_Krogh_sec_van
+			on_add = { set_country_flag = NOR_Sverre_Krogh_sec_van_hired }
+			on_remove = { clr_country_flag = NOR_Sverre_Krogh_sec_van_hired }
 			traits = {
 				security_minister
 				vanguardist
@@ -1484,8 +1744,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Emil_Stang_sec_col_hired }
+			}
 			idea_token = NOR_Emil_Stang_sec_col
+			on_add = { set_country_flag = NOR_Emil_Stang_sec_col_hired }
+			on_remove = { clr_country_flag = NOR_Emil_Stang_sec_col_hired }
 			traits = {
 				security_minister
 				collectivist
@@ -1503,8 +1767,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Olav_Hindahl_sec_col_hired }
+			}
 			idea_token = NOR_Olav_Hindahl_sec_col
+			on_add = { set_country_flag = NOR_Olav_Hindahl_sec_col_hired }
+			on_remove = { clr_country_flag = NOR_Olav_Hindahl_sec_col_hired }
 			traits = {
 				security_minister
 				collectivist
@@ -1522,8 +1790,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
+			}
 			idea_token = NOR_Alfred_Madsen_sec_lib
+			on_add = { set_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
+			on_remove = { clr_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
 			traits = {
 				security_minister
 				libertarian_socialist
@@ -1541,8 +1813,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Jakob_Friis_sec_lib_hired }
+			}
 			idea_token = NOR_Jakob_Friis_sec_lib
+			on_add = { set_country_flag = NOR_Jakob_Friis_sec_lib_hired }
+			on_remove = { clr_country_flag = NOR_Jakob_Friis_sec_lib_hired }
 			traits = {
 				security_minister
 				libertarian_socialist
@@ -1560,8 +1836,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
+			}
 			idea_token = NOR_Paul_Hartmann_sec_sde
+			on_add = { set_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
+			on_remove = { clr_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
 			traits = {
 				security_minister
 				social_democrat
@@ -1579,8 +1859,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Terje_Wold_sec_sde_hired }
+			}
 			idea_token = NOR_Terje_Wold_sec_sde
+			on_add = { set_country_flag = NOR_Terje_Wold_sec_sde_hired }
+			on_remove = { clr_country_flag = NOR_Terje_Wold_sec_sde_hired }
 			traits = {
 				security_minister
 				social_democrat
@@ -1599,8 +1883,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Arne_Sunde_sec_sli_hired }
+			}
 			idea_token = NOR_Arne_Sunde_sec_sli
+			on_add = { set_country_flag = NOR_Arne_Sunde_sec_sli_hired }
+			on_remove = { clr_country_flag = NOR_Arne_Sunde_sec_sli_hired }
 			traits = {
 				security_minister
 				social_liberal
@@ -1618,8 +1906,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Haakon_Sund_sec_sli_hired }
+			}
 			idea_token = NOR_Haakon_Sund_sec_sli
+			on_add = { set_country_flag = NOR_Haakon_Sund_sec_sli_hired }
+			on_remove = { clr_country_flag = NOR_Haakon_Sund_sec_sli_hired }
 			traits = {
 				security_minister
 				social_liberal
@@ -1637,8 +1929,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Harald_Gram_sec_mli_hired }
+			}
 			idea_token = NOR_Harald_Gram_sec_mli
+			on_add = { set_country_flag = NOR_Harald_Gram_sec_mli_hired }
+			on_remove = { clr_country_flag = NOR_Harald_Gram_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1656,8 +1952,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
+			}
 			idea_token = NOR_Odd_Klingenberg_sec_mli
+			on_add = { set_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
+			on_remove = { clr_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1675,8 +1975,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
+			}
 			idea_token = NOR_Ivar_Kirkeby_Garstad_sec_sco
+			on_add = { set_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
+			on_remove = { clr_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
 			traits = {
 				security_minister
 				social_conservative
@@ -1694,8 +1998,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Nils_Trædal_sec_sco_hired }
+			}
 			idea_token = NOR_Nils_Trædal_sec_sco
+			on_add = { set_country_flag = NOR_Nils_Trædal_sec_sco_hired }
+			on_remove = { clr_country_flag = NOR_Nils_Trædal_sec_sco_hired }
 			traits = {
 				security_minister
 				social_conservative
@@ -1713,8 +2021,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
+			}
 			idea_token = NOR_Herman_Harris_Aall_sec_ade
+			on_add = { set_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
+			on_remove = { clr_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -1732,8 +2044,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
+			}
 			idea_token = NOR_Ragnar_Skancke_sec_ade
+			on_add = { set_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
+			on_remove = { clr_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -1751,8 +2067,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
+			}
 			idea_token = NOR_Per_von_Hirsch_sec_pau
+			on_add = { set_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
+			on_remove = { clr_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
 			traits = {
 				security_minister
 				paternal_autocrat
@@ -1770,8 +2090,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
+			}
 			idea_token = NOR_Rolf_Jorgen_Fuglesang_sec_pau
+			on_add = { set_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
+			on_remove = { clr_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
 			traits = {
 				security_minister
 				paternal_autocrat
@@ -1789,8 +2113,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
+			}
 			idea_token = NOR_Arnvid_Vasbotten_sec_npo
+			on_add = { set_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
+			on_remove = { clr_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
 			traits = {
 				security_minister
 				national_populist
@@ -1808,8 +2136,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
+			}
 			idea_token = NOR_Sverre_Riisnæs_sec_npo
+			on_add = { set_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
+			on_remove = { clr_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
 			traits = {
 				security_minister
 				national_populist
@@ -1827,8 +2159,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Andreas_Wettre_cos_hired }
+			}
 			idea_token = NOR_Andreas_Wettre_cos
+			on_add = { set_country_flag = NOR_Andreas_Wettre_cos_hired }
+			on_remove = { clr_country_flag = NOR_Andreas_Wettre_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_manoeuvre
@@ -1845,8 +2181,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Carl_Johan_Erichsen_cos_hired }
+			}
 			idea_token = NOR_Carl_Johan_Erichsen_cos
+			on_add = { set_country_flag = NOR_Carl_Johan_Erichsen_cos_hired }
+			on_remove = { clr_country_flag = NOR_Carl_Johan_Erichsen_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_psychology
@@ -1863,8 +2203,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Arne_Gausla_carm_hired }
+			}
 			idea_token = NOR_Arne_Gausla_carm
+			on_add = { set_country_flag = NOR_Arne_Gausla_carm_hired }
+			on_remove = { clr_country_flag = NOR_Arne_Gausla_carm_hired }
 			traits = {
 				chief_of_army
 				carm_elastic_defence_doctrine
@@ -1881,8 +2225,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Oliver_Moystad_carm_hired }
+			}
 			idea_token = NOR_Oliver_Moystad_carm
+			on_add = { set_country_flag = NOR_Oliver_Moystad_carm_hired }
+			on_remove = { clr_country_flag = NOR_Oliver_Moystad_carm_hired }
 			traits = {
 				chief_of_army
 				carm_doctrine_of_autonomy
@@ -1899,8 +2247,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Olaf_Kullmann_cnav_col_hired }
+			}
 			idea_token = NOR_Olaf_Kullmann_cnav_col
+			on_add = { set_country_flag = NOR_Olaf_Kullmann_cnav_col_hired }
+			on_remove = { clr_country_flag = NOR_Olaf_Kullmann_cnav_col_hired }
 			traits = {
 				chief_of_navy
 				collectivist
@@ -1918,8 +2270,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Kjeld_Stub_Irgens_cnav_hired }
+			}
 			idea_token = NOR_Kjeld_Stub_Irgens_cnav
+			on_add = { set_country_flag = NOR_Kjeld_Stub_Irgens_cnav_hired }
+			on_remove = { clr_country_flag = NOR_Kjeld_Stub_Irgens_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_decisive_battle_doctrine
@@ -1936,8 +2292,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Georg_Jacob_Falck_Bull_cair_hired }
+			}
 			idea_token = NOR_Georg_Jacob_Falck_Bull_cair
+			on_add = { set_country_flag = NOR_Georg_Jacob_Falck_Bull_cair_hired }
+			on_remove = { clr_country_flag = NOR_Georg_Jacob_Falck_Bull_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_air_superiority_doctrine
@@ -1954,8 +2314,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Bjarne_Oen_cair_hired }
+			}
 			idea_token = NOR_Bjarne_Oen_cair
+			on_add = { set_country_flag = NOR_Bjarne_Oen_cair_hired }
+			on_remove = { clr_country_flag = NOR_Bjarne_Oen_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_naval_aviation_doctrine
@@ -1972,8 +2336,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Ole_Reistad_cair_hired }
+			}
 			idea_token = NOR_Ole_Reistad_cair
+			on_add = { set_country_flag = NOR_Ole_Reistad_cair_hired }
+			on_remove = { clr_country_flag = NOR_Ole_Reistad_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_battlefield_support_doctrine
@@ -1990,8 +2358,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Birger_Fredrik_Motzfeldt_cair_hired }
+			}
 			idea_token = NOR_Birger_Fredrik_Motzfeldt_cair
+			on_add = { set_country_flag = NOR_Birger_Fredrik_Motzfeldt_cair_hired }
+			on_remove = { clr_country_flag = NOR_Birger_Fredrik_Motzfeldt_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_carpet_bombing_doctrine
@@ -2008,8 +2380,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Hjalmar_Riiser_Larsen_cair_hired }
+			}
 			idea_token = NOR_Hjalmar_Riiser_Larsen_cair
+			on_add = { set_country_flag = NOR_Hjalmar_Riiser_Larsen_cair_hired }
+			on_remove = { clr_country_flag = NOR_Hjalmar_Riiser_Larsen_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_vertical_envelopment_doctrine
@@ -2026,8 +2402,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Tryggve_Gran_cair_hired }
+			}
 			idea_token = NOR_Tryggve_Gran_cair
+			on_add = { set_country_flag = NOR_Tryggve_Gran_cair_hired }
+			on_remove = { clr_country_flag = NOR_Tryggve_Gran_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_the_red_baron

@@ -28,8 +28,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
+			}
 			idea_token = ZHI_Sun_Chuanfang_hog_pau
+			on_add = { set_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
+			on_remove = { clr_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -39,8 +43,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Sun_Chuanfang_cos_pau_hired }
+			}
 			idea_token = ZHI_Sun_Chuanfang_cos_pau
+			on_add = { set_country_flag = ZHI_Sun_Chuanfang_cos_pau_hired }
+			on_remove = { clr_country_flag = ZHI_Sun_Chuanfang_cos_pau_hired }
 			traits = {
 				chief_of_staff
 				paternal_autocrat
@@ -63,8 +71,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
+			}
 			idea_token = ZHI_Ku_Wei_Chun_hog_mli
+			on_add = { set_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
+			on_remove = { clr_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -74,8 +86,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
+			}
 			idea_token = ZHI_Ku_Wei_Chun_for_mli
+			on_add = { set_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
+			on_remove = { clr_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
@@ -98,8 +114,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Dong_Biwu_hog_col_hired }
+			}
 			idea_token = ZHI_Dong_Biwu_hog_col
+			on_add = { set_country_flag = ZHI_Dong_Biwu_hog_col_hired }
+			on_remove = { clr_country_flag = ZHI_Dong_Biwu_hog_col_hired }
 			traits = {
 				head_of_government
 				collectivist
@@ -122,8 +142,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
+			}
 			idea_token = ZHI_Yan_Huiqing_hog_sco
+			on_add = { set_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
+			on_remove = { clr_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -163,8 +187,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
+			}
 			idea_token = ZHI_Wu_Peifu_hog_ade
+			on_add = { set_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
+			on_remove = { clr_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -174,8 +202,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Wu_Peifu_cos_ade_hired }
+			}
 			idea_token = ZHI_Wu_Peifu_cos_ade
+			on_add = { set_country_flag = ZHI_Wu_Peifu_cos_ade_hired }
+			on_remove = { clr_country_flag = ZHI_Wu_Peifu_cos_ade_hired }
 			traits = {
 				chief_of_staff
 				authoritarian_democrat
@@ -204,8 +236,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Wang_Chengbing_cos_hired }
+			}
 			idea_token = ZHI_Wang_Chengbing_cos
+			on_add = { set_country_flag = ZHI_Wang_Chengbing_cos_hired }
+			on_remove = { clr_country_flag = ZHI_Wang_Chengbing_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_defence
@@ -253,8 +289,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Zhang_Shaozeng_carm_hired }
+			}
 			idea_token = ZHI_Zhang_Shaozeng_carm
+			on_add = { set_country_flag = ZHI_Zhang_Shaozeng_carm_hired }
+			on_remove = { clr_country_flag = ZHI_Zhang_Shaozeng_carm_hired }
 			traits = {
 				chief_of_army
 				carm_guns_and_butter_doctrine
@@ -391,8 +431,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Du_Xigui_cnav_hired }
+			}
 			idea_token = ZHI_Du_Xigui_cnav
+			on_add = { set_country_flag = ZHI_Du_Xigui_cnav_hired }
+			on_remove = { clr_country_flag = ZHI_Du_Xigui_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_open_seas_doctrine
@@ -417,8 +461,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Cao_Kun_hog_ade_hired }
+			}
 			idea_token = ZHI_Cao_Kun_hog_ade
+			on_add = { set_country_flag = ZHI_Cao_Kun_hog_ade_hired }
+			on_remove = { clr_country_flag = ZHI_Cao_Kun_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -436,8 +484,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
+			}
 			idea_token = ZHI_Wang_Kemin_eco_pau
+			on_add = { set_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
+			on_remove = { clr_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
 			traits = {
 				economy_minister
 				paternal_autocrat
@@ -455,8 +507,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Tang_Erho_eco_ade_hired }
+			}
 			idea_token = ZHI_Tang_Erho_eco_ade
+			on_add = { set_country_flag = ZHI_Tang_Erho_eco_ade_hired }
+			on_remove = { clr_country_flag = ZHI_Tang_Erho_eco_ade_hired }
 			traits = {
 				economy_minister
 				authoritarian_democrat
@@ -474,8 +530,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
+			}
 			idea_token = ZHI_Gao_Lingwei_eco_ade
+			on_add = { set_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
+			on_remove = { clr_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
 			traits = {
 				economy_minister
 				authoritarian_democrat
@@ -493,8 +553,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
+			}
 			idea_token = ZHI_Wang_Yitang_sec_pau
+			on_add = { set_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
+			on_remove = { clr_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
 			traits = {
 				security_minister
 				paternal_autocrat
@@ -512,8 +576,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
+			}
 			idea_token = ZHI_Wen_Shizhen_sec_ade
+			on_add = { set_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
+			on_remove = { clr_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -531,8 +599,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Pan_Juying_sec_pau_hired }
+			}
 			idea_token = ZHI_Pan_Juying_sec_pau
+			on_add = { set_country_flag = ZHI_Pan_Juying_sec_pau_hired }
+			on_remove = { clr_country_flag = ZHI_Pan_Juying_sec_pau_hired }
 			traits = {
 				security_minister
 				paternal_autocrat
@@ -550,8 +622,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Zhang_Ting_e_carm_hired }
+			}
 			idea_token = ZHI_Zhang_Ting_e_carm
+			on_add = { set_country_flag = ZHI_Zhang_Ting_e_carm_hired }
+			on_remove = { clr_country_flag = ZHI_Zhang_Ting_e_carm_hired }
 			traits = {
 				chief_of_army
 				carm_decisive_battle_doctrine
@@ -568,8 +644,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Xiao_Yaonan_carm_hired }
+			}
 			idea_token = ZHI_Xiao_Yaonan_carm
+			on_add = { set_country_flag = ZHI_Xiao_Yaonan_carm_hired }
+			on_remove = { clr_country_flag = ZHI_Xiao_Yaonan_carm_hired }
 			traits = {
 				chief_of_army
 				carm_elastic_defence_doctrine
@@ -586,8 +666,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Lu_Jin_carm_hired }
+			}
 			idea_token = ZHI_Lu_Jin_carm
+			on_add = { set_country_flag = ZHI_Lu_Jin_carm_hired }
+			on_remove = { clr_country_flag = ZHI_Lu_Jin_carm_hired }
 			traits = {
 				chief_of_army
 				carm_static_defence_doctrine
@@ -604,8 +688,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Cai_Chengxun_carm_hired }
+			}
 			idea_token = ZHI_Cai_Chengxun_carm
+			on_add = { set_country_flag = ZHI_Cai_Chengxun_carm_hired }
+			on_remove = { clr_country_flag = ZHI_Cai_Chengxun_carm_hired }
 			traits = {
 				chief_of_army
 				carm_doctrine_of_autonomy
@@ -622,8 +710,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Jiang_Yanxing_carm_hired }
+			}
 			idea_token = ZHI_Jiang_Yanxing_carm
+			on_add = { set_country_flag = ZHI_Jiang_Yanxing_carm_hired }
+			on_remove = { clr_country_flag = ZHI_Jiang_Yanxing_carm_hired }
 			traits = {
 				chief_of_army
 				carm_guns_and_butter_doctrine
@@ -640,8 +732,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Hu_Weide_for_pau_hired }
+			}
 			idea_token = ZHI_Hu_Weide_for_pau
+			on_add = { set_country_flag = ZHI_Hu_Weide_for_pau_hired }
+			on_remove = { clr_country_flag = ZHI_Hu_Weide_for_pau_hired }
 			traits = {
 				foreign_minister
 				paternal_autocrat
@@ -659,8 +755,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = ZHI_Hu_Shih_for_mli_hired }
+			}
 			idea_token = ZHI_Hu_Shih_for_mli
+			on_add = { set_country_flag = ZHI_Hu_Shih_for_mli_hired }
+			on_remove = { clr_country_flag = ZHI_Hu_Shih_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
