@@ -95,89 +95,14 @@ add_ideas = {
 	limited_conscription
 
 	SRA_our_right_to_survive
-
-	GEN_hog_col
-    GEN_for_col
-    GEN_eco_col
-    GEN_sec_col
 	revolutionary_movement
 }
 
-create_country_leader = {
-	name = "William Haywood"
-	desc = "POLITICS_WILLIAM_HAYWOOD_DESC"
-	picture = "Portrait_SRA_William_Haywood.png"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "James W. Ford"
-	desc = "POLITICS_JAMES_W_FORD_DESC"
-	picture = "Portrait_SRA_James_W_Ford.png"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bayard Rustin"
-	desc = "POLITICS_BAYARD_RUSTIN_DESC"
-	picture = "Portrait_SRA_Bayard_Rustin.png"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-
-### Corp Commanders
-create_corps_commander = {
-	name = "Edward Carter"
-	portrait_path = "gfx/leaders/SRA/Portrait_SRA_Edward_Carter.png"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Oliver Law"
-	portrait_path = "gfx/leaders/SRA/Portrait_SRA_Oliver_Law.png"
-	traits = { infantry_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Thomas Page"
-	portrait_path = "gfx/leaders/SRA/Portrait_SRA_Thomas_Page.png"
-	traits = { trickster career_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-### Admirals
-create_navy_leader = {
-	name = "Hugh Mulzac"
-	portrait_path = "gfx/leaders/SRA/Portrait_SRA_Hugh_Mulzac.png"
-	traits = { superior_tactician }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-create_navy_leader = {
-	name = "Youngblood Nance"
-	portrait_path = "gfx/leaders/SRA/Portrait_SRA_Youngblood_Nance.png"
-	traits = { blockade_runner spotter }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
+recruit_character = SRA_William_Haywood
+recruit_character = SRA_James_W_Ford
+recruit_character = SRA_Bayard_Rustin
+recruit_character = SRA_Edward_Carter
+recruit_character = SRA_Oliver_Law
+recruit_character = SRA_Thomas_Page
+recruit_character = SRA_Hugh_Mulzac
+recruit_character = SRA_Youngblood_Nance

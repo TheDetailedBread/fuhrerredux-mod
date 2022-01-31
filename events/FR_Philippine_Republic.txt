@@ -897,6 +897,30 @@ country_event = { # Civil War!
                   limit = { is_core_of = PHI }
                   add_core_of = PHR
               }
+              set_nationality = {
+                  character = PHI_Pedro_Abad_Santos
+                  target_country = PHR
+              }
+              set_nationality = {
+                  character = PHI_Luis_Taruc
+                  target_country = PHR
+              }
+              set_nationality = {
+				          character = PHI_Crisanto_Evangelista
+                  target_country = PHR
+              }
+              set_nationality = {
+                  character = PHI_Casto_Alejandrino
+                  target_country = PHR
+              }
+              set_nationality = {
+                  character = PHI_Herminegildo_Cruz
+                  target_country = PHR
+              }
+              set_nationality = {
+                  character = PHI_Guillermo_Capadocia
+                  target_country = PHR
+              }
           }
           PHR = {
               transfer_state = 327
@@ -912,6 +936,113 @@ country_event = { # Civil War!
               load_oob = PHR_civil_war
               add_ideas = PHI_the_filipino_civil_war
               add_ideas = PHR_the_second_revolution
+              PHI_Luis_Taruc = {
+                add_country_leader_role = {
+                  promote_leader = yes
+                  country_leader = {
+                    ideology = collectivist_subtype
+                    traits = {}
+                  }
+                }
+                add_corps_commander_role = {
+                  skill = 1
+                  attack_skill = 2
+                  defense_skill = 2
+                  planning_skill = 1
+                  logistics_skill = 1
+                }
+              }
+              PHI_Pedro_Abad_Santos = {
+                add_country_leader_role = {
+                  promote_leader = yes
+                  country_leader = {
+                    ideology = vanguardist_subtype
+                    traits = {}
+                  }
+                }
+              }
+              PHI_Crisanto_Evangelista = {
+                add_country_leader_role = {
+                  promote_leader = yes
+                  country_leader = {
+                    ideology = libertarian_socialist_subtype
+                    traits = {}
+                  }
+                }
+                add_advisor_role = {
+                  cost = 150
+                  slot = head_of_government
+                  available = { 
+                    hidden_trigger = { has_country_flag = PHI_Crisanto_Evangelista_hog_lib_hired }
+                  }
+                  idea_token = PHI_Crisanto_Evangelista_hog_lib
+                  on_add = { set_country_flag = PHI_Crisanto_Evangelista_hog_lib_hired }
+                  on_remove = { clr_country_flag = PHI_Crisanto_Evangelista_hog_lib_hired }
+                  traits = {
+                    head_of_government
+                    libertarian_socialist
+                    hog_ambitious_union_boss
+                  }
+                }
+              }
+              PHI_Casto_Alejandrino = {
+                add_corps_commander_role = {
+                  skill = 2
+                  attack_skill = 3
+                  defense_skill = 1
+                  planning_skill = 1
+                  logistics_skill = 1
+                }
+                add_advisor_role = {
+                  cost = 150
+                  slot = foreign_minister
+                  available = { 
+                    hidden_trigger = { has_country_flag = PHI_Casto_Alejandrino_for_col_hired }
+                  }
+                  idea_token = PHI_Casto_Alejandrino_for_col
+                  on_add = { set_country_flag = PHI_Casto_Alejandrino_for_col_hired }
+                  on_remove = { clr_country_flag = PHI_Casto_Alejandrino_for_col_hired }
+                  traits = {
+                    foreign_minister
+                    collectivist
+                    for_ideological_crusader
+                  }
+                }
+              }
+              PHI_Herminegildo_Cruz = {
+                add_advisor_role = {
+                  cost = 150
+                  slot = economy_minister
+                  available = { 
+                    hidden_trigger = { has_country_flag = PHI_Herminegildo_Cruz_eco_col_hired }
+                  }
+                  idea_token = PHI_Herminegildo_Cruz_eco_col
+                  on_add = { set_country_flag = PHI_Herminegildo_Cruz_eco_col_hired }
+                  on_remove = { clr_country_flag = PHI_Herminegildo_Cruz_eco_col_hired }
+                  traits = {
+                    economy_minister
+                    collectivist
+                    eco_planned_economy_proponent
+                  }
+                }
+              }
+              PHI_Guillermo_Capadocia = {
+                add_advisor_role = {
+                  cost = 150
+                  slot = foreign_minister
+                  available = { 
+                    hidden_trigger = { has_country_flag = PHI_Guillermo_Capadocia_for_col_hired }
+                  }
+                  idea_token = PHI_Guillermo_Capadocia_for_col
+                  on_add = { set_country_flag = PHI_Guillermo_Capadocia_for_col_hired }
+                  on_remove = { clr_country_flag = PHI_Guillermo_Capadocia_for_col_hired }
+                  traits = {
+                    foreign_minister
+                    collectivist
+                    for_everything
+                  }
+                }
+              }
           }
           PHI = {
               set_province_controller = 1288
@@ -921,18 +1052,6 @@ country_event = { # Civil War!
                   type = annex_everything
               }
               add_civil_war_target = PHR
-              set_nationality = {
-                  character = PHI_Luis_Taruc
-                  target_country = PHR
-              }
-              set_nationality = {
-				          character = PHI_Crisanto_Evangelista
-                  target_country = PHR
-              }
-              set_nationality = {
-                character = PHI_Pedro_Abad_Santos
-                target_country = PHR
-              }
           }
       }
   }
@@ -946,7 +1065,24 @@ country_event = { # Civil War!
       trigger = {
           is_ai = no
       }
-      PHR = { change_tag_from = ROOT }
+      PHR = { 
+        change_tag_from = ROOT
+        PHI_Crisanto_Evangelista = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = libertarian_socialist_subtype
+              traits = {}
+            }
+          }
+        }
+        add_ideas = {
+          PHI_Crisanto_Evangelista_hog_lib
+          PHI_Casto_Alejandrino_for_col
+          PHI_Herminegildo_Cruz_eco_col
+          PHI_Guillermo_Capadocia_sec_col
+        } 
+      }
   }
 }
 

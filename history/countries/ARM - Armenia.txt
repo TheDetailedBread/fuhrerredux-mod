@@ -56,14 +56,8 @@ set_technology = {
 	fuel_silos = 1
 }
 
-
-
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	extensive_conscription
 	parliamentary_republic
 }
@@ -73,7 +67,6 @@ set_politics = {
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
-
 }
 
 set_popularities = {
@@ -90,16 +83,6 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "Drastamat Kanayan"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.png"
-	expire = "1953.3.1"
-	ideology = national_populist_subtype
-	traits = {
-		
-	}
-}
 if = {
 	limit = { has_dlc = "Man the Guns" } 
 	### Ship Variants ###
@@ -123,4 +106,3 @@ if = {
 
 recruit_character = ARM_Drastamat_Kanayan
 recruit_character = ARM_Hovhannes_Kajaznuni
-recruit_character = ARM_Grigor_Harutyunyan
