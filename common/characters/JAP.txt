@@ -75,8 +75,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Tomoyuki_Yamashita_cos_hired }
+			}
 			idea_token = JAP_Tomoyuki_Yamashita_cos
+			on_add = { set_country_flag = JAP_Tomoyuki_Yamashita_cos_hired }
+			on_remove = { clr_country_flag = JAP_Tomoyuki_Yamashita_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_psychology
@@ -85,8 +89,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Tomoyuki_Yamashita_carm_hired }
+			}
 			idea_token = JAP_Tomoyuki_Yamashita_carm
+			on_add = { set_country_flag = JAP_Tomoyuki_Yamashita_carm_hired }
+			on_remove = { clr_country_flag = JAP_Tomoyuki_Yamashita_carm_hired }
 			traits = {
 				chief_of_army
 				carm_commando_doctrine
@@ -95,8 +103,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Tomoyuki_Yamashita_cair_hired }
+			}
 			idea_token = JAP_Tomoyuki_Yamashita_cair
+			on_add = { set_country_flag = JAP_Tomoyuki_Yamashita_cair_hired }
+			on_remove = { clr_country_flag = JAP_Tomoyuki_Yamashita_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_battlefield_support_doctrine
@@ -361,8 +373,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Yoshijiro_Umezu_cos_hired }
+			}
 			idea_token = JAP_Yoshijiro_Umezu_cos
+			on_add = { set_country_flag = JAP_Yoshijiro_Umezu_cos_hired }
+			on_remove = { clr_country_flag = JAP_Yoshijiro_Umezu_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_manoeuvre
@@ -371,8 +387,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Yoshijiro_Umezu_carm_hired }
+			}
 			idea_token = JAP_Yoshijiro_Umezu_carm
+			on_add = { set_country_flag = JAP_Yoshijiro_Umezu_carm_hired }
+			on_remove = { clr_country_flag = JAP_Yoshijiro_Umezu_carm_hired }
 			traits = {
 				chief_of_army
 				carm_armoured_spearhead_doctrine
@@ -603,8 +623,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Isoroku_Yamamoto_cnav_hired }
+			}
 			idea_token = JAP_Isoroku_Yamamoto_cnav
+			on_add = { set_country_flag = JAP_Isoroku_Yamamoto_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Isoroku_Yamamoto_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_base_control_doctrine
@@ -631,8 +655,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Mineichi_Koga_cnav_hired }
+			}
 			idea_token = JAP_Mineichi_Koga_cnav
+			on_add = { set_country_flag = JAP_Mineichi_Koga_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Mineichi_Koga_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_decisive_battle_doctrine
@@ -727,8 +755,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Soemu_Toyoda_cnav_hired }
+			}
 			idea_token = JAP_Soemu_Toyoda_cnav
+			on_add = { set_country_flag = JAP_Soemu_Toyoda_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Soemu_Toyoda_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_decisive_battle_doctrine
@@ -755,8 +787,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Jisaburo_Ozawa_cnav_hired }
+			}
 			idea_token = JAP_Jisaburo_Ozawa_cnav
+			on_add = { set_country_flag = JAP_Jisaburo_Ozawa_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Jisaburo_Ozawa_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_decisive_battle_doctrine
@@ -841,8 +877,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
+			}
 			idea_token = JAP_Oyama_Ikuo_hog_col
+			on_add = { set_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
+			on_remove = { clr_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
 			traits = {
 				head_of_government
 				collectivist
@@ -860,8 +900,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Suzuki_Mosaburo_hog_lib_hired }
+			}
 			idea_token = JAP_Suzuki_Mosaburo_hog_lib
+			on_add = { set_country_flag = JAP_Suzuki_Mosaburo_hog_lib_hired }
+			on_remove = { clr_country_flag = JAP_Suzuki_Mosaburo_hog_lib_hired }
 			traits = {
 				head_of_government
 				libertarian_socialist
@@ -879,8 +923,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Abe_Iso_hog_sde_hired }
+			}
 			idea_token = JAP_Abe_Iso_hog_sde
+			on_add = { set_country_flag = JAP_Abe_Iso_hog_sde_hired }
+			on_remove = { clr_country_flag = JAP_Abe_Iso_hog_sde_hired }
 			traits = {
 				head_of_government
 				social_democrat
@@ -898,8 +946,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Katayama_Tetsu_hog_sde_hired }
+			}
 			idea_token = JAP_Katayama_Tetsu_hog_sde
+			on_add = { set_country_flag = JAP_Katayama_Tetsu_hog_sde_hired }
+			on_remove = { clr_country_flag = JAP_Katayama_Tetsu_hog_sde_hired }
 			traits = {
 				head_of_government
 				social_democrat
@@ -917,8 +969,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Hamaguchi_Osachi_hog_mli_hired }
+			}
 			idea_token = JAP_Hamaguchi_Osachi_hog_mli
+			on_add = { set_country_flag = JAP_Hamaguchi_Osachi_hog_mli_hired }
+			on_remove = { clr_country_flag = JAP_Hamaguchi_Osachi_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -936,8 +992,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Machida_Chuji_hog_mli_hired }
+			}
 			idea_token = JAP_Machida_Chuji_hog_mli
+			on_add = { set_country_flag = JAP_Machida_Chuji_hog_mli_hired }
+			on_remove = { clr_country_flag = JAP_Machida_Chuji_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -955,8 +1015,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Miki_Bukichi_hog_mli_hired }
+			}
 			idea_token = JAP_Miki_Bukichi_hog_mli
+			on_add = { set_country_flag = JAP_Miki_Bukichi_hog_mli_hired }
+			on_remove = { clr_country_flag = JAP_Miki_Bukichi_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -974,8 +1038,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Ugaki_Kazushige_hog_mli_hired }
+			}
 			idea_token = JAP_Ugaki_Kazushige_hog_mli
+			on_add = { set_country_flag = JAP_Ugaki_Kazushige_hog_mli_hired }
+			on_remove = { clr_country_flag = JAP_Ugaki_Kazushige_hog_mli_hired }
 			traits = {
 				head_of_government
 				market_liberal
@@ -993,8 +1061,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Hatoyama_Ichiro_hog_sco_hired }
+			}
 			idea_token = JAP_Hatoyama_Ichiro_hog_sco
+			on_add = { set_country_flag = JAP_Hatoyama_Ichiro_hog_sco_hired }
+			on_remove = { clr_country_flag = JAP_Hatoyama_Ichiro_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -1012,8 +1084,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Inukai_Tsuyoshi_hog_sco_hired }
+			}
 			idea_token = JAP_Inukai_Tsuyoshi_hog_sco
+			on_add = { set_country_flag = JAP_Inukai_Tsuyoshi_hog_sco_hired }
+			on_remove = { clr_country_flag = JAP_Inukai_Tsuyoshi_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -1031,8 +1107,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Mitsuchi_Chuzo_hog_sco_hired }
+			}
 			idea_token = JAP_Mitsuchi_Chuzo_hog_sco
+			on_add = { set_country_flag = JAP_Mitsuchi_Chuzo_hog_sco_hired }
+			on_remove = { clr_country_flag = JAP_Mitsuchi_Chuzo_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -1050,8 +1130,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Mizuno_Rentaro_hog_sco_hired }
+			}
 			idea_token = JAP_Mizuno_Rentaro_hog_sco
+			on_add = { set_country_flag = JAP_Mizuno_Rentaro_hog_sco_hired }
+			on_remove = { clr_country_flag = JAP_Mizuno_Rentaro_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -1069,8 +1153,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Suzuki_Kisaburo_hog_sco_hired }
+			}
 			idea_token = JAP_Suzuki_Kisaburo_hog_sco
+			on_add = { set_country_flag = JAP_Suzuki_Kisaburo_hog_sco_hired }
+			on_remove = { clr_country_flag = JAP_Suzuki_Kisaburo_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -1088,8 +1176,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Yoshizawa_Kenkichi_hog_sco_hired }
+			}
 			idea_token = JAP_Yoshizawa_Kenkichi_hog_sco
+			on_add = { set_country_flag = JAP_Yoshizawa_Kenkichi_hog_sco_hired }
+			on_remove = { clr_country_flag = JAP_Yoshizawa_Kenkichi_hog_sco_hired }
 			traits = {
 				head_of_government
 				social_conservative
@@ -1107,8 +1199,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Adachi_Kenzo_hog_ade_hired }
+			}
 			idea_token = JAP_Adachi_Kenzo_hog_ade
+			on_add = { set_country_flag = JAP_Adachi_Kenzo_hog_ade_hired }
+			on_remove = { clr_country_flag = JAP_Adachi_Kenzo_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -1126,8 +1222,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Maeda_Yonezo_hog_ade_hired }
+			}
 			idea_token = JAP_Maeda_Yonezo_hog_ade
+			on_add = { set_country_flag = JAP_Maeda_Yonezo_hog_ade_hired }
+			on_remove = { clr_country_flag = JAP_Maeda_Yonezo_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -1145,8 +1245,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Nakajima_Chikuhei_hog_ade_hired }
+			}
 			idea_token = JAP_Nakajima_Chikuhei_hog_ade
+			on_add = { set_country_flag = JAP_Nakajima_Chikuhei_hog_ade_hired }
+			on_remove = { clr_country_flag = JAP_Nakajima_Chikuhei_hog_ade_hired }
 			traits = {
 				head_of_government
 				authoritarian_democrat
@@ -1164,8 +1268,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Hayashi_Senjuro_hog_pau_hired }
+			}
 			idea_token = JAP_Hayashi_Senjuro_hog_pau
+			on_add = { set_country_flag = JAP_Hayashi_Senjuro_hog_pau_hired }
+			on_remove = { clr_country_flag = JAP_Hayashi_Senjuro_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -1183,8 +1291,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Hiranuma_Kiichiro_hog_pau_hired }
+			}
 			idea_token = JAP_Hiranuma_Kiichiro_hog_pau
+			on_add = { set_country_flag = JAP_Hiranuma_Kiichiro_hog_pau_hired }
+			on_remove = { clr_country_flag = JAP_Hiranuma_Kiichiro_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -1202,8 +1314,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Nagata_Tetsuzan_hog_pau_hired }
+			}
 			idea_token = JAP_Nagata_Tetsuzan_hog_pau
+			on_add = { set_country_flag = JAP_Nagata_Tetsuzan_hog_pau_hired }
+			on_remove = { clr_country_flag = JAP_Nagata_Tetsuzan_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -1221,8 +1337,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Tojo_Hideki_hog_pau_hired }
+			}
 			idea_token = JAP_Tojo_Hideki_hog_pau
+			on_add = { set_country_flag = JAP_Tojo_Hideki_hog_pau_hired }
+			on_remove = { clr_country_flag = JAP_Tojo_Hideki_hog_pau_hired }
 			traits = {
 				head_of_government
 				paternal_autocrat
@@ -1240,8 +1360,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Araki_Sadao_hog_npo_hired }
+			}
 			idea_token = JAP_Araki_Sadao_hog_npo
+			on_add = { set_country_flag = JAP_Araki_Sadao_hog_npo_hired }
+			on_remove = { clr_country_flag = JAP_Araki_Sadao_hog_npo_hired }
 			traits = {
 				head_of_government
 				national_populist
@@ -1259,8 +1383,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Konoe_Fumimaro_hog_npo_hired }
+			}
 			idea_token = JAP_Konoe_Fumimaro_hog_npo
+			on_add = { set_country_flag = JAP_Konoe_Fumimaro_hog_npo_hired }
+			on_remove = { clr_country_flag = JAP_Konoe_Fumimaro_hog_npo_hired }
 			traits = {
 				head_of_government
 				national_populist
@@ -1278,8 +1406,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = head_of_government
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kuhara_Fusanosuke_hog_npo_hired }
+			}
 			idea_token = JAP_Kuhara_Fusanosuke_hog_npo
+			on_add = { set_country_flag = JAP_Kuhara_Fusanosuke_hog_npo_hired }
+			on_remove = { clr_country_flag = JAP_Kuhara_Fusanosuke_hog_npo_hired }
 			traits = {
 				head_of_government
 				national_populist
@@ -1297,8 +1429,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Fukumoto_Kazuo_for_van_hired }
+			}
 			idea_token = JAP_Fukumoto_Kazuo_for_van
+			on_add = { set_country_flag = JAP_Fukumoto_Kazuo_for_van_hired }
+			on_remove = { clr_country_flag = JAP_Fukumoto_Kazuo_for_van_hired }
 			traits = {
 				foreign_minister
 				vanguardist
@@ -1316,8 +1452,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Yamamoto_Kenzo_for_col_hired }
+			}
 			idea_token = JAP_Yamamoto_Kenzo_for_col
+			on_add = { set_country_flag = JAP_Yamamoto_Kenzo_for_col_hired }
+			on_remove = { clr_country_flag = JAP_Yamamoto_Kenzo_for_col_hired }
 			traits = {
 				foreign_minister
 				collectivist
@@ -1335,8 +1475,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Shidehara_Kijuro_for_mli_hired }
+			}
 			idea_token = JAP_Shidehara_Kijuro_for_mli
+			on_add = { set_country_flag = JAP_Shidehara_Kijuro_for_mli_hired }
+			on_remove = { clr_country_flag = JAP_Shidehara_Kijuro_for_mli_hired }
 			traits = {
 				foreign_minister
 				market_liberal
@@ -1354,8 +1498,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Ashida_Hitoshi_for_sco_hired }
+			}
 			idea_token = JAP_Ashida_Hitoshi_for_sco
+			on_add = { set_country_flag = JAP_Ashida_Hitoshi_for_sco_hired }
+			on_remove = { clr_country_flag = JAP_Ashida_Hitoshi_for_sco_hired }
 			traits = {
 				foreign_minister
 				social_conservative
@@ -1373,8 +1521,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Yoshida_Shigeru_for_sco_hired }
+			}
 			idea_token = JAP_Yoshida_Shigeru_for_sco
+			on_add = { set_country_flag = JAP_Yoshida_Shigeru_for_sco_hired }
+			on_remove = { clr_country_flag = JAP_Yoshida_Shigeru_for_sco_hired }
 			traits = {
 				foreign_minister
 				social_conservative
@@ -1392,8 +1544,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Arita_Hachiro_for_ade_hired }
+			}
 			idea_token = JAP_Arita_Hachiro_for_ade
+			on_add = { set_country_flag = JAP_Arita_Hachiro_for_ade_hired }
+			on_remove = { clr_country_flag = JAP_Arita_Hachiro_for_ade_hired }
 			traits = {
 				foreign_minister
 				authoritarian_democrat
@@ -1411,8 +1567,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Hirota_Koki_for_ade_hired }
+			}
 			idea_token = JAP_Hirota_Koki_for_ade
+			on_add = { set_country_flag = JAP_Hirota_Koki_for_ade_hired }
+			on_remove = { clr_country_flag = JAP_Hirota_Koki_for_ade_hired }
 			traits = {
 				foreign_minister
 				authoritarian_democrat
@@ -1430,8 +1590,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Ogawa_Gotaro_for_ade_hired }
+			}
 			idea_token = JAP_Ogawa_Gotaro_for_ade
+			on_add = { set_country_flag = JAP_Ogawa_Gotaro_for_ade_hired }
+			on_remove = { clr_country_flag = JAP_Ogawa_Gotaro_for_ade_hired }
 			traits = {
 				foreign_minister
 				authoritarian_democrat
@@ -1449,8 +1613,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Honda_Kumataro_for_pau_hired }
+			}
 			idea_token = JAP_Honda_Kumataro_for_pau
+			on_add = { set_country_flag = JAP_Honda_Kumataro_for_pau_hired }
+			on_remove = { clr_country_flag = JAP_Honda_Kumataro_for_pau_hired }
 			traits = {
 				foreign_minister
 				paternal_autocrat
@@ -1468,8 +1636,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Tatekawa_Yoshitsugu_for_pau_hired }
+			}
 			idea_token = JAP_Tatekawa_Yoshitsugu_for_pau
+			on_add = { set_country_flag = JAP_Tatekawa_Yoshitsugu_for_pau_hired }
+			on_remove = { clr_country_flag = JAP_Tatekawa_Yoshitsugu_for_pau_hired }
 			traits = {
 				foreign_minister
 				paternal_autocrat
@@ -1487,8 +1659,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = foreign_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Okawa_Shumei_for_npo_hired }
+			}
 			idea_token = JAP_Okawa_Shumei_for_npo
+			on_add = { set_country_flag = JAP_Okawa_Shumei_for_npo_hired }
+			on_remove = { clr_country_flag = JAP_Okawa_Shumei_for_npo_hired }
 			traits = {
 				foreign_minister
 				national_populist
@@ -1506,8 +1682,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Asanuma_Inejiro_eco_van_hired }
+			}
 			idea_token = JAP_Asanuma_Inejiro_eco_van
+			on_add = { set_country_flag = JAP_Asanuma_Inejiro_eco_van_hired }
+			on_remove = { clr_country_flag = JAP_Asanuma_Inejiro_eco_van_hired }
 			traits = {
 				economy_minister
 				vanguardist
@@ -1525,8 +1705,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Yamada_Moritaro_eco_col_hired }
+			}
 			idea_token = JAP_Yamada_Moritaro_eco_col
+			on_add = { set_country_flag = JAP_Yamada_Moritaro_eco_col_hired }
+			on_remove = { clr_country_flag = JAP_Yamada_Moritaro_eco_col_hired }
 			traits = {
 				economy_minister
 				collectivist
@@ -1544,8 +1728,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Eda_Saburo_eco_sde_hired }
+			}
 			idea_token = JAP_Eda_Saburo_eco_sde
+			on_add = { set_country_flag = JAP_Eda_Saburo_eco_sde_hired }
+			on_remove = { clr_country_flag = JAP_Eda_Saburo_eco_sde_hired }
 			traits = {
 				economy_minister
 				social_democrat
@@ -1563,8 +1751,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Mizutani_Chozaburo_eco_sde_hired }
+			}
 			idea_token = JAP_Mizutani_Chozaburo_eco_sde
+			on_add = { set_country_flag = JAP_Mizutani_Chozaburo_eco_sde_hired }
+			on_remove = { clr_country_flag = JAP_Mizutani_Chozaburo_eco_sde_hired }
 			traits = {
 				economy_minister
 				social_democrat
@@ -1582,8 +1774,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Inoue_Junnosuke_eco_mli_hired }
+			}
 			idea_token = JAP_Inoue_Junnosuke_eco_mli
+			on_add = { set_country_flag = JAP_Inoue_Junnosuke_eco_mli_hired }
+			on_remove = { clr_country_flag = JAP_Inoue_Junnosuke_eco_mli_hired }
 			traits = {
 				economy_minister
 				market_liberal
@@ -1601,8 +1797,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Matsumura_Kenzo_eco_mli_hired }
+			}
 			idea_token = JAP_Matsumura_Kenzo_eco_mli
+			on_add = { set_country_flag = JAP_Matsumura_Kenzo_eco_mli_hired }
+			on_remove = { clr_country_flag = JAP_Matsumura_Kenzo_eco_mli_hired }
 			traits = {
 				economy_minister
 				market_liberal
@@ -1620,8 +1820,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Ikeda_Shigeaki_eco_sco_hired }
+			}
 			idea_token = JAP_Ikeda_Shigeaki_eco_sco
+			on_add = { set_country_flag = JAP_Ikeda_Shigeaki_eco_sco_hired }
+			on_remove = { clr_country_flag = JAP_Ikeda_Shigeaki_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -1639,8 +1843,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Matsuno_Tsuruhei_eco_sco_hired }
+			}
 			idea_token = JAP_Matsuno_Tsuruhei_eco_sco
+			on_add = { set_country_flag = JAP_Matsuno_Tsuruhei_eco_sco_hired }
+			on_remove = { clr_country_flag = JAP_Matsuno_Tsuruhei_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -1658,8 +1866,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Oguchi_Kiroku_eco_sco_hired }
+			}
 			idea_token = JAP_Oguchi_Kiroku_eco_sco
+			on_add = { set_country_flag = JAP_Oguchi_Kiroku_eco_sco_hired }
+			on_remove = { clr_country_flag = JAP_Oguchi_Kiroku_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -1677,8 +1889,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Tsushima_Juichi_eco_sco_hired }
+			}
 			idea_token = JAP_Tsushima_Juichi_eco_sco
+			on_add = { set_country_flag = JAP_Tsushima_Juichi_eco_sco_hired }
+			on_remove = { clr_country_flag = JAP_Tsushima_Juichi_eco_sco_hired }
 			traits = {
 				economy_minister
 				social_conservative
@@ -1696,8 +1912,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Horikiri_Zenbee_eco_ade_hired }
+			}
 			idea_token = JAP_Horikiri_Zenbee_eco_ade
+			on_add = { set_country_flag = JAP_Horikiri_Zenbee_eco_ade_hired }
+			on_remove = { clr_country_flag = JAP_Horikiri_Zenbee_eco_ade_hired }
 			traits = {
 				economy_minister
 				authoritarian_democrat
@@ -1715,8 +1935,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Godo_Takuo_eco_pau_hired }
+			}
 			idea_token = JAP_Godo_Takuo_eco_pau
+			on_add = { set_country_flag = JAP_Godo_Takuo_eco_pau_hired }
+			on_remove = { clr_country_flag = JAP_Godo_Takuo_eco_pau_hired }
 			traits = {
 				economy_minister
 				paternal_autocrat
@@ -1734,8 +1958,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Shoda_Kazue_eco_pau_hired }
+			}
 			idea_token = JAP_Shoda_Kazue_eco_pau
+			on_add = { set_country_flag = JAP_Shoda_Kazue_eco_pau_hired }
+			on_remove = { clr_country_flag = JAP_Shoda_Kazue_eco_pau_hired }
 			traits = {
 				economy_minister
 				paternal_autocrat
@@ -1753,8 +1981,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = economy_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Suzuki_Teiichi_eco_npo_hired }
+			}
 			idea_token = JAP_Suzuki_Teiichi_eco_npo
+			on_add = { set_country_flag = JAP_Suzuki_Teiichi_eco_npo_hired }
+			on_remove = { clr_country_flag = JAP_Suzuki_Teiichi_eco_npo_hired }
 			traits = {
 				economy_minister
 				national_populist
@@ -1772,8 +2004,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Sakisaka_Itsuro_sec_lib_hired }
+			}
 			idea_token = JAP_Sakisaka_Itsuro_sec_lib
+			on_add = { set_country_flag = JAP_Sakisaka_Itsuro_sec_lib_hired }
+			on_remove = { clr_country_flag = JAP_Sakisaka_Itsuro_sec_lib_hired }
 			traits = {
 				security_minister
 				libertarian_socialist
@@ -1791,8 +2027,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Matsuoka_Komakichi_sec_sde_hired }
+			}
 			idea_token = JAP_Matsuoka_Komakichi_sec_sde
+			on_add = { set_country_flag = JAP_Matsuoka_Komakichi_sec_sde_hired }
+			on_remove = { clr_country_flag = JAP_Matsuoka_Komakichi_sec_sde_hired }
 			traits = {
 				security_minister
 				social_democrat
@@ -1810,8 +2050,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kawasaki_Katsu_sec_mli_hired }
+			}
 			idea_token = JAP_Kawasaki_Katsu_sec_mli
+			on_add = { set_country_flag = JAP_Kawasaki_Katsu_sec_mli_hired }
+			on_remove = { clr_country_flag = JAP_Kawasaki_Katsu_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1829,8 +2073,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kawasaki_Takukichi_sec_mli_hired }
+			}
 			idea_token = JAP_Kawasaki_Takukichi_sec_mli
+			on_add = { set_country_flag = JAP_Kawasaki_Takukichi_sec_mli_hired }
+			on_remove = { clr_country_flag = JAP_Kawasaki_Takukichi_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1848,8 +2096,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kimura_Kozaemon_sec_mli_hired }
+			}
 			idea_token = JAP_Kimura_Kozaemon_sec_mli
+			on_add = { set_country_flag = JAP_Kimura_Kozaemon_sec_mli_hired }
+			on_remove = { clr_country_flag = JAP_Kimura_Kozaemon_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1867,8 +2119,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Saito_Takao_sec_mli_hired }
+			}
 			idea_token = JAP_Saito_Takao_sec_mli
+			on_add = { set_country_flag = JAP_Saito_Takao_sec_mli_hired }
+			on_remove = { clr_country_flag = JAP_Saito_Takao_sec_mli_hired }
 			traits = {
 				security_minister
 				market_liberal
@@ -1886,8 +2142,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kawamura_Takeji_sec_sco_hired }
+			}
 			idea_token = JAP_Kawamura_Takeji_sec_sco
+			on_add = { set_country_flag = JAP_Kawamura_Takeji_sec_sco_hired }
+			on_remove = { clr_country_flag = JAP_Kawamura_Takeji_sec_sco_hired }
 			traits = {
 				security_minister
 				social_conservative
@@ -1905,8 +2165,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Ohara_Naoshi_sec_sco_hired }
+			}
 			idea_token = JAP_Ohara_Naoshi_sec_sco
+			on_add = { set_country_flag = JAP_Ohara_Naoshi_sec_sco_hired }
+			on_remove = { clr_country_flag = JAP_Ohara_Naoshi_sec_sco_hired }
 			traits = {
 				security_minister
 				social_conservative
@@ -1924,8 +2188,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Akita_Kiyoshi_sec_ade_hired }
+			}
 			idea_token = JAP_Akita_Kiyoshi_sec_ade
+			on_add = { set_country_flag = JAP_Akita_Kiyoshi_sec_ade_hired }
+			on_remove = { clr_country_flag = JAP_Akita_Kiyoshi_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -1943,8 +2211,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Mochizuki_Keisuke_sec_ade_hired }
+			}
 			idea_token = JAP_Mochizuki_Keisuke_sec_ade
+			on_add = { set_country_flag = JAP_Mochizuki_Keisuke_sec_ade_hired }
+			on_remove = { clr_country_flag = JAP_Mochizuki_Keisuke_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -1962,8 +2234,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Nagai_Ryutaro_sec_ade_hired }
+			}
 			idea_token = JAP_Nagai_Ryutaro_sec_ade
+			on_add = { set_country_flag = JAP_Nagai_Ryutaro_sec_ade_hired }
+			on_remove = { clr_country_flag = JAP_Nagai_Ryutaro_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -1981,8 +2257,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Oasa_Tadao_sec_ade_hired }
+			}
 			idea_token = JAP_Oasa_Tadao_sec_ade
+			on_add = { set_country_flag = JAP_Oasa_Tadao_sec_ade_hired }
+			on_remove = { clr_country_flag = JAP_Oasa_Tadao_sec_ade_hired }
 			traits = {
 				security_minister
 				authoritarian_democrat
@@ -2000,8 +2280,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Fujie_Keisuke_sec_pau_hired }
+			}
 			idea_token = JAP_Fujie_Keisuke_sec_pau
+			on_add = { set_country_flag = JAP_Fujie_Keisuke_sec_pau_hired }
+			on_remove = { clr_country_flag = JAP_Fujie_Keisuke_sec_pau_hired }
 			traits = {
 				security_minister
 				paternal_autocrat
@@ -2019,8 +2303,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Shiono_Suehiko_sec_pau_hired }
+			}
 			idea_token = JAP_Shiono_Suehiko_sec_pau
+			on_add = { set_country_flag = JAP_Shiono_Suehiko_sec_pau_hired }
+			on_remove = { clr_country_flag = JAP_Shiono_Suehiko_sec_pau_hired }
 			traits = {
 				security_minister
 				paternal_autocrat
@@ -2038,8 +2326,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = security_minister
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Suetsugu_Nobumasa_sec_npo_hired }
+			}
 			idea_token = JAP_Suetsugu_Nobumasa_sec_npo
+			on_add = { set_country_flag = JAP_Suetsugu_Nobumasa_sec_npo_hired }
+			on_remove = { clr_country_flag = JAP_Suetsugu_Nobumasa_sec_npo_hired }
 			traits = {
 				security_minister
 				national_populist
@@ -2057,8 +2349,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Anami_Korechika_cos_hired }
+			}
 			idea_token = JAP_Anami_Korechika_cos
+			on_add = { set_country_flag = JAP_Anami_Korechika_cos_hired }
+			on_remove = { clr_country_flag = JAP_Anami_Korechika_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_fire_support
@@ -2075,8 +2371,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kanin_Kotohito_cos_hired }
+			}
 			idea_token = JAP_Kanin_Kotohito_cos
+			on_add = { set_country_flag = JAP_Kanin_Kotohito_cos_hired }
+			on_remove = { clr_country_flag = JAP_Kanin_Kotohito_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_mass_combat
@@ -2085,8 +2385,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Kanin_Kotohito_carm_hired }
+			}
 			idea_token = JAP_Kanin_Kotohito_carm
+			on_add = { set_country_flag = JAP_Kanin_Kotohito_carm_hired }
+			on_remove = { clr_country_flag = JAP_Kanin_Kotohito_carm_hired }
 			traits = {
 				chief_of_army
 				carm_elastic_defence_doctrine
@@ -2103,8 +2407,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Sugiyama_Hajime_cos_hired }
+			}
 			idea_token = JAP_Sugiyama_Hajime_cos
+			on_add = { set_country_flag = JAP_Sugiyama_Hajime_cos_hired }
+			on_remove = { clr_country_flag = JAP_Sugiyama_Hajime_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_psychology
@@ -2113,8 +2421,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Sugiyama_Hajime_carm_hired }
+			}
 			idea_token = JAP_Sugiyama_Hajime_carm
+			on_add = { set_country_flag = JAP_Sugiyama_Hajime_carm_hired }
+			on_remove = { clr_country_flag = JAP_Sugiyama_Hajime_carm_hired }
 			traits = {
 				chief_of_army
 				carm_guns_and_butter_doctrine
@@ -2131,8 +2443,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Masaki_Jinzaburo_cos_hired }
+			}
 			idea_token = JAP_Masaki_Jinzaburo_cos
+			on_add = { set_country_flag = JAP_Masaki_Jinzaburo_cos_hired }
+			on_remove = { clr_country_flag = JAP_Masaki_Jinzaburo_cos_hired }
 			traits = {
 				chief_of_staff
 				cos_school_of_defence
@@ -2141,8 +2457,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Masaki_Jinzaburo_carm_hired }
+			}
 			idea_token = JAP_Masaki_Jinzaburo_carm
+			on_add = { set_country_flag = JAP_Masaki_Jinzaburo_carm_hired }
+			on_remove = { clr_country_flag = JAP_Masaki_Jinzaburo_carm_hired }
 			traits = {
 				chief_of_army
 				carm_guns_and_butter_doctrine
@@ -2159,8 +2479,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Nagano_Osami_cnav_hired }
+			}
 			idea_token = JAP_Nagano_Osami_cnav
+			on_add = { set_country_flag = JAP_Nagano_Osami_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Nagano_Osami_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_power_projection_doctrine
@@ -2177,8 +2501,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Oikawa_Koshiro_cnav_hired }
+			}
 			idea_token = JAP_Oikawa_Koshiro_cnav
+			on_add = { set_country_flag = JAP_Oikawa_Koshiro_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Oikawa_Koshiro_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_indirect_approach_doctrine
@@ -2195,8 +2523,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Fushimi_Hiroyasu_cnav_hired }
+			}
 			idea_token = JAP_Fushimi_Hiroyasu_cnav
+			on_add = { set_country_flag = JAP_Fushimi_Hiroyasu_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Fushimi_Hiroyasu_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_open_seas_doctrine
@@ -2213,8 +2545,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Shimada_Shigetaro_cnav_hired }
+			}
 			idea_token = JAP_Shimada_Shigetaro_cnav
+			on_add = { set_country_flag = JAP_Shimada_Shigetaro_cnav_hired }
+			on_remove = { clr_country_flag = JAP_Shimada_Shigetaro_cnav_hired }
 			traits = {
 				chief_of_navy
 				cnav_power_projection_doctrine
@@ -2231,8 +2567,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Teramoto_Kumaichi_cair_hired }
+			}
 			idea_token = JAP_Teramoto_Kumaichi_cair
+			on_add = { set_country_flag = JAP_Teramoto_Kumaichi_cair_hired }
+			on_remove = { clr_country_flag = JAP_Teramoto_Kumaichi_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_air_superiority_doctrine
@@ -2249,8 +2589,12 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			available = { can_replace_minister = no }
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Sugawara_Michio_cair_hired }
+			}
 			idea_token = JAP_Sugawara_Michio_cair
+			on_add = { set_country_flag = JAP_Sugawara_Michio_cair_hired }
+			on_remove = { clr_country_flag = JAP_Sugawara_Michio_cair_hired }
 			traits = {
 				chief_of_air_force
 				cair_carpet_bombing_doctrine
