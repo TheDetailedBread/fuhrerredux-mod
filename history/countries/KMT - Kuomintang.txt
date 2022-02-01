@@ -11,6 +11,7 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -32,16 +33,9 @@ if = {
 	}
 }
 
-#Events
-
-
 add_ideas = {
 	backwards_economy
 	iliterate_population
-	GEN_hog_sde
-	GEN_FOR_Sde
-	GEN_eco_sde
-	GEN_sec_sde
 	semi_presidential_republic
 }
 
@@ -58,25 +52,15 @@ set_politics = {
 
 set_popularities = {
 	vanguardist = 14
-
 	collectivist = 12
-
 	libertarian_socialist = 4
-
 	social_democrat = 33
-
 	social_liberal = 6
-
 	market_liberal = 0
-
 	social_conservative = 4
-
 	authoritarian_democrat = 15
-
 	paternal_autocrat = 6
-
 	national_populist = 3
-
 	valkist = 3
 }
 

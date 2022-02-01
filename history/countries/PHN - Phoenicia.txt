@@ -25,10 +25,6 @@ set_war_support = 0.50
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	colonial_government
 }	
 
@@ -51,6 +47,7 @@ set_technology = {
 	tactical_bomber1 = 1
 	CAS1 = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -76,7 +73,6 @@ if = {
 }
 
 set_politics = {
-
 	ruling_party = social_conservative
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -84,17 +80,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 1
-    collectivist = 2
-    libertarian_socialist = 1
-    social_democrat = 30
-    social_liberal = 0
-    market_liberal = 10
-    social_conservative = 45
-    authoritarian_democrat = 10
-    paternal_autocrat = 0
-    national_populist = 1
-    valkist = 0
+  vanguardist = 1
+  collectivist = 2
+  libertarian_socialist = 1
+  social_democrat = 30
+  social_liberal = 0
+  market_liberal = 10
+  social_conservative = 45
+  authoritarian_democrat = 10
+  paternal_autocrat = 0
+  national_populist = 1
+  valkist = 0
 }
 recruit_character = PHN_Emile_Edde
 
