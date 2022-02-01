@@ -3022,31 +3022,32 @@ country_event = {
 	    }
     }
 
-	country_event = {	
+country_event = {	
 	id = sovietpol.1110
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sovietpol.1110"}
-		title = "Assasination of Tukhachevsky"
-		desc = sovietpol.1110.d
-		picture = soviet_soviet_massacre
+  title = "Assasination of Tukhachevsky"
+  desc = sovietpol.1110.d
+  picture = soviet_soviet_massacre
 
-		fire_only_once = yes
-		is_triggered_only = yes
+  fire_only_once = yes
+  is_triggered_only = yes
 
-		option = {	
-			ai_chance = {
-				factor = 100
-			}
-		name = "Who is responsible?!"	
-		custom_effect_tooltip = SOV_government_min_5
-	    subtract_from_variable = { var = sov_stability_factor value = 5 }
-		hidden_effect = {
-			country_event = {
-				id = sovietpol.1111
-				days = 1
-				}
-	        }
-        }
+  option = {	
+    ai_chance = {
+      factor = 100
     }
+    name = "Who is responsible?!"	
+    retire_character = SOV_Mikhail_Tukhachevsky
+    custom_effect_tooltip = SOV_government_min_5
+    subtract_from_variable = { var = sov_stability_factor value = 5 }
+    hidden_effect = {
+      country_event = {
+        id = sovietpol.1111
+        days = 1
+      }
+    }
+  }
+}
 	country_event = {	
 	id = sovietpol.1111
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sovietpol.1111"}
@@ -3075,7 +3076,7 @@ country_event = {
 			}
 			remove_every_minister = yes
 			add_ideas = {
-				SOV_Vyacheslav_Molotov_for
+				SOV_Vyacheslav_Molotov_hog_van
 				SOV_Karl_Radek_for_van
 				SOV_Mikhail_Tomskiy_eco_van
 				SOV_Genrikh_Yagoda_sec_van
