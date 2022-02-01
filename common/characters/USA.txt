@@ -407,12 +407,16 @@ characters = {
 			traits = { }
 		}
 		corps_commander = {
-			traits = { }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 3
+			traits = {
+				organizer
+				trait_cautious
+				armor_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
 		}
 		advisor = {
 			cost = 150
@@ -576,9 +580,15 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 1
-			attack_skill = 4
+			traits = {
+				offensive_doctrine
+				brilliant_strategist
+				career_officer
+				media_personality
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 3
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 2
@@ -1530,7 +1540,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Malin_Craig_cos_hired }
 			traits = {
 				chief_of_staff
-				
 				cos_school_of_defence
 			}
 		}
@@ -1544,12 +1553,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 2
+			traits = { brilliant_strategist trait_cautious trait_engineer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
 		}
 		advisor = {
 			cost = 150
@@ -1562,7 +1571,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Omar_Nelson_Bradley_cos_hired }
 			traits = {
 				chief_of_staff
-				
 				cos_school_of_manoeuvre
 			}
 		}
@@ -1585,7 +1593,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Alexander_Vandegrift_carm_hired }
 			traits = {
 				chief_of_army
-				
 				carm_armoured_spearhead_doctrine
 			}
 		}
@@ -1608,7 +1615,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Joseph_T_McNarney_carm_hired }
 			traits = {
 				chief_of_army
-				
 				carm_doctrine_of_autonomy
 			}
 		}
@@ -1631,7 +1637,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Kenneth_George_Althaus_carm_hired }
 			traits = {
 				chief_of_army
-				
 				carm_static_defence_doctrine
 			}
 		}
@@ -1654,7 +1659,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Samuel_D_Sturgis_Jr_carm_hired }
 			traits = {
 				chief_of_army
-				
 				carm_armoured_spearhead_doctrine
 			}
 		}
@@ -1686,7 +1690,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Chester_William_Nimitz_Sr_cnav_hired }
 			traits = {
 				chief_of_navy
-				
 				cnav_power_projection_doctrine
 			}
 		}
@@ -1718,7 +1721,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Ernest_Joseph_King_cnav_hired }
 			traits = {
 				chief_of_navy
-				
 				cnav_open_seas_doctrine
 			}
 		}
@@ -1750,7 +1752,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Frank_Jack_Fletcher_cnav_hired }
 			traits = {
 				chief_of_navy
-				
 				cnav_decisive_battle_doctrine
 			}
 		}
@@ -1773,7 +1774,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Samuel_Murray_Robinson_cnav_hired }
 			traits = {
 				chief_of_navy
-				
 				cnav_base_control_doctrine
 			}
 		}
@@ -1796,7 +1796,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Thomas_Charles_Hart_cnav_hired }
 			traits = {
 				chief_of_navy
-				
 				cnav_indirect_approach_doctrine
 			}
 		}
@@ -1828,7 +1827,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_William_Halsey_Jr_cnav_hired }
 			traits = {
 				chief_of_navy
-				
 				cnav_power_projection_doctrine
 			}
 		}
@@ -1851,7 +1849,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Carl_Andrew_Spaatz_cair_hired }
 			traits = {
 				chief_of_air_force
-				
 				cair_air_superiority_doctrine
 			}
 		}
@@ -1874,7 +1871,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Edward_Vernon_Rickenbacker_cair_hired }
 			traits = {
 				chief_of_air_force
-				
 				cair_naval_aviation_doctrine
 			}
 		}
@@ -1897,7 +1893,6 @@ characters = {
 			on_remove = { clr_country_flag = USA_Hoyt_Sanford_Vandenberg_cair_hired }
 			traits = {
 				chief_of_air_force
-				
 				cair_battlefield_support_doctrine
 			}
 		}
@@ -2002,12 +1997,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 2
+			traits = { cavalry_officer organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 3
+			logistics_skill = 1
 		}
 	}
 	USA_Lucian_Truscott = {
@@ -2018,12 +2013,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = { cavalry_officer trait_engineer commando }
 			skill = 2
-			attack_skill = 1
-			defense_skill = 4
+			attack_skill = 2
+			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 3
+			logistics_skill = 2
 		}
 	}
 	USA_Walter_Krueger = {
@@ -2034,12 +2029,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
+			traits = { brilliant_strategist career_officer armor_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
 		}
 	}
 	USA_Lloyd_Fredendall = {
@@ -2050,11 +2045,11 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 3
+			traits = { old_guard inflexible_strategist infantry_officer }
+			skill = 1
 			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 4
+			defense_skill = 1
+			planning_skill = 1
 			logistics_skill = 1
 		}
 	}
@@ -2066,12 +2061,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = { artillery_officer career_officer }
 			skill = 2
-			attack_skill = 3
+			attack_skill = 1
 			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
 	USA_George_S_Patton = {
@@ -2082,12 +2077,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = { trait_reckless armor_officer trickster panzer_leader }
 			skill = 3
-			attack_skill = 4
+			attack_skill = 5
 			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 4
+			logistics_skill = 2
 		}
 	}
 	USA_Mark_Clark = {
@@ -2098,12 +2093,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 2
+			traits = { career_officer trickster ranger }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
 			planning_skill = 3
-			logistics_skill = 4
+			logistics_skill = 1
 		}
 	}
 	USA_Jonathan_Wainwright = {
@@ -2114,12 +2109,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 4
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 4
+			traits = { trait_reckless cavalry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 	USA_Edwin_Harding = {
@@ -2130,12 +2125,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 1
+			traits = { career_officer trait_engineer commando }
+			skill = 3
 			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
 	}
 	USA_Leonard_Gerow = {
@@ -2146,10 +2141,10 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
+			traits = { armor_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
 		}
@@ -2162,12 +2157,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 4
+			traits = { trait_reckless trait_engineer }
+			skill = 1
 			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 	USA_Clarence_Huebner = {
@@ -2178,12 +2173,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 4
+			traits = { harsh_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 	USA_Alexander_Patch = {
@@ -2194,12 +2189,12 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = { infantry_officer commando }
 			skill = 2
-			attack_skill = 3
+			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 2
-			logistics_skill = 3
+			logistics_skill = 2
 		}
 	}
 	USA_William_Simpson = {
@@ -2306,11 +2301,11 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = { }
-			skill = 4
-			attack_skill = 3
+			traits = { air_controller }
+			skill = 1
+			attack_skill = 1
 			defense_skill = 1
-			maneuvering_skill = 2
+			maneuvering_skill = 1
 			coordination_skill = 1
 		}
 	}
@@ -2322,12 +2317,12 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = { }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 1
-			maneuvering_skill = 3
-			coordination_skill = 1
+			traits = { old_guard_navy spotter }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
 		}
 	}
 	USA_Arleigh_Burke = {
@@ -2338,12 +2333,12 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = { }
+			traits = { bold fleet_protector }
 			skill = 1
-			attack_skill = 3
-			defense_skill = 3
+			attack_skill = 1
+			defense_skill = 1
 			maneuvering_skill = 1
-			coordination_skill = 3
+			coordination_skill = 1
 		}
 	}
 	USA_Charles_M_Cooke_Jr = {
@@ -2354,12 +2349,12 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = { }
+			traits = { seawolf }
 			skill = 1
-			attack_skill = 4
+			attack_skill = 1
 			defense_skill = 1
-			maneuvering_skill = 2
-			coordination_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
 		}
 	}
 	USA_Earl_Browder = {
