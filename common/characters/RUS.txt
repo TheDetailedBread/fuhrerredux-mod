@@ -561,6 +561,21 @@ characters = {
 				cair_battlefield_support_doctrine
 			}
 		}
+    advisor = {
+			cost = 150
+			slot = security_minister
+			available = { 
+				hidden_trigger = { has_country_flag = RUS_Anton_Turkul_sec_val_hired }
+			}
+			idea_token = RUS_Anton_Turkul_sec_val
+			on_add = { set_country_flag = RUS_Anton_Torkul_sec_val_hired }
+			on_remove = { clr_country_flag = RUS_Anton_Turkul_sec_val_hired }
+			traits = {
+				security_minister
+				valkist
+				sec_efficient_sociopath
+			}
+		}
 	}
 	RUS_Mitrofan_Nezhentsev = {
 		name = "Mitrofan Nezhentsev"
@@ -2960,29 +2975,6 @@ characters = {
 				security_minister
 				national_populist
 				sec_secret_police_chief
-			}
-		}
-	}
-	RUS_Anton_Tourkul = {
-		name = "Anton Tourkul"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/RUS/RUS_Anton_Tourkul.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = security_minister
-			available = { 
-				hidden_trigger = { has_country_flag = RUS_Anton_Tourkul_sec_val_hired }
-			}
-			idea_token = RUS_Anton_Tourkul_sec_val
-			on_add = { set_country_flag = RUS_Anton_Tourkul_sec_val_hired }
-			on_remove = { clr_country_flag = RUS_Anton_Tourkul_sec_val_hired }
-			traits = {
-				security_minister
-				valkist
-				sec_efficient_sociopath
 			}
 		}
 	}
