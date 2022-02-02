@@ -32,7 +32,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.1000"}
 	title = "We must legitimize our government."
 	desc = ger.1000.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_youth_poster
 
 	is_triggered_only = yes
 
@@ -41,22 +41,6 @@ country_event = {
 	option = {
 		name = "We must purge any opposition."
 		set_country_flag = GER_valkist_path
-	}
-
-	option = {
-		trigger = {
-			has_country_flag = GER_WIP
-		}
-		name = "We should make a political alliance with war hero, Hermann Göring."
-		set_country_flag = GER_NP_path
-	}
-
-	option = {
-		trigger = {
-			has_country_flag = GER_WIP
-		}
-		name = "Reforming the Reichstag would give our government legitimacy"
-		set_country_flag = GER_authdem_path
 	}
 }
 
@@ -6479,7 +6463,7 @@ country_event = { # The tst question
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.149"}
 	title = ger.149.t
 	desc = ger.149.d
-	picture = TST_event
+	picture = GFX_report_event_GER_tst_poster
 
 	is_triggered_only = yes
 
@@ -6530,7 +6514,7 @@ country_event = { # Controlling Paris
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.155"}
 	title = "The French Army flees from Paris"
 	desc = ger.155.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6557,7 +6541,7 @@ country_event = { # Controlling Rome
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.156"}
 	title = "Germans Occupy the Eternal City"
 	desc = ger.156.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6580,7 +6564,7 @@ country_event = { # Controlling Venice
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.157"}
 	title = "German advance reaches Venice"
 	desc = ger.157.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6603,7 +6587,7 @@ country_event = { # Crossing the Rhine
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.158"}
 	title = "Panzers establish beachhead on the West Bank of the Rhine"
 	desc = ger.158.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6626,7 +6610,7 @@ country_event = { # Controlling Warsaw
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.159"}
 	title = "German troops surround Warsaw"
 	desc = ger.159.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6649,7 +6633,7 @@ country_event = { # Marching into France
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.160"}
 	title = "German Forces Cross French Border"
 	desc = ger.160.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6681,7 +6665,7 @@ country_event = { # Controlling Switzerland
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.161"}
 	title = "German Army Occupies Switzerland"
 	desc = ger.161.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6704,7 +6688,7 @@ country_event = { # Controlling The Lowlands
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.162"}
 	title = "German Army Occupies The Lowlands"
 	desc = ger.162.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6728,7 +6712,7 @@ country_event = { # Controlling London
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.163"}
 	title = "German Army has secured London"
 	desc = ger.163.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6751,7 +6735,7 @@ country_event = { # Controlling Kiev
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.164"}
 	title = "German surround the garrison of Kiev"
 	desc = ger.164.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6774,7 +6758,7 @@ country_event = { # Controlling Leningrad
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.165"}
 	title = "Soviets fall back from Leningrad"
 	desc = ger.165.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6797,7 +6781,7 @@ country_event = { # Controlling Moscow
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.166"}
 	title = "German Army captures Moscow"
 	desc = ger.166.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	trigger = {
 		AND = {
@@ -6820,7 +6804,7 @@ country_event = { # Rebuilding Hamburg
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.167"}
 	title = "What should Hamburg be rebuilt as?"
 	desc = ger.167.d
-	picture = ger_ship
+	picture = GFX_report_event_GER_wehrmacht_poster
 
 	is_triggered_only = yes
 
@@ -9927,7 +9911,7 @@ country_event = { # Reformed Entente is bad
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.263"}
 	title = ger.263.t
 	desc = ger.263.d
-	picture = report_event_generic_conference
+	picture = GFX_report_event_GER_wounded_soldier
 
 	trigger = {
 		original_tag = FRA
@@ -11343,7 +11327,7 @@ country_event = { # France Capitulates to North Africa
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.401"}
 	title = ger.401.t
 	desc = ger.401.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_youth_poster
 
 	is_triggered_only = yes
 
@@ -11472,13 +11456,9 @@ country_event = { # Germany - The fate for occupied France
 				popularity = 60
 			}
 			add_ideas = {
-				GEN_hog_val
-				GEN_for_val
-				GEN_eco_val
-				GEN_sec_val
 				limited_conscription
 			}
-        }
+    }
 		every_state = {
 			limit = {
 				is_owned_by = FRA
@@ -12207,7 +12187,7 @@ country_event = { # Italy Capitulates to North Africa
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.411"}
 	title = ger.411.t
 	desc = ger.411.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_youth_poster
 
 	trigger = {
 		has_country_flag = GER_italy_escapes
@@ -12895,7 +12875,7 @@ country_event = { # England Capitulates to Canada? will edit
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.420"}
 	title = ger.420.t
 	desc = ger.420.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_youth_poster
 
 	trigger = {
 		AND = {
