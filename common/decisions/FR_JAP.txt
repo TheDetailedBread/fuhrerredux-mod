@@ -839,7 +839,7 @@ JAP_counter_LSMC_Minseito = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_Zaibatsu_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_timed_idea = {
 				idea = jap_zaibatsu_limited
 				days = 180
@@ -870,7 +870,7 @@ JAP_counter_LSMC_Minseito = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_wealth_tax_act_1"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = JAP_bank_loans #repurposed Idea
 		}
 	}
@@ -898,7 +898,7 @@ JAP_counter_LSMC_Minseito = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_public_works_act"
-			JAP_LSMC_step_towards_recovery = yes 
+			# JAP_LSMC_step_towards_recovery = yes 
 			#will give infrastructure decisions
 			set_country_flag = jap_public_works_act_passed
 		}
@@ -927,7 +927,7 @@ JAP_counter_LSMC_Minseito = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_ship_building_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			set_country_flag = jap_shipbuilding_act_passed
 			add_ideas = { jap_ship_building_act }
 		}
@@ -956,7 +956,7 @@ JAP_counter_LSMC_Minseito = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_Pension_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_stability = -0.10
 		}
 	}
@@ -983,7 +983,7 @@ JAP_counter_LSMC_Minseito = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_company_contracts"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 		}
 	}
 
@@ -1079,7 +1079,7 @@ JAP_counter_LSMC_Seiyukai = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_temperal_tax_decrease"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_stability = 0.05
 		}
 	}
@@ -1108,7 +1108,7 @@ JAP_counter_LSMC_Seiyukai = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_housing_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = { jap_housing_act }
 		}
 	}
@@ -1137,7 +1137,7 @@ JAP_counter_LSMC_Seiyukai = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_Banking_reform_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = { jap_banking_reform_act }
 		}
 	}
@@ -1166,7 +1166,7 @@ JAP_counter_LSMC_Seiyukai = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_Social_Security_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = { jap_social_security_act }
 		}
 	}
@@ -1195,7 +1195,7 @@ JAP_counter_LSMC_Seiyukai = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_wealth_tax_act_2"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = JAP_bank_loans #repurposed Idea
 		}
 	}
@@ -1223,7 +1223,7 @@ JAP_counter_LSMC_Seiyukai = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_national_industry_interference_act"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_timed_idea = {
 				idea = jap_zaibatsu_limited
 				days = 180
@@ -1256,7 +1256,7 @@ JAP_counter_LSMC_Taishuto = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_New_Union_deal"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = { jap_new_union_deal }
 		}
 	}
@@ -1282,7 +1282,7 @@ JAP_counter_LSMC_Taishuto = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_work_for_all"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = { jap_work_for_all }
 		}
 	}
@@ -1308,7 +1308,7 @@ JAP_counter_LSMC_Taishuto = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_government_contracts"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			set_country_flag = jap_taishuto_gov_contracts
 		}
 	}
@@ -1334,7 +1334,7 @@ JAP_counter_LSMC_Taishuto = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_Zaibatsu_deal"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 			add_ideas = { jap_taishuto_zaibatsu_deal }
 		}
 	}
@@ -1361,7 +1361,7 @@ JAP_counter_LSMC_Taishuto = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_further_industrial_investment"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 		}
 	}
 
@@ -1387,7 +1387,7 @@ JAP_counter_LSMC_Taishuto = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision JAP_new_dockyards"
-			JAP_LSMC_step_towards_recovery = yes
+			# JAP_LSMC_step_towards_recovery = yes
 		}
 	}
 }

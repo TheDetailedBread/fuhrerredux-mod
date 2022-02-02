@@ -604,38 +604,30 @@ country_event = {
 				name = "Kemalistler"
 			}
 
-			create_country_leader = {
-				name = "Mustafa İsmet Paşa"
-				desc = "POLITICS_ISMET_INONU_DESC"
-				picture = "Portrait_TRT_Ismet_Pasa.png"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-
-				}
-			}
-
-			create_country_leader = {
-				name = "Hüseyin Nihâl Bey"
-				desc = "POLITICS_NIHAL_ATSIZ_DESC"
-				picture = "Portrait_TRT_Nihal_Atsiz.png"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Mehmed Sabahaddin Bey"
-				desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
+      add_country_leader_role = {
+        character = TRT_Mustafa_İsmet_Paşa
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TRT_Huseyin_Nihal_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TRT_Prens_Sabahaddin_Efendi
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 
 			transfer_state = 49
 			transfer_state = 348
@@ -664,50 +656,38 @@ country_event = {
 			TRT = {
 				transfer_technology = yes
 			}
-
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Osman Bey"
-				desc = "POLITICS_OSMAN_BOLUKBASI_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-
-				}
-			}
-
-			create_country_leader = {
-				name = "Aslan Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Mehmed Cavid Bey"
-				desc = "POLITICS_MEHMET_CAVID_DESC"
-				picture = "Portrait_TUR_Mehmed_Cavid.png"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					
-				}
-			}
+      add_country_leader_role = {
+        character = TRT_Kadir_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TRT_Osman_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TRT_Aslan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TRT_Mehmed_Cavid_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 
 			random_country = {
 				limit = { 
@@ -745,104 +725,70 @@ country_event = {
 
 		add_political_power = -150
 
-		create_country_leader = {
-			name = "İsmet Reşitoğlu"
-			desc = "POLITICS_ISMET_INONU_DESC"
-			picture = "Portrait_TUR_Ismet_Pasa.png"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Nihal Atsız"
-			desc = "POLITICS_NIHAL_ATSIZ_DESC"
-			picture = "Portrait_Nihal_Atsiz.png"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Mehmet Cavid Yalçın"
-			desc = "POLITICS_MEHMET_CAVID_DESC"
-			picture = "Portrait_TUR_Mehmed_Cavid.png"
-			expire = "1965.1.1"
-			ideology = social_conservative_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Mehmet Sabâhattin"
-			desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-			picture = ""
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Şefik Hüsnü"
-			desc = "POLITICS_ŞEFİK_HÜSNÜ_DESC"
-			picture = "Portrait_TUR_Sefik_Husnu.png"
-			expire = "1965.1.1"
-			ideology = vanguardist_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Reşat Fuat Baraner"
-			desc = "POLITICS_REŞAD_FUAD_DESC"
-			picture = "Portrait_TUR_Resat_Fuat.png"
-			expire = "1965.1.1"
-			ideology = libertarian_socialist_subtype
-			traits = {
-				
-			}
-		}
-
-		create_country_leader = {
-			name = "Yusuf Hikmet Bayur"
-			desc = "POLITICS_YUSUF_HIKMET_BAYUR_DESC"
-			picture = "Portrait_TUR_Yusuf_Hikmet_Bayur.png"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-
-			}
-		}
-
-		create_country_leader = {
-			name = "Adnan Menderes"
-			desc = "POLITICS_ADNAN_MENDERES_DESC"
-			picture = "Portrait_TUR_Adnan_Menderes.png"
-			expire = "1965.1.1"
-			ideology = market_liberal_subtype
-			traits = {
-
-			}
-		}
-
-		create_country_leader = {
-			name = "Hasan Ali Yücel"
-			desc = "POLITICS_ADNAN_MENDERES_DESC"
-			picture = "Portrait_TUR_Hasan_Ali_Yucel.png"
-			expire = "1965.1.1"
-			ideology = social_democrat_subtype
-			traits = {
-
-			}
-		}
+		add_country_leader_role = {
+      character = TRT_Mustafa_İsmet_Paşa
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Mehmet_Cavid_Yalcın
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Ali_Adnan_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Şefik_Husnu_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = vanguardist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Reşad_Fuad_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Yusuf_Hikmet_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Adnan_Menderes
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = TRT_Hasan_Ali_Yucel
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
 
 		set_party_name = {
 			ideology = valkist
@@ -972,11 +918,9 @@ country_event = {
 				remove_unit_leader = 4791
 			}
 
-			create_field_marshal = {
-				name = "Fevzi Çakmak"
-				picture = "Portrait_TUR_Fevzi_Cakmak.png"
-				id = 5893
-				traits = {
+      add_field_marshal_role = {
+        character = TRT_Fevzi_Cakmak
+        traits = {
 					career_officer
 					war_hero
 					skilled_staffer
@@ -986,13 +930,10 @@ country_event = {
 				defense_skill = 1
 				planning_skill = 2
 				logistics_skill = 3
-			}
-
-			create_field_marshal = {
-				name = "Kâzım Orbay"
-				picture = "Portrait_TUR_Kazim_Orbay.png"
-				id = 8490
-				traits = { 
+      }
+      add_field_marshal_role = {
+        character = TRT_Kazim_Paşa
+        traits = { 
 					career_officer
 					skilled_staffer
 					expert_delegator
@@ -1003,13 +944,10 @@ country_event = {
 				defense_skill = 2
 				planning_skill = 3
 				logistics_skill = 3
-			}
-
-			create_corps_commander = {
-				name = "İsmail Hakkı Berkok"
-				picture = "Portrait_TUR_Ismail_Hakki_Berkok.png"
-				id = 679
-				traits = {
+      }
+      add_corps_commander_role = {
+        character = TRT_İsmail_Hakkı_Paşa
+        traits = {
 					career_officer
 					commando
 				}
@@ -1018,13 +956,10 @@ country_event = {
 				defense_skill = 2
 				planning_skill = 4
 				logistics_skill = 2
-			}
-
-			create_corps_commander = {
-				name = "Ömer Fahrettin Türkkan"
-				picture = "Portrait_TUR_Omer_Fahrettin_Turkkan.png"
-				id = 90172
-				traits = {
+      }
+      add_corps_commander_role = {
+        character = TRT_Omer_Fahrettin_Turkkan
+        traits = {
 					old_guard
 					war_hero
 					desert_fox
@@ -1035,13 +970,10 @@ country_event = {
 				defense_skill = 3
 				planning_skill = 3
 				logistics_skill = 4
-			}
-
-			create_corps_commander = {
-				name = "Cemil Cahit Toydemir"
-				picture = "Portrait_TUR_Cemil_Cahit_Toydemir.png"
-				id = 1284
-				traits = { 
+      }
+      add_corps_commander_role = {
+        character = TRT_Cemil_Cahid_Paşa
+        traits = { 
 					career_officer
 					infantry_leader
 					trait_engineer 
@@ -1051,13 +983,10 @@ country_event = {
 				defense_skill = 2
 				planning_skill = 2
 				logistics_skill = 3
-			}
-
-			create_corps_commander = {
-				name = "Mustafa Muğlalı"
-				picture = "Portrait_TUR_Mustafa_Muglali.png"
-				id = 674
-				traits = { 
+      }
+      add_corps_commander_role = {
+        character = TRT_Mustafa_Muğlalı
+        traits = { 
 					career_officer
 					commando
 					skirmisher
@@ -1068,27 +997,21 @@ country_event = {
 				defense_skill = 3
 				planning_skill = 2
 				logistics_skill = 3
-			}
-
-			create_navy_leader = {
-				name = "Rauf Orbay"
-				picture = "Portrait_TUR_Rauf_Orbay.png"
-				id = 9841
-				traits = {
+      }
+      add_naval_commander_role = {
+        character = TRT_Huseyin_Rauf_Paşa
+        traits = {
 					old_guard_navy
 				}
 				skill = 2
-			}
-
-			create_navy_leader = {
-				name = "Necdet Uran"
-				picture = "Portrait_TUR_Necdet_Uran.png"
-				id = 4791
-				traits = {
+      }
+      add_naval_commander_role = {
+        character = TRT_Necdet_Paşa
+        traits = {
 					superior_tactician
 				}
 				skill = 2
-			}
+      }
 		}
 	}
 }
@@ -1710,17 +1633,14 @@ country_event = {
 			}
 		}
 
-		create_country_leader = {
-			name = "Kadir Bey"
-			desc = "POLITICS_RIZA_NUR_DESC"
-			picture = ""
-			expire = "1965.1.1"
-			ideology = social_liberal_subtype
-			traits = {
-				
-			}
-		}
-
+    add_country_leader_role = {
+      character = TRT_Kadir_Bey
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
 		TRT = {
 			transfer_state = 49
 			transfer_state = 348
@@ -1781,28 +1701,22 @@ country_event = {
 				transfer_technology = yes
 
 				load_focus_tree = turkish_revolt_ottoman_focus
-
-				create_country_leader = {
-					name = "Osman Fuad Efendi"
-					desc = "POLITICS_OSMAN_FUAD_DESC"
-					picture = "Portrait_TRT_Osman_Fuad.png"
-					expire = "1965.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = {
-
-					}
-				}
-
-				create_country_leader = {
-					name = "Prens Mehmed Sabâhaddin Efendi"
-					desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-					picture = "Portrait_TUR_Mehmet_Sabahaddin.png"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						
-					}
-				}
+        add_country_leader_role = {
+          character = TRT_Osman_Fuad_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TRT_Prens_Sabahaddin_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 
 				set_party_name = {
 					ideology = paternal_autocrat
@@ -1847,10 +1761,9 @@ country_event = {
 					TUR_Mehmed_Esad_Pasa_sec_pau
 				}
 
-				create_field_marshal = {
-					name = "Osman Fuad Efendi"
-					picture = "Portrait_TRT_Osman_Fuad.png"
-					traits = {
+        add_field_marshal_role = {
+          character = TRT_Osman_Fuad_Efendi
+          traits = {
 						offensive_doctrine
 						inspirational_leader
 					}
@@ -1859,12 +1772,10 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 3
 					logistics_skill = 4
-				}
-
-				create_corps_commander = {
-					name = "İsmail Hakkı Paşa"
-					picture = "Portrait_TUR_Ismail_Hakki_Berkok.png"
-					traits = {
+        }
+        add_corps_commander_role = {
+          character = TRT_İsmail_Hakkı_Paşa
+          traits = {
 						career_officer
 						commando
 					}
@@ -1873,12 +1784,10 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 4
 					logistics_skill = 2
-				}
-
-				create_corps_commander = {
-					name = "Ömer Fahreddin Paşa"
-					picture = "Portrait_TUR_Omer_Fahrettin_Turkkan.png"
-					traits = {
+        }
+        add_corps_commander_role = {
+          character = TRT_Omer_Fahrettin_Turkkan
+          traits = {
 						old_guard
 						war_hero
 						desert_fox
@@ -1889,28 +1798,23 @@ country_event = {
 					defense_skill = 3
 					planning_skill = 3
 					logistics_skill = 4
-				}
-
-				create_corps_commander = {
-					name = "Ömer Faruk Efendi"
-					picture = "Portrait_TRT_Omer_Faruk.png"
-					traits = {
-					}
+        }
+        add_corps_commander_role = {
+          character = TRT_Omer_Faruk_Efendi
+          traits = { }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 2
 					planning_skill = 1
 					logistics_skill = 1
-				}
-
-				create_navy_leader = {
-					name = "Necdet Paşa"
-					picture = "Portrait_TUR_Necdet_Uran.png"
-					traits = {
+        }
+        add_naval_commander_role = {
+          character = TRT_Necdet_Paşa
+          traits = {
 						superior_tactician
 					}
 					skill = 2
-				}
+        }
 
 				set_party_name = {
 					ideology = authoritarian_democrat
@@ -1918,16 +1822,14 @@ country_event = {
 					name = "Fazilet Fırkası"
 				}
 
-				create_country_leader = {
-					name = "Aslan Bey"
-					desc = "POLITICS_RIZA_NUR_DESC"
-					picture = ""
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {
-						
-					}
-				}
+        add_country_leader_role = {
+          character = TRT_Aslan_Bey
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 
 			random_country = {
@@ -2873,44 +2775,33 @@ country_event = {
 					name = "CKMF"
 				}
 
-				create_country_leader = {
-					name = "Mustafa İsmet Paşa"
-					desc = "POLITICS_ISMET_INONU_DESC"
-					picture = "Portrait_TRT_Ismet_Pasa.png"
-					expire = "1965.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = {
-
-					}
-				}
-
-				create_country_leader = {
-					name = "Prens Mehmed Sabâhaddin Efendi"
-					desc = "POLITICS_MEHMED_SABAHADDIN_DESC"
-					picture = "Portrait_TUR_Mehmet_Sabahaddin.png"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						
-					}
-				}
-
-				create_country_leader = {
-					name = "Osman Bey"
-					desc = "POLITICS_OSMAN_BOLUKBASI_DESC"
-					picture = ""
-					expire = "1965.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = {
-
-					}
-				}
-
-				create_field_marshal = {
-					name = "Mustafa Fevzi Paşa"
-					picture = "Portrait_TUR_Fevzi_Cakmak.png"
-					id = 5893
-					traits = {
+        add_country_leader_role = {
+          character = TRT_Mustafa_İsmet_Paşa
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TRT_Prens_Sabahaddin_Efendi
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          character = TRT_Osman_Bey
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
+        add_field_marshal_role = {
+          character = TRT_Mustafa_Fevzi_Paşa
+          traits = {
 						career_officer
 						skilled_staffer
 					}
@@ -2919,13 +2810,10 @@ country_event = {
 					defense_skill = 1
 					planning_skill = 2
 					logistics_skill = 3
-				}
-
-				create_corps_commander = {
-					name = "Cemil Cahid Paşa"
-					picture = "Portrait_TUR_Cemil_Cahit_Toydemir.png"
-					id = 1284
-					traits = { 
+        }
+        add_corps_commander_role = {
+          character = TRT_Cemil_Cahid_Paşa
+          traits = { 
 						career_officer
 						infantry_leader
 						trait_engineer 
@@ -2935,41 +2823,32 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 2
 					logistics_skill = 3
-				}
-
-				## Navy Leaders
-				create_navy_leader = {
-					name = "Hüseyin Rauf Paşa"
-					picture = "Portrait_TUR_Rauf_Orbay.png"
-					id = 9841
-					traits = {
+        }
+        add_naval_commander_role = {
+          character = TRT_Huseyin_Rauf_Paşa
+          traits = {
 						old_guard_navy
 					}
 					skill = 2
-				}
+        }
 			}
 
-			create_country_leader = {
-				name = "Kadir Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					
-				}
-			}
-
-			create_country_leader = {
-				name = "Aslan Bey"
-				desc = "POLITICS_RIZA_NUR_DESC"
-				picture = ""
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					
-				}
-			}
+      add_country_leader_role = {
+        character = TRT_Kadir_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = TRT_Aslan_Bey
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 
 			random_country = {
 				limit = { 

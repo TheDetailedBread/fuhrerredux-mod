@@ -1681,7 +1681,7 @@ country_event = {
       }
     }
     add_country_leader_role = {
-      character = TUR_Yusuf_Hikmet_Bayur
+      character = TUR_Yusuf_Hikmet_Bey
       promote_leader = yes
       country_leader = {
         ideology = paternal_autocrat_subtype
@@ -1823,11 +1823,9 @@ country_event = {
 				remove_unit_leader = 4791
 			}
 
-			create_field_marshal = {
-				name = "Fevzi Çakmak"
-				picture = "Portrait_TUR_Fevzi_Cakmak.png"
-				#id = 5893
-				traits = {
+      add_field_marshal_role = {
+        character = TUR_Fevzi_Cakmak
+        traits = {
 					career_officer
 					war_hero
 					skilled_staffer
@@ -1837,12 +1835,9 @@ country_event = {
 				defense_skill = 1
 				planning_skill = 2
 				logistics_skill = 3
-			}
-
-			create_field_marshal = {
-				name = "Kâzım Orbay"
-				picture = "Portrait_TUR_Kazim_Orbay.png"
-				#id = 8490
+      }
+      add_field_marshal_role = {
+        character = TUR_Kazim_Paşa
 				traits = { 
 					career_officer
 					skilled_staffer
@@ -1854,12 +1849,9 @@ country_event = {
 				defense_skill = 2
 				planning_skill = 3
 				logistics_skill = 3
-			}
-
-			create_corps_commander = {
-				name = "İsmail Hakkı Berkok"
-				picture = "Portrait_TUR_Ismail_Hakki_Berkok.png"
-				#id = 679
+      }
+      add_corps_commander_role = {
+        character = TUR_İsmail_Hakkı_Paşa
 				traits = {
 					career_officer
 					commando
@@ -1869,12 +1861,9 @@ country_event = {
 				defense_skill = 2
 				planning_skill = 4
 				logistics_skill = 2
-			}
-
-			create_corps_commander = {
-				name = "Ömer Fahrettin Türkkan"
-				picture = "Portrait_TUR_Omer_Fahrettin_Turkkan.png"
-				#id = 90172
+      }
+      add_corps_commander_role = {
+        name = TUR_Omer_Fahreddin_Paşa
 				traits = {
 					old_guard
 					war_hero
@@ -1886,12 +1875,9 @@ country_event = {
 				defense_skill = 3
 				planning_skill = 3
 				logistics_skill = 4
-			}
-
-			create_corps_commander = {
-				name = "Cemil Cahit Toydemir"
-				picture = "Portrait_TUR_Cemil_Cahit_Toydemir.png"
-				#id = 1284
+      }
+      add_corps_commander_role = {
+        character = TUR_Cemil_Cahid_Paşa
 				traits = { 
 					career_officer
 					infantry_leader
@@ -1902,12 +1888,9 @@ country_event = {
 				defense_skill = 2
 				planning_skill = 2
 				logistics_skill = 3
-			}
-
-			create_corps_commander = {
-				name = "Mustafa Muğlalı"
-				picture = "Portrait_TUR_Mustafa_Muglali.png"
-				#id = 674
+      }
+      add_corps_commander_role = {
+        character = TUR_Mustafa_Muğlalı
 				traits = { 
 					career_officer
 					commando
@@ -1919,27 +1902,21 @@ country_event = {
 				defense_skill = 3
 				planning_skill = 2
 				logistics_skill = 3
-			}
-
-			create_navy_leader = {
-				name = "Rauf Orbay"
-				picture = "Portrait_TUR_Rauf_Orbay.png"
-				#id = 9841
-				traits = {
+      }
+      add_naval_commander_role = {
+        character = TUR_Huseyin_Rauf_Paşa
+        traits = {
 					old_guard_navy
 				}
 				skill = 2
-			}
-
-			create_navy_leader = {
-				name = "Necdet Uran"
-				picture = "Portrait_TUR_Necdet_Uran.png"
-				#id = 4791
-				traits = {
+      }
+      add_naval_commander_role = {
+        character = TUR_Necdet_Uran
+        traits = {
 					superior_tactician
 				}
 				skill = 2
-			}
+      }
 		}
 	}
 }

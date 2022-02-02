@@ -9,6 +9,12 @@ ideas = {
 # Country ideas #
 #################
 	country = {
+    FRA_accepted_swiss_weapons_deal = {
+      picture = can_wartime_prices_and_trade_board
+      modifier = {
+        consumer_goods_factor = -0.05
+      }
+    }
 		FRA_great_war_legacy = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_great_war_legacy"}
 			picture = generic_manpower_bonus

@@ -27,34 +27,6 @@ characters = {
 			}
 		}
 	}
-	GEO_Shalva_Karumidze = {
-		name = "Shalva Karumidze"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/Generic/Portrait_Europe_Generic_new_5.png"
-				small = "gfx/interface/ministers/GEO/GEO_Shalva_Karumidze.png"
-			}
-		}
-		country_leader = {
-			ideology = national_populist_subtype
-			traits = { }
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = { 
-				hidden_trigger = { has_country_flag = GEO_Shalva_Karumidze_hog_npo_hired }
-			}
-			idea_token = GEO_Shalva_Karumidze_hog_npo
-			on_add = { set_country_flag = GEO_Shalva_Karumidze_hog_npo_hired }
-			on_remove = { clr_country_flag = GEO_Shalva_Karumidze_hog_npo_hired }
-			traits = {
-				head_of_government
-				national_populist
-				hog_flamboyant_tough_guy
-			}
-		}
-	}
 	GEO_Giorgi_Bagration_Mukhraneli = {
 		name = "Giorgi Bagration-Mukhraneli"
 		portraits = {
@@ -447,29 +419,6 @@ characters = {
 			}
 		}
 	}
-	GEO_Aleqsandre_Asantiani = {
-		name = "Aleqsandre Asantiani"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/GEO/GEO_Aleqsandre_Asantiani.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = { 
-				hidden_trigger = { has_country_flag = GEO_Aleqsandre_Asantiani_hog_mli_hired }
-			}
-			idea_token = GEO_Aleqsandre_Asantiani_hog_mli
-			on_add = { set_country_flag = GEO_Aleqsandre_Asantiani_hog_mli_hired }
-			on_remove = { clr_country_flag = GEO_Aleqsandre_Asantiani_hog_mli_hired }
-			traits = {
-				head_of_government
-				market_liberal
-				hog_corporate_suit
-			}
-		}
-	}
 	GEO_Revaz_Gabashvili = {
 		name = "Revaz Gabashvili"
 		portraits = {
@@ -544,6 +493,7 @@ characters = {
 		portraits = {
 			civilian = {
 				small = "gfx/interface/ministers/GEO/GEO_Salva_Karumidze.png"
+				large = "gfx/leaders/Generic/Portrait_Europe_Generic_new_5.png"
 			}
 		}
 		advisor = {
@@ -560,6 +510,10 @@ characters = {
 				national_populist
 				hog_pragmatic_statesman
 			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
 		}
 	}
 	GEO_Levan_Gogoberidze = {

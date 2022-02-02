@@ -1,4 +1,4 @@
-﻿#capital = 289
+#capital = 289
 
 #oob = "SIR"
 
@@ -103,30 +103,6 @@ set_popularities = {
 }
 set_country_flag = can_replace_military_staff
 
-
-
-create_country_leader = {
-	name = "Song Noppakul"
-	picture = "gfx/leaders/SIA/Song_noppakul.png"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-}
-
-create_country_leader = {
-	name = "Pridi Banomyong"
-	picture = "gfx/leaders/SIA/pridi.png"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-}
-
-create_country_leader = {
-	name = "Pridi Banomyong"
-	picture = "gfx/leaders/SIA/pridi.png"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-}
-
-
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
@@ -151,3 +127,6 @@ if = {
 		}
 	}
 }
+
+recruit_character = SIR_Song_Noppakul
+recruit_character = SIR_Pridi_Banomyong

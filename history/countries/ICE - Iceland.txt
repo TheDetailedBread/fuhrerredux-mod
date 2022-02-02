@@ -1,4 +1,4 @@
-﻿capital = 100 #Iceland
+capital = 100 #Iceland
 
 oob = "ICE"
 
@@ -30,10 +30,10 @@ set_politics = {
 }
 
 set_popularities = {
-    social_democrat = 96
-    valkist = 2
-    collectivist = 2
-    social_conservative = 0
+  social_democrat = 96
+  valkist = 2
+  collectivist = 2
+  social_conservative = 0
 }
 
 add_ideas = {
@@ -42,46 +42,7 @@ add_ideas = {
 	parliamentary_republic
 }
 
-create_country_leader = {
-	name = "Sveinn Björnsson"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.png"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Johannes Valurson"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.png"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Haraldur Gudmunsson"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.png"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Einar Olgeirsson"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.png"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = ICE_Sveinn_Bjornsson
+recruit_character = ICE_Johannes_Valurson
+recruit_character = ICE_Haraldur_Gudmunsson
+recruit_character = ICE_Einar_Olgeirsson
