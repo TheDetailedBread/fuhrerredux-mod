@@ -503,11 +503,15 @@ country_event = { #Elections
 		set_politics = { ruling_party = valkist }
 		add_popularity = { ideology = valkist popularity = 0.2 }
 		add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
-			remove_ideas_with_trait = head_of_government
-             add_ideas = RUS_Pyotr_N_Wrangel_hog_pau
-			 add_ideas = RUS_Alexander_Vuyrgler_for_val
-             add_ideas = RUS_Georgiy_Gins_eco_val
-			 add_ideas = RUS_Anton_Tourkul_sec_val	
+
+		remove_ideas_with_trait = head_of_government
+    add_ideas = {
+      RUS_Pyotr_Wrangel_hog_pau
+      RUS_Alexander_Vuygrler_for_val
+      RUS_Georgiy_Gins_eco_val
+      RUS_Anton_Tourkul_sec_val
+    }
+
 		country_event = { id = rusnus.1 days = 7 }
 		complete_national_focus = RUS_control_economy
 		set_country_flag = NUS_Oktoberists_Victorious
@@ -526,10 +530,13 @@ country_event = { #Elections
 		hidden_effect = {
 		add_ideas = parliamentary_republic
 		set_politics = { ruling_party = social_liberal }
-		    add_ideas = RUS_Venedikt_Miakotin_hog_sli
-			add_ideas = RUS_Pavel_N_Milyukov_for_mli
-			add_ideas = RUS_Alexey_Peshekhonov_eco_sli
-			add_ideas = RUS_Boris_V_Savinkov_sec_sde
+
+    add_ideas = {
+      RUS_Venedikt_Miakotin_hog_sli
+      RUS_Pavel_N_Milyukov_for_mli
+      RUS_Alexey_Peshekhonov_eco_sli
+      RUS_Boris_V_Savinkov_sec_sde
+    }
 		add_popularity = { ideology = social_liberal popularity = 0.1 }
 		add_popularity = { ideology = market_liberal popularity = 0.1 }
 		add_popularity = { ideology = social_democrat popularity = 0.1 }
@@ -542,7 +549,7 @@ country_event = { #Elections
 		news_event = {
 			id = worldnews.113
 		}
-    }  
+  }  
 }
 	option = {
 		name = "The National Center is victorious"
@@ -550,22 +557,25 @@ country_event = { #Elections
 		ai_chance = { factor = 30 }
 				
 		hidden_effect = {
-		add_ideas = parliamentary_republic
-		set_politics = { ruling_party = social_conservative }
-			add_ideas = RUS_Alexandr_Danilovich_Allfyorov_hog_sco
-			add_ideas = RUS_Nikolai_S_Trubetskoy_for_sco
-			add_ideas = RUS_Sergei_Bulgakov_eco_sco
-			add_ideas = RUS_Nikolai_Gredeskul_sec_sco
-		add_popularity = { ideology = social_conservative popularity = 0.2 }
-		complete_national_focus = RUS_control_economy
-		set_country_flag = RUS_ready_militarise
-		set_country_flag = National_Center_Victorious
-     	clr_country_flag = party_popularity_system_disabled
-		news_event = {
-			id = worldnews.114
-		}
+      add_ideas = parliamentary_republic
+      set_politics = { ruling_party = social_conservative }
+
+      add_ideas = {
+        RUS_Alexandr_Danilovich_Allfyorov_hog_sco
+        RUS_Nikolai_S_Trubetskoy_for_sco
+        RUS_Sergei_Bulgakov_eco_sco
+        RUS_Nikolai_Gredeskul_sec_sco
+      }
+      add_popularity = { ideology = social_conservative popularity = 0.2 }
+      complete_national_focus = RUS_control_economy
+      set_country_flag = RUS_ready_militarise
+      set_country_flag = National_Center_Victorious
+      clr_country_flag = party_popularity_system_disabled
+      news_event = {
+        id = worldnews.114
+      }
 	  }
-   }		
+  }		
 }
 
 country_event = {	#Black Monday hits the nation
@@ -830,15 +840,16 @@ country_event = {   #Start of Goverment Reform Chain
 
 	option = {
 		name = "Yes so we can end corruption and factionalism!"
-		    set_country_flag = RUS_technocracy
+    set_country_flag = RUS_technocracy
+
 		hidden_effect = {
-		    country_event = { 
-		        id = rusnus.5
-		        days = 20
-		        }
-            }       
-        }
-    } 
+      country_event = { 
+        id = rusnus.5
+        days = 20
+      }
+    }       
+  }
+} 
 
 country_event = {   
 	id = rusnus.5
@@ -853,15 +864,15 @@ country_event = {
 
 	option = {
 		name = "Yes only Businessmen are fit for the job"
-		    set_country_flag = RUS_businessmen
-		hidden_effect = {
-		    country_event = { 
-		        id = rusnus.7
-		        days = 40
-		        }
-		    }
-		}
+    set_country_flag = RUS_businessmen
+    hidden_effect = {
+      country_event = { 
+        id = rusnus.7
+        days = 40
+      }
     }
+  }
+}
 
 country_event = {   
 	id = rusnus.7
