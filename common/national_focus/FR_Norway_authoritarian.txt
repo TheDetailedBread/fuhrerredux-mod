@@ -63,12 +63,11 @@ focus_tree = {
 			add_political_power = 50
 			remove_ideas = NOR_samfundsvernets_rule_idea
 			hidden_effect = {
-				create_corps_commander = {
-					name = "Olav of Glücksburg"
-					portrait_path = "gfx/leaders/NOR/Portrait_Olav_V.png"
-					traits = { trickster naval_invader }
+        add_corps_commander_role = {
+          character = NOR_Olav_V
+          traits = { trickster naval_invader }
 					skill = 2
-				}
+        }
 			}
 		}
 
@@ -729,19 +728,17 @@ focus_tree = {
 				remove_unit_leader = 2003
 				remove_unit_leader = 2004
 				remove_unit_leader = 2005
-				create_field_marshal = {
-				name = "Jonas Lie"
-					portrait_path = "gfx/leaders/NOR/Portrait_NOR_Jonas_Lie.png"
-					traits = { offensive_doctrine }
+        add_field_marshal_role = {
+          character = NOR_Jonas_Lie
+          traits = { offensive_doctrine }
 					skill = 2
 					attack_skill = 3
 					defense_skill = 2
 					planning_skill = 1
 					logistics_skill = 2
-				}
-				create_corps_commander = {
-					name = "Konrad Sundlo"
-					portrait_path = "gfx/leaders/NOR/Portrait_NOR_Konrad_Sundlo.png"
+        }
+				add_corps_commander_role = {
+          character = NOR_Konrad_Sundlo
 					traits = {  }
 					skill = 2
 					attack_skill = 3
@@ -749,9 +746,8 @@ focus_tree = {
 					planning_skill = 1
 					logistics_skill = 2
 				}
-				create_corps_commander = {
-					name = "Oliver Møystad"
-					portrait_path = "gfx/leaders/NOR/Portrait_NOR_Oliver_Moystad.png"
+				add_corps_commander_role = {
+          character = NOR_Oliver_Moystad
 					traits = { winter_specialist }
 					skill = 1
 					attack_skill = 2
@@ -759,9 +755,8 @@ focus_tree = {
 					planning_skill = 1
 					logistics_skill = 2
 				}
-				create_corps_commander = {
-					name = "Henrik Rogstad"
-					portrait_path = "gfx/leaders/NOR/Portrait_NOR_Henrik_Rogstad.png"
+				add_corps_commander_role = {
+          character = NOR_Henrik_Rogstad
 					traits = {  }
 					skill = 1
 					attack_skill = 1

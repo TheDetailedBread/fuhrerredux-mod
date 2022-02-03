@@ -607,16 +607,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPA_cnt_fai_dominates"
 			add_political_power = 25
 			hidden_effect = {
-				create_country_leader = {
-					name = "The CNT-FAI Congress"
-					desc = "POLITICS_CNT_FAI_CONGRESS_DESC"
-					picture = "Portrait_SPA_CNT_FAI_Congress_Anarchist.png"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+        SPA_The_CNT_FAI_Congress = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = libertarian_socialist_subtype
+              traits = {}
+            }
+          }
+        }
 			}
 		}
 
@@ -646,16 +645,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPA_cnt_fai_dominates"
 			add_political_power = 25
 			hidden_effect = {
-				create_country_leader = {
-					name = "The CNT-FAI Congress"
-					desc = "POLITICS_CNT_FAI_CONGRESS_DESC"
-					picture = "Portrait_SPA_CNT_FAI_Congress_Syndicalist.png"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				SPA_The_CNT_FAI_Congress = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = libertarian_socialist_subtype
+              traits = {}
+            }
+          }
+        }
 			}
 		}
 
