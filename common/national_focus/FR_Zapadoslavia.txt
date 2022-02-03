@@ -362,26 +362,27 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-		add_political_power = 50
-		add_popularity = {
-		ideology = social_conservative
-		popularity = 0.2
-			}
-		add_popularity = {
-		ideology = authoritarian_democrat
-		popularity = 0.1
-			}
-		set_politics = { ruling_party = social_conservative elections_allowed = no }
-		retire_country_leader = yes
-			create_country_leader = {
-				name = "Emil Hácha"
-				picture = "Portrait_CEN_Hacha.png"
-				expire = "1970.1.1"
-				ideology = social_conservative_subtype
-				traits = {}
-			}
+      add_political_power = 50
+      add_popularity = {
+        ideology = social_conservative
+        popularity = 0.2
+      }
+      add_popularity = {
+        ideology = authoritarian_democrat
+        popularity = 0.1
+      }
+      set_politics = { ruling_party = social_conservative elections_allowed = no }
+      retire_country_leader = yes
+			CEN_Emil_Hacha = {
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_conservative_subtype
+            traits = {}
+          }
+        }
+      }
 		}
-	
 	}
 	focus = {
 	

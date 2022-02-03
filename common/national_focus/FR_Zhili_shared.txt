@@ -1242,23 +1242,21 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_but_in_rising_every_time_we_fall"
-			remove_ideas = ZHI_planning_of_government
-			swap_ideas = {
-				remove_idea = ZHI_no_marshal
-				add_idea = ZHI_president_of_beiyang
-			}
-			set_cosmetic_tag = ZHI_BEY
-			country_event = zhi.17
-		create_country_leader = {
-			name = "Cao Kun"
-			desc = ""
-			picture = "Portrait_ZHI_Cao_Kun.png"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-				#
-			}
-		}
+    remove_ideas = ZHI_planning_of_government
+    swap_ideas = {
+      remove_idea = ZHI_no_marshal
+      add_idea = ZHI_president_of_beiyang
+    }
+    set_cosmetic_tag = ZHI_BEY
+    country_event = zhi.17
+    add_country_leader_role = {
+      character = ZHI_Cao_Kun
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			every_state = {
             	limit = {
