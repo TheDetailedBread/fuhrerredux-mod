@@ -219,6 +219,36 @@ characters = {
 				hog_happy_amateur
 			}
 		}
+    advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = SPR_Diego_Martines_Barrio_for_sli_hired }
+			}			
+			idea_token = SPR_Diego_Martines_Barrio_for_sli
+			on_add = { set_country_flag = SPR_Diego_Martines_Barrio_for_sli_hired }
+			on_remove = { clr_country_flag = SPR_Diego_Martines_Barrio_for_sli_hired }
+			traits = {
+				foreign_minister
+				social_liberal
+				for_apologetic_clerk
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = SPR_Diego_Martines_Barrio_sec_sli_hired }
+			}			
+			idea_token = SPR_Diego_Martines_Barrio_sec_sli
+			on_add = { set_country_flag = SPR_Diego_Martines_Barrio_sec_sli_hired }
+			on_remove = { clr_country_flag = SPR_Diego_Martines_Barrio_sec_sli_hired }
+			traits = {
+				security_minister
+				social_liberal
+				sec_driven_recruiter
+			}
+		}
 	}
 	SPR_Miguel_Maura_Gamazo = {
 		name = "Miguel Maura Gamazo"
@@ -375,44 +405,6 @@ characters = {
 				chief_of_air_force
 				social_liberal
 				cair_air_superiority_doctrine
-			}
-		}
-	}
-	SPR_Diego_Martinez_Barrio = {
-		name = "Diego Martínez Barrio"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPR/SPR_Diego_Martinez_Barrio.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPR_Diego_Martinez_Barrio_for_sli_hired }
-			}			
-			idea_token = SPR_Diego_Martinez_Barrio_for_sli
-			on_add = { set_country_flag = SPR_Diego_Martinez_Barrio_for_sli_hired }
-			on_remove = { clr_country_flag = SPR_Diego_Martinez_Barrio_for_sli_hired }
-			traits = {
-				foreign_minister
-				social_liberal
-				for_apologetic_clerk
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = security_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPR_Diego_Martinez_Barrio_sec_sli_hired }
-			}			
-			idea_token = SPR_Diego_Martinez_Barrio_sec_sli
-			on_add = { set_country_flag = SPR_Diego_Martinez_Barrio_sec_sli_hired }
-			on_remove = { clr_country_flag = SPR_Diego_Martinez_Barrio_sec_sli_hired }
-			traits = {
-				security_minister
-				social_liberal
-				sec_driven_recruiter
 			}
 		}
 	}
@@ -776,34 +768,6 @@ characters = {
 				chief_of_army
 				authoritarian_democrat
 				carm_armoured_spearhead_doctrine
-			}
-		}
-	}
-	SPR_Jose_Sanjurjo_Sacanell = {
-		name = "José Sanjurjo Sacanell"
-		portraits = {
-			army = {
-				small = "gfx/interface/ministers/SPR/SPR_Jose_Sanjurjo_Sacanell.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_staff			
-			idea_token = SPR_Jose_Sanjurjo_Sacanell_cos_ade
-			traits = {
-				chief_of_staff
-				authoritarian_democrat
-				cos_school_of_fire_support
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_army		
-			idea_token = SPR_Jose_Sanjurjo_Sacanell_carm_ade
-			traits = {
-				chief_of_army
-				authoritarian_democrat
-				carm_decisive_battle_doctrine
 			}
 		}
 	}
