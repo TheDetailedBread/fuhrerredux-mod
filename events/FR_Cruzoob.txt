@@ -132,7 +132,7 @@ country_event = { # Siphon State Funds
     is_triggered_only = yes
 
     option = {
-        name = cruzoob.6
+        name = cruzoob.6.a
         add_timed_idea = {
             idea = CRU_siphoned_funds
             days = 30
@@ -161,7 +161,7 @@ country_event = { # Promote Anti-Government Propaganda
     is_triggered_only = yes
 
     option = {
-        name = cruzoob.8
+        name = cruzoob.8.a
         MEX = {
             add_timed_idea = {
                 idea = CRU_anti_government_propaganda
@@ -303,6 +303,20 @@ country_event = { # Mexican Declaration of War
             load_oob = "CRU_defence"
         }
     }
+}
+
+country_event = {
+  id = cruzoob.16
+  title = cruzoob.16.t
+  desc = cruzoob.16.d
+  picture = GFX_report_event_british_inspect_troops
+  is_triggered_only = yes
+
+  option = {
+    name = cruzoob.16.a
+    army_experience = 25
+    add_political_power = 50
+  }
 }
 
 country_event = { # Ask for German Advisors
@@ -733,7 +747,7 @@ country_event = { # Sent Industrial Aid
 country_event = { # Defeat of Mexico
     id = cruzoob.121
     title = cruzoob.121.t
-    desc = cruzoon.121.d
+    desc = cruzoob.121.d
     picture = GFX_report_event_spr_poum_militia
     is_triggered_only = yes
 
