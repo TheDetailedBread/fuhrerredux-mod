@@ -634,6 +634,7 @@ country_event = { # The Jewish Question
         increase_ruling_party_popularity_by_15 = yes
         add_political_power = -10
         add_stability = -0.01
+        hidden_effect = { country_event = { id = newamerica.27 days = 180 } }
     }
     option = {
         name = newamerica.20.b
@@ -641,6 +642,7 @@ country_event = { # The Jewish Question
         add_political_power = 35
         add_stability = 0.025
         add_manpower = -15000
+        hidden_effect = { country_event = { id = newamerica.27 days = 180 } }
     }
     option = {
         name = newamerica.20.c
@@ -649,6 +651,7 @@ country_event = { # The Jewish Question
         add_stability = -0.03
         add_manpower = 5000
         add_command_power = -5
+        hidden_effect = { country_event = { id = newamerica.27 days = 180 } }
     }
 }
 
@@ -791,6 +794,42 @@ country_event = { # The Third Great Migration
             days = 720
         }
     }
+}
+
+country_event = { # The Other Minories
+  id = newamerica.27
+  title = newamerica.27.t
+  desc = newamerica.27.d
+  is_triggered_only = yes
+  picture = GFX_report_event_czech_soldiers_01
+
+  option = {
+    name = newamerica.27.a
+    add_stability = -0.05
+    add_political_power = 50
+  }
+  option = {
+    name = newamerica.27.b
+    add_political_power = -50
+    add_stability = 0.05
+  }
+}
+
+country_event = { # The APP Question
+  id = newamerica.28
+  title = newamerica.28.t
+  desc = newamerica.28.d
+  is_triggered_only = yes
+  picture = GFX_report_event_african_soldiers
+
+  option = {
+    name = newamerica.28.a
+    add_political_power = -50
+  }
+  option = {
+    name = newamerica.28.b
+    add_stability = -0.05
+  }
 }
 
 country_event = { # Invitation from NAR
