@@ -57,6 +57,7 @@ focus_tree = {
         relative_position_id = NAR_political_stabilization
         completion_reward = {
             increase_ruling_party_popularity_by_5 = yes
+            hidden_effect = { country_event = { id = newamerica.28 days = 180 } }
         }
     }
 
@@ -206,6 +207,7 @@ focus_tree = {
         relative_position_id = NAR_political_stabilization
         completion_reward = {
             increase_ruling_party_popularity_by_5 = yes
+            hidden_effect = { country_event = { id = newamerica.28 days = 180 } }
         }
     }
 
@@ -1994,6 +1996,9 @@ focus_tree = {
         x = 2
         y = 0
         cost = 6
+        ai_will_do = {
+          factor = 200
+        }
         available = {
             NOT = { has_idea = NAR_illegitimate_government }
         }
