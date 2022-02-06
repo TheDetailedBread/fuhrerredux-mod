@@ -1,0 +1,44 @@
+can_release_belgium = {
+  state = 6 # Brabant
+  34 = { is_valid_annexation_state = yes } # Hainaut
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = BEL
+      has_country_flag = BEL_CONQ 
+    }
+  }
+}
+
+can_release_flanders = {
+  state = 6
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_belgium_first = yes
+    NOT = {
+      country_exists = FLA
+      has_country_flag = FLA_CONQ
+    }
+  }
+}
+
+can_release_wallonia = {
+  state = 34
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_belgium_first = yes
+    NOT = {
+      country_exists = WLL
+      has_country_flag = WLL_CONQ
+    }
+  }
+}
+
+should_release_belgium_first = {
+  OR = {
+    country_exists = BEL
+    has_country_flag = BEL_CONQ
+    6 = { is_valid_annexation_state = no }
+    34 = { is_valid_annexation_state = no }
+  }
+}

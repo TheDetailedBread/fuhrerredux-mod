@@ -530,6 +530,7 @@ country_event = {
     picture = GFX_report_event_czech_soldiers_01
     immediate = { set_country_flag = BEL_OCCUPIED }
     mean_time_to_happen = { days = 3 }
+    is_triggered_only = yes
     trigger = {
         NOT = {
             tag = BEL
