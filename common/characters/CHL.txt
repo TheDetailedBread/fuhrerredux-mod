@@ -391,7 +391,7 @@ characters = {
 			traits = { }
 		}
 		field_marshal = {
-			traits = { }
+			traits = { trait_mountaineer }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -2031,7 +2031,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = { trait_mountaineer }
 			skill = 1
 			attack_skill = 3
 			defense_skill = 3
@@ -2042,9 +2042,12 @@ characters = {
 	CHL_Juan_Pablo_Bennett = {
 		name = "Juan Pablo Bennett"
 		portraits = {
+      army = {
+        large = "gfx/leaders/Generic/Portrait_South_America_Generic_land_new_1.png"
+      }
 		}
 		corps_commander = {
-			traits = { }
+			traits = { harsh_leader inflexible_strategist trait_mountaineer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 4
