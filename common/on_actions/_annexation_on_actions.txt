@@ -1,0 +1,37 @@
+on_actions = {
+  on_annex = {
+    effect = {
+      recheck_annexations = yes
+    }
+  }
+
+  on_startup = {
+    effect = {
+      set_variable = { BEL.release_event = 1 }  
+
+      add_to_array = { global.annexation_relevant_states = 6.id }
+      set_variable = { FLA.release_event = 2 }
+
+      add_to_array = { global.annexation_relevant_states = 34.id }
+      set_variable = { WLL.release_event = 3 }
+    }
+  }
+
+  on_peaceconference_ended = {
+    effect = {
+      recheck_annexations = yes
+    }
+  }
+
+  on_start_control_changed = {
+    effect = {
+      if = {
+        limit = {
+          owns_state = FROM.FROM
+          is_in_array = { global.annexation_relevant_states = FROM.FROM }
+        }
+        recheck_annexations = yes
+      }
+    }
+  }
+}

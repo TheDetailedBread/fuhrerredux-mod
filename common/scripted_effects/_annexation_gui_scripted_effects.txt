@@ -1,0 +1,35 @@
+recheck_annexations = {
+  hidden_effect = {
+    if = {
+      limit = {
+        NOT = { has_country_flag = FX_checking_for_possible_annexations }
+      }
+      set_country_flag = { flag = FX_checking_for_possible_annexations days = 7 value = 1 }
+      country_event = { id = annex.1 days = 1 random_days = 3 }
+    }
+  }
+}
+
+recheck_annexations_immediate = {
+  hidden_effect = { country_event = annex.1 }
+}
+
+check_potential_annexations = {
+  check_potential_annexations_europe = yes
+  
+}
+
+check_potential_annexations_europe = {
+  if = {
+    limit = { can_release_belgium = yes }
+    ROOT = { activate_mission = annexation_BEL_CONQ }
+  } 
+  else_if = {
+    limit = { can_release_flanders = yes }
+    ROOT = { activate_mission = annexation_FLA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_wallonia = yes }
+    ROOT = { activate_mission = annexation_WLL_CONQ }
+  }
+}

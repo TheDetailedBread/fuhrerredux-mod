@@ -1,0 +1,27 @@
+add_namespace = annex
+
+country_event = { #Check for possible annexations (donotlog)
+	id = annex.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_subject = no
+		NOT = {
+			# Special tags - these shouldn't exist outside of very specific circumstances
+			tag = XXB #debug tag
+		}
+	}
+
+	option = {
+		every_owned_state = {
+			limit = {
+				is_in_array = { global.annexation_relevant_states = THIS }
+				NOT = { is_core_of = ROOT }
+				is_controlled_by = ROOT
+			}
+			check_potential_annexations = yes
+		}
+		clr_country_flag = FX_checking_for_possible_annexations
+	}
+}
