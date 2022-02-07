@@ -3241,7 +3241,6 @@ country_event = { # Fate of Sweden
         add_state_core = 139
         add_state_core = 140
         add_state_core = 141
-        add_state_core = 145
         add_state_core = 666
         add_state_core = 906
         add_state_core = 907
@@ -3487,5 +3486,143 @@ country_event = { # Fate of Wallonia
     }
     set_country_flag = WLL_CONQ
     occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Burgenland
+  id = annex.153
+  title = annexation_BURGENLAND_CONQ
+  desc = annexation_BURGENLAND_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Austria
+    name = annex.153.a
+    trigger = {
+      AUS = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = AUS
+      }
+    }
+    set_temp_variable = { tag_to_release = AUS }
+    772 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to Hungary
+    name = annex.153.b
+    trigger = {
+      HUN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HUN
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    772 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = ALAND_CONQ
+  }
+}
+
+country_event = { # Fate of West Banat
+  id = annex.154
+  title = annexation_WEST_BANAT_CONQ
+  desc = annexation_WEST_BANAT_CONQ
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Greece
+    name = annex.154.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = GRE
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    764 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Bulgaria
+    name = annex.154.b
+    trigger = {
+      BUL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BUL
+      }
+    }
+    set_temp_variable = { tag_to_release = BUL }
+    764 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = ALAND_CONQ
+  }
+}
+
+country_event = { # Fate of Switzerland
+  id = annex.155
+  title = annexation_SWI_CONQ
+  desc = annexation_SWI_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = SWI }
+      remove_all_cores_and_claims_of_tags = yes
+      SWI = {
+        add_state_core = 3
+        add_state_core = 151
+        add_state_core = 755
+        add_state_core = 756
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.155.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = SWI }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = SWI_CONQ
   }
 }

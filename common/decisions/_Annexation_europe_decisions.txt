@@ -146,6 +146,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_BURGENLAND_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      772 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.153
+    }
+    timeout_effect = {
+      occupy_tiny_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_BUL_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -963,6 +981,42 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.152
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_WEST_BANAT_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      764 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.154
+    }
+    timeout_effect = {
+      occupy_tiny_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_SWI_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      3 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.155
     }
     timeout_effect = {
       occupy_small_country = yes
