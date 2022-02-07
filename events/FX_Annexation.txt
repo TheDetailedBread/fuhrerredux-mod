@@ -1,87 +1,87 @@
-add_namespace = annex
+# add_namespace = annex
 
-country_event = { #Check for possible annexations (donotlog)
-	id = annex.1
-	hidden = yes
-	is_triggered_only = yes
+# country_event = { #Check for possible annexations (donotlog)
+# 	id = annex.1
+# 	hidden = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		is_subject = no
-		NOT = {
-			# Special tags - these shouldn't exist outside of very specific circumstances
-			tag = XXB #debug tag
-		}
-	}
+# 	trigger = {
+# 		is_subject = no
+# 		NOT = {
+# 			# Special tags - these shouldn't exist outside of very specific circumstances
+# 			tag = XXB #debug tag
+# 		}
+# 	}
 
-	option = {
-    log = "event"
-		every_owned_state = {
-			limit = {
-				is_in_array = { global.annexation_relevant_states = THIS }
-				NOT = { is_core_of = ROOT }
-				is_controlled_by = ROOT
-			}
-			check_potential_annexations = yes
-		}
-		clr_country_flag = FX_checking_for_possible_annexations
-	}
-}
+# 	option = {
+#     log = "event"
+# 		every_owned_state = {
+# 			limit = {
+# 				is_in_array = { global.annexation_relevant_states = THIS }
+# 				NOT = { is_core_of = ROOT }
+# 				is_controlled_by = ROOT
+# 			}
+# 			check_potential_annexations = yes
+# 		}
+# 		clr_country_flag = FX_checking_for_possible_annexations
+# 	}
+# }
 
-country_event = {
-  id = annex.10
-  title = BEL_CONQ
-  desc = BEL_CONQ_DESC
-  is_triggered_only = yes
+# country_event = {
+#   id = annex.10
+#   title = BEL_CONQ
+#   desc = BEL_CONQ_DESC
+#   is_triggered_only = yes
 
-  immediate = {
-    hidden_effect = {
-      add_to_temp_array = { core_removal_array = BEL }
-      remove_all_cores_and_claims_of_tags = yes
-      BEL = {
-        add_state_core = 6
-        add_state_core = 34
-        add_state_core = 802
-        add_state_core = 806
-        add_state_core = 866
-        add_state_core = 867
-        drop_cosmetic_tag = yes
-      }
-    }
-  }
+#   immediate = {
+#     hidden_effect = {
+#       add_to_temp_array = { core_removal_array = BEL }
+#       remove_all_cores_and_claims_of_tags = yes
+#       BEL = {
+#         add_state_core = 6
+#         add_state_core = 34
+#         add_state_core = 802
+#         add_state_core = 806
+#         add_state_core = 866
+#         add_state_core = 867
+#         drop_cosmetic_tag = yes
+#       }
+#     }
+#   }
 
-  option = {
-    name = "puppet"
-    set_temp_variable = { tag_to_release = BEL }
-    release_targeted_tag = yes
-  }
-  option = {
-    name = "split"
-    set_country_flag = { flag = BEL_CONQ days = 100 value = 1 }
-    recheck_annexations_immediate = yes
-  }
-  option = {
-    name = "annex"
-    set_country_flag = FLA_CONQ
-    set_country_flag = BEL_CONQ
-  }
-}
+#   option = {
+#     name = "puppet"
+#     set_temp_variable = { tag_to_release = BEL }
+#     release_targeted_tag = yes
+#   }
+#   option = {
+#     name = "split"
+#     set_country_flag = { flag = BEL_CONQ days = 100 value = 1 }
+#     recheck_annexations_immediate = yes
+#   }
+#   option = {
+#     name = "annex"
+#     set_country_flag = FLA_CONQ
+#     set_country_flag = BEL_CONQ
+#   }
+# }
 
-country_event = {
-  id = new_annex.2
-  title = new_annex.2
-  is_triggered_only = yes
+# country_event = {
+#   id = new_annex.2
+#   title = new_annex.2
+#   is_triggered_only = yes
 
-  option = {
-    name = new_annex.2
-  }
-}
+#   option = {
+#     name = new_annex.2
+#   }
+# }
 
-country_event = {
-  id = new_annex.3
-  title = new_annex.3
-  is_triggered_only = yes
+# country_event = {
+#   id = new_annex.3
+#   title = new_annex.3
+#   is_triggered_only = yes
 
-  option = {
-    name = new_annex.2
-  }
-}
+#   option = {
+#     name = new_annex.2
+#   }
+# }

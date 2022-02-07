@@ -63,6 +63,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_GBR_CONQ }
   }
   else_if = {
+    limit = { can_release_burgenland = yes }
+    ROOT = { activate_mission = annexation_BURGENLAND_CONQ }
+  }
+  else_if = {
     limit = { can_release_denmark = yes }
     ROOT = { activate_mission = annexation_DEN_CONQ }
   }
@@ -116,7 +120,11 @@ check_potential_annexations_europe = {
   }
   else_if = {
     limit = { can_release_ireland = yes }
-    ROOT = { activate_mission = annexation_ITA_CONQ }
+    ROOT = { activate_mission = annexation_IRE_CONQ }
+  }
+  else_if = {
+    limit = { can_release_italy = yes }
+    ROOT = { activate_mission = annexation_ITA_CONQ } 
   }
   else_if = {
     limit = { can_release_latvia = yes }
@@ -211,6 +219,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_SWE_CONQ }
   }
   else_if = {
+    limit = { can_release_switzerland = yes }
+    ROOT = { activate_mission = annexation_SWI_CONQ }
+  }
+  else_if = {
     limit = { can_release_venice = yes }
     ROOT = { activate_mission = annexation_SRV_CONQ }
   }
@@ -225,5 +237,9 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_wallonia = yes }
     ROOT = { activate_mission = annexation_WLL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_west_banat = yes }
+    ROOT = { activate_mission = annexation_WEST_BANAT_CONQ }
   }
 }

@@ -1,10 +1,14 @@
 on_actions = {
   on_startup = {
     effect = { 
+      # European conflicted states
+      add_to_array = { global.annexation_relevant_states = 145.id } # Aland
+      add_to_array = { global.annexation_relevant_states = 772.id } # Burgenland
+      add_to_array = { global.annexation_relevant_states = 764.id } # West Banat
 
       add_to_array = { global.annexation_relevant_states = 44.id } # Albania
       add_to_array = { global.annexation_relevant_states = 4.id } # Austria
-      add_to_array = { global.annexation_relevant_states = 52.id } # Belarus
+      add_to_array = { global.annexation_relevant_states = 206.id } # Belarus
       add_to_array = { global.annexation_relevant_states = 48.id } # Bulgaria
       add_to_array = { global.annexation_relevant_states = 37.id } # Denmark
       add_to_array = { global.annexation_relevant_states = 126.id } # England
@@ -12,7 +16,8 @@ on_actions = {
       add_to_array = { global.annexation_relevant_states = 111.id } # Finland 
       add_to_array = { global.annexation_relevant_states = 47.id } # Greece
       add_to_array = { global.annexation_relevant_states = 43.id } # Hungary
-      add_to_array = { global.annexation_relevant_states = 2.id } # Ireland
+      add_to_array = { global.annexation_relevant_states = 815.id } # Ireland
+      add_to_array = { global.annexation_relevant_states = 2.id } # Italy
       add_to_array = { global.annexation_relevant_states = 757.id } # Latvia
       add_to_array = { global.annexation_relevant_states = 96.id } # Lithuania
       add_to_array = { global.annexation_relevant_states = 8.id } # Lux
@@ -27,11 +32,15 @@ on_actions = {
       add_to_array = { global.annexation_relevant_states = 219.id } # Soviet
       add_to_array = { global.annexation_relevant_states = 41.id } # Spain
       add_to_array = { global.annexation_relevant_states = 141.id } # Sweden
+      add_to_array = { global.annexation_relevant_states = 3.id } # Switzerland
 
+      # Belgium
       add_to_array = { global.annexation_relevant_states = 6.id } # Hainaut
       add_to_array = { global.annexation_relevant_states = 34.id } # Wallonia
 
       # England
+      add_to_array = { global.annexation_relevant_states = 122.id } # Scotland
+      add_to_array = { global.annexation_relevant_states = 133.id } # Wales
       #@add_to_array = { global.annexation_relevant_states = }
 
       # France
@@ -60,6 +69,4 @@ on_actions = {
       add_to_array = { global.annexation_relevant_states = 34.id } # Venice
     }
   }
-
-  
 }

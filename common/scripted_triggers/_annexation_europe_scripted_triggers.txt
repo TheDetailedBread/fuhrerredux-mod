@@ -6,7 +6,7 @@ can_release_aland = {
     # Do Swedish release first
     OR = {
       country_exists = SWE
-      has_country_flag = SWE
+      has_country_flag = SWE_CONQ
       141 = { is_valid_annexation_state = no } # Svealand
     }
     # Do Finnish release first
@@ -152,6 +152,30 @@ can_release_bulgaria = {
   }
 }
 
+#Burgenland - annexation_BURGENLAND_CONQ
+can_release_burgenland = {
+  state = 772
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    OR = {
+      country_exists = AUS
+      has_country_flag = AUS_CONQ
+      4 = { is_valid_annexation_state = no } # Vienna
+    }
+    OR = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+      43 = { is_valid_annexation_state = no } # Budapest
+    }
+    NOT = {
+      tag = AUS
+      tag = GER
+      tag = HUN
+      has_country_flag = BURGENLAND_CONQ
+    }
+  }
+}
+
 #Denmark - annexation_DEN_CONQ
 can_release_denmark = {
   state = 37
@@ -211,8 +235,10 @@ can_release_finland = {
   state = 111
   NOT = { is_claimed_by = ROOT }
   ROOT = {
-    has_country_flag = FIN_CONQ
-    country_exists = FIN
+    NOT = {
+      has_country_flag = FIN_CONQ
+      country_exists = FIN
+    }
   }
 }
 
@@ -655,6 +681,18 @@ can_release_sweden = {
   }
 }
 
+#Switzerland - annexation_SWI_CONQ
+can_release_switzerland = {
+  state = 3
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = SWI
+      has_country_flag = SWI_CONQ
+    }
+  }
+}
+
 can_release_ukraine = {
   state = 202
   NOT = { is_claimed_by = ROOT }
@@ -703,6 +741,29 @@ can_release_wallonia = {
     NOT = {
       country_exists = WLL
       has_country_flag = WLL_CONQ
+    }
+  }
+}
+
+#West Banat - annexation_WEST_BANAT_CONQ
+can_release_west_banat = {
+  state = 764
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    OR = {
+      country_exists = BUL
+      has_country_flag = BUL_CONQ
+      48 = { is_valid_annexation_state = no } # Sofiya
+    }
+    NOT = {
+      tag = GRE
+      tag = BUL
+      has_country_flag = WEST_BANAT_CONQ
     }
   }
 }
