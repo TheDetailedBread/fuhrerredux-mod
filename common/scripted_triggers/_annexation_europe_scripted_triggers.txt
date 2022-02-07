@@ -1,0 +1,774 @@
+# Aland - annexation_ALAND_CONQ
+can_release_aland = { 
+  state = 145
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Swedish release first
+    OR = {
+      country_exists = SWE
+      has_country_flag = SWE
+      141 = { is_valid_annexation_state = no } # Svealand
+    }
+    # Do Finnish release first
+    OR = {
+      country_exists = FIN
+      has_country_flag = FIN_CONQ
+      111 = { is_valid_annexation_state = no } # Uusimaa
+    }
+    NOT = {
+      tag = FIN
+      tag = SWE
+      has_country_flag = ALAND_CONQ
+    }
+  }
+}
+
+#Albania - annexation_ALB_CONQ
+can_release_albania = {
+  state = 44 # Albania
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = ALB_CONQ
+      country_exists = ALB
+    }
+  }
+}
+
+#Austria - annexation_AUS_CONQ
+can_release_austria = {
+  state = 4 #Vienna
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = AUS_CONQ
+      country_exists = AUS
+    }
+  }
+}
+
+#Baden - annexation_BAW_CONQ
+can_release_baden = {
+  state = 50
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = BAW
+      has_country_flag = BAW_CONQ
+    }
+  }
+}
+
+#Bavaria - annexation_BAY_CONQ
+can_release_bavaria = {
+  state = 52
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = BAY
+      has_country_flag = BAY_CONQ
+    }
+  } 
+}
+
+#Belarus - annexation_BLR_CONQ
+can_release_belarus = {
+  state = 206
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = BLR
+      has_country_flag = BLR_CONQ
+    }
+  }
+}
+
+# Belgium - annexation_BEL_CONQ
+can_release_belgium = {
+  state = 6 # Brabant
+  34 = { is_valid_annexation_state = yes } # Hainaut
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = BEL
+      has_country_flag = BEL_CONQ 
+    }
+  }
+}
+
+#Bohemia - annexation_CZE_CONQ
+can_release_bohemia = {
+  state = 9
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = CZE_CONQ
+      country_exists = CZE
+    }
+  }
+}
+
+#Brandenburg - annexation_BRW_CONQ
+can_release_brandenburg = {
+  state = 64
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      has_country_flag = BRW_CONQ
+      country_exists = BRW
+    }
+  } 
+}
+
+#Britain - annexation_GBR_CONQ
+can_release_britain = {
+  state = 126
+  122 = { is_valid_annexation_state = yes } # Wales
+  133 = { is_valid_annexation_state = yes } # Scotland
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = GBR_CONQ
+      country_exists = GBR
+    }
+  }
+}
+
+#Bulgaria - annexation_BUL_CONQ
+can_release_bulgaria = {
+  state = 48
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = BUL_CONQ
+      country_exists = BUL
+    }
+  }
+}
+
+#Denmark - annexation_DEN_CONQ
+can_release_denmark = {
+  state = 37
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = DEN_CONQ
+      country_exists = DEN
+    }
+  }
+}
+
+#England - annexation_ENG_CONQ
+can_release_england = {
+  state = 126
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_britian_first = yes
+    is_british_isles_tag = no
+    NOT = {
+      has_country_flag = ENG_CONQ
+      country_exists = ENG
+      country_exists = ENP
+      country_exists = EGL
+    }
+  }
+}
+
+#Ermland - annexation_ERM_CONQ
+can_release_ermland = {
+  state = 8
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      has_country_flag = ERM_CONQ
+      country_exists = ERM
+    }
+  }
+}
+
+#Estonia - annexation_EST_CONQ
+can_release_estonia = {
+  state = 13
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = EST_CONQ
+      country_exists = EST
+    }
+  }
+}
+
+#Finland - annexation_FIN_CONQ
+can_release_finland = {
+  state = 111
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    has_country_flag = FIN_CONQ
+    country_exists = FIN
+  }
+}
+
+#Flanders - annexation_FLA_CONQ
+can_release_flanders = {
+  state = 6
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_belgium_first = yes
+    NOT = {
+      country_exists = FLA
+      has_country_flag = FLA_CONQ
+    }
+  }
+}
+
+#France - annexation_FRA_CONQ
+can_release_france = {
+  state = 16
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      has_country_flag = FRA_CONQ
+      country_exists = FRA
+    }
+  }
+}
+
+#Germany - annexation_GER_CONQ
+can_release_germany = {
+  state = 64
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = GER
+      has_country_flag = GER_CONQ
+    }
+  }
+}
+
+#Greece - annexation_GRE_CONQ
+can_release_greece = {
+  state = 47
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+    }
+  }
+}
+
+#Hannover - annexation_HAN_CONQ
+can_release_hannover = {
+  state = 59
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = HAN
+      has_country_flag = HAN_CONQ
+    }
+  }
+}
+
+#Hessen - annexation_HES_CONQ
+can_release_hessen = {
+  state = 55
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = HES
+      has_country_flag = HES_CONQ
+    }
+  }
+}
+
+#Hungary - annexation_HUN_CONQ
+can_release_hungary = {
+  state = 43
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+    }
+  }
+}
+
+#Ireland - annexation_IRE_CONQ
+can_release_ireland = {
+  state = 815
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    tag = ENG
+    NOT = {
+      country_exists = IRE
+      has_country_flag = IRE_CONQ
+    }
+  }
+}
+
+#Italy - annexation_ITA_CONQ
+can_release_italy = {
+  state = 2
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = ITA
+      has_country_flag = ITA_CONQ
+    }
+  }
+}
+
+#Latvia - annexation_LAT_CONQ
+can_release_latvia = {
+  state = 757
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = LAT
+      has_country_flag = LAT_CONQ
+    }
+  }
+}
+
+#Lithuania - annexation_LIT_CONQ
+can_release_lithuania = {
+  state = 96
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = LIT
+      has_country_flag = LIT_CONQ
+    }
+  }
+}
+
+#Lombardy - annexation_LOM_CONQ
+can_release_lombardy = {
+  state = 159
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_italian_tag = no
+    NOT = {
+      country_exists = LOM
+      has_country_flag = LOM_CONQ
+    }
+  }
+}
+
+#Luxemberg - annexation_LUX_CONQ
+can_release_luxemburg = {
+  state = 8
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = LUX
+      has_country_flag = LUX_CONQ
+    }
+  }
+}
+
+#Naples - annexation_NAP_CONQ
+can_release_naples = {
+  state = 117
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_italian_tag = no
+    NOT = {
+      country_exists = NAP
+      has_country_flag = NAP_CONQ
+    }
+  }
+}
+
+#Netherlands - annexation_HOL_CONQ
+can_release_netherlands = {
+  state = 7
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    is_dutch_tag = no
+    NOT = {
+      country_exists = HOL
+      has_country_flag = HOL_CONQ
+    }
+  }
+}
+
+#Norway - annexation_NOR_CONQ
+can_release_norway = {
+  state = 110
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = NOR
+      has_country_flag = NOR_CONQ
+    }
+  }
+}
+
+#Piedmont - annexation_PIE_CONQ
+can_release_piedmont = {
+  state = 158
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_italian_tag = no
+    NOT = {
+      country_exists = PIE
+      has_country_flag = PIE_CONQ
+    }
+  }
+}
+
+#Poland - annexation_POL_CONQ
+can_release_poland = {
+  state = 10
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = POL
+      has_country_flag = POL_CONQ
+    }
+  }
+}
+
+#Pomerania - annexation_POM_CONQ
+can_release_pomerania = {
+  state = 62
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_german_tag = no
+    NOT = {
+      should_release_germany_first = yes
+      country_exists = POM
+      has_country_flag = POM_CONQ
+    }
+  }
+}
+
+#Portugal - annexation_POR_CONQ
+can_release_portugal = {
+  state = 112
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    is_portuguese_tag = no
+    NOT = {
+      country_exists = POR
+      country_exists = PRR
+      has_country_flag = POR_CONQ
+    }
+  }
+}
+
+#Rhineland - annexation_RHI_CONQ
+can_release_rhineland = {
+  state = 42
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = RHI
+      has_country_flag = RHI_CONQ
+      is_germany_or_splinter_tag = yes
+    }
+  }
+}
+
+#Romania - annexation_ROM_CONQ
+can_release_romania = {
+  state = 46
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = ROM
+      has_country_flag = ROM_CONQ
+    }
+  }
+}
+
+#Russia - annexation_RUS_CONQ
+can_release_russia = {
+  if = {
+    limit = { country_exists = SOV }
+    state = 563
+    else = {
+      state = 219
+    }
+  }
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = RUS
+      has_country_flag = RUS_CONQ
+      is_russian_tag = yes
+    }
+  }
+}
+
+#Saxony - annexation_SAX_CONQ
+can_release_saxony = {
+  state = 65
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = SAX
+      has_country_flag = SAX_CONQ
+    }
+  }
+}
+
+#Schleswig - annexation_SHO_CONQ
+can_release_schleswig = {
+  state = 58
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = SHO
+      has_country_flag = SHO_CONQ
+    }
+  }
+}
+
+#Scotland - annexation_SCO_CONQ
+can_release_scotland = {
+  state = 133
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_britian_first = yes
+    is_british_isles_tag = no
+    NOT = {
+      country_exists = SCO
+      has_country_flag = SCO_CONQ
+    }
+  }
+}
+
+#Serbia - annexation_SER_CONQ
+can_release_serbia = {
+  state = 107
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = SER
+      has_country_flag = SER_CONQ
+    }
+  }
+}
+
+#Sicily - annexation_SIC_CONQ
+can_release_sicily = {
+  state = 115
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    is_italian_tag = no
+    should_release_italy_first = yes
+    NOT = {
+      country_exists = SIC
+      has_country_flag = SIC_CONQ
+    }
+  }
+}
+
+#Silesia - annexation_SIL_CONQ
+can_release_silesia = {
+  state = 794
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    is_german_tag = no
+    should_release_germany_first = yes
+    NOT = {
+      country_exists = SIL
+      has_country_flag = SIL_CONQ
+    }
+  }
+}
+
+#Slovakia - annexation_SLO_CONQ
+can_release_slovakia = {
+  state = 70
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = SLO
+      has_country_flag = SLO_CONQ
+    }
+  }
+}
+
+#Soviet - annexation_SOV_CONQ
+can_release_soviet = {
+  state = 219
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = SOV
+      has_country_flag = SOV_CONQ
+      is_russian_tag = yes
+    }
+  }
+}
+
+#Spain - annexation_SPA_CONQ
+can_release_spain = {
+  state = 41
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      is_spanish_tag = yes
+      has_country_flag = SPA_CONQ
+      country_exists = SPR
+      country_exists = SPA
+      country_exists = SPM
+      country_exists = SPF
+    }
+  }
+}
+
+#Sweden - annexation_SWE_CONQ
+can_release_sweden = {
+  state = 141
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = SWE
+      has_country_flag = SWE_CONQ
+    }
+  }
+}
+
+can_release_ukraine = {
+  state = 202
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = UKR
+      has_country_flag = UKR_CONQ
+    }
+  }
+}
+
+#Venice - annexation_SRV_CONQ
+can_release_venice = {
+  state = 771
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_italian_tag = no
+    NOT = {
+      has_country_flag = SRV_CONQ
+      country_exists = SRV
+    }
+  }
+}
+
+#Wales - annexation_WLS_CONQ
+can_release_wales = {
+  state = 122
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_britian_first = yes
+    is_british_isles_tag = no
+    NOT = {
+      has_country_flag = WLS_CONQ
+      country_exists = WLS
+    }
+  }
+}
+
+#Wallonia - annexation_WLL_CONQ
+can_release_wallonia = {
+  state = 34
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_belgium_first = yes
+    NOT = {
+      country_exists = WLL
+      has_country_flag = WLL_CONQ
+    }
+  }
+}
+
+should_release_austria_first = {
+  OR = {
+    country_exists = AUS
+    has_country_flag = AUS_CONQ
+    4 = { is_valid_annexation_state = no }
+  }
+}
+
+should_release_bavaria_first = {
+  OR = {
+    country_exists = BAW
+    has_country_flag = BAW_CONQ
+    is_germany_or_splinter_tag = yes
+    52 = { is_valid_annexation_state = no }
+  }
+}
+
+should_release_belgium_first = {
+  OR = {
+    country_exists = BEL
+    has_country_flag = BEL_CONQ
+    6 = { is_valid_annexation_state = no }
+    34 = { is_valid_annexation_state = no }
+  }
+}
+
+should_release_britian_first = {
+  OR = {
+    country_exists = ENG
+    country_exists = ENP
+    country_exists = EGL
+    has_country_flag = GBR_CONQ
+    AND = {
+      122 = { is_valid_annexation_state = no }
+      126 = { is_valid_annexation_state = no }
+      133 = { is_valid_annexation_state = no }
+    }
+  }
+}
+
+should_release_germany_first = {
+  OR = {
+    is_germany_or_splinter_tag = yes
+    country_exists = GER
+    country_exists = GRP
+    has_country_flag = GER_CONQ
+    AND = {
+      64 = { is_valid_annexation_state = no }
+      51 = { is_valid_annexation_state = no }
+    }
+  }
+}
+
+should_release_italy_first = {
+  OR = {
+    is_italian_tag = yes
+    country_exists = ITA
+    country_exists = ITP
+    has_country_flag = ITA_CONQ
+    AND = {
+      2 = { is_valid_annexation_state = no }
+    }
+  }
+}
+

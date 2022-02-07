@@ -1,37 +1,65 @@
 on_actions = {
-  on_annex = {
-    effect = {
-      recheck_annexations = yes
-    }
-  }
-
   on_startup = {
-    effect = {
-      set_variable = { BEL.release_event = 1 }  
+    effect = { 
 
-      add_to_array = { global.annexation_relevant_states = 6.id }
-      set_variable = { FLA.release_event = 2 }
+      add_to_array = { global.annexation_relevant_states = 44.id } # Albania
+      add_to_array = { global.annexation_relevant_states = 4.id } # Austria
+      add_to_array = { global.annexation_relevant_states = 52.id } # Belarus
+      add_to_array = { global.annexation_relevant_states = 48.id } # Bulgaria
+      add_to_array = { global.annexation_relevant_states = 37.id } # Denmark
+      add_to_array = { global.annexation_relevant_states = 126.id } # England
+      add_to_array = { global.annexation_relevant_states = 13.id } # Estonia
+      add_to_array = { global.annexation_relevant_states = 111.id } # Finland 
+      add_to_array = { global.annexation_relevant_states = 47.id } # Greece
+      add_to_array = { global.annexation_relevant_states = 43.id } # Hungary
+      add_to_array = { global.annexation_relevant_states = 2.id } # Ireland
+      add_to_array = { global.annexation_relevant_states = 757.id } # Latvia
+      add_to_array = { global.annexation_relevant_states = 96.id } # Lithuania
+      add_to_array = { global.annexation_relevant_states = 8.id } # Lux
+      add_to_array = { global.annexation_relevant_states = 7.id } # Holland
+      add_to_array = { global.annexation_relevant_states = 110.id } # Norway
+      add_to_array = { global.annexation_relevant_states = 10.id } # Poland
+      add_to_array = { global.annexation_relevant_states = 112.id } # Portugal
+      add_to_array = { global.annexation_relevant_states = 46.id } # Romania
+      add_to_array = { global.annexation_relevant_states = 219.id } # Russia
+      add_to_array = { global.annexation_relevant_states = 107.id } # Serbia
+      add_to_array = { global.annexation_relevant_states = 70.id } # Slovakia
+      add_to_array = { global.annexation_relevant_states = 219.id } # Soviet
+      add_to_array = { global.annexation_relevant_states = 41.id } # Spain
+      add_to_array = { global.annexation_relevant_states = 141.id } # Sweden
 
-      add_to_array = { global.annexation_relevant_states = 34.id }
-      set_variable = { WLL.release_event = 3 }
+      add_to_array = { global.annexation_relevant_states = 6.id } # Hainaut
+      add_to_array = { global.annexation_relevant_states = 34.id } # Wallonia
+
+      # England
+      #@add_to_array = { global.annexation_relevant_states = }
+
+      # France
+      add_to_array = { global.annexation_relevant_states = 16.id } # France
+
+      # Germany
+      add_to_array = { global.annexation_relevant_states = 50.id } # Baden
+      add_to_array = { global.annexation_relevant_states = 52.id } # Bavaria
+      add_to_array = { global.annexation_relevant_states = 64.id } # Brandenburg
+      add_to_array = { global.annexation_relevant_states = 8.id } # Ermland
+      add_to_array = { global.annexation_relevant_states = 59.id } # Hannover
+      add_to_array = { global.annexation_relevant_states = 55.id } # Hessen
+      add_to_array = { global.annexation_relevant_states = 42.id } # Rhineland
+      add_to_array = { global.annexation_relevant_states = 62.id } # Pomerania
+      add_to_array = { global.annexation_relevant_states = 65.id } # Saxony
+      add_to_array = { global.annexation_relevant_states = 58.id } # Schleswig
+      add_to_array = { global.annexation_relevant_states = 794.id } # Silesia
+
+      # Italy
+      add_to_array = { global.annexation_relevant_states = 2.id } # Rome
+      add_to_array = { global.annexation_relevant_states = 159.id } # Lombardy
+      add_to_array = { global.annexation_relevant_states = 117.id } # Naples
+      add_to_array = { global.annexation_relevant_states = 158.id } # Piedmont
+      add_to_array = { global.annexation_relevant_states = 794.id } # Sicily 
+      add_to_array = { global.annexation_relevant_states = 2.id } # Tuscany
+      add_to_array = { global.annexation_relevant_states = 34.id } # Venice
     }
   }
 
-  on_peaceconference_ended = {
-    effect = {
-      recheck_annexations = yes
-    }
-  }
-
-  on_start_control_changed = {
-    effect = {
-      if = {
-        limit = {
-          owns_state = FROM.FROM
-          is_in_array = { global.annexation_relevant_states = FROM.FROM }
-        }
-        recheck_annexations = yes
-      }
-    }
-  }
+  
 }
