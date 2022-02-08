@@ -67,8 +67,24 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_BURGENLAND_CONQ }
   }
   else_if = {
+    limit = { can_release_central_macedonia = yes }
+    ROOT = { activate_mission = annexation_CENTRAL_MACEDONIA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_dardanellia = yes }
+    ROOT = { activate_mission = annexation_DARDANELLIA_CONQ }
+  }
+  else_if = {
     limit = { can_release_denmark = yes }
     ROOT = { activate_mission = annexation_DEN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_eastern_macedonia = yes }
+    ROOT = { activate_mission = annexation_EASTERN_MACEDONIA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_east_thrace = yes }
+    ROOT = { activate_mission = annexation_EAST_THRACE_CONQ  }
   }
   else_if = {
     limit = { can_release_england = yes }
@@ -235,6 +251,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_SHKODER_CONQ }
   }
   else_if = {
+    limit = { can_release_smyrna = yes }
+    ROOT = { activate_mission = annexation_SMYRNA_CONQ }
+  }
+  else_if = {
     limit = { can_release_soviet = yes }
     ROOT = { activate_mission = annexation_SOV_CONQ }
   }
@@ -249,6 +269,10 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_switzerland = yes }
     ROOT = { activate_mission = annexation_SWI_CONQ }
+  }
+  else_if = {
+    limit = { can_release_thrace = yes }
+    ROOT = { activate_mission = annexation_THRACE_CONQ }
   }
   else_if = {
     limit = { can_release_transylvania = yes }
@@ -281,6 +305,10 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_west_banat = yes }
     ROOT = { activate_mission = annexation_WEST_BANAT_CONQ }
+  }
+  else_if = {
+    limit = { can_release_west_thrace = yes }
+    ROOT = { activate_mission = annexation_WEST_THRACE_CONQ }
   }
   else_if = {
     limit = { can_release_zeuss_vlaanderen = yes }

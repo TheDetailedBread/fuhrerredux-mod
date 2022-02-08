@@ -182,6 +182,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_CENTRAL_MACEDONIA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      731 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.168
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_CZE_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -192,6 +210,24 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.109
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_chance = {
+      factor = 100
+    }
+  }
+  annexation_DARDANELLIA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      37 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.170
     }
     timeout_effect = {
       occupy_medium_country = yes
@@ -215,6 +251,42 @@ annexation_decisions = {
       occupy_medium_country = yes
     }
     ai_chance = {
+      factor = 100
+    }
+  }
+  annexation_EASTERN_MACEDONIA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      184 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.169
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_EAST_THRACE_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      763 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.166
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
       factor = 100
     }
   }
@@ -989,6 +1061,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_SMYRNA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      339 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.171
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_SOV_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -1125,6 +1215,24 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.150
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_WEST_THRACE_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      342 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.167
     }
     timeout_effect = {
       occupy_medium_country = yes

@@ -176,6 +176,56 @@ can_release_burgenland = {
   }
 }
 
+#Central Macedonia - annexation_CENTRAL_MACEDONIA_CONQ
+can_release_central_macedonia = {
+  state = 731
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Greek release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    # Do Bulgarian release first
+    OR = {
+      country_exists = BUL
+      has_country_flag = BUL_CONQ
+      48 = { is_valid_annexation_state = no } # Sofiya
+    }
+    NOT = {
+      tag = GRE
+      tag = BUL
+      has_country_flag = CENTRAL_MACEDONIA_CONQ
+    }
+  }
+}
+
+#Dardanellia - annexation_DARDANELLIA_CONQ
+can_release_dardanellia = {
+  state = 340
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Greek release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    # Do Turkish release first
+    OR = {
+      country_exists = TUR
+      has_country_flag = TUR_CONQ
+      341 = { is_valid_annexation_state = no } # Constantinople
+    }
+    NOT = {
+      tag = GRE
+      tag = TUR
+      has_country_flag = DARDANELLIA_CONQ
+    }
+  }
+}
+
 #Denmark - annexation_DEN_CONQ
 can_release_denmark = {
   state = 37
@@ -184,6 +234,62 @@ can_release_denmark = {
     NOT = {
       has_country_flag = DEN_CONQ
       country_exists = DEN
+    }
+  }
+}
+
+#Eastern Macedonia - annexation_EASTERN_MACEDONIA_CONQ
+can_release_eastern_macedonia = {
+  state = 184
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Greek release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    # Do Bulgarian release first
+    OR = {
+      country_exists = BUL
+      has_country_flag = BUL_CONQ
+      48 = { is_valid_annexation_state = no } # Sofiya
+    }
+    NOT = {
+      tag = GRE
+      tag = BUL
+      has_country_flag = EASTERN_MACEDONIA_CONQ
+    }
+  }
+}
+
+#East Thrace - annexation_EAST_THRACE_CONQ
+can_release_east_thrace = {
+  state = 342
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Greek release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    # Do Bulgarian release first
+    OR = {
+      country_exists = BUL
+      has_country_flag = BUL_CONQ
+      48 = { is_valid_annexation_state = no } # Sofiya
+    }
+    # Do Turkish release first
+    OR = {
+      country_exists = TUR
+      has_country_flag = TUR_CONQ
+      341 = { is_valid_annexation_state = no } # Konstaniyye
+    }
+    NOT = {
+      tag = GRE
+      tag = BUL
+      has_country_flag = EAST_THRACE_CONQ
     }
   }
 }
@@ -811,6 +917,31 @@ can_release_slovakia = {
   }
 }
 
+#Smyrna - annexation_SMYRNA_CONQ
+can_release_smyrna = {
+  state = 339
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Greek release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Albania
+    }
+    # Do Turkish release first
+    OR = {
+      country_exists = TUR
+      has_country_flag = TUR_CONQ
+      341 = { is_valid_annexation_state = no } # Belgrade
+    }
+    NOT = {
+      tag = GRE
+      tag = TUR
+      has_country_flag = SMYRNA_CONQ
+    }
+  }
+}
+
 #Soviet - annexation_SOV_CONQ
 can_release_soviet = {
   state = 219
@@ -999,6 +1130,31 @@ can_release_west_banat = {
       tag = GRE
       tag = BUL
       has_country_flag = WEST_BANAT_CONQ
+    }
+  }
+}
+
+#West Thrace - annexation_WEST_THRACE_CONQ
+can_release_west_thrace = {
+  state = 763
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Greek release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    # Do Bulgarian release first
+    OR = {
+      country_exists = BUL
+      has_country_flag = BUL_CONQ
+      48 = { is_valid_annexation_state = no } # Sofiya
+    }
+    NOT = {
+      tag = GRE
+      tag = BUL
+      has_country_flag = WEST_THRACE_CONQ
     }
   }
 }
