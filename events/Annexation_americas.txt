@@ -1,0 +1,440 @@
+add_namespace = annex
+
+###########################################################
+###########################################################
+###########################################################
+###########################################################
+
+country_event = { # Fate of United States
+  id = annex.1000
+  title = annexation_USA_CONQ
+  desc = annexation_USA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Puppet
+    name = annex.1000.a
+    ai_chance = {
+      base = 40
+    }
+    set_temp_variable = { tag_to_release = USA }
+    release_targeted_tag = yes
+  }
+
+  option = { # Disunite the Union
+    name = annex.1000.b
+    ai_chance = {
+      base = 60
+    }
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = USA }
+      remove_all_cores_and_claims_of_tags = yes
+      USA = {
+        add_state_core = 361
+        add_state_core = 362
+        add_state_core = 363
+        add_state_core = 364
+        add_state_core = 365
+        add_state_core = 366
+        add_state_core = 367
+        add_state_core = 368
+        add_state_core = 370
+        add_state_core = 371
+        add_state_core = 372
+        add_state_core = 842
+        drop_cosmetic_tag = yes
+      }
+    }
+    set_temp_variable = { tag_to_release = USA }
+    release_targeted_tag = yes
+    # New England
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = NEE }
+      remove_all_cores_and_claims_of_tags = yes
+
+      set_temp_variable = { tag_to_release = NEE }
+      357 = { transfer_if_owned = yes }
+      358 = { transfer_if_owned = yes }
+      359 = { transfer_if_owned = yes }
+      837 = { transfer_if_owned = yes }
+      838 = { transfer_if_owned = yes }
+      839 = { transfer_if_owned = yes }
+      840 = { transfer_if_owned = yes }
+      841 = { transfer_if_owned = yes }
+      release_targeted_tag = yes
+    }
+    # Midwest
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = CLB }
+      remove_all_cores_and_claims_of_tags = yes
+
+      set_temp_variable = { tag_to_release = CLB }
+      373 = { transfer_if_owned = yes }
+      374 = { transfer_if_owned = yes }
+      375 = { transfer_if_owned = yes }
+      376 = { transfer_if_owned = yes }
+      381 = { transfer_if_owned = yes }
+      382 = { transfer_if_owned = yes }
+      383 = { transfer_if_owned = yes }
+      384 = { transfer_if_owned = yes }
+      388 = { transfer_if_owned = yes }
+      389 = { transfer_if_owned = yes }
+      390 = { transfer_if_owned = yes }
+      391 = { transfer_if_owned = yes }
+      392 = { transfer_if_owned = yes }
+      919 = { transfer_if_owned = yes }
+      920 = { transfer_if_owned = yes }
+      921 = { transfer_if_owned = yes }
+      release_targeted_tag = yes
+      CLB = {
+        set_cosmetic_tag = CLB_midwest
+      }
+    }
+    # West Coast
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = ORE }
+      remove_all_cores_and_claims_of_tags = yes
+      
+      set_temp_variable = { tag_to_release = ORE }
+      377 = { transfer_if_owned = yes }
+      378 = { transfer_if_owned = yes }
+      387 = { transfer_if_owned = yes }
+      379 = { transfer_if_owned = yes }
+      380 = { transfer_if_owned = yes }
+      385 = { transfer_if_owned = yes }
+      386 = { transfer_if_owned = yes }
+      926 = { transfer_if_owned = yes }
+      927 = { transfer_if_owned = yes }
+      928 = { transfer_if_owned = yes }
+      release_targeted_tag = yes
+      ORE = {
+        drop_cosmetic_tag = yes
+        set_cosmetic_tag = ORE_PSA
+        set_capital = { state = 927 }
+      }
+    }
+    # Rust Belt
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = NAR }
+      remove_all_cores_and_claims_of_tags = yes
+
+      set_temp_variable = { tag_to_release = NAR }
+      843 = { transfer_if_owned = yes }
+      396 = { transfer_if_owned = yes }
+      395 = { transfer_if_owned = yes }
+      394 = { transfer_if_owned = yes }
+      393 = { transfer_if_owned = yes }
+      369 = { transfer_if_owned = yes }
+      360 = { transfer_if_owned = yes }
+      261 = { transfer_if_owned = yes }
+      release_targeted_tag = yes
+      NAR = {
+        set_cosmetic_tag = NAR_rust_belt
+      }
+    }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_massive_country = yes
+  }
+}
+
+country_event = { # Fate of Alaska
+  id = annex.1001
+  title = annexation_ALASKA_CONQ
+  desc = annexation_ALASKA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Canada
+    name = annex.1001.a
+    trigger = {
+      CAN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = var:368.owner
+      }
+    }
+    set_temp_variable = { tag_to_release = CAN }
+    463 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the USA
+    name = annex.1001.b
+    trigger = {
+      var:368.owner = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = CAN
+      }
+    }
+    set_temp_variable = { tag_to_release = var:368.owner }
+    463 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy it
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = ALASKA_CONQ
+  }
+}
+
+country_event = { # Fate of Canada
+  id = annex.1002
+  title = annexation_CAN_CONQ
+  desc = annexation_CAN_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = CAN }
+      remove_all_cores_and_claims_of_tags = yes
+      CAN = {
+        add_state_core = 276
+        add_state_core = 331
+        add_state_core = 332
+        add_state_core = 464
+        add_state_core = 465
+        add_state_core = 467
+        add_state_core = 469
+        add_state_core = 470
+        add_state_core = 471
+        add_state_core = 472
+        add_state_core = 473
+        add_state_core = 682
+        add_state_core = 683
+        add_state_core = 739
+        add_state_core = 740
+        add_state_core = 818
+        add_state_core = 825
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1002.a
+    ai_chance = {
+      base = 0
+    }
+    hidden_effect = {
+      CAN = {
+        add_state_core = 466
+        add_state_core = 468
+        add_state_core = 824
+        add_state_core = 826
+        add_state_core = 916
+      }
+    }
+    set_temp_variable = { tag_to_release = CAN }
+    release_targeted_tag = CAN
+  }
+
+  option = { # Separate Quebec from Canada
+    name = annex.1002.b
+    ai_chance = {
+      base = 100
+    }
+    hidden_effect = {
+      QUE = {
+        add_state_core = 466
+        add_state_core = 468
+        add_state_core = 824
+        add_state_core = 826
+        add_state_core = 916
+      }
+    }
+    set_temp_variable = { tag_to_release = QUE }
+    release_targeted_tag = yes
+    set_temp_variable = { tag_to_release = CAN }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = CAN_CONQ
+    occupy_large_country = yes
+  }
+}
+
+country_event = { # Fate of Midwest
+  id = annex.1003
+  title = annexation_CLB_CONQ
+  desc = annexation_CLB_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = CLB }
+      remove_all_cores_and_claims_of_tags = yes
+      CLB = {
+        add_state_core = 373
+        add_state_core = 374
+        add_state_core = 381
+        add_state_core = 382
+        add_state_core = 383
+        add_state_core = 384
+        add_state_core = 387
+        add_state_core = 388
+        add_state_core = 389
+        add_state_core = 390
+        add_state_core = 391
+        add_state_core = 392
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1003.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = CLB }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_huge_country = yes
+    set_country_flag = CLB_CONQ
+  }
+}
+
+country_event = { # Fate of New England
+  id = annex.1004
+  title = annexation_NEE_CONQ
+  desc = annexation_NEE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = NEE }
+      remove_all_cores_and_claims_of_tags = yes
+      NEE = {
+        add_state_core = 357
+        add_state_core = 358
+        add_state_core = 359
+        add_state_core = 837
+        add_state_core = 838
+        add_state_core = 839
+        add_state_core = 840
+        add_state_core = 841 
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1004.a
+    ai_chance = {
+      base = 0
+    }
+    occupy_large_country = yes
+    set_country_flag = NEE_CONQ
+  }
+}
+
+country_event = { # Fate of Rust Belt
+  id = annex.1005
+  title = annexation_NAR_CONQ
+  desc = annexation_NAR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = NAR }
+      remove_all_cores_and_claims_of_tags = yes
+      NAR = {
+        add_state_core = 843
+        add_state_core = 396
+        add_state_core = 395
+        add_state_core = 394
+        add_state_core = 393
+        add_state_core = 369
+        add_state_core = 360
+        add_state_core = 261
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1005
+    ai_chance = {
+      base = 0
+    }
+    set_temp_variable = { tag_to_release = NAR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_large_country = yes
+    set_country_flag = NAR_CONQ
+  }
+}
+
+country_event = { # Fate of Oregon
+  id = annex.1006
+  title = annexation_PSA_CONQ
+  desc = annexation_PSA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { tag_to_release = ORE }
+      remove_all_cores_and_claims_of_tags = yes
+      ORE = {
+        add_state_core = 385
+        add_state_core = 386
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1006
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = ORE }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_medium_country = yes
+    set_country_flag = ORE_CONQ
+  }
+}
