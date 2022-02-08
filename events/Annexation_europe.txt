@@ -4215,3 +4215,322 @@ country_event = { # Fate of Greenland
     set_country_flag = GREENLAND_CONQ
   }
 }
+
+country_event = { # Fate of Eastern Thrace
+  id = annex.166
+  title = annexation_EAST_THRACE_CONQ
+  desc = annexation_EAST_THRACE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greek
+    name = annex.166.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = BUL
+          is_ally_with = TUR
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    342 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Bulgarians
+    name = annex.166.b
+    trigger = {
+      BUL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = GRE
+          is_ally_with = TUR
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = BUL }
+    342 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Turks
+    name = annex.166.c
+    trigger = {
+      TUR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = BUL
+          is_ally_with = GRE
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = TUR }
+    342 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = EAST_THRACE_CONQ
+  }
+}
+
+country_event = { # Fate of Western Thrace
+  id = annex.167
+  title = annexation_WEST_THRACE_CONQ
+  desc = annexation_WEST_THRACE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greek
+    name = annex.167.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BUL
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    763 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Bulgarians
+    name = annex.167.b
+    trigger = {
+      BUL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = GRE
+      }
+    }
+    set_temp_variable = { tag_to_release = BUL }
+    763 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = WEST_THRACE_CONQ
+  }
+}
+
+country_event = { # Fate of Central Macedonia
+  id = annex.168
+  title = annexation_CENTRAL_MACEDONIA_CONQ
+  desc = annexation_CENTRAL_MACEDONIA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greek
+    name = annex.168.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BUL
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    731 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Bulgarians
+    name = annex.168.b
+    trigger = {
+      BUL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = GRE
+      }
+    }
+    set_temp_variable = { tag_to_release = BUL }
+    731 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = CENTRAL_MACEDONIA_CONQ
+  }
+}
+
+country_event = { # Fate of East Macedonia
+  id = annex.169
+  title = annexation_EASTERN_MACEDONIA_CONQ
+  desc = annexation_EASTERN_MACEDONIA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greek
+    name = annex.169.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BUL
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    184 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Bulgarians
+    name = annex.169.b
+    trigger = {
+      BUL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = GRE
+      }
+    }
+    set_temp_variable = { tag_to_release = BUL }
+    184 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = WEST_THRACE_CONQ
+  }
+}
+
+country_event = { # Fate of Dardanellia
+  id = annex.170
+  title = annexation_DARDANELLIA_CONQ
+  desc = annexation_DARDANELLIA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greek
+    name = annex.170.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BUL
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    340 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Turkish
+    name = annex.170.b
+    trigger = {
+      TUR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = GRE
+      }
+    }
+    set_temp_variable = { tag_to_release = TUR }
+    340 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = DARDANELLIA_CONQ
+  }
+}
+
+country_event = { # Fate of Smyrna
+  id = annex.171
+  title = annexation_SMYRNA_CONQ
+  desc = annexation_SMYRNA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greek
+    name = annex.171.a
+    trigger = {
+      GRE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BUL
+      }
+    }
+    set_temp_variable = { tag_to_release = GRE }
+    339 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Turkish
+    name = annex.171.b
+    trigger = {
+      TUR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = GRE
+      }
+    }
+    set_temp_variable = { tag_to_release = TUR }
+    339 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = SMYRNA_CONQ
+  }
+}
