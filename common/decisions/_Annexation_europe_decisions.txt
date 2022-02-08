@@ -390,6 +390,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_GREENLAND_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      101 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.165
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_HAN_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -462,6 +480,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_ICE_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      100 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.164
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_IRE_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -513,6 +549,24 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.126
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_LIMBURG_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      866 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.159
     }
     timeout_effect = {
       occupy_small_country = yes
@@ -603,6 +657,42 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.131
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_NORTH_EPIRUS_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      765 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.163
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_NORTH_TRANSYLVANIA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      76 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.159
     }
     timeout_effect = {
       occupy_medium_country = yes
@@ -737,6 +827,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_SAR_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      114 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.157
+    }
+    timeout_effect = {
+      occupy_tiny_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_SAX_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -804,6 +912,24 @@ annexation_decisions = {
     }
     timeout_effect = {
       occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_SHKODER_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      931 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.162
+    }
+    timeout_effect = {
+      occupy_small_country = yes
     }
     ai_will_do = {
       factor = 100
@@ -917,6 +1043,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_TRANSYLVANIA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      84 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.158
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_UKR_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -935,13 +1079,49 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_UPC_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      2 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.156
+    }
+    timeout_effect = {
+      occupy_large_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_VLORE_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      796 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.161
+    }
+    timeout_effect = {
+      occupy_large_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_SRV_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
     days_mission_timeout = 60
     is_good = no
     cancel_trigger = {
-      771 = { is_valid_annexation_state = no }
+      160 = { is_valid_annexation_state = no }
     }
     complete_effect = {
       country_event = annex.150
@@ -1017,6 +1197,24 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.155
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_ZEUSS_VLAANDEREN_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      867 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.160
     }
     timeout_effect = {
       occupy_small_country = yes

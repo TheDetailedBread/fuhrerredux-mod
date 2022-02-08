@@ -291,6 +291,31 @@ can_release_greece = {
   }
 }
 
+#Greenland - annexation_GREENLAND_CONQ
+can_release_greenland = {
+  state = 101
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Danish release first
+    OR = {
+      country_exists = DEN
+      has_country_flag = DEN_CONQ
+      37 = { is_valid_annexation_state = no } # Copenhagen
+    }
+    # Do Norwegian release first
+    OR = {
+      country_exists = NOR
+      has_country_flag = NOR_CONQ
+      110 = { is_valid_annexation_state = no } # Olso
+    }
+    NOT = {
+      tag = DEN
+      tag = NOR
+      has_country_flag = GREENLAND_CONQ
+    }
+  }
+}
+
 #Hannover - annexation_HAN_CONQ
 can_release_hannover = {
   state = 59
@@ -331,6 +356,31 @@ can_release_hungary = {
   }
 }
 
+#Iceland - annexation_ICE_CONQ
+can_release_iceland = {
+  state = 100
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Danish release first
+    OR = {
+      country_exists = DEN
+      has_country_flag = DEN_CONQ
+      37 = { is_valid_annexation_state = no } # Denmark
+    }
+    # Do Norwegian release first
+    OR = {
+      country_exists = NOR
+      has_country_flag = NOR_CONQ
+      110 = { is_valid_annexation_state = no } # Amsterdam
+    }
+    NOT = {
+      tag = DEN
+      tag = NOR
+      has_country_flag = ICE_CONQ
+    }
+  }
+}
+
 #Ireland - annexation_IRE_CONQ
 can_release_ireland = {
   state = 815
@@ -364,6 +414,39 @@ can_release_latvia = {
     NOT = {
       country_exists = LAT
       has_country_flag = LAT_CONQ
+    }
+  }
+}
+
+#Limburg - annexation_LIMBURG_CONQ
+can_release_limburg = {
+  state = 866
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Belgian release first
+    OR = {
+      country_exists = BEL
+      has_country_flag = BEL_CONQ
+      6 = { is_valid_annexation_state = no } # Hainaut
+    }
+    # Do Dutch release first
+    OR = {
+      OR = {
+        country_exists = HOL
+        has_country_flag = HOL_CONQ
+        # Make sure that the Dutch exiles owns Amsterdam
+        AND = {
+          country_exists = KNE
+          KNE = { owns_state = 7 }
+        }
+      }
+      7 = { is_valid_annexation_state = no } # Amsterdam
+    }
+    NOT = {
+      tag = BEL
+      tag = HOL
+      tag = KNE
+      has_country_flag = LIMBURG_CONQ
     }
   }
 }
@@ -441,6 +524,56 @@ can_release_norway = {
     NOT = {
       country_exists = NOR
       has_country_flag = NOR_CONQ
+    }
+  }
+}
+
+#Northern Transylvania - annexation_NORTH_TRANSYLVANIA_CONQ
+can_release_north_transylvania = {
+  state = 76
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Hungarian release first
+    OR = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+      43 = { is_valid_annexation_state = no } # Budapest
+    }
+    # Do Romanian release first
+    OR = {
+      country_exists = ROM
+      has_country_flag = ROM_CONQ
+      46 = { is_valid_annexation_state = no } # Bucharest
+    }
+    NOT = {
+      tag = HUN
+      tag = ROM
+      has_country_flag = NORTH_TRANSYLVANIA_CONQ
+    }
+  }
+}
+
+#North Epirus - annexation_NORTH_EPIRUS_CONQ
+can_release_north_epirus = {
+  state = 765
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Albania release first
+    OR = {
+      country_exists = ALB
+      has_country_flag = ALB_CONQ
+      44 = { is_valid_annexation_state = no } # Albania
+    }
+    # Do Greece release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      47 = { is_valid_annexation_state = no } # Athens
+    }
+    NOT = {
+      tag = ALB
+      tag = GRE
+      has_country_flag = NORTH_EPIRUS_CONQ
     }
   }
 }
@@ -546,6 +679,20 @@ can_release_russia = {
   }
 }
 
+#Sardinia - annexation_SAR_CONQ
+can_release_sardinia = {
+  state = 114
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_italian_tag = no
+    NOT = {
+      country_exists = SAR
+      has_country_flag = SAR_CONQ
+    }
+  }
+}
+
 #Saxony - annexation_SAX_CONQ
 can_release_saxony = {
   state = 65
@@ -628,6 +775,30 @@ can_release_silesia = {
   }
 }
 
+#Shkoder - annexation_SHKODER_CONQ
+can_release_shkoder = {
+  state = 931
+  ROOT = {
+    # Do Albania release first
+    OR = {
+      country_exists = ALB
+      has_country_flag = ALB_CONQ
+      44 = { is_valid_annexation_state = no } # Albania
+    }
+    # Do Serbia release first
+    OR = {
+      country_exists = SER
+      has_country_flag = SER_CONQ
+      107 = { is_valid_annexation_state = no } # Belgrade
+    }
+    NOT = {
+      tag = ALB
+      tag = SER
+      has_country_flag = SHKODER_CONQ
+    }
+  }
+}
+
 #Slovakia - annexation_SLO_CONQ
 can_release_slovakia = {
   state = 70
@@ -693,6 +864,31 @@ can_release_switzerland = {
   }
 }
 
+#Transylvania - annexation_TRANSYLVANIA_CONQ
+can_release_transylvania = {
+  state = 84
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Hungarian release first
+    OR = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+      43 = { is_valid_annexation_state = no } # Budapest
+    }
+    # Do Romanian release first
+    OR = {
+      country_exists = ROM
+      has_country_flag = ROM_CONQ
+      46 = { is_valid_annexation_state = no } # Bucharest
+    }
+    NOT = {
+      tag = HUN
+      tag = ROM
+      has_country_flag = TRANSYLVANIA_CONQ
+    }
+  }
+}
+
 can_release_ukraine = {
   state = 202
   NOT = { is_claimed_by = ROOT }
@@ -704,9 +900,23 @@ can_release_ukraine = {
   }
 }
 
+#United Provinces - annexation_UPC_CONQ
+can_release_united_provinces = {
+  state = 2
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_italy_first = yes
+    is_italian_tag = no
+    NOT = {
+      has_country_flag = UPC_CONQ
+      country_exists = UPC
+    }
+  }
+}
+
 #Venice - annexation_SRV_CONQ
 can_release_venice = {
-  state = 771
+  state = 160
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
@@ -714,6 +924,31 @@ can_release_venice = {
     NOT = {
       has_country_flag = SRV_CONQ
       country_exists = SRV
+    }
+  }
+}
+
+#Vlore - annexation_VLORE_CONQ
+can_release_vlore = {
+  state = 796
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Italian release first
+    OR = {
+      country_exists = ITA
+      has_country_flag = ITA_CONQ
+      2 = { is_valid_annexation_state = no } # Rome
+    }
+    # Do Albanian release first
+    OR = {
+      country_exists = GRE
+      has_country_flag = GRE_CONQ
+      44 = { is_valid_annexation_state = no } # Albania
+    }
+    NOT = {
+      tag = ALB
+      tag = ITA
+      has_country_flag = VLORE_CONQ
     }
   }
 }
@@ -764,6 +999,39 @@ can_release_west_banat = {
       tag = GRE
       tag = BUL
       has_country_flag = WEST_BANAT_CONQ
+    }
+  }
+}
+
+#Zeuss-Vlaanderen - annexation_ZEUSS_VLAANDEREN_CONQ
+can_release_zeuss_vlaanderen = {
+  state = 867
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do Belgian release first
+    OR = {
+      country_exists = BEL
+      has_country_flag = BEL_CONQ
+      6 = { is_valid_annexation_state = no } # Hainaut
+    }
+    # Do Dutch release first
+    OR = {
+      OR = {
+        country_exists = HOL
+        has_country_flag = HOL_CONQ
+        # Make sure that the Dutch exiles owns Amsterdam
+        AND = {
+          country_exists = KNE
+          KNE = { owns_state = 7 }
+        }
+      }
+      7 = { is_valid_annexation_state = no } # Amsterdam
+    }
+    NOT = {
+      tag = BEL
+      tag = HOL
+      tag = KNE
+      has_country_flag = LIMBURG_CONQ
     }
   }
 }

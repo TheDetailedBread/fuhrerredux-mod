@@ -43,16 +43,16 @@ country_event = { # Fate of Aland
   option = { # Give it to Sweden
     name = annex.100.a
     trigger = {
-      FIN = { ROOT_can_grant_land = yes }
+      SWE = { ROOT_can_grant_land = yes }
     }
     ai_chance = {
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = SWE
+        is_ally_with = FIN
       }
     }
-    set_temp_variable = { tag_to_release = FIN }
+    set_temp_variable = { tag_to_release = SWE }
     145 = { transfer_state_and_add_core = yes }
   }
 
@@ -65,10 +65,10 @@ country_event = { # Fate of Aland
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = FIN
+        is_ally_with = SWE
       }
     }
-    set_temp_variable = { tag_to_release = SWE }
+    set_temp_variable = { tag_to_release = FIN }
     145 = { transfer_state_and_add_core = yes }
   }
 
@@ -651,6 +651,8 @@ country_event = { # Fate of Denmark
       DEN = {
         add_state_core = 37
         add_state_core = 99
+        add_state_core = 337
+        add_state_core = 800
         drop_cosmetic_tag = yes
       }
     }
@@ -3505,7 +3507,7 @@ country_event = { # Fate of Burgenland
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = AUS
+        is_ally_with = HUN
       }
     }
     set_temp_variable = { tag_to_release = AUS }
@@ -3521,7 +3523,7 @@ country_event = { # Fate of Burgenland
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = HUN
+        is_ally_with = AUS
       }
     }
     set_temp_variable = { tag_to_release = HUN }
@@ -3554,7 +3556,7 @@ country_event = { # Fate of West Banat
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = GRE
+        is_ally_with = BUL
       }
     }
     set_temp_variable = { tag_to_release = GRE }
@@ -3570,7 +3572,7 @@ country_event = { # Fate of West Banat
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = BUL
+        is_ally_with = GRE
       }
     }
     set_temp_variable = { tag_to_release = BUL }
@@ -3624,5 +3626,592 @@ country_event = { # Fate of Switzerland
     }
     occupy_small_country = yes
     set_country_flag = SWI_CONQ
+  }
+}
+
+country_event = { # Fate of the United Provinces of Central Italy
+  id = annex.156
+  title = annexation_UPC_CONQ
+  desc = annexation_UPC_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = UPC }
+      remove_all_cores_and_claims_of_tags = yes
+      UPC = {
+        add_state_core = 161
+        add_state_core = 162
+        add_state_core = 851
+        add_state_core = 852
+        add_state_core = 2
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.156.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = UPC }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_large_country = yes
+    set_country_flag = UPC_CONQ
+  }
+}
+
+country_event = { # Fate of Sardinia
+  id = annex.157
+  title = annexation_SAR_CONQ
+  desc = annexation_SAR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = SAR }
+      remove_all_cores_and_claims_of_tags = yes
+      SAR = {
+        add_state_core = 114
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.157.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = SAR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_tiny_country = yes
+    set_country_flag = SAR_CONQ
+  }
+}
+
+country_event = { # Fate of Transylvania
+  id = annex.158
+  title = annexation_TRANSYLVANIA_CONQ
+  desc = annexation_TRANSYLVANIA_CONQ
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Hungary
+    name = annex.158.a
+    trigger = {
+      HUN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ROM
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    84 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to Romania
+    name = annex.158.b
+    trigger = {
+      ROM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HUN
+      }
+    }
+    set_temp_variable = { tag_to_release = ROM }
+    84 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_medium_country = yes
+    set_country_flag = TRANSYLVANIA_CONQ
+  }
+}
+
+country_event = { # Fate of North Transylvania
+  id = annex.158
+  title = annexation_NORTH_TRANSYLVANIA_CONQ
+  desc = annexation_NORTH_TRANSYLVANIA_CONQ
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Hungary
+    name = annex.158.a
+    trigger = {
+      HUN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ROM
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    76 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to Romania
+    name = annex.158.b
+    trigger = {
+      ROM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HUN
+      }
+    }
+    set_temp_variable = { tag_to_release = ROM }
+    76 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_medium_country = yes
+    set_country_flag = NORTH_TRANSYLVANIA_CONQ
+  }
+}
+
+country_event = { # Fate of Limburg
+  id = annex.159
+  title = annexation_LIMBURG_CONQ
+  desc = annexation_LIMBURG_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Belgium
+    name = annex.159.a
+    trigger = {
+      BEL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HOL
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    866 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to the Dutch
+    name = annex.159.b
+    trigger = {
+      country_exists = HOL
+      HOL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BEL
+      }
+    }
+    set_temp_variable = { tag_to_release = HOL }
+    866 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to the Dutch
+    name = annex.159.c
+    trigger = {
+      country_exists = KNE
+      KNE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BEL
+      }
+    }
+    set_temp_variable = { tag_to_release = KNE }
+    866 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_medium_country = yes
+    set_country_flag = LIMBURG_CONQ
+  }
+}
+
+country_event = { # Fate of Zeuss-Vlaanderen
+  id = annex.160
+  title = annexation_ZEUSS_VLAANDEREN_CONQ
+  desc = annexation_ZEUSS_VLAANDEREN_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Belgium
+    name = annex.160.a
+    trigger = {
+      BEL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HOL
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    867 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to the Dutch
+    name = annex.160.b
+    trigger = {
+      country_exists = HOL
+      HOL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BEL
+      }
+    }
+    set_temp_variable = { tag_to_release = HOL }
+    867 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to the Dutch
+    name = annex.160.c
+    trigger = {
+      country_exists = KNE
+      KNE = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BEL
+      }
+    }
+    set_temp_variable = { tag_to_release = KNE }
+    867 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_medium_country = yes
+    set_country_flag = LIMBURG_CONQ
+  }
+}
+
+country_event = { # Fate of Vlore
+  id = annex.161
+  title = annexation_VLORE_CONQ
+  desc = annexation_VLORE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Italian Puppet
+    name = annex.161.a
+    trigger = {
+      country_exists = ITP
+      ITP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ALB
+      }
+    }
+    set_temp_variable = { tag_to_release = ITP }
+    796 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Italians
+    name = annex.161.b
+    trigger = {
+      country_exists = ITA
+      ITA = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ALB
+      }
+    }
+    set_temp_variable = { tag_to_release = ITA }
+    796 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Albanians
+    name = annex.161.c
+    trigger = {
+      ALB = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ITA
+      }
+    }
+    set_temp_variable = { tag_to_release = ALB }
+    796 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = VLORE_CONQ
+  }
+}
+
+country_event = { # Fate of Shkoder
+  id = annex.162
+  title = annexation_SHKODER_CONQ
+  desc = annexation_SHKODER_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Serbians
+    name = annex.162.a
+    trigger = {
+      SER = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ALB
+      }
+    }
+    set_temp_variable = { tag_to_release = SER }
+    931 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Albanians
+    name = annex.162.b
+    trigger = {
+      ALB = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = SER
+      }
+    }
+    set_temp_variable = { tag_to_release = ALB }
+    931 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = SHKODER_CONQ
+  }
+}
+
+country_event = { # Fate of North Epirus
+  id = annex.163
+  title = annexation_NORTH_EPIRUS_CONQ
+  desc = annexation_NORTH_EPIRUS_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Greeks
+    name = annex.163.a
+    trigger = {
+      SER = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ALB
+      }
+    }
+    set_temp_variable = { tag_to_release = SER }
+    765 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Albanians
+    name = annex.163.b
+    trigger = {
+      ALB = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = SER
+      }
+    }
+    set_temp_variable = { tag_to_release = ALB }
+    765 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = NORTH_EPIRUS_CONQ
+  }
+}
+
+country_event = { # Fate of Iceland
+  id = annex.164
+  title = annexation_ICE_CONQ
+  desc = annexation_ICE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Puppet
+    name = annex.164.a
+    ai_chance = {
+      base = 100
+    }
+    ICE = {
+      add_state_core = 100
+    }
+    set_temp_variable = { tag_to_release = ICE }
+    release_targeted_tag = yes
+  }
+
+  option = { # Give it to the Danish
+    name = annex.164.b
+    trigger = {
+      DEN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = NOR
+      }
+    }
+    set_temp_variable = { tag_to_release = DEN }
+    100 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Norwegians
+    name = annex.164.c
+    trigger = {
+      NOR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = DEN
+      }
+    }
+    set_temp_variable = { tag_to_release = NOR }
+    100 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = ICE_CONQ
+  }
+}
+
+country_event = { # Fate of Greenland
+  id = annex.165
+  title = annexation_GREENLAND_CONQ
+  desc = annexation_GREENLAND_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Danish
+    name = annex.165.a
+    trigger = {
+      DEN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = NOR
+      }
+    }
+    set_temp_variable = { tag_to_release = DEN }
+    100 = { transfer_state_and_add_core = yes }
+    911 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Norwagians
+    name = annex.165.b
+    trigger = {
+      NOR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = DEN
+      }
+    }
+    set_temp_variable = { tag_to_release = NOR }
+    100 = { transfer_state_and_add_core = yes }
+    911 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_tiny_country  = yes
+    set_country_flag = GREENLAND_CONQ
   }
 }
