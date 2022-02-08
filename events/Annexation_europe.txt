@@ -251,6 +251,13 @@ country_event = { # Fate of Baden
 
   option = { # Give it to Germany
     name = annex.103.c
+    trigger = {
+      is_germany_or_splinter_tag = no
+      OR = {
+        country_exists = GER
+        country_exists = GRP
+      }
+    }
     ai_chance = {
       base = 0
       modifier = {
@@ -503,12 +510,8 @@ country_event = { # Fate of Brandenburg
       add_to_temp_array = { core_removal_array = BRW }
       remove_all_cores_and_claims_of_tags = yes
       BRW = {
-        add_state_core = 95
-        add_state_core = 97
-        add_state_core = 194
-        add_state_core = 204
-        add_state_core = 206
-        add_state_core = 207
+        add_state_core = 64
+        add_state_core = 61
         drop_cosmetic_tag = yes
       }
     }
@@ -534,12 +537,8 @@ country_event = { # Fate of Brandenburg
     add_to_temp_array = { core_removal_array = BRW }
     remove_all_cores_and_claims_of_tags = yes
     GRP = {
-      add_state_core = 95
-      add_state_core = 97
-      add_state_core = 194
-      add_state_core = 204
-      add_state_core = 206
-      add_state_core = 207
+      add_state_core = 64
+      add_state_core = 61
       drop_cosmetic_tag = yes
     }
     set_temp_variable = { tag_to_release = GRP }
@@ -901,7 +900,7 @@ country_event = {
       base = 100
     }
     set_temp_variable = { tag_to_release = FIN }
-    release_targeted_tag = FIN
+    release_targeted_tag = yes
   }
 
   option = { # Occupy
@@ -1058,7 +1057,7 @@ country_event = { # Fate of Great Britain
     ai_chance = {
       base = 60
     }
-    set_temp_variable = { tag_to_release = ENG }
+    set_temp_variable = { tag_to_release = EGL }
     release_targeted_tag = yes
   }
 
@@ -1205,12 +1204,14 @@ country_event = { # Fate of Hannover
   is_triggered_only = yes
 
   immediate = {
-    add_to_temp_array = { core_removal_array = HAN }
-    remove_all_cores_and_claims_of_tags = yes
-    HAN = {
-      add_state_core = 59
-      add_state_core = 56
-      drop_cosmetic_tag = yes
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = HAN }
+      remove_all_cores_and_claims_of_tags = yes
+      HAN = {
+        add_state_core = 59
+        add_state_core = 56
+        drop_cosmetic_tag = yes
+      }
     }
   }
 
@@ -1219,6 +1220,8 @@ country_event = { # Fate of Hannover
     ai_chance = {
       base = 100
     }
+    set_temp_variable = { tag_to_release = HAN }
+    release_targeted_tag = yes
   }
 
   option = { # Integrate
@@ -1434,6 +1437,7 @@ country_event = { # Fate of Netherlands
       limit = {
         NOT = {
           country_exists = HOL
+          country_exists = KNE
         }
       }
       set_temp_variable = { tag_to_release = KNE }
@@ -1710,7 +1714,7 @@ country_event = { # Fate of Lombardy
       base = 100
     }
     set_temp_variable = { tag_to_release = LOM }
-    release_targeted_tag = LOM
+    release_targeted_tag = yes
   }
 
   option = { # Integrate
@@ -1882,7 +1886,7 @@ country_event = { # Fate of Naples
       base = 100
     }
     set_temp_variable = { tag_to_release = NAP }
-    release_targeted_tag = NAP
+    release_targeted_tag = yes
   }
 
   option = { # Integrate
@@ -2018,7 +2022,7 @@ country_event = { # Fate of Piedmont
       base = 100
     }
     set_temp_variable = { tag_to_release = PIE }
-    release_targeted_tag = PIE
+    release_targeted_tag = yes
   }
 
   option = { # Integrate
@@ -2124,7 +2128,7 @@ country_event = { # Fate of Poland
       base = 100
     }
     set_temp_variable = { tag_to_release = POL }
-    release_targeted_tag = POL
+    release_targeted_tag = yes
   }
 
   option = { # Occupy
@@ -2296,7 +2300,7 @@ country_event = { # Fate of Portugal
       }
     }
     set_temp_variable = { tag_to_release = PRR }
-    release_targeted_tag = PRR
+    release_targeted_tag = yes
   }
 
   option = { # Puppet Monarchy
@@ -2305,7 +2309,7 @@ country_event = { # Fate of Portugal
       base = 80
     }
     set_temp_variable = { tag_to_release = POR }
-    release_targeted_tag = POR
+    release_targeted_tag = yes
   }
 
   option = { # Occupy
@@ -2489,7 +2493,7 @@ country_event = { # Fate of Russia
         every_owned_state = {
           limit = { is_core_of = SOV }
           RUS = {
-            add_core_of = PREV
+            add_state_core = PREV
           }
         }
         add_to_temp_array = { core_removal_array = SOV }
@@ -2901,7 +2905,7 @@ country_event = { # Fate of Sicily
       base = 100
     }
     set_temp_variable = { tag_to_release = SIC }
-    release_targeted_tag = SIC
+    release_targeted_tag = yes
   }
 
   option = { # Integrate
@@ -3465,6 +3469,7 @@ country_event = { # Fate of Wallonia
       add_to_temp_array = { core_removal_array = WLL }
       remove_all_cores_and_claims_of_tags = yes
       WLL = {
+        add_state_core = 802
         add_state_core = 806
         add_state_core = 34
         drop_cosmetic_tag = yes
@@ -3605,6 +3610,7 @@ country_event = { # Fate of Switzerland
         add_state_core = 151
         add_state_core = 755
         add_state_core = 756
+        add_state_core = 937
         drop_cosmetic_tag = yes
       }
     }
@@ -3683,6 +3689,7 @@ country_event = { # Fate of Sardinia
       remove_all_cores_and_claims_of_tags = yes
       SAR = {
         add_state_core = 114
+        add_state_core = 768
         drop_cosmetic_tag = yes
       }
     }
@@ -3824,7 +3831,7 @@ country_event = { # Fate of Limburg
         is_ally_with = HOL
       }
     }
-    set_temp_variable = { tag_to_release = HUN }
+    set_temp_variable = { tag_to_release = BEL }
     866 = { transfer_state_and_add_core = yes }
   }
 
@@ -4532,5 +4539,103 @@ country_event = { # Fate of Smyrna
     }
     occupy_tiny_country  = yes
     set_country_flag = SMYRNA_CONQ
+  }
+}
+
+country_event = { # Fate of Prussia
+  id = annex.172
+  title = annexation_WGR_CONQ
+  desc = annexation_WGR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = WGR }
+      remove_all_cores_and_claims_of_tags = yes
+      WGR = {
+        add_state_core = 5
+        add_state_core = 85
+        add_state_core = 807
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.172.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = WGR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Integrate
+    name = annex.172.b
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 100
+        is_german_tag = yes
+      }
+    }
+    trigger = {
+      is_german_tag = yes
+    }
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = WGR }
+      remove_all_cores_and_claims_of_tags = yes
+    }
+    ROOT = {
+      add_state_core = 5
+      add_state_core = 85
+      add_state_core = 807
+    }
+  }
+
+  option = { # Transfer 
+    name = annex.172.c
+    ai_chance = {
+      factor = 0
+      modifier = {
+        add = 100
+        is_ally_with = GER
+      }
+      modifier = {
+        add = 100
+        is_ally_with = GRU
+      }
+    }
+    trigger = {
+      is_germany_or_splinter_tag = no
+      OR = {
+        country_exists = GER
+        country_exists = GRU
+      }
+    }
+    if = {
+      limit = { is_ally_with = GER }
+      GER = {
+        transfer_state = 5
+        transfer_state = 85
+        transfer_state = 807
+      }
+    }
+    else = {
+      GRP = {
+        transfer_state = 5
+        transfer_state = 85
+        transfer_state = 807
+      }
+    }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = WGR_CONQ
+    occupy_medium_country = yes
   }
 }

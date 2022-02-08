@@ -214,7 +214,7 @@ annexation_decisions = {
     timeout_effect = {
       occupy_medium_country = yes
     }
-    ai_chance = {
+    ai_will_do = {
       factor = 100
     }
   }
@@ -232,7 +232,7 @@ annexation_decisions = {
     timeout_effect = {
       occupy_medium_country = yes
     }
-    ai_chance = {
+    ai_will_do = {
       factor = 100
     }
   }
@@ -250,7 +250,7 @@ annexation_decisions = {
     timeout_effect = {
       occupy_medium_country = yes
     }
-    ai_chance = {
+    ai_will_do = {
       factor = 100
     }
   }
@@ -1233,6 +1233,24 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.167
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_WGR_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      5 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.172
     }
     timeout_effect = {
       occupy_medium_country = yes

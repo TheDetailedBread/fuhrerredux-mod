@@ -492,7 +492,6 @@ can_release_ireland = {
   state = 815
   NOT = { is_claimed_by = ROOT }
   ROOT = {
-    tag = ENG
     NOT = {
       country_exists = IRE
       has_country_flag = IRE_CONQ
@@ -534,6 +533,7 @@ can_release_limburg = {
       country_exists = BEL
       has_country_flag = BEL_CONQ
       6 = { is_valid_annexation_state = no } # Hainaut
+      should_release_flanders_first = yes
     }
     # Do Dutch release first
     OR = {
@@ -715,10 +715,9 @@ can_release_pomerania = {
   state = 62
   NOT = { is_claimed_by = ROOT }
   ROOT = {
-    should_release_italy_first = yes
+    should_release_germany_first = yes
     is_german_tag = no
     NOT = {
-      should_release_germany_first = yes
       country_exists = POM
       has_country_flag = POM_CONQ
     }
@@ -739,6 +738,20 @@ can_release_portugal = {
   }
 }
 
+#Prussia - annexation_PRU_CONQ
+can_release_prussia = {
+  state = 5
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_germany_first = yes
+    is_german_tag = no
+    NOT = {
+      country_exists = WGR
+      has_country_flag = WGR
+    }
+  }
+}
+
 #Rhineland - annexation_RHI_CONQ
 can_release_rhineland = {
   state = 42
@@ -749,7 +762,6 @@ can_release_rhineland = {
     NOT = {
       country_exists = RHI
       has_country_flag = RHI_CONQ
-      is_germany_or_splinter_tag = yes
     }
   }
 }
@@ -858,8 +870,8 @@ can_release_sicily = {
   state = 115
   NOT = { is_claimed_by = ROOT }
   ROOT = {
-    is_italian_tag = no
     should_release_italy_first = yes
+    is_italian_tag = no
     NOT = {
       country_exists = SIC
       has_country_flag = SIC_CONQ
@@ -872,8 +884,8 @@ can_release_silesia = {
   state = 794
   NOT = { is_claimed_by = ROOT }
   ROOT = {
-    is_german_tag = no
     should_release_germany_first = yes
+    is_german_tag = no
     NOT = {
       country_exists = SIL
       has_country_flag = SIL_CONQ
@@ -1187,7 +1199,7 @@ can_release_zeuss_vlaanderen = {
       tag = BEL
       tag = HOL
       tag = KNE
-      has_country_flag = LIMBURG_CONQ
+      has_country_flag = ZEUSS_VLAANDEREN_CONQ
     }
   }
 }
@@ -1220,15 +1232,22 @@ should_release_belgium_first = {
 
 should_release_britian_first = {
   OR = {
+    is_british_isles_tag = yes
     country_exists = ENG
     country_exists = ENP
     country_exists = EGL
     has_country_flag = GBR_CONQ
-    AND = {
-      122 = { is_valid_annexation_state = no }
-      126 = { is_valid_annexation_state = no }
-      133 = { is_valid_annexation_state = no }
-    }
+    122 = { is_valid_annexation_state = no }
+    126 = { is_valid_annexation_state = no }
+    133 = { is_valid_annexation_state = no }
+  }
+}
+
+should_release_flanders_first = {
+  OR = {
+    country_exists = FLA
+    has_country_flag = FLA_CONQ
+    6 = { is_valid_annexation_state = no }
   }
 }
 
@@ -1238,10 +1257,7 @@ should_release_germany_first = {
     country_exists = GER
     country_exists = GRP
     has_country_flag = GER_CONQ
-    AND = {
-      64 = { is_valid_annexation_state = no }
-      51 = { is_valid_annexation_state = no }
-    }
+    64 = { is_valid_annexation_state = no }
   }
 }
 
@@ -1251,9 +1267,7 @@ should_release_italy_first = {
     country_exists = ITA
     country_exists = ITP
     has_country_flag = ITA_CONQ
-    AND = {
-      2 = { is_valid_annexation_state = no }
-    }
+    2 = { is_valid_annexation_state = no }
   }
 }
 

@@ -59,6 +59,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_CZE_CONQ }
   }
   else_if = {
+    limit = { can_release_brandenburg = yes }
+    ROOT = { activate_mission = annexation_BRW_CONQ }
+  }
+  else_if = {
     limit = { can_release_britain = yes }
     ROOT = { activate_mission = annexation_GBR_CONQ }
   }
@@ -271,10 +275,6 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_SWI_CONQ }
   }
   else_if = {
-    limit = { can_release_thrace = yes }
-    ROOT = { activate_mission = annexation_THRACE_CONQ }
-  }
-  else_if = {
     limit = { can_release_transylvania = yes }
     ROOT = { activate_mission = annexation_TRANSYLVANIA_CONQ }
   }
@@ -293,6 +293,10 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_vlore = yes }
     ROOT = { activate_mission = annexation_VLORE_CONQ }
+  }
+  else_if = {
+    limit = { can_release_prussia = yes }
+    ROOT = { activate_mission = annexation_WGR_CONQ }
   }
   else_if = {
     limit = { can_release_wales = yes }
