@@ -1115,6 +1115,24 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_SUDTIROL_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      141 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.173
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_SWE_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes

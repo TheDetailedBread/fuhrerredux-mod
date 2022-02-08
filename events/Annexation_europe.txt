@@ -3822,7 +3822,10 @@ country_event = { # Fate of Limburg
   option = { # Give it to Belgium
     name = annex.159.a
     trigger = {
-      BEL = { ROOT_can_grant_land = yes }
+      OR = {
+        BEL = { ROOT_can_grant_land = yes }
+        FLA = { ROOT_can_grant_land = yes }
+      }
     }
     ai_chance = {
       base = 100
@@ -3831,12 +3834,18 @@ country_event = { # Fate of Limburg
         is_ally_with = HOL
       }
     }
-    set_temp_variable = { tag_to_release = BEL }
-    866 = { transfer_state_and_add_core = yes }
+    if = {
+      limit = { country_exists = BEL }
+      set_temp_variable = { tag_to_release = BEL }
+      866 = { transfer_state_and_add_core = yes }
+    } else = {
+      set_temp_variable = { tag_to_release = FLA }
+      866 = { transfer_state_and_add_core = yes }
+    }
   }
 
   option = { # Give in to the Dutch
-    name = annex.159.b
+    name = annex.159.c
     trigger = {
       country_exists = HOL
       HOL = { ROOT_can_grant_land = yes }
@@ -3853,7 +3862,7 @@ country_event = { # Fate of Limburg
   }
 
   option = { # Give in to the Dutch
-    name = annex.159.c
+    name = annex.159.d
     trigger = {
       country_exists = KNE
       KNE = { ROOT_can_grant_land = yes }
@@ -3889,7 +3898,10 @@ country_event = { # Fate of Zeuss-Vlaanderen
   option = { # Give it to Belgium
     name = annex.160.a
     trigger = {
-      BEL = { ROOT_can_grant_land = yes }
+      OR = {
+        BEL = { ROOT_can_grant_land = yes }
+        WLL = { ROOT_can_grant_land = yes }
+      }
     }
     ai_chance = {
       base = 100
@@ -3898,8 +3910,14 @@ country_event = { # Fate of Zeuss-Vlaanderen
         is_ally_with = HOL
       }
     }
-    set_temp_variable = { tag_to_release = HUN }
-    867 = { transfer_state_and_add_core = yes }
+    if = {
+      limit = { country_exists = WLL }
+      set_temp_variable = { tag_to_release = WLL }
+      867 = { transfer_state_and_add_core = yes }
+    } else = {
+      set_temp_variable = { tag_to_release = BEL }
+      867 = { transfer_state_and_add_core = yes }
+    }
   }
 
   option = { # Give in to the Dutch
@@ -4637,5 +4655,54 @@ country_event = { # Fate of Prussia
     }
     set_country_flag = WGR_CONQ
     occupy_medium_country = yes
+  }
+}
+
+country_event = { # Fate of Sudtirol
+  id = annex.173
+  title = annexation_SUDTIROL_CONQ
+  desc = annexation_SUDTIROL_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Austria
+    name = annex.173.a
+    trigger = {
+      AUS = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ITA
+      }
+    }
+    set_temp_variable = { tag_to_release = AUS }
+    39 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Italian
+    name = annex.173.b
+    trigger = {
+      ITA = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = AUS
+      }
+    }
+    set_temp_variable = { tag_to_release = ITA }
+    39 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country  = yes
+    set_country_flag = SUDTIROL_CONQ
   }
 }

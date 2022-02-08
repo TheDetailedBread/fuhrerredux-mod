@@ -267,6 +267,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_SPA_CONQ }
   }
   else_if = {
+    limit = { can_release_sudtirol = yes }
+    ROOT = { activate_mission = annexation_SUDTIROL_CONQ }
+  }
+  else_if = {
     limit = { can_release_sweden = yes }
     ROOT = { activate_mission = annexation_SWE_CONQ }
   }
