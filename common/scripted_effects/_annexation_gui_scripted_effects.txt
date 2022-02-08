@@ -19,6 +19,10 @@ check_potential_annexations = {
     limit = { is_on_continent = europe }
     check_potential_annexations_europe = yes
   }
+  else_if = {
+    limit = { is_on_continent = north_america }
+    check_potential_annexations_north_america = yes
+  }
 }
 
 check_potential_annexations_europe = {
@@ -321,5 +325,36 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_zeuss_vlaanderen = yes }
     ROOT = { activate_mission = annexation_ZEUSS_VLAANDEREN_CONQ }
+  }
+}
+
+check_potential_annexations_north_america = {
+  if = {
+    limit = { can_release_alaska = yes }
+    ROOT = { activate_mission = annexation_ALASKA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_america = yes }
+    ROOT = { activate_mission = annexation_USA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_canada = yes }
+    ROOT = { activate_mission = annexation_CAN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_columbia = yes }
+    ROOT = { activate_mission = annexation_CLB_CONQ }
+  }
+  else_if = {
+    limit = { can_release_new_england = yes }
+    ROOT = { activate_mission = annexation_NEE_CONQ }
+  }
+  else_if = {
+    limit = { can_release_rust_belt = yes }
+    ROOT = { activate_mission = annexation_NAR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_west_coast = yes }
+    ROOT = { activate_mission = annexation_PSA_CONQ }
   }
 }
