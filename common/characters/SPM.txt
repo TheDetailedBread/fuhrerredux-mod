@@ -307,29 +307,6 @@ characters = {
 			}
 		}
 	}
-	SPM_Alvaro_Cunqueiro_Mora = {
-		name = "Álvaro Cunqueiro Mora"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPM/SPM_Alvaro_Cunqueiro_Mora.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPM_Alvaro_Cunqueiro_Mora_for_mli_hired }
-			}			
-			idea_token = SPM_Alvaro_Cunqueiro_Mora_for_mli
-			on_add = { set_country_flag = SPM_Alvaro_Cunqueiro_Mora_for_mli_hired }
-			on_remove = { clr_country_flag = SPM_Alvaro_Cunqueiro_Mora_for_mli_hired }
-			traits = {
-				foreign_minister
-				market_liberal
-				for_moderate_among_radicals
-			}
-		}
-	}
 	SPM_Claudio_Sanchez_Albornoz = {
 		name = "Claudio Sánchez Albornoz"
 		portraits = {
@@ -445,29 +422,6 @@ characters = {
 			}
 		}
 	}
-	SPM_Jose_Luis_Arrese_Magra = {
-		name = "José Luis Arrese Magra"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPM/SPM_Jose_Luis_Arrese_Magra.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPM_Jose_Luis_Arrese_Magra_for_pau_hired }
-			}			
-			idea_token = SPM_Jose_Luis_Arrese_Magra_for_pau
-			on_add = { set_country_flag = SPM_Jose_Luis_Arrese_Magra_for_pau_hired }
-			on_remove = { clr_country_flag = SPM_Jose_Luis_Arrese_Magra_for_pau_hired }
-			traits = {
-				foreign_minister
-				paternal_autocrat
-				for_foreign_sympathizer
-			}
-		}
-	}
 	SPM_Tomas_Conde_de_Redezno = {
 		name = "Tomás Conde de Redezno"
 		portraits = {
@@ -559,6 +513,21 @@ characters = {
 				eco_national_liberal
 			}
 		}
+    advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
+			}			
+			idea_token = SPM_Diego_Hidalgo_Duran_eco_sco
+			on_add = { set_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
+			on_remove = { clr_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
+			traits = {
+				economy_minister
+				social_conservative
+				eco_balanced_budget_economy
+			}
+		}
 	}
 	SPM_Alexandre_Boveda_Iglesias = {
 		name = "Alexandre Bóveda Iglesias"
@@ -580,29 +549,6 @@ characters = {
 				economy_minister
 				social_conservative
 				eco_administrative_genius
-			}
-		}
-	}
-	SPM_Diego_Hidalgo_Duran = {
-		name = "Diego Hidalgo Durán"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPM/SPM_Diego_Hidalgo_Duran.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = economy_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
-			}			
-			idea_token = SPM_Diego_Hidalgo_Duran_eco_sco
-			on_add = { set_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
-			on_remove = { clr_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
-			traits = {
-				economy_minister
-				social_conservative
-				eco_balanced_budget_economy
 			}
 		}
 	}
@@ -710,6 +656,21 @@ characters = {
 				cair_battlefield_support_doctrine
 			}
 		}
+    advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = SPM_Jose_Luis_Arrese_Magra_for_pau_hired }
+			}			
+			idea_token = SPM_Jose_Luis_Arrese_Magra_for_pau
+			on_add = { set_country_flag = SPM_Jose_Luis_Arrese_Magra_for_pau_hired }
+			on_remove = { clr_country_flag = SPM_Jose_Luis_Arrese_Magra_for_pau_hired }
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_foreign_sympathizer
+			}
+  }
 	}
 	SPM_Juan_Vigon_Suerodiaz = {
 		name = "Juan Vigón Suerodíaz"
@@ -744,52 +705,6 @@ characters = {
 				chief_of_air_force
 				paternal_autocrat
 				cair_air_superiority_doctrine
-			}
-		}
-	}
-	SPM_Onesimo_Redondo_Ortega = {
-		name = "Onésimo Redondo Ortega"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPM/SPM_Onesimo_Redondo_Ortega.png"
-			}
-			army = {
-				small = "gfx/interface/ministers/SPM/SPM_Onesimo_Redondo_Ortega.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = economy_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPM_Onesimo_Redondo_Ortega_eco_pau_hired }
-			}			
-			idea_token = SPM_Onesimo_Redondo_Ortega_eco_pau
-			on_add = { set_country_flag = SPM_Onesimo_Redondo_Ortega_eco_pau_hired }
-			on_remove = { clr_country_flag = SPM_Onesimo_Redondo_Ortega_eco_pau_hired }
-			traits = {
-				economy_minister
-				paternal_autocrat
-				eco_steel_magnate
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_staff			
-			idea_token = SPM_Onesimo_Redondo_Ortega_cos_pau
-			traits = {
-				chief_of_staff
-				paternal_autocrat
-				cos_school_of_defence
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_army			
-			idea_token = SPM_Onesimo_Redondo_Ortega_carm_pau
-			traits = {
-				chief_of_army
-				paternal_autocrat
-				carm_commando_doctrine
 			}
 		}
 	}
@@ -872,29 +787,6 @@ characters = {
 				security_minister
 				authoritarian_democrat
 				sec_compassionate_gentleman
-			}
-		}
-	}
-	SPM_Dionisio_Ridruejo = {
-		name = "Dionisio Ridruejo"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPM/SPM_Dionisio_Ridruejo.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = security_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPM_Dionisio_Ridruejo_sec_ade_hired }
-			}			
-			idea_token = SPM_Dionisio_Ridruejo_sec_ade
-			on_add = { set_country_flag = SPM_Dionisio_Ridruejo_sec_ade_hired }
-			on_remove = { clr_country_flag = SPM_Dionisio_Ridruejo_sec_ade_hired }
-			traits = {
-				security_minister
-				authoritarian_democrat
-				sec_silent_lawyer
 			}
 		}
 	}
