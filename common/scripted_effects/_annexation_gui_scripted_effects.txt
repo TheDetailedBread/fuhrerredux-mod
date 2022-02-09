@@ -23,6 +23,10 @@ check_potential_annexations = {
     limit = { is_on_continent = north_america }
     check_potential_annexations_north_america = yes
   }
+  else_if = {
+    limit = { is_on_continent = central_america }
+    check_potential_annexations_central_america = yes
+  }
 }
 
 check_potential_annexations_europe = {
@@ -356,5 +360,68 @@ check_potential_annexations_north_america = {
   else_if = {
     limit = { can_release_west_coast = yes }
     ROOT = { activate_mission = annexation_PSA_CONQ }
+  }
+}
+
+check_potential_annexations_central_america = {
+  if = {
+    limit = { can_release_belize = yes }
+    ROOT = { activate_mission = annexation_BLZ_CONQ }
+  }
+  else_if = {
+    limit = { can_release_costa_rica = yes }
+    ROOT = { activate_mission = annexation_COS_CONQ }
+  }
+  else_if = {
+    limit = { can_release_cruzoob = yes }
+    ROOT = { activate_mission = annexation_CRU_CONQ }
+  }
+  else_if = {
+    limit = { can_release_cuba = yes }
+    ROOT = { activate_mission = annexation_CUB_CONQ }
+  }
+  else_if = {
+    limit = { can_release_dominican_republic = yes }
+    ROOT = { activate_mission = annexation_DOM_CONQ }
+  }
+  else_if = {
+    limit = { can_release_el_salvador = yes }
+    ROOT = { activate_mission = annexation_ELS_CONQ }
+  }
+  else_if = {
+    limit = { can_release_guatemala = yes }
+    ROOT = { activate_mission = annexation_GUA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_haiti = yes }
+    ROOT = { activate_mission = annexation_HAI_CONQ }
+  }
+  else_if = {
+    limit = { can_release_honduras = yes }
+    ROOT = { activate_mission = annexation_HON_CONQ }
+  }
+  else_if = {
+    limit = { can_release_jamaica = yes }
+    ROOT = { activate_mission = annexation_JAM_CONQ }
+  }
+  else_if = {
+    limit = { can_release_mexico = yes }
+    ROOT = { activate_mission = annexation_MEX_CONQ }
+  }
+  else_if = {
+    limit = { can_release_nicaragua = yes }
+    ROOT = { activate_mission = annexation_NIC_CONQ }
+  }
+  else_if = {
+    limit = { can_release_panama = yes }
+    ROOT = { activate_mission = annexation_PAN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_puerto_rico = yes }
+    ROOT = { activate_mission = annexation_PUE_CONQ }
+  }
+  else_if = {
+    limit = { can_release_trinidad = yes }
+    ROOT = { activate_mission = annexation_TRI_CONQ }
   }
 }
