@@ -27,8 +27,12 @@ check_potential_annexations = {
   }
   # else_if = {
   #   limit = { is_on_continent = central_america }
-    
+  #   check_potential_annexations_central_america = yes
   # }
+  else_if = {
+    limit = { is_on_continent = south_america }
+    check_potential_annexations_south_america = yes
+  }
 }
 
 check_potential_annexations_europe = {
@@ -425,5 +429,68 @@ check_potential_annexations_central_america = {
   else_if = {
     limit = { can_release_trinidad = yes }
     ROOT = { activate_mission = annexation_TRI_CONQ }
+  }
+}
+
+check_potential_annexations_south_america = {
+  if = {
+    limit = { can_release_arica = yes }
+    ROOT = { activate_mission = annexation_ARICA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_argentina = yes }
+    ROOT = { activate_mission = annexation_ARG_CONQ }
+  }
+  else_if = {
+    limit = { can_release_bolivia = yes }
+    ROOT = { activate_mission = annexation_BOL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_brazil = yes }
+    ROOT = { activate_mission = annexation_BRA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_chile = yes }
+    ROOT = { activate_mission = annexation_CHL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_columbia = yes }
+    ROOT = { activate_mission = annexation_COL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_ecuador = yes }
+    ROOT = { activate_mission = annexation_ECU_CONQ }
+  }
+  else_if = {
+    limit = { can_release_chaco_boreal = yes }
+    ROOT = { activate_mission = annexation_CHACO_BOREAL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_colombian_amazon = yes }
+    ROOT = { activate_mission = annexation_COLOMBIAN_AMAZON_CONQ }
+  }
+  else_if = {
+    limit = { can_release_guyana = yes }
+    ROOT = { activate_mission = annexation_GYA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_paraguay = yes }
+    ROOT = { activate_mission = annexation_PAR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_pastara = yes }
+    ROOT = { activate_mission = annexation_PASTARA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_peru = yes }
+    ROOT = { activate_mission = annexation_PRU_CONQ }
+  }
+  else_if = {
+    limit = { can_release_suriname = yes }
+    ROOT = { activate_mission = annexation_SUR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_uruguay = yes }
+    ROOT = { activate_mission = annexation_URG_CONQ }
   }
 }

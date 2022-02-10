@@ -1031,3 +1031,581 @@ country_event = { # Fate of Trinidad
     set_country_flag = TRI_CONQ
   }
 }
+
+country_event = { # Fate of Arica
+  id = annex.1022
+  title = annexation_ARICA_CONQ
+  desc = annexation_ARICA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Chile
+    name = annex.1022.a
+    trigger = {
+      CHL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = PRU
+      }
+    }
+    set_temp_variable = { tag_to_release = CHL }
+    877 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Peru
+    name = annex.1022.b
+    trigger = {
+      PRU = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = CHL
+      }
+    }
+    set_temp_variable = { tag_to_release = PRU }
+    877 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy it
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = ARICA_CONQ
+  }
+}
+
+country_event = { # Fate of Argentina
+  id = annex.1023
+  title = annexation_ARG_CONQ
+  desc = annexation_ARG_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = ARG }
+      remove_all_cores_and_claims_of_tags = yes
+      ARG = {
+        add_state_core = 278
+        add_state_core = 508
+        add_state_core = 509
+        add_state_core = 510
+        add_state_core = 511
+        add_state_core = 512
+        add_state_core = 759
+        add_state_core = 760
+        add_state_core = 761
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1023.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = ARG }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = ARG_CONQ
+  }
+}
+
+country_event = { # Fate of Bolivia
+  id = annex.1024
+  title = annexation_BOL_CONQ
+  desc = annexation_BOL_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = BOL }
+      remove_all_cores_and_claims_of_tags = yes
+      BOL = {
+        add_state_core = 302
+        add_state_core = 487
+        add_state_core = 835
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1024.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = BOL }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = BOL_CONQ
+  }
+}
+
+country_event = { # Fate of Brazil
+  id = annex.1025
+  title = annexation_BRA_CONQ
+  desc = annexation_BRA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      BRA = {
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1025.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = BRA }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = BRA_CONQ
+  }
+}
+
+country_event = { # Fate of Chaco Boreal
+  id = annex.1026
+  title = annexation_CHACO_BOREAL_CONQ
+  desc = annexation_CHACO_BOREAL_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Paraguay
+    name = annex.1026.a
+    trigger = {
+      PAR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = BOL
+      }
+    }
+    set_temp_variable = { tag_to_release = PAR }
+    688 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Bolivia
+    name = annex.1026.b
+    trigger = {
+      BOL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = PAR
+      }
+    }
+    set_temp_variable = { tag_to_release = BOL }
+    688 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy it
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = CHACO_BOREAL_CONQ
+  }
+}
+
+country_event = { # Fate of Chile
+  id = annex.1027
+  title = annexation_CHL_CONQ
+  desc = annexation_CHL_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = CHL }
+      remove_all_cores_and_claims_of_tags = yes
+      CHL = {
+        add_state_core = 279
+        add_state_core = 506
+        add_state_core = 507
+        add_state_core = 875
+        add_state_core = 877
+        add_state_core = 878
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1027.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = CHL }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = CHL_CONQ
+  }
+}
+
+country_event = { # Fate of Colombia
+  id = annex.1028
+  title = annexation_COL_CONQ
+  desc = annexation_COL_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = COL }
+      remove_all_cores_and_claims_of_tags = yes
+      COL = {
+        add_state_core = 306
+        add_state_core = 486
+        add_state_core = 493
+        add_state_core = 753
+        add_state_core = 899
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1028.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = COL }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = COL_CONQ
+  }
+}
+
+country_event = { # Fate of Ecuador
+  id = annex.1029
+  title = annexation_ECU_CONQ
+  desc = annexation_ECU_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = ECU }
+      remove_all_cores_and_claims_of_tags = yes
+      ECU = {
+        add_state_core = 305
+        add_state_core = 649
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1029.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = ECU }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = ECU_CONQ
+  }
+}
+
+country_event = { # Fate of Guyana
+  id = annex.1030
+  title = annexation_GYA_CONQ
+  desc = annexation_GYA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = GYA }
+      remove_all_cores_and_claims_of_tags = yes
+      GYA = {
+        add_state_core = 687
+        add_state_core = 971
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1030.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = GYA }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = GYA_CONQ
+  }
+}
+
+country_event = { # Fate of Paraguay
+  id = annex.1031
+  title = annexation_PAR_CONQ
+  desc = annexation_PAR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = PAR }
+      remove_all_cores_and_claims_of_tags = yes
+      PAR = {
+        add_state_core = 301
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1031.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = PAR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = PAR_CONQ
+  }
+}
+
+country_event = { # Fate of Pastara
+  id = annex.1032
+  title = annexation_PASTARA_CONQ
+  desc = annexation_PASTARA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Chile
+    name = annex.1032.a
+    trigger = {
+      ECU = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = PRU
+      }
+    }
+    set_temp_variable = { tag_to_release = ECU }
+    490 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Peru
+    name = annex.1032.b
+    trigger = {
+      PRU = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ECU
+      }
+    }
+    set_temp_variable = { tag_to_release = PRU }
+    490 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy it
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = PASTARA_CONQ
+  }
+}
+
+country_event = { # Fate of Peru
+  id = annex.1033
+  title = annexation_PRU_CONQ
+  desc = annexation_PRU_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = PRU }
+      remove_all_cores_and_claims_of_tags = yes
+      PRU = {
+        add_state_core = 303
+        add_state_core = 491
+        add_state_core = 492
+        add_state_core = 494
+        add_state_core = 876
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1033.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = PRU }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = PRU_CONQ
+  }
+}
+
+country_event = { # Fate of Suriname
+  id = annex.1034
+  title = annexation_SUR_CONQ
+  desc = annexation_SUR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = PAR }
+      remove_all_cores_and_claims_of_tags = yes
+      SUR = {
+        add_state_core = 970
+        add_state_core = 309
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1034.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = SUR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = SUR_CONQ
+  }
+}
+
+country_event = { # Fate of Uruguay
+  id = annex.1035
+  title = annexation_URG_CONQ
+  desc = annexation_URG_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = URG }
+      remove_all_cores_and_claims_of_tags = yes
+      URG = {
+        add_state_core = 300
+        add_state_core = 836
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1035.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = URG }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = URG_CONQ
+  }
+}
