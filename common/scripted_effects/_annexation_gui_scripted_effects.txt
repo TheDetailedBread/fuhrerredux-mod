@@ -454,7 +454,7 @@ check_potential_annexations_south_america = {
     ROOT = { activate_mission = annexation_CHL_CONQ }
   }
   else_if = {
-    limit = { can_release_columbia = yes }
+    limit = { can_release_colombia = yes }
     ROOT = { activate_mission = annexation_COL_CONQ }
   }
   else_if = {
@@ -492,5 +492,9 @@ check_potential_annexations_south_america = {
   else_if = {
     limit = { can_release_uruguay = yes }
     ROOT = { activate_mission = annexation_URG_CONQ }
+  }
+  else_if = {
+    limit = { can_release_venezuela = yes }
+    ROOT = { activate_mission = annexation_VEN_CONQ }
   }
 }

@@ -1609,3 +1609,92 @@ country_event = { # Fate of Uruguay
     set_country_flag = URG_CONQ
   }
 }
+
+country_event = { # Fate of Venezuela
+  id = annex.1036
+  title = annexation_VEN_CONQ
+  desc = annexation_VEN_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = VEN }
+      remove_all_cores_and_claims_of_tags = yes
+      VEN = {
+        add_state_core = 307
+        add_state_core = 488
+        add_state_core = 489
+        add_state_core = 900
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.1036.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = VEN }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = VEN_CONQ
+  }
+}
+
+country_event = { # Fate of Colombian Amazon
+  id = annex.1037
+  title = annexation_COLOMBIAN_AMAZON_CONQ
+  desc = annexation_COLOMBIAN_AMAZON_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Colombia
+    name = annex.1037.a
+    trigger = {
+      COL = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = PRU
+      }
+    }
+    set_temp_variable = { tag_to_release = COL }
+    753 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Peru
+    name = annex.1032.b
+    trigger = {
+      PRU = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = COL
+      }
+    }
+    set_temp_variable = { tag_to_release = PRU }
+    753 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy it
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = COLOMBIAN_AMAZON_CONQ
+  }
+}

@@ -141,7 +141,7 @@ annexation_decisions = {
       305 = { is_valid_annexation_state = no }
     }
     complete_effect = {
-      
+      country_event = annex.1029
     }
     timeout_effect = {
       occupy_small_country = yes
@@ -160,7 +160,7 @@ annexation_decisions = {
       753 = { is_valid_annexation_state = no }
     }
     complete_effect = {
-      country_event = annex.1029
+      country_event = annex.1037
     }
     timeout_effect = {
       occupy_small_country = yes
@@ -279,6 +279,24 @@ annexation_decisions = {
     timeout_effect = {
       occupy_small_country = yes
       set_country_flag = URG_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_VEN_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      307 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.1036
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
     }
     ai_will_do = {
       factor = 100
