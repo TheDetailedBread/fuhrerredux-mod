@@ -21,12 +21,14 @@ check_potential_annexations = {
   }
   else_if = {
     limit = { is_on_continent = north_america }
-    check_potential_annexations_north_america = yes
-  }
-  else_if = {
-    limit = { is_on_continent = central_america }
+    check_potential_annexations_north_america = yes 
+    # KR added central america
     check_potential_annexations_central_america = yes
   }
+  # else_if = {
+  #   limit = { is_on_continent = central_america }
+    
+  # }
 }
 
 check_potential_annexations_europe = {

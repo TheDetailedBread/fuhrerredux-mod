@@ -505,7 +505,7 @@ country_event = { # Fate of Costa Rica
     ai_chance = {
       base = 100
     }
-    set_temp_variable = { core_removal_array = yes }
+    set_temp_variable = { core_removal_array = COS }
     release_targeted_tag = yes
   }
 
@@ -809,7 +809,7 @@ country_event = { # Fate of Jamaica
     hidden_effect = {
       add_to_temp_array = { core_removal_array = JAM }
       remove_all_cores_and_claims_of_tags = yes
-      GUA = {
+      JAM = {
         add_state_core = 689
         drop_cosmetic_tag = yes
       }
@@ -869,18 +869,18 @@ country_event = { # Fate of Mexico
   }
 }
 
-country_event = { # Fate of Guatemala
+country_event = { # Fate of Nicaragua
   id = annex.1018
-  title = annexationGUA_CONQ
-  desc = annexation_GUA_CONQ_DESC
+  title = annexation_NIC_CONQ
+  desc = annexation_NIC_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
   immediate = {
     hidden_effect = {
-      add_to_temp_array = { core_removal_array = GUA }
+      add_to_temp_array = { core_removal_array = NIC }
       remove_all_cores_and_claims_of_tags = yes
-      GUA = {
+      NIC = {
         add_state_core = 313
         drop_cosmetic_tag = yes
       }
@@ -892,7 +892,7 @@ country_event = { # Fate of Guatemala
     ai_chance = {
       base = 100
     }
-    set_temp_variable = { tag_to_release = GUA }
+    set_temp_variable = { tag_to_release = NIC }
     release_targeted_tag = yes
   }
 
