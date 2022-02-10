@@ -232,3 +232,15 @@ can_release_uruguay = {
     }
   }
 }
+
+#Venezuela - annexation_VEN_CONQ
+can_release_venezuela = {
+  state = 307
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = VEN
+      has_country_flag = VEN_CONQ
+    }
+  }
+}
