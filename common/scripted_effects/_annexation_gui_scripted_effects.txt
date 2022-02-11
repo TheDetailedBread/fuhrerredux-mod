@@ -37,6 +37,10 @@ check_potential_annexations = {
     limit = { is_on_continent = africa }
     check_potential_annexations_africa = yes
   }
+  else_if = {
+    limit = { is_on_continent = middle_east }
+    check_potential_annexations_middle_east = yes
+  }
 }
 
 check_potential_annexations_europe = {
@@ -339,6 +343,14 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_zeuss_vlaanderen = yes }
     ROOT = { activate_mission = annexation_ZEUSS_VLAANDEREN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_turkey = yes }
+    ROOT = { activate_mission = annexation_TUR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_gorskaya = yes }
+    ROOT = { activate_mission = annexation_GOR_CONQ }
   }
 }
 
@@ -643,5 +655,69 @@ check_potential_annexations_africa = {
   else_if = {
     limit = { can_release_zimbabwe = yes }
     ROOT = { activate_mission = annexation_ZIM_CONQ }
+  }
+}
+
+check_potential_annexations_middle_east = {
+  if = {
+    limit = { can_release_israel = yes }
+    ROOT = { activate_mission = annexation_ISR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_iraq = yes }
+    ROOT = { activate_mission = annexation_IRQ_CONQ }
+  }
+  
+  else_if = {
+    limit = { can_release_lebanon = yes }
+    ROOT = { activate_mission = annexation_LEB_CONQ }
+  }
+  else_if = {
+    limit = { can_release_hashimete_arabia = yes }
+    ROOT = { activate_mission = annexation_ARB_CONQ }
+  }
+  else_if = {
+    limit = { can_release_saudi_arabia = yes }
+    ROOT = { activate_mission = annexation_SAU_CONQ }
+  }
+  else_if = {
+    limit = { can_release_yemen = yes }
+    ROOT = { activate_mission = annexation_YEM_CONQ }
+  }
+  else_if = {
+    limit = { can_release_oman = yes }
+    ROOT = { activate_mission = annexation_OMA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_persia = yes }
+    ROOT = { activate_mission = annexation_PER_CONQ }
+  }
+  else_if = {
+    limit = { can_release_kurdistan = yes }
+    ROOT = { activate_mission = annexation_KUR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_armenia = yes }
+    ROOT = { activate_mission = annexation_ARM_CONQ }
+  }
+  else_if = {
+    limit = { can_release_georgia = yes }
+    ROOT = { activate_mission = annexation_GEO_CONQ }
+  }
+  else_if = {
+    limit = { can_release_azerbaijan = yes }
+    ROOT = { activate_mission = annexation_AZR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_syria = yes }
+    ROOT = { activate_mission = annexation_SYR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_transjordan = yes }
+    ROOT = { activate_mission = annexation_TRANSJORDAN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_amman = yes }
+    ROOT = { activate_mission = annexation_AMMAN_CONQ }
   }
 }
