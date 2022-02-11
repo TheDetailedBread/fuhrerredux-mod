@@ -4706,3 +4706,106 @@ country_event = { # Fate of Sudtirol
     set_country_flag = SUDTIROL_CONQ
   }
 }
+
+country_event = { # Fate of Gorskaya
+  id = annex.178
+  title = annexation_GOR_CONQ
+  desc = annexation_GOR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = GOR }
+      remove_all_cores_and_claims_of_tags = yes
+      GOR = {
+        add_state_core = 232
+        add_state_core = 233
+        add_state_core = 857
+        add_state_core = 859
+        add_state_core = 860
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.178.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = GOR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = GOR_CONQ
+    occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Turkey
+  id = annex.179
+  title = annexation_TUR_CONQ
+  desc = annexation_TUR_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = TUR }
+      remove_all_cores_and_claims_of_tags = yes
+      TUR = {
+        add_state_core = 49
+        add_state_core = 341
+        add_state_core = 340
+        add_state_core = 341
+        add_state_core = 342
+        add_state_core = 343
+        add_state_core = 344
+        add_state_core = 345
+        add_state_core = 346
+        add_state_core = 347
+        add_state_core = 348
+        add_state_core = 349
+        add_state_core = 350
+        add_state_core = 352
+        add_state_core = 353
+        add_state_core = 354
+        add_state_core = 355
+        add_state_core = 356
+        add_state_core = 776
+        add_state_core = 777
+        add_state_core = 778
+        add_state_core = 779
+        add_state_core = 780
+        add_state_core = 781
+        add_state_core = 902
+        add_state_core = 1030
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.179.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = TUR }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = TUR_CONQ
+    occupy_small_country = yes
+  }
+}

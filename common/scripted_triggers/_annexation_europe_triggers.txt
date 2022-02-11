@@ -385,6 +385,18 @@ can_release_germany = {
   }
 }
 
+#Gorskaya - annexation_GOR_CONQ
+can_release_gorskaya = { 
+	state = 232
+	NOT = { is_claimed_by = ROOT}
+	ROOT = {
+		NOT = {
+			country_exists = GOR
+			has_country_flag = GOR_CONQ
+		}
+	}
+}
+
 #Greece - annexation_GRE_CONQ
 can_release_greece = {
   state = 47
@@ -1061,6 +1073,18 @@ can_release_transylvania = {
   }
 }
 
+#Turkey - annexation_TUR_CONQ
+can_release_turkey = { 
+	state = 341
+	NOT = { is_claimed_by = ROOT}
+	ROOT = {
+		NOT = {
+			country_exists = TUR
+			has_country_flag = TUR_CONQ
+		}
+	}
+}
+
 can_release_ukraine = {
   state = 202
   NOT = { is_claimed_by = ROOT }
@@ -1232,6 +1256,7 @@ can_release_zeuss_vlaanderen = {
     }
   }
 }
+
 
 should_release_austria_first = {
   OR = {

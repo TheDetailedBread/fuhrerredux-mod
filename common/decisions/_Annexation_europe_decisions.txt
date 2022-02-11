@@ -468,6 +468,25 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_GOR_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      232 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.178
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = GOR_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_GRE_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -1228,6 +1247,25 @@ annexation_decisions = {
     timeout_effect = {
       occupy_medium_country = yes
       set_country_flag = TRANSYLVANIA_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_TUR_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      341 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.179
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = TUR_CONQ
     }
     ai_will_do = {
       factor = 100
