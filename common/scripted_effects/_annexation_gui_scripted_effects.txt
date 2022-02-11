@@ -41,6 +41,10 @@ check_potential_annexations = {
     limit = { is_on_continent = middle_east }
     check_potential_annexations_middle_east = yes
   }
+  else_if = {
+    limit = { is_on_continent = south_asia }
+    check_potential_annexations_india = yes
+  }
 }
 
 check_potential_annexations_europe = {
@@ -727,5 +731,92 @@ check_potential_annexations_middle_east = {
   else_if = {
     limit = { can_release_tao_klarjeti = yes }
     ROOT = { activate_mission = annexation_TAO_KLARJETI_CONQ }
+  }
+}
+
+check_potential_annexations_india = {
+  if = {
+    limit = { can_release_travancore = yes }
+    ROOT = { activate_mission = annexation_TRV_CONQ }
+  }
+  else_if = {
+    limit = { can_release_madras = yes }
+    ROOT = { activate_mission = annexation_MDR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_hyderabad = yes }
+    ROOT = { activate_mission = annexation_HYD_CONQ }
+  }
+  else_if = {
+    limit = { can_release_orissa = yes }
+    ROOT = { activate_mission = annexation_ORI_CONQ }
+  }
+  else_if = {
+    limit = { can_release_punjab = yes }
+    ROOT = { activate_mission = annexation_PUN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_kashmir = yes }
+    ROOT = { activate_mission = annexation_KAS_CONQ }
+  }
+  else_if = {
+    limit = { can_release_baluchistan = yes }
+    ROOT = { activate_mission = annexation_BAL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_rajahstan = yes }
+    ROOT = { activate_mission = annexation_RJH_CONQ }
+  }
+  else_if = {
+    limit = { can_release_bombay = yes }
+    ROOT = { activate_mission = annexation_BOM_CONQ }
+  }
+  else_if = {
+    limit = { can_release_mysore = yes }
+    ROOT = { activate_mission = annexation_MYS_CONQ }
+  }
+  else_if = {
+    limit = { can_release_bihar = yes }
+    ROOT = { activate_mission = annexation_BIH_CONQ }
+  }
+  else_if = {
+    limit = { can_release_sri_lanka = yes }
+    ROOT = { activate_mission = annexation_SRL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_maldives = yes }
+    ROOT = { activate_mission = annexation_MLD_CONQ }
+  }
+  else_if = {
+    limit = { can_release_india = yes }
+    ROOT = { activate_mission = annexation_IND_CONQ }
+  }
+  else_if = {
+    limit = { can_release_bengal = yes }
+    ROOT = { activate_mission = annexation_BNG_CONQ }
+  }
+  else_if = {
+    limit = { can_release_afganistan = yes }
+    ROOT = { activate_mission = annexation_AFG_CONQ }
+  }
+  else_if = {
+    limit = { can_release_bhutan = yes }
+    ROOT = { activate_mission = annexation_BHU_CONQ }
+  }
+  else_if = {
+    limit = { can_release_nepal = yes }
+    ROOT = { activate_mission = annexation_NEP_CONQ }
+  }
+  else_if = {
+    limit = { can_release_peshawar = yes }
+    ROOT = { activate_mission = annexation_PESHAWAR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_quetta = yes }
+    ROOT = { activate_mission = annexation_QUETTA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_tirhut = yes }
+    ROOT = { activate_mission = annexation_TIRHUT_CONQ }
   }
 }
