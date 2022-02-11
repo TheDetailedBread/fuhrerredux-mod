@@ -720,4 +720,12 @@ check_potential_annexations_middle_east = {
     limit = { can_release_amman = yes }
     ROOT = { activate_mission = annexation_AMMAN_CONQ }
   }
+  else_if = {
+    limit = { can_release_van = yes }
+    ROOT = { activate_mission = annexation_VAN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_tao_klarjeti = yes }
+    ROOT = { activate_mission = annexation_TAO_KLARJETI_CONQ }
+  }
 }

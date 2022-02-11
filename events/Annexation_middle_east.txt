@@ -682,7 +682,7 @@ country_event = { # Fate of Amman
       is_ai = no
     }
     occupy_small_country = yes
-    set_country_flag = TRANSJORDAN_CONQ
+    set_country_flag = AMMAN_CONQ
   }
 }
 
@@ -707,7 +707,7 @@ country_event = { # Fate of Syria
   }
 
   option = { # Puppet
-    name = annex.3013.a
+    name = annex.3014.a
     ai_chance = {
       base = 100
     }
@@ -722,5 +722,131 @@ country_event = { # Fate of Syria
     }
     set_country_flag = AMMAN_CONQ
     occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Tao Klarjeti
+  id = annex.3015
+  title = annexation_TAO_KLARJETI_CONQ
+  desc = annexation_TAO_KLARJETI_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Georgians
+    name = annex.3015.a
+    trigger = {
+      GEO = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = TUR
+          is_ally_with = ARM
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = GEO }
+    902 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to Syria
+    name = annex.3015.b
+    trigger = {
+      ARM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = ARM
+          is_ally_with = GEO
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = ARM }
+    902 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to Turkish
+    name = annex.3015.c
+    trigger = {
+      TUR = { 
+        ROOT_can_grant_land = yes 
+        owns_state = 554
+      }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = ARM
+          is_ally_with = GEO
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = TUR }
+    902 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = AMMAN_CONQ
+  }
+}
+
+country_event = { # Fate of Van
+  id = annex.3016
+  title = annexation_VAN_CONQ
+  desc = annexation_VAN_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the Turks
+    name = annex.3016.a
+    trigger = {
+      TUR = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ARM
+      }
+    }
+    set_temp_variable = { tag_to_release = TUR }
+    353 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to Armenians
+    name = annex.3016.b
+    trigger = {
+      ARM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = TUR
+      }
+    }
+    set_temp_variable = { tag_to_release = ARM }
+    353 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = AMMAN_CONQ
   }
 }

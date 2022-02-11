@@ -1325,3 +1325,10 @@ should_release_italy_first = {
   }
 }
 
+should_release_turkey_first = {
+  OR = {
+    country_exists = TUR
+    has_country_flag = TUR_CONQ
+    341 = { is_valid_annexation_state = no }
+  }
+}

@@ -284,4 +284,42 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_VAN_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      353 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.3016
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = AMMAN_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_TAO_KLARJETI_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      902 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.3015
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = AMMAN_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
 }

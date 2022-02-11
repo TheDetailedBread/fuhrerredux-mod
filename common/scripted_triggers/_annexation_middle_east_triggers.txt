@@ -188,16 +188,16 @@ can_release_amman = {
   state = 455
   NOT = { is_claimed_by = ROOT }
   ROOT = {
+    should_release_arabia_first = yes
+    should_release_iraq_first = yes
     # Do Syrian or Iraqi release first
     OR = {
-      should_release_iraq_first = yes
       country_exists = SYR
       has_country_flag = SYR_CONQ
       677 = { is_valid_annexation_state = no }
     }
     # Do Arabian release first
     OR = {
-      should_release_arabia_first = yes
       country_exists = SAU
       has_country_flag = SAU_CONQ
       929 = { is_valid_annexation_state = no }
@@ -209,6 +209,51 @@ can_release_amman = {
       tag = ARB
       has_country_flag = AMMAN_CONQ
     }
+  }
+}
+
+#Van - annexation_VAN_CONQ
+can_release_van = {
+  state = 353
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_armenia_first = yes
+    should_release_turkey_first = yes
+    NOT = {
+      tag = TUR
+      tag = ARM
+      has_country_flag = VAN_CONQ
+    }
+  }
+}
+
+#Tao-Klarjeti - annexation_TAO_KLARJETI_CONQ
+can_release_tao_klarjeti = {
+  state = 902
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_armenia_first = yes
+    should_release_turkey_first = yes
+    # Do Kurdestani release first
+    OR = {
+      country_exists = GEO
+      has_country_flag = GEO_CONQ
+      352 = { is_valid_annexation_state = no }
+    }
+    NOT = {
+      tag = GEO
+      tag = TUR
+      tag = ARM
+      has_country_flag = TAO_KLARJETI_CONQ
+    }
+  }
+}
+
+should_release_armenia_first = {
+  OR = {
+    country_exists = TUR
+    has_country_flag = TUR_CONQ
+    341 = { is_valid_annexation_state = no }
   }
 }
 
