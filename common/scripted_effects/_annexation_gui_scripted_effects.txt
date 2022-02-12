@@ -45,6 +45,10 @@ check_potential_annexations = {
     limit = { is_on_continent = south_asia }
     check_potential_annexations_india = yes
   }
+  else_if = {
+    limit = { is_on_continent = australia }
+    check_potential_annexations_australia = yes
+  }
 }
 
 check_potential_annexations_europe = {
@@ -818,5 +822,24 @@ check_potential_annexations_india = {
   else_if = {
     limit = { can_release_tirhut = yes }
     ROOT = { activate_mission = annexation_TIRHUT_CONQ }
+  }
+}
+
+check_potential_annexations_australia = {
+  if = {
+    limit = { can_release_fiji = yes }
+    ROOT = { activate_mission = annexation_FIJ_CONQ }
+  }
+  else_if = {
+    limit = { can_release_austrailia = yes }
+    ROOT = { activate_mission = annexation_AST_CONQ }
+  }
+  else_if = {
+    limit = { can_release_new_zealand = yes }
+    ROOT = { activate_mission = annexation_NZL_CONQ }
+  }
+  else_if = {
+    limit = { can_release_papua_new_guinea = yes }
+    ROOT = { activate_mission = annexation_PNG_CONQ }
   }
 }

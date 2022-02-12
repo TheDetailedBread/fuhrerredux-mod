@@ -1,0 +1,164 @@
+add_namespace = annex
+
+country_event = { # Fate of Fiji
+  id = annex.3000
+  title = annexation_FIJ_CONQ
+  desc = annexation_FIJ_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = FIJ }
+      remove_all_cores_and_claims_of_tags = yes
+      FIJ = {
+        add_state_core = 636
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.3000.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = FIJ }
+    release_targeted_tag = yes
+  }
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = FIJ_CONQ
+  }
+}
+
+country_event = { # Fate of Australia
+  id = annex.3001
+  title = annexation_AST_CONQ
+  desc = annexation_AST_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = AST }
+      remove_all_cores_and_claims_of_tags = yes
+      AST = {
+        add_state_core = 285
+        add_state_core = 517
+        add_state_core = 518
+        add_state_core = 519
+        add_state_core = 520
+        add_state_core = 521
+        add_state_core = 522
+        add_state_core = 674
+        add_state_core = 808
+        add_state_core = 885
+        add_state_core = 886
+        add_state_core = 887
+        add_state_core = 888
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.3001.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = AST }
+    release_targeted_tag = yes
+  }
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = AST_CONQ
+  }
+}
+
+country_event = { # Fate of New Zealand
+  id = annex.3002
+  title = annexation_NZL_CONQ
+  desc = annexation_NZL_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = NZL }
+      remove_all_cores_and_claims_of_tags = yes
+      NZL = {
+        add_state_core = 723
+        add_state_core = 284
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.3002.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = NZL }
+    release_targeted_tag = yes
+  }
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = NZL_CONQ
+  }
+}
+
+country_event = { # Fate of Papua New Guinea
+  id = annex.3003
+  title = annexation_PNG_CONQ
+  desc = annexation_PNG_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = PNG }
+      remove_all_cores_and_claims_of_tags = yes
+      PNG = {
+        add_state_core = 523
+        add_state_core = 634
+        add_state_core = 669
+        add_state_core = 737
+        add_state_core = 845
+        add_state_core = 846
+        add_state_core = 856
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.3003.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = PNG }
+    release_targeted_tag = yes
+  }
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = PNG_CONQ
+  }
+}
