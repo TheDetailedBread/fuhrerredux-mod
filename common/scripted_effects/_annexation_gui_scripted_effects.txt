@@ -48,6 +48,7 @@ check_potential_annexations = {
   else_if = {
     limit = { is_on_continent = australia }
     check_potential_annexations_australia = yes
+  }
   else_if = {
     limit = { is_on_continent = asia }
     check_potential_annexations_asia = yes
@@ -891,6 +892,10 @@ check_potential_annexations_asia = {
   else_if = {
     limit = { can_release_mongolia = yes }
     ROOT = { activate_mission = annexation_MON_CONQ }
+  }
+  else_if = {
+    limit = { can_release_philippines = yes }
+    ROOT = { activate_mission = annexation_PHI_CONQ }
   }
   else_if = {
     limit = { can_release_sichuan = yes }

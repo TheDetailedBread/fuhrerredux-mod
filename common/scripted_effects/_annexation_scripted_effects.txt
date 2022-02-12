@@ -615,3 +615,29 @@ core_india_for_faction = {
     add_state_core = 988
   }
 }
+
+release_chinese_government = {
+  every_owned_state = {
+    limit = {
+      is_controlled_chinese_region = yes
+      is_not_claim_or_core_of_ROOT = yes
+    }
+    var:tag_to_release = {
+      add_state_core = PREV
+      transfer_state = PREV
+    }
+  }
+  puppet_released_tag = yes
+}
+
+transfer_chinese_territories = {
+  every_owned_state = {
+    limit = {
+      is_controlled_chinese_region = yes
+      is_not_claim_or_core_of_ROOT = yes
+    }
+    var:tag_to_release = {
+      transfer_state = PREV
+    }
+  }
+}
