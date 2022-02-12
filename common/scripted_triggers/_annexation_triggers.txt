@@ -24,3 +24,24 @@ ROOT_can_grant_land = {
 		}
 	}
 }
+
+is_controlled_chinese_region = {
+  OR = {
+    is_mainland_china = yes
+    AND = {
+      OR = {
+        is_core_of = TIB
+        state = 873
+      }
+      ROOT = {
+        NOT = { owns_state = 322 } # Lhasa
+      }
+    }
+    AND = {
+      region = 222
+      ROOT = {
+        NOT = { owns_state = 330 } # Urga
+      }
+    }
+  }
+}
