@@ -1498,7 +1498,7 @@ country_event = { # Fate of Hungary
 country_event = { # Fate of Ireland
   id = annex.124
   title = annexation_IRE_CONQ
-  desc = annexation_IRE_CONR_DESC
+  desc = annexation_IRE_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
@@ -1641,7 +1641,7 @@ country_event = { # Fate of Latvia
   }
 
   option = { # Occupy
-    name = annex.126.b
+    name = annexation_occupy
     ai_chance = {
       base = 0
     }
@@ -2518,7 +2518,7 @@ country_event = { # Fate of Russia
   }
 
   option = { # Puppet
-    name = annex.138
+    name = annex.138.a
     ai_chance = {
       base = 100
     }
@@ -3194,15 +3194,21 @@ country_event = { # Fate of Spain
     }
     if = {
       limit = { has_socialist_government = yes }
-      set_temp_variable = { spanish_tag_for_release = SPA }
+      set_temp_variable = { tag_for_release = SPA }
+      core_spain_for_faction = yes
+      release_targeted_tag = yes
     }
     else_if = {
       limit = { has_democratic_government = yes }
-      set_temp_variable = { spanish_tag_for_release = SPR }
+      set_temp_variable = { tag_for_release = SPR }
+      core_spain_for_faction = yes
+      release_targeted_tag = yes
     }
     else_if = {
       limit = { has_dictatorship_government = yes }
-      set_temp_variable = { spanish_tag_for_release = SPF }
+      set_temp_variable = { tag_for_release = SPF }
+      core_spain_for_faction = yes
+      release_targeted_tag = yes
     }
   }
 
@@ -3214,7 +3220,6 @@ country_event = { # Fate of Spain
     trigger = {
       tag = ENG
     }
-    set_temp_variable = { spanish_tag_for_release = SPM }
     set_temp_variable = { tag_to_release = SPM }
     release_targeted_tag = yes
   }
@@ -3548,7 +3553,7 @@ country_event = { # Fate of Burgenland
 country_event = { # Fate of West Banat
   id = annex.154
   title = annexation_WEST_BANAT_CONQ
-  desc = annexation_WEST_BANAT_CONQ
+  desc = annexation_WEST_BANAT_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
@@ -3565,7 +3570,7 @@ country_event = { # Fate of West Banat
       }
     }
     set_temp_variable = { tag_to_release = GRE }
-    764 = { transfer_state_and_add_core = yes }
+    750 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Give it to Bulgaria
@@ -3581,7 +3586,7 @@ country_event = { # Fate of West Banat
       }
     }
     set_temp_variable = { tag_to_release = BUL }
-    764 = { transfer_state_and_add_core = yes }
+    750 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Occupy
@@ -3845,7 +3850,7 @@ country_event = { # Fate of Limburg
   }
 
   option = { # Give in to the Dutch
-    name = annex.159.c
+    name = annex.159.b
     trigger = {
       country_exists = HOL
       HOL = { ROOT_can_grant_land = yes }
@@ -3862,7 +3867,7 @@ country_event = { # Fate of Limburg
   }
 
   option = { # Give in to the Dutch
-    name = annex.159.d
+    name = annex.159.c
     trigger = {
       country_exists = KNE
       KNE = { ROOT_can_grant_land = yes }
