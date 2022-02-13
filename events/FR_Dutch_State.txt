@@ -727,51 +727,51 @@ country_event = {
 }
 
 country_event = {
-    id = dutchstate.29
-    title = dutchstate.29.t
-    desc = dutchstate.29.d
-    picture = GFX_report_event_germany_politician_handshake
-    is_triggered_only = yes
+  id = dutchstate.29
+  title = dutchstate.29.t
+  desc = dutchstate.29.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
 
-    option = {
-        name = dutchstate.29.a
-        random_unit_leader = {
-            limit = { has_id = 3 }
-            set_nationality = HOL
-        }
-        hidden_effect = {
-            country_event = { id = dutchstate.30 days = 900 }
-        }
+  option = {
+    name = dutchstate.29.a
+    set_nationality = {
+      target = HOL
+      character = GER_Friedrich_Paulus
     }
+    hidden_effect = {
+      country_event = { id = dutchstate.30 days = 900 }
+    }
+  }
 }
 
 country_event = {
-    id = dutchstate.30
-    title = dutchstate.30.t
-    desc = dutchstate.30.d
-    picture = GFX_report_event_germany_politician_handshake
-    is_triggered_only = yes
+  id = dutchstate.30
+  title = dutchstate.30.t
+  desc = dutchstate.30.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
 
-    option = {
-        name = dutchstate.39.a
-        army_experience = 30
-        GER = { country_event = { id = dutchstate.31 days = 1 } }
-    }
+  option = {
+    name = dutchstate.39.a
+    army_experience = 30
+    GER = { country_event = { id = dutchstate.31 days = 1 } }
+  }
 }
 
 country_event = {
-    id = dutchstate.31
-    title = dutchstate.31.t
-    desc = dutchstate.31.d
-    picture = GFX_report_event_germany_politician_handshake
-    is_triggered_only = yes
+  id = dutchstate.31
+  title = dutchstate.31.t
+  desc = dutchstate.31.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
 
-    option = {
-        name = dutchstate.31.a
-        army_experience = 30
-        random_unit_leader = {
-            limit = { has_id = 3 }
-            set_nationality = GER
-        }
+  option = {
+    name = dutchstate.31.a
+    army_experience = 30
+    set_nationality = {
+      target = GER
+      character = GER_Friedrich_Paulus
     }
+  }
 }
