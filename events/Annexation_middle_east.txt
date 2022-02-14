@@ -847,6 +847,43 @@ country_event = { # Fate of Van
       is_ai = no
     }
     occupy_small_country = yes
-    set_country_flag = AMMAN_CONQ
+    set_country_flag = VAN_CONQ
+  }
+}
+
+country_event = { # Fate of Trucial States
+  id = annex.3017
+  title = annexation_TRU_CONQ
+  desc = annexation_TRU_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = TRU }
+      remove_all_cores_and_claims_of_tags = yes
+      TRU = {
+        add_state_core = 658
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.3017.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = TRU }
+    658 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = TRU_CONQ
   }
 }
