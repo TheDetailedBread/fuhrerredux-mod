@@ -962,7 +962,7 @@ country_event = { # Fate of France
     hidden_effect = {
       add_to_temp_array = { add_to_temp_array = FRA }
       remove_all_cores_and_claims_of_tags = yes
-      FRA = {
+      FRP = {
         add_state_core = 1
         add_state_core = 14
         add_state_core = 15
@@ -1005,7 +1005,7 @@ country_event = { # Fate of France
     ai_chance = {
       base = 100
     }
-    set_temp_variable = { tag_to_release = FRA }
+    set_temp_variable = { tag_to_release = FRP }
     release_targeted_tag = yes
   }
 
@@ -1028,27 +1028,12 @@ country_event = { # Fate of Great Britain
 
   immediate = {
     hidden_effect = {
+      every_owned_state = {
+        limit = { is_core_of = ENG }
+        add_core_of = EGL
+      }
       add_to_temp_array = { core_removal_array = ENG }
       remove_all_cores_and_claims_of_tags = yes
-      ENG = {
-        add_state_core = 119
-        add_state_core = 120
-        add_state_core = 121
-        add_state_core = 122
-        add_state_core = 123
-        add_state_core = 125
-        add_state_core = 126
-        add_state_core = 127
-        add_state_core = 128
-        add_state_core = 129
-        add_state_core = 130
-        add_state_core = 131
-        add_state_core = 132
-        add_state_core = 133
-        add_state_core = 136
-        add_state_core = 138
-        drop_cosmetic_tag = yes
-      }
     }
   }
 

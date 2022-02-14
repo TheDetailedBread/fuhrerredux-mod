@@ -103,7 +103,7 @@ annexation_decisions = {
       771 = { is_valid_annexation_state = no }
     }
     complete_effect = {
-      country_event = annex.2004
+      country_event = annex.2042
     }
     timeout_effect = {
       occupy_medium_country = yes
@@ -347,7 +347,7 @@ annexation_decisions = {
     days_mission_timeout = 60
     is_good = no
     cancel_trigger = {
-      779 = { is_valid_annexation_state = no }
+      974 = { is_valid_annexation_state = no }
     }
     complete_effect = {
       country_event = annex.2017
@@ -588,6 +588,25 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_SIE_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      700 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2041
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = SIE_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_SAF_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -651,7 +670,7 @@ annexation_decisions = {
     days_mission_timeout = 60
     is_good = no
     cancel_trigger = {
-      777 = { is_valid_annexation_state = no }
+      976 = { is_valid_annexation_state = no }
     }
     complete_effect = {
       country_event = annex.2029
@@ -727,7 +746,7 @@ annexation_decisions = {
     days_mission_timeout = 60
     is_good = no
     cancel_trigger = {
-      778 = { is_valid_annexation_state = no }
+      980 = { is_valid_annexation_state = no }
     }
     complete_effect = {
       country_event = annex.2032
