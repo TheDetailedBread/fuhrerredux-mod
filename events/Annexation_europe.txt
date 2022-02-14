@@ -3194,19 +3194,19 @@ country_event = { # Fate of Spain
     }
     if = {
       limit = { has_socialist_government = yes }
-      set_temp_variable = { tag_for_release = SPA }
+      set_temp_variable = { tag_to_release = SPA }
       core_spain_for_faction = yes
       release_targeted_tag = yes
     }
     else_if = {
       limit = { has_democratic_government = yes }
-      set_temp_variable = { tag_for_release = SPR }
+      set_temp_variable = { tag_to_release = SPR }
       core_spain_for_faction = yes
       release_targeted_tag = yes
     }
     else_if = {
       limit = { has_dictatorship_government = yes }
-      set_temp_variable = { tag_for_release = SPF }
+      set_temp_variable = { tag_to_release = SPF }
       core_spain_for_faction = yes
       release_targeted_tag = yes
     }
@@ -4095,7 +4095,7 @@ country_event = { # Fate of North Epirus
   option = { # Give it to the Greeks
     name = annex.163.a
     trigger = {
-      SER = { ROOT_can_grant_land = yes }
+      GRE = { ROOT_can_grant_land = yes }
     }
     ai_chance = {
       base = 100
@@ -4104,7 +4104,7 @@ country_event = { # Fate of North Epirus
         is_ally_with = ALB
       }
     }
-    set_temp_variable = { tag_to_release = SER }
+    set_temp_variable = { tag_to_release = GRE }
     765 = { transfer_state_and_add_core = yes }
   }
 

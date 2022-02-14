@@ -1,4 +1,23 @@
 annexation_decisions = {
+  annexation_ALG_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      459 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2036
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = ALG_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_ANG_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -379,6 +398,44 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_LBA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      448 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2038
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = LBA_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_MAD_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      453 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2037
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = MAD_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_MLI_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -431,6 +488,25 @@ annexation_decisions = {
     timeout_effect = {
       occupy_medium_country = yes
       set_country_flag = MRT_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_MZB_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      544 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2040
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = MZB_CONQ
     }
     ai_will_do = {
       factor = 100
@@ -588,6 +664,25 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_TUN_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      458 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2035
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = TUN_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_TZN_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -636,6 +731,25 @@ annexation_decisions = {
     }
     complete_effect = {
       country_event = annex.2032
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = VOL_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_WES_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      778 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2039
     }
     timeout_effect = {
       occupy_medium_country = yes

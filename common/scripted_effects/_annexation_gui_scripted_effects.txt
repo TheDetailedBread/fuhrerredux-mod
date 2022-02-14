@@ -34,6 +34,10 @@ check_potential_annexations = {
     check_potential_annexations_south_america = yes
   }
   else_if = {
+    limit = { is_on_continent = north_africa }
+    check_potential_annexations_north_africa = yes
+  }
+  else_if = {
     limit = { is_on_continent = africa }
     check_potential_annexations_africa = yes
   }
@@ -527,6 +531,33 @@ check_potential_annexations_south_america = {
   }
 }
 
+check_potential_annexations_north_africa = {
+  if = {
+    limit = { can_release_algeria = yes }
+    ROOT = { activate_mission = annexation_ALG_CONQ }
+  }
+  else_if = {
+    limit = { can_release_egypt = yes }
+    ROOT = { activate_mission = annexation_EGY_CONQ }
+  }
+  else_if = {
+    limit = { can_release_libya = yes }
+    ROOT = { activate_mission = annexation_LBA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_morocco = yes }
+    ROOT = { activate_mission = annexation_MOR_CONQ }
+  }
+  else_if = {
+    limit = { can_release_tunisia = yes }
+    ROOT = { activate_mission = annexation_TUN_CONQ }
+  }
+  else_if = {
+    limit = { can_release_western_sahara = yes }
+    ROOT = { activate_mission = annexation_WES_CONQ }
+  }
+}
+
 check_potential_annexations_africa = {
   if = {
     limit = { can_release_angola = yes }
@@ -559,10 +590,6 @@ check_potential_annexations_africa = {
   else_if = {
     limit = { can_release_djibouti = yes }
     ROOT = { activate_mission = annexation_DJI_CONQ }
-  }
-  else_if = {
-    limit = { can_release_egypt = yes }
-    ROOT = { activate_mission = annexation_EGY_CONQ }
   }
   else_if = {
     limit = { can_release_eritrea = yes }
@@ -613,8 +640,12 @@ check_potential_annexations_africa = {
     ROOT = { activate_mission = annexation_MLI_CONQ }
   }
   else_if = {
-    limit = { can_release_morocco = yes }
-    ROOT = { activate_mission = annexation_MOR_CONQ }
+    limit = { can_release_madagascar = yes }
+    ROOT = { activate_mission = annexation_MAD_CONQ }
+  }
+  else_if = {
+    limit = { can_release_mozambique = yes }
+    ROOT = { activate_mission = annexation_MZB_CONQ }
   }
   else_if = {
     limit = { can_release_mauritania = yes }
@@ -679,7 +710,6 @@ check_potential_annexations_middle_east = {
     limit = { can_release_iraq = yes }
     ROOT = { activate_mission = annexation_IRQ_CONQ }
   }
-  
   else_if = {
     limit = { can_release_lebanon = yes }
     ROOT = { activate_mission = annexation_LEB_CONQ }
@@ -739,6 +769,10 @@ check_potential_annexations_middle_east = {
   else_if = {
     limit = { can_release_tao_klarjeti = yes }
     ROOT = { activate_mission = annexation_TAO_KLARJETI_CONQ }
+  }
+  else_if = {
+    limit = { can_release_trucial_states = yes }
+    ROOT = { activate_mission = annexation_TRU_CONQ }
   }
 }
 
