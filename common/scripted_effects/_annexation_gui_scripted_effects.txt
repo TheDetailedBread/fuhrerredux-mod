@@ -656,7 +656,7 @@ check_potential_annexations_africa = {
     ROOT = { activate_mission = annexation_NGA_CONQ }
   }
   else_if = {
-    limit = { can_release_nigeria = yes }
+    limit = { can_release_niger = yes }
     ROOT = { activate_mission = annexation_NGR_CONQ }
   }
   else_if = {
@@ -666,6 +666,10 @@ check_potential_annexations_africa = {
   else_if = {
     limit = { can_release_rwanda = yes }
     ROOT = { activate_mission = annexation_RWA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_sierra_leone = yes }
+    ROOT = { activate_mission = annexation_SIE_CONQ }
   }
   else_if = {
     limit = { can_release_south_africa = yes }

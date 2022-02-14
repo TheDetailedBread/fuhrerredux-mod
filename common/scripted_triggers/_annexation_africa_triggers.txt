@@ -216,7 +216,7 @@ can_release_guinea_bissau = {
 
 #Ivory Coast - annexation_IVO_CONQ
 can_release_ivory_coast = { 
-	state = 779
+	state = 974
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		NOT = {
@@ -335,7 +335,7 @@ can_release_nigeria = {
 }
 
 #Nigeria - annexation_NGR_CONQ
-can_release_nigeria = { 
+can_release_niger = { 
 	state = 979
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
@@ -368,6 +368,18 @@ can_release_rwanda = {
 			has_country_flag = RWA_CONQ
 		}
 	}
+}
+
+#Sierra Leone - annexation_SIE_CONQ
+can_release_sierra_leone = {
+  state = 700
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    NOT = {
+      country_exists = SIE
+      has_country_flag = SIE_CONQ
+    }
+  }
 }
 
 #South Africa - annexation_SAF_CONQ
@@ -408,7 +420,7 @@ can_release_somalia = {
 
 #Togo - annexation_TOG_CONQ
 can_release_togo = { 
-	state = 777
+	state = 976
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		NOT = {
@@ -468,7 +480,7 @@ can_release_uganda = {
 
 #Volta - annexation_VOL_CONQ
 can_release_volta = { 
-	state = 778
+	state = 980
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		NOT = {

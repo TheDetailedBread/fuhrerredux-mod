@@ -662,7 +662,7 @@ country_event = { # Fate of Ivory Coast
       add_to_temp_array = { core_removal_array = IVO }
       remove_all_cores_and_claims_of_tags = yes
       IVO = {
-        add_state_core = 779
+        add_state_core = 974
         drop_cosmetic_tag = yes
       }
     }
@@ -1126,9 +1126,8 @@ country_event = { # Fate of Togo
       add_to_temp_array = { core_removal_array = TOG }
       remove_all_cores_and_claims_of_tags = yes
       TOG = {
-        add_state_core = 777
         add_state_core = 976
-        add_state_core = 994
+        add_state_core = 977
         drop_cosmetic_tag = yes
       }
     }
@@ -1240,7 +1239,7 @@ country_event = { # Fate of Volta
       add_to_temp_array = { core_removal_array = VOL }
       remove_all_cores_and_claims_of_tags = yes
       VOL = {
-        add_state_core = 778
+        add_state_core = 980
         drop_cosmetic_tag = yes
       }
     }
@@ -1513,7 +1512,7 @@ country_event = { # Fate of Western Sahara
       add_to_temp_array = { core_removal_array = WES }
       remove_all_cores_and_claims_of_tags = yes
       WES = {
-        add_state_core = 669
+        add_state_core = 699
         add_state_core = 1002
         drop_cosmetic_tag = yes
       }
@@ -1583,6 +1582,81 @@ country_event = { # Fate of Mozambique
       base = 0
     }
     set_country_flag = MZB_CONQ
+    occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Sierra Leone
+  id = annex.2041
+  title = annexation_SIE_CONQ
+  desc = annexation_SIE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = SIE }
+      remove_all_cores_and_claims_of_tags = yes
+      SIE = {
+        add_state_core = 700
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.2041.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = SIE }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = SIE_CONQ
+    occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Chad
+  id = annex.2042
+  title = annexation_CHA_CONQ
+  desc = annexation_CHA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = CHA }
+      remove_all_cores_and_claims_of_tags = yes
+      CHA = {
+        add_state_core = 771
+        add_state_core = 918
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.2042.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = CHA }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = SIE_CONQ
     occupy_small_country = yes
   }
 }
