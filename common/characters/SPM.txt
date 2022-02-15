@@ -513,21 +513,6 @@ characters = {
 				eco_national_liberal
 			}
 		}
-    advisor = {
-			cost = 150
-			slot = economy_minister
-			available = {
-				hidden_trigger = { has_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
-			}			
-			idea_token = SPM_Diego_Hidalgo_Duran_eco_sco
-			on_add = { set_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
-			on_remove = { clr_country_flag = SPM_Diego_Hidalgo_Duran_eco_sco_hired }
-			traits = {
-				economy_minister
-				social_conservative
-				eco_balanced_budget_economy
-			}
-		}
 	}
 	SPM_Alexandre_Boveda_Iglesias = {
 		name = "Alexandre Bóveda Iglesias"

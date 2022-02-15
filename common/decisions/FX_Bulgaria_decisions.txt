@@ -1,0 +1,6191 @@
+BUL_yugoslav_unification_decisions = {
+	BUL_take_croatia = {
+    icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = CRO
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					109 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					109 = {
+						is_owned_by = CRO 
+					}
+				}
+				FROM = {
+					tag = CRO
+				}
+			}
+			if = { 
+				limit = {
+					109 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					109 = {
+						is_owned_by = AUS 
+					}
+				}
+				FROM = {
+					tag = AUS
+				}
+			}
+			if = { 
+				limit = {
+					109 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+		}
+
+
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 109 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		
+
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_croatia"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_croatia target: [From.GetName]"
+			if = { 
+					limit = {
+						109 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			if = { 
+					limit = {
+						109 = {
+							is_owned_by = CRO
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = CRO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						109 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			
+		}
+
+	}
+}
+
+BUL_yugoslav_unification_decisions = {
+	
+	BUL_take_voj = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = CRO
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					45 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					45 = {
+						is_owned_by = CRO 
+					}
+				}
+				FROM = {
+					tag = CRO
+				}
+			}
+			if = { 
+				limit = {
+					45 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					45 = {
+						is_owned_by = AUS 
+					}
+				}
+				FROM = {
+					tag = AUS
+				}
+			}
+			if = { 
+				limit = {
+					45 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+		}
+		
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 45 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_voj"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_voj target: [From.GetName]"
+			if = { 
+					limit = {
+						45 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			if = { 
+					limit = {
+						45 = {
+							is_owned_by = CRO
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = CRO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						45 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	BUL_take_EASTslovenia = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = CRO
+		war_with_on_remove = SLO
+		war_with_on_remove = AUS
+		war_with_on_remove = ITA
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					767 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					767 = {
+						is_owned_by = CRO 
+					}
+				}
+				FROM = {
+					tag = CRO
+				}
+			}
+			if = { 
+				limit = {
+					767 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					767 = {
+						is_owned_by = AUS 
+					}
+				}
+				FROM = {
+					tag = AUS
+				}
+			}
+			if = { 
+				limit = {
+					767 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+			if = { 
+				limit = {
+					767 = {
+						is_owned_by = SLO 
+					}
+				}
+				FROM = {
+					tag = SLO
+				}
+			}
+		}
+
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 767 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_EASTslovenia"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_EASTslovenia target: [From.GetName]"
+			if = { 
+					limit = {
+						767 = {
+							is_owned_by = SLO 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = SLO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						767 = {
+							is_owned_by = CRO
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = CRO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						767 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						767 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						767 = {
+							is_owned_by = GER 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GER
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						767 = {
+							is_owned_by = AUS 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = AUS
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	BUL_take_WESTslovenia = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = CRO
+		war_with_on_remove = SLO
+		war_with_on_remove = AUS
+		war_with_on_remove = ITA
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					102 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					102 = {
+						is_owned_by = CRO 
+					}
+				}
+				FROM = {
+					tag = CRO
+				}
+			}
+			if = { 
+				limit = {
+					102 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					102 = {
+						is_owned_by = AUS 
+					}
+				}
+				FROM = {
+					tag = AUS
+				}
+			}
+			if = { 
+				limit = {
+					102 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+			if = { 
+				limit = {
+					102 = {
+						is_owned_by = SLO 
+					}
+				}
+				FROM = {
+					tag = SLO
+				}
+			}
+		}
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 102 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_WESTslovenia"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_WESTslovenia target: [From.GetName]"
+			if = { 
+					limit = {
+						102 = {
+							is_owned_by = SLO 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = SLO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						102 = {
+							is_owned_by = CRO
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = CRO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						102 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						102 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						102 = {
+							is_owned_by = GER 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GER
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						102 = {
+							is_owned_by = AUS 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = AUS
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	
+	
+	BUL_take_zara = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = CRO
+		war_with_on_remove = ITA
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					163 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					163 = {
+						is_owned_by = CRO 
+					}
+				}
+				FROM = {
+					tag = CRO
+				}
+			}
+			if = { 
+				limit = {
+					163 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					163 = {
+						is_owned_by = AUS 
+					}
+				}
+				FROM = {
+					tag = AUS
+				}
+			}
+			if = { 
+				limit = {
+					163 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+			if = { 
+				limit = {
+					163 = {
+						is_owned_by = SLO 
+					}
+				}
+				FROM = {
+					tag = SLO
+				}
+			}
+		}
+
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 163 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_WESTslovenia"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_WESTslovenia target: [From.GetName]"
+			if = { 
+					limit = {
+						163 = {
+							is_owned_by = SLO 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = SLO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						163 = {
+							is_owned_by = CRO
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = CRO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						163 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						163 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						163 = {
+							is_owned_by = GER 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GER
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						163 = {
+							is_owned_by = AUS 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = AUS
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	BUL_take_istria = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = CRO
+		war_with_on_remove = ITA
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					770 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					770 = {
+						is_owned_by = CRO 
+					}
+				}
+				FROM = {
+					tag = CRO
+				}
+			}
+			if = { 
+				limit = {
+					770 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					770 = {
+						is_owned_by = AUS 
+					}
+				}
+				FROM = {
+					tag = AUS
+				}
+			}
+			if = { 
+				limit = {
+					770 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+			if = { 
+				limit = {
+					770 = {
+						is_owned_by = SLO 
+					}
+				}
+				FROM = {
+					tag = SLO
+				}
+			}
+		}
+
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 770 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_istria"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_istria target: [From.GetName]"
+			if = { 
+					limit = {
+						770 = {
+							is_owned_by = SLO 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = SLO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						770 = {
+							is_owned_by = CRO
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = CRO
+					}
+				}
+			}
+			if = { 
+					limit = {
+						770 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						770 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						770 = {
+							is_owned_by = GER 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GER
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						770 = {
+							is_owned_by = AUS 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = AUS
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	BUL_take_doub = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = TRA
+		war_with_on_remove = ROM
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					77 = {
+						is_owned_by = HUN 
+					}
+				}
+				FROM = {
+					tag = HUN
+				}
+			}
+			if = { 
+				limit = {
+					77 = {
+						is_owned_by = ROM 
+					}
+				}
+				FROM = {
+					tag = ROM
+				}
+			}
+			if = { 
+				limit = {
+					77 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					77 = {
+						is_owned_by = TRA 
+					}
+				}
+				FROM = {
+					tag = TRA
+				}
+			}
+			if = { 
+				limit = {
+					77 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+			if = { 
+				limit = {
+					77 = {
+						is_owned_by = SLO 
+					}
+				}
+				FROM = {
+					tag = SLO
+				}
+			}
+		}
+
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 77 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_doub"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_doub target: [From.GetName]"
+			if = { 
+					limit = {
+						77 = {
+							is_owned_by = ROM 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ROM
+					}
+				}
+			}
+			if = { 
+					limit = {
+						77 = {
+							is_owned_by = TRA
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = TRA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						77 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						77 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						77 = {
+							is_owned_by = GER 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GER
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						77 = {
+							is_owned_by = UKR 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = UKR
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+	BUL_take_norfgreece = {
+        icon = generic_decision
+		war_with_on_remove = HUN
+		war_with_on_remove = GRE
+		war_with_on_remove = TUR
+		available = {
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+		}
+		
+		target_trigger = {
+			if = { 
+				limit = {
+					731 = {
+						is_owned_by = TUR 
+					}
+				}
+				FROM = {
+					tag = TUR
+				}
+			}
+			if = { 
+				limit = {
+					731 = {
+						is_owned_by = ROM 
+					}
+				}
+				FROM = {
+					tag = ROM
+				}
+			}
+			if = { 
+				limit = {
+					731 = {
+						is_owned_by = GER 
+					}
+				}
+				FROM = {
+					tag = GER
+				}
+			}
+			if = { 
+				limit = {
+					731 = {
+						is_owned_by = GRE 
+					}
+				}
+				FROM = {
+					tag = GRE
+				}
+			}
+			if = { 
+				limit = {
+					731 = {
+						is_owned_by = ITA 
+					}
+				}
+				FROM = {
+					tag = ITA
+				}
+			}
+			if = { 
+				limit = {
+					731 = {
+						is_owned_by = SLO 
+					}
+				}
+				FROM = {
+					tag = SLO
+				}
+			}
+		}
+
+        visible = {
+			original_tag = BUL
+			BUL = {
+				has_completed_focus = BUL_full_unification
+			}
+			NOT = { owns_state = 731 }
+        }
+		
+        cost = 25
+
+        ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				BUL = {
+					NOT = { is_neighbor_of  = FROM }
+				}
+			}
+
+			modifier = {
+				factor = 0
+				FROM = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}	
+		}
+		
+		days_remove = 20
+
+        fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_take_norfgreece"
+			
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_take_norfgreece target: [From.GetName]"
+			if = { 
+					limit = {
+						731 = {
+							is_owned_by = TUR 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = TUR
+					}
+				}
+			}
+			if = { 
+					limit = {
+						731 = {
+							is_owned_by = GRE
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GRE
+					}
+				}
+			}
+			if = { 
+					limit = {
+						731 = {
+							is_owned_by = ITA 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = ITA
+					}
+				}
+			}
+			if = { 
+					limit = {
+						731 = {
+							is_owned_by = HUN 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = HUN
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						731 = {
+							is_owned_by = GER 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = GER
+					}
+				}
+			}
+			
+			if = { 
+					limit = {
+						731 = {
+							is_owned_by = UKR 
+						}
+					}
+				BUL = {
+					declare_war_on = {
+						type = annex_everything
+						target = UKR
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+}
+
+foreign_politics = {
+
+	BUL_Join_Stahlpakt = {
+		icon = eng_trade_unions_support
+
+		allowed = { tag = BUL }
+
+		available = {
+			at_peace_or_same_enemies_as_FROM = yes
+			FROM = {
+				is_faction_leader = yes
+			}
+			if = {
+				limit = {
+					has_government = national_populist
+				}
+				GER = {
+					OR = {
+						has_government = paternal_autocrat
+						has_government = national_populist
+						has_government = valkist
+					}
+				}
+			}
+		}
+
+		visible = {
+			is_valid_peace_target = yes
+			is_in_faction = no
+			has_government = national_populist
+			has_country_flag = BUL_greater_bulgaria_flag
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		targets = { GER }
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 0
+		days_remove = 7
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				FROM = { surrender_progress > 0.20 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_Join_Stahlpakt target: [From.GetName]"
+			FROM = {
+				country_event = bulforeign.3
+			}
+		}
+	}
+	
+	BUL_Join_Entente = {
+		icon = eng_trade_unions_support
+
+		allowed = { tag = BUL }
+
+		available = {
+			at_peace_or_same_enemies_as_FROM = yes
+			FROM = {
+				is_faction_leader = yes
+			}
+		}
+
+		visible = {
+			FRA = {
+				has_war_with = GER
+			}
+			is_valid_peace_target = yes
+			is_in_faction = no
+			has_government = social_conservative
+			OR = {
+				has_country_flag = BUL_yug_formed_peacefully
+				SER = {
+					country_exists = no
+				}
+			}
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		targets = { FRA }
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 0
+		days_remove = 7
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				FROM = { surrender_progress > 0.20 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_Join_Entente target: [From.GetName]"
+			FROM = {
+				country_event = bulforeign.6
+			}
+		}
+	}
+
+}
+
+
+BUL_integrate = {
+  
+	
+	BUL_core_wthrace = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+
+		available = {
+			controls_state = 763
+		}
+
+		visible = {
+			763 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 25
+		days_remove = 60
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_wthrace target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_wthrace target: [From.GetName]"
+                add_state_core = 763
+			if = {
+				limit = { 763 = { is_claimed_by = ROOT } }
+				remove_state_claim = 763
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_emac = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+		available = {
+			controls_state = 184
+		}
+
+		visible = {
+			184 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 25
+		days_remove = 60
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_emac target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_emac target: [From.GetName]"
+                add_state_core = 184
+			if = {
+				limit = { 184 = { is_claimed_by = ROOT } }
+				remove_state_claim = 184
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_cmac = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+		available = {
+			controls_state = 731
+		}
+
+		visible = {
+			731 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		cost = 100
+		days_remove = 200
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_emac target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_emac target: [From.GetName]"
+                add_state_core = 731
+			if = {
+				limit = { 731 = { is_claimed_by = ROOT } }
+				remove_state_claim = 731
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_wmac = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+
+		available = {
+			controls_state = 106
+			controls_state = 787
+		}
+
+		visible = {
+			106 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 50
+		days_remove = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_emac target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_emac target: [From.GetName]"
+                add_state_core = 106
+			if = {
+				limit = { 106 = { is_claimed_by = ROOT } }
+				remove_state_claim = 106
+                                
+			}
+			     add_state_core = 787
+			if = {
+				limit = { 787 = { is_claimed_by = ROOT } }
+				remove_state_claim = 787
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_ethrace = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+		available = {
+			controls_state = 342
+		}
+
+		visible = {
+			342 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		cost = 100
+		days_remove = 200
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_emac target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_emac target: [From.GetName]"
+                add_state_core = 342
+			if = {
+				limit = { 342 = { is_claimed_by = ROOT } }
+				remove_state_claim = 342
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_ndoub = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+
+		available = {
+			controls_state = 861
+		}
+
+		visible = {
+			861 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		cost = 100
+		days_remove = 120
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_emac target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_emac target: [From.GetName]"
+                add_state_core = 861
+			if = {
+				limit = { 861 = { is_claimed_by = ROOT } }
+				remove_state_claim = 861
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	
+	#yugoslav claims
+	
+	BUL_core_istria = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+		available = {
+			controls_state = 736
+			controls_state = 770
+			controls_state = 917
+		}
+
+		visible = {
+			has_country_flag = BUL_yug_formed_peacefully
+			917 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_istria target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_istria target: [From.GetName]"
+                add_state_core = 736
+			if = {
+				limit = { 736 = { is_claimed_by = ROOT } }
+				remove_state_claim = 736
+                                
+			}
+			    add_state_core = 770
+			if = {
+				limit = { 770 = { is_claimed_by = ROOT } }
+				remove_state_claim = 770
+                                
+			}
+			    add_state_core = 917
+			if = {
+				limit = { 917 = { is_claimed_by = ROOT } }
+				remove_state_claim = 917
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_dalmatia = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+
+		available = {
+			controls_state = 103
+			controls_state = 163
+			controls_state = 789
+		}
+
+		visible = {
+			has_country_flag = BUL_yug_formed_peacefully
+			103 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_dalmatia target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_dalmatia target: [From.GetName]"
+                add_state_core = 103
+			if = {
+				limit = { 103 = { is_claimed_by = ROOT } }
+				remove_state_claim = 103
+                                
+			}
+			    add_state_core = 163
+			if = {
+				limit = { 163 = { is_claimed_by = ROOT } }
+				remove_state_claim = 163
+                                
+			}
+			    add_state_core = 789
+			if = {
+				limit = { 789 = { is_claimed_by = ROOT } }
+				remove_state_claim = 789
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_slovenia = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+
+		available = {
+			controls_state = 102
+			controls_state = 767
+		}
+
+		visible = {
+			has_country_flag = BUL_yug_formed_peacefully
+			102 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 100
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_dalmatia target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_dalmatia target: [From.GetName]"
+                add_state_core = 102
+			if = {
+				limit = { 102 = { is_claimed_by = ROOT } }
+				remove_state_claim = 102
+                                
+			}
+			    add_state_core = 767
+			if = {
+				limit = { 767 = { is_claimed_by = ROOT } }
+				remove_state_claim = 767
+                                
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	BUL_core_croatia = {
+		icon = generic_nationalism
+		allowed = { tag = BUL }
+
+		available = {
+			controls_state = 109
+		}
+
+		visible = {
+			has_country_flag = BUL_yug_formed_peacefully
+			109 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		cost = 75
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_core_croatia target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BUL_core_croatia target: [From.GetName]"
+                add_state_core = 109
+			if = {
+				limit = { 109 = { is_claimed_by = ROOT } }
+				remove_state_claim = 109
+                                
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	
+}
+
+
+
+
+BUL_intervention = {
+	BUL_waronserbia = {
+		icon = generic_prepare_civil_war
+
+		allowed = { tag = BUL }
+
+		fire_only_once = no
+
+		activation = {
+			BUL = {
+				has_war_with = SER
+				is_in_faction = no
+				has_offensive_war = yes
+			}
+			hidden_trigger = {
+				NOT = { owns_state = 942 }
+				NOT = {
+					AND = {
+						owns_state = 763
+						owns_state = 77
+					}
+				}
+				GRE = {
+					is_puppet = no
+					is_in_faction = no
+				}
+				SER = {
+					NOT = {
+						OR = {
+							has_war_with = ROM
+							has_war_with = GRE
+							has_war_with = GER
+						}
+					}
+				}
+			}		
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					has_war_with = SER
+					surrender_progress < 0.1
+					controls_state = 942
+					SER = {
+						surrender_progress > 0.75
+					}
+				}
+				AND = {
+					has_war_with = SER
+					surrender_progress < 0.1
+					controls_state = 942
+					controls_state = 106
+					controls_state = 787
+					controls_state = 1037
+					SER = {
+						surrender_progress > 0.6
+					}
+				}
+			}
+		}
+
+
+		is_good = no
+
+		days_mission_timeout = 60
+
+		cancel_trigger = { 
+			OR = {
+				is_in_faction = yes
+				NOT = { has_war_with = SER }
+				hidden_trigger = {
+					SER = {
+						OR = {
+							has_war_with = GRE
+							has_war_with = ROM
+							has_war_with = GER
+						}
+					}
+				}
+			}
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout BUL_waronserbia target: [From.GetName]"
+			if = {
+				limit = {
+					NOT = { owns_state = 763 }
+				}	
+				GRE = { country_event = bulforeign.1 }
+			}
+			if = {
+				limit = {
+					owns_state = 763
+					NOT = { owns_state = 77 }
+				}	
+				ROM = { country_event = bulforeign.1 }
+			}
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_waronserbia target: [From.GetName]"
+			SER = { country_event = bulpeace.1 }
+		}
+
+	}
+	
+	BUL_warongreece = {
+		icon = generic_prepare_civil_war
+
+		allowed = { tag = BUL }
+
+		fire_only_once = no
+
+		activation = {
+			BUL = {
+				has_war_with = GRE
+				is_in_faction = no
+				has_offensive_war = yes
+			}
+			hidden_trigger = {
+				NOT = { owns_state = 731 }
+				NOT = {
+					AND = {
+						owns_state = 942
+						owns_state = 77
+					}
+				}
+				GRE = {
+					is_puppet = no
+					is_in_faction = no
+				}
+				GRE = {
+					NOT = {
+						OR = {
+							has_war_with = ROM
+							has_war_with = SER
+							has_war_with = GER
+						}
+					}
+				}
+			}		
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					has_war_with = GRE
+					surrender_progress < 0.1
+					controls_state = 763
+					GRE = {
+						surrender_progress > 0.75
+					}
+				}
+				AND = {
+					has_war_with = GRE
+					surrender_progress < 0.1
+					controls_state = 763
+					controls_state = 731
+					controls_state = 184
+					controls_state = 342
+					GRE = {
+						surrender_progress > 0.6
+					}
+				}
+			}
+		}
+
+
+		is_good = no
+
+		days_mission_timeout = 60
+
+		cancel_trigger = { 
+			OR = {
+				is_in_faction = yes
+				NOT = { has_war_with = GRE }
+				hidden_trigger = {
+					GRE = {
+						OR = {
+							has_war_with = SER
+							has_war_with = ROM
+							has_war_with = GER
+						}
+					}
+				}
+			}
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout BUL_waronserbia target: [From.GetName]"
+			if = {
+				limit = {
+					NOT = { owns_state = 942 }
+				}	
+				SER = { country_event = bulforeign.1 }
+			}
+			if = {
+				limit = {
+					owns_state = 942
+					NOT = { owns_state = 77 }
+				}	
+				ROM = { country_event = bulforeign.1 }
+			}
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_waronserbia target: [From.GetName]"
+			GRE = { country_event = bulpeace.4 }
+		}
+
+	}
+	
+	BUL_waronromania = {
+		icon = generic_prepare_civil_war
+
+		allowed = { tag = BUL }
+
+		fire_only_once = no
+		activation = {
+			BUL = {
+				has_war_with = ROM
+				is_in_faction = no
+				has_offensive_war = yes
+			}
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						owns_state = 942
+						owns_state = 763
+					}
+				}
+				NOT = { owns_state = 77 }
+				ROM = {
+					is_puppet = no
+					is_in_faction = no
+				}
+				ROM = {
+					NOT = {
+						OR = {
+							has_war_with = GRE
+							has_war_with = SER
+							has_war_with = GER
+						}
+					}
+				}
+			}		
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					has_war_with = ROM
+					surrender_progress < 0.1
+					controls_state = 77
+					ROM = {
+						surrender_progress > 0.65
+					}
+				}
+				AND = {
+					has_war_with = ROM
+					surrender_progress < 0.1
+					controls_state = 77
+					controls_state = 861
+					ROM = {
+						surrender_progress > 0.5
+					}
+				}
+			}
+		}
+
+
+		is_good = no
+
+		days_mission_timeout = 90
+
+		cancel_trigger = { 
+			OR = {
+				is_in_faction = yes
+				NOT = { has_war_with = ROM }
+				hidden_trigger = {
+					ROM = {
+						OR = {
+							has_war_with = SER
+							has_war_with = GRE
+							has_war_with = GER
+						}
+					}
+				}
+			}
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout BUL_waronromania target: [From.GetName]"
+			if = {
+				limit = {
+					NOT = { owns_state = 942 }
+				}	
+				SER = { country_event = bulforeign.1 }
+			}
+			if = {
+				limit = {
+					NOT = { owns_state = 763 }
+				}	
+				GRE = { country_event = bulforeign.1 }
+			}
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_waronromania target: [From.GetName]"
+			ROM = { country_event = bulpeace.7 }
+		}
+
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+BUL_powerstruggle = {
+	##natpop military
+	BUL_natpop_demote_monarchist_officers = {
+		icon = soldierly_discipline
+		
+		available = {	
+			check_variable = {
+				BUL_natpops_militarycontrol < 95.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			command_power_gain = -0.5			
+		}
+		
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_militarycontrol_increase_small
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_demote_democrat_officers = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_natpops_militarycontrol < 95.01
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			command_power_gain = -0.5			
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_militarycontrol_increase_small
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_appoint_party_officers = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_natpops_militarycontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 4.99
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+		
+		
+		days_re_enable = 60
+		days_remove = 20
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1		
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_militarycontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_small
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_party_run_exercises = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_natpops_militarycontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 4.99
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 30
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			experience_gain_army = 0.15
+			political_power_gain = -0.1	
+			command_power_gain = -1.00
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_militarycontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_small
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_vast_purge = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_natpops_militarycontrol < 73.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 16.99
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 9.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_milcontrol		
+				check_variable = {
+					BUL_natpops_militarycontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			experience_gain_army = -0.05
+			command_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_militarycontrol_increase_large
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_large
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -17
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -10
+			}
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##natpop parliament
+	BUL_natpop_threaten_monarchist_members = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_natpops_parliamentcontrol < 95.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25			
+		}
+		
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_increase_small
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_threaten_democrat_members = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_natpops_parliamentcontrol < 95.01
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25			
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_increase_small
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_bribe_opposition_members = {
+		icon = scales
+		
+		available = {
+			num_of_available_civilian_factories > 0
+			check_variable = {
+				BUL_natpops_parliamentcontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 4.99
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_small
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_physically_remove_opposition = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_natpops_parliamentcontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 4.99
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+		
+		modifier = {
+			command_power_gain = -0.25		
+		}
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_small
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_occupy_parliament = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_natpops_parliamentcontrol < 73.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 9.99
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 16.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_parcontrol		
+				check_variable = {
+					BUL_natpops_parliamentcontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_increase_large
+			
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_large
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -10
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -17
+			}
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##natpop elite
+	BUL_natpop_target_monarchist_intellectuals = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_natpops_elitecontrol < 95.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.5			
+		}
+		
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_elitecontrol_increase_small
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_target_democrat_intellectuals = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_natpops_elitecontrol < 95.01
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.5			
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_elitecontrol_increase_small
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_funding_for_elite_interests = {
+		icon = shield
+		
+		available = {
+			num_of_available_civilian_factories > 1
+			check_variable = {
+				BUL_natpops_elitecontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 4.99
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_elitecontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_small
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_empowering_rival_elites = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_natpops_elitecontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 4.99
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 50
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_elitecontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_small
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_natpop_mass_arrests_of_hostile_elites = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_natpops_elitecontrol < 73.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 12.99
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 13.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_elicontrol		
+				check_variable = {
+					BUL_natpops_elitecontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_natpops_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_natpops_elitecontrol_increase_large
+			
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_medium
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -13
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -14
+			}
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	
+	##democrat military
+	BUL_democrat_demote_monarchist_officers = {
+		icon = soldierly_discipline
+		
+		available = {	
+			check_variable = {
+				BUL_democrats_militarycontrol < 95.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			command_power_gain = -0.5			
+		}
+		
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_militarycontrol_increase_small
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_demote_natpop_officers = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_democrats_militarycontrol < 95.01
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			command_power_gain = -0.5			
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_militarycontrol_increase_small
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_appoint_party_officers = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_democrats_militarycontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+		
+		
+		days_re_enable = 60
+		days_remove = 20
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1		
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_militarycontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_party_run_exercises = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_democrats_militarycontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 30
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			experience_gain_army = 0.15
+			political_power_gain = -0.1	
+			command_power_gain = -1.00
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_militarycontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_vast_purge = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_democrats_militarycontrol < 73.01
+			}
+			check_variable = {
+				BUL_monarchists_militarycontrol > 16.99
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 9.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_milcontrol		
+				check_variable = {
+					BUL_democrats_militarycontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			experience_gain_army = -0.05
+			command_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_militarycontrol_increase_large
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_reduce_large
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = -17
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -10
+			}
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##democrat parliament
+	BUL_democrat_threaten_monarchist_members = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_democrats_parliamentcontrol < 95.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25			
+		}
+		
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_increase_small
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_threaten_natpop_members = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_democrats_parliamentcontrol < 95.01
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25			
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_increase_small
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_bribe_opposition_members = {
+		icon = scales
+		
+		available = {
+			num_of_available_civilian_factories > 0
+			check_variable = {
+				BUL_democrats_parliamentcontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_physically_remove_opposition = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_democrats_parliamentcontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+		
+		modifier = {
+			command_power_gain = -0.25		
+		}
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_occupy_parliament = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_democrats_parliamentcontrol < 73.01
+			}
+			check_variable = {
+				BUL_monarchists_parliamentcontrol > 9.99
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 16.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_parcontrol		
+				check_variable = {
+					BUL_democrats_parliamentcontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_increase_large
+			
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_large
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = -10
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -17
+			}
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##democrat elite
+	BUL_democrat_target_monarchist_intellectuals = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_democrats_elitecontrol < 95.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.5			
+		}
+		
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_elitecontrol_increase_small
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_target_natpop_intellectuals = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_democrats_elitecontrol < 95.01
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.5			
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_elitecontrol_increase_small
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_funding_for_elite_interests = {
+		icon = shield
+		
+		available = {
+			num_of_available_civilian_factories > 1
+			check_variable = {
+				BUL_democrats_elitecontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_elitecontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_empowering_rival_elites = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_democrats_elitecontrol < 90.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 50
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_elitecontrol_increase_medium
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_democrat_mass_arrests_of_hostile_elites = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_democrats_elitecontrol < 73.01
+			}
+			check_variable = {
+				BUL_monarchists_elitecontrol > 12.99
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 13.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_elicontrol		
+				check_variable = {
+					BUL_democrats_elitecontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_democrats_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_democrats_elitecontrol_increase_large
+			
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_medium
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = -13
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -14
+			}
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##monarchist military
+	BUL_monarchist_demote_democrat_officers = {
+		icon = soldierly_discipline
+		
+		available = {	
+			check_variable = {
+				BUL_monarchists_militarycontrol < 95.01
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			command_power_gain = -0.5			
+		}
+		
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_increase_small
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_demote_natpop_officers = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_militarycontrol < 95.01
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			command_power_gain = -0.5			
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_increase_small
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_appoint_party_officers = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_militarycontrol < 90.01
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+		
+		
+		days_re_enable = 60
+		days_remove = 20
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1		
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_increase_medium
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_party_run_exercises = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_militarycontrol < 90.01
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 30
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			experience_gain_army = 0.15
+			political_power_gain = -0.1	
+			command_power_gain = -1.00
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_increase_medium
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_vast_purge = {
+		icon = soldierly_discipline
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_militarycontrol < 73.01
+			}
+			check_variable = {
+				BUL_democrats_militarycontrol > 16.99
+			}
+			check_variable = {
+				BUL_natpops_militarycontrol > 9.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_milcontrol		
+				check_variable = {
+					BUL_monarchists_militarycontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_militarycontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_militarycontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_militarycontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			experience_gain_army = -0.05
+			command_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_militarycontrol_increase_large
+			custom_effect_tooltip = BUL_democrats_militarycontrol_reduce_large
+			custom_effect_tooltip = BUL_natpops_militarycontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_democrats_militarycontrol
+				value = -17
+			}
+			add_to_variable = {
+				var = BUL_natpops_militarycontrol
+				value = -10
+			}
+			clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##monarchist parliament
+	BUL_monarchist_threaten_democrat_members = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_parliamentcontrol < 95.01
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25			
+		}
+		
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_increase_small
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_threaten_natpop_members = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_parliamentcontrol < 95.01
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25			
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_increase_small
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_bribe_opposition_members = {
+		icon = scales
+		
+		available = {
+			num_of_available_civilian_factories > 0
+			check_variable = {
+				BUL_monarchists_parliamentcontrol < 90.01
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_increase_medium
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_physically_remove_opposition = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_parliamentcontrol < 90.01
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		custom_cost_trigger = {
+			 command_power > 24.99
+		}
+		custom_cost_text = command_power_more_than_25
+		
+		modifier = {
+			command_power_gain = -0.25		
+		}
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_increase_medium
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_occupy_parliament = {
+		icon = scales
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_parliamentcontrol < 73.01
+			}
+			check_variable = {
+				BUL_democrats_parliamentcontrol > 9.99
+			}
+			check_variable = {
+				BUL_natpops_parliamentcontrol > 16.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_parcontrol		
+				check_variable = {
+					BUL_monarchists_parliamentcontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_parliamentcontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_parliamentcontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_parliamentcontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_parliamentcontrol_increase_large
+			
+			custom_effect_tooltip = BUL_natpops_parliamentcontrol_reduce_large
+			custom_effect_tooltip = BUL_democrats_parliamentcontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = -10
+			}
+			add_to_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = -17
+			}
+			clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	##monarchist elite
+	BUL_monarchist_target_democrat_intellectuals = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_elitecontrol < 95.01
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.5			
+		}
+		
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_increase_small
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_target_natpop_intellectuals = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_elitecontrol < 95.01
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 25
+
+		days_re_enable = 45
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.5			
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_increase_small
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = 5
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_funding_for_elite_interests = {
+		icon = shield
+		
+		available = {
+			num_of_available_civilian_factories > 1
+			check_variable = {
+				BUL_monarchists_elitecontrol < 90.01
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_increase_medium
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_empowering_rival_elites = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_elitecontrol < 90.01
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 4.99
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 4.99
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		cost = 50
+
+		days_re_enable = 60
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 50
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_increase_medium
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_small
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_small
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = 10
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -5
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -5
+			}
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	BUL_monarchist_mass_arrests_of_hostile_elites = {
+		icon = shield
+		
+		available = {
+			check_variable = {
+				BUL_monarchists_elitecontrol < 73.01
+			}
+			check_variable = {
+				BUL_democrats_elitecontrol > 12.99
+			}
+			check_variable = {
+				BUL_natpops_elitecontrol > 13.99
+			}
+			custom_trigger_tooltip = {
+				tooltip = BUL_65_elicontrol		
+				check_variable = {
+					BUL_monarchists_elitecontrol > 64.99
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_monarchist_flag
+			has_country_flag = BUL_struggle_ongoing
+		}
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				add = 100
+				check_variable = {
+					var = BUL_monarchists_elitecontrol
+					value = 70
+					compare = less_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_democrats_elitecontrol
+					value = 30
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				add = 200
+				check_variable = {
+					var = BUL_natpops_elitecontrol
+					value = 20
+					compare = greater_than_or_equals
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = -2.5
+		}
+		
+		complete_effect = {
+		
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = BUL_monarchists_elitecontrol_increase_large
+			
+			custom_effect_tooltip = BUL_natpops_elitecontrol_reduce_medium
+			custom_effect_tooltip = BUL_democrats_elitecontrol_reduce_medium
+			add_to_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = 27
+			}
+			add_to_variable = {
+				var = BUL_democrats_elitecontrol
+				value = -13
+			}
+			add_to_variable = {
+				var = BUL_natpops_elitecontrol
+				value = -14
+			}
+			clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+			clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	## AI
+	
+	BUL_monarchist_ai = {
+		icon = hand_grab
+		allowed = {
+			tag = BUL
+		}
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		activation = {
+			has_country_flag = BUL_struggle_ongoing
+			NOT = {
+				has_country_flag = BUL_monarchist_flag
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_struggle_ongoing
+		}
+		fixed_random_seed = no
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 25	
+		days_re_enable = 5
+
+		timeout_effect = {
+			hidden_effect = {
+				BUL = {
+					country_event = {
+						id = bulaifunction.1
+						days = 1
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	BUL_democrat_ai = {
+		icon = hand_grab
+		allowed = {
+			tag = BUL
+		}
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		activation = {
+			has_country_flag = BUL_struggle_ongoing
+			NOT = {
+				has_country_flag = BUL_democrats_flag
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_struggle_ongoing
+		}
+		fixed_random_seed = no
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 25	
+		days_re_enable = 5
+
+		timeout_effect = {
+			hidden_effect = {
+				BUL = {
+					country_event = {
+						id = bulaifunction.2
+						days = 1
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	BUL_natpop_ai = {
+		icon = hand_grab
+		allowed = {
+			tag = BUL
+		}
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		activation = {
+			has_country_flag = BUL_struggle_ongoing
+			NOT = {
+				has_country_flag = BUL_natpops_flag
+			}
+		}
+
+		visible = {
+			has_country_flag = BUL_struggle_ongoing
+		}
+		fixed_random_seed = no
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 25
+		days_re_enable = 5
+
+		timeout_effect = {
+			hidden_effect = {
+				BUL = {
+					country_event = {
+						id = bulaifunction.3
+						days = 1
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+}
