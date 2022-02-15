@@ -3,16 +3,20 @@ capital = 48
 oob = "BUL"
 
 set_convoys = 30
-set_stability = 0.34
-set_war_support = 0.60
+set_stability = 0.60
+set_war_support = 0.5
 
 country_event = { id = bulgaria.1 days = 1}
+country_event = { id = bulgaria.5 days = 5}
+
+set_country_flag = BUL_struggle_ongoing
 
 add_ideas = {
 	party_pop_0_10
 	limited_conscription
-	GEN_entente_member
 	constitutional_monarchy
+  BUL_national_catastrophe
+	BUL_political_struggle
 }
 
 set_technology = {
@@ -49,25 +53,73 @@ if = {
 }
 
 set_politics = {	
-	ruling_party = authoritarian_democrat
+	ruling_party = national_populist
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {
-  vanguardist = 19
-  collectivist = 17
-  libertarian_socialist = 7
-  social_democrat = 4
-  social_liberal = 5
-  market_liberal = 8
-  social_conservative = 12
-  authoritarian_democrat = 18
+  vanguardist = 1
+  collectivist = 4
+  libertarian_socialist = 2
+  social_democrat = 2
+  social_liberal = 6
+  market_liberal = 3
+  social_conservative = 18
+  authoritarian_democrat = 23
   paternal_autocrat = 9
-  national_populist = 1
+  national_populist = 32
   valkist = 0
+}
+
+
+
+##Military Control
+set_variable = {
+	var = BUL_natpops_militarycontrol
+	value = 33
+}
+
+set_variable = {
+	var = BUL_democrats_militarycontrol
+	value = 9
+}
+
+set_variable = {
+	var = BUL_monarchists_militarycontrol
+	value = 58
+}
+
+
+##Parliament Control
+set_variable = {
+	var = BUL_natpops_parliamentcontrol
+	value = 49
+}
+
+set_variable = {
+	var = BUL_democrats_parliamentcontrol
+	value = 39
+}
+
+set_variable = {
+	var = BUL_monarchists_parliamentcontrol
+	value = 12
+}
+
+##Elite Control
+set_variable = {
+	var = BUL_natpops_elitecontrol
+	value = 28
+}
+set_variable = {
+	var = BUL_democrats_elitecontrol
+	value = 40
+}
+set_variable = {
+	var = BUL_monarchists_elitecontrol
+	value = 32
 }
 
 recruit_character = BUL_Konstantin_Muraviev
@@ -76,13 +128,55 @@ recruit_character = BUL_Todor_Zhivkov
 recruit_character = BUL_Vasil_Kolarov
 recruit_character = BUL_Aleksandar_Malinov
 recruit_character = BUL_Nikola_Mushanov
-recruit_character = BUL_Konstantin_Stoilov
 recruit_character = BUL_Boris_III
 recruit_character = BUL_Racho_Petrov
-recruit_character = BUL_Petar_Gabrovski
+recruit_character = BUL_Ivan_Dochev
 recruit_character = BUL_Hristo_Lukov
-recruit_character = BUL_Kiril_I
-recruit_character = BUL_Stiliyan_Kovachev
-recruit_character = BUL_Nikola_Zhekov
+recruit_character = BUL_Teodosi_Daskalov
+recruit_character = BUL_Nikola_Nedev
+recruit_character = BUL_Asen_Nikolov
+recruit_character = BUL_Pencho_Zlatev
+recruit_character = BUL_Rusi_Rusev
+recruit_character = BUL_Konstantin_Bekyarov
+recruit_character = BUL_Nikola_Hadzhipetov
 recruit_character = BUL_Ivan_Valkov
-recruit_character = BUL_Nikola_Mikhov
+recruit_character = BUL_Kimon_Georgiev
+recruit_character = BUL_Konstantin_Lukash
+recruit_character = BUL_Nikola_Nakov
+recruit_character = BUL_Ivan_Variklechkov
+recruit_character = BUL_Sava_Ivanov
+recruit_character = BUL_Dimo_Kazasov
+recruit_character = BUL_Dimitur_Gichev
+recruit_character = BUL_Atanas_Burov
+recruit_character = BUL_Georgi_Kyoseivanov
+recruit_character = BUL_Petko_Stainov
+recruit_character = BUL_Raiko_Daskalov
+recruit_character = BUL_Zheko_Dimitrov
+recruit_character = BUL_Grigor_Cheshmedzhiev
+recruit_character = BUL_Boyan_Smilov
+recruit_character = BUL_Tsanko_Tserkovski
+recruit_character = BUL_Konstantin_Batolov
+recruit_character = BUL_Stefan_Klechkov
+recruit_character = BUL_Ivan_Stefanov
+recruit_character = BUL_Yanko_Sakazov
+recruit_character = BUL_Georgi_Iordanov
+recruit_character = BUL_Velichko_Koznichki
+recruit_character = BUL_Aleksandur_Obbov
+recruit_character = BUL_Slaveiko_Vasilev
+recruit_character = BUL_Petur_Todorov
+recruit_character = BUL_Asen_Kantardzhiev
+recruit_character = BUL_Vasil_Ikonomov
+recruit_character = BUL_Krustyo_Pastukhov
+recruit_character = BUL_Vergil_Dimov
+recruit_character = BUL_Dimitur_Vurbenov
+recruit_character = BUL_Rashko_Madzharov
+recruit_character = BUL_Spas_Duparinov
+recruit_character = BUL_Damyan_Velchev
+recruit_character = BUL_Lyuben_Kostov
+recruit_character = BUL_Aleksandŭr_Kisov
+recruit_character = BUL_Nikola_Bakurdzhiev
+recruit_character = BUL_Todor_Georgiev
+recruit_character = BUL_Trifon_Trifonov
+recruit_character = BUL_Dimitur_Airanov
+recruit_character = BUL_Gancho_Manchev
+recruit_character = BUL_Vasil_Boydev

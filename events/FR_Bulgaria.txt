@@ -1,400 +1,3130 @@
-﻿##############################
-# Kingdom of Bulgaria events #
-##############################
-# Created by darknight1342 #
-###########################
+﻿###############################
+# Republic of Bulgaria events #
+###############################
+# Created by muttmasher #######
+###############################
 
-add_namespace = bulgaria
+	add_namespace = bulgaria
 
-#Intro
-country_event = { 
-	id = bulgaria.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.1"}
-    title = "The Kingdom of Bulgaria"
-    desc = bulgaria.1.d
-    picture = GFX_report_event_soviet_soldiers_tank
+	#Intro
+	country_event = { 
+		id = bulgaria.1
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.1"}
+		title = "The Bulgarian Republic"
+		desc = bulgaria.1.d
+		picture = GFX_report_event_soviet_soldiers_tank
 
-    is_triggered_only = yes
+		is_triggered_only = yes
 
-    fire_only_once = yes
+		fire_only_once = yes
 
-    option = {
-        name = "Unity Makes Strength."
-    }
-}
-
-#Help Hungary against Romania
-country_event = {
-	id = bulgaria.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.2"}
-	title = "Honour the Hungarian Alliance?"
-	desc = bulgaria.2.d
-	picture = GFX_report_event_soviet_soldiers_tank
-
-	trigger = {
-		has_country_flag = bul_hun_treaty
-		HUN = {
-			has_war_with = ROM
+		option = {
+			name = "The Interwar Period and Political Situation"
+			country_event = bulgaria.3
+		}
+		option = {
+			name = "That's Quite Enough"
 		}
 	}
 
-	mean_time_to_happen = {
-		days = 2
-	}
+	#Help Hungary against Romania
+	country_event = {
+		id = bulgaria.2
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.2"}
+		title = "Honour the Hungarian Alliance?"
+		desc = bulgaria.2.d
+		picture = GFX_report_event_soviet_soldiers_tank
 
-	fire_only_once = yes
-
-	option = {
-		name = "Onwards, to war!"
-			add_to_war = { targeted_alliance = HUN enemy = ROM }
-		clr_country_flag = bul_hun_treaty
-	}
-	option = {
-		name = "War would be unfavourable at this time."
-		add_political_power = -50
-		clr_country_flag = bul_hun_treaty
-	}
-}
-country_event = { #Hungarian-backed collie coup
-	id = bulgaria.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.3"}
-	title = "Hungarians instigate a coup!"
-	desc = bulgaria.3.d
-	picture = GFX_report_event_generic_conference
-
-	is_triggered_only = yes
-
-	option = {
-		name = "The uprising is crushed!"
-		set_country_flag = BUL_CIVIL_WAR_AVERTED
-		add_manpower = -10000
-		add_stability = -0.05
-		add_popularity = { ideology = collectivist popularity = -0.2 }
-		add_popularity = { ideology = vanguardist popularity = -0.2 }
-		add_popularity = { ideology = libertarian_socialist popularity = -0.2 }
-	}
-
-	option = {
-		name = "The Collectivists are successful!"
 		trigger = {
-			NOT = {
-				has_global_flag = bul_civil_war
+			has_country_flag = bul_hun_treaty
+			HUN = {
+				has_war_with = ROM
 			}
 		}
-		set_country_flag = BUL_CIVIL_WAR_AVERTED
-		add_ideas = workers_republic
-		set_politics = {
-			ruling_party = collectivist
-			elections_allowed = no
+
+		mean_time_to_happen = {
+			days = 2
 		}
-		add_popularity = { ideology = collectivist popularity = 0.2 }
-		add_popularity = { ideology = vanguardist popularity = 0.05 }
-		add_popularity = { ideology = libertarian_socialist popularity = 0.05 }
-		diplomatic_relation = { country = HUN relation = non_aggression_pact }
-		HUN = {
-			country_event = { id = hungary.53 days = 1 }
+
+		fire_only_once = yes
+
+		option = {
+			name = "Onwards, to war!"
+				add_to_war = { targeted_alliance = HUN enemy = ROM }
+			clr_country_flag = bul_hun_treaty
 		}
-	}
-}
-
-country_event = {
-	id = bulgaria.4
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.4"}
-	title = "Orange Guard skirmishes with the Army!"
-	desc = bulgaria.4.d
-	picture = report_event_generic_conference
-
-	fire_only_once = yes
-	
-	trigger = {
-		tag = BUL
-		date > 1936.2.1
-	}
-
-	mean_time_to_happen = {
-		days = 0
-	}
-
-	option = {
-		name = "We will put them in their graves!"
-		add_manpower = -1000
-		add_popularity = { ideology = collectivist popularity = 0.015 }
-		add_popularity = { ideology = vanguardist popularity = 0.015 }
-		add_popularity = { ideology = libertarian_socialist popularity = 0.015 }
-		hidden_effect = { 
-			country_event = { days = 15 id = bulgaria.5 }
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
-country_event = {
-	id = bulgaria.5
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.5"}
-	title = "The Orange Guard is driven into hiding"
-	desc = bulgaria.5.d
-	picture = report_event_generic_conference
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Violent revolutionaries have no place in our Nation!"
-		add_stability = -0.025
-		add_popularity = { ideology = collectivist popularity = -0.03 }
-		add_popularity = { ideology = vanguardist popularity = -0.03 }
-		add_popularity = { ideology = libertarian_socialist popularity = -0.03 }
-		ai_chance = { factor = 100 }
-		hidden_effect = { 
-			country_event = { days = 15 id = bulgaria.6 }
+		option = {
+			name = "War would be unfavourable at this time."
+			add_political_power = -50
+			clr_country_flag = bul_hun_treaty
 		}
 	}
-}
 
-country_event = {
-	id = bulgaria.6
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.6"}
-	title = "Drop in support for the Tsar"
-	desc = bulgaria.6.d
-	picture = report_event_generic_conference
+	country_event = { 
+		id = bulgaria.3
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.3"}
+		title = "The Interwar Period and Political Situation"
+		desc = bulgaria.3.d
+		picture = GFX_report_event_BUL_crowd
 
-	is_triggered_only = yes
+		is_triggered_only = yes
 
-	option = {
-		name = "Worrying, but there is little we can do."
-		add_stability = -0.025
-		add_popularity = { ideology = authoritarian_democrat popularity = -0.025 }
-		hidden_effect = { 
-			country_event = { days = 31 id = bulgaria.7 }
+		fire_only_once = yes
+
+		option = {
+			name = "The Foreign Policy Situation"
+			country_event = bulgaria.4
 		}
-		ai_chance = { factor = 0 }
+		option = {
+			name = "That's Quite Enough"
+		}
+	}
+	country_event = { 
+		id = bulgaria.4
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.4"}
+		title = "The Foreign Policy Situation"
+		desc = bulgaria.4.d
+		picture = GFX_report_event_soviet_soldiers_tank
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = "Unity Makes Strength!"
+		}
 	}
 
-	option = {
-		name = "We need to form a United Front with the other parties!"
-		add_stability = -0.1
-		add_political_power = -50
-		hidden_effect = { 
-			country_event = { days = 31 id = bulgaria.10 }
+	country_event = { 
+		id = bulgaria.5
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.5"}
+		title = "The Power Struggle"
+		desc = bulgaria.5.d
+		picture = GFX_report_event_BUL_assembly2
+		
+		immediate = {
+			#MilCon Clamps
+			clamp_variable = {
+				var = BUL_natpops_militarycontrol
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = BUL_democrats_militarycontrol
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = BUL_monarchists_militarycontrol
+				min = 0
+				max = 100
+			}
+			#EliCon Clamps
+			clamp_variable = {
+				var = BUL_natpops_elitecontrol
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = BUL_democrats_elitecontrol
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = BUL_monarchists_elitecontrol
+				min = 0
+				max = 100
+			}
+			#ParlCon Clamps
+			clamp_variable = {
+				var = BUL_natpops_parliamentcontrol
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = BUL_democrats_parliamentcontrol
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				min = 0
+				max = 100
+			}
 		}
-		ai_chance = { factor = 100 } #AI will always take this to avoid civil-war spam
-	}
-}
 
-country_event = {
-	id = bulgaria.7
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.7"}
-	title = "Socialist Riots in Burgas!"
-	desc = bulgaria.7.d
-	picture = report_event_generic_conference
+		is_triggered_only = yes
 
-	is_triggered_only = yes
+		fire_only_once = yes
 
-	option = {
-		name = "Break them up!"
-		add_popularity = { ideology = collectivist popularity = 0.03 }
-		add_manpower = -1000
-		hidden_effect = { 
-			country_event = { days = 31 id = bulgaria.8 }
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
-country_event = {
-	id = bulgaria.8
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.8"}
-	title = "Fighting spreads across the Nation!"
-	desc = bulgaria.8.d
-	picture = report_event_generic_conference
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Send in the army! Send everything we have!"
-		add_manpower = -9000
-		add_stability = -0.05
-		hidden_effect = { 
-			country_event = { days = 31 id = bulgaria.9 }
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
-country_event = {
-	id = bulgaria.9
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.9"}
-	title = "The Leftists proclaim the Bulgarian Socialist Republic!"
-	desc = bulgaria.9.d
-	picture = report_event_generic_conference
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "Traitorous bastards! To war!"
-		set_global_flag = bul_civil_war
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-		add_popularity = { ideology = social_democrat popularity = -0.25 }
-		add_popularity = { ideology = libertarian_socialist popularity = -0.25 }
-		add_popularity = { ideology = collectivist popularity = -0.25 }
-		add_popularity = { ideology = vanguardist popularity = -0.25 }
-		add_stability = 0.25
-		add_political_power = 100
-		BSR = { 
-			every_state = {
-				limit = {
-					is_core_of = BUL
+		option = {
+			name = "We must finish securing total control."
+				ai_chance = {
+					base = 70
+					
+					modifier = {
+						has_country_flag = BUL_NRP_gamerule_flag
+						add = 1000
+					}
+					modifier = {
+						OR = {
+							has_country_flag = BUL_DEMOCRATIC_gamerule_flag
+							has_country_flag = BUL_MONARCHIST_gamerule_flag
+						}
+						add = -1000
+					}
 				}
-				add_core_of = BSR
+			custom_effect_tooltip = "BUL_chosenatpop_tooltip"
+			set_country_flag = BUL_natpops_flag
+			swap_ideas = { 
+				remove_idea = BUL_political_struggle 
+				add_idea = BUL_political_struggle_2 
 			}
-			transfer_state = 211
-			transfer_state = 764
-			transfer_state = 766
-			load_OOB = BSR
+			add_ideas = BUL_political_mobilisation
+				
 		}
-		declare_war_on = {
-			type = annex_everything
-			target = BSR
+		option = { #the cringe
+			name = "Democracy must not fall!"
+				ai_chance = {
+					base = 20
+					
+					modifier = {
+						has_country_flag = BUL_DEMOCRATIC_gamerule_flag
+						add = 1000
+					}
+					modifier = {
+						OR = {
+							has_country_flag = BUL_NRP_gamerule_flag
+							has_country_flag = BUL_MONARCHIST_gamerule_flag
+						}
+						add = -1000
+					}
+				}
+			custom_effect_tooltip = "BUL_chosedemocracy_tooltip"
+			set_country_flag = BUL_democrats_flag
+			swap_ideas = { 
+				remove_idea = BUL_political_struggle 
+				add_idea = BUL_political_struggle_2 
+			}
+			add_ideas = BUL_political_mobilisation
 		}
-		ai_chance = { factor = 100 }
+		option = {
+			name = "This vile republic must be put to an end."
+				ai_chance = {
+					base = 10
+					
+					modifier = {
+						has_country_flag = BUL_MONARCHIST_gamerule_flag
+						add = 1000
+					}
+					modifier = {
+						OR = {
+							has_country_flag = BUL_NRP_gamerule_flag
+							has_country_flag = BUL_DEMOCRATIC_gamerule_flag
+						}
+						add = -1000
+					}
+				}
+			custom_effect_tooltip = "BUL_choseking_tooltip"
+			set_country_flag = BUL_monarchist_flag
+			swap_ideas = { 
+				remove_idea = BUL_political_struggle 
+				add_idea = BUL_political_struggle_2 
+			}
+			add_ideas = BUL_political_mobilisation
+		}
 	}
-}
 
-country_event = {
-	id = bulgaria.10
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.10"}
-	title = "Pact with the Extremists"
-	desc = bulgaria.10.d
-	picture = report_event_generic_conference
+	country_event = { 
+		id = bulgaria.6
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.6"}
+		title = "The National Republican Party Assumes Total Control"
+		desc = bulgaria.6.d
+		picture = GFX_report_event_BUL_army
+
+		trigger = {
+			check_variable = { BUL_natpops_militarycontrol > BUL_monarchists_militarycontrol }
+			check_variable = { BUL_natpops_militarycontrol > BUL_democrats_militarycontrol }
+			check_variable = { BUL_natpops_elitecontrol > BUL_monarchists_elitecontrol }
+			check_variable = { BUL_natpops_elitecontrol > BUL_democrats_elitecontrol }
+			check_variable = { BUL_natpops_parliamentcontrol > BUL_monarchists_parliamentcontrol }
+			check_variable = { BUL_natpops_parliamentcontrol > BUL_democrats_parliamentcontrol }
+			
+			check_variable = {
+				var = BUL_natpops_militarycontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BUL_natpops_elitecontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BUL_natpops_parliamentcontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "The State is Ours!"
+			clr_country_flag = BUL_struggle_ongoing
+			add_popularity = {
+				 ideology = national_populist
+				 popularity = 0.20
+			}
+			set_cosmetic_tag = BUL_bulgarian_state_cosmetic
+      set_country_flag = BUL_nrp_control_path
+			remove_ideas = BUL_political_struggle_2
+			add_ideas = BUL_remaining_monarchists
+			add_ideas = BUL_remaining_democrats
+			remove_ideas = BUL_political_mobilisation
+			hidden_effect = {
+				swap_ideas = { 
+					remove_idea = parliamentary_republic 
+					add_idea = one_party_dictatorship 
+				}
+			}
+		}
+	}
+
+	country_event = { 
+		id = bulgaria.7
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.7"}
+		title = "Second Concentration Supporters Overthrow the Government"
+		desc = bulgaria.7.d
+		picture = GFX_report_event_BUL_assembly
+
+		trigger = {
+			check_variable = { BUL_democrats_militarycontrol > BUL_monarchists_militarycontrol }
+			check_variable = { BUL_democrats_militarycontrol > BUL_natpops_militarycontrol }
+			check_variable = { BUL_democrats_elitecontrol > BUL_monarchists_elitecontrol }
+			check_variable = { BUL_democrats_elitecontrol > BUL_natpops_elitecontrol }
+			check_variable = { BUL_democrats_parliamentcontrol > BUL_monarchists_parliamentcontrol }
+			check_variable = { BUL_democrats_parliamentcontrol > BUL_natpops_parliamentcontrol }
+			
+			check_variable = {
+				var = BUL_democrats_militarycontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BUL_democrats_elitecontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BUL_democrats_parliamentcontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "Bulgarian Democracy is Saved!"
+			clr_country_flag = BUL_struggle_ongoing
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			add_popularity = {
+				 ideology = social_conservative
+				 popularity = 0.20
+			}
+			remove_ideas = BUL_political_struggle_2
+      set_country_flag = BUL_democratic_path
+			add_ideas = BUL_remaining_monarchists
+			add_ideas = BUL_remaining_nationalists
+			remove_ideas = BUL_political_mobilisation
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	country_event = { 
+		id = bulgaria.8
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.8"}
+		title = "Tsarists Seize Control of the Government"
+		desc = bulgaria.8.d
+		picture = GFX_report_event_BUL_boris
+
+		trigger = {
+			check_variable = { BUL_monarchists_militarycontrol > BUL_democrats_militarycontrol }
+			check_variable = { BUL_monarchists_militarycontrol > BUL_natpops_militarycontrol }
+			check_variable = { BUL_monarchists_elitecontrol > BUL_democrats_elitecontrol }
+			check_variable = { BUL_monarchists_elitecontrol > BUL_natpops_elitecontrol }
+			check_variable = { BUL_monarchists_parliamentcontrol > BUL_democrats_parliamentcontrol }
+			check_variable = { BUL_monarchists_parliamentcontrol > BUL_natpops_parliamentcontrol }
+			
+			check_variable = {
+				var = BUL_monarchists_militarycontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BUL_monarchists_elitecontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BUL_monarchists_parliamentcontrol
+				value = 50
+				compare = greater_than_or_equals
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "The Tsar Returns!"
+			clr_country_flag = BUL_struggle_ongoing
+			set_politics = {
+				ruling_party = authoritarian_democrat
+			}
+			add_popularity = {
+				 ideology = authoritarian_democrat
+				 popularity = 0.20
+			}
+      set_country_flag = BUL_monarchist_path
+			remove_ideas = BUL_political_struggle_2
+			add_ideas = BUL_remaining_democrats
+			add_ideas = BUL_remaining_nationalists
+			remove_ideas = BUL_political_mobilisation
+			hidden_effect = {
+				swap_ideas = { 
+					remove_idea = parliamentary_republic 
+					add_idea = constitutional_monarchy 
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 	
-	is_triggered_only = yes
+	country_event = { 
+		id = bulgaria.9
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.9"}
+		title = "Greater Bulgaria Has Been Achieved"
+		desc = bulgaria.9.d
+		picture = GFX_report_event_BUL_crowd
 
-	option = {
-		name = "It's nessecary."
-		add_political_power = -50
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-		add_popularity = { ideology = paternal_autocrat popularity = -0.1 }
-		hidden_effect = { 
-			country_event = { days = 10 id = bulgaria.11 }
+		trigger = {
+			original_tag = BUL
+			OR = {
+				has_government = national_populist
+				has_government = authoritarian_democrat
+			}
+			owns_state = 342
+			controls_state = 342
+			owns_state = 731
+			controls_state = 731
+			owns_state = 106
+			controls_state = 106
+			owns_state = 861
+			controls_state = 861
 		}
-		ai_chance = { factor = 100 }
-	}
 
-	option = {
-		name = "It's dangerous."
-		hidden_effect = { 
-			country_event = { days = 10 id = bulgaria.7 }
+		fire_only_once = yes
+
+		option = {
+			name = "The Dream of San Stefano Has Been Achieved!"
+			add_ideas = BUL_balkan_hegemony
+			remove_ideas = BUL_national_catastrophe
+			set_country_flag = BUL_greater_bulgaria_flag
 		}
-		ai_chance = { factor = 0 }
 	}
-}
-
-country_event = {
-	id = bulgaria.11
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.11"}
-	title = "Pact with the Democrats"
-	desc = bulgaria.11.d
-	picture = report_event_generic_conference
 	
-	is_triggered_only = yes
-
-	option = {
-		name = "Promise future reform for a temporary alliance."
-		add_political_power = -100
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-		add_popularity = { ideology = social_liberal popularity = -0.1 }
-		add_popularity = { ideology = market_liberal popularity = -0.1 }
-		add_popularity = { ideology = social_conservative popularity = -0.1 }
-		hidden_effect = { 
-			country_event = { days = 10 id = bulgaria.12 }
-		}
-		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = "We have no need for that!"
-		hidden_effect = { 
-			country_event = { days = 10 id = bulgaria.7 }
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = bulgaria.12
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.12"}
-	title = "Free and fair elections?"
-	desc = bulgaria.12.d
-	picture = report_event_generic_conference
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Democracy might be our best shot at appeasing the People."
-		add_political_power = -150
-		country_event = { days = 31 id = bulgaria.13 }
-		hidden_effect = { 
-			country_event = { days = 1 id = bulgaria.14 }
-		}
-		ai_chance = { factor = 100 }
-	}
-
-	option = {
-		name = "Democracy?! Why would that be suitable in this point in time?!"
-		add_stability = 0.05
-		add_political_power = 50
-		hidden_effect = { 
-			country_event = { days = 10 id = bulgaria.7 }
-		}
-		ai_chance = { factor = 0 }
-	}
-}
-
-country_event = {
-	id = bulgaria.13
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.13"}
-	title = "Free Elections"
-	desc = bulgaria.13.d
-	picture = report_event_generic_conference
 	
-	is_triggered_only = yes
+	#### Flavour Events
 
-	option = {
-		name = "The United Front is victorious!"
-		set_country_flag = BUL_CIVIL_WAR_AVERTED
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
-		set_politics = {
-			ruling_party = authoritarian_democrat
-			elections_allowed = no
-		}
-		ai_chance = { factor = 60 }
-	}
-
-	option = {
-		name = "The BRSDP manages a popular vote!"
-		set_country_flag = BUL_CIVIL_WAR_AVERTED
-		add_popularity = { ideology = libertarian_socialist popularity = 0.15 }
-		set_politics = {
-			ruling_party = libertarian_socialist
-			elections_allowed = no
-		}
-		ai_chance = { factor = 40 }
-	}
-}
-
-country_event = {
-	id = bulgaria.14
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bulgaria.14"}
-	title = "The Left Deradicalizes"
-	desc = bulgaria.14.d
-	picture = report_event_generic_conference
+	add_namespace = bulgariaflavour
 	
-	is_triggered_only = yes
+	country_event = { 
+		id = bulgariaflavour.1
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulgariaflavour.1"}
+		title = "State Visit to Germany"
+		desc = bulgariaflavour.1.d
+		picture = ger_march
 
-	option = {
-		name = "Not good, not bad."
-		add_popularity = { ideology = libertarian_socialist popularity = 0.2 }
-		add_popularity = { ideology = collectivist popularity = -0.2 }
-		add_popularity = { ideology = vanguardist popularity = -0.2 }
-		ai_chance = { factor = 100 }
+		trigger = {
+			tag = BUL
+			has_war = no
+			has_government = national_populist
+			NOT = {
+				has_country_flag = BUL_struggle_ongoing
+			}
+			GER = {
+				has_war = no
+			}
+		}
+
+		mean_time_to_happen = {
+			months = 6
+			modifier = {
+				factor = 0.1
+				date > 1937.1.1
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "A toast to our German friends!"
+			add_opinion_modifier = {
+				target = GER
+				modifier = BUL_germanvisit
+			}
+			reverse_add_opinion_modifier = {
+				target = GER
+				modifier = BUL_germanvisit
+			}
+			add_popularity = {
+				ideology = valkist
+				popularity = 0.01
+			}
+		}
 	}
-}
+
+
+
+	#### Foreign Events
+
+	add_namespace = bulforeign
+
+	country_event = { 
+		id = bulforeign.1
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulforeign.1"}
+		title = {
+			text = "The Bulgarian War With Serbia"
+			trigger = { BUL = { has_war_with = SER } }
+		}
+		title = {
+			text = "The Bulgarian War With Greece"
+			trigger = { BUL = { has_war_with = GRE } }
+		}
+		title = {
+			text = "The Bulgarian War With Romania"
+			trigger = { BUL = { has_war_with = ROM } }
+		}
+
+		desc = bulforeign.1.d
+		#picture = 
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = "Declare War on Bulgaria!"
+			declare_war_on = {
+				target = BUL
+				type = annex_everything
+			}
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "There is nothing to gain in such a war."
+		}
+	}
+	
+	country_event = { #chain of remob in which gre can declare war but with mega debuff - unprepared
+		id = bulforeign.2
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulforeign.2"}
+		title = "Britain withdraws from Greece!"
+		desc = bulforeign.2.d
+		#picture = 
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = "Remilitarise the South!"
+			764 = {
+				set_demilitarized_zone = no
+			}
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "It isn't worth the risk..."
+		}
+	}
+	
+	country_event = { #Alliance with Bulgaria?
+		id = bulforeign.3
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulforeign.3 FROM = [From.GetName]" }
+		title = "A Balkan Ally?"
+		desc = bulforeign.3.d
+		picture = GFX_report_event_generic_sign_treaty3
+
+		is_triggered_only = yes
+
+		option = { #Accept
+			name = "Accept their offer"
+			BUL = {
+				country_event = bulforeign.4
+			}
+		}
+
+		option = { #Decline
+			name = "We don't want to get in a war over the Balkans again!"
+			trigger = {
+				is_ai = no
+			}
+			BUL = {
+				country_event = bulforeign.5
+			}
+		}
+	}
+
+	country_event = { #FROM has accepted
+		id = bulforeign.4
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulforeign.4 FROM = [From.GetName]" }
+		title = "Germany has Accepted!"
+		desc = bulforeign.4.d
+		picture = GFX_report_event_generic_sign_treaty2
+
+		is_triggered_only = yes
+
+		trigger = {
+			country_exists = FROM
+		}
+
+		option = { 
+			name = "A toast to our German friends!"
+			FROM = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					faction_leader = { add_to_faction = ROOT }
+				}
+				else = {
+					add_to_faction = ROOT
+				}
+			}
+		}
+	}
+
+	country_event = { #FROM has declined
+		id = bulforeign.5
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulforeign.5 FROM = [From.GetName]" }
+		title = "Germany has declined."
+		desc = bulforeign.5.d
+		picture = GFX_report_event_generic_sign_treaty2
+
+		is_triggered_only = yes
+
+		option = { 
+			name = "Damned Germans"
+			add_opinion_modifier = {
+				target = FROM
+				modifier = KR_hates_govt
+			}
+		}
+	}
+	
+	country_event = { #Alliance with Bulgaria? France ###
+		id = bulforeign.6
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulforeign.6 FROM = [From.GetName]" }
+		title = "A Balkan Ally?"
+		desc = bulforeign.6.d
+		picture = GFX_report_event_generic_sign_treaty3
+
+		is_triggered_only = yes
+
+		option = { #Accept
+			name = "Accept their offer"
+			BUL = {
+				country_event = bulforeign.7
+			}
+		}
+
+		option = { #Decline
+			name = "We don't want to get in a war over the Balkans again!"
+			trigger = {
+				is_ai = no
+			}
+			BUL = {
+				country_event = bulforeign.8
+			}
+		}
+	}
+
+	country_event = { #FROM has accepted
+		id = bulforeign.7
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulforeign.7 FROM = [From.GetName]" }
+		title = "France has Accepted!"
+		desc = bulforeign.7.d
+		picture = GFX_report_event_generic_sign_treaty2
+
+		is_triggered_only = yes
+
+		trigger = {
+			country_exists = FROM
+		}
+
+		option = { 
+			name = "A toast to our French friends!"
+			FROM = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					faction_leader = { add_to_faction = ROOT }
+				}
+				else = {
+					add_to_faction = ROOT
+				}
+			}
+		}
+	}
+
+	country_event = { #FROM has declined
+		id = bulforeign.8
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulforeign.8 FROM = [From.GetName]" }
+		title = "France has declined."
+		desc = bulforeign.8.d
+		picture = GFX_report_event_generic_sign_treaty2
+
+		is_triggered_only = yes
+
+		option = { 
+			name = "Damned French"
+			add_opinion_modifier = {
+				target = FROM
+				modifier = KR_hates_govt
+			}
+		}
+	}
+
+
+	country_event = { 
+		id = bulforeign.100
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulforeign.100"}
+		title = "Greece Declares War on Us!"
+		desc = bulforeign.100.d
+		#picture = 
+
+		trigger = {
+			original_tag = BUL
+			has_defensive_war_with = GRE
+			NOT = {
+				owns_state = 731
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "We will destroy their pathetic nation!"
+			add_state_claim = 731
+			add_state_claim = 184
+			add_state_claim = 342
+			add_state_claim = 763
+			if = {
+				limit = {
+					GRE = {
+						owns_state = 341 
+					}
+				}
+				add_state_claim = 341
+			}
+		}
+	}
+
+	country_event = { 
+		id = bulforeign.101
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulforeign.101"}
+		title = "Romania Declares War on Us!"
+		desc = bulforeign.101.d
+		#picture = 
+
+		trigger = {
+			original_tag = BUL
+			has_defensive_war_with = ROM
+			NOT = {
+				owns_state = 77
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "We will destroy their pathetic nation!"
+			add_state_core = 77
+			add_state_claim = 861
+		}
+	}
+
+	country_event = { 
+		id = bulforeign.102
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulforeign.102"}
+		title = "Serbia Declares War on Us!"
+		desc = bulforeign.102.d
+		#picture = 
+
+		trigger = {
+			original_tag = BUL
+			has_defensive_war_with = SER
+			NOT = {
+				owns_state = 942
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "We will destroy their pathetic nation!"
+			add_state_core = 942
+			add_state_claim = 787
+			add_state_claim = 106
+			add_state_claim = 1037
+		}
+	}
+
+
+
+
+	#### Peace Events
+
+	add_namespace = bulpeace
+
+	country_event = { 
+		id = bulpeace.1
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.1"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.1.d
+		picture = GFX_report_event_BUL_army
+		
+		immediate = {
+			hidden_effect = {
+				set_country_flag = BUL_serpeaceevent_fired
+			}
+		}
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.2 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.2
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.2 FROM = [From.GetName]" }
+		title = "Peace with Serbia?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.2.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+				add_timed_idea = { idea = BUL_serbian_reperations_bul  days = 365 }
+				SER = { add_timed_idea = { idea = BUL_serbian_reperations_ser  days = 365 } }
+		}
+
+		option = {
+			name = bulpeace.2.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			GRE = { country_event = bulforeign.1 }
+			ROM = { country_event = bulforeign.1 }
+			FROM = { country_event = bulpeace.3 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.3
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.3 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.3.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.4
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.4"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.4.d
+		picture = GFX_report_event_BUL_army
+		
+		immediate = {
+			hidden_effect = {
+				set_country_flag = BUL_grepeaceevent_fired
+			}
+		}
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.5 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.5
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.5 FROM = [From.GetName]" }
+		title = "Peace with Greece?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.5.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+				custom_effect_tooltip = BUL_greek_fleet
+				hidden_effect = {
+					GRE = {
+						destroy_ships = {
+							type = destroyer
+							count = 8
+						}
+						destroy_ships = {
+							type = submarine
+							count = 4
+						}
+					}
+					BUL = {
+						load_oob = "BUL_GRE_naval"
+					}
+				}
+		}
+
+		option = {
+			name = bulpeace.5.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			SER = { country_event = bulforeign.1 }
+			ROM = { country_event = bulforeign.1 }
+			FROM = { country_event = bulpeace.6 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.6
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.6 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.6.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.7
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.7"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.7.d
+		picture = GFX_report_event_BUL_army
+		
+		immediate = {
+			hidden_effect = {
+				set_country_flag = BUL_rompeaceevent_fired
+			}
+		}
+
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.8 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.8
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.8 FROM = [From.GetName]" }
+		title = "Peace with Romania?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.8.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+				ROM = {
+				give_resource_rights = { receiver = BUL state = 46 }
+				}
+		}
+
+		option = {
+			name = bulpeace.8.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			SER = { country_event = bulforeign.1 }
+			GRE = { country_event = bulforeign.1 }
+			FROM = { country_event = bulpeace.9 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.9
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.9 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.9.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.10
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.10"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.10.d
+		picture = GFX_report_event_BUL_army
+		
+		trigger = {
+			original_tag = SER
+			BUL = { NOT = { has_country_flag = BUL_serpeaceevent_fired } }
+			BUL = {
+				is_in_faction = no 
+			}
+			OR = {
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 942
+					}
+					SER = {
+						surrender_progress > 0.8
+					}
+				}
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 942
+						controls_state = 106
+						controls_state = 787
+						controls_state = 1037
+					}
+					SER = {
+						surrender_progress > 0.65
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.11 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.11
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.11 FROM = [From.GetName]" }
+		title = "Peace with Serbia?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.11.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+		}
+
+		option = {
+			name = bulpeace.11.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			GRE = { country_event = bulforeign.1 }
+			ROM = { country_event = bulforeign.1 }
+			FROM = { country_event = bulpeace.12 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.12
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.12 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.12.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.13
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.13"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.13.d
+		picture = GFX_report_event_BUL_army
+		
+		trigger = {
+			original_tag = GRE
+			BUL = { NOT = { has_country_flag = BUL_grepeaceevent_fired } }
+			BUL = {
+				is_in_faction = no 
+			}
+			OR = {
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 763
+					}
+					GRE = {
+						surrender_progress > 0.8
+					}
+				}
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 763
+						controls_state = 731
+						controls_state = 184
+						controls_state = 342
+					}
+					GRE = {
+						surrender_progress > 0.65
+					}
+				}
+			}
+		}
+
+		
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.14 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.14
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.14 FROM = [From.GetName]" }
+		title = "Peace with Greece?" #it rhyme
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.14.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+				custom_effect_tooltip = BUL_greek_fleet
+				hidden_effect = {
+					GRE = {
+						destroy_ships = {
+							type = destroyer
+							count = 8
+						}
+						destroy_ships = {
+							type = submarine
+							count = 4
+						}
+					}
+					BUL = {
+						load_oob = "BUL_GRE_naval"
+					}
+				}
+		}
+
+		option = {
+			name = bulpeace.14.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			SER = { country_event = bulforeign.1 }
+			ROM = { country_event = bulforeign.1 }
+			FROM = { country_event = bulpeace.15 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.15
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.15 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.15.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.16
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.16"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.16.d
+		picture = GFX_report_event_BUL_army
+		
+		trigger = {
+			original_tag = ROM
+			BUL = { NOT = { has_country_flag = BUL_rompeaceevent_fired } }
+			BUL = {
+				is_in_faction = no 
+			}
+			OR = {
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 77
+					}
+					ROM = {
+						surrender_progress > 0.8
+					}
+				}
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 77
+						controls_state = 861
+					}
+					ROM = {
+						surrender_progress > 0.65
+					}
+				}
+			}
+		}
+
+		
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.17 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.17
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.17 FROM = [From.GetName]" }
+		title = "Peace with Romania?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.17.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+				give_resource_rights = { receiver = BUL state = 46 }
+		}
+
+		option = {
+			name = bulpeace.17.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			SER = { country_event = bulforeign.1 }
+			GRE = { country_event = bulforeign.1 }
+			FROM = { country_event = bulpeace.18 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.18
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.18 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.18.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.19
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.19"}
+		title = "Peace with Bulgaria?"
+		desc = bulpeace.19.d
+		picture = GFX_report_event_BUL_army
+		
+		trigger = {
+			original_tag = TUR
+			BUL = {
+				is_in_faction = no 
+			}
+			OR = {
+				AND = {
+					
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.01
+						controls_state = 77
+					}
+					TUR = {
+						surrender_progress > 0.1
+					}
+				}
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.01
+						controls_state = 77
+						controls_state = 861
+					}
+					TUR = {
+						surrender_progress > 0.05
+					}
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 60
+		}
+
+	
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.20 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.20
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.20 FROM = [From.GetName]" }
+		title = "Peace with the Turks?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.20.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+		}
+
+		option = {
+			name = bulpeace.20.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			FROM = { country_event = bulpeace.21 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.21
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.21 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.21.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+	
+	country_event = { 
+		id = bulpeace.22
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.22"}
+		title = "Peace with Yugoslavia?"
+		desc = bulpeace.22.d
+		picture = GFX_report_event_BUL_army
+		
+		trigger = {
+			original_tag = HUN
+			BUL = {
+				is_in_faction = no 
+			}
+			BUL = {
+				OR = {
+					has_country_flag = BUL_yug_formed_peacefully
+					has_country_flag = BUL_yug_formed_forcefully
+				}
+			}
+			OR = {
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 45
+					}
+					HUN = {
+						surrender_progress > 0.5
+					}
+				}
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 45
+						controls_state = 109
+					}
+					HUN = {
+						surrender_progress > 0.3
+					}
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 10
+		}
+
+		
+
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.23 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.23
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.23 FROM = [From.GetName]" }
+		title = "Peace with the Hungarians?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.23.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+		}
+
+		option = {
+			name = bulpeace.23.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			FROM = { country_event = bulpeace.24 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.24
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.24 FROM = [From.GetName]" }
+		title = "Yugoslavia Refuses Our Offer!"
+		desc = bulpeace.24.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+	
+	country_event = { 
+		id = bulpeace.25
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulpeace.25"}
+		title = "Peace with Yugoslavia?"
+		desc = bulpeace.25.d
+		picture = GFX_report_event_BUL_army
+		
+		trigger = {
+			original_tag = HUN
+			BUL = {
+				is_in_faction = no 
+			}
+			BUL = {
+				OR = {
+					has_country_flag = BUL_yug_formed_peacefully
+					has_country_flag = BUL_yug_formed_forcefully
+				}
+			}
+			OR = {
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 163
+					}
+					HUN = {
+						surrender_progress > 0.4
+					}
+				}
+				AND = {
+					has_war_with = BUL
+					BUL = {
+						surrender_progress < 0.1
+						controls_state = 163
+						controls_state = 736
+					}
+					HUN = {
+						surrender_progress > 0.3
+					}
+				}
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 10
+		}
+
+		
+		fire_only_once = yes
+
+		option = {
+			name = "Request a peace agreement!"
+			BUL = { country_event = bulpeace.26 }
+		}
+		option = {
+			trigger = {
+				is_ai = no
+			}
+			name = "We have not yet lost!"
+		}
+	}
+
+	country_event = { 
+		id = bulpeace.26
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.26 FROM = [From.GetName]" }
+		title = "Peace with the Italians?"
+		picture = GFX_report_event_BUL_army
+		desc = bulpeace.26.d
+
+		is_triggered_only = yes
+		
+		timeout_days = 5
+
+		option = {
+			name = "We are victorious!"
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+						is_claim_or_core_of_ROOT = yes
+					}
+					BUL = { transfer_state = PREV }
+				}
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+						has_war_with = FROM
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FROM
+							is_claim_or_core_of_PREV = yes
+						}
+						PREV = { transfer_state = PREV }
+					}
+				}
+				FROM = { white_peace_with_ROOT = yes }
+				if = {
+					limit = {
+						GRE = {
+							is_puppet_of = ITA
+						}
+					}
+					ITA = {
+						end_puppet = GRE
+					}
+					BUL = {
+						puppet = GRE
+					}
+				}
+				if = {
+					limit = {
+						ALB = {
+							is_puppet_of = ITA
+						}
+					}
+					ITA = {
+						end_puppet = ALB
+					}
+					BUL = {
+						puppet = ALB
+					}
+				}
+				if = {
+					limit = {
+						44 = {
+							is_owned_by = ITA
+						}
+					}
+					BUL = {
+						transfer_state = 44
+					}
+				}
+				
+				if = {
+					limit = {
+						796 = {
+							is_owned_by = ITA
+						}
+					}
+					BUL = {
+						transfer_state = 796
+					}
+				}
+				if = {
+					limit = {
+						164 = {
+							is_owned_by = ITA
+						}
+						GRE = {
+							is_puppet_of = BUL
+						}
+					}
+					GRE = {
+						transfer_state = 164
+					}
+				}
+				
+				
+				
+				if = {
+					limit = {
+						345 = {
+							is_owned_by = ITA
+						}
+						TUR = {
+							is_puppet_of = BUL
+						}
+					}
+					TUR = {
+						transfer_state = 345
+					}
+				}
+				
+				if = {
+					limit = {
+						39 = {
+							is_owned_by = ITA
+						}
+						774 = {
+							is_owned_by = ITA
+						}
+						AUS = {
+							is_puppet_of = BUL
+						}
+					}
+					AUS = {
+						transfer_state = 39
+						transfer_state = 774
+					}
+				}
+		}
+
+		option = {
+			name = bulpeace.26.b
+			ai_chance = { base = 0 }
+			add_war_support = -0.10
+			FROM = { country_event = bulpeace.27 }
+		}
+	}
+
+	country_event = { #Bulgaria refuses the peace offer
+		id = bulpeace.27
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulpeace.27 FROM = [From.GetName]" }
+		title = "Bulgaria Refuses Our Offer!"
+		desc = bulpeace.27.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "We Must Fight On"
+			add_war_support = 0.10
+		}
+	}
+	
+	
+	
+	
+	
+	#### AI 
+
+	add_namespace = bulyugo
+	
+	country_event = { 
+		id = bulyugo.1
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.1 FROM = [From.GetName]" }
+		title = "Bulgaria Proposes Treaty of Union"
+		desc = bulyugo.1.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = {
+			name = "To a Yugoslav Future!"
+			BUL = {
+				set_country_flag = BUL_treaty_accepted
+			}
+		}
+		option = {
+			name = "No Treaty with our Foes!"
+			trigger = {
+				is_ai = no
+			}
+		}
+	}
+	
+	country_event = { 
+		id = bulyugo.2
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.2 FROM = [From.GetName]" }
+		title = "The Question of Macedonia and Vidin"
+		desc = bulyugo.2.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = { #Serbian Proposal
+			name = "Macedonia and Vidin will be part of the Serbian region"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = 1
+			}
+			ai_chance = { base = 20 }
+			set_country_flag = BUL_yugmacedoniadone
+			custom_effect_tooltip = "BUL_serb_approval_increase_tooltip"
+			add_stability = -0.1
+		}
+		option = { # Bulgarian Proposal
+			name = "Macedonia and Vidin will be part of the Bulgarian region"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = -1
+			}
+			ai_chance = { base = 40 }
+			set_country_flag = BUL_yugmacedoniadone
+			custom_effect_tooltip = "BUL_serb_approval_decrease_tooltip"
+			add_stability = 0.1
+		}
+		option = { # Middle Ground
+			name = "Macedonia and Vidin have their own autonomous region"
+			ai_chance = { base = 40 }
+			set_country_flag = BUL_yugmacedoniadone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+		}
+	}
+	
+	country_event = { 
+		id = bulyugo.3
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.3 FROM = [From.GetName]" }
+		title = "Selecting a Capital"
+		desc = bulyugo.3.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = { #Serbian Proposal
+			name = "Belgrade will do"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = 1
+			}
+			ai_chance = { base = 50 }
+			set_country_flag = BUL_chosebelgrade
+			set_country_flag = BUL_yugcapitaldone
+			custom_effect_tooltip = "BUL_serb_approval_increase_tooltip"
+			add_political_power = -150
+		}
+		option = { # Bulgarian Proposal
+			name = "Sofia would make a perfect capital"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = -1
+			}
+			ai_chance = { base = 20 }
+			set_country_flag = BUL_chosesofia
+			set_country_flag = BUL_yugcapitaldone
+			custom_effect_tooltip = "BUL_serb_approval_decrease_tooltip"
+			add_political_power = 150
+		}
+		option = { # Middle Ground
+			name = "Nis is a good middle ground"
+			ai_chance = { base = 10 }
+			set_country_flag = BUL_chosenis
+			set_country_flag = BUL_yugcapitaldone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+			add_political_power = 50
+		}
+		option = { # Middle Ground
+			name = "Skopje is close enough to home"
+			ai_chance = { base = 10 }
+			set_country_flag = BUL_choseskop
+			set_country_flag = BUL_yugcapitaldone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+			add_political_power = 50
+		}
+		option = { # Middle Ground
+			name = "Vidin might as well be in Bulgaria"
+			ai_chance = { base = 10 }
+			set_country_flag = BUL_chosevidin
+			set_country_flag = BUL_yugcapitaldone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+			add_political_power = 50
+		}
+	}
+	
+	country_event = { 
+		id = bulyugo.4
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.4 FROM = [From.GetName]" }
+		title = "The Language of Government"
+		desc = bulyugo.4.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = { #Serbian Proposal
+			name = "Serbian is a Commonly Spoken Language"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = 1
+			}
+			
+			ai_chance = { base = 30 }
+			add_popularity = {
+				 ideology = national_populist
+				 popularity = 0.1
+			}
+			add_stability = -0.05
+			set_country_flag = BUL_yuglanguagedone
+			custom_effect_tooltip = "BUL_serb_approval_increase_tooltip"
+		}
+		option = { # Bulgarian Proposal
+			name = "Bulgarian as the Bringer of Union"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = -1
+			}
+			ai_chance = { base = 30 }
+			add_popularity = {
+				 ideology = social_conservative
+				 popularity = 0.1
+			}
+			add_stability = 0.05
+			set_country_flag = BUL_yuglanguagedone
+			custom_effect_tooltip = "BUL_serb_approval_decrease_tooltip"
+		}
+		option = { # Middle Ground
+			name = "Bilingualism will be necessary"
+			ai_chance = { base = 40 }
+			add_stability = -0.05
+			add_popularity = {
+				 ideology = social_conservative
+				 popularity = -0.05
+			}
+			add_popularity = {
+				 ideology = national_populist
+				 popularity = 0.05
+			}
+			set_country_flag = BUL_yuglanguagedone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+		}
+	}
+	
+	country_event = { 
+		id = bulyugo.5
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.5 FROM = [From.GetName]" }
+		title = "Fate of Great War Treaties and Debt"
+		desc = bulyugo.5.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = { #Serbian Proposal
+			name = "We must move on from the past"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = 1
+			}
+			ai_chance = { base = 70 }
+			set_country_flag = BUL_yugtreatiesdone
+			add_political_power = -50
+			custom_effect_tooltip = "BUL_serb_approval_increase_tooltip"
+			
+		}
+		option = { # Bulgarian Proposal
+			name = "Serbia Must Pay Us Back in Full"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = -1
+			}
+			ai_chance = { base = 30 }
+			set_country_flag = BUL_serbdebttreaty
+			set_country_flag = BUL_yugtreatiesdone
+			custom_effect_tooltip = "BUL_serb_debt_tooltip"
+			custom_effect_tooltip = "BUL_serb_approval_decrease_tooltip"
+		}
+	}
+	
+	country_event = { 
+		id = bulyugo.6
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.6 FROM = [From.GetName]" }
+		title = "Claims on Greater Yugoslavia"
+		desc = bulyugo.6.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = { #Serbian Proposal
+			name = "We must focus on the Northern Balkans"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = 1
+			}
+			ai_chance = { base = 0 }
+			add_state_core = 45
+			add_state_core = 103
+			add_state_core = 163
+			add_state_core = 789
+			add_state_claim = 109
+			add_state_claim = 767
+			add_state_claim = 102
+			add_state_claim = 736
+			add_state_claim = 770
+			add_state_claim = 917
+			set_country_flag = BUL_yugclaimsdone
+			custom_effect_tooltip = "BUL_serb_approval_increase_tooltip"
+		}
+		option = { # Bulgarian Proposal
+			name = "We must focus on Bulgarian Claims"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = -1
+			}
+			ai_chance = { base = 0 }
+			add_state_core = 77
+			add_state_claim = 861
+			add_state_claim = 731
+			add_state_claim = 184
+			add_state_claim = 342
+			add_state_claim = 763
+			set_country_flag = BUL_yugclaimsdone
+			custom_effect_tooltip = "BUL_serb_approval_decrease_tooltip"
+		}
+		option = { # Middle Ground
+			name = "Lay Claim to it All!"
+			ai_chance = { base = 100 }
+			#bulclaims
+			add_state_core = 77
+			add_state_claim = 861
+			add_state_claim = 731
+			add_state_claim = 184
+			add_state_claim = 342
+			add_state_claim = 763
+			#serclaims
+			add_state_core = 45
+			add_state_core = 103
+			add_state_core = 163
+			add_state_core = 789
+			add_state_claim = 109
+			add_state_claim = 767
+			add_state_claim = 102
+			add_state_claim = 736
+			add_state_claim = 770
+			add_state_claim = 917
+			set_country_flag = BUL_yugclaimsdone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+		}
+	}
+	
+	country_event = { 
+		id = bulyugo.7
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.7 FROM = [From.GetName]" }
+		title = "End of Negotiations"
+		desc = bulyugo.7.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		trigger = {
+			tag = BUL
+			has_country_flag = BUL_yugclaimsdone
+			has_country_flag = BUL_yugtreatiesdone
+			has_country_flag = BUL_yugcapitaldone
+			has_country_flag = BUL_yuglanguagedone
+			has_country_flag = BUL_yugmacedoniadone
+			has_country_flag = BUL_yugkingdone
+		}
+		
+		fire_only_once = yes
+
+		option = { 
+			name = "Time to see if the Serbs agree..."
+			SER = { country_event = bulyugo.8 days = 5 }
+		}
+		
+	}
+	
+	country_event = { 
+		id = bulyugo.8
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.8 FROM = [From.GetName]" }
+		title = "Final Agreement on Union"
+		desc = bulyugo.8.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+
+		option = { 
+			name = "We shall accept the Treaty!"
+				ai_chance = {
+					base = 50
+					
+					modifier = {
+						add = 10
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 0
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = 10
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = 15
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = 15
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 3
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = 20
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 4
+							compare = greater_than_or_equals
+						}
+					}
+					
+					modifier = {
+						add = -10
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -1
+							compare = less_than_or_equals
+						}
+					}
+					modifier = {
+						add = -20
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -2
+							compare = less_than_or_equals
+						}
+					}
+					modifier = {
+						add = -20
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -3
+							compare = less_than_or_equals
+						}
+					}
+					modifier = {
+						add = -30
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -4
+							compare = less_than_or_equals
+						}
+					}
+					
+				}
+				
+			BUL = { country_event = bulyugo.9 days = 5 }
+				
+		}
+		
+		option = { 
+			name = "This Treaty is Unacceptable"
+				ai_chance = {
+					base = 50
+					
+					modifier = {
+						add = 10
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -1
+							compare = less_than_or_equals
+						}
+					}
+					modifier = {
+						add = 20
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -2
+							compare = less_than_or_equals
+						}
+					}
+					modifier = {
+						add = 20
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -3
+							compare = less_than_or_equals
+						}
+					}
+					modifier = {
+						add = 30
+						check_variable = {
+							var = BUL_serbianapproval
+							value = -4
+							compare = less_than_or_equals
+						}
+					}
+					
+					modifier = {
+						add = -10
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 0
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = -10
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = -15
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = -15
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 3
+							compare = greater_than_or_equals
+						}
+					}
+					modifier = {
+						add = -20
+						check_variable = {
+							var = BUL_serbianapproval
+							value = 4
+							compare = greater_than_or_equals
+						}
+					}
+					
+				}
+			
+			BUL = { country_event = bulyugo.10 days = 5 }
+			
+		}
+		
+	}
+	
+	country_event = { 
+		id = bulyugo.9
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.9 FROM = [From.GetName]" }
+		title = "Serbia Agrees!"
+		desc = bulyugo.9.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+
+		option = { 
+			name = "Onward to Yugoslavia!"
+			set_country_flag = BUL_second_treaty_accepted
+			if = {
+				limit = {
+					has_country_flag = BUL_serbdebttreaty
+				}
+				add_timed_idea = { idea = BUL_serbian_reperations_bul days = 180 }
+				SER = {
+					add_timed_idea = { idea = BUL_serbian_reperations_ser days = 180 }
+				}
+			}
+			
+		}
+		
+	}
+	
+	country_event = { 
+		id = bulyugo.10
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.10 FROM = [From.GetName]" }
+		title = "Serbia Declines!"
+		desc = bulyugo.10.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+
+		option = { 
+			name = "Stubborn Serbs..."
+			set_country_flag = BUL_second_treaty_failed
+		}
+		
+	}
+	
+	country_event = { 
+		id = bulyugo.11
+		immediate = { log = "[GetDateText]: [Root.GetName]: event bulyugo.11 FROM = [From.GetName]" }
+		title = "Fate of the Serbian King"
+		desc = bulyugo.11.d
+		picture = GFX_report_event_generic_diplomacy4
+
+		is_triggered_only = yes
+
+		option = { #Serbian Proposal
+			name = "The Serbian King shall be a constitutional Head of State along the lines of the British Monarchy"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = 2
+			}
+			ai_chance = { base = 30 }
+			
+			set_country_flag = BUL_yugkingdone
+			set_country_flag = BUL_yugmonarchist
+			custom_effect_tooltip = "BUL_serb_approval_increasebig_tooltip"
+		}
+		option = { # Bulgarian Proposal
+			name = "We cannot compromise on our Republican values. The King goes!"
+			add_to_variable = {
+				var = BUL_serbianapproval
+				value = -2
+			}
+			ai_chance = { base = 30 }
+			
+			set_country_flag = BUL_yugkingdone
+			set_country_flag = BUL_yugrepublican
+			custom_effect_tooltip = "BUL_serb_approval_decreasebig_tooltip"
+		}
+		option = { # Middle Ground
+			name = "A Compromise: The Serbian King shall remain in his position but preside over just the Serbian region, while the state will formally be a Republic."
+			ai_chance = { base = 40 }
+			
+			set_country_flag = BUL_yugkingdone
+			custom_effect_tooltip = "BUL_serb_approval_neutral_tooltip"
+		}
+	}
+
+
+	#### AI 
+
+	add_namespace = bulaifunction
+
+	country_event = { #AI Monarchist
+		id = bulaifunction.1
+		immediate = {
+			log = "[GetDateText]: [Root.GetName]: event bulaifunction.1"
+			FROM = {
+				random_list = {
+					log = yes
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_monarchists_militarycontrol
+								value = 40
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_natpops_militarycontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_democrats_militarycontrol
+								value = 20
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_natpops_militarycontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_democrats_militarycontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_monarchists_militarycontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_natpops_militarycontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_democrats_militarycontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+					}
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_monarchists_elitecontrol
+								value = 30
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_natpops_elitecontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_democrats_elitecontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_natpops_elitecontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_democrats_elitecontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_monarchists_elitecontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_natpops_elitecontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_democrats_elitecontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+					}
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_monarchists_parliamentcontrol
+								value = 30
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_natpops_parliamentcontrol
+								value = 25
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_democrats_parliamentcontrol
+								value = 35
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_natpops_parliamentcontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_democrats_parliamentcontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_monarchists_parliamentcontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_natpops_parliamentcontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_democrats_parliamentcontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+					}
+					
+				}
+			}
+		}
+		title = bulaifunction.1.t
+		desc = bulaifunction.1.d
+
+		is_triggered_only = yes
+		hidden = yes
+
+		option = {
+			name = "Ok."
+
+		}
+	}
+
+	country_event = { #AI Democrat
+		id = bulaifunction.2
+		immediate = {
+			log = "[GetDateText]: [Root.GetName]: event bulaifunction.2"
+			FROM = {
+				random_list = {
+					log = yes
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_democrats_militarycontrol
+								value = 30
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_natpops_militarycontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_monarchists_militarycontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_natpops_militarycontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_monarchists_militarycontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_democrats_militarycontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_natpops_militarycontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_monarchists_militarycontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+					}
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_democrats_elitecontrol
+								value = 30
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_natpops_elitecontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_monarchists_elitecontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_natpops_elitecontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_monarchists_elitecontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_democrats_elitecontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_natpops_elitecontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_monarchists_elitecontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+					}
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_democrats_parliamentcontrol
+								value = 40
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_natpops_parliamentcontrol
+								value = 35
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_monarchists_parliamentcontrol
+								value = 25
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_natpops_parliamentcontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_monarchists_parliamentcontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_democrats_parliamentcontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_natpops_parliamentcontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_monarchists_parliamentcontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+					}
+		
+				}
+			}
+		}
+		title = bulaifunction.2.t
+		desc = bulaifunction.2.d
+
+		is_triggered_only = yes
+		hidden = yes
+
+		option = {
+			name = "Ok."
+
+		}
+	}
+
+	country_event = { #AI Natpop
+		id = bulaifunction.3
+		immediate = {
+			log = "[GetDateText]: [Root.GetName]: event bulaifunction.3"
+			FROM = {
+				random_list = {
+					log = yes
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_natpops_militarycontrol
+								value = 30
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_democrats_militarycontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_monarchists_militarycontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_democrats_militarycontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_monarchists_militarycontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_natpops_militarycontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_democrats_militarycontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_monarchists_militarycontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_militarycontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_militarycontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_militarycontrol min = 0 max = 100 }
+					}
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_natpops_elitecontrol
+								value = 30
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_democrats_elitecontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_monarchists_elitecontrol
+								value = 30
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_democrats_elitecontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_monarchists_elitecontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_natpops_elitecontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_democrats_elitecontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_monarchists_elitecontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_elitecontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_elitecontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_elitecontrol min = 0 max = 100 }
+					}
+					0 = {
+						modifier = {
+							add = 100
+							check_variable = {
+								var = BUL_natpops_parliamentcontrol
+								value = 40
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_democrats_parliamentcontrol
+								value = 35
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = 200
+							check_variable = {
+								var = BUL_monarchists_parliamentcontrol
+								value = 25
+								compare = greater_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_democrats_parliamentcontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						modifier = {
+							add = -1000
+							check_variable = {
+								var = BUL_monarchists_parliamentcontrol
+								value = 5
+								compare = less_than_or_equals
+							}
+						}
+						add_to_variable = {
+							var = BUL_natpops_parliamentcontrol
+							value = 10
+						}
+						add_to_variable = {
+							var = BUL_democrats_parliamentcontrol
+							value = -5
+						}
+						add_to_variable = {
+							var = BUL_monarchists_parliamentcontrol
+							value = -5
+						}
+						clamp_variable = { var = BUL_natpops_parliamentcontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_democrats_parliamentcontrol min = 0 max = 100 }
+						clamp_variable = { var = BUL_monarchists_parliamentcontrol min = 0 max = 100 }
+					}
+		
+				}
+			}
+		}
+		title = bulaifunction.3.t
+		desc = bulaifunction.3.d
+
+		is_triggered_only = yes
+		hidden = yes
+
+		option = {
+			name = "Ok."
+
+		}
+	}
+
+
+	country_event = { 
+		id = bulaifunction.4
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulaifunction.4"}
+		title = "offmaps"
+		desc = bulaifunction.4.d
+		picture = GFX_report_event_soviet_soldiers_tank
+
+		hidden = yes
+
+		trigger = {
+			original_tag = BUL
+			has_country_flag = BUL_offmap_set
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "Unity Makes Strength!"
+			set_country_flag = BUL_flag_firedfactories
+			add_offsite_building = { type = arms_factory level = 3 }
+		}
+	}
+
+	country_event = { 
+		id = bulaifunction.5
+		immediate = {log = "[GetDateText]: [Root.GetName]: event bulaifunction.5"}
+		title = "offmaps"
+		desc = bulaifunction.5.d
+		picture = GFX_report_event_soviet_soldiers_tank
+
+		hidden = yes
+
+		trigger = {
+			original_tag = BUL
+			NOT = { has_country_flag = BUL_offmap_set }
+			has_country_flag = BUL_flag_firedfactories
+		}
+
+		fire_only_once = yes
+
+		option = {
+			name = "Unity Makes Strength!"
+			add_offsite_building = { type = arms_factory level = -3 }
+		}
+	}

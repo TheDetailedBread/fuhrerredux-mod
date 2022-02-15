@@ -34,6 +34,21 @@ characters = {
 			ideology = valkist_subtype
 			traits = { }
 		}
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = SPF_Ramiro_Ledesma_Ramos_hog_val_hired }
+			}			
+			idea_token = SPF_Ramiro_Ledesma_Ramos_hog_val
+			on_add = { set_country_flag = SPF_Ramiro_Ledesma_Ramos_hog_val_hired }
+			on_remove = { clr_country_flag = SPF_Ramiro_Ledesma_Ramos_hog_val_hired }
+			traits = {
+				head_of_government
+				valkist
+				hog_reformist_soldier
+			}
+		}
 	}
 	SPF_Juan_Yague = {
 		name = "Juan Yagüe"
@@ -350,29 +365,6 @@ characters = {
 				economy_minister
 				valkist
 				eco_industrialiser
-			}
-		}
-	}
-	SPF_Ramiro_Ledesma_Ramos = {
-		name = "Ramiro Ledesma Ramos"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/SPF/SPF_Ramiro_Ledesma_Ramos.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = {
-				hidden_trigger = { has_country_flag = SPF_Ramiro_Ledesma_Ramos_hog_val_hired }
-			}			
-			idea_token = SPF_Ramiro_Ledesma_Ramos_hog_val
-			on_add = { set_country_flag = SPF_Ramiro_Ledesma_Ramos_hog_val_hired }
-			on_remove = { clr_country_flag = SPF_Ramiro_Ledesma_Ramos_hog_val_hired }
-			traits = {
-				head_of_government
-				valkist
-				hog_reformist_soldier
 			}
 		}
 	}
