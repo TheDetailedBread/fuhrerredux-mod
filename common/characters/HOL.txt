@@ -3,6 +3,7 @@ characters = {
 		name = "Izaak Reynders"
 		portraits = {
 			civilian = {
+        large = "gfx/leaders/HOL/Portrait_HOL_Izaak_Reynders.png"
 				small = "gfx/interface/ministers/HOL/HOL_Izaak_Reynders.png"
 			}
 			army = {
@@ -37,6 +38,7 @@ characters = {
 		name = "Henri Nicolas Alfred Swart"
 		portraits = {
 			civilian = {
+        large = "gfx/leaders/HOL/Portrait_HOL_Henri_Nicolas_Alfred_Swart.png"
 				small = "gfx/interface/ministers/HOL/HOL_Henri_Nicolas_Alfred_Swart.png"
 			}
 		}
@@ -60,6 +62,7 @@ characters = {
 		name = "Cornelis van Geelkerken"
 		portraits = {
 			civilian = {
+        large = "gfx/leaders/HOL/Portrait_HOL_Cornelis_van_Geelkerken.png"
 				small = "gfx/interface/ministers/HOL/HOL_Cornelis_van_Geelkerken.png"
 			}
 			army = {
@@ -585,6 +588,402 @@ characters = {
 		portraits = {
 			navy = {
 				large = "gfx/leaders/HOL/Portrait_HOL_Karel_Doorman.png"
+			}
+		}
+	}
+  HOL_David_Wijnkoop = {
+		name = "David Wijnkoop"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_David_Wijnkoop.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = HOL_David_Wijnkoop_hog_van_hired }
+			}			
+			idea_token = HOL_David_Wijnkoop_hog_van
+			on_add = { set_country_flag = HOL_David_Wijnkoop_hog_van_hired }
+			on_remove = { clr_country_flag = HOL_David_Wijnkoop_hog_van_hired }
+			traits = {
+				head_of_government
+				vanguardist
+				hog_red_chairmen
+			}
+		}
+	}
+	HOL_Anton_Pannekoek = {
+		name = "Anton Pannekoek"
+		portraits = {
+			civilian = {
+        large = "gfx/leaders/HOL/Portrait_HOL_Anton_Pannekoek.png"
+				small = "gfx/interface/ministers/HOL/HOL_Anton_Pannekoek.png"
+			}
+		}
+    country_leader = {
+      ideology = collectivist_subtype
+      traits = {}
+    }
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Anton_Pannekoek_hog_col_hired }
+			}			
+			idea_token = HOL_Anton_Pannekoek_hog_col
+			on_add = { set_country_flag = HOL_Anton_Pannekoek_hog_col_hired }
+			on_remove = { clr_country_flag = HOL_Anton_Pannekoek_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	HOL_Harm_Kolthek = {
+		name = "Harm Kolthek"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Harm_Kolthek.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Harm_Kolthek_hog_col_hired }
+			}			
+			idea_token = HOL_Harm_Kolthek_hog_col
+			on_add = { set_country_flag = HOL_Harm_Kolthek_hog_col_hired }
+			on_remove = { clr_country_flag = HOL_Harm_Kolthek_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_flamboyant_tough_guy
+			}
+		}
+	}
+	HOL_Henk_Sneevliet = {
+		name = "Henk Sneevliet"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Henk_Sneevliet.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Henk_Sneevliet_hog_lib_hired }
+			}			
+			idea_token = HOL_Henk_Sneevliet_hog_lib
+			on_add = { set_country_flag = HOL_Henk_Sneevliet_hog_lib_hired }
+			on_remove = { clr_country_flag = HOL_Henk_Sneevliet_hog_lib_hired }
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_pragmatic_statesman
+			}
+		}
+	}
+	HOL_Piet_Johannes_Schmidt = {
+		name = "Piet Johannes Schmidt"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Piet_Johannes_Schmidt.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Piet_Johannes_Schmidt_hog_lib_hired }
+			}			
+			idea_token = HOL_Piet_Johannes_Schmidt_hog_lib
+			on_add = { set_country_flag = HOL_Piet_Johannes_Schmidt_hog_lib_hired }
+			on_remove = { clr_country_flag = HOL_Piet_Johannes_Schmidt_hog_lib_hired }
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_charismatic_charmer
+			}
+		}
+	}
+	HOL_Paul_de_Groot = {
+		name = "Paul de Groot"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Paul_de_Groot.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Paul_de_Groot_for_van_hired }
+			}			
+			idea_token = HOL_Paul_de_Groot_for_van
+			on_add = { set_country_flag = HOL_Paul_de_Groot_for_van_hired }
+			on_remove = { clr_country_flag = HOL_Paul_de_Groot_for_van_hired }
+			traits = {
+				foreign_minister
+				vanguardist
+				for_ideological_crusader
+			}
+		}
+	}
+	HOL_Nicolaas_Beuzemaker = {
+		name = "Nicolaas Beuzemaker"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Nicolaas_Beuzemaker.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Nicolaas_Beuzemaker_for_col_hired }
+			}			
+			idea_token = HOL_Nicolaas_Beuzemaker_for_col
+			on_add = { set_country_flag = HOL_Nicolaas_Beuzemaker_for_col_hired }
+			on_remove = { clr_country_flag = HOL_Nicolaas_Beuzemaker_for_col_hired }
+			traits = {
+				foreign_minister
+				collectivist
+				for_apologetic_clerk
+			}
+		}
+	}
+	HOL_Benjamin_Boers = {
+		name = "Benjamin Boers"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Benjamin_Boers.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Benjamin_Boers_for_lib_hired }
+			}			
+			idea_token = HOL_Benjamin_Boers_for_lib
+			on_add = { set_country_flag = HOL_Benjamin_Boers_for_lib_hired }
+			on_remove = { clr_country_flag = HOL_Benjamin_Boers_for_lib_hired }
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_biased_intellectual
+			}
+		}
+	}
+	HOL_Louis_de_Visser = {
+		name = "Louis de Visser"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Louis_de_Visser.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Louis_de_Visser_eco_van_hired }
+			}			
+			idea_token = HOL_Louis_de_Visser_eco_van
+			on_add = { set_country_flag = HOL_Louis_de_Visser_eco_van_hired }
+			on_remove = { clr_country_flag = HOL_Louis_de_Visser_eco_van_hired }
+			traits = {
+				economy_minister
+				vanguardist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	HOL_Abraham_Verduin = {
+		name = "Abraham Verduin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Abraham_Verduin.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Abraham_Verduin_eco_col_hired }
+			}			
+			idea_token = HOL_Abraham_Verduin_eco_col
+			on_add = { set_country_flag = HOL_Abraham_Verduin_eco_col_hired }
+			on_remove = { clr_country_flag = HOL_Abraham_Verduin_eco_col_hired }
+			traits = {
+				economy_minister
+				collectivist
+				eco_imbedded_unioneer
+			}
+		}
+	}
+	HOL_Jacques_de_Kadt = {
+		name = "Jacques de Kadt"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Jacques_de_Kadt.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Jacques_de_Kadt_eco_lib_hired }
+			}			
+			idea_token = HOL_Jacques_de_Kadt_eco_lib
+			on_add = { set_country_flag = HOL_Jacques_de_Kadt_eco_lib_hired }
+			on_remove = { clr_country_flag = HOL_Jacques_de_Kadt_eco_lib_hired }
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_industrialiser
+			}
+		}
+	}
+	HOL_Jan_Tinbergen = {
+		name = "Jan Tinbergen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Jan_Tinbergen.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Jan_Tinbergen_eco_lib_hired }
+			}			
+			idea_token = HOL_Jan_Tinbergen_eco_lib
+			on_add = { set_country_flag = HOL_Jan_Tinbergen_eco_lib_hired }
+			on_remove = { clr_country_flag = HOL_Jan_Tinbergen_eco_lib_hired }
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	HOL_Bernhard_Coltof = {
+		name = "Bernhard Coltof"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Bernhard_Coltof.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Bernhard_Coltof_sec_van_hired }
+			}			
+			idea_token = HOL_Bernhard_Coltof_sec_van
+			on_add = { set_country_flag = HOL_Bernhard_Coltof_sec_van_hired }
+			on_remove = { clr_country_flag = HOL_Bernhard_Coltof_sec_van_hired }
+			traits = {
+				security_minister
+				vanguardist
+				sec_man_of_the_people
+			}
+		}
+	}
+	HOL_Daniel_Goulooze = {
+		name = "Daniel Goulooze"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Daniel_Goulooze.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Daniel_Goulooze_sec_col_hired }
+			}			
+			idea_token = HOL_Daniel_Goulooze_sec_col
+			on_add = { set_country_flag = HOL_Daniel_Goulooze_sec_col_hired }
+			on_remove = { clr_country_flag = HOL_Daniel_Goulooze_sec_col_hired }
+			traits = {
+				security_minister
+				collectivist
+				sec_health_and_safety
+			}
+		}
+	}
+	HOL_Henriette_Roland_Holst = {
+		name = "Henriette Roland Holst"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Henriette_Roland_Holst.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Henriette_Roland_Holst_sec_col_hired }
+			}			
+			idea_token = HOL_Henriette_Roland_Holst_sec_col
+			on_add = { set_country_flag = HOL_Henriette_Roland_Holst_sec_col_hired }
+			on_remove = { clr_country_flag = HOL_Henriette_Roland_Holst_sec_col_hired }
+			traits = {
+				security_minister
+				collectivist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	HOL_Abraham_Menist = {
+		name = "Abraham Menist"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Abraham_Menist.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Abraham_Menist_sec_lib_hired }
+			}			
+			idea_token = HOL_Abraham_Menist_sec_lib
+			on_add = { set_country_flag = HOL_Abraham_Menist_sec_lib_hired }
+			on_remove = { clr_country_flag = HOL_Abraham_Menist_sec_lib_hired }
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_silent_lawyer
+			}
+		}
+	}
+	HOL_Fokke_Bosman = {
+		name = "Fokke Bosman"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/HOL/HOL_Fokke_Bosman.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = HOL_Fokke_Bosman_sec_lib_hired }
+			}			
+			idea_token = HOL_Fokke_Bosman_sec_lib
+			on_add = { set_country_flag = HOL_Fokke_Bosman_sec_lib_hired }
+			on_remove = { clr_country_flag = HOL_Fokke_Bosman_sec_lib_hired }
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_prince_of_terror
 			}
 		}
 	}
