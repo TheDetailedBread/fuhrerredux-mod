@@ -1,241 +1,199 @@
 ideas = {
-    country = {
-        HOL_revaunchist_state = {
-            allowed = { original_tag = HOL }
-            picture = vittoria_mutilata
-            modifier = {
-                conscription_factor = 0.25
-                army_core_attack_factor = 0.075
-                army_core_defence_factor = 0.075
-            }
-        }
-        HOL_revaunchist_state_1 = {
-            allowed = { original_tag = HOL }
-            picture = vittoria_mutilata
-            modifier = {
-                surrender_limit = 0.15
-                conscription_factor = 0.25
-                army_core_attack_factor = 0.15
-                army_core_defence_factor = 0.15
-            }
-        }
-        HOL_dutch_german_economic_cooperation = {
-            allowed = { 
-                OR = {
-                    tag = HOL
-                    tag = GER
-                }
-            }
-            picture = HOL_joint_economy
-            modifier = {
-                production_speed_buildings_factor = 0.10
-                line_change_production_efficiency_factor = 0.15
-                industrial_capacity_factory = 0.05
-                industrial_capacity_dockyard = 0.05
-            }
-        }
-        HOL_dutch_german_economic_cooperation_1 = {
-            allowed = { 
-                OR = {
-                    tag = HOL
-                    tag = GER
-                }
-            }
-            picture = HOL_joint_economy
-            modifier = {
-                production_speed_buildings_factor = 0.15
-                line_change_production_efficiency_factor = 0.35
-                industrial_capacity_factory = 0.15
-                industrial_capacity_dockyard = 0.15
-            }
-        }
-        HOL_unrecognized_government = {
-            allowed = { original_tag = HOL }
-            picture = generic_neutrality_drift_bonus
-            modifier = {
-                trade_opinion_factor = -0.25
-                political_power_cost = 0.15
-            }
-        }
-        HOL_unrecognized_government_1 = {
-            allowed = { original_tag = HOL }
-            picture = generic_neutrality_drift_bonus
-            modifier = {
-                political_power_cost = 0.15
-            }
-        }
-        HOL_defensive_preparations = {
-            allowed = { original_tag = HOL }
-            picture = generic_fortify_the_borders
-            modifier = {
-                production_speed_bunker_factor = 0.15
-                production_speed_coastal_bunker_factor = 0.15
-                production_speed_anti_air_building_factor = 0.15
-            }
-        }
-        HOL_welfare_programs = {
-            allowed = { original_tag = HOL }
-            picture = ROM_king_carol_ii_hedonist
-            modifier = {
-                production_factory_max_efficiency_factor = 0.05
-            }
-        }
-        HOL_welfare_programs_1 = {
-            allowed = { original_tag = HOL }
-            picture = ROM_king_carol_ii_hedonist
-            modifier = {
-                production_factory_max_efficiency_factor = 0.15
-            }
-        }
-        HOL_industrial_budget = {
-            allowed = { original_tag = HOL }
-            picture = generic_central_management
-            modifier = {
-                consumer_goods_factor = -0.15
-            }
-        }
-        HOL_food_sufficiency = {
-            allowed = { original_tag = HOL }
-            picture = generic_agrarian_reform
-            modifier = {
-                consumer_goods_factor = -0.025
-                supply_consumption_factor = -0.05
-            }
-        }
-        HOL_food_sufficiency_1 = {
-            allowed = { original_tag = HOL }
-            picture = generic_agrarian_reform
-            modifier = {
-                consumer_goods_factor = -0.05
-                supply_consumption_factor = -0.15
-            }
-        }
-        HOL_enhanced_training = {
-            allowed = { original_tag = HOL }
-            picture = chi_army_corruption3
-            modifier = {
-                army_org_factor = 0.1
-                army_attack_factor = 0.15
-                army_defence_factor = 0.15
-            }
-        }
-        HOL_general_staff = {
-            allowed = { original_tag = HOL }
-            picture = general_staff
-            modifier = {
-                max_planning = 0.15
-                planning_speed = 0.15
-            }
-        }
-        HOL_weapons_production_expertise_idea = {
-            allowed = { original_tag = HOL }
-            picture = generic_license_production
-            equipment_bonus = {
-                infantry_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				motorized = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-                artillery_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-            }
-        }
-        HOL_production_quotas_idea = {
-            allowed = { original_tag = HOL }
-            picture = generic_production_bonus
-            modifier = {
-                political_power_cost = 0.075
-                industrial_capacity_factory = 0.15
-                industrial_capacity_dockyard = 0.15
-            }
-        }
-        HOL_research_boost_idea = {
-            allowed = { original_tag = HOL }
-            picture = jap_supremacy_of_technology
-            modifier = {
-                research_speed_factor = 0.15
-            }
-        }
-        HOL_kickstart_naval_production = {
-            allowed = { original_tag = HOL }
-            picture = generic_coastal_defense_ships
-            modifier = {
-                consumer_goods_factor = 0.05
-                production_speed_dockyard_factor = 0.15
-                industrial_capacity_dockyard = 0.25
-            }
-            research_bonus = {
-				naval_doctrine = 0.1
-			}
-        }
-        HOL_german_naval_designs = {
-            allowed = { original_tag = HOL }
-            picture = generic_coastal_defense_ships2
-            equipment_bonus = {
-                naval_equipment = {
-                    build_cost_ic = -0.05
-					instant = yes
-                }
-            }
-        }
-        HOL_intelligence_exchange = {
-            allowed = {
-                OR = {
-                    tag = HOL
-                    tag = GER
-                }
-            }
-            picture = generic_spy_intel
-            modifier = {
-                encryption_factor = 0.15
-                decryption_factor = 0.15
-            }
-        }
-        HOL_state_unions = {
-            allowed = { original_tag = HOL }
-            picture = ROM_king_carol_ii_hedonist
-            modifier = {
-                production_factory_max_efficiency_factor = 0.15
-            }
-        }
-        HOL_minimum_wage = {
-            allowed = { original_tag = HOL }
-            picture = ROM_king_carol_ii_hedonist
-            modifier = {
-                production_factory_max_efficiency_factor = 0.15
-                industrial_capacity_factory = 0.05
-            }
-        }
-        HOL_dutch_resistance = {
-            allowed = { original_tag = HOL }
-            picture = chi_war_of_resistance2
-            available = {
-                866 = {
-                    is_owned_by = BEL
-                    has_dynamic_modifier = { modifier = HOL_dutch_resistance_in_belgium }
-                }
-                867 = {
-                    is_owned_by = BEL
-                    has_dynamic_modifier = { modifier = HOL_dutch_resistance_in_belgium }
-                }
-            }
-        }
-        HOL_coffee_imports = {
-            allowed = { original_tag = HOL }
-            picture = generic_agrarian_society
-            modifier = {
-                army_speed_factor = 0.15
-            }
-        }
+  country = {
+    HOL_revaunchist_state = {
+      allowed = { original_tag = HOL }
+      picture = vittoria_mutilata
+      modifier = {
+        conscription_factor = 0.25
+        army_core_attack_factor = 0.075
+        army_core_defence_factor = 0.075
+      }
     }
+    HOL_revaunchist_state_1 = {
+      allowed = { original_tag = HOL }
+      picture = vittoria_mutilata
+      modifier = {
+        surrender_limit = 0.15
+        conscription_factor = 0.25
+        army_core_attack_factor = 0.15
+        army_core_defence_factor = 0.15
+      }
+    }
+    HOL_dutch_german_economic_cooperation = {
+      allowed = { 
+        OR = {
+          tag = HOL
+          tag = GER
+        }
+      }
+      picture = HOL_joint_economy
+      modifier = {
+        production_speed_buildings_factor = 0.10
+        line_change_production_efficiency_factor = 0.15
+        industrial_capacity_factory = 0.05
+        industrial_capacity_dockyard = 0.05
+      }
+    }
+    HOL_dutch_german_economic_cooperation_1 = {
+      allowed = { 
+        OR = {
+          tag = HOL
+          tag = GER
+        }
+      }
+      picture = HOL_joint_economy
+      modifier = {
+        production_speed_buildings_factor = 0.15
+        line_change_production_efficiency_factor = 0.35
+        industrial_capacity_factory = 0.15
+        industrial_capacity_dockyard = 0.15
+      }
+    }
+    HOL_unrecognized_government = {
+      allowed = { original_tag = HOL }
+      picture = generic_neutrality_drift_bonus
+      modifier = {
+        trade_opinion_factor = -0.25
+        political_power_cost = 0.15
+      }
+    }
+    HOL_unrecognized_government_1 = {
+      allowed = { original_tag = HOL }
+      picture = generic_neutrality_drift_bonus
+      modifier = {
+        political_power_cost = 0.15
+      }
+    }
+    HOL_defensive_preparations = {
+      allowed = { original_tag = HOL }
+      picture = generic_fortify_the_borders
+      modifier = {
+        production_speed_bunker_factor = 0.15
+        production_speed_coastal_bunker_factor = 0.15
+        production_speed_anti_air_building_factor = 0.15
+      }
+    }
+    HOL_welfare_programs = {
+      allowed = { original_tag = HOL }
+      picture = ROM_king_carol_ii_hedonist
+      modifier = {
+        production_factory_max_efficiency_factor = 0.05
+      }
+    }
+    HOL_welfare_programs_1 = {
+      allowed = { original_tag = HOL }
+      picture = ROM_king_carol_ii_hedonist
+      modifier = {
+        production_factory_max_efficiency_factor = 0.15
+      }
+    }
+    HOL_industrial_budget = {
+      allowed = { original_tag = HOL }
+      picture = generic_central_management
+      modifier = {
+        consumer_goods_factor = -0.15
+      }
+    }
+    HOL_food_sufficiency = {
+      allowed = { original_tag = HOL }
+      picture = generic_agrarian_reform
+      modifier = {
+        consumer_goods_factor = -0.025
+        supply_consumption_factor = -0.05
+      }
+    }
+    HOL_food_sufficiency_1 = {
+      allowed = { original_tag = HOL }
+      picture = generic_agrarian_reform
+      modifier = {
+        consumer_goods_factor = -0.05
+        supply_consumption_factor = -0.15
+      }
+    }
+    HOL_enhanced_training = {
+      allowed = { original_tag = HOL }
+      picture = chi_army_corruption3
+      modifier = {
+        army_org_factor = 0.1
+        army_attack_factor = 0.15
+        army_defence_factor = 0.15
+      }
+    }
+    HOL_general_staff = {
+      allowed = { original_tag = HOL }
+      picture = general_staff
+      modifier = {
+        max_planning = 0.15
+        planning_speed = 0.15
+      }
+    }
+    HOL_weapons_production_expertise_idea = {
+      allowed = { original_tag = HOL }
+      picture = generic_license_production
+      equipment_bonus = {
+        infantry_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+        motorized = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+        artillery_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+      }
+    }
+    HOL_production_quotas_idea = {
+      allowed = { original_tag = HOL }
+      picture = generic_production_bonus
+      modifier = {
+        political_power_cost = 0.075
+        industrial_capacity_factory = 0.15
+        industrial_capacity_dockyard = 0.15
+      }
+    }
+    HOL_research_boost_idea = {
+      allowed = { original_tag = HOL }
+      picture = jap_supremacy_of_technology
+      modifier = {
+        research_speed_factor = 0.15
+      }
+    }
+    HOL_kickstart_naval_production = {
+      allowed = { original_tag = HOL }
+      picture = generic_coastal_defense_ships
+      modifier = {
+        consumer_goods_factor = 0.05
+        production_speed_dockyard_factor = 0.15
+        industrial_capacity_dockyard = 0.25
+      }
+      research_bonus = {
+        naval_doctrine = 0.1
+      }
+    }
+    HOL_german_naval_designs = {
+      allowed = { original_tag = HOL }
+      picture = generic_coastal_defense_ships2
+      equipment_bonus = {
+        naval_equipment = {
+          build_cost_ic = -0.05
+          instant = yes
+        }
+      }
+    }
+    HOL_coffee_imports = {
+      allowed = { original_tag = HOL }
+      picture = generic_agrarian_society
+      modifier = {
+        army_speed_factor = 0.15
+      }
+    }
+  }
 
     ### Industrial
-    industrial_concern = {
+  industrial_concern = {
 
 		koninklijke_hoogovens = {
 			allowed = { original_tag = HOL }
@@ -330,7 +288,7 @@ ideas = {
 	}
 
     ### Naval and Air Manufacturer
-    air_naval_manufacturer = {
+  air_naval_manufacturer = {
 		designer = yes
 
 		koninklijke_maatschappij = {

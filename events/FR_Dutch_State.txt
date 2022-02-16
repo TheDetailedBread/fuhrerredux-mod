@@ -479,40 +479,6 @@ country_event = {
 }
 
 country_event = {
-    id = dutchstate.20
-    title = dutchstate.20.t
-    desc = dutchstate.20.d
-    picture = GFX_report_event_second_vienna_award_pact
-    is_triggered_only = yes
-
-    option = {
-        name = dutchstate.20.a
-        ai_chance = {
-            factor = 20
-        }
-        add_political_power = -15
-    }
-    option = {
-        name = dutchstate.20.b
-        ai_chance = {
-            factor = 80
-        }
-        add_popularity = {
-            ideology = vanguardist
-            popularity = -0.05
-        }
-        add_popularity = {
-            ideology = collectivist
-            popularity = -0.05
-        }
-        add_popularity = {
-            ideology = libertarian_socialist
-            popularity = -0.05
-        }
-    }
-}
-
-country_event = {
     id = dutchstate.21
     title = dutchstate.21.t
     desc = dutchstate.21.d
@@ -538,22 +504,6 @@ country_event = {
 
     option = {
         name = dutchstate.22.a
-    }
-}
-
-country_event = {
-    id = dutchstate.23
-    title = dutchstate.23.t
-    desc = dutchstate.23.d
-    picture = GFX_report_event_hol_prins_bernhard
-    is_triggered_only = yes
-
-    option = {
-        name = dutchstate.23.a
-        hidden_effect = {
-            load_focus_tree = FR_Dutch_State_Bernhard
-            set_country_flag = politcal_branch_ready
-        }
     }
 }
 
@@ -773,5 +723,583 @@ country_event = {
       target = GER
       character = GER_Friedrich_Paulus
     }
+  }
+}
+
+#################################################
+#################################################
+#################################################
+# Dutch State Expansion Events
+
+country_event = { # Meetings in Amsterdam
+  id = dutchstate.100
+  title = dutchstate.100.t
+  desc = dutchstate.100.d
+  picture = GFX_report_event_military_planning
+  is_triggered_only = yes
+
+  trigger = {
+    is_subject = no
+  }
+
+  option = { # Let's go to work
+    name = dutchstate.100.a
+    add_political_power = 20
+    hidden_effect = {
+      set_variable = { nnb_loyalty = 10 }
+      country_event = { id = dutchstate.101 days = 2 }
+    }
+  }
+}
+
+country_event = { # Geelkerken's Proposals
+  id = dutchstate.101
+  title = dutchstate.101.t
+  desc = dutchstate.101.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
+
+  option = { # I may need to take a look
+    name = dutchstate.101.a
+    hidden_effect = {
+      country_event = { id = dutchstate.102 days = 2 }
+    }
+  }
+}
+
+country_event = { # Allowing Political Commissars in the Military
+  id = dutchstate.102
+  title = dutchstate.102.t
+  desc = dutchstate.102.d
+  picture = GFX_report_event_spr_poum_militia
+  is_triggered_only = yes
+
+  option = { # The military should be independent from politics
+    name = dutchstate.102.a
+    hidden_effect = {
+      subtract_from_variable = { var = nnb_loyalty value = 2 }
+      country_event = { id = dutchstate.103 days = 2 }
+    }
+  }
+
+  option = { # The soldier's loyalty to us is important
+    name = dutchstate.102.b
+    hidden_effect = {
+      add_to_variable = { var = nnb_loyalty = value = 2 }
+      country_event = { id = dutchstate.103 days = 2 }
+    }
+  }
+}
+
+country_event = { # Fate of the Nederlandse Landwacht
+  id = dutchstate.103
+  title = dutchstate.103.t
+  desc = dutchstate.103.d
+  picture = GFX_report_event_dutch_soldiers_indonesia
+  is_triggered_only = yes
+
+  option = { # They will remain as security personnel
+    name = dutchstate.103.a
+    hidden_effect = {
+      subtract_from_variable = { var = nnb_loyalty value = 1 }
+      country_event = { id = dutchstate.104 days = 2 }
+    }
+  }
+  option = { # They will be reformed as elite troops
+    name = dutchstate.103.b
+    hidden_effect = {
+      add_to_variable = { var = nnb_loyalty value = 1 }
+      country_event = { id = dutchstate.104 days = 2 }
+    }
+  }
+}
+
+country_event = { # Conscription Issue
+  id = dutchstate.104
+  title = dutchstate.104.t
+  desc = dutchstate.104.d
+  picture = GFX_report_event_generic_army
+  is_triggered_only = yes
+
+  option = { # Recruits can be transferred to the Landwacht
+    name = dutchstate.104.a
+    hidden_effect = {
+      subtract_from_variable = { var = nnb_loyalty value = 4 }
+      country_event = dutchstate.105
+    }
+  }
+  option = { # Limit recruitment for the Landwacht.
+    name = dutchstate.104.b
+    hidden_effect = {
+      add_to_variable = { var = nnb_loyalty value = 4 }
+      country_event = dutchstate.105
+    }
+  }
+}
+
+country_event = { # Hidden event
+  id = dutchstate.105
+  hidden = yes
+  
+  option = {
+    if = {
+      limit = {
+        check_variable = { nnb_loyalty < 5 }
+      }
+      hidden_effect = {
+        country_event = { id = dutchstate.106 days = 14 }
+      }
+    } 
+    else = {
+      #country_event
+    }
+    clear_variable = nnb_loyalty
+  }
+}
+
+country_event = { # Reynders Approaches the Prince
+  id = dutchstate.106
+  title = dutchstate.106.t
+  desc = dutchstate.106.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
+
+  option = { # We might need to keep an eye on them
+    name = dutchstate.106.a
+    add_stability = -0.05
+    hidden_effect = {
+      country_event = { id = dutchstate.107 days = 3 }
+    }
+  }
+}
+
+country_event = { # Suspicious Party Meetings
+  id = dutchstate.107
+  title = dutchstate.107.t
+  desc = dutchstate.107.d
+  picture = GFX_report_event_generic_sign_treaty1
+  is_triggered_only = yes
+
+  option = { # Greenlight the investigation
+    name = dutchstate.107.a
+    add_political_power = -10
+    hidden_effect = {
+      country_event = { id = dutchstate.108 days = 6 }
+    }
+  }
+}
+
+country_event = { # Investigation Complete
+  id = dutchstate.108
+  title = dutchstate.108.t
+  desc = dutchstate.108.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
+
+  option = { # Arrest the conspiritors!
+    name = dutchstate.108.a
+    add_popularity = {
+      ideology = national_populist
+      popularity = -0.15
+    }
+    hidden_effect = {
+      country_event = { id = dutchstate.109 days = 5 }
+    }
+  }
+
+  option = { # They pose no threat
+    name = dutchstate.108.b
+    add_political_power = 10
+    hidden_effect = {
+      country_event = { id = dutchstate.110 days = 14 }
+    }
+  }
+}
+
+country_event = { # The Prince Assumes Complete Control
+  id = dutchstate.109
+  title = dutchstate.109.t
+  desc = dutchstate.109.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
+
+  option = { # God Save the Prince!
+    name = dutchstate.109.a
+    set_politics = {
+      ruling_party = paternal_autocrat
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = paternal_autocrat
+      popularity = 0.15
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_Henri_Nicolas_Alfred_Swart_hog_pau
+      HOL_Jan_Baars_for_pau
+      HOL_Henri_Johannes_ter_Hal_eco_pau
+      HOL_Frederik_Carel_Gerretson_sec_pau
+    }
+    set_country_flag = HOL_bernhard_path
+    set_country_flag = HOL_political_branch_ready
+    hidden_effect = {
+      clr_country_flag = HOL_junta_path
+      clr_country_flag = HOL_natpop_path
+      clr_country_flag = HOL_socialist_path
+      clr_country_flag = HOL_status_quo_path
+      mark_focus_tree_layout_dirty = yes
+    }
+  }
+}
+
+country_event = { # Prince Bernhard Assassinated!
+  id = dutchstate.110
+  title = dutchstate.110.t
+  desc = dutchstate.110.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # A great loss
+    name = dutchstate.110.a
+    retire_character = HOL_Bernhard_of_the_Netherlands
+    add_country_leader_role = {
+      character = HOL_Izaak_Reynders
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = HOL_Henri_Nicolas_Alfred_Swart
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = HOL_Cornelis_van_Geelkerken
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
+    set_politics = {
+      ruling_party = national_populist
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = national_populist
+      popularity = 0.05
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_Cornelis_van_Geelkerken_hog_npo
+      HOL_Alfred_Haighton_eco_npo
+      HOL_Willem_Bernard_Engelbrecht_for_npo
+      HOL_AJ_van_der_Hoeven_sec_npo
+    }
+    activate_mission = HOL_secure_the_state
+    set_country_flag = HOL_natpop_path
+    set_country_flag = HOL_political_branch_ready
+    hidden_effect = {
+      clr_country_flag = HOL_bernhard_path
+      clr_country_flag = HOL_socialist_path
+      clr_country_flag = HOL_junta_path
+      clr_country_flag = HOL_status_quo_path
+      country_event = { id = dutchstate.111 days = 2 }
+      mark_focus_tree_layout_dirty = yes
+    }
+  }
+}
+
+country_event = { # A State Funeral
+  id = dutchstate.111
+  title = dutchstate.111.t
+  desc = dutchstate.111.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # We will always remember him
+    name = dutchstate.111.a
+    add_political_power = 100
+  }
+}
+
+country_event = { # Army Coup
+  id = dutchstate.112
+  title = dutchstate.112.t
+  desc = dutchstate.112.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # Execute these traitors!
+    name = dutchstate.112.a
+    retire_character = HOL_Cornelis_van_Geelkerken
+    set_politics = {
+      ruling_party = paternal_autocrat
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = paternal_autocrat
+      popularity = 0.15
+    }
+    add_popularity = {
+      ideology = national_populist
+      popularity = -0.15
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_Izaak_Reynders_hog_ade
+      HOL_Jan_Baars_for_pau
+      HOL_Henri_Johannes_ter_Hal_eco_pau
+      HOL_Frederik_Carel_Gerretson_sec_pau
+    }
+    set_country_flag = HOL_junta_path
+    set_country_flag = HOL_political_branch_ready
+    hidden_effect = {
+      clr_country_flag = HOL_natpop_path
+      clr_country_flag = HOL_socialist_path
+      clr_country_flag = HOL_bernhard_path
+      clr_country_flag = HOL_status_quo_path
+      mark_focus_tree_layout_dirty = yes
+    }
+  }
+}
+
+country_event = { # Utrecht Station Fire
+  id = dutchstate.113
+  title = dutchstate.113.t
+  desc = dutchstate.113.d
+  #picture =
+  is_triggered_only = yes
+
+  option = { # It was just an `accident`
+    name = dutchstate.113.a
+    add_political_power = -10
+    hidden_effect = {
+      country_event = { id = dutchstate.114 }
+    }
+  }
+}
+
+country_event = { # Targeting Socialists
+  id = dutchstate.114
+  title = dutchstate.114.t
+  desc = dutchstate.114.d
+  #picture 
+  is_triggered_only = yes
+
+  option = { # They are no threat
+    name = dutchstate.114.a
+    add_political_power = 10
+    hidden_effect = {
+      country_event = { id = dutchstate.116 days = 2 }
+    }
+  }
+
+  option = { # Order a crackdown on Socialists!
+    name = dutchstate.114.b
+    add_popularity = {
+      ideology = vanguardist
+      popularity = -0.15
+    }
+    add_popularity = {
+      ideology = collectivist
+      popularity = -0.15
+    }
+    add_popularity = {
+      ideology = libertarian_socialist
+      popularity = -0.15
+    }
+    add_manpower = -1500
+    set_country_flag = HOL_purged_socialists
+    hidden_effect = {
+      country_event = { id = dutchstate.115 days = 2 }
+    }
+  }
+}
+
+country_event = { # The Celebration
+  id = dutchstate.115
+  title = dutchstate.115.t
+  desc = dutchstate.115.d
+  #picture
+  is_triggered_only = yes
+
+  trigger = {
+    has_country_flag = HOL_purged_socialists
+  }
+
+  option = { # I'll have a cognac, please
+    name = dutchstate.115.a
+    set_country_flag = HOL_status_quo_path
+    set_country_flag = HOL_political_branch_ready
+    add_political_power = 100
+    hidden_effect = {
+      clr_country_flag = HOL_junta_path
+      clr_country_flag = HOL_natpop_path
+      clr_country_flag = HOL_bernhard_path
+      clr_country_flag = HOL_socialist_path
+    }
+  }
+}
+
+country_event = { # The Celebration
+  id = dutchstate.116
+  title = dutchstate.116.t
+  desc = dutchstate.116.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # Continue the events
+    name = dutchstate.116.a
+    add_political_power = 10
+    hidden_effect = {
+      country_event = { id = dutchstate.117 days = 2 }
+    }
+  }
+
+  option = { # Cancel the events
+    name = dutchstate.116.b
+    add_political_power = -10
+    hidden_effect = {
+      country_event = { id = dutchstate.120 days = 2 }
+    }
+  }
+}
+
+country_event = { # Fall of the Nationalist Government
+  id = dutchstate.117
+  title = dutchstate.117.t
+  desc = dutchstate.117.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # A Government of the People has risen!
+    name = dutchstate.117.a
+    retire_character = HOL_Bernhard_of_the_Netherlands
+    retire_character = HOL_Cornelis_van_Geelkerken
+    retire_character = HOL_Izaak_Reynders
+    add_country_leader_role = {
+      character = HOL_Godfried_van_Voorst_tot_Voorst
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = HOL_Henri_Nicolas_Alfred_Swart
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    set_politics = {
+      ruling_party = collectivist
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = vanguardist
+      popularity = 0.05
+    }
+    add_popularity = {
+      ideology = collectivist
+      popularity = 0.4
+    }
+    add_popularity = {
+      ideology = libertarian_socialist
+      popularity = 0.15
+    }
+    add_popularity = {
+      ideology = social_democrat
+      popularity = 0.05
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_Henk_Sneevliet_hog_lib
+      HOL_Benjamin_Boers_for_lib
+      HOL_Daniel_Goulooze_sec_col
+      HOL_Louis_de_Visser_eco_van
+    }
+    set_country_flag = HOL_socialist_path
+    set_country_flag = HOL_political_branch_ready
+    hidden_effect = {
+      clr_country_flag = HOL_junta_path
+      clr_country_flag = HOL_status_quo_path
+      clr_country_flag = HOL_bernhard_path
+      clr_country_flag = HOL_natpop_path
+      mark_focus_tree_layout_dirty = yes
+      GER = {
+        country_event = { id = dutchstate.118 days = 2 }
+      }
+    }
+  }
+}
+
+country_event = { # GER: Socialism in the Netherlands
+  id = dutchstate.118
+  title = dutchstate.118.t
+  desc = dutchstate.118.d
+  #picture 
+  is_triggered_only = yes
+
+  option = { # Pull out from the Netherlands
+    name = dutchstate.118.a
+    if = {
+      limit = {
+        OR = {
+          has_idea = HOL_dutch_german_economic_cooperation
+          has_idea = HOL_dutch_german_economic_cooperation_1
+        }
+      }
+      remove_ideas = {
+        HOL_dutch_german_economic_cooperation
+        HOL_dutch_german_economic_cooperation_1
+      }
+    }
+    add_offsite_building = {
+      type = industrial_complex
+      level = 3
+    }
+    FROM = { country_event = dutchstate.119 days = 1 }
+  }
+
+  option = { # We can't afford to lose the Dutch
+    name = dutchstate.118.b
+    declare_war_on = {
+      target = FROM
+      type = annex_everything
+    }
+  }
+}
+
+country_event = { # Germany pulls out from Netherlands
+  id = dutchstate.119
+  title = dutchstate.119.t
+  desc = dutchstate.119.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # Oh no
+    name = dutchstate.119.a
+    add_political_power = -100
+  }
+}
+
+country_event = { # March in Amsterdam
+  id = dutchstate.120
+  title = dutchstate.120.t
+  desc = dutchstate.120.d
+  #picture
+  is_triggered_only = yes
+
+  option = { # For the Vaterland
+    name = dutchstate.120.a
+    add_political_power = 100
   }
 }
