@@ -235,6 +235,7 @@ country_event = { # Fate of Insulindia
     name = annex.4004.a
     trigger = {
       NOT = { tag = ENG }
+      is_dutch_tag = no
     }
     ai_chance = {
       base = 100
@@ -287,6 +288,35 @@ country_event = { # Fate of Insulindia
       }
     }
     set_temp_variable = { tag_to_release = BEA }
+    release_targeted_tag = yes
+  }
+
+  option = {
+    name = annex.4004.c
+    trigger = {
+      is_dutch_tag = yes
+    }
+    ai_chance = {
+      base = 100
+    }
+    hidden_effect = {
+      DEI = {
+        add_state_core = 333
+        add_state_core = 334
+        add_state_core = 340
+        add_state_core = 667
+        add_state_core = 785
+        add_state_core = 790 
+        add_state_core = 797
+        add_state_core = 822
+        add_state_core = 823
+        add_state_core = 943
+        add_state_core = 944
+        add_state_core = 951
+        drop_cosmetic_tag = yes
+      }
+    }
+    set_temp_variable = { tag_to_release = DEI }
     release_targeted_tag = yes
   }
 

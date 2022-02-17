@@ -8,6 +8,10 @@ ideas = {
         stability_factor = -0.05  
       }
     }
+    HOL_leftist_symphatizers = {
+      allowed = { original_tag = HOL }
+      picture = FRA_communard_spirit
+    }
     HOL_revaunchist_state = {
       allowed = { original_tag = HOL }
       picture = vittoria_mutilata
@@ -198,6 +202,27 @@ ideas = {
         army_speed_factor = 0.15
       }
     }
+    HOL_landwacht_terrortists = {
+      allowed = { original_tag = HOL }
+      picture = tfv_can_conscription_crisis
+    }
+    HOL_labour_camps = {
+      allowed = { original_tag = HOL }
+      picture = HOL_labor_camps
+      modifier = {
+        production_speed_buildings_factor = 0.15
+        industry_repair_factor = 0.15
+      }
+    }
+    HOL_expanded_intelligence = {
+      allowed = { original_tag = HOL }
+      picture = generic_spy_intel
+      modifier = {
+        enemy_operative_capture_chance_factor = 0.15
+        enemy_operative_detection_chance_factor = 0.15
+        foreign_subversive_activites = -0.15
+      }
+    }
   }
 
     ### Industrial
@@ -243,8 +268,8 @@ ideas = {
 	}
 
     ### Weapons Manufacturer
-    weapons_manufacturer = {
-        designer = yes
+  weapons_manufacturer = {
+    designer = yes
 
 		artillerie_inrichtingen_company = {
 			allowed = { original_tag = HOL }

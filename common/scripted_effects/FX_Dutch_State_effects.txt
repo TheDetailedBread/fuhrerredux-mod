@@ -1,0 +1,112 @@
+HOL_add_leftist_resistance = {
+  7 = { 
+    add_dynamic_modifier = {
+      modifier = HOL_leftist_resistance
+    }
+  }
+  35 = { 
+    add_dynamic_modifier = {
+      modifier = HOL_leftist_resistance
+    }
+  }
+  36 = {
+    add_dynamic_modifier = {
+      modifier = HOL_leftist_resistance
+    }
+  }
+  754 = {
+    add_dynamic_modifier = {
+      modifier = HOL_leftist_resistance
+    }
+  }
+  938 = {
+    add_dynamic_modifier = {
+      modifier = HOL_leftist_resistance
+    }
+  }
+
+  swap_ideas = {
+    remove_idea = HOL_leftist_symphatizers
+    add_idea = HOL_leftist_symphatizers_1
+  }
+}
+
+HOL_check_leftist_resistance = {
+  if = {
+    limit = {
+      7 = {
+        NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+      }
+      35 = {
+        NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+      }
+      36 = {
+        NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+      }
+      754 = {
+        NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+      }
+      938 = {
+        NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+      }
+    }
+    remove_ideas = {
+      HOL_leftist_symphatizers_1
+    }
+  }
+}
+
+HOL_add_landwacht_resistance = {
+  7 = { 
+    add_dynamic_modifier = {
+      modifier = HOL_landwacht_resistance
+    }
+  }
+  35 = { 
+    add_dynamic_modifier = {
+      modifier = HOL_landwacht_resistance
+    }
+  }
+  36 = {
+    add_dynamic_modifier = {
+      modifier = HOL_landwacht_resistance
+    }
+  }
+  754 = {
+    add_dynamic_modifier = {
+      modifier = HOL_landwacht_resistance
+    }
+  }
+  938 = {
+    add_dynamic_modifier = {
+      modifier = HOL_landwacht_resistance
+    }
+  }
+
+  add_ideas = HOL_landwacht_terrortists
+}
+
+HOL_check_landwacht_resistance = {
+  if = {
+    limit = {
+      7 = {
+        NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+      }
+      35 = {
+        NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+      }
+      36 = {
+        NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+      }
+      754 = {
+        NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+      }
+      938 = {
+        NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+      }
+    }
+    remove_ideas = {
+      HOL_landwacht_terrortists
+    }
+  }
+}
