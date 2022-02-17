@@ -909,7 +909,7 @@ country_event = { # Belgian Event on Attempted Dutch Reclaimation of Limburg
   option = { # Embargo them!
     name = dutchstate.38.a
     FROM = { 
-      country_event = { id = dutchstae.39 days = 1 }
+      country_event = { id = dutchstate.39 days = 1 }
     }
     embargo_FROM = yes
   }
@@ -923,7 +923,7 @@ country_event = { # Belgian Embargo
   is_triggered_only = yes
 
   option = { # Damn them!
-    name = dutchstae.39.a
+    name = dutchstate.39.a
     embargo_FROM = yes
   }
 }
@@ -1042,7 +1042,7 @@ country_event = { # Belgium Submits
   option = {
     name = dutchstate.45.a
     annex_country = {
-      target = BEL
+      target = FROM
       transfer_troops = no
     }
   }
@@ -1066,6 +1066,36 @@ country_event = { # Belgium Refuses
   option = {
     name = dutchstate.46.b
     decrease_ruling_party_popularity_by_15 = yes
+  }
+}
+
+country_event = { # Landwacht Issue
+  id = dutchstate.47
+  title = dutchstate.47.t
+  desc = dutchstate.47.d
+  picture = GFX_report_event_british_inspect_troops
+  is_triggered_only = yes
+  
+  option = {
+    name = dutchstate.47.a
+    hidden_effect = {
+      add_landwacht_resistance = yes
+    }
+  }
+}
+
+country_event = { # Socialist Crackdowns
+  id = dutchstate.48
+  title = dutchstate.48.t
+  desc = dutchstate.48.d
+  picture = GFX_report_event_dutch_soldiers_indonesia
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.48.a
+    hidden_effect = {
+      add_leftist_resistance = yes
+    }
   }
 }
 
@@ -1344,7 +1374,7 @@ country_event = { # Prince Bernhard Assassinated!
       HOL_Willem_Bernard_Engelbrecht_for_npo
       HOL_AJ_van_der_Hoeven_sec_npo
     }
-    set_country_flag = HOL_secure_the_state
+    set_country_flag = HOL_should_secure_the_state
     set_country_flag = HOL_natpop_path
     set_country_flag = political_branch_ready
     hidden_effect = {
@@ -1609,14 +1639,19 @@ country_event = { # Fall of the Nationalist Government
 
   option = { # Loyalists launch a coup (Play as KNE)
     name = dutchstate.117.c
+    trigger = {
+      is_ai = no
+    }
     KNE = {
       change_tag_from = ROOT
     }
-    annex_country = {
-      target = HOL
-      transfer_troops = no
+    KNE = {
+      annex_country = {
+        target = HOL
+        transfer_troops = no
+      }
+      set_capital = { state = 7 } 
     }
-    KNE = { set_capital = { state = 7 } }
   }
 }
 
