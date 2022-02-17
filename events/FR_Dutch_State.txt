@@ -221,13 +221,13 @@ country_event = { # Intel Exchange
     name = dutchstate.8.a
     add_ideas = HOL_intelligence_exchange
     FROM = {
-      country_event = { id = dutchstate.9 days = 2 }
+      country_event = { id = dutchstate.9 days = 4 }
     }
   }
   option = {
     name = dutchstate.8.b
     FROM = {
-      country_event = { id = dutchstate.10 days = 2 }
+      country_event = { id = dutchstate.10 days = 4 }
     }
   }
 }
@@ -310,16 +310,16 @@ country_event = { #
     name = dutchstate.12.a
     add_political_power = -20
     random_list = {
-      70 = { country_event = { id = dutchstate.15 days = 2 } }
-      30 = { country_event = { id = dutchstate.14 days = 2 } }
+      70 = { country_event = { id = dutchstate.15 days = 4 } }
+      30 = { country_event = { id = dutchstate.14 days = 4 } }
     }
   }
   option = {
     name = dutchstate.12.b
     add_political_power = -50
     random_list = {
-      50 = { country_event = { id = dutchstate.15 days = 2 } }
-      50 = { country_event = { id = dutchstate.14 days = 2 } }
+      50 = { country_event = { id = dutchstate.15 days = 4 } }
+      50 = { country_event = { id = dutchstate.14 days = 4 } }
     }
   }
 }
@@ -651,7 +651,7 @@ country_event = { # French Intervention of the Dutch Declaration of War
   }
 }
 
-country_event = {
+country_event = { # German Commander 
   id = dutchstate.28
   title = dutchstate.28.t
   desc = dutchstate.28.d
@@ -675,7 +675,7 @@ country_event = {
   }
 }
 
-country_event = {
+country_event = { # German Commander Arrives
   id = dutchstate.29
   title = dutchstate.29.t
   desc = dutchstate.29.d
@@ -694,7 +694,7 @@ country_event = {
   }
 }
 
-country_event = {
+country_event = { # German Commander Leaves
   id = dutchstate.30
   title = dutchstate.30.t
   desc = dutchstate.30.d
@@ -708,7 +708,7 @@ country_event = {
   }
 }
 
-country_event = {
+country_event = { # German Commander Arrives in Germany
   id = dutchstate.31
   title = dutchstate.31.t
   desc = dutchstate.31.d
@@ -722,6 +722,350 @@ country_event = {
       target = GER
       character = GER_Friedrich_Paulus
     }
+  }
+}
+
+country_event = { # Snatching the Provinces
+  id = dutchstate.32
+  title = dutchstate.32.t
+  desc = dutchstate.32.d
+  picture = GFX_report_event_military_planning
+  is_triggered_only = yes
+
+  option = { # Let's hope this works
+    name = dutchstate.32.a
+    hidden_effect = {
+      random_list = {
+        50 = {
+          country_event = { id = dutchstate.33 days = 30 }
+        }
+        50 = {
+          country_event = { id = dutchstate.34 days = 30 }
+        }
+      }
+    }
+  }
+}
+
+country_event = { # Snatching Failed
+  id = dutchstate.33
+  title = dutchstate.33.t
+  desc = dutchstate.33.d
+  picture = GFX_report_event_soviet_tanks
+  is_triggered_only = yes
+
+  option = { # We'll take it by force
+    name = dutchstate.33.a
+    declare_war_on = {
+      target = BEL
+      type = annex_everything
+    }
+  }
+
+  option = { # Back down
+    name = dutchstate.33.b
+    add_political_power = -50
+    hidden_effect = {
+      BEL = {
+        country_event = { id = dutchstate.38 days = 1 }
+      }
+    }
+  }
+}
+
+country_event = { # Snatch Success
+  id = dutchstate.34
+  title = dutchstate.34.t
+  desc = dutchstate.34.d
+  picture = GFX_report_event_soviet_tanks
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      transfer_state = 866
+      transfer_state = 867
+      BEL = {
+        country_event = dutchstate.35
+      }
+    }
+  }
+
+  option = {
+    name = dutchstate.34.a
+    add_stability = 0.05
+    increase_ruling_party_popularity_by_10 = yes
+  }
+}
+
+country_event = { # Belgian Event on Snatching
+  id = dutchstate.35
+  title = dutchstate.35.t
+  desc = dutchstate.35.d
+  picture = GFX_report_event_soviet_tanks
+  is_triggered_only = yes
+
+  option = { # Try retaking it
+    name = dutchstate.35.a
+    declare_war_on = {
+      target = FROM
+      type = annex_everything
+    }
+  }
+
+  option = { # Back down
+    name = dutchstate.35.b
+    decrease_ruling_party_popularity_by_10 = yes
+  }
+}
+
+country_event = { # Dutch Request to Hand-Over the East Indies
+  id = dutchstate.36
+  title = dutchstate.36.t
+  desc = dutchstate.36.d
+  picture = GFX_report_event_merchant_ship_01
+  is_triggered_only = yes
+
+  option = { # We must protect Root's interests first!
+    name = dutchstate.36.a
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.2
+        has_war_with = JAP
+      }
+      modifier = {
+        factor = 0.2
+        has_war_with = SOV
+      }
+      modifier = {
+        factor = 0.2
+        has_war_with = USA
+      }
+    }
+    add_political_power = 10
+    FROM = {
+      country_event = { id = dutchstate.37 days = 1 }
+    }
+  }
+
+  option = { # It's not worth a war with
+    name = dutchstate.36.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      annex_country = {
+        target = BEA
+        transfer_troops = no
+      }
+    }
+  }
+}
+
+country_event = { # From refuses to give up East Indies
+  id = dutchstate.37
+  title = dutchstate.37.t
+  desc = dutchstate.37.d
+  picture = GFX_report_event_finnish_letter
+  is_triggered_only = yes
+
+  option = { # We'll have to take it by ourselves
+    name = dutchstate.37.a
+    if = {
+      limit = {
+        country_exists = BEA
+      }
+      create_wargoal = {
+        target = BEA
+        type = annex_everything
+      }
+    } else = {
+      335 = {
+        OWNER = {
+          ROOT = {
+            create_wargoal = {
+              target = PREV
+              type = annex_everything
+            }
+          }
+        }
+      }
+    }
+  }
+
+  option = { # Back down
+    name = dutchstate.37.b
+    decrease_ruling_party_popularity_by_15 = yes
+  }
+}
+
+country_event = { # Belgian Event on Attempted Dutch Reclaimation of Limburg
+  id = dutchstate.38
+  title = dutchstate.38.t
+  desc = dutchstate.38.d
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Embargo them!
+    name = dutchstate.38.a
+    FROM = { 
+      country_event = { id = dutchstae.39 days = 1 }
+    }
+    embargo_FROM = yes
+  }
+}
+
+country_event = { # Belgian Embargo
+  id = dutchstate.39
+  title = dutchstate.39.t
+  desc = dutchstate.39.d
+  picture = GFX_report_event_reporters
+  is_triggered_only = yes
+
+  option = { # Damn them!
+    name = dutchstae.39.a
+    embargo_FROM = yes
+  }
+}
+ 
+country_event = { # Landwacht Scandal
+  id = dutchstate.40
+  title = dutchstate.40.t
+  desc = dutchstate.40.d
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  trigger = {
+    tag = HOL
+    has_government = national_populist
+  }
+
+  option = { # Punish whose responsible
+    name = dutchstate.40.a
+    add_political_power = 50
+  }
+
+  option = { # Offer condolences to the families
+    name = dutchstate.40.b
+    add_political_power = 20
+  }
+
+  option = { # Bribe the families to keep them quiet
+    name = dutchstate.40.c
+    add_political_power = 10
+  }
+}
+
+country_event = {
+  id = dutchstate.41
+  hidden = yes 
+  is_triggered_only = yes
+
+  option = {
+    HOL = { country_event = dutchstate.42 }
+  }
+}
+
+country_event = { # Successful Smuggle
+  id = dutchstate.42
+  title = dutchstate.42.t
+  desc = dutchstate.42.d
+  picture = GFX_report_event_merchant_ship_01
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.42.a
+    add_equipment_to_stockpile = {
+      type = infantry_equipment
+      amount = 500
+      producer = FROM
+    }
+  }
+}
+
+country_event = { # Smuggle Failed
+  id = dutchstate.43
+  title = dutchstate.43.t
+  desc = dutchstate.43.d
+  picture = GFX_report_event_merchant_ship_01
+  is_triggered_only = yes
+
+  option = { # 
+    name = dutchstate.43.a
+    add_political_power = -50
+  }
+}
+
+country_event = { # Dutch State Demands Submission
+  id = dutchstate.44
+  title = dutchstate.44.t
+  desc = dutchstate.44.d
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.44.a
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.2
+        FRA = { has_capitulated = yes }
+      }
+      modifier = {
+        factor = 0.3
+        ENG = { has_capitulated = yes }
+      }
+    }
+    FROM = {
+      country_event = { id = dutchstate.46 days = 2 }
+    }
+  }
+
+  option = {
+    name = dutchstate.44.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = dutchstate.45 days = 2 }
+    }
+  }
+}
+
+country_event = { # Belgium Submits
+  id = dutchstate.45
+  title = dutchstate.45.t
+  desc = dutchstate.45.d
+  picture = GFX_report_event_dutch_soldiers_indonesia
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.45.a
+    annex_country = {
+      target = BEL
+      transfer_troops = no
+    }
+  }
+}
+
+country_event = { # Belgium Refuses
+  id = dutchstate.46
+  title = dutchstate.46.t
+  desc = dutchstate.46.d
+  picture = GFX_report_event_dutch_soldiers_indonesia
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.46.a
+    create_wargoal = {
+      target = FROM
+      type = annex_everything
+    }
+  }
+
+  option = {
+    name = dutchstate.46.b
+    decrease_ruling_party_popularity_by_15 = yes
   }
 }
 
@@ -746,7 +1090,7 @@ country_event = { # Meetings in Amsterdam
     add_political_power = 20
     hidden_effect = {
       set_variable = { nnb_loyalty = 10 }
-      country_event = { id = dutchstate.101 days = 2 }
+      country_event = { id = dutchstate.101 days = 4 }
     }
   }
 }
@@ -761,7 +1105,7 @@ country_event = { # Geelkerken's Proposals
   option = { # I may need to take a look
     name = dutchstate.101.a
     hidden_effect = {
-      country_event = { id = dutchstate.102 days = 2 }
+      country_event = { id = dutchstate.102 days = 4 }
     }
   }
 }
@@ -777,7 +1121,7 @@ country_event = { # Allowing Political Commissars in the Military
     name = dutchstate.102.a
     hidden_effect = {
       subtract_from_variable = { var = nnb_loyalty value = 2 }
-      country_event = { id = dutchstate.103 days = 2 }
+      country_event = { id = dutchstate.103 days = 4 }
     }
   }
 
@@ -785,7 +1129,7 @@ country_event = { # Allowing Political Commissars in the Military
     name = dutchstate.102.b
     hidden_effect = {
       add_to_variable = { var = nnb_loyalty = value = 2 }
-      country_event = { id = dutchstate.103 days = 2 }
+      country_event = { id = dutchstate.103 days = 4 }
     }
   }
 }
@@ -801,14 +1145,14 @@ country_event = { # Fate of the Nederlandse Landwacht
     name = dutchstate.103.a
     hidden_effect = {
       subtract_from_variable = { var = nnb_loyalty value = 1 }
-      country_event = { id = dutchstate.104 days = 2 }
+      country_event = { id = dutchstate.104 days = 4 }
     }
   }
   option = { # They will be reformed as elite troops
     name = dutchstate.103.b
     hidden_effect = {
       add_to_variable = { var = nnb_loyalty value = 1 }
-      country_event = { id = dutchstate.104 days = 2 }
+      country_event = { id = dutchstate.104 days = 4 }
     }
   }
 }
@@ -940,7 +1284,7 @@ country_event = { # The Prince Assumes Complete Control
       HOL_Frederik_Carel_Gerretson_sec_pau
     }
     set_country_flag = HOL_bernhard_path
-    set_country_flag = HOL_political_branch_ready
+    set_country_flag = political_branch_ready
     hidden_effect = {
       clr_country_flag = HOL_junta_path
       clr_country_flag = HOL_natpop_path
@@ -1000,15 +1344,15 @@ country_event = { # Prince Bernhard Assassinated!
       HOL_Willem_Bernard_Engelbrecht_for_npo
       HOL_AJ_van_der_Hoeven_sec_npo
     }
-    activate_mission = HOL_secure_the_state
+    set_country_flag = HOL_secure_the_state
     set_country_flag = HOL_natpop_path
-    set_country_flag = HOL_political_branch_ready
+    set_country_flag = political_branch_ready
     hidden_effect = {
       clr_country_flag = HOL_bernhard_path
       clr_country_flag = HOL_socialist_path
       clr_country_flag = HOL_junta_path
       clr_country_flag = HOL_status_quo_path
-      country_event = { id = dutchstate.111 days = 2 }
+      country_event = { id = dutchstate.111 days = 4 }
       mark_focus_tree_layout_dirty = yes
     }
   }
@@ -1057,7 +1401,7 @@ country_event = { # Army Coup
       HOL_Frederik_Carel_Gerretson_sec_pau
     }
     set_country_flag = HOL_junta_path
-    set_country_flag = HOL_political_branch_ready
+    set_country_flag = political_branch_ready
     hidden_effect = {
       clr_country_flag = HOL_natpop_path
       clr_country_flag = HOL_socialist_path
@@ -1095,7 +1439,7 @@ country_event = { # Targeting Socialists
     name = dutchstate.114.a
     add_political_power = 10
     hidden_effect = {
-      country_event = { id = dutchstate.116 days = 2 }
+      country_event = { id = dutchstate.116 days = 4 }
     }
   }
 
@@ -1116,7 +1460,7 @@ country_event = { # Targeting Socialists
     add_manpower = -1500
     set_country_flag = HOL_purged_socialists
     hidden_effect = {
-      country_event = { id = dutchstate.115 days = 2 }
+      country_event = { id = dutchstate.115 days = 4 }
     }
   }
 }
@@ -1125,7 +1469,7 @@ country_event = { # The Celebration
   id = dutchstate.115
   title = dutchstate.115.t
   desc = dutchstate.115.d
-  #picture
+  picture = GFX_report_event_generic_party
   is_triggered_only = yes
 
   trigger = {
@@ -1135,13 +1479,14 @@ country_event = { # The Celebration
   option = { # I'll have a cognac, please
     name = dutchstate.115.a
     set_country_flag = HOL_status_quo_path
-    set_country_flag = HOL_political_branch_ready
+    set_country_flag = political_branch_ready
     add_political_power = 100
     hidden_effect = {
       clr_country_flag = HOL_junta_path
       clr_country_flag = HOL_natpop_path
       clr_country_flag = HOL_bernhard_path
       clr_country_flag = HOL_socialist_path
+      mark_focus_tree_layout_dirty = yes
     }
   }
 }
@@ -1150,14 +1495,14 @@ country_event = { # The Celebration
   id = dutchstate.116
   title = dutchstate.116.t
   desc = dutchstate.116.d
-  #picture
+  picture = GFX_report_event_generic_party
   is_triggered_only = yes
 
   option = { # Continue the events
     name = dutchstate.116.a
     add_political_power = 10
     hidden_effect = {
-      country_event = { id = dutchstate.117 days = 2 }
+      country_event = { id = dutchstate.117 days = 4 }
     }
   }
 
@@ -1165,7 +1510,7 @@ country_event = { # The Celebration
     name = dutchstate.116.b
     add_political_power = -10
     hidden_effect = {
-      country_event = { id = dutchstate.120 days = 2 }
+      country_event = { id = dutchstate.120 days = 4 }
     }
   }
 }
@@ -1174,7 +1519,7 @@ country_event = { # Fall of the Nationalist Government
   id = dutchstate.117
   title = dutchstate.117.t
   desc = dutchstate.117.d
-  #picture
+  picture = GFX_report_event_french_resistance_01
   is_triggered_only = yes
 
   option = { # A Government of the People has risen!
@@ -1184,6 +1529,9 @@ country_event = { # Fall of the Nationalist Government
       remove_ideas = {
         HOL_leftist_symphatizers
       }
+    }
+    else_if = {
+      limit = { has_idea = HOL_}
     }
     retire_character = HOL_Bernhard_of_the_Netherlands
     retire_character = HOL_Cornelis_van_Geelkerken
@@ -1232,7 +1580,7 @@ country_event = { # Fall of the Nationalist Government
       HOL_Louis_de_Visser_eco_van
     }
     set_country_flag = HOL_socialist_path
-    set_country_flag = HOL_political_branch_ready
+    set_country_flag = political_branch_ready
     hidden_effect = {
       clr_country_flag = HOL_junta_path
       clr_country_flag = HOL_status_quo_path
@@ -1240,9 +1588,35 @@ country_event = { # Fall of the Nationalist Government
       clr_country_flag = HOL_natpop_path
       mark_focus_tree_layout_dirty = yes
       GER = {
-        country_event = { id = dutchstate.118 days = 2 }
+        country_event = { id = dutchstate.118 days = 4 }
       }
     }
+  }
+
+  option = { # Loyalists launch a coup
+    name = dutchstate.117.b
+    custom_effect_tooltip = HOL_will_be_annexed_by_kne
+    hidden_effect = {
+      KNE = {
+        annex_country = {
+          target = HOL
+          transfer_troops = no
+        }
+        set_capital = { state = 7 }  
+      }
+    }
+  }
+
+  option = { # Loyalists launch a coup (Play as KNE)
+    name = dutchstate.117.c
+    KNE = {
+      change_tag_from = ROOT
+    }
+    annex_country = {
+      target = HOL
+      transfer_troops = no
+    }
+    KNE = { set_capital = { state = 7 } }
   }
 }
 
@@ -1293,18 +1667,5 @@ country_event = { # Germany pulls out from Netherlands
   option = { # Oh no
     name = dutchstate.119.a
     add_political_power = -100
-  }
-}
-
-country_event = { # March in Amsterdam
-  id = dutchstate.120
-  title = dutchstate.120.t
-  desc = dutchstate.120.d
-  #picture
-  is_triggered_only = yes
-
-  option = { # For the Vaterland
-    name = dutchstate.120.a
-    add_political_power = 100
   }
 }

@@ -36,6 +36,121 @@ foreign_politics = {
 }
 
 political_actions = {
+  HOL_smuggle_guns_from = {
+    allowed = { original_tag = HOL }
+    visible = { 
+      has_completed_focus = HOL_smuggle_guns
+      FROM = {
+        has_country_flag = HOL_smuggled_guns_from
+      }
+    }
+    icon = GFX_decision_generic_prepare_civil_war
+    cost = 20
+    days_remove = 14
+    target_trigger = {
+      FROM = {
+        tag = ENG
+        tag = FRA
+        tag = BEL
+        tag = DEN
+      }
+    }
+    remove_effect = {
+      FROM = {
+        set_country_flag = HOL_smuggled_guns_from
+        random_list = {
+          70 = {
+            country_event = { id = dutchstate.41 days = 2 }
+          }
+          30 = {
+            country_event = { id = dutchstate.43 days = 2 }
+          }
+        }
+      }
+    }
+  }
+  HOL_crush_socialists = {
+    allowed = { original_tag = HOL }
+    visible = { 
+      OR = {
+        has_completed_focus = HOL_crush_socialists
+        has_completed_focus = HOL_the_red_scare
+      }  
+    }
+    available = {
+      FROM = {
+        has_dynamic_modifier = HOL_leftist_resistance
+      }
+    }
+    icon = GFX_decision_oppression
+    cost = 20
+    on_map_mode = map_and_decisions_view
+    days_remove = 30
+    highlight_color_while_active = 1
+    state_target = yes
+    target_trigger = {
+      FROM = {
+        OR = {
+          state = 7
+          state = 35
+          state = 36
+          state = 754
+          state = 938
+        }
+      }
+    }
+    remove_effect = {
+      FROM = {
+        remove_dynamic_modifier = HOL_leftist_resistance
+      }
+      hidden_effect = {
+        HOL_check_leftist_resistance = yes
+      }
+    }
+  }
+  HOL_hunt_down_landwacht = {
+    allowed = { original_tag = HOL }
+    visible = {
+      OR = {
+        
+      }
+    }
+    available = {
+      FROM = {
+        has_dynamic_modifier = HOL_landwacht_resistance
+      }
+    }
+    icon = GFX_decision_generic_army_support
+    on_map_mode = map_and_decisions_view
+    highlight_color_while_active = 1
+    state_target = yes
+    days_remove = 30
+    target_trigger = {
+      FROM = {
+        OR = {
+          state = 7
+          state = 35
+          state = 36
+          state = 754
+          state = 938
+        }
+      }
+    }
+    custom_cost_trigger = {
+      has_equipment = {
+        infantry_equipment_1 > 100
+      }
+    }
+    custom_cost_text = equipment_more_than_20
+    remove_effect = {
+      FROM = {
+        remove_dynamic_modifier = HOL_landwacht_resistance
+      }
+      hidden_effect = {
+        HOL_check_landwacht_resistance = yes
+      }
+    }
+  }
   HOL_secure_the_state = {
     allowed = { original_tag = HOL }
     available = {
@@ -44,13 +159,20 @@ political_actions = {
         has_country_flag = HOL_has_secured_the_state
       }
     }
+    activation = {
+      has_country_flag = HOL_secure_the_state
+    }
     is_good = no
     selectable_mission = no
     days_mission_timeout = 180
     timeout_effect = {
       hidden_effect = {
+        clr_country_flag = HOL_secure_the_state
         country_event = { id = dutchstate.112 days = 2 }
       }
+    }
+    complete_effect = {
+      clr_country_flag = HOL_secure_the_state
     }
   }
   HOL_proclaim_the_unification = {
