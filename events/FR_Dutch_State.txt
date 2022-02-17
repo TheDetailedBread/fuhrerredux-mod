@@ -338,72 +338,72 @@ country_event = { # Resistance in Belgium
 }
 
 country_event = { # Resistance Suppressed
-    id = dutchstate.14
-    title = dutchstate.14.t
-    desc = dutchstate.14.d
-    picture = GFX_report_event_hol_prins_bernhard
-    is_triggered_only = yes
+  id = dutchstate.14
+  title = dutchstate.14.t
+  desc = dutchstate.14.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
 
-    immediate = {
-        hidden_effect = {
-            HOL = {
-                country_event = { id = dutchstate.16 hours = 2 }
-            }
-        }
+  immediate = {
+    hidden_effect = {
+      HOL = {
+        country_event = { id = dutchstate.16 hours = 2 }
+      }
     }
+  }
 
-    option = {
-        name = dutchstate.14.a
-        remove_ideas = HOL_dutch_resistance
-        every_owned_state = {
-            limit = {
-                is_controlled_by = BEL
-                OR = {
-                    state = 866
-                    state = 867
-                }
-            }
-            remove_dynamic_modifier = { modifier = HOL_dutch_resistance_in_belgium } 
+  option = {
+    name = dutchstate.14.a
+    remove_ideas = HOL_dutch_resistance
+    every_owned_state = {
+      limit = {
+        is_controlled_by = BEL
+        OR = {
+          state = 866
+          state = 867
         }
+      }
+      remove_dynamic_modifier = { modifier = HOL_dutch_resistance_in_belgium } 
     }
+  }
 }
 
 country_event = { # Resistance Violent
-    id = dutchstate.15
-    title = dutchstate.15.t
-    desc = dutchstate.15.d
-    picture = GFX_report_event_hol_prins_bernhard
-    is_triggered_only = yes
+  id = dutchstate.15
+  title = dutchstate.15.t
+  desc = dutchstate.15.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
 
-    option = {
-        name = dutchstate.15.a
-        every_owned_state = {
-            limit = {
-                is_controlled_by = BEL
-                OR = {
-                    state = 866
-                    state = 867
-                }
-            }
-            damage_building = {
-                type = industrial_complex
-                damage = 1
-            }
+  option = {
+    name = dutchstate.15.a
+    every_owned_state = {
+      limit = {
+        is_controlled_by = BEL
+        OR = {
+          state = 866
+          state = 867
         }
+      }
+      damage_building = {
+        type = industrial_complex
+        damage = 1
+      }
     }
+  }
 }
 
 country_event = { # HOL: Resistance Suppressed
-    id = dutchstate.16
-    title = dutchstate.16.t
-    desc = dutchstate.16.d
-    picture = GFX_report_event_hol_prins_bernhard
-    is_triggered_only = yes
+  id = dutchstate.16
+  title = dutchstate.16.t
+  desc = dutchstate.16.d
+  picture = GFX_report_event_hol_prins_bernhard
+  is_triggered_only = yes
 
-    option = {
-        name = dutchstate.16.a
-        add_political_power = 10
-    }
+  option = {
+    name = dutchstate.16.a
+    add_political_power = 10
+  }
 }
 
 country_event = {
@@ -1099,6 +1099,38 @@ country_event = { # Socialist Crackdowns
   }
 }
 
+country_event = { # Expansion of Fokkel
+  id = dutchstate.49
+  title = dutchstate.49.t
+  desc = dutchstate.49.d
+  picture = GFX_report_event_canada_ronnie
+  is_triggered_only = yes
+
+  trigger = {
+    has_socialist_government = no
+  }
+
+  option = { # 
+    name = dutchstate.49.a
+    7 = {
+      limit = {
+        free_building_slots = {
+          building = arms_factory
+          size > 0
+          include_locked = yes
+        }
+      }
+
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+}
+
 #################################################
 #################################################
 #################################################
@@ -1212,6 +1244,7 @@ country_event = { # Conscription Issue
 
 country_event = { # Hidden event
   id = dutchstate.105
+  is_triggered_only = yes
   hidden = yes
   
   option = {
