@@ -1,4 +1,35 @@
 foreign_politics = {
+  HOL_unification_of_the_lowlands = {
+    allowed = { original_tag = HOL }
+    visible = {
+      has_completed_focus = HOL_unify_the_lowlands
+    }
+    available = {
+      FROM = {
+        exists = yes
+        NOT = { has_war_with = ROOT }
+        any_allied_country = {
+          FROM = {
+            NOT = { is_subject_of = PREV }
+          }
+        }
+      }
+    }
+    target_trigger = {
+      FROM = {
+        tag = BEL
+        tag = LUX
+      }
+    }
+    cost = 25
+    days_remove = 14
+    icon = GFX_decision_eng_trade_unions_support
+    remove_effect = {
+      FROM = {
+        country_event = { id = dutchstate.44 days = 3 }
+      }
+    }
+  }
   HOL_operation_fakkel_decision = {
     allowed = { original_tag = HOL }
     visible = { 
@@ -112,7 +143,7 @@ political_actions = {
     allowed = { original_tag = HOL }
     visible = {
       OR = {
-        
+        has_completed_focus = HOL_dissolve_the_landwacht
       }
     }
     available = {
@@ -167,12 +198,12 @@ political_actions = {
     days_mission_timeout = 180
     timeout_effect = {
       hidden_effect = {
-        clr_country_flag = HOL_secure_the_state
+        clr_country_flag = HOL_should_secure_the_state
         country_event = { id = dutchstate.112 days = 2 }
       }
     }
     complete_effect = {
-      clr_country_flag = HOL_secure_the_state
+      clr_country_flag = HOL_should_secure_the_state
     }
   }
   HOL_proclaim_the_unification = {

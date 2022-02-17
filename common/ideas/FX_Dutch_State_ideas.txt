@@ -223,9 +223,32 @@ ideas = {
         foreign_subversive_activites = -0.15
       }
     }
+    HOL_dutch_stratocracy = {
+      allowed = { original_tag = HOL }
+      picture = chi_army_corruption3
+      modifier = {
+        conscription_factor = 0.05
+        army_org_factor = 0.05
+        training_time_factor = -0.25
+      }
+    }
+    HOL_german_scientists = {
+      allowed = { original_tag = HOL }
+      picture = GER_research
+      modifier = {
+        research_speed_factor = 0.05
+      }
+    }
+    HOL_reduced_spending = {
+      allowed = { original_tag = HOL }
+      picture = chi_hyper_inflation
+      modifier = {
+        consumer_goods_factor = -0.05
+      }
+    }
   }
 
-    ### Industrial
+  ### Industrial
   industrial_concern = {
 
 		koninklijke_hoogovens = {
@@ -267,7 +290,7 @@ ideas = {
 		}
 	}
 
-    ### Weapons Manufacturer
+  ### Weapons Manufacturer
   weapons_manufacturer = {
     designer = yes
 
@@ -373,5 +396,5 @@ ideas = {
 				air_equipment = 0.1
 			}
 		}
-    }
+  }
 }
