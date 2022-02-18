@@ -110,7 +110,10 @@ political_actions = {
     }
     available = {
       FROM = {
-        has_dynamic_modifier = HOL_leftist_resistance
+        has_dynamic_modifier = {
+          modifier = HOL_leftist_resistance
+          scope = ROOT
+        }
       }
     }
     icon = GFX_decision_oppression
@@ -131,11 +134,12 @@ political_actions = {
       }
     }
     remove_effect = {
+      custom_effect_tooltip = HOL_crush_socialists_remove_tt
+      HOL_check_leftist_resistance = yes
       FROM = {
-        remove_dynamic_modifier = HOL_leftist_resistance
-      }
-      hidden_effect = {
-        HOL_check_leftist_resistance = yes
+        remove_dynamic_modifier = {
+          modifier = HOL_leftist_resistance
+        }
       }
     }
   }
@@ -174,11 +178,12 @@ political_actions = {
     }
     custom_cost_text = equipment_more_than_20
     remove_effect = {
-      FROM = {
-        remove_dynamic_modifier = HOL_landwacht_resistance
-      }
-      hidden_effect = {
-        HOL_check_landwacht_resistance = yes
+      custom_effect_tooltip = HOL_hunt_down_landwacht_remove_tt
+      HOL_check_landwacht_resistance = yes
+      FROM = { 
+        remove_dynamic_modifier = {
+          modifier = HOL_landwacht_resistance
+        } 
       }
     }
   }
@@ -229,7 +234,7 @@ political_actions = {
       set_cosmetic_tag = HOL_unified
       hidden_effect = {
         random_other_country = {
-          news_event = { id = news.19 hours = 12 }
+          news_event = { id = fxnews.19 hours = 12 }
         }
       }
     }
@@ -254,9 +259,7 @@ HOL_state_integration = {
       }
     }
     remove_effect = {
-      FROM = {
-        add_core_of = ROOT
-      }
+      FROM = { add_core_of = ROOT }
     }
   }
 }

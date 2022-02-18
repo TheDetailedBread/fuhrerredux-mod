@@ -1362,11 +1362,12 @@ country_event = { # Prince Bernhard Assassinated!
   id = dutchstate.110
   title = dutchstate.110.t
   desc = dutchstate.110.d
-  picture = GFX_report_event_generic_scandal
+  picture = GFX_report_event_europe_funeral
   is_triggered_only = yes
 
   option = { # A great loss
     name = dutchstate.110.a
+    custom_effect_tooltip = HOL_act_quickly_tt
     retire_character = HOL_Bernhard_of_the_Netherlands
     add_country_leader_role = {
       character = HOL_Izaak_Reynders
