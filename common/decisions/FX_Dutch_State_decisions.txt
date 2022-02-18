@@ -1,4 +1,35 @@
 foreign_politics = {
+  HOL_operations_in_brussels = {
+    allowed = { original_tag = HOL }
+    visible = {
+      has_completed_focus = HOL_covert_operations_in_belgium
+    }
+    cost = 20
+    icon = GFX_decision_generic_political_discourse
+    complete_effect = {
+      custom_effect_tooltip = HOL_operations_in_brussels_tt
+      hidden_effect = {
+        country_event = { id = dutchstate.51 days = 60 }
+      }
+    }
+  }
+  HOL_espionage_in_france = {
+    allowed = { original_tag = HOL }
+    visible = {
+      has_completed_focus = HOL_espionage_in_the_city_of_lights
+    }
+    target_trigger = {
+      FROM = { tag = FRA }
+    }
+    cost = 20
+    icon = GFX_decision_generic_political_discourse
+    complete_effect = {
+      custom_effect_tooltip = HOL_espionage_in_france_tt
+      hidden_effect = {
+        country_event = { id = dutchstate.50 days = 60 }
+      }
+    }
+  }
   HOL_unification_of_the_lowlands = {
     allowed = { original_tag = HOL }
     visible = {
@@ -106,6 +137,7 @@ political_actions = {
       OR = {
         has_completed_focus = HOL_crush_socialists
         has_completed_focus = HOL_the_red_scare
+        has_country_flag = HOL_socialist_problem
       }  
     }
     available = {
@@ -147,7 +179,8 @@ political_actions = {
     allowed = { original_tag = HOL }
     visible = {
       OR = {
-        has_completed_focus = HOL_dissolve_the_landwacht
+        has_completed_focus = HOL_crush_the_remaining_landwacht
+        has_country_flag = HOL_landwacht_problem
       }
     }
     available = {

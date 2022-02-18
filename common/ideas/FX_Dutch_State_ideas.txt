@@ -246,6 +246,30 @@ ideas = {
         consumer_goods_factor = -0.05
       }
     }
+    HOL_corporate_alliance_idea = {
+      allowed = { original_tag = HOL }
+      picture = ger_mefo_bills_payment
+      modifier = {
+        production_factory_max_efficiency_factor = 0.15
+        industrial_capacity_factory = 0.15
+        industrial_capacity_dockyard = 0.15
+      }
+    }
+    HOL_financial_freedom_idea = {
+      allowed = { original_tag = HOL }
+      picture = chi_hyper_inflation2
+      modifier = {
+        consumer_goods_factor = -0.15
+        production_speed_buildings_factor = 0.25
+      }
+    }
+    HOL_experimental_drugs = {
+      allowed = { original_tag = HOL }
+      picture = tfv_can_conscription_crisis
+      modifier = {
+        army_speed_factor = 0.05
+      }
+    }
   }
 
   ### Industrial
