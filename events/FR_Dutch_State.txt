@@ -506,6 +506,18 @@ country_event = {
   }
 }
 
+country_event = { # Scientific Exposition in Amsterdam
+  id = dutchstate.23
+  title = dutchstate.23.t
+  desc = dutchstate.23.d
+  picture = GFX_report_event_physics_lab_01
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.23.a
+  }
+}
+
 country_event = { # Belgian Civil War
   id = dutchstate.24
   title = dutchstate.24
@@ -1176,6 +1188,50 @@ country_event = { # Operations in Belgium
   }
 }
 
+country_event = { # Join Faction
+  id = dutchstate.52
+  title = dutchstate.52.t
+  desc = dutchstate.52.d
+  picture = GFX_report_event_french_resistance_02
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.52.a
+    if = {
+      limit = { is_faction_leader = yes }
+      add_to_faction = FROM
+    } else = {
+      if = {
+        limit = { tag = SOV }
+        create_faction = "Third Internationale"
+      } else = {
+        create_faction = "Socialist Alliance"
+      }
+      add_to_faction = FROM
+    }
+  }
+
+  option = {
+    name = dutchstate.52.b
+    FROM = {
+      country_event = { id = dutchstate.53 days = 1 }
+    }
+  }
+}
+
+country_event = { # Approved Faction Join
+  id = dutchstate.53
+  title = dutchstate.53.t
+  desc = dutchstate.53.d
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.53.a
+    add_political_power = 20
+  }
+}
+
 #################################################
 #################################################
 #################################################
@@ -1690,6 +1746,7 @@ country_event = { # Fall of the Nationalist Government
     }
     set_country_flag = HOL_socialist_path
     set_country_flag = political_branch_ready
+    HOL_remove_economic_cooperation = yes
     hidden_effect = {
       clr_country_flag = HOL_junta_path
       clr_country_flag = HOL_status_quo_path
@@ -1698,6 +1755,8 @@ country_event = { # Fall of the Nationalist Government
       mark_focus_tree_layout_dirty = yes
       GER = {
         country_event = { id = dutchstate.118 days = 4 }
+        remove_from_faction = HOL
+        HOL_remove_economic_cooperation = yes
       }
     }
   }
