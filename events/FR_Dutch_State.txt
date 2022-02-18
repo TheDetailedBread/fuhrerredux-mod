@@ -1079,6 +1079,7 @@ country_event = { # Landwacht Issue
   option = {
     name = dutchstate.47.a
     hidden_effect = {
+      set_country_flag = HOL_landwacht_problem
       add_landwacht_resistance = yes
     }
   }
@@ -1094,6 +1095,7 @@ country_event = { # Socialist Crackdowns
   option = {
     name = dutchstate.48.a
     hidden_effect = {
+      set_country_flag = HOL_socialist_problem
       add_leftist_resistance = yes
     }
   }
@@ -1127,6 +1129,49 @@ country_event = { # Expansion of Fokkel
         level = 1
         instant_build = yes
       }
+    }
+  }
+}
+
+country_event = { # Espionage in France
+  id = dutchstate.50
+  title = dutchstate.50.t
+  desc = dutchstate.50.d
+  picture = GFX_report_event_german_parade_paris
+  is_triggered_only = yes
+
+  option = { # In the city of lights...
+    name = dutchstate.50.a
+    add_decryption = {
+      target = FRA
+      ratio = 0.25
+    }
+    steal_random_tech_bonus = {
+      category = industry
+      folder = industry_folder
+      ahead_reduction = 0.8
+      bonus = 1.2
+      base_bonus = 1.1
+      dynamic = yes
+      name = HOL_steel_tech_bonus_tt
+      target = FRA
+      uses = 2
+    }
+  }
+}
+
+country_event = { # Operations in Belgium
+  id = dutchstate.51
+  title = dutchstate.51.t
+  desc = dutchstate.51.d
+  picture = GFX_report_event_german_parade_paris
+  is_triggered_only = yes
+
+  option = { # In the city of lights...
+    name = dutchstate.51.a
+    add_decryption = {
+      target = BEL
+      ratio = 0.25
     }
   }
 }
@@ -1668,23 +1713,6 @@ country_event = { # Fall of the Nationalist Government
         }
         set_capital = { state = 7 }  
       }
-    }
-  }
-
-  option = { # Loyalists launch a coup (Play as KNE)
-    name = dutchstate.117.c
-    trigger = {
-      is_ai = no
-    }
-    KNE = {
-      change_tag_from = ROOT
-    }
-    KNE = {
-      annex_country = {
-        target = HOL
-        transfer_troops = no
-      }
-      set_capital = { state = 7 } 
     }
   }
 }

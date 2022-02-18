@@ -636,6 +636,7 @@ focus_tree = {
   # Bernhard Rules Alone
   focus = {
     id = HOL_bernhard_rules_alone
+    icon = GFX_goal_ideology_paternal_autocrat
     x = 3
     y = 0
     cost = 6
@@ -647,6 +648,229 @@ focus_tree = {
     }
     allow_branch = {
       has_country_flag = HOL_bernhard_path
+    }
+    completion_reward = {
+      if = {
+        limit = {
+          has_country_leader_with_trait = prince_of_the_people
+        }
+        swap_ruler_traits = {
+          remove = prince_of_the_people
+          add = prince_of_the_people_1
+        }
+      }
+      else = {
+        add_country_leader_trait = prince_of_the_people
+      }
+    }
+  }
+
+  # Crush the Remaining Landwacht
+  focus = {
+    id = HOL_crush_the_remaining_landwacht
+    icon = GFX_HOL_crackdown_natpop
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_bernhard_rules_alone }
+    relative_position_id = HOL_bernhard_rules_alone
+    completion_reward = {
+      increase_ruling_party_popularity_by_10 = yes
+      custom_effect_tooltip = HOL_crush_the_remaining_landwacht
+    }
+  }
+
+  # Army Expansion
+  focus = {
+    id = HOL_army_expansion
+    icon = GFX_goal_generic_drafted_army
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_bernhard_rules_alone }
+    relative_position_id = HOL_bernhard_rules_alone
+    completion_reward = {
+      custom_effect_tooltip = HOL_army_expansion_tt
+      hidden_effect = {
+        load_oob = "HOL_elite"
+      }
+    }
+  }
+
+  # Ban the Unions
+  focus = {
+    id = HOL_ban_the_unions
+    icon = GFX_HOL_crackdown_syndie
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_bernhard_rules_alone }
+    relative_position_id = HOL_bernhard_rules_alone
+    completion_reward = {
+      increase_ruling_party_popularity_by_10 = yes
+      remove_ideas = HOL_leftist_symphatizers
+    }
+  }
+
+  # Corporate Alliance
+  focus = {
+    id = HOL_corporate_alliance
+    icon = GFX_goal_state_economy
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_crush_the_remaining_landwacht }
+    prerequisite = { focus = HOL_army_expansion }
+    prerequisite = { focus = HOL_ban_the_unions }
+    relative_position_id = HOL_army_expansion
+    completion_reward = {
+      add_ideas = HOL_corporate_alliance_idea
+    }
+  }
+
+  # Highways and Railroads
+  focus = {
+    id = HOL_highways_and_railroads
+    icon = GFX_goal_OTT_Railroad
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_crush_the_remaining_landwacht }
+    prerequisite = { focus = HOL_army_expansion }
+    prerequisite = { focus = HOL_ban_the_unions }
+    relative_position_id = HOL_army_expansion
+    completion_reward = {
+      every_owned_state = {
+        limit = {
+          free_building_slots = {
+            building = infrastructure
+            size > 0
+            include_locked = yes
+          }
+        }
+
+        add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+      }
+    }
+  }
+
+  # Invite German Mining Expertise
+  focus = {
+    id = HOL_invite_german_mining_expertise
+    icon = GFX_goal_generic_construction2
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_corporate_alliance }
+    relative_position_id = HOL_corporate_alliance
+    completion_reward = {
+      add_resource = { type = steel amount = 20 state = 7 }
+      add_resource = { type = aluminum amount = 20 state = 7 }
+      add_resource = { type = tungsten amount = 10 state = 7 }
+    }
+  }
+
+  # Financial Freedom
+  focus = {
+    id = HOL_financial_freedom
+    icon = GFX_goal_bag_of_money
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_highways_and_railroads }
+    relative_position_id = HOL_highways_and_railroads
+    completion_reward = {
+      add_timed_idea = {
+        idea = HOL_financial_freedom_idea
+        days = 480
+      }
+    }
+  }
+
+  # Invest in Pharmaceuticals
+  focus = {
+    id = HOL_invest_in_pharmaceuticals
+    icon = GFX_goal_gold_up
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_corporate_alliance }
+    prerequisite = { focus = HOL_highways_and_railroads }
+    relative_position_id = HOL_highways_and_railroads
+    completion_reward = {
+      add_ideas = HOL_experimental_drugs
+    }
+  }
+
+  # Covert Operations in Belgium
+  focus = {
+    id = HOL_covert_operations_in_belgium
+    icon = GFX_goal_secret_agents
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_invite_german_mining_expertise }
+    prerequisite = { focus = HOL_financial_freedom }
+    prerequisite = { focus = HOL_invest_in_pharmaceuticals }
+    relative_position_id = HOL_financial_freedom
+    completion_reward = {
+      add_political_power = 50
+      unlock_decision_tooltip = HOL_operations_in_brussels
+    }
+  }
+
+  # Espionage in the City of Lights
+  focus = {
+    id = HOL_espionage_in_the_city_of_lights
+    icon = GFX_goal_Paris
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = HOL_invite_german_mining_expertise }
+    prerequisite = { focus = HOL_financial_freedom }
+    prerequisite = { focus = HOL_invest_in_pharmaceuticals }
+    relative_position_id = HOL_financial_freedom
+    completion_reward = {
+      add_political_power = 50
+      unlock_decision_tooltip = HOL_espionage_in_france
+    }
+  }
+
+  # Our Finest Hour
+  focus = {
+    id = HOL_our_finest_hour
+    icon = GFX_goal_flames_of_rebellion
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      country_exists = BEL
+      BEL = { is_subject = no }
+      date > 1939.1.1
+    }
+    bypass = {
+      OR = {
+        BEL = { 
+          exists = no
+          has_war_with = ROOT
+          OVERLORD = { is_ally_of_ROOT = yes }
+        }
+      }
+    }
+    will_lead_to_war_with = BEL
+    prerequisite = { focus = HOL_covert_operations_in_belgium }
+    prerequisite = { focus = HOL_espionage_in_the_city_of_lights }
+    relative_position_id = HOL_covert_operations_in_belgium
+    completion_reward = {
+      declare_war_on = {
+        target = BEL
+        type = annex_everything
+      }
     }
   }
 
