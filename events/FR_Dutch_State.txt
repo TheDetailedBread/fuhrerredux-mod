@@ -448,7 +448,7 @@ country_event = {
 
   option = {
     name = dutchstate.17.a
-    add_manpower = 1000
+    add_manpower = 500
   }
 }
 
@@ -1253,7 +1253,7 @@ country_event = { # Meetings in Amsterdam
     add_political_power = 20
     hidden_effect = {
       set_variable = { nnb_loyalty = 10 }
-      country_event = { id = dutchstate.101 days = 4 }
+      country_event = { id = dutchstate.101 days = 14 }
     }
   }
 }
@@ -1268,7 +1268,7 @@ country_event = { # Geelkerken's Proposals
   option = { # I may need to take a look
     name = dutchstate.101.a
     hidden_effect = {
-      country_event = { id = dutchstate.102 days = 4 }
+      country_event = { id = dutchstate.102 days = 14 }
     }
   }
 }
@@ -1284,7 +1284,7 @@ country_event = { # Allowing Political Commissars in the Military
     name = dutchstate.102.a
     hidden_effect = {
       subtract_from_variable = { var = nnb_loyalty value = 2 }
-      country_event = { id = dutchstate.103 days = 4 }
+      country_event = { id = dutchstate.103 days = 14 }
     }
   }
 
@@ -1292,7 +1292,7 @@ country_event = { # Allowing Political Commissars in the Military
     name = dutchstate.102.b
     hidden_effect = {
       add_to_variable = { var = nnb_loyalty = value = 2 }
-      country_event = { id = dutchstate.103 days = 4 }
+      country_event = { id = dutchstate.103 days = 14 }
     }
   }
 }
@@ -1308,14 +1308,14 @@ country_event = { # Fate of the Nederlandse Landwacht
     name = dutchstate.103.a
     hidden_effect = {
       subtract_from_variable = { var = nnb_loyalty value = 1 }
-      country_event = { id = dutchstate.104 days = 4 }
+      country_event = { id = dutchstate.104 days = 14 }
     }
   }
   option = { # They will be reformed as elite troops
     name = dutchstate.103.b
     hidden_effect = {
-      add_to_variable = { var = nnb_loyalty value = 1 }
-      country_event = { id = dutchstate.104 days = 4 }
+      add_to_variable = { var = nnb_loyalty value = 4 }
+      country_event = { id = dutchstate.104 days = 14 }
     }
   }
 }
@@ -1337,7 +1337,7 @@ country_event = { # Conscription Issue
   option = { # Limit recruitment for the Landwacht.
     name = dutchstate.104.b
     hidden_effect = {
-      add_to_variable = { var = nnb_loyalty value = 4 }
+      add_to_variable = { var = nnb_loyalty value = 1 }
       country_event = dutchstate.105
     }
   }
@@ -1358,7 +1358,7 @@ country_event = { # Hidden event
       }
     } 
     else = {
-      country_event = { id = dutchstate.113 days = 7 }
+      country_event = { id = dutchstate.113 days = 14 }
     }
     clear_variable = nnb_loyalty
   }
@@ -1375,7 +1375,7 @@ country_event = { # Reynders Approaches the Prince
     name = dutchstate.106.a
     add_stability = -0.05
     hidden_effect = {
-      country_event = { id = dutchstate.107 days = 3 }
+      country_event = { id = dutchstate.107 days = 14 }
     }
   }
 }
@@ -1391,7 +1391,7 @@ country_event = { # Suspicious Party Meetings
     name = dutchstate.107.a
     add_political_power = -10
     hidden_effect = {
-      country_event = { id = dutchstate.108 days = 6 }
+      country_event = { id = dutchstate.108 days = 14 }
     }
   }
 }
@@ -1410,7 +1410,7 @@ country_event = { # Investigation Complete
       popularity = -0.15
     }
     hidden_effect = {
-      country_event = { id = dutchstate.109 days = 5 }
+      country_event = { id = dutchstate.109 days = 14 }
     }
   }
 
@@ -1746,17 +1746,24 @@ country_event = { # Fall of the Nationalist Government
     }
     set_country_flag = HOL_socialist_path
     set_country_flag = political_branch_ready
-    HOL_remove_economic_cooperation = yes
     hidden_effect = {
       clr_country_flag = HOL_junta_path
       clr_country_flag = HOL_status_quo_path
       clr_country_flag = HOL_bernhard_path
       clr_country_flag = HOL_natpop_path
       mark_focus_tree_layout_dirty = yes
-      GER = {
-        country_event = { id = dutchstate.118 days = 4 }
-        remove_from_faction = HOL
+      if = {
+        limit = {
+          GER = {
+            has_socialist_government = no
+          }
+        }
         HOL_remove_economic_cooperation = yes
+        GER = {
+          country_event = { id = dutchstate.118 days = 4 }
+          remove_from_faction = HOL
+          HOL_remove_economic_cooperation = yes
+        }
       }
     }
   }
@@ -1780,11 +1787,14 @@ country_event = { # GER: Socialism in the Netherlands
   id = dutchstate.118
   title = dutchstate.118.t
   desc = dutchstate.118.d
-  #picture 
+  picture = GFX_report_event_french_resistance_01
   is_triggered_only = yes
 
   option = { # Pull out from the Netherlands
     name = dutchstate.118.a
+    ai_chance = {
+      base = 100
+    }
     if = {
       limit = {
         OR = {
@@ -1817,11 +1827,76 @@ country_event = { # Germany pulls out from Netherlands
   id = dutchstate.119
   title = dutchstate.119.t
   desc = dutchstate.119.d
-  #picture
+  picture = GFX_report_event_french_resistance_01
   is_triggered_only = yes
 
   option = { # Oh no
     name = dutchstate.119.a
     add_political_power = -100
+  }
+}
+
+country_event = { # Socialist Elections
+  id = dutchstate.120
+  title = dutchstate.120.t
+  desc = dutchstate.120.d
+  picture = GFX_report_event_election_vote
+  is_triggered_only = yes
+
+  option = { # RF
+    name = dutchstate.120.a
+    set_politics = {
+      ruling_party = vanguardist
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = vanguardist
+      popularity = 0.15
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_David_Wijnkoop_hog_van
+      HOL_Paul_de_Groot_for_van
+      HOL_Louis_de_Visser_eco_van
+      HOL_Bernhard_Coltof_sec_van
+    }
+  }
+
+  option = { # VVA
+    name = dutchstate.120.b
+    set_politics = {
+      ruling_party = collectivist
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = collectivist
+      popularity = 0.05
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_Anton_Pannekoek_hog_col
+      HOL_Nicolaas_Beuzemaker_for_col
+      HOL_Abraham_Verduin_eco_col
+      HOL_Henriette_Roland_Holst_sec_col
+    }
+  }
+
+  option = { # AP
+    name = dutchstate.120.c
+    set_politics = {
+      ruling_party = libertarian_socialist
+      elections_allowed = no
+    }
+    add_popularity = {
+      ideology = libertarian_socialist
+      popularity = 0.15
+    }
+    remove_every_minister = yes
+    add_ideas = {
+      HOL_Henk_Sneevliet_hog_lib
+      HOL_Benjamin_Boers_for_lib
+      HOL_Jan_Tinbergen_eco_lib
+      HOL_Abraham_Menist_sec_lib
+    }
   }
 }

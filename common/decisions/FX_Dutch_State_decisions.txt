@@ -1,4 +1,74 @@
+HOL_landwacht_expansion = {
+  HOL_conduct_war_games = {
+    icon = GFX_decision_generic_tank
+    fire_only_once = yes
+    days_remove = 60
+    custom_cost_trigger = {
+      has_equipment = {
+        infantry_equipment_1 > 20
+      }
+    }
+    custom_cost_text = equipment_more_than_20
+    remove_effect = {
+      add_tech_bonus = {
+        category = land_doctrine
+        bonus = 0.5
+        uses = 1
+      }
+    }
+  }
+  HOL_recruitment_spree = {
+    icon = GFX_decision_eng_blackshirt_march
+    fire_only_once = yes
+    days_remove = 40
+    cost = 50
+    remove_effect = {
+      add_manpower = 15000
+    }
+  }
+  HOL_intensified_training_programs = {
+    icon = GFX_decision_generic_prepare_civil_war
+    fire_only_once = yes
+    days_remove = 100
+    cost = 20
+    remove_effect = {
+      custom_effect_tooltip = HOL_intensified_training_programs_tt
+      hidden_effect = {
+        load_oob = "HOL_elite"
+      }
+    }
+  }
+}
 foreign_politics = {
+  HOL_strike_at = {
+    allowed = { original_tag = HOL }
+    visible = { has_completed_focus = HOL_red_dawn_in_western_europe }
+    cost = 20
+    icon = GFX_decision_generic_ignite_civil_war
+    days_remove = 14
+    target_trigger = {
+      FROM = {
+        OR = {
+          tag = BEL
+          tag = FRA
+        }
+      }
+    }
+    available = {
+      FROM = {
+        NOT = { 
+          is_in_faction_with = ROOT
+          is_subject_of = ROOT
+        }
+      }
+    }
+    remove_effect = {
+      declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+    }
+  }
   HOL_operations_in_brussels = {
     allowed = { original_tag = HOL }
     visible = {
