@@ -601,3 +601,36 @@ news_event = { # Iron Guard Rises to Power
   }
 }
 
+news_event = { # Fires in the Binnenhof
+  id = fxnews.32
+  title = fxnews.32.t
+  desc = fxnews.32.d
+  picture = GFX_news_event_HOL_binnenhof
+  major = yes
+  is_triggered_only = yes
+
+  show_major = {
+    NOT = { tag = ROM }
+  }
+
+  option = {
+    name = fxnews.32.a
+  }
+}
+
+news_event = { # Prince Bernhard Assassinated
+  id = fxnews.33
+  title = fxnews.33.t
+  desc = fxnews.33.d
+  picture = GFX_news_event_HOL_prince_shot
+  major = yes
+  is_triggered_only = yes
+
+  show_major = {
+    NOT = { tag = ROM }
+  }
+
+  option = {
+    name = fxnews.33.a
+  }
+}
