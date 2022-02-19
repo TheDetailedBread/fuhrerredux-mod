@@ -1519,6 +1519,9 @@ country_event = { # Prince Bernhard Assassinated!
       clr_country_flag = HOL_status_quo_path
       country_event = { id = dutchstate.111 days = 4 }
       mark_focus_tree_layout_dirty = yes
+      random_other_country = {
+        news_event = { id = fxnews.33 days = 2 }
+      }
     }
   }
 }
@@ -1764,6 +1767,9 @@ country_event = { # Fall of the Nationalist Government
           remove_from_faction = HOL
           HOL_remove_economic_cooperation = yes
         }
+      }
+      random_other_country = {
+        news_event = { id = fxnews.32 days = 2 }
       }
     }
   }
