@@ -469,8 +469,7 @@ focus_tree = {
     prerequisite = { focus = HOL_the_red_scare }
     relative_position_id = HOL_the_red_scare
     completion_reward = {
-      army_experience = 15
-      add_manpower = 35000
+      unlock_decision_category_tooltip = HOL_landwacht_expansion
     }
   }
 
@@ -1203,12 +1202,15 @@ focus_tree = {
   # Convene with the Trade Unions
   focus = {
     id = HOL_convene_with_the_trade_unions
-    icon = GFX_goal_red_star_green_wreath
+    icon = GFX_goal_HOL_trade_unions
     x = 1
     y = 1
     cost = 6
     prerequisite = { focus = HOL_the_peoples_government }
     relative_position_id = HOL_the_peoples_government
+    completion_reward = {
+      add_ideas = HOL_union_support
+    }
   }
 
   # Always Listening, Always Watching
@@ -1259,7 +1261,7 @@ focus_tree = {
   # Industrial Nationalization
   focus = {
     id = HOL_industrial_nationalization
-    icon = GFX_goal_generic_industry_reallocation
+    icon = GFX_goal_state_economy
     x = 1
     y = 1
     cost = 6
@@ -1335,7 +1337,7 @@ focus_tree = {
   # Restructure the Bureaucracy
   focus = {
     id = HOL_restructure_the_bureaucracy
-    icon = GFX_focus_generic_self_management
+    icon = GFX_goal_government_icon
     x = 1
     y = 1
     cost = 6
@@ -1410,7 +1412,7 @@ focus_tree = {
   # Call New Elections
   focus = {
     id = HOL_call_new_elections
-    icon = GFX_goal_liberty
+    icon = GFX_goal_HOL_socialist_elections
     x = 1
     y = 1
     cost = 6
@@ -1419,6 +1421,9 @@ focus_tree = {
       focus = HOL_stand_with_berlin
     }
     relative_position_id = HOL_join_the_internationale
+    completion_reward = {
+      country_event = { id = dutchstate.120 days = 2 }
+    }
   }
 
   # Red Dawn in Western Europe
@@ -1432,6 +1437,9 @@ focus_tree = {
     prerequisite = { focus = HOL_revolutionary_education }
     prerequisite = { focus = HOL_continue_industrialization }
     relative_position_id = HOL_call_new_elections
+    completion_reward = {
+      custom_effect_tooltip = HOL_red_dawn_in_western_europe_tt
+    }
   }
 
   ###############################################
