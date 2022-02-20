@@ -1232,6 +1232,123 @@ country_event = { # Approved Faction Join
   }
 }
 
+country_event = { # Louis de Visser Arrested by Landwacht
+  id = dutchstate.54
+  title = dutchstate.54.t
+  desc = dutchstate.54.d
+  picture = GFX_report_event_fascist_militia
+  is_triggered_only = yes
+
+  trigger = {
+    has_socialist_government = no
+  }
+
+  option = { # Interrogate him
+    name = dutchstate.54.a
+    add_political_power = -50
+    hidden_effect = {
+      country_event = { id = dutchstate.56 days = 30 }
+    }
+  }
+
+  option = { # Send him to prison
+    name = dutchstate.54.b
+    add_popularity = {
+      ideology = vanguardist
+      popularity = 0.05
+    }
+    add_popularity = {
+      ideology = collectivist
+      popularity = 0.05
+    }
+    hidden_effect = {
+      country_event = { id = dutchstate.55 days = 30 }
+    }
+  }
+}
+
+country_event = { # Death of Louis de Visser in Prison
+  id = dutchstate.55
+  title = dutchstate.55.t
+  desc = dutchstate.55.d
+  picture = GFX_report_event_europe_funeral
+  is_triggered_only = yes
+
+  trigger = {
+    has_socialist_government = no
+  }
+
+  option = { # I want this information censored!
+    name = dutchstate.55.a
+    retire_character = HOL_Louis_de_Visser
+    add_stability = -0.05
+    add_popularity = {
+      ideology = vanguardist
+      popularity = 0.05
+    }
+    add_popularity = {
+      ideology = collectivist
+      popularity = 0.05
+    }
+    add_popularity = {
+      ideology = libertarian_socialist
+      popularity = 0.05
+    }
+    hidden_effect = {
+      country_event = { id = dutchstate.57 days = 7 }
+    }
+  }
+}
+
+country_event = { # Landwacht Accused of Torture!
+  id = dutchstate.56
+  title = dutchstate.56.t
+  desc = dutchstate.56.d
+  picture = GFX_report_event_king_speech
+  is_triggered_only = yes
+
+  trigger = {
+    has_socialist_government = no
+  }
+
+  option = { # Deny everything!
+    name = dutchstate.56.a
+    add_political_power = -50
+    hidden_effect = {
+      country_event = { id = dutchstate.57 days = 7 }
+    }
+  }
+}
+
+country_event = { # Labour Leaders Organizes a Strike
+  id = dutchstate.57
+  title = dutchstate.57.t
+  desc = dutchstate.57.d
+  picture = GFX_report_event_generic_rally
+  is_triggered_only = yes
+
+  option = { # Send in the police
+    name = dutchstate.57.a
+    add_ideas = HOL_labour_strike
+    hidden_effect = {
+      country_event = { id = dutchstate.58 days = 2 }
+    }
+  }
+}
+
+country_event = { # Security Units Pacifies the Strikers
+  id = dutchstate.58
+  title = dutchstate.58.t
+  desc = dutchstate.58.d
+  picture = GFX_report_event_generic_rally
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.58.a
+    remove_ideas = HOL_labour_strike
+  }
+}
+
 #################################################
 #################################################
 #################################################
@@ -1576,6 +1693,9 @@ country_event = { # Army Coup
       clr_country_flag = HOL_bernhard_path
       clr_country_flag = HOL_status_quo_path
       mark_focus_tree_layout_dirty = yes
+      random_other_country = {
+        news_event = { id = fxnews.34 days = 1 }
+      }
     }
   }
 }
