@@ -149,6 +149,7 @@ focus_tree = {
       custom_effect_tooltip = HOL_fight_the_leftists_tt
       hidden_effect = {
         HOL_add_leftist_resistance = yes
+        country_event = { id = dutchstate.54 days = 60 }
       }
     }
   }
@@ -470,6 +471,9 @@ focus_tree = {
     relative_position_id = HOL_the_red_scare
     completion_reward = {
       unlock_decision_category_tooltip = HOL_landwacht_expansion
+      hidden_effect = {
+        country_event = { id = dutchstate.54 days = 60 }
+      }
     }
   }
 
@@ -530,6 +534,12 @@ focus_tree = {
     relative_position_id = HOL_control_the_universities
     completion_reward = {
       add_manpower = 50000
+      if = {
+        limit = { has_idea = HOL_unrecognized_government_1 }
+        remove_ideas = HOL_unrecognized_government_1
+      } else = {
+        remove_ideas = HOL_unrecognized_government
+      }
     }
   }
 
@@ -870,6 +880,12 @@ focus_tree = {
         target = BEL
         type = annex_everything
       }
+      if = {
+        limit = { has_idea = HOL_unrecognized_government_1 }
+        remove_ideas = HOL_unrecognized_government_1
+      } else = {
+        remove_ideas = HOL_unrecognized_government
+      }
     }
   }
 
@@ -1136,6 +1152,12 @@ focus_tree = {
     prerequisite = { focus = HOL_reduce_welfare_spending }
     relative_position_id = HOL_reduce_welfare_spending
     completion_reward = {
+      if = {
+        limit = { has_idea = HOL_unrecognized_government_1 }
+        remove_ideas = HOL_unrecognized_government_1
+      } else = {
+        remove_ideas = HOL_unrecognized_government
+      }
       custom_effect_tooltip = HOL_unify_the_lowlands_tt
     }
   }
@@ -1181,7 +1203,7 @@ focus_tree = {
     }
   }
 
-  # Ban the Reactionary Paramiliatries
+  # Ban the Reactionary Paramilitaries
   focus = {
     id = HOL_ban_the_reactionary_paramilitaries
     icon = GFX_goal_HOL_ban_paramilitary
