@@ -292,11 +292,9 @@ political_actions = {
   }
   HOL_secure_the_state = {
     allowed = { original_tag = HOL }
+    icon = GFX_decision_generic_nationalism
     available = {
-      custom_trigger_tooltip = {
-        tooltip = HOL_has_secured_the_state_tt
-        has_country_flag = HOL_has_secured_the_state
-      }
+      has_completed_focus = HOL_arrest_general_reynders
     }
     activation = {
       has_country_flag = HOL_should_secure_the_state
@@ -311,6 +309,9 @@ political_actions = {
       }
     }
     complete_effect = {
+      add_stability = 0.05
+      add_war_support = 0.05
+      increase_ruling_party_popularity_by_5 = yes
       clr_country_flag = HOL_should_secure_the_state
     }
   }

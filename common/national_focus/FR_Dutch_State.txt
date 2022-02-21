@@ -684,8 +684,11 @@ focus_tree = {
     prerequisite = { focus = HOL_bernhard_rules_alone }
     relative_position_id = HOL_bernhard_rules_alone
     completion_reward = {
-      increase_ruling_party_popularity_by_10 = yes
-      custom_effect_tooltip = HOL_crush_the_remaining_landwacht
+      add_popularity = {
+        ideology = national_populist
+        popularity = -0.15
+      }
+      custom_effect_tooltip = HOL_crush_the_remaining_landwacht_tt
     }
   }
 
@@ -1200,6 +1203,9 @@ focus_tree = {
         ideology = social_democrat
         popularity = 0.05
       }
+      hidden_effect = {
+        country_event = { id = dutchstate.59 days = 2 }
+      }
     }
   }
 
@@ -1371,6 +1377,9 @@ focus_tree = {
     completion_reward = {
       add_stability = 0.05
       add_war_support = 0.05
+      hidden_effect = {
+        country_event = { id = dutchstate.60 days = 2 }
+      }
     }
   }
 
