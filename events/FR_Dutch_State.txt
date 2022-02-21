@@ -421,7 +421,7 @@ country_event = {
   }
 
   mean_time_to_happen = {
-    days = 30
+    days = 360
     modifier = {
       factor = 0.25
       BEL = { has_idea = HOL_dutch_resistance }
@@ -1370,11 +1370,18 @@ country_event = { # Question of Royal Assets
 country_event = { # Monarchist Sympathies in the Bureaucracy
   id = dutchstate.60
   title = dutchstate.60.t
-  desc = dutchstate.60.d
+  desc = {
+    text = dutchstate.60.d
+    trigger = { has_socialist_government = yes }
+  }
+  desc = {
+    text = dutchstate.60.d.natpop
+    trigger = { has_government = national_populist }
+  }
   picture = GFX_report_event_HOL_border_incident
   is_triggered_only = yes
 
-  option = { # 
+  option = { # A little reeducation won't hurt right?
     name = dutchstate.60.a
   }
 }
@@ -1399,7 +1406,7 @@ country_event = { # Meetings in Amsterdam
     name = dutchstate.100.a
     add_political_power = 20
     hidden_effect = {
-      set_variable = { nnb_loyalty = 10 }
+      set_variable = { var = nnb_loyalty value = 10 }
       country_event = { id = dutchstate.101 days = 14 }
     }
   }
@@ -1430,7 +1437,7 @@ country_event = { # Allowing Political Commissars in the Military
   option = { # The military should be independent from politics
     name = dutchstate.102.a
     hidden_effect = {
-      subtract_from_variable = { var = nnb_loyalty value = 2 }
+      add_to_variable = { nnb_loyalty = -2 }
       country_event = { id = dutchstate.103 days = 14 }
     }
   }
@@ -1438,7 +1445,7 @@ country_event = { # Allowing Political Commissars in the Military
   option = { # The soldier's loyalty to us is important
     name = dutchstate.102.b
     hidden_effect = {
-      add_to_variable = { var = nnb_loyalty = value = 2 }
+      add_to_variable = { nnb_loyalty = 2 }
       country_event = { id = dutchstate.103 days = 14 }
     }
   }
@@ -1454,14 +1461,14 @@ country_event = { # Fate of the Nederlandse Landwacht
   option = { # They will remain as security personnel
     name = dutchstate.103.a
     hidden_effect = {
-      subtract_from_variable = { var = nnb_loyalty value = 1 }
+      add_to_variable = { nnb_loyalty = -2 }
       country_event = { id = dutchstate.104 days = 14 }
     }
   }
   option = { # They will be reformed as elite troops
     name = dutchstate.103.b
     hidden_effect = {
-      add_to_variable = { var = nnb_loyalty value = 4 }
+      add_to_variable = { nnb_loyalty = 2 }
       country_event = { id = dutchstate.104 days = 14 }
     }
   }
@@ -1477,14 +1484,14 @@ country_event = { # Conscription Issue
   option = { # Recruits can be transferred to the Landwacht
     name = dutchstate.104.a
     hidden_effect = {
-      subtract_from_variable = { var = nnb_loyalty value = 4 }
+      add_to_variable = { nnb_loyalty = -3 }
       country_event = dutchstate.105
     }
   }
   option = { # Limit recruitment for the Landwacht.
     name = dutchstate.104.b
     hidden_effect = {
-      add_to_variable = { var = nnb_loyalty value = 1 }
+      add_to_variable = { nnb_loyalty = 3 }
       country_event = dutchstate.105
     }
   }
@@ -1741,7 +1748,7 @@ country_event = { # Utrecht Station Fire
     name = dutchstate.113.a
     add_political_power = -10
     hidden_effect = {
-      country_event = { id = dutchstate.114 }
+      country_event = { id = dutchstate.114 days = 14 }
     }
   }
 }
@@ -1757,7 +1764,7 @@ country_event = { # Targeting Socialists
     name = dutchstate.114.a
     add_political_power = 10
     hidden_effect = {
-      country_event = { id = dutchstate.116 days = 4 }
+      country_event = { id = dutchstate.116 days = 14 }
     }
   }
 
@@ -1778,7 +1785,7 @@ country_event = { # Targeting Socialists
     add_manpower = -1500
     set_country_flag = HOL_purged_socialists
     hidden_effect = {
-      country_event = { id = dutchstate.115 days = 4 }
+      country_event = { id = dutchstate.115 days = 14 }
     }
   }
 }
@@ -1828,7 +1835,7 @@ country_event = { # The Celebration
     name = dutchstate.116.b
     add_political_power = -10
     hidden_effect = {
-      country_event = { id = dutchstate.120 days = 4 }
+      country_event = { id = dutchstate.115 days = 4 }
     }
   }
 }
