@@ -11,33 +11,33 @@ HOL_remove_economic_cooperation = {
 
 HOL_add_leftist_resistance = {
   7 = { 
+    set_state_flag = HOL_leftist_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_leftist_resistance
-      scope = ROOT
     }
   }
   35 = { 
+    set_state_flag = HOL_leftist_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_leftist_resistance
-      scope = ROOT
     }
   }
   36 = {
+    set_state_flag = HOL_leftist_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_leftist_resistance
-      scope = ROOT
     }
   }
   754 = {
+    set_state_flag = HOL_leftist_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_leftist_resistance
-      scope = ROOT
     }
   }
   938 = {
+    set_state_flag = HOL_leftist_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_leftist_resistance
-      scope = ROOT
     }
   }
 
@@ -52,19 +52,19 @@ HOL_check_leftist_resistance = {
     if = {
       limit = {
         7 = {
-          NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+          NOT = { has_state_flag = HOL_leftist_resistance_flag }
         }
         35 = {
-          NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+          NOT = { has_state_flag = HOL_leftist_resistance_flag }
         }
         36 = {
-          NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+          NOT = { has_state_flag = HOL_leftist_resistance_flag }
         }
         754 = {
-          NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+          NOT = { has_state_flag = HOL_leftist_resistance_flag }
         }
         938 = {
-          NOT = { has_dynamic_modifier = HOL_leftist_resistance }
+          NOT = { has_state_flag = HOL_leftist_resistance_flag }
         }
       }
       remove_ideas = {
@@ -76,32 +76,37 @@ HOL_check_leftist_resistance = {
 
 HOL_add_landwacht_resistance = {
   7 = { 
+    set_state_flag = HOL_landwacht_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_landwacht_resistance
     }
   }
   35 = { 
+    set_state_flag = HOL_landwacht_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_landwacht_resistance
     }
   }
   36 = {
+    set_state_flag = HOL_landwacht_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_landwacht_resistance
     }
   }
   754 = {
+    set_state_flag = HOL_landwacht_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_landwacht_resistance
     }
   }
   938 = {
+    set_state_flag = HOL_landwacht_resistance_flag
     add_dynamic_modifier = {
       modifier = HOL_landwacht_resistance
     }
   }
 
-  add_ideas = HOL_landwacht_terrortists
+  add_ideas = HOL_landwacht_terrorists
 }
 
 HOL_check_landwacht_resistance = {
@@ -109,23 +114,23 @@ HOL_check_landwacht_resistance = {
     if = {
       limit = {
         7 = {
-          NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+          NOT = { has_state_flag = HOL_landwacht_resistance_flag }
         }
         35 = {
-          NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+          NOT = { has_state_flag = HOL_landwacht_resistance_flag }
         }
         36 = {
-          NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+          NOT = { has_state_flag = HOL_landwacht_resistance_flag }
         }
         754 = {
-          NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+          NOT = { has_state_flag = HOL_landwacht_resistance_flag }
         }
         938 = {
-          NOT = { has_dynamic_modifier = HOL_landwacht_resistance }
+          NOT = { has_state_flag = HOL_landwacht_resistance_flag }
         }
       }
       remove_ideas = {
-        HOL_landwacht_terrortists
+        HOL_landwacht_terrorists
       }
     }
   }

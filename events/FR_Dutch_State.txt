@@ -1484,15 +1484,15 @@ country_event = { # Conscription Issue
   option = { # Recruits can be transferred to the Landwacht
     name = dutchstate.104.a
     hidden_effect = {
-      add_to_variable = { nnb_loyalty = -3 }
-      country_event = dutchstate.105
+      add_to_variable = { nnb_loyalty = 3 }
+      country_event = { id = dutchstate.105 days = 2 }
     }
   }
   option = { # Limit recruitment for the Landwacht.
     name = dutchstate.104.b
     hidden_effect = {
-      add_to_variable = { nnb_loyalty = 3 }
-      country_event = dutchstate.105
+      add_to_variable = { nnb_loyalty = -3 }
+      country_event = { id = dutchstate.105 days = 2 }
     }
   }
 }
@@ -1505,7 +1505,7 @@ country_event = { # Hidden event
   option = {
     if = {
       limit = {
-        check_variable = { nnb_loyalty < 5 }
+        check_variable = { nnb_loyalty < 8 }
       }
       hidden_effect = {
         country_event = { id = dutchstate.106 days = 14 }
@@ -1514,7 +1514,6 @@ country_event = { # Hidden event
     else = {
       country_event = { id = dutchstate.113 days = 14 }
     }
-    clear_variable = nnb_loyalty
   }
 }
 

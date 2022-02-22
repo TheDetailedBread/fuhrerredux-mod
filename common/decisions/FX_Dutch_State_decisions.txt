@@ -211,11 +211,12 @@ political_actions = {
       }  
     }
     available = {
+      custom_trigger_tooltip = {
+        tooltip = HOL_conducting_pacification_tt
+        NOT = { has_country_flag = HOL_conducting_pacification }
+      }
       FROM = {
-        has_dynamic_modifier = {
-          modifier = HOL_leftist_resistance
-          scope = ROOT
-        }
+        has_state_flag = HOL_leftist_resistance_flag
       }
     }
     icon = GFX_decision_oppression
@@ -235,10 +236,15 @@ political_actions = {
         }
       }
     }
+    complete_effect = {
+      set_country_flag = HOL_conducting_pacification
+    }
     remove_effect = {
       custom_effect_tooltip = HOL_crush_socialists_remove_tt
       HOL_check_leftist_resistance = yes
+      clr_country_flag = HOL_conducting_pacification
       FROM = {
+        clr_state_flag = HOL_leftist_resistance_flag
         remove_dynamic_modifier = {
           modifier = HOL_leftist_resistance
         }
@@ -254,8 +260,12 @@ political_actions = {
       }
     }
     available = {
+      custom_trigger_tooltip = {
+        tooltip = HOL_conducting_pacification_tt
+        NOT = { has_country_flag = HOL_conducting_pacification }
+      }
       FROM = {
-        has_dynamic_modifier = HOL_landwacht_resistance
+        has_state_flag = HOL_landwacht_resistance_flag
       }
     }
     icon = GFX_decision_generic_army_support
@@ -280,10 +290,15 @@ political_actions = {
       }
     }
     custom_cost_text = equipment_more_than_20
+    complete_effect = {
+      set_country_flag = HOL_conducting_pacification
+    }
     remove_effect = {
       custom_effect_tooltip = HOL_hunt_down_landwacht_remove_tt
       HOL_check_landwacht_resistance = yes
+      clr_country_flag = HOL_conducting_pacification
       FROM = { 
+        clr_state_flag = HOL_landwacht_resistance_flag
         remove_dynamic_modifier = {
           modifier = HOL_landwacht_resistance
         } 
