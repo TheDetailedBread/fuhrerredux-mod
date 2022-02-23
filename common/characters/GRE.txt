@@ -118,21 +118,6 @@ characters = {
 				hog_happy_amateur
 			}
 		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = {
-				hidden_trigger = { has_country_flag = GRE_Ioannis_Theotokis_for_mli_hired }
-			}			
-			idea_token = GRE_Ioannis_Theotokis_for_mli
-			on_add = { set_country_flag = GRE_Ioannis_Theotokis_for_mli_hired }
-			on_remove = { clr_country_flag = GRE_Ioannis_Theotokis_for_mli_hired }
-			traits = {
-				foreign_minister
-				market_liberal
-				for_biased_intellectual
-			}
-		}
 	}
 	GRE_Georgios_Kafantaris = {
 		name = "Geórgios Kafantáris"
@@ -158,27 +143,42 @@ characters = {
 			}
 		}
 	}
-	GRE_Dimitrios_Gounaris = {
-		name = "Dimítrios Goúnaris"
+	GRE_Georgios_Papandreou = {
+		name = "Geórgios Papandréou"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Dimitrios_Gounaris.png"
-				small = "gfx/interface/ministers/GRE/GRE_Dimitrios_Gounaris.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Papandreou.png"
+				small = "gfx/interface/ministers/GRE/GRE_Georgios_Papandreou.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Dimitrios_Gounaris_hog_sco_hired }
+				hidden_trigger = { has_country_flag = GRE_Georgios_Papandreou_hog_sde_hired }
 			}			
-			idea_token = GRE_Dimitrios_Gounaris_hog_sco
-			on_add = { set_country_flag = GRE_Dimitrios_Gounaris_hog_sco_hired }
-			on_remove = { clr_country_flag = GRE_Dimitrios_Gounaris_hog_sco_hired }
+			idea_token = GRE_Georgios_Papandreou_hog_sde
+			on_add = { set_country_flag = GRE_Georgios_Papandreou_hog_sde_hired }
+			on_remove = { clr_country_flag = GRE_Georgios_Papandreou_hog_sde_hired }
 			traits = {
 				head_of_government
-				social_conservative
-				hog_old_compromiser
+				social_democrat
+				hog_pragmatic_statesman
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Georgios_Papandreou_for_sde_hired }
+			}			
+			idea_token = GRE_Georgios_Papandreou_for_sde
+			on_add = { set_country_flag = GRE_Georgios_Papandreou_for_sde_hired }
+			on_remove = { clr_country_flag = GRE_Georgios_Papandreou_for_sde_hired }
+			traits = {
+				foreign_minister
+				social_democrat
+				for_moderate_among_radicals
 			}
 		}
 	}
@@ -194,14 +194,14 @@ characters = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Panagiotis_Kanellopoulos_hog_sco_hired }
+				hidden_trigger = { has_country_flag = GRE_Panagiotis_Kanellopoulos_hog_sde_hired }
 			}			
-			idea_token = GRE_Panagiotis_Kanellopoulos_hog_sco
-			on_add = { set_country_flag = GRE_Panagiotis_Kanellopoulos_hog_sco_hired }
-			on_remove = { clr_country_flag = GRE_Panagiotis_Kanellopoulos_hog_sco_hired }
+			idea_token = GRE_Panagiotis_Kanellopoulos_hog_sde
+			on_add = { set_country_flag = GRE_Panagiotis_Kanellopoulos_hog_sde_hired }
+			on_remove = { clr_country_flag = GRE_Panagiotis_Kanellopoulos_hog_sde_hired }
 			traits = {
 				head_of_government
-				social_conservative
+				social_democrat
 				hog_charismatic_charmer
 			}
 		}
@@ -227,6 +227,46 @@ characters = {
 				head_of_government
 				authoritarian_democrat
 				hog_backroom_backstabber
+			}
+		}
+	}
+	GRE_Alexandros_Othonaios = {
+		name = "Aléxandros Othonaíos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Othonaios.png"
+				small = "gfx/interface/ministers/GRE/GRE_Alexandros_Othonaios.png"
+			}
+			army = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Othonaios.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				defensive_doctrine
+				old_guard
+				politically_connected
+				trait_cautious
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Alexandros_Othonaios_hog_ade_hired }
+			}			
+			idea_token = GRE_Alexandros_Othonaios_hog_ade
+			on_add = { set_country_flag = GRE_Alexandros_Othonaios_hog_ade_hired }
+			on_remove = { clr_country_flag = GRE_Alexandros_Othonaios_hog_ade_hired }
+			traits = {
+				head_of_government
+				authoritarian_democrat
+				hog_reformist_soldier
 			}
 		}
 	}
@@ -257,6 +297,21 @@ characters = {
 				hog_corporate_suit
 			}
 		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Ioannis_Michail_Metaxas_for_pau_hired }
+			}			
+			idea_token = GRE_Ioannis_Michail_Metaxas_for_pau
+			on_add = { set_country_flag = GRE_Ioannis_Michail_Metaxas_for_pau_hired }
+			on_remove = { clr_country_flag = GRE_Ioannis_Michail_Metaxas_for_pau_hired }
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_the_cloak_n_dagger_schemer
+			}
+		}
 	}
 	GRE_Alexandros_Koryzis = {
 		name = "Aléxandros Koryzís"
@@ -265,6 +320,10 @@ characters = {
 				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Koryzis.png"
 				small = "gfx/interface/ministers/GRE/GRE_Alexandros_Koryzis.png"
 			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			traits = { }
 		}
 		advisor = {
 			cost = 150
@@ -279,6 +338,21 @@ characters = {
 				head_of_government
 				paternal_autocrat
 				hog_silent_workhorse
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Alexandros_Koryzis_eco_pau_hired }
+			}			
+			idea_token = GRE_Alexandros_Koryzis_eco_pau
+			on_add = { set_country_flag = GRE_Alexandros_Koryzis_eco_pau_hired }
+			on_remove = { clr_country_flag = GRE_Alexandros_Koryzis_eco_pau_hired }
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_bank_president
 			}
 		}
 	}
@@ -310,6 +384,34 @@ characters = {
 			}
 		}
 	}
+	GRE_Georgios_Poulos = {
+		name = "Geórgios Poúlos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Poulos.png"
+				small = "gfx/interface/ministers/GRE/GRE_Georgios_Poulos.png"
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Georgios_Poulos_hog_npo_hired }
+			}			
+			idea_token = GRE_Georgios_Poulos_hog_npo
+			on_add = { set_country_flag = GRE_Georgios_Poulos_hog_npo_hired }
+			on_remove = { clr_country_flag = GRE_Georgios_Poulos_hog_npo_hired }
+			traits = {
+				head_of_government
+				national_populist
+				hog_local_tyrant
+			}
+		}
+	}
 	GRE_Georgios_Spyridon_Merkouris = {
 		name = "Geórgios Spyrídon Merkoúris"
 		portraits = {
@@ -338,51 +440,47 @@ characters = {
 			}
 		}
 	}
-	GRE_Kostas_Speras = {
-		name = "Kóstas Spéras"
+	GRE_Manolis_Manoleas = {
+		name = "Manólis Manoléas"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Kostas_Speras.png"
-				small = "gfx/interface/ministers/GRE/GRE_Kostas_Speras.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Manolis_Manoleas.png"
+				small = "gfx/interface/ministers/GRE/GRE_Manolis_Manoleas.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Kostas_Speras_hog_val_hired }
+				hidden_trigger = { has_country_flag = GRE_Manolis_Manoleas_hog_val_hired }
 			}			
-			idea_token = GRE_Kostas_Speras_hog_val
-			on_add = { set_country_flag = GRE_Kostas_Speras_hog_val_hired }
-			on_remove = { clr_country_flag = GRE_Kostas_Speras_hog_val_hired }
+			idea_token = GRE_Manolis_Manoleas_hog_val
+			on_add = { set_country_flag = GRE_Manolis_Manoleas_hog_val_hired }
+			on_remove = { clr_country_flag = GRE_Manolis_Manoleas_hog_val_hired }
 			traits = {
 				head_of_government
 				valkist
-				hog_ambitious_union_boss
+				hog_backroom_backstabber
 			}
 		}
 	}
-	GRE_Stelios_Sklavainas = {
-		name = "Stélios Sklávainas"
+	GRE_Miltiadis_Porfyrogenis = {
+		name = "Miltiádis Porfyrogénis"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Stelios_Sklavainas.png"
-				small = "gfx/interface/ministers/GRE/GRE_Stelios_Sklavainas.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Miltiadis_Porfyrogenis.png"
+				small = "gfx/interface/ministers/GRE/GRE_Miltiadis_Porfyrogenis.png"
 			}
-		}
-		country_leader = {
-			ideology = libertarian_socialist_subtype
-			traits = { }
 		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Stelios_Sklavainas_hog_lib_hired }
+				hidden_trigger = { has_country_flag = GRE_Miltiadis_Porfyrogenis_hog_lib_hired }
 			}			
-			idea_token = GRE_Stelios_Sklavainas_hog_lib
-			on_add = { set_country_flag = GRE_Stelios_Sklavainas_hog_lib_hired }
-			on_remove = { clr_country_flag = GRE_Stelios_Sklavainas_hog_lib_hired }
+			idea_token = GRE_Miltiadis_Porfyrogenis_hog_lib
+			on_add = { set_country_flag = GRE_Miltiadis_Porfyrogenis_hog_lib_hired }
+			on_remove = { clr_country_flag = GRE_Miltiadis_Porfyrogenis_hog_lib_hired }
 			traits = {
 				head_of_government
 				libertarian_socialist
@@ -390,27 +488,23 @@ characters = {
 			}
 		}
 	}
-	GRE_Nikos_Zachariadis = {
-		name = "Níkos Zachariádis"
+	GRE_Giannis_Ioannidis = {
+		name = "Giánnis Ioannídis"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Nikos_Zachariadis.png"
-				small = "gfx/interface/ministers/GRE/GRE_Nikos_Zachariadis.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Giannis_Ioannidis.png"
+				small = "gfx/interface/ministers/GRE/GRE_Giannis_Ioannidis.png"
 			}
-		}
-		country_leader = {
-			ideology = collectivist_subtype
-			traits = { }
 		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Nikos_Zachariadis_hog_col_hired }
+				hidden_trigger = { has_country_flag = GRE_Giannis_Ioannidis_hog_col_hired }
 			}			
-			idea_token = GRE_Nikos_Zachariadis_hog_col
-			on_add = { set_country_flag = GRE_Nikos_Zachariadis_hog_col_hired }
-			on_remove = { clr_country_flag = GRE_Nikos_Zachariadis_hog_col_hired }
+			idea_token = GRE_Giannis_Ioannidis_hog_col
+			on_add = { set_country_flag = GRE_Giannis_Ioannidis_hog_col_hired }
+			on_remove = { clr_country_flag = GRE_Giannis_Ioannidis_hog_col_hired }
 			traits = {
 				head_of_government
 				collectivist
@@ -418,32 +512,248 @@ characters = {
 			}
 		}
 	}
-	GRE_Dimitris_Giotopoulos = {
-		name = "Dimítris Giotópoulos"
+	GRE_Pantelis_Pouliopoulos = {
+		name = "Pantelís Pouliópoulos"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Dimitris_Giotopoulos.png"
-				small = "gfx/interface/ministers/GRE/GRE_Dimitris_Giotopoulos.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Pantelis_Pouliopoulos.png"
+				small = "gfx/interface/ministers/GRE/GRE_Pantelis_Pouliopoulos.png"
 			}
-		}
-		country_leader = {
-			ideology = vanguardist_subtype
-			traits = { }
 		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Dimitris_Giotopoulos_hog_van_hired }
+				hidden_trigger = { has_country_flag = GRE_Pantelis_Pouliopoulos_hog_van_hired }
 			}			
-			idea_token = GRE_Dimitris_Giotopoulos_hog_van
-			on_add = { set_country_flag = GRE_Dimitris_Giotopoulos_hog_van_hired }
-			on_remove = { clr_country_flag = GRE_Dimitris_Giotopoulos_hog_van_hired }
+			idea_token = GRE_Pantelis_Pouliopoulos_hog_van
+			on_add = { set_country_flag = GRE_Pantelis_Pouliopoulos_hog_van_hired }
+			on_remove = { clr_country_flag = GRE_Pantelis_Pouliopoulos_hog_van_hired }
 			traits = {
 				head_of_government
 				vanguardist
 				hog_sincere_internationalist
 			}
+		}
+	}
+	GRE_Alexandros_Zaimis = {
+		name = "Aléxandros Zaímis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Zaimis.png"
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			traits = { }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+		country_leader = {
+			ideology = market_liberal_subtype
+			traits = { }
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = { }
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
+		}
+	}
+	GRE_Georgios_Athanasiadis_Novas = {
+		name = "Geórgios Athanasiádis-Nóvas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Athanasiadis_Novas.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Ioannis_Rallis = {
+		name = "Ioánnis Rállis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Rallis.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Dimitris_Glinos = {
+		name = "Dimítris Glinós"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Dimitris_Glinos.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Stylianos_Gonatas = {
+		name = "Stylianós Gonatás"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Stylianos_Gonatas.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Filippos_Dragoumis = {
+		name = "Fílippos Dragoúmis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Filippos_Dragoumis.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Nikos_Ploumpidis = {
+		name = "Níkos Ploumpídis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Nikos_Ploumpidis.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Leonidas_Iasonidis = {
+		name = "Leonídas Iasonídis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Leonidas_Iasonidis.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Ioannis_Kyrozis = {
+		name = "Ioánnis Kyrózis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Kyrozis.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Ioannis_Sofianopoulos = {
+		name = "Ioánnis Sofianópoulos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Sofianopoulos.png"
+			}
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = { }
+		}
+	}
+	GRE_Michalis_Tyrimos = {
+		name = "Michális Tyrímos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Michalis_Tyrimos.png"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	GRE_Kostas_Speras = {
+		name = "Kóstas Spéras"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Kostas_Speras.png"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	GRE_Xenofon_Giosmas = {
+		name = "Xenofón Giosmás"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Xenofon_Giosmas.png"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	GRE_Sitsa_Karaiskaki_Nikolaou = {
+		name = "Sítsa Karaískáki-Nikoláou"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Sitsa_Karaiskaki_Nikolaou.png"
+			}
+		}
+		country_leader = {
+			ideology = valkist_subtype
+			traits = { }
+		}
+	}
+	GRE_Stelios_Sklavainas = {
+		name = "Stélios Sklávainas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Stelios_Sklavainas.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_socialist_subtype
+			traits = { }
+		}
+	}
+	GRE_Nikos_Zachariadis = {
+		name = "Níkos Zachariádis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Nikos_Zachariadis1.png"
+			}
+		}
+		country_leader = {
+			ideology = collectivist_subtype
+			traits = { }
+		}
+	}
+	GRE_Dimitris_Giotopoulos = {
+		name = "Dimítris Giotópoulos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Dimitris_Giotopoulos.png"
+			}
+		}
+		country_leader = {
+			ideology = vanguardist_subtype
+			traits = { }
 		}
 	}
 	GRE_Andreas_Michalakopoulos = {
@@ -490,7 +800,7 @@ characters = {
 			traits = {
 				foreign_minister
 				social_conservative
-				for_biased_intellectual
+				for_world_patrician
 			}
 		}
 	}
@@ -514,31 +824,7 @@ characters = {
 			traits = {
 				foreign_minister
 				social_democrat
-				for_the_cloak_n_dagger_schemer
-			}
-		}
-	}
-	GRE_Georgios_Papandreou = {
-		name = "Geórgios Papandréou"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Papandreou.png"
-				small = "gfx/interface/ministers/GRE/GRE_Georgios_Papandreou.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = {
-				hidden_trigger = { has_country_flag = GRE_Georgios_Papandreou_for_sde_hired }
-			}			
-			idea_token = GRE_Georgios_Papandreou_for_sde
-			on_add = { set_country_flag = GRE_Georgios_Papandreou_for_sde_hired }
-			on_remove = { clr_country_flag = GRE_Georgios_Papandreou_for_sde_hired }
-			traits = {
-				foreign_minister
-				social_democrat
-				for_moderate_among_radicals
+				for_ideological_crusader
 			}
 		}
 	}
@@ -562,31 +848,7 @@ characters = {
 			traits = {
 				foreign_minister
 				authoritarian_democrat
-				for_ideological_crusader
-			}
-		}
-	}
-	GRE_Theodoros_Tourkovasilis = {
-		name = "Theódoros Tourkovasílis"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Theodoros_Tourkovasilis.png"
-				small = "gfx/interface/ministers/GRE/GRE_Theodoros_Tourkovasilis.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = foreign_minister
-			available = {
-				hidden_trigger = { has_country_flag = GRE_Theodoros_Tourkovasilis_for_pau_hired }
-			}			
-			idea_token = GRE_Theodoros_Tourkovasilis_for_pau
-			on_add = { set_country_flag = GRE_Theodoros_Tourkovasilis_for_pau_hired }
-			on_remove = { clr_country_flag = GRE_Theodoros_Tourkovasilis_for_pau_hired }
-			traits = {
-				foreign_minister
-				paternal_autocrat
-				for_hawkish_intervener
+				for_foreign_sympathizer
 			}
 		}
 	}
@@ -634,7 +896,7 @@ characters = {
 			traits = {
 				foreign_minister
 				valkist
-				for_apologetic_clerk
+				for_biased_intellectual
 			}
 		}
 	}
@@ -662,51 +924,51 @@ characters = {
 			}
 		}
 	}
-	GRE_Alexandros_Svolos = {
-		name = "Aléxandros Svólos"
+	GRE_Petros_Rousos = {
+		name = "Pétros Roúsos"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Svolos.png"
-				small = "gfx/interface/ministers/GRE/GRE_Alexandros_Svolos.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Petros_Rousos.png"
+				small = "gfx/interface/ministers/GRE/GRE_Petros_Rousos.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = foreign_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Alexandros_Svolos_for_col_hired }
+				hidden_trigger = { has_country_flag = GRE_Petros_Rousos_for_col_hired }
 			}			
-			idea_token = GRE_Alexandros_Svolos_for_col
-			on_add = { set_country_flag = GRE_Alexandros_Svolos_for_col_hired }
-			on_remove = { clr_country_flag = GRE_Alexandros_Svolos_for_col_hired }
+			idea_token = GRE_Petros_Rousos_for_col
+			on_add = { set_country_flag = GRE_Petros_Rousos_for_col_hired }
+			on_remove = { clr_country_flag = GRE_Petros_Rousos_for_col_hired }
 			traits = {
 				foreign_minister
 				collectivist
-				for_foreign_sympathizer
+				for_general_staffer
 			}
 		}
 	}
-	GRE_Manolis_Manoleas = {
-		name = "Manólis Manoléas"
+	GRE_Serafeim_Maximos = {
+		name = "Serafeím Máximos"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Manolis_Manoleas.png"
-				small = "gfx/interface/ministers/GRE/GRE_Manolis_Manoleas.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Serafeim_Maximos.png"
+				small = "gfx/interface/ministers/GRE/GRE_Serafeim_Maximos.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = foreign_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Manolis_Manoleas_for_van_hired }
+				hidden_trigger = { has_country_flag = GRE_Serafeim_Maximos_for_van_hired }
 			}			
-			idea_token = GRE_Manolis_Manoleas_for_van
-			on_add = { set_country_flag = GRE_Manolis_Manoleas_for_van_hired }
-			on_remove = { clr_country_flag = GRE_Manolis_Manoleas_for_van_hired }
+			idea_token = GRE_Serafeim_Maximos_for_van
+			on_add = { set_country_flag = GRE_Serafeim_Maximos_for_van_hired }
+			on_remove = { clr_country_flag = GRE_Serafeim_Maximos_for_van_hired }
 			traits = {
 				foreign_minister
 				vanguardist
-				for_general_staffer
+				for_ideological_crusader
 			}
 		}
 	}
@@ -850,7 +1112,7 @@ characters = {
 			traits = {
 				economy_minister
 				authoritarian_democrat
-				eco_construction_magnate
+				eco_industrialiser
 			}
 		}
 	}
@@ -898,7 +1160,7 @@ characters = {
 			traits = {
 				economy_minister
 				national_populist
-				eco_infantry_proponent
+				eco_corrupt_kleptocrat
 			}
 		}
 	}
@@ -922,27 +1184,27 @@ characters = {
 			traits = {
 				economy_minister
 				valkist
-				eco_administrative_genius
+				eco_military_entrepreneur
 			}
 		}
 	}
-	GRE_Mitsos_Partsalidis = {
-		name = "Mítsos Partsalídis"
+	GRE_Kostas_Theos = {
+		name = "Kóstas Théos"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Mitsos_Partsalidis.png"
-				small = "gfx/interface/ministers/GRE/GRE_Mitsos_Partsalidis.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Kostas_Theos.png"
+				small = "gfx/interface/ministers/GRE/GRE_Kostas_Theos.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = economy_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Mitsos_Partsalidis_eco_lib_hired }
+				hidden_trigger = { has_country_flag = GRE_Kostas_Theos_eco_lib_hired }
 			}			
-			idea_token = GRE_Mitsos_Partsalidis_eco_lib
-			on_add = { set_country_flag = GRE_Mitsos_Partsalidis_eco_lib_hired }
-			on_remove = { clr_country_flag = GRE_Mitsos_Partsalidis_eco_lib_hired }
+			idea_token = GRE_Kostas_Theos_eco_lib
+			on_add = { set_country_flag = GRE_Kostas_Theos_eco_lib_hired }
+			on_remove = { clr_country_flag = GRE_Kostas_Theos_eco_lib_hired }
 			traits = {
 				economy_minister
 				libertarian_socialist
@@ -950,23 +1212,23 @@ characters = {
 			}
 		}
 	}
-	GRE_Angelos_Angelopoulos = {
-		name = "Ángelos Angelópoulos"
+	GRE_Vasilis_Bartziotas = {
+		name = "Vasílis Bartziótas"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Angelos_Angelopoulos.png"
-				small = "gfx/interface/ministers/GRE/GRE_Angelos_Angelopoulos.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Vasilis_Bartziotas.png"
+				small = "gfx/interface/ministers/GRE/GRE_Vasilis_Bartziotas.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = economy_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Angelos_Angelopoulos_eco_col_hired }
+				hidden_trigger = { has_country_flag = GRE_Vasilis_Bartziotas_eco_col_hired }
 			}			
-			idea_token = GRE_Angelos_Angelopoulos_eco_col
-			on_add = { set_country_flag = GRE_Angelos_Angelopoulos_eco_col_hired }
-			on_remove = { clr_country_flag = GRE_Angelos_Angelopoulos_eco_col_hired }
+			idea_token = GRE_Vasilis_Bartziotas_eco_col
+			on_add = { set_country_flag = GRE_Vasilis_Bartziotas_eco_col_hired }
+			on_remove = { clr_country_flag = GRE_Vasilis_Bartziotas_eco_col_hired }
 			traits = {
 				economy_minister
 				collectivist
@@ -998,23 +1260,23 @@ characters = {
 			}
 		}
 	}
-	GRE_Periklis_Argyropoulos = {
-		name = "Periklís Argyrópoulos"
+	GRE_Georgios_Maris = {
+		name = "Geórgios Marís"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Periklis_Argyropoulos.png"
-				small = "gfx/interface/ministers/GRE/GRE_Periklis_Argyropoulos.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Maris.png"
+				small = "gfx/interface/ministers/GRE/GRE_Georgios_Maris.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = security_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Periklis_Argyropoulos_sec_sli_hired }
+				hidden_trigger = { has_country_flag = GRE_Georgios_Maris_sec_sli_hired }
 			}			
-			idea_token = GRE_Periklis_Argyropoulos_sec_sli
-			on_add = { set_country_flag = GRE_Periklis_Argyropoulos_sec_sli_hired }
-			on_remove = { clr_country_flag = GRE_Periklis_Argyropoulos_sec_sli_hired }
+			idea_token = GRE_Georgios_Maris_sec_sli
+			on_add = { set_country_flag = GRE_Georgios_Maris_sec_sli_hired }
+			on_remove = { clr_country_flag = GRE_Georgios_Maris_sec_sli_hired }
 			traits = {
 				security_minister
 				social_liberal
@@ -1042,7 +1304,7 @@ characters = {
 			traits = {
 				security_minister
 				social_liberal
-				sec_driven_recruiter
+				sec_silent_lawyer
 			}
 		}
 	}
@@ -1090,31 +1352,31 @@ characters = {
 			traits = {
 				security_minister
 				social_conservative
-				sec_crooked_kleptocrat
+				sec_compassionate_gentleman
 			}
 		}
 	}
-	GRE_Georgios_Athanasiadis_Novas = {
-		name = "Geórgios Athanasiádis-Nóvas"
+	GRE_Dimitrios_Psarros = {
+		name = "Dimítrios Psarrós"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Athanasiadis_Novas.png"
-				small = "gfx/interface/ministers/GRE/GRE_Georgios_Athanasiadis_Novas.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Dimitrios_Psarros.png"
+				small = "gfx/interface/ministers/GRE/GRE_Dimitrios_Psarros.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = security_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Georgios_Athanasiadis_Novas_sec_sde_hired }
+				hidden_trigger = { has_country_flag = GRE_Dimitrios_Psarros_sec_sde_hired }
 			}			
-			idea_token = GRE_Georgios_Athanasiadis_Novas_sec_sde
-			on_add = { set_country_flag = GRE_Georgios_Athanasiadis_Novas_sec_sde_hired }
-			on_remove = { clr_country_flag = GRE_Georgios_Athanasiadis_Novas_sec_sde_hired }
+			idea_token = GRE_Dimitrios_Psarros_sec_sde
+			on_add = { set_country_flag = GRE_Dimitrios_Psarros_sec_sde_hired }
+			on_remove = { clr_country_flag = GRE_Dimitrios_Psarros_sec_sde_hired }
 			traits = {
 				security_minister
 				social_democrat
-				sec_media_magnate
+				sec_driven_recruiter
 			}
 		}
 	}
@@ -1139,6 +1401,47 @@ characters = {
 				security_minister
 				authoritarian_democrat
 				sec_preserver_of_culture
+			}
+		}
+	}
+	GRE_Konstantinos_Manetas = {
+		name = "Konstantínos Manétas"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Konstantinos_Manetas.png"
+				small = "gfx/interface/ministers/GRE/GRE_Konstantinos_Manetas.png"
+			}
+			army = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Konstantinos_Manetas.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				politically_connected
+				media_personality
+				cavalry_officer
+				commando
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Konstantinos_Manetas_sec_ade_hired }
+			}			
+			idea_token = GRE_Konstantinos_Manetas_sec_ade
+			on_add = { set_country_flag = GRE_Konstantinos_Manetas_sec_ade_hired }
+			on_remove = { clr_country_flag = GRE_Konstantinos_Manetas_sec_ade_hired }
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_man_of_the_people
 			}
 		}
 	}
@@ -1190,23 +1493,23 @@ characters = {
 			}
 		}
 	}
-	GRE_Michalis_Tyrimos = {
-		name = "Michális Tyrímos"
+	GRE_Nikolaos_Kalyvas = {
+		name = "Nikólaos Kalývas"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Michalis_Tyrimos.png"
-				small = "gfx/interface/ministers/GRE/GRE_Michalis_Tyrimos.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Nikolaos_Kalyvas.png"
+				small = "gfx/interface/ministers/GRE/GRE_Nikolaos_Kalyvas.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = security_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Michalis_Tyrimos_sec_val_hired }
+				hidden_trigger = { has_country_flag = GRE_Nikolaos_Kalyvas_sec_val_hired }
 			}			
-			idea_token = GRE_Michalis_Tyrimos_sec_val
-			on_add = { set_country_flag = GRE_Michalis_Tyrimos_sec_val_hired }
-			on_remove = { clr_country_flag = GRE_Michalis_Tyrimos_sec_val_hired }
+			idea_token = GRE_Nikolaos_Kalyvas_sec_val
+			on_add = { set_country_flag = GRE_Nikolaos_Kalyvas_sec_val_hired }
+			on_remove = { clr_country_flag = GRE_Nikolaos_Kalyvas_sec_val_hired }
 			traits = {
 				security_minister
 				valkist
@@ -1238,23 +1541,23 @@ characters = {
 			}
 		}
 	}
-	GRE_Giorgis_Siantos = {
-		name = "Giórgis Siántos"
+	GRE_Markos_Vafiadis = {
+		name = "Márkos Vafiádis"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Giorgis_Siantos.png"
-				small = "gfx/interface/ministers/GRE/GRE_Giorgis_Siantos.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Markos_Vafiadis.png"
+				small = "gfx/interface/ministers/GRE/GRE_Markos_Vafiadis.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = security_minister
 			available = {
-				hidden_trigger = { has_country_flag = GRE_Giorgis_Siantos_sec_col_hired }
+				hidden_trigger = { has_country_flag = GRE_Markos_Vafiadis_sec_col_hired }
 			}			
-			idea_token = GRE_Giorgis_Siantos_sec_col
-			on_add = { set_country_flag = GRE_Giorgis_Siantos_sec_col_hired }
-			on_remove = { clr_country_flag = GRE_Giorgis_Siantos_sec_col_hired }
+			idea_token = GRE_Markos_Vafiadis_sec_col
+			on_add = { set_country_flag = GRE_Markos_Vafiadis_sec_col_hired }
+			on_remove = { clr_country_flag = GRE_Markos_Vafiadis_sec_col_hired }
 			traits = {
 				security_minister
 				collectivist
@@ -1332,10 +1635,7 @@ characters = {
 		}
 		field_marshal = {
 			traits = {
-				offensive_doctrine
-				war_hero
-				media_personality
-				trait_reckless
+				offensive_doctrine				war_hero				media_personality				trait_reckless
 			}
 			skill = 3
 			attack_skill = 3
@@ -1349,7 +1649,7 @@ characters = {
 			idea_token = GRE_Theodoros_Pangalos_cos
 			traits = {
 				chief_of_staff
-				cos_school_of_fire_support
+				cos_school_of_manoeuvre
 			}
 		}
 	}
@@ -1367,7 +1667,7 @@ characters = {
 			idea_token = GRE_Paraschos_Melissinos_cos
 			traits = {
 				chief_of_staff
-				cos_school_of_defence
+				cos_school_of_mass_combat
 			}
 		}
 	}
@@ -1385,7 +1685,7 @@ characters = {
 			idea_token = GRE_Panagiotis_Dedes_cos
 			traits = {
 				chief_of_staff
-				cos_school_of_manoeuvre
+				cos_school_of_defence
 			}
 		}
 	}
@@ -1421,7 +1721,7 @@ characters = {
 			idea_token = GRE_Napoleon_Batas_cos
 			traits = {
 				chief_of_staff
-				cos_school_of_defence
+				cos_school_of_mass_combat
 			}
 		}
 	}
@@ -1435,13 +1735,11 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				infantry_officer
-				career_officer
-				hill_fighter
+				infantry_officer				career_officer				hill_fighter
 			}
 			skill = 2
 			attack_skill = 1
-			defense_skill = 4
+			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 1
 		}
@@ -1563,24 +1861,6 @@ characters = {
 			}
 		}
 	}
-	GRE_Leonidas_Spais = {
-		name = "Leonídas Spaís"
-		portraits = {
-			army = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Leonidas_Spais.png"
-				small = "gfx/interface/ministers/GRE/GRE_Leonidas_Spais.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = chief_of_army			
-			idea_token = GRE_Leonidas_Spais_carm
-			traits = {
-				chief_of_army
-				carm_elastic_defence_doctrine
-			}
-		}
-	}
 	GRE_Theodoros_Lymperakis = {
 		name = "Theódoros Lymperákis"
 		portraits = {
@@ -1599,17 +1879,17 @@ characters = {
 			}
 		}
 	}
-	GRE_Ioannis_Toumpas = {
-		name = "Ioánnis Toúmpas"
+	GRE_Ioannis_Toumbas = {
+		name = "Ioánnis Toúmbas"
 		portraits = {
 			navy = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Toumpas1.png"
-				small = "gfx/interface/ministers/GRE/GRE_Ioannis_Toumpas1.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Toumbas1.png"
+				small = "gfx/interface/ministers/GRE/GRE_Ioannis_Toumbas1.png"
 			}
 		}
 		navy_leader = {
 			traits = {
-				seawolf 
+				seawolf
 				bold
 			}
 			skill = 2
@@ -1621,7 +1901,7 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy			
-			idea_token = GRE_Ioannis_Toumpas_cnav
+			idea_token = GRE_Ioannis_Toumbas_cnav
 			traits = {
 				chief_of_navy
 				cnav_indirect_approach_doctrine
@@ -1659,9 +1939,9 @@ characters = {
 				old_guard_navy
 			}
 			skill = 1
-			attack_skill = 1
-			defense_skill = 4
-			maneuvering_skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
 			coordination_skill = 2
 		}
 		advisor = {
@@ -1670,7 +1950,7 @@ characters = {
 			idea_token = GRE_Petros_Voulgaris_cnav
 			traits = {
 				chief_of_navy
-				cnav_base_control_doctrine
+				cnav_power_projection_doctrine
 			}
 		}
 	}
@@ -1688,7 +1968,7 @@ characters = {
 			idea_token = GRE_Dimitrios_Oikonomou_cnav
 			traits = {
 				chief_of_navy
-				cnav_power_projection_doctrine
+				cnav_base_control_doctrine
 			}
 		}
 	}
@@ -1724,7 +2004,7 @@ characters = {
 			idea_token = GRE_Kostas_Perrikos_cair
 			traits = {
 				chief_of_air_force
-				cair_vertical_envelopment_doctrine
+				cair_air_superiority_doctrine
 			}
 		}
 	}
@@ -1760,7 +2040,7 @@ characters = {
 			idea_token = GRE_Georgios_Alexandris_cair
 			traits = {
 				chief_of_air_force
-				cair_air_superiority_doctrine
+				cair_vertical_envelopment_doctrine
 			}
 		}
 	}
@@ -1782,55 +2062,6 @@ characters = {
 			}
 		}
 	}
-	GRE_Alexandros_Zaimis = {
-		name = "Aléxandros Zaímis"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Zaimis.png"
-			}
-		}
-		country_leader = {
-			ideology = social_liberal_subtype
-			traits = { }
-		}
-		country_leader = {
-			ideology = social_democrat_subtype
-			traits = { }
-		}
-		country_leader = {
-			ideology = market_liberal_subtype
-			traits = { }
-		}
-		country_leader = {
-			ideology = social_conservative_subtype
-			traits = { }
-		}
-		country_leader = {
-			ideology = authoritarian_democrat_subtype
-			traits = { }
-		}
-	}
-	GRE_Alexandros_Othonaios = {
-		name = "Aléxandros Othonaíos"
-		portraits = {
-			army = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Alexandros_Othonaios.png"
-			}
-		}
-		field_marshal = {
-			traits = {
-				defensive_doctrine
-				old_guard
-				politically_connected
-				trait_cautious
-			}
-			skill = 4
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-		}
-	}
 	GRE_Vasileios_Vrachnos = {
 		name = "Vasíleios Vrachnós"
 		portraits = {
@@ -1840,9 +2071,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				career_officer
-				bearer_of_artillery
-				infantry_leader
+				career_officer				bearer_of_artillery				infantry_leader
 			}
 			skill = 3
 			attack_skill = 3
@@ -1860,10 +2089,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				war_hero
-				career_officer
-				infantry_officer
-				winter_specialist
+				war_hero				career_officer				infantry_officer				winter_specialist
 			}
 			skill = 3
 			attack_skill = 1
@@ -1881,10 +2107,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				brilliant_strategist
-				reckless
-				skilled_staffer
-				armor_officer
+				brilliant_strategist				reckless				skilled_staffer				armor_officer
 			}
 			skill = 3
 			attack_skill = 3
@@ -1902,11 +2125,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				inflexible_strategist
-				war_hero
-				trait_cautious
-				trickster
-				trait_mountaineer
+				inflexible_strategist				war_hero				trait_cautious				trickster				trait_mountaineer
 			}
 			skill = 2
 			attack_skill = 2
@@ -1924,14 +2143,12 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				trait_cautious
-				brilliant_strategist
-				desert_fox
+				trait_cautious				brilliant_strategist				desert_fox
 			}
 			skill = 2
 			attack_skill = 2
 			defense_skill = 3
-			planning_skill = 1
+			planning_skill = 2
 			logistics_skill = 3
 		}
 	}
@@ -1944,37 +2161,12 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				career_officer
-				infantry_officer
-				trickster
-				hill_fighter
+				career_officer				infantry_officer				trickster				hill_fighter
 			}
-			skill = 2
+			skill = 1
 			attack_skill = 1
 			defense_skill = 3
 			planning_skill = 3
-			logistics_skill = 2
-		}
-	}
-	GRE_Konstantinos_Manetas = {
-		name = "Konstantínos Manétas"
-		portraits = {
-			army = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Konstantinos_Manetas.png"
-			}
-		}
-		corps_commander = {
-			traits = {
-				war_hero
-				politically_connected
-				media_personality
-				cavalry_officer
-				commando
-			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 2
 			logistics_skill = 2
 		}
 	}
@@ -1987,9 +2179,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				war_hero
-				fast_planner
-				naval_invader
+				war_hero				fast_planner				naval_invader
 			}
 			skill = 2
 			attack_skill = 3
@@ -2007,8 +2197,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				trait_reckless
-				ranger
+				trait_reckless				ranger
 			}
 			skill = 2
 			attack_skill = 2
@@ -2026,8 +2215,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				media_personality
-				career_officer
+				media_personality				career_officer
 			}
 			skill = 1
 			attack_skill = 3
@@ -2045,15 +2233,12 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				cavalry_officer
-				career_officer
-				brilliant_strategist
-				urban_assault_specialist
+				cavalry_officer				career_officer				brilliant_strategist				urban_assault_specialist
 			}
 			skill = 1
 			attack_skill = 2
 			defense_skill = 1
-			planning_skill = 4
+			planning_skill = 2
 			logistics_skill = 1
 		}
 	}
@@ -2066,8 +2251,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				harsh_leader
-				trait_engineer
+				harsh_leader				trait_engineer
 			}
 			skill = 1
 			attack_skill = 2
@@ -2085,8 +2269,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				old_guard
-				trait_cautious
+				old_guard				trait_cautious
 			}
 			skill = 1
 			attack_skill = 1
@@ -2104,15 +2287,13 @@ characters = {
 		}
 		navy_leader = {
 			traits = {
-				crave
-				old_guard_navy
-				superior_tactician
+				crave				old_guard_navy				superior_tactician
 			}
 			skill = 3
 			attack_skill = 4
-			defense_skill = 3
-			maneuvering_skill = 1
-			coordination_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
 		}
 	}
 	GRE_Grigorios_Mezeviris = {
@@ -2127,7 +2308,7 @@ characters = {
 				spotter
 			}
 			skill = 3
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 3
 			maneuvering_skill = 2
 			coordination_skill = 3
@@ -2142,15 +2323,85 @@ characters = {
 		}
 		navy_leader = {
 			traits = {
-				old_guard_navy
-				gentlemanly
-				chief_engineer
+				old_guard_navy				gentlemanly				chief_engineer
 			}
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
-			maneuvering_skill = 3
-			coordination_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+	GRE_Dimitrios_Gounaris = {
+		name = "Dimítrios Goúnaris"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Dimitrios_Gounaris.png"
+				small = "gfx/interface/ministers/GRE/GRE_Dimitrios_Gounaris.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Dimitrios_Gounaris_hog_sco_hired }
+			}			
+			idea_token = GRE_Dimitrios_Gounaris_hog_sco
+			on_add = { set_country_flag = GRE_Dimitrios_Gounaris_hog_sco_hired }
+			on_remove = { clr_country_flag = GRE_Dimitrios_Gounaris_hog_sco_hired }
+			traits = {
+				head_of_government
+				social_conservative
+				hog_old_compromiser
+			}
+		}
+	}
+	GRE_Konstantinos_Tsaldaris = {
+		name = "Konstantínos Tsaldáris"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Konstantinos_Tsaldaris.png"
+				small = "gfx/interface/ministers/GRE/GRE_Konstantinos_Tsaldaris.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Konstantinos_Tsaldaris_hog_sco_hired }
+			}			
+			idea_token = GRE_Konstantinos_Tsaldaris_hog_sco
+			on_add = { set_country_flag = GRE_Konstantinos_Tsaldaris_hog_sco_hired }
+			on_remove = { clr_country_flag = GRE_Konstantinos_Tsaldaris_hog_sco_hired }
+			traits = {
+				head_of_government
+				social_conservative
+				hog_silent_workhorse
+			}
+		}
+	}
+	GRE_Konstantinos_Karamanlis = {
+		name = "Konstantínos Karamanlís"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRE/Portrait_GRE_Konstantinos_Karamanlis.png"
+				small = "gfx/interface/ministers/GRE/GRE_Konstantinos_Karamanlis.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = GRE_Konstantinos_Karamanlis_hog_sco_hired }
+			}			
+			idea_token = GRE_Konstantinos_Karamanlis_hog_sco
+			on_add = { set_country_flag = GRE_Konstantinos_Karamanlis_hog_sco_hired }
+			on_remove = { clr_country_flag = GRE_Konstantinos_Karamanlis_hog_sco_hired }
+			traits = {
+				head_of_government
+				social_conservative
+				hog_charismatic_charmer
+			}
 		}
 	}
 }
