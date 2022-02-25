@@ -1461,7 +1461,7 @@ country_event = { # The Monarch
 	trigger = {
 		tag = ROM
 		has_country_flag = ROM_had_1937_elections
-		has_country_flag = ROM_empty_throne
+    has_country_flag = ROM_empty_throne
 		NOT = {
 			OR = {
 				has_government = vanguardist
@@ -1470,6 +1470,9 @@ country_event = { # The Monarch
 				has_government = valkist
 			}
 		}
+    ROM_Regency_Council = {
+      is_country_leader = yes
+    }
 	}
 
 	mean_time_to_happen = {
