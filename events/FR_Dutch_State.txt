@@ -1383,6 +1383,35 @@ country_event = { # Monarchist Sympathies in the Bureaucracy
 
   option = { # A little reeducation won't hurt right?
     name = dutchstate.60.a
+    add_political_power = -50
+  }
+}
+
+country_event = { # Leftist Resistance Rising
+  id = dutchstate.61
+  title = dutchstate.61.t
+  desc = dutchstate.61.d
+  picture = GFX_report_event_french_resistance_02
+  is_triggered_only = yes
+
+  option = { # Proof that we can't trust the red menance
+    name = dutchstate.61.a
+    custom_trigger_tooltip = HOL_leftist_resistance_tt
+    HOL_add_leftist_resistance = yes
+  }
+}
+
+country_event = { # Landwacht Resistance
+  id = dutchstate.62
+  title = dutchstate.62.t
+  desc = dutchstate.62.d
+  picture = GFX_report_event_british_inspect_troops
+  is_triggered_only = yes
+
+  option = { # Hunt them down!
+    name = dutchstate.62.a
+    custom_trigger_tooltip = HOL_landwacht_resistance_tt
+    HOL_add_landwacht_resistance = yes
   }
 }
 
@@ -1689,6 +1718,9 @@ country_event = { # A State Funeral
   option = { # We will always remember him
     name = dutchstate.111.a
     add_political_power = 100
+    hidden_effect = {
+      country_event = { id = dutchstate.61 days = 30 }
+    }
   }
 }
 
@@ -1811,6 +1843,7 @@ country_event = { # The Celebration
       clr_country_flag = HOL_bernhard_path
       clr_country_flag = HOL_socialist_path
       mark_focus_tree_layout_dirty = yes
+      country_event = { id = dutchstate.61 days = 30 }
     }
   }
 }
