@@ -1,4 +1,4 @@
-version="0.0.1"
+version="0.1.14"
 tags={
 	"Alternative History"
 	"Balance"
@@ -51,5 +51,5 @@ replace_path="history/units"
 replace_path="map/supplyareas"
 replace_path="map/strategicregions"
 replace_path="tests"
-name="Fuhrerredux-DEV"
+name="Führerredux"
 supported_version="1.11.*"
