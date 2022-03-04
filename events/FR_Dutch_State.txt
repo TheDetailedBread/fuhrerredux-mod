@@ -1424,6 +1424,21 @@ country_event = { # German Demands
 
   option = { # Pressure the New Dutch Government!
     name = dutchstate.63.a
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.2
+        has_war_with = FRA
+      }
+      modifier = {
+        factor = 0.3
+        has_war_with = ENG
+      }
+      modifier = {
+        factor = 0.3
+        has_war_with = SOV
+      }
+    }
     KNE = {
       country_event = { id = dutchstate.64 days = 1 }
     }
@@ -1431,6 +1446,9 @@ country_event = { # German Demands
 
   option = { # We will be better off without them.
     name = dutchstate.63.b
+    ai_chance = {
+      base = 0
+    }
     add_political_power = -20
   }
 }
@@ -1445,10 +1463,29 @@ country_event = { # Germany Requests that We Join the Stahlpakt
   option = { # We have to agree to their demands.
     name = dutchstate.64.a
     custom_effect_tooltip = HOL_join_stahlpakt_tt
+    set_party_name = {
+      ideology = paternal_autocrat
+      name = KNE_junta_party
+      long_name = KNE_junta_party_long
+    }
+    set_politics = {
+      ruling_party = paternal_autocrat
+      elections_allowed = no
+    }
     hidden_effect = {
-      FROM = {
-        country_event = dutchstate.65
+      add_popularity = {
+        ideology = paternal_autocrat
+        popularity = 0.35
       }
+      add_popularity = {
+        ideology = national_populist
+        popularity = 0.05
+      }
+      add_popularity = {
+        ideology = social_conservative
+        popularity = 0.05
+      }
+      FROM = { country_event = dutchstate.65 }
     }
   }
 
@@ -1458,9 +1495,7 @@ country_event = { # Germany Requests that We Join the Stahlpakt
     add_stability = 0.05
     add_political_power = -50
     hidden_effect = {
-      FROM = {
-        country_event = dutchstate.66
-      }
+      FROM = { country_event = dutchstate.66 }
     }
   }
 }

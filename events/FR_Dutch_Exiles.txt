@@ -69,12 +69,29 @@ country_event = { # Reclaimed the Birthright
   is_triggered_only = yes
 
   option = {
-    name = dutchstate.103.a
+    name = dutchexiles.103.a
+    set_cosmetic_tag = KNE_short
+    remove_ideas = KNE_military_refugees
+    hidden_effect = {
+      add_popularity = {
+        ideology = paternal_autocrat
+        popularity = 0.15
+      }
+      add_popularity = {
+        ideology = national_populist
+        popularity = 0.1
+      }
+      add_popularity = {
+        ideology = social_conservative
+        popularity = 0.1
+      }
+    }
     every_owned_state = {
       limit = {
         OR = { is_core_of = HOL }
       }
       add_core_of = KNE
+      remove_core_of = HOL
     }
   }
 }
