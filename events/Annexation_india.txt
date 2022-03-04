@@ -659,6 +659,14 @@ country_event = { # Fate of Afganistan
     }
     set_temp_variable = { tag_to_release = AFG }
     release_targeted_tag = yes
+    AFG = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_AFG
+      }
+    }
   }
 
   option = { # Occupy
@@ -697,6 +705,14 @@ country_event = { # Fate of Bhutan
     }
     set_temp_variable = { tag_to_release = BHU }
     release_targeted_tag = yes
+    BHU = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_BHU
+      }
+    }
   }
 
   option = { # Occupy
@@ -735,6 +751,14 @@ country_event = { # Fate of Nepal
     }
     set_temp_variable = { tag_to_release = NEP }
     release_targeted_tag = yes
+    NEP = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_NEP
+      }
+    }
   }
 
   option = { # Occupy

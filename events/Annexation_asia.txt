@@ -501,6 +501,14 @@ country_event = { # Fate of Malaya
     }
     set_temp_variable = { tag_to_release = MAL }
     release_targeted_tag = yes
+    MAL = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_MAL
+      }
+    }
   }
 
   option = { # Occupy
@@ -892,6 +900,14 @@ country_event = { # Fate of Siam
     }
     set_temp_variable = { tag_to_release = SIA }
     release_targeted_tag = yes
+    SIA = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_SIA
+      }
+    }
   }
 
   option = { # Occupy
@@ -1006,6 +1022,14 @@ country_event = { # Fate of Tibet
     }
     set_temp_variable = { tag_to_release = TIB }
     release_targeted_tag = yes
+    TIB = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_TIB
+      }
+    }
   }
 
   option = { # Integrate
@@ -1072,6 +1096,14 @@ country_event = { # Fate of Turkmenistan
     }
     set_temp_variable = { tag_to_release = TRK }
     release_targeted_tag = yes
+    TRK = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_TRK
+      }
+    }
   }
 
   option = { # Integrate
