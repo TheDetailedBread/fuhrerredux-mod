@@ -164,7 +164,7 @@ focus = {
 }
 focus = {
 	id = ukr_army_modernization
-	icon = GFX_goal_demand_sudetenland
+	icon = GFX_goal_generic_drafted_army
 	cost = 5
 	x = 4
 	y = 2
@@ -389,7 +389,7 @@ focus = {
 }
 focus = {
 	id = ukr_army_support_companies
-	icon = GFX_goal_generic_production
+	icon = GFX_goal_generic_army_mass_assault
 	cost = 5
 	x = 6
 	y = 5
@@ -464,7 +464,7 @@ focus = {
 }
 focus = {
 	id = ukr_navy_gorshkov
-	icon = GFX_goal_generic_navy_battleship
+	icon = GFX_goal_generic_naval_fleet_in_being
 	cost = 5
 	x = 11
 	y = 1
@@ -550,7 +550,7 @@ focus = {
 }
 focus = {
 	id = ukr_navy_sea_titans
-	icon = GFX_goal_generic_navy_battleship
+	icon = GFX_goal_generic_naval_cruiser2
 	cost = 5
 	x = 11
 	y = 2
@@ -580,7 +580,7 @@ focus = {
 }
 focus = {
 	id = ukr_navy_fleet_integralism
-	icon = GFX_focus_generic_cruiser2
+	icon = GFX_goal_generic_coastal_navy2
 	cost = 5
 	x = 13
 	y = 2
@@ -633,7 +633,7 @@ focus = {
 }
 focus = {
 	id = ukr_navy_floating_fortress
-	icon = GFX_goal_generic_navy_battleship
+	icon = GFX_goal_generic_navy_battleship3alt
 	cost = 5
 	x = 11
 	y = 3
@@ -1249,7 +1249,9 @@ focus = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_ally"
-		GER = { country_event = { id = ukraine.17 days = 1 } }
+      add_political_power = 100
+      add_stability = 0.05
+      add_war_support = 0.05
 	}
 }
 ########################
@@ -1487,8 +1489,8 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_claim_land"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_claim_land"
 		UKR = {
 			country_event = {
 				id = ukraine.12
@@ -2100,10 +2102,10 @@ focus = {
 		focus = ukr_nat_claim_land
 		focus = ukr_junta_german_ally
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_look_outwards"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_look_outwards"
 		add_ideas = UKR_expansionism
+    GER = { country_event = { id = ukraine.17 days = 1 } }
 	}
 }
 focus = {
