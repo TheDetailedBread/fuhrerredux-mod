@@ -713,6 +713,14 @@ country_event = { # Fate of Kenya
     }
     set_temp_variable = { tag_to_release = KEN }
     release_targeted_tag = yes
+    KEN = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_KEN
+      }
+    }
   }
 
   option = { # Occupy

@@ -152,6 +152,14 @@ country_event = { # Fate of Austria
     }
     set_temp_variable = { tag_to_release = AUS }
     release_targeted_tag = yes
+    AUS = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_AUS_rk
+      }
+    }
   }
   option = { # Integrate it to Germany
     name = annex.102.b
@@ -486,6 +494,14 @@ country_event = { # Fate of Belarus
     }
     set_temp_variable = { tag_to_release = BLR }
     release_targeted_tag = yes
+    BLR = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_BLR_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -664,6 +680,14 @@ country_event = { # Fate of Denmark
     }
     set_temp_variable = { tag_to_release = DEN }
     release_targeted_tag = yes
+    DEN = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_DEN_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -712,12 +736,26 @@ country_event = { # Fate of England
     }
     set_temp_variable = { tag_to_release = EGL }
     release_targeted_tag = yes
+    EGL = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_ENG_rk
+      }
+    }
   }
 
   option = { # Create the United Kingdom
     name = annex.111.b
     ai_chance = {
       base = 20
+    }
+    trigger = {
+      NOT = {
+        tag = GER
+        tag = FRA
+      }
     }
     add_to_temp_array = { core_removal_array = ENG }
     add_to_temp_array = { core_removal_array = EGL }
@@ -1007,6 +1045,20 @@ country_event = { # Fate of France
     }
     set_temp_variable = { tag_to_release = FRP }
     release_targeted_tag = yes
+    FRP = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_FRP
+      }
+      else_if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_FRA_rk
+      }
+    }
   }
 
   option = {
@@ -1041,6 +1093,9 @@ country_event = { # Fate of Great Britain
     name = annex.117.a
     ai_chance = {
       base = 60
+    }
+    trigger = {
+      NOT = { tag = GER }
     }
     set_temp_variable = { tag_to_release = EGL }
     release_targeted_tag = yes
@@ -1468,6 +1523,14 @@ country_event = { # Fate of Hungary
     }
     set_temp_variable = { tag_to_release = HUN }
     release_targeted_tag = yes
+    HUN = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_HUN_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -1511,6 +1574,20 @@ country_event = { # Fate of Ireland
 
     set_temp_variable = { tag_to_release = IRE }
     release_targeted_tag = yes
+    IRE = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_IRE
+      }
+      else_if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_IRE_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -1569,6 +1646,14 @@ country_event = { # Fate of Italy
 
     set_temp_variable = { tag_to_release = ITP }
     release_targeted_tag = yes
+    ITP = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_ITA_rk
+      }
+    }
   }
 
   option = { # Split
@@ -1664,6 +1749,14 @@ country_event = { # Fate of Lithuania
 
     set_temp_variable = { tag_to_release = LIT }
     release_targeted_tag = yes
+    LIT = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_LIT_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -2114,6 +2207,14 @@ country_event = { # Fate of Poland
     }
     set_temp_variable = { tag_to_release = POL }
     release_targeted_tag = yes
+    POL = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_POL_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -2643,6 +2744,14 @@ country_event = { # Fate of Scotland
     }
     set_temp_variable = { tag_to_release = SCO }
     release_targeted_tag = yes
+    SCO = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_SCO_rk
+      }
+    }
   }
 
   option = { # Integrate
@@ -3088,6 +3197,14 @@ country_event = { # Fate of Slovakia
     }
     set_temp_variable = { tag_to_release = SLO }
     release_targeted_tag = yes
+    SLO = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_SLO_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -3309,6 +3426,14 @@ country_event = { # Fate of Ukraine
     }
     set_temp_variable = { tag_to_release = UKR }
     release_targeted_tag = yes
+    UKR = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_UKR_rk
+      }
+    }
   }
 
   option = { # Occupy
@@ -3388,6 +3513,14 @@ country_event = { # Fate of Wales
     }
     set_temp_variable = { tag_to_release = WLS }
     release_targeted_tag = yes
+    WLS = {
+      if = {
+        limit = {
+          ROOT = { tag = GER }
+        }
+        set_cosmetic_tag = GER_WLS_rk
+      }
+    }
   }
 
   option = { # Integrate
@@ -4794,5 +4927,191 @@ country_event = { # Fate of Turkey
     }
     set_country_flag = TUR_CONQ
     occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Alsace
+  id = annex.180
+  title = annexation_ALSACE_CONQ
+  desc = annexation_ALSACE_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the French
+    name = annex.180.a
+    trigger = {
+      FRA = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = GER
+          is_ally_with = GRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = FRA }
+    28 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to our French Puppet
+    name = annex.180.a
+    trigger = {
+      FRP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = GER
+          is_ally_with = GRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = FRP }
+    28 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Germans
+    name = annex.180.b
+    trigger = {
+      GER = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = FRA
+          is_ally_with = FRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = GER }
+    28 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Germans
+    name = annex.180.b
+    trigger = {
+      GRP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = FRA
+          is_ally_with = FRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = GRP }
+    28 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country  = yes
+    set_country_flag = ALSACE_CONQ
+  }
+}
+
+country_event = { # Fate of Saarland
+  id = annex.181
+  title = annexation_SAARLAND_CONQ
+  desc = annexation_SAARLAND_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to the French
+    name = annex.181.a
+    trigger = {
+      FRA = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = GER
+          is_ally_with = GRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = FRA }
+    981 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to our French Puppet
+    name = annex.181.a
+    trigger = {
+      FRP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = GER
+          is_ally_with = GRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = FRP }
+    981 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Germans
+    name = annex.181.b
+    trigger = {
+      GER = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = FRA
+          is_ally_with = FRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = GER }
+    981 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Germans
+    name = annex.181.b
+    trigger = {
+      GRP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        OR = {
+          is_ally_with = FRA
+          is_ally_with = FRP
+        }
+      }
+    }
+    set_temp_variable = { tag_to_release = GRP }
+    981 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country  = yes
+    set_country_flag = ALSACE_CONQ
   }
 }

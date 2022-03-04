@@ -26,6 +26,14 @@ country_event = { # Fate of Israel
     }
     set_temp_variable = { tag_to_release = ISR }
     release_targeted_tag = yes
+    ISR = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ISR_commonwealth
+      }
+    }
   }
 
   option = { # Occupy
@@ -67,6 +75,14 @@ country_event = { # Fate of Iraq
     }
     set_temp_variable = { tag_to_release = IRQ }
     release_targeted_tag = yes
+    IRQ = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_IRQ
+      }
+    }
   }
 
   option = { # Puppet - with Syria
@@ -83,6 +99,14 @@ country_event = { # Fate of Iraq
     }
     set_temp_variable = { tag_to_release = IRQ }
     release_targeted_tag = yes
+    IRQ = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_IRQ
+      }
+    }
   }
 
   option = { # Occupy
@@ -237,6 +261,14 @@ country_event = { # Fate of Hashimete Arabia
     }
     set_temp_variable = { tag_to_release = ARB }
     release_targeted_tag = yes
+    ARB = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_SAU
+      }
+    }
   }
 
   option = { # Occupy
@@ -281,6 +313,14 @@ country_event = { # Fate of Saudi Arabia
     }
     set_temp_variable = { tag_to_release = SAU }
     release_targeted_tag = yes
+    SAU = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_SAU
+      }
+    }
   }
 
   option = { # Occupy
@@ -411,6 +451,14 @@ country_event = { # Fate of Persia
     }
     set_temp_variable = { tag_to_release = PER }
     release_targeted_tag = yes
+    PER = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_PER
+      }
+    }
   }
 
   option = { # Occupy

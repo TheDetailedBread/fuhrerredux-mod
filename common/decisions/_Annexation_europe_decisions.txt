@@ -56,6 +56,25 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_ALSACE_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      28 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.180
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+      set_country_flag = ALSACE_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_BAW_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
@@ -962,6 +981,25 @@ annexation_decisions = {
     timeout_effect = {
       occupy_large_country = yes
       set_country_flag = RUS_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_SAARLAND_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      981 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.181
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+      set_country_flag = SAARLAND_CONQ
     }
     ai_will_do = {
       factor = 100

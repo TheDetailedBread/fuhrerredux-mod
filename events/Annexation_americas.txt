@@ -19,6 +19,14 @@ country_event = { # Fate of United States
     }
     set_temp_variable = { tag_to_release = USA }
     release_targeted_tag = yes
+    USA = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_USA
+      }
+    }
   }
 
   option = { # Disunite the Union
@@ -47,6 +55,14 @@ country_event = { # Fate of United States
     }
     set_temp_variable = { tag_to_release = USA }
     release_targeted_tag = yes
+    USA = {
+      if = {
+        limit = {
+          ROOT = { tag = ENG }
+        }
+        set_cosmetic_tag = ENG_USA
+      }
+    }
     # New England
     hidden_effect = {
       add_to_temp_array = { core_removal_array = NEE }

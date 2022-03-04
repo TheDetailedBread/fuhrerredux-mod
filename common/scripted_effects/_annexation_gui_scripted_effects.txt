@@ -69,6 +69,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_ALB_CONQ }
   }
   else_if = {
+    limit = { can_release_alsace = yes }
+    ROOT = { activate_mission = annexation_ALSACE_CONQ }
+  }
+  else_if = {
     limit = { can_release_austria = yes }
     ROOT = { activate_mission = annexation_AUS_CONQ }
   }
@@ -255,6 +259,10 @@ check_potential_annexations_europe = {
   else_if = {
     limit = { can_release_russia = yes }
     ROOT = { activate_mission = annexation_RUS_CONQ }
+  }
+  else_if = {
+    limit = { can_release_saarland = yes }
+    ROOT = { activate_mission = annexation_SAARLAND_CONQ }
   }
   else_if = {
     limit = { can_release_sardinia = yes }

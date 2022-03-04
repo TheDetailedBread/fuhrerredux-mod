@@ -47,6 +47,35 @@ can_release_austria = {
   }
 }
 
+#Alsace - annexation_ALSACE_CONQ
+can_release_alsace = {
+  state = 28
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do French release first
+    OR = {
+      country_exists = FRA
+      country_exists = FRP
+      has_country_flag = FRA_CONQ
+      16 = { is_valid_annexation_state = no } # Paris
+    }
+    # Do German release first
+    OR = {
+      country_exists = GER
+      country_exists = GRP
+      has_country_flag = GER_CONQ
+      64 = { is_valid_annexation_state = no } # Brandenburg
+    }
+    NOT = {
+      tag = FRA
+      tag = FRP
+      tag = GER
+      tag = GRP
+      has_country_flag = ALSACE_CONQ
+    }
+  }
+}
+
 #Baden - annexation_BAW_CONQ
 can_release_baden = {
   state = 50
@@ -805,6 +834,35 @@ can_release_russia = {
       country_exists = RUS
       has_country_flag = RUS_CONQ
       is_russian_tag = yes
+    }
+  }
+}
+
+#Saarland - annexation_SAARLAND_CONQ
+can_release_saarland = {
+  state = 981
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    # Do French release first
+    OR = {
+      country_exists = FRA
+      country_exists = FRP
+      has_country_flag = FRA_CONQ
+      16 = { is_valid_annexation_state = no } # Paris
+    }
+    # Do German release first
+    OR = {
+      country_exists = GER
+      country_exists = GRP
+      has_country_flag = GER_CONQ
+      64 = { is_valid_annexation_state = no } # Brandenburg
+    }
+    NOT = {
+      tag = FRA
+      tag = FRP
+      tag = GER
+      tag = GRP
+      has_country_flag = SAARLAND_CONQ
     }
   }
 }
