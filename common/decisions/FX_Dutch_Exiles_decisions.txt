@@ -6,6 +6,9 @@ foreign_politics = {
         target_trigger = {
             FROM = { tag = FRA }
         }
+        visible = {
+          country_exists = HOL
+        }
         available = {
             HOL = {
                 has_war_with = FRA
@@ -31,6 +34,9 @@ foreign_politics = {
         }
         available = {
             is_major = yes
+        }
+        visible = {
+          country_exists = HOL
         }
         days_remove = 14
         visible = {

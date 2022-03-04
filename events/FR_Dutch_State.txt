@@ -1415,6 +1415,85 @@ country_event = { # Landwacht Resistance
   }
 }
 
+country_event = { # German Demands
+  id = dutchstate.63
+  title = dutchstate.63.t
+  desc = dutchstate.63.d
+  picture = GFX_report_event_british_inspect_troops
+  is_triggered_only = yes
+
+  option = { # Pressure the New Dutch Government!
+    name = dutchstate.63.a
+    KNE = {
+      country_event = { id = dutchstate.64 days = 1 }
+    }
+  }
+
+  option = { # We will be better off without them.
+    name = dutchstate.63.b
+    add_political_power = -20
+  }
+}
+
+country_event = { # Germany Requests that We Join the Stahlpakt
+  id = dutchstate.64
+  title = dutchstate.64.t
+  desc = dutchstate.64.d
+  picture = GFX_report_event_dutch_soldiers_indonesia
+  is_triggered_only = yes
+
+  option = { # We have to agree to their demands.
+    name = dutchstate.64.a
+    custom_effect_tooltip = HOL_join_stahlpakt_tt
+    hidden_effect = {
+      FROM = {
+        country_event = dutchstate.65
+      }
+    }
+  }
+
+  option = { # We won't give in to German pressure!
+    name = dutchstate.64.b
+    custom_effect_tooltip = HOL_will_lead_to_war
+    add_stability = 0.05
+    add_political_power = -50
+    hidden_effect = {
+      FROM = {
+        country_event = dutchstate.66
+      }
+    }
+  }
+}
+
+country_event = { # The Netherlands Accepts our Demands
+  id = dutchstate.65
+  title = dutchstate.65.t
+  desc = dutchstate.65.d
+  picture = GFX_report_event_generic_army
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.65.a
+    add_to_faction = FROM
+  }
+}
+
+country_event = { # The Netherlands Rejected Our Demands
+  id = dutchstate.66
+  title = dutchstate.66.t
+  desc = dutchstate.66.d
+  picture = GFX_report_event_fascist_militia
+  is_triggered_only = yes
+
+  option = {
+    name = dutchstate.66.a
+    declare_war_on = {
+      target = FROM
+      type = annex_everything
+    }
+  }
+}
+
 #################################################
 #################################################
 #################################################
@@ -1972,7 +2051,11 @@ country_event = { # Fall of the Nationalist Government
           target = HOL
           transfer_troops = no
         }
-        set_capital = { state = 7 }  
+        set_capital = { state = 7 }
+
+        GER = {
+          country_event = { id = dutchstate.63 days = 1 }
+        }
       }
     }
   }
