@@ -697,7 +697,7 @@ country_event = { # German Commander Arrives
   option = {
     name = dutchstate.29.a
     set_nationality = {
-      target = HOL
+      target_country = HOL
       character = GER_Friedrich_Paulus
     }
     hidden_effect = {
@@ -731,7 +731,7 @@ country_event = { # German Commander Arrives in Germany
     name = dutchstate.31.a
     army_experience = 30
     set_nationality = {
-      target = GER
+      target_country = GER
       character = GER_Friedrich_Paulus
     }
   }
@@ -1092,7 +1092,7 @@ country_event = { # Landwacht Issue
     name = dutchstate.47.a
     hidden_effect = {
       set_country_flag = HOL_landwacht_problem
-      add_landwacht_resistance = yes
+      HOL_add_landwacht_resistance = yes
     }
   }
 }
@@ -1108,7 +1108,7 @@ country_event = { # Socialist Crackdowns
     name = dutchstate.48.a
     hidden_effect = {
       set_country_flag = HOL_socialist_problem
-      add_leftist_resistance = yes
+      HOL_add_leftist_resistance = yes
     }
   }
 }
@@ -1396,7 +1396,7 @@ country_event = { # Leftist Resistance Rising
 
   option = { # Proof that we can't trust the red menance
     name = dutchstate.61.a
-    custom_trigger_tooltip = HOL_leftist_resistance_tt
+    custom_effect_tooltip = HOL_leftist_resistance_tt
     HOL_add_leftist_resistance = yes
   }
 }
@@ -1410,7 +1410,7 @@ country_event = { # Landwacht Resistance
 
   option = { # Hunt them down!
     name = dutchstate.62.a
-    custom_trigger_tooltip = HOL_landwacht_resistance_tt
+    custom_effect_tooltip = HOL_landwacht_resistance_tt
     HOL_add_landwacht_resistance = yes
   }
 }

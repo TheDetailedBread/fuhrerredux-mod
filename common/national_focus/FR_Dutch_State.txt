@@ -488,7 +488,7 @@ focus_tree = {
     }
     available = {
       custom_trigger_tooltip = {
-        trigger = unlocked_later
+        tooltip = unlocked_later
         has_country_flag = HOL_natpop_path
       }
     }
@@ -1335,7 +1335,7 @@ focus_tree = {
       }
       if = {
         limit = {
-          NOT = { has_technology = fighter1 }
+          NOT = { has_tech = fighter1 }
         }
         set_technology = {
           fighter1 = 1
@@ -1348,7 +1348,7 @@ focus_tree = {
 
       if = {
         limit = { 
-          NOT = { has_technology = CAS1 }
+          NOT = { has_tech = CAS1 }
         }
         set_technology = {
           CAS1 = 1
