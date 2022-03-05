@@ -69,21 +69,25 @@ foreign_politics = {
         cost = 50
         allowed = { original_tag = USA }
         visible = { has_war_with = MEX }
+        ai_will_do = {
+          factor = 1000
+        }
         available = {
             MEX = {
+                #controls_state = 378 # California
+                #controls_state = 379 # Nevada
+                #controls_state = 380 # Utah 
+                #controls_state = 926 # Bay Area
+                #controls_state = 927 # Northern California
+                #controls_state = 928 # Southern California
                 controls_state = 375 # Texas
+                controls_state = 919 # East Texas
                 controls_state = 376 # New Mexico
                 controls_state = 377 # Arizona
-                controls_state = 378 # California
-                controls_state = 379 # Nevada
-                controls_state = 380 # Utah 
                 controls_state = 484 # Baja California
-                controls_state = 919 # East Texas
                 controls_state = 920 # Panhandle
                 controls_state = 921 # Transpecos
-                controls_state = 926 # Bay Area
-                controls_state = 927 # Northern California
-                controls_state = 928 # Southern California
+
             }
         }
         complete_effect = {
