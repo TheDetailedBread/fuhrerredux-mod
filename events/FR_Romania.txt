@@ -857,12 +857,13 @@ country_event = { # 1937 General Elections
 		set_country_flag = ROM_had_1937_elections
 		remove_every_minister = yes
 		add_ideas = {
-			ROM_Corneliu_Codreanu_hog_val
+			ROM_Corneliu_Zelea_Codreanu_hog_val
 			ROM_Ion_Mota_for_val
 			ROM_Gheorghe_Clime_eco_val
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
+      set_country_flag = ROM_valkist_romania
 			mark_focus_tree_layout_dirty = yes
 			swap_ideas = {
 				remove_idea = constitutional_monarchy
@@ -871,7 +872,6 @@ country_event = { # 1937 General Elections
 			random_other_country = {
 				news_event = { id = fxnews.31 hours = 8 }
 			}
-			set_country_flag = ROM_valkist_romania
 		}
 	}
 	option = { # PNC
@@ -895,11 +895,11 @@ country_event = { # 1937 General Elections
 			ROM_Horia_Sima_sec_npo
 		}
 		hidden_effect = {
+      set_country_flag = ROM_natpop_romania
 			mark_focus_tree_layout_dirty = yes
 			random_other_country = {
 				news_event = { id = fxnews.25 hours = 8 }
 			}
-			set_country_flag = ROM_natpop_romania
 		}
 	}
 }
@@ -1273,10 +1273,10 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Teohari_Georgescu_sec_van
 		}
 		hidden_effect = {
-			mark_focus_tree_layout_dirty = yes
 			set_country_flag = ROM_socialist_romania
 			clr_country_flag = ROM_democratic_romania
 			clr_country_flag = coalition_libertarian_socialist
+      mark_focus_tree_layout_dirty = yes
 			country_event = { id = romania.30 days = 2 }
 		}
 	}
@@ -1296,7 +1296,7 @@ country_event = { # Prime Minister Assassinated!
 		increase_ruling_party_popularity_by_10 = yes
 		remove_every_minister = yes
 		add_ideas = {
-			ROM_Corneliu_Codreanu_hog_val
+			ROM_Corneliu_Zelea_Codreanu_hog_val
 			ROM_Ion_Mota_for_val
 			ROM_Gheorghe_Clime_eco_val
 			ROM_Ion_Belgea_sec_val
@@ -1437,7 +1437,7 @@ country_event = { # Iron Guard Coups the Government!
 		increase_ruling_party_popularity_by_10 = yes
 		remove_every_minister = yes
 		add_ideas = {
-			ROM_Corneliu_Codreanu_hog_val
+			ROM_Corneliu_Zelea_Codreanu_hog_val
 			ROM_Ion_Mota_for_val
 			ROM_Gheorghe_Clime_eco_val
 			ROM_Ion_Belgea_sec_val
