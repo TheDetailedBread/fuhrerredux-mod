@@ -627,6 +627,21 @@ characters = {
 				hog_local_tyrant
 			}
 		}
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_country_flag = ROM_Ion_Mota_for_val_hired }
+			}
+			idea_token = ROM_Ion_Mota_for_val
+			on_add = { set_country_flag = ROM_Ion_Mota_for_val_hired }
+			on_remove = { clr_country_flag = ROM_Ion_Mota_for_val_hired }
+			traits = {
+				foreign_minister
+				valkist
+				for_iron_fisted_brute
+			}
+		}
 	}
 	ROM_Ana_Pauker = {
 		name = "Ana Pauker"
