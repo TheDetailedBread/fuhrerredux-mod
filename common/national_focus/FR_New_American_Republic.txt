@@ -982,6 +982,7 @@ focus_tree = {
         x = 0
         y = 1
         cost = 6
+        available = { is_subject = no }
         prerequisite = { focus = NAR_begin_civilian_mobilization }
         prerequisite = { focus = NAR_economic_recovery }
         prerequisite = { focus = NAR_republic_without_democracy }
@@ -1946,6 +1947,7 @@ focus_tree = {
         y = 0
         cost = 6
         available = {
+          is_subject = no
             NOT = { has_idea = NAR_illegitimate_government }
         }
         mutually_exclusive = {
@@ -1974,6 +1976,7 @@ focus_tree = {
         y = 6
         cost = 6
         available = {
+          is_subject = no
             NOT = { has_idea = NAR_illegitimate_government }
         }
         mutually_exclusive = {
@@ -2000,6 +2003,7 @@ focus_tree = {
           factor = 200
         }
         available = {
+          is_subject = no
             NOT = { has_idea = NAR_illegitimate_government }
         }
         mutually_exclusive = {

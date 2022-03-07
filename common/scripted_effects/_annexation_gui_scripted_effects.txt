@@ -117,10 +117,6 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_CENTRAL_MACEDONIA_CONQ }
   }
   else_if = {
-    limit = { can_release_dardanellia = yes }
-    ROOT = { activate_mission = annexation_DARDANELLIA_CONQ }
-  }
-  else_if = {
     limit = { can_release_denmark = yes }
     ROOT = { activate_mission = annexation_DEN_CONQ }
   }
@@ -300,10 +296,7 @@ check_potential_annexations_europe = {
     limit = { can_release_shkoder = yes }
     ROOT = { activate_mission = annexation_SHKODER_CONQ }
   }
-  else_if = {
-    limit = { can_release_smyrna = yes }
-    ROOT = { activate_mission = annexation_SMYRNA_CONQ }
-  }
+  
   else_if = {
     limit = { can_release_soviet = yes }
     ROOT = { activate_mission = annexation_SOV_CONQ }
@@ -786,6 +779,14 @@ check_potential_annexations_middle_east = {
     limit = { can_release_trucial_states = yes }
     ROOT = { activate_mission = annexation_TRU_CONQ }
   }
+  else_if = {
+    limit = { can_release_smyrna = yes }
+    ROOT = { activate_mission = annexation_SMYRNA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_dardanellia = yes }
+    ROOT = { activate_mission = annexation_DARDANELLIA_CONQ }
+  }
 }
 
 check_potential_annexations_india = {
@@ -892,6 +893,10 @@ check_potential_annexations_australia = {
     limit = { can_release_papua_new_guinea = yes }
     ROOT = { activate_mission = annexation_PNG_CONQ }
   }
+  else_if = {
+    limit = { can_release_hawaii = yes }
+    ROOT = { activate_mission = annexation_HAW_CONQ }
+  }
 }
 
 check_potential_annexations_asia = {
@@ -982,5 +987,17 @@ check_potential_annexations_asia = {
   else_if = {
     limit = { can_release_zhili = yes }
     ROOT = { activate_mission = annexation_ZHI_CONQ }
+  }
+  else_if = {
+    limit = { can_release_sabah = yes }
+    ROOT = { activate_mission = annexation_SABAH_CONQ }
+  }
+  else_if = {
+    limit = { can_release_sulawesi = yes }
+    ROOT = { activate_mission = annexation_SULAWESI_CONQ }
+  }
+  else_if = {
+    limit = { can_release_moluccas = yes }
+    ROOT = { activate_mission = annexation_MOLUCCAS_CONQ }
   }
 }

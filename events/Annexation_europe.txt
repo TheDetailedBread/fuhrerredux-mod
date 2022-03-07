@@ -586,6 +586,7 @@ country_event = { # Fate of Bulgaria
         add_state_core = 48
         add_state_core = 211
         add_state_core = 212
+        add_state_core = 764
         add_state_core = 766
         drop_cosmetic_tag = yes
       }
@@ -2218,7 +2219,7 @@ country_event = { # Fate of Poland
   }
 
   option = { # Occupy
-    name = annex.133.b
+    name = annexation_occupy
     ai_chance = {
       base = 0
     }
@@ -2884,18 +2885,18 @@ country_event = { # Fate of Schleswig-Holstein
       }
       modifier = {
         add = 100
-        is_ally_with = GRU
+        is_ally_with = GRP
       }
     }
     trigger = {
       is_germany_or_splinter_tag = no
       OR = {
         country_exists = GER
-        country_exists = GRU
+        country_exists = GRP
       }
     }
     if = {
-      limit = { is_ally_with = GER }
+      limit = { country_exists = GER }
       GER = {
         transfer_state = 58
         transfer_state = 784
@@ -3678,7 +3679,7 @@ country_event = { # Fate of West Banat
   option = { # Give it to Greece
     name = annex.154.a
     trigger = {
-      GRE = { ROOT_can_grant_land = yes }
+      HUN = { ROOT_can_grant_land = yes }
     }
     ai_chance = {
       base = 100
@@ -3687,14 +3688,14 @@ country_event = { # Fate of West Banat
         is_ally_with = BUL
       }
     }
-    set_temp_variable = { tag_to_release = GRE }
+    set_temp_variable = { tag_to_release = HUN }
     750 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Give it to Bulgaria
     name = annex.154.b
     trigger = {
-      BUL = { ROOT_can_grant_land = yes }
+      SER = { ROOT_can_grant_land = yes }
     }
     ai_chance = {
       base = 100
@@ -3703,7 +3704,7 @@ country_event = { # Fate of West Banat
         is_ally_with = GRE
       }
     }
-    set_temp_variable = { tag_to_release = BUL }
+    set_temp_variable = { tag_to_release = SER }
     750 = { transfer_state_and_add_core = yes }
   }
 

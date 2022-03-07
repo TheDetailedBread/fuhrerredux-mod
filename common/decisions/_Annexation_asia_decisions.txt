@@ -417,4 +417,42 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_SULAWESI_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      673 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.4023
+    }
+    timeout_effect = {
+      occupy_large_country = yes
+      set_country_flag = SULAWESI_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_MOLUCCAS_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      668 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.4024
+    }
+    timeout_effect = {
+      occupy_large_country = yes
+      set_country_flag = MOLUCCAS_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
 }

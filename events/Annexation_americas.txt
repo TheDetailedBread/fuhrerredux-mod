@@ -962,7 +962,7 @@ country_event = { # Fate of Panama
 country_event = { # Fate of Puerto Rico
   id = annex.1020
   title = annexation_PUE_CONQ
-  desc = annexation_PUE_CONQ
+  desc = annexation_PUE_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
@@ -1559,7 +1559,7 @@ country_event = { # Fate of Suriname
 
   immediate = {
     hidden_effect = {
-      add_to_temp_array = { core_removal_array = PAR }
+      add_to_temp_array = { core_removal_array = SUR }
       remove_all_cores_and_claims_of_tags = yes
       SUR = {
         add_state_core = 970
