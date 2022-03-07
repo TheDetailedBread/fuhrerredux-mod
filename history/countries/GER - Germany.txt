@@ -1,6 +1,6 @@
 capital = 64
 
-oob = "GER_1936"
+oob = "GER"
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -580,3 +580,8 @@ recruit_character = GER_Hans_von_Seeckt
 recruit_character = GER_Valkist_Council
 recruit_character = GER_Fedor_von_Bock
 recruit_character = GER_Alfred_Saalwachter
+
+if = {
+  limit = { has_dlc = "La Resistance" }
+  create_intelligence_agency = yes
+}
