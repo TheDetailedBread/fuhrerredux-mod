@@ -160,9 +160,8 @@ can_release_sabah = {
     # Do Insulindian release first
     OR = {
       country_exists = INS
-      has_country_flag = INS_CONQ
-
       country_exists = BEA
+      has_country_flag = INS_CONQ
       335 = { is_valid_annexation_state = no }
     }
     
@@ -281,6 +280,30 @@ can_release_zhili = {
   ROOT = {
     is_chinese_tag = no
     NOT = { has_country_flag = ZHI_CONQ }
+  }
+}
+
+#Sulawesi - annexation_SULAWESI_CONQ
+can_release_sulawesi = {
+  state = 673
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_indochina_first = yes
+    NOT = {
+      has_country_flag = SULAWESI_CONQ
+    }
+  }
+}
+
+#Moluccas - annexation_MOLUCCAS_CONQ
+can_release_moluccas = {
+  state = 668
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_indochina_first = yes
+    NOT = {
+      has_country_flag = MOLUCCAS_CONQ
+    }
   }
 }
 

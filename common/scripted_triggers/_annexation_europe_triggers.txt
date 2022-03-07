@@ -132,6 +132,7 @@ can_release_belgium = {
 #Bohemia - annexation_CZE_CONQ
 can_release_bohemia = {
   state = 9
+  9 = { is_valid_annexation_state = yes } # Prague
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     NOT = {
@@ -1008,13 +1009,13 @@ can_release_smyrna = {
     OR = {
       country_exists = GRE
       has_country_flag = GRE_CONQ
-      47 = { is_valid_annexation_state = no } # Albania
+      47 = { is_valid_annexation_state = no } # Athens
     }
     # Do Turkish release first
     OR = {
       country_exists = TUR
       has_country_flag = TUR_CONQ
-      341 = { is_valid_annexation_state = no } # Belgrade
+      341 = { is_valid_annexation_state = no } # Constatinople
     }
     NOT = {
       tag = GRE

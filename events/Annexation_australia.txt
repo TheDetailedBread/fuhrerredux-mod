@@ -153,6 +153,17 @@ country_event = { # Fate of Papua New Guinea
     set_temp_variable = { tag_to_release = PNG }
     release_targeted_tag = yes
   }
+  option = { # Give it to Australia
+    name = annex.5003.b
+    trigger = {
+      AST = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = PNG }
+    release_targeted_tag = yes
+  }
   option = { # Occupy
     name = annexation_occupy
     ai_chance = {
@@ -160,5 +171,82 @@ country_event = { # Fate of Papua New Guinea
     }
     occupy_small_country = yes
     set_country_flag = PNG_CONQ
+  }
+}
+
+country_event = { # Fate of Hawaii
+  id = annex.5004
+  title = annexation_HAW_CONQ
+  desc = annexation_HAW_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = HAW }
+      remove_all_cores_and_claims_of_tags = yes
+      HAW = {
+        add_state_core = 629
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.5004.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = HAW }
+    release_targeted_tag = yes
+  }
+  option = { # Transfer to USA
+    name = annex.5004.b
+    trigger = {
+      OR = {
+        USA = { ROOT_can_grant_land = yes }
+        ORE = {
+          AND = {
+            owns_state = 385
+            ROOT_can_grant_land = yes
+          }
+        }
+      }
+    }
+    ai_chance = {
+      base = 100
+    }
+    if = {
+      limit = {
+        USA = { owns_state = 385 } # Oregon
+      }
+      set_temp_variable = { tag_to_release = USA }
+      629 = { transfer_state_and_add_core = yes }
+    }
+    else_if = {
+      limit = {
+        ORE = { owns_state = 385 } # Oregon
+      }
+      set_temp_variable = { tag_to_release = ORE }
+      629 = { transfer_state_and_add_core = yes }
+    }
+  }
+  option = { # Integrate to the Union
+    name = annex.5004.c
+    trigger = {
+      is_american_tag = yes
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_country_flag = HAW_CONQ
+  }
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_small_country = yes
+    set_country_flag = HAW_CONQ
   }
 }
