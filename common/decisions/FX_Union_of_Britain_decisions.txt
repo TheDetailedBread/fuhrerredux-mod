@@ -1,0 +1,2297 @@
+UOB_motorway_decisions = {
+
+	UOB_south_england = {
+	
+		icon = generic_industry
+	
+		available = {
+			has_completed_focus = UOB_infrestructure_b
+		}
+		
+		cost = 75
+		
+		fire_only_once = yes
+		
+		days_remove = 200
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+
+		modifier = {
+			stability_factor = -0.15
+			civilian_factory_use = 4
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_south_england"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_south_england"
+		123 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		125 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		126 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		127 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		338 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+}
+
+UOB_motorway_decisions = {
+
+	UOB_central_britain = {
+	
+		icon = generic_industry
+	
+		available = {
+			has_completed_focus = UOB_infrestructure_b
+		}
+		
+		cost = 75
+		
+		fire_only_once = yes
+		
+		days_remove = 200
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+
+		modifier = {
+			stability_factor = -0.05
+			civilian_factory_use = 4
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_south_england"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_south_england"
+		122 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		128 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		129 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		130 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		132 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+UOB_motorway_decisions = {
+
+	UOB_norf_briton = {
+	
+		icon = generic_industry
+	
+		available = {
+			has_completed_focus = UOB_infrestructure_b
+		}
+		
+		cost = 75
+		
+		fire_only_once = yes
+		
+		days_remove = 200
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+
+		modifier = {
+			stability_factor = -0.10
+			civilian_factory_use = 4
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_south_england"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_south_england"
+		131 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		121 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		133 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		136 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		120 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+## european rev
+
+UOB_eurorev_decisions = {
+ UOB_SWI = {
+		war_with_on_remove = SWI
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SWI
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { SWI = { has_government = vanguardist } 
+		SWI = { has_government = libertarian_socialist } SWI = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			SWI = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_SWI target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_SWI target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = SWI
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_DEN = {
+		war_with_on_remove = DEN
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = DEN
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { DEN = { has_government = vanguardist } 
+		DEN = { has_government = libertarian_socialist } DEN = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			DEN = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+				
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_DEN target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_DEN target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = DEN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_NOR = {
+		war_with_on_remove = NOR
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = NOR
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { NOR = { has_government = vanguardist } 
+		NOR = { has_government = libertarian_socialist } NOR = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			NOR = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_NOR target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_NOR target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = NOR
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_POR = {
+		war_with_on_remove = POR
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = POR
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { POR = { has_government = vanguardist } 
+		POR = { has_government = libertarian_socialist } POR = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			POR = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_POR target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_POR target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = POR
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_PRR = {
+		war_with_on_remove = PRR
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = PRR
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { PRR = { has_government = vanguardist } 
+		PRR = { has_government = libertarian_socialist } PRR = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			PRR = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_PRR target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_PRR target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = PRR
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_ITA = {
+		war_with_on_remove = ITA
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = ITA
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { ITA = { has_government = vanguardist } 
+		ITA = { has_government = libertarian_socialist } ITA = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			ITA = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_ITA target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_ITA target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = ITA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+
+UOB_eurorev_decisions = {
+ UOB_LUX = {
+		war_with_on_remove = LUX
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = LUX
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { LUX = { has_government = vanguardist } 
+		LUX = { has_government = libertarian_socialist } LUX = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			LUX = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_LUX target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_LUX target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = LUX
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_RHI = {
+		war_with_on_remove = RHI
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = RHI
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { RHI = { has_government = vanguardist } 
+		RHI = { has_government = libertarian_socialist } RHI = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			RHI = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_RHI target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_RHI target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = RHI
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_AUS = {
+		war_with_on_remove = AUS
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = AUS
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			NOT = { OR = { AUS = { has_government = vanguardist } 
+		AUS = { has_government = libertarian_socialist } AUS = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			AUS = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_AUS target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_AUS target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = AUS
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+
+UOB_eurorev_decisions = {
+ UOB_POL = {
+		war_with_on_remove = POL
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = POL
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { POL = { has_government = vanguardist } 
+		POL = { has_government = libertarian_socialist } POL = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			POL = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_POL target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_POL target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = POL
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_CEN = {
+		war_with_on_remove = CEN
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = CEN
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { CEN = { has_government = vanguardist } 
+		CEN = { has_government = libertarian_socialist } CEN = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			CEN = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_CEN target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_CEN target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = CEN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_HUN = {
+		war_with_on_remove = HUN
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = HUN
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { HUN = { has_government = vanguardist } 
+		HUN = { has_government = libertarian_socialist } HUN = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			HUN = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_HUN target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_HUN target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = HUN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_SER = {
+		war_with_on_remove = SER
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SER
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { SER = { has_government = vanguardist } 
+		SER = { has_government = libertarian_socialist } SER = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			SER = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_SER target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_SER target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = SER
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_ALB = {
+		war_with_on_remove = ALB
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = ALB
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { ALB = { has_government = vanguardist } 
+		ALB = { has_government = libertarian_socialist } ALB = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			ALB = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_ALB target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_ALB target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = ALB
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_BUL = {
+		war_with_on_remove = BUL
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = BUL
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { BUL = { has_government = vanguardist } 
+		BUL = { has_government = libertarian_socialist } BUL = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			BUL = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_BUL target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_BUL target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = BUL
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_GRE = {
+		war_with_on_remove = GRE
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GRE
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { GRE = { has_government = vanguardist } 
+		GRE = { has_government = libertarian_socialist } GRE = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			GRE = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_GRE target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_GRE target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = GRE
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_ROM = {
+		war_with_on_remove = ROM
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = ROM
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { ROM = { has_government = vanguardist } 
+		ROM = { has_government = libertarian_socialist } ROM = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			ROM = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_ROM target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_ROM target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = ROM
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_LIT = {
+		war_with_on_remove = LIT
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = LIT
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { LIT = { has_government = vanguardist } 
+		LIT = { has_government = libertarian_socialist } LIT = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			LIT = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_LIT target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_LIT target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = LIT
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_LAT = {
+		war_with_on_remove = LAT
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = LAT
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { LAT = { has_government = vanguardist } 
+		LAT = { has_government = libertarian_socialist } LAT = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			LAT = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_LAT target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_LAT target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = LAT
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_EST = {
+		war_with_on_remove = EST
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = EST
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { EST = { has_government = vanguardist } 
+		EST = { has_government = libertarian_socialist } EST = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			EST = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_EST target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_EST target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = EST
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_UKR = {
+		war_with_on_remove = UKR
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = UKR
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { UKR = { has_government = vanguardist } 
+		UKR = { has_government = libertarian_socialist } UKR = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			UKR = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_UKR target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_UKR target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = UKR
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_FIN = {
+		war_with_on_remove = FIN
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = FIN
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { FIN = { has_government = vanguardist } 
+		FIN = { has_government = libertarian_socialist } FIN = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			FIN = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_FIN target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_FIN target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = FIN
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+UOB_eurorev_decisions = {
+ UOB_SWE = {
+		war_with_on_remove = SWE
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SWE
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { SWE = { has_government = vanguardist } 
+		SWE = { has_government = libertarian_socialist } SWE = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			SWE = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+				NOT = { is_in_faction_with = SOV }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_SWE target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_SWE target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = SWE
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_TRA = {
+		war_with_on_remove = TRA
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = TRA
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { TRA = { has_government = vanguardist } 
+		TRA = { has_government = libertarian_socialist } TRA = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			TRA = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+				NOT = { is_in_faction_with = SOV }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_TRA target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_TRA target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = TRA
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+ 
+UOB_eurorev_decisions = {
+ UOB_MNT = {
+		war_with_on_remove = MNT
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = MNT
+			}
+		}
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			NOT = { OR = { MNT = { has_government = vanguardist } 
+		MNT = { has_government = libertarian_socialist } MNT = { has_government = collectivist } } }
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_european_rev
+			MNT = {
+				exists = yes
+				NOT = { is_in_faction_with = UOB }
+				NOT = { is_in_faction_with = SOV }
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_MNT target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_MNT target: [From.GetName]"
+			UOB = {
+				declare_war_on = {
+					type = annex_everything
+					target = MNT
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+ }
+
+
+UOB_eurorev_decisions = {
+ UOB_LOCE = {
+	
+
+		allowed = {
+		}
+
+		available = {
+
+		}
+
+		visible = {
+
+               NOT = { has_completed_focus = UOB_european_rev }
+
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 30
+
+                cost = 500
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_LOCE target: [From.GetName]"
+		
+		}
+
+		remove_effect = {
+
+		}
+
+		ai_will_do = {
+			factor = 0
+
+		}	
+	}
+
+ }
+
+UOB_worlrev_decisions = {
+ UOB_every_country = {
+
+		icon = generic_decision
+
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+			has_country_flag = UOB_alliance_done
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_global_revolution
+
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+                cost = 300
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_every_country target: [From.GetName]"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_every_country target: [From.GetName]"
+			every_other_country = {
+					limit = { 
+							NOT = {
+								is_in_faction_with = UOB
+							}	
+					}
+				country_event = uob.21
+			}
+
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+
+		}
+ }
+
+UOB_worlrev_decisions = {
+ UOB_every_country_alliance = {
+
+		icon = generic_decision
+
+
+		allowed = {
+		}
+
+		available = {
+		    	original_tag = UOB
+			has_country_flag = UOB_world_rev
+		}
+
+		visible = {
+	    	original_tag = UOB
+               has_completed_focus = UOB_global_revolution
+
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 10
+
+                cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_every_country target: [From.GetName]"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove UOB_every_country target: [From.GetName]"
+					every_other_country = { 
+						limit = { 
+							NOT = {
+								tag = SOV
+								tag = NOR
+								tag = SPA
+							}
+							OR = { 
+								has_government = vanguardist 
+								has_government = libertarian_socialist 
+								has_government = collectivist } 
+							}
+					country_event = uob.24 }
+					set_country_flag = UOB_alliance_done
+
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+		}	
+
+
+		}
+ }
+
+
+UOB_irelib_decisions = {
+ UOB_IREONE = {
+		icon = generic_decision
+
+
+		allowed = {
+		} 
+
+		available = {
+		    	original_tag = UOB
+		}
+
+		visible = {
+		NOT = { has_country_flag = ire_done }
+		controls_state = 119
+		controls_state = 113
+		controls_state = 816
+	    	original_tag = UOB
+               has_completed_focus = UOB_socialist_ireland
+
+		}
+
+		fire_only_once = yes
+		
+
+                cost = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_IREONE target: [From.GetName]"
+			set_country_flag = ire_done
+			remove_state_core = 119
+		IRE = { 
+			transfer_state = 135
+			transfer_state = 134
+			transfer_state = 815
+			transfer_state = 816
+			transfer_state = 113
+			transfer_state = 119
+		add_state_core = 119
+		add_state_core = 113
+		add_state_core = 134
+		add_state_core = 135
+		add_state_core = 815
+		add_state_core = 816
+			}
+		UOB = { puppet = IRE }
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+ }
+
+
+UOB_irelib_decisions = {
+ UOB_IRETWO = {
+		icon = generic_decision
+
+
+		allowed = {
+		} 
+
+		available = {
+		    	original_tag = UOB
+		}
+
+		visible = {
+		NOT = { has_country_flag = ire_done }
+	    	original_tag = UOB
+		controls_state = 119
+		controls_state = 113
+		controls_state = 816
+               has_completed_focus = UOB_socialist_ireland
+
+		}
+
+		fire_only_once = yes
+		
+
+                cost = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_IREONE target: [From.GetName]"
+			set_country_flag = ire_done
+			add_state_core = 119
+		IRE = { 
+			transfer_state = 135
+			transfer_state = 134
+			transfer_state = 815
+			transfer_state = 816
+			transfer_state = 113
+			
+
+		add_state_core = 113
+		add_state_core = 134
+		add_state_core = 135
+		add_state_core = 815
+		add_state_core = 816
+			}
+		UOB = { puppet = IRE }
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+ }
+
+
+UOB_irelibnah_decisions = { ## works now lol
+ UOB_IREint = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+				
+			
+		}
+
+
+		available = {
+			original_tag = UOB
+		has_completed_focus = UOB_reclaim_irelandtwo
+			119 = {
+				is_fully_controlled_by = UOB
+			}
+			113 = {
+				is_fully_controlled_by = UOB
+				compliance > 25
+			}
+                        134 = {
+				is_fully_controlled_by = UOB
+				compliance > 25
+			}
+			135 = {
+				is_fully_controlled_by = UOB
+				compliance > 25
+			}
+			815 = {
+				is_fully_controlled_by = UOB
+				compliance > 25
+			}
+                        816 = {
+				is_fully_controlled_by = UOB
+				compliance > 25
+			}
+
+		}
+
+		visible = {
+                      	  
+			113 = {
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+	                134 = {
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			135 = {
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+			815 = {
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+	                816 = {
+				is_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		 }
+	cost = 250
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UOB_IREint"
+        add_state_core = 119
+        add_state_core = 113
+        add_state_core = 134
+        add_state_core = 135
+        add_state_core = 815
+        add_state_core = 816
+		}
+	}
+}

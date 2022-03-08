@@ -1,38 +1,1487 @@
 characters = {
-  UOB_Arthur_Horner = {
-    name = "Arthur Horner"
-    portraits = {
-      civilian = {
-        large = "gfx/leaders/UOB/Portrait_UOB_Arthur_Horner.png"
-      }
-    }
-    country_leader = {
-      ideology = collectivist_subtype
-      traits = {}
-    }
-  }
-  UOB_Clement_Atlee = {
-    name = "Clement Atlee"
-    portraits = {
-      civilian = {
-        large = "gfx/leaders/UOB/Portrait_UOB_Clement_Atlee.png"
-      }
-    }
-    country_leader = {
-      ideology = libertarian_socialist_subtype
-      traits = {}
-    }
-  }
-  UOB_Barbara_Castle = {
-    name = "Barbara Castle"
-    portraits = {
-      civilian = {
-        large = "gfx/leaders/UOB/Portrait_UOB_Barbara_Castle.png"
-      }
-    }
-    country_leader = {
-      ideology = social_democrat_subtype
-      traits = {}
-    }
-  }
+	UOB_Ebeneezer_Edwards = {
+		name = "Ebeneezer Edwards"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Ebeneezer_Edwards.png"
+				small = "gfx/interface/ministers/UOB/UOB_Ebeneezer_Edwards.png"
+			}
+		}
+		country_leader = {
+			ideology = vanguardist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Ebeneezer_Edwards_hog_van_hired }
+			}			
+			idea_token = UOB_Ebeneezer_Edwards_hog_van
+			on_add = { set_country_flag = UOB_Ebeneezer_Edwards_hog_van_hired }
+			on_remove = { clr_country_flag = UOB_Ebeneezer_Edwards_hog_van_hired }
+			traits = {
+				head_of_government
+				vanguardist
+				hog_red_chairmen
+			}
+		}
+	}
+	UOB_Eric_Blair = {
+		name = "Eric Blair"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Eric_Blair.png"
+				small = "gfx/interface/ministers/UOB/UOB_Eric_Blair.png"
+			}
+		}
+		country_leader = {
+			ideology = collectivist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Eric_Blair_hog_col_hired }
+			}			
+			idea_token = UOB_Eric_Blair_hog_col
+			on_add = { set_country_flag = UOB_Eric_Blair_hog_col_hired }
+			on_remove = { clr_country_flag = UOB_Eric_Blair_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_local_tyrant
+			}
+		}
+	}
+	UOB_Clement_Attlee = {
+		name = "Clement Attlee"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Clement_Attlee.png"
+				small = "gfx/interface/ministers/UOB/UOB_Clement_Attlee.png"
+			}
+		}
+		country_leader = {
+			ideology = libertarian_socialist_subtype
+			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Clement_Attlee_hog_lib_hired }
+			}			
+			idea_token = UOB_Clement_Attlee_hog_lib
+			on_add = { set_country_flag = UOB_Clement_Attlee_hog_lib_hired }
+			on_remove = { clr_country_flag = UOB_Clement_Attlee_hog_lib_hired }
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_charismatic_charmer
+			}
+		}
+	}
+	UOB_Basil_Liddel_Hart = {
+		name = "Basil Liddel Hart"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Basil_Liddel_Hart.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				offensive_doctrine
+				armor_officer
+				panzer_leader
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	UOB_Jack_Jones = {
+		name = "Jack Jones"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Jack_Jones.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				inflexible_strategist
+				infantry_officer
+				politically_connected
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	UOB_Percy_Hobart = {
+		name = "Percy Hobart"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Percy_Hobart.png"
+				small = "gfx/interface/ministers/UOB/UOB_Percy_Hobart.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_engineer
+				armor_officer
+				panzer_leader
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff			
+			idea_token = UOB_Percy_Hobart_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army			
+			idea_token = UOB_Percy_Hobart_carm
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	UOB_Frederick_Browning = {
+		name = "Frederick Browning"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Frederick_Browning.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+				commando
+				paratrooper
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	UOB_Eric_Charles_Hayes = {
+		name = "Eric Charles Hayes"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Eric_Charles_Hayes.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				organizer
+				career_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	UOB_Clement_Armitage = {
+		name = "Clement Armitage"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Clement_Armitage.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_leader
+				artillery_officer
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	UOB_Kenneth_Anderson = {
+		name = "Kenneth Anderson"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Kenneth_Anderson.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				harsh_leader
+				infantry_leader
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	UOB_Raymond_Briggs = {
+		name = "Raymond Briggs"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Raymond_Briggs.png"
+				small = "gfx/interface/ministers/UOB/UOB_Raymond_Briggs.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				career_officer
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff			
+			idea_token = UOB_Raymond_Briggs_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army			
+			idea_token = UOB_Raymond_Briggs_carm
+			traits = {
+				chief_of_army
+				carm_static_defence_doctrine
+			}
+		}
+	}
+	UOB_Thomas_Wintringham = {
+		name = "Thomas Wintringham"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Thomas_Wintringham.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				hill_fighter
+				trickster
+				guerilla_fighter
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	UOB_Herbert_Lumsden = {
+		name = "Herbert Lumsden"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Herbert_Lumsden.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+				artillery_officer
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+		}
+	}
+	UOB_Eric_Dorman_Smith = {
+		name = "Eric Dorman-Smith"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Eric_Dorman_Smith.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				armor_officer
+				panzer_leader
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	UOB_Kenneth_Strong = {
+		name = "Kenneth Strong"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Kenneth_Strong.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	UOB_Ronald_Scobie = {
+		name = "Ronald Scobie"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Ronald_Scobie.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				infantry_leader
+				trait_engineer
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	UOB_Edmund_Anstice = {
+		name = "Edmund Anstice"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Edmund_Anstice.png"
+				small = "gfx/interface/ministers/UOB/UOB_Edmund_Anstice.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				air_controller
+				
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy			
+			idea_token = UOB_Edmund_Anstice_cnav
+			traits = {
+				chief_of_navy
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	UOB_Richard_Cayley = {
+		name = "Richard Cayley"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Richard_Cayley.png"
+				small = "gfx/interface/ministers/UOB/UOB_Richard_Cayley.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				seawolf
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy			
+			idea_token = UOB_Richard_Cayley_cnav
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	UOB_Geoffrey_Barnard = {
+		name = "Geoffrey Barnard"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Geoffrey_Barnard.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				superior_tactician
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	UOB_Anthony_Follett_Pugsley = {
+		name = "Anthony Follett Pugsley"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Anthony_Follett_Pugsley.png"
+				small = "gfx/interface/ministers/UOB/UOB_Anthony_Follett_Pugsley.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				spotter
+				blockade_runner
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy			
+			idea_token = UOB_Anthony_Follett_Pugsley_cnav
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	UOB_Frank_Pegram = {
+		name = "Frank Pegram"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Frank_Pegram.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				spotter
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	UOB_Robert_Don_Oliver = {
+		name = "Robert Don Oliver"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Robert_Don_Oliver.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				blockade_runner
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	UOB_Bernard_Warburton_Lee = {
+		name = "Bernard Warburton-Lee"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Bernard_Warburton_Lee.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				ironside
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	UOB_Frederic_John_Walker = {
+		name = "Frederic John Walker"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Frederic_John_Walker.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				spotter
+				blockade_runner
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	UOB_Stephen_Beattie = {
+		name = "Stephen Beattie"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Stephen_Beattie.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				superior_tactician
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	UOB_Donald_Macintyre = {
+		name = "Donald Macintyre"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Donald_Macintyre.png"
+			}
+		}
+		navy_leader = {
+			traits = {
+				blockade_runner
+				superior_tactician
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	UOB_Oswald_Mosley = {
+		name = "Oswald Mosley"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Oswald_Mosley.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Oswald_Mosley_eco_lib_hired }
+			}			
+			idea_token = UOB_Oswald_Mosley_eco_lib
+			on_add = { set_country_flag = UOB_Oswald_Mosley_eco_lib_hired }
+			on_remove = { clr_country_flag = UOB_Oswald_Mosley_eco_lib_hired }
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_reformer
+			}
+		}
+	}
+	UOB_Aneurin_Bevan = {
+		name = "Aneurin Bevan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Aneurin_Bevan.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Aneurin_Bevan_eco_col_hired }
+			}			
+			idea_token = UOB_Aneurin_Bevan_eco_col
+			on_add = { set_country_flag = UOB_Aneurin_Bevan_eco_col_hired }
+			on_remove = { clr_country_flag = UOB_Aneurin_Bevan_eco_col_hired }
+			traits = {
+				economy_minister
+				collectivist
+				eco_planned_economy_proponent
+			}
+		}
+	}
+	UOB_Wilfred_Risdon = {
+		name = "Wilfred Risdon"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Wilfred_Risdon.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Wilfred_Risdon_eco_van_hired }
+			}			
+			idea_token = UOB_Wilfred_Risdon_eco_van
+			on_add = { set_country_flag = UOB_Wilfred_Risdon_eco_van_hired }
+			on_remove = { clr_country_flag = UOB_Wilfred_Risdon_eco_van_hired }
+			traits = {
+				economy_minister
+				vanguardist
+				eco_imbedded_unioneer
+			}
+		}
+	}
+	UOB_William_Gallacher = {
+		name = "William Gallacher"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_William_Gallacher.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_William_Gallacher_sec_van_hired }
+			}			
+			idea_token = UOB_William_Gallacher_sec_van
+			on_add = { set_country_flag = UOB_William_Gallacher_sec_van_hired }
+			on_remove = { clr_country_flag = UOB_William_Gallacher_sec_van_hired }
+			traits = {
+				security_minister
+				vanguardist
+				sec_back_stabber
+			}
+		}
+	}
+	UOB_Stafford_Cripps = {
+		name = "Stafford Cripps"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Stafford_Cripps.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Stafford_Cripps_sec_col_hired }
+			}			
+			idea_token = UOB_Stafford_Cripps_sec_col
+			on_add = { set_country_flag = UOB_Stafford_Cripps_sec_col_hired }
+			on_remove = { clr_country_flag = UOB_Stafford_Cripps_sec_col_hired }
+			traits = {
+				security_minister
+				collectivist
+				sec_crime_fighter
+			}
+		}
+	}
+	UOB_Clifford_Allen = {
+		name = "Clifford Allen"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Clifford_Allen.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Clifford_Allen_sec_lib_hired }
+			}			
+			idea_token = UOB_Clifford_Allen_sec_lib
+			on_add = { set_country_flag = UOB_Clifford_Allen_sec_lib_hired }
+			on_remove = { clr_country_flag = UOB_Clifford_Allen_sec_lib_hired }
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	UOB_Bill_Alexander = {
+		name = "Bill Alexander"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Bill_Alexander.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff			
+			idea_token = UOB_Bill_Alexander_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_commando_operations
+			}
+		}
+	}
+	UOB_Bernard_Paget = {
+		name = "Bernard Paget"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UOB/Portrait_UOB_Bernard_Paget.png"
+				small = "gfx/interface/ministers/UOB/UOB_Bernard_Paget.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff			
+			idea_token = UOB_Bernard_Paget_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army			
+			idea_token = UOB_Bernard_Paget_carm
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	UOB_George_Sutherland_Aitken = {
+		name = "George Sutherland Aitken"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_George_Sutherland_Aitken.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff			
+			idea_token = UOB_George_Sutherland_Aitken_cos
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army			
+			idea_token = UOB_George_Sutherland_Aitken_carm
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	UOB_Peter_Gerald_Charles_Dickens = {
+		name = "Peter Gerald Charles Dickens"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/UOB/UOB_Peter_Gerald_Charles_Dickens.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy			
+			idea_token = UOB_Peter_Gerald_Charles_Dickens_cnav
+			traits = {
+				chief_of_navy
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	UOB_EH_Cole = {
+		name = "E.H. Cole"
+		portraits = {
+			navy = {
+				small = "gfx/interface/ministers/UOB/UOB_EH_Cole.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_navy			
+			idea_token = UOB_EH_Cole_cnav
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	UOB_John_Adrian_Chamier = {
+		name = "John Adrian Chamier"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_John_Adrian_Chamier.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_John_Adrian_Chamier_cair
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+	UOB_John_Strachey = {
+		name = "John Strachey"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_John_Strachey.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_John_Strachey_cair
+			traits = {
+				chief_of_air_force
+				cair_naval_aviation_doctrine
+			}
+		}
+    advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_John_Strachey_eco_van_hired }
+			}			
+			idea_token = UOB_John_Strachey_eco_van
+			on_add = { set_country_flag = UOB_John_Strachey_eco_van_hired }
+			on_remove = { clr_country_flag = UOB_John_Strachey_eco_van_hired }
+			traits = {
+				economy_minister
+				vanguardist
+				eco_bank_president
+			}
+		}
+	}
+	UOB_Arthur_Harris = {
+		name = "Arthur Harris"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Arthur_Harris.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Arthur_Harris_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	UOB_Hugh_Dowding = {
+		name = "Hugh Dowding"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Hugh_Dowding.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Hugh_Dowding_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	UOB_William_Wedgewood_Benn = {
+		name = "William Wedgewood Benn"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_William_Wedgewood_Benn.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_William_Wedgewood_Benn_cair
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	UOB_Amy_Johnson = {
+		name = "Amy Johnson"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Amy_Johnson.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Amy_Johnson_cair
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	UOB_Arthur_Tedder = {
+		name = "Arthur Tedder"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Arthur_Tedder.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Arthur_Tedder_cair
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+	UOB_Owen_Boyd = {
+		name = "Owen Boyd"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Owen_Boyd.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Owen_Boyd_cair
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+	UOB_Donald_Marendaz = {
+		name = "Donald Marendaz"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Donald_Marendaz.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Donald_Marendaz_cair
+			traits = {
+				chief_of_air_force
+				cair_the_red_baron
+			}
+		}
+	}
+	UOB_Railton_Freeman = {
+		name = "Railton Freeman"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Railton_Freeman.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Railton_Freeman_cair
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	UOB_Williams_Sempill = {
+		name = "Williams Sempill"
+		portraits = {
+			army = {
+				small = "gfx/interface/ministers/UOB/UOB_Williams_Sempill.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_air_force			
+			idea_token = UOB_Williams_Sempill_cair
+			traits = {
+				chief_of_air_force
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+  UOB_Phil_Piratin = {
+		name = "Phil Piratin"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Phil_Piratin.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Phil_Piratin_hog_van_hired }
+			}			
+			idea_token = UOB_Phil_Piratin_hog_van
+			on_add = { set_country_flag = UOB_Phil_Piratin_hog_van_hired }
+			on_remove = { clr_country_flag = UOB_Phil_Piratin_hog_van_hired }
+			traits = {
+				head_of_government
+				vanguardist
+				hog_happy_amateur
+			}
+		}
+	}
+	UOB_William_Joyce = {
+		name = "William Joyce"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_William_Joyce.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_William_Joyce_hog_van_hired }
+			}			
+			idea_token = UOB_William_Joyce_hog_van
+			on_add = { set_country_flag = UOB_William_Joyce_hog_van_hired }
+			on_remove = { clr_country_flag = UOB_William_Joyce_hog_van_hired }
+			traits = {
+				head_of_government
+				vanguardist
+				hog_political_protege
+			}
+		}
+	}
+	UOB_Annie_Kenney = {
+		name = "Annie Kenney"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Annie_Kenney.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Annie_Kenney_hog_col_hired }
+			}			
+			idea_token = UOB_Annie_Kenney_hog_col
+			on_add = { set_country_flag = UOB_Annie_Kenney_hog_col_hired }
+			on_remove = { clr_country_flag = UOB_Annie_Kenney_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_happy_amateur
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Annie_Kenney_eco_col_hired }
+			}			
+			idea_token = UOB_Annie_Kenney_eco_col
+			on_add = { set_country_flag = UOB_Annie_Kenney_eco_col_hired }
+			on_remove = { clr_country_flag = UOB_Annie_Kenney_eco_col_hired }
+			traits = {
+				economy_minister
+				collectivist
+				eco_construction_magnate
+			}
+		}
+	}
+	UOB_Arthur_Horner = {
+		name = "Arthur Horner"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Arthur_Horner.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Arthur_Horner_hog_col_hired }
+			}			
+			idea_token = UOB_Arthur_Horner_hog_col
+			on_add = { set_country_flag = UOB_Arthur_Horner_hog_col_hired }
+			on_remove = { clr_country_flag = UOB_Arthur_Horner_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_political_protege
+			}
+		}
+	}
+	UOB_Harry_Pollitt = {
+		name = "Harry Pollitt"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Harry_Pollitt.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Harry_Pollitt_hog_col_hired }
+			}			
+			idea_token = UOB_Harry_Pollitt_hog_col
+			on_add = { set_country_flag = UOB_Harry_Pollitt_hog_col_hired }
+			on_remove = { clr_country_flag = UOB_Harry_Pollitt_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_ambitious_union_boss
+			}
+		}
+	}
+	UOB_Nicolas_y_Glais = {
+		name = "Nicolas y Glais"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Nicolas_y_Glais.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Nicolas_y_Glais_hog_lib_hired }
+			}			
+			idea_token = UOB_Nicolas_y_Glais_hog_lib
+			on_add = { set_country_flag = UOB_Nicolas_y_Glais_hog_lib_hired }
+			on_remove = { clr_country_flag = UOB_Nicolas_y_Glais_hog_lib_hired }
+			traits = {
+				head_of_government
+				libertarian_socialist
+				hog_silent_workhorse
+			}
+		}
+	}
+	UOB_Leslie_Solley = {
+		name = "Leslie Solley"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Leslie_Solley.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Leslie_Solley_for_van_hired }
+			}			
+			idea_token = UOB_Leslie_Solley_for_van
+			on_add = { set_country_flag = UOB_Leslie_Solley_for_van_hired }
+			on_remove = { clr_country_flag = UOB_Leslie_Solley_for_van_hired }
+			traits = {
+				foreign_minister
+				vanguardist
+				for_iron_fisted_brute
+			}
+		}
+	}
+	UOB_Ian_Mikardo = {
+		name = "Ian Mikardo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Ian_Mikardo.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Ian_Mikardo_for_col_hired }
+			}			
+			idea_token = UOB_Ian_Mikardo_for_col
+			on_add = { set_country_flag = UOB_Ian_Mikardo_for_col_hired }
+			on_remove = { clr_country_flag = UOB_Ian_Mikardo_for_col_hired }
+			traits = {
+				foreign_minister
+				collectivist
+				for_moderate_among_radicals
+			}
+		}
+	}
+	UOB_James_Maxton = {
+		name = "James Maxton"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_James_Maxton.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_James_Maxton_for_col_hired }
+			}			
+			idea_token = UOB_James_Maxton_for_col
+			on_add = { set_country_flag = UOB_James_Maxton_for_col_hired }
+			on_remove = { clr_country_flag = UOB_James_Maxton_for_col_hired }
+			traits = {
+				foreign_minister
+				collectivist
+				for_biased_intellectual
+			}
+		}
+	}
+	UOB_David_Kirkwood = {
+		name = "David Kirkwood"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_David_Kirkwood.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_David_Kirkwood_for_lib_hired }
+			}			
+			idea_token = UOB_David_Kirkwood_for_lib
+			on_add = { set_country_flag = UOB_David_Kirkwood_for_lib_hired }
+			on_remove = { clr_country_flag = UOB_David_Kirkwood_for_lib_hired }
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_moderate_among_radicals
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_David_Kirkwood_eco_lib_hired }
+			}			
+			idea_token = UOB_David_Kirkwood_eco_lib
+			on_add = { set_country_flag = UOB_David_Kirkwood_eco_lib_hired }
+			on_remove = { clr_country_flag = UOB_David_Kirkwood_eco_lib_hired }
+			traits = {
+				economy_minister
+				libertarian_socialist
+				eco_railway_magnate
+			}
+		}
+	}
+	UOB_Ethel_MacDonald = {
+		name = "Ethel MacDonald"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Ethel_MacDonald.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Ethel_MacDonald_for_lib_hired }
+			}			
+			idea_token = UOB_Ethel_MacDonald_for_lib
+			on_add = { set_country_flag = UOB_Ethel_MacDonald_for_lib_hired }
+			on_remove = { clr_country_flag = UOB_Ethel_MacDonald_for_lib_hired }
+			traits = {
+				foreign_minister
+				libertarian_socialist
+				for_ideological_crusader
+			}
+		}
+	}
+	UOB_Alexander_Raven_Thomson = {
+		name = "Alexander Raven Thomson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Alexander_Raven_Thomson.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Alexander_Raven_Thomson_eco_van_hired }
+			}			
+			idea_token = UOB_Alexander_Raven_Thomson_eco_van
+			on_add = { set_country_flag = UOB_Alexander_Raven_Thomson_eco_van_hired }
+			on_remove = { clr_country_flag = UOB_Alexander_Raven_Thomson_eco_van_hired }
+			traits = {
+				economy_minister
+				vanguardist
+				eco_mixed_economy
+			}
+		}
+	}
+	UOB_Henry_Williamson = {
+		name = "Henry Williamson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Henry_Williamson.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Henry_Williamson_sec_van_hired }
+			}			
+			idea_token = UOB_Henry_Williamson_sec_van
+			on_add = { set_country_flag = UOB_Henry_Williamson_sec_van_hired }
+			on_remove = { clr_country_flag = UOB_Henry_Williamson_sec_van_hired }
+			traits = {
+				security_minister
+				vanguardist
+				sec_back_stabber
+			}
+		}
+	}
+	UOB_Mary_Richardson = {
+		name = "Mary Richardson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Mary_Richardson.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Mary_Richardson_sec_van_hired }
+			}			
+			idea_token = UOB_Mary_Richardson_sec_van
+			on_add = { set_country_flag = UOB_Mary_Richardson_sec_van_hired }
+			on_remove = { clr_country_flag = UOB_Mary_Richardson_sec_van_hired }
+			traits = {
+				security_minister
+				vanguardist
+				sec_efficient_sociopath
+			}
+		}
+	}
+	UOB_Lewis_Valentine = {
+		name = "Lewis Valentine"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Lewis_Valentine.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Lewis_Valentine_sec_col_hired }
+			}			
+			idea_token = UOB_Lewis_Valentine_sec_col
+			on_add = { set_country_flag = UOB_Lewis_Valentine_sec_col_hired }
+			on_remove = { clr_country_flag = UOB_Lewis_Valentine_sec_col_hired }
+			traits = {
+				security_minister
+				collectivist
+				sec_silent_lawyer
+			}
+		}
+	}
+	UOB_Margaret_Cole = {
+		name = "Margaret Cole"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Margaret_Cole.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Margaret_Cole_sec_col_hired }
+			}			
+			idea_token = UOB_Margaret_Cole_sec_col
+			on_add = { set_country_flag = UOB_Margaret_Cole_sec_col_hired }
+			on_remove = { clr_country_flag = UOB_Margaret_Cole_sec_col_hired }
+			traits = {
+				security_minister
+				collectivist
+				sec_media_magnate
+			}
+		}
+	}
+	UOB_Harold_Nicolson = {
+		name = "Harold Nicolson"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Harold_Nicolson.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Harold_Nicolson_sec_lib_hired }
+			}			
+			idea_token = UOB_Harold_Nicolson_sec_lib
+			on_add = { set_country_flag = UOB_Harold_Nicolson_sec_lib_hired }
+			on_remove = { clr_country_flag = UOB_Harold_Nicolson_sec_lib_hired }
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_silent_lawyer
+			}
+		}
+	}
+	UOB_Helen_Crawfurd = {
+		name = "Helen Crawfurd"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/UOB/UOB_Helen_Crawfurd.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = UOB_Helen_Crawfurd_sec_lib_hired }
+			}			
+			idea_token = UOB_Helen_Crawfurd_sec_lib
+			on_add = { set_country_flag = UOB_Helen_Crawfurd_sec_lib_hired }
+			on_remove = { clr_country_flag = UOB_Helen_Crawfurd_sec_lib_hired }
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_media_magnate
+			}
+		}
+	}
 }

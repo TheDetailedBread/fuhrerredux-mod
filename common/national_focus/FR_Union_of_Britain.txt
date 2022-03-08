@@ -3,9 +3,6 @@ focus_tree = {
 	
 	continuous_focus_position = { x = 50 y = 2000 }
 	
-	#################################################################
-	# - By SuperMarks & General Melchett, placeholder version for 0.1
-	#################################################################
 	
 	country = {
 		factor = 0
@@ -16,27 +13,28 @@ focus_tree = {
 		}
 	}
 	
-	#############################
+	############################
 	# - INTERNAL POLITICS
-	#############################
+	############################
 	
-	# - ILP
+	# - unionist
 	
 	focus = {	
 		id = UOB_moderate_app
-		icon = GFX_goal_tfv_burn_the_royal_portraits
+		icon = GFX_goal_generic_enforce_labor_regulation
 		available = {
-			always = no
 			custom_trigger_tooltip = { tooltip = unlocked_later  }
+			OR = { has_country_flag = UOB_socialists_win
+			       has_country_flag = UOB_compromise_b }
 		}
 		bypass = {
-			has_country_flag = ilp_victory
+			
 		}
 		mutually_exclusive = { focus = UOB_socialist_nation }
 		mutually_exclusive = { focus = UOB_fires_revo }
 		x = 1
 		y = 0
-		cost = 10
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}
@@ -48,108 +46,129 @@ focus_tree = {
 	
 	focus = {	
 		id = UOB_eco_revival
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_GBR_fate_of_unions
 		prerequisite = { focus = UOB_moderate_app }
 		available = {
 		}
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_eco_revival"
-			add_ideas = UOB_eco_rev
+	add_ideas = UOB_bnu
 		}
 	}
 	
 	focus = {	
 		id = UOB_eng_lives
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_socialist_constitution
 		prerequisite = { focus = UOB_eco_revival }
 		available = {
 		}
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_eng_lives"
-			swap_ideas = { remove_idea = UOB_eco_rev add_idea = UOB_eco_rev2 }
+			add_political_power = -100
+			add_stability = 0.1
 		}
 	}
 	
 	focus = {	
 		id = UOB_marches_on
-		icon = GFX_goal_continuous_suppression
+		icon = GFX_goal_government_icon
 		prerequisite = { focus = UOB_eng_lives }
 		available = {
 		}
 		x = 0
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_marches_on"
-			swap_ideas = { remove_idea = UOB_eco_rev2 add_idea = UOB_eco_rev3 }
+			add_war_support = 0.05
+			
+			121 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			122 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+						add_extra_state_shared_building_slots = 1
+				}
+			}
+				
 		}
 	}
 	
 	focus = {	
 		id = UOB_diss_aristo
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		icon = GFX_goal_pile_of_money
 		prerequisite = { focus = UOB_moderate_app }
 		available = {
 		}
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_diss_aristo"
-			add_political_power = 100
+			add_ideas = UOB_artistocrat_schmoney
 		}
 	}
 	
 	focus = {	
 		id = UOB_mob_union
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_goal_further_oil
 		prerequisite = { focus = UOB_diss_aristo }
 		available = {
 		}
 		x = 2
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_mob_union"
-			add_ideas = UOB_mob_unions
+			add_ideas = UOB_magic_oil
 		}
 	}
 	
 	focus = {	
 		id = UOB_socialist_freedom
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_libertarian_socialism_greenleaf
 		prerequisite = { focus = UOB_mob_union }
 		available = {
 		}
 		x = 2
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -162,7 +181,7 @@ focus_tree = {
 	
 	focus = {	
 		id = UOB_liberty_britons
-		icon = GFX_goal_continuous_boost_freedom
+		icon = GFX_goal_VIN_New_Colossus
 		prerequisite = { focus = UOB_socialist_freedom }
 		prerequisite = { focus = UOB_marches_on }
 		available = {
@@ -177,41 +196,43 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_liberty_britons"
 			add_political_power = 150
-			add_popularity = { ideology = libertarian_socialist popularity = 0.1 }
+			add_popularity = { ideology = collectivist popularity = 0.1 }
 			remove_ideas = UOB_revo_recov
 		}
 	}
 	
 	
-	# - BSP
+	# - natsoc
 	
 	focus = {	
 		id = UOB_socialist_nation
-		icon = GFX_goal_support_communism
+		icon = GFX_goal_red_star_green_wreath
 		available = {
-			always = no
 			custom_trigger_tooltip = { tooltip = unlocked_later }
+				OR = { has_country_flag = UOB_natcol has_country_flag = UOB_compromise_a
+				 }
 		}
 		bypass = {
-			has_country_flag = bsp_victory
+		
 		}
 		mutually_exclusive = { focus = UOB_moderate_app }
 		mutually_exclusive = { focus = UOB_fires_revo }
 		x = 6
 		y = 0
-		cost = 10
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_socialist_nation"
+			
 		}
 	}
 	
 	focus = {	
 		id = UOB_no_gods
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_atheism
 		prerequisite = { 
 			focus = UOB_socialist_nation
 		}
@@ -219,21 +240,22 @@ focus_tree = {
 		}
 		x = 5
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_no_gods"
-			add_popularity = { ideology = collectivist popularity = 0.05 }
+			add_popularity = { ideology = vanguardist popularity = 0.05 }
 			add_ideas = UOB_enforced_atheism
+			add_stability = -0.10
 		}
 	}
 	
 	focus = {	
 		id = UOB_no_masters
-		icon = GFX_focus_rom_abdicate
+		icon = GFX_goal_further_oil
 		prerequisite = { 
 			focus = UOB_socialist_nation
 		}
@@ -241,80 +263,86 @@ focus_tree = {
 		}
 		x = 7
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_no_masters"
-			add_political_power = 100
+			add_ideas = UOB_magic_oil
 		}
 	}
 	
 	focus = {	
 		id = UOB_rebuild_britain
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_capitalist_system
 		prerequisite = { focus = UOB_no_gods }
 		prerequisite = { focus = UOB_no_masters }
 		available = {
 		}
 		x = 4
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_rebuild_britain"
-			add_ideas = UOB_re_britain
+			add_ideas = UOB_gibs
 		}
 	}
 	
 	focus = {	
 		id = UOB_control_eco
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = UOB_no_gods }
 		prerequisite = { focus = UOB_no_masters }
 		available = {
 		}
 		x = 6
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_control_eco"
-			add_ideas = UOB_exert_cont
+			add_command_power = 50
+			add_political_power = 150
+		        every_unit_leader = { add_logistics = 1 }
 		}
 	}
 	
 	focus = {	
 		id = UOB_self_reliance
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_secret_police
 		prerequisite = { focus = UOB_no_gods }
 		prerequisite = { focus = UOB_no_masters }
 		available = {
 		}
 		x = 8
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_self_reliance"
-			add_ideas = UOB_eco_sr
+			add_ideas = UOB_survaillence_time
+						country_event = {
+				id = uob.501
+				days = 1
+			}
 		}
 	}
 	
 	focus = {	
 		id = UOB_emergency_measures
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_RAJ_Establish_The_Peoples_Police
 		prerequisite = { focus = UOB_rebuild_britain }
 		prerequisite = { focus = UOB_control_eco }
 		prerequisite = { focus = UOB_self_reliance }
@@ -322,7 +350,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -330,13 +358,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_emergency_measures"
 			add_political_power = 100
-			add_popularity = { ideology = collectivist popularity = 0.05 }
+			add_popularity = { ideology = vanguardist popularity = 0.05 }
+			add_manpower = 100000
 		}
 	}
 	
 	focus = {	
 		id = UOB_new_britain
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_SOV_Industrialization
 		prerequisite = { 
 			focus = UOB_emergency_measures
 		}
@@ -351,28 +380,28 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_new_britain"
-			add_popularity = { ideology = collectivist popularity = 0.05 }
+			add_popularity = { ideology = vanguardist popularity = 0.05 }
 			remove_ideas = UOB_revo_recov
 		}
 	}
 	
-	# - CPGB
+	# - rev
 	
 	focus = {	
 		id = UOB_fires_revo
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_goal_goal_generic_workers_democracy
 		available = {
-			always = no
 			custom_trigger_tooltip = { tooltip = unlocked_later }
+			has_country_flag = UOB_lobert_victory
 		}
 		bypass = {
-			has_country_flag = cpgb_victory
+		
 		}
 		mutually_exclusive = { focus = UOB_moderate_app }
 		mutually_exclusive = { focus = UOB_socialist_nation }
 		x = 11
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -384,7 +413,7 @@ focus_tree = {
 	
 	focus = {	
 		id = UOB_establish_bnu
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_goal_purge_opposition
 		prerequisite = { 
 			focus = UOB_fires_revo
 		}
@@ -392,20 +421,25 @@ focus_tree = {
 		}
 		x = 9
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_establish_bnu"
-			add_ideas = UOB_bnu
+			add_timed_idea = { idea = UOB_atrocities days = 120 }
+			add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
+			country_event = {
+				id = uob.500
+				days = 1
+			}
 		}
 	}
 	
 	focus = {	
 		id = UOB_mob_workers
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_goal_syndicalist_workers
 		prerequisite = { 
 			focus = UOB_fires_revo
 		}
@@ -413,14 +447,18 @@ focus_tree = {
 		}
 		x = 11
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_mob_workers"
-			add_ideas = UOB_mob_work
+			add_ideas = UOB_mobilisedthefellas
+			country_event = {
+				id = uob.503
+				days = 1
+			}
 		}
 	}
 	
@@ -434,40 +472,18 @@ focus_tree = {
 		}
 		x = 13
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_build_britain"
-			random_owned_state = {
+		random_owned_state = {
 				limit = {
 					is_core_of = UOB
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -487,20 +503,20 @@ focus_tree = {
 		}
 		x = 10
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_defend_revo"
-			add_political_power = 100
+			add_ideas = UOB_defrev
 		}
 	}
 	
 	focus = {	
 		id = UOB_work_policies
-		icon = GFX_goal_generic_production2
+		icon = GFX_goal_further_oil
 		prerequisite = { focus = UOB_establish_bnu }
 		prerequisite = { focus = UOB_mob_workers }
 		prerequisite = { focus = UOB_build_britain }
@@ -508,110 +524,73 @@ focus_tree = {
 		}
 		x = 12
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_work_policies"
-			add_ideas = UOB_soc_wpol
+			add_ideas = UOB_magic_oil
 		}
 	}
 	
 	focus = {	
 		id = UOB_export_revo
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_generic_positive_trade_relations_gold
 		prerequisite = { focus = UOB_defend_revo }
 		prerequisite = { focus = UOB_work_policies }
 		available = {
 		}
 		x = 10
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_export_revo"
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			add_ideas = UOB_sprevoA
+	
+
 		}
 	}
 	
 	focus = {	
 		id = UOB_war_prep
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = UOB_defend_revo }
 		prerequisite = { focus = UOB_work_policies }
 		available = {
 		}
 		x = 12
 		y = 3
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_war_prep"
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
+		120 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = infrastructure
-					level = 2
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = UOB
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+					country_event = {
+				id = uob.502
+				days = 1
 			}
 		}
 	}
 	
 	focus = {	
 		id = UOB_perpetual_revo
-		icon = GFX_goal_tfv_sever_ties_with_uk
+		icon = GFX_goal_VIN_New_Militarism
 		prerequisite = { focus = UOB_export_revo }
 		prerequisite = { focus = UOB_war_prep }
 		available = {
@@ -625,8 +604,10 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_perpetual_revo"
-			add_stability = -0.05
-			add_political_power = 200
+			add_stability = -0.1
+			add_war_support = 0.2
+			add_political_power = 100
+			add_popularity = { ideology = libertarian_socialist popularity = 0.1 }
 			remove_ideas = UOB_revo_recov
 		}
 	}
@@ -635,19 +616,181 @@ focus_tree = {
 	# - Foreign Policy
 	#############################
 	
+#### isolationist
+
+
 	focus = {	
-		id = UOB_spread_revo
-		icon = GFX_goal_generic_occupy_start_war
+		id = UOB_britain_alone
+		icon = GFX_goal_generic_defence
 		prerequisite = { 
-			focus = UOB_liberty_britons
-			focus = UOB_new_britain
-			focus = UOB_perpetual_revo
+
+		}
+		available = {
+NOT = { has_idea = UOB_revo_recov } 
+has_country_flag = UOB_knockoff_stalin
+
+		}
+		mutually_exclusive = { focus = UOB_spread_revo }
+		x = 11
+		y = 6
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_britain_alone"
+			add_ideas = UOB_brexitmeansbrexit
+		}
+	}
+
+	focus = {	
+		id = UOB_notrade
+		icon = GFX_goal_money_chains
+		prerequisite = { 
+		focus = UOB_britain_alone
+		}
+		available = {
+
+		}
+		x = 12
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_notrade"
+			add_stability = 0.2
+			add_ideas = command_economy
+			every_country = {
+				reverse_add_opinion_modifier = {
+					target = UOB
+					modifier = embargo
+				}
+			}
+			every_country = {
+				add_opinion_modifier = {
+					target = UOB
+					modifier = embargo
+				}
+			}
+		}
+	}
+
+	focus = {	
+		id = UOB_reclaim_irelandtwo
+		icon = GFX_goal_generic_major_war
+		prerequisite = { 
+			focus = UOB_britain_alone
 		}
 		available = {
 		}
+		x = 10
+		y = 7
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_reclaim_irelandtwo"
+			declare_war_on = {
+				target = IRE
+				type = annex_everything
+			}
+			add_state_claim = 135
+			add_state_claim = 134
+			add_state_claim = 815
+			add_state_claim = 816
+			add_state_claim = 113
+			unlock_decision_tooltip = UOB_IREint
+		}
+	}
+
+	focus = {	
+		id = UOB_navalbuild
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { 
+			focus = UOB_britain_alone
+		}
+		available = {
+		}
+		x = 11
+		y = 8
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_navalbuild"
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+
+#### revolutionary
+
+	focus = {	
+		id = UOB_spread_revo
+		icon = GFX_goal_FRA_french_revanchism
+		prerequisite = { 
+
+		}
+		available = {
+NOT = { has_idea = UOB_revo_recov } 
+OR = { 
+has_country_flag = UOB_world_rev
+has_country_flag = UOB_euro_rev }
+		}
+		mutually_exclusive = { focus = UOB_britain_alone }
 		x = 4
 		y = 6
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -655,45 +798,29 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_spread_revo"
 			add_ideas = UOB_sprevo
+			create_faction = "Fourth Internationale"
 		}
 	}
-	
-	focus = {	
-		id = UOB_join_three
-		icon = GFX_goal_support_communism
-		prerequisite = { 
-			focus = UOB_liberty_britons
-			focus = UOB_new_britain
-			focus = UOB_perpetual_revo
-		}
-		available = {
-		}
-		x = 8
-		y = 6
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus UOB_join_three"
-			SOV = { add_to_faction = UOB }
-		}
-	}
-	
+
 	focus = {	
 		id = UOB_reclaim_ireland
 		icon = GFX_goal_generic_major_war
 		prerequisite = { 
 			focus = UOB_spread_revo
-			focus = UOB_join_three
+		}
+		bypass = {
+			OR = {
+				has_war_with = IRE
+				IRE = { exists = no }
+				IRE = { is_puppet_of = UOB }
+			}
 		}
 		available = {
 		}
 		mutually_exclusive = { focus = UOB_socialist_ireland }
-		x = 4
+		x = 1
 		y = 7
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -704,34 +831,74 @@ focus_tree = {
 				target = IRE
 				type = annex_everything
 			}
+			add_state_claim = 135
+			add_state_claim = 134
+			add_state_claim = 815
+			add_state_claim = 816
+			add_state_claim = 113
 		}
 	}
 	
 	focus = {	
 		id = UOB_bring_france
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_attack_france
 		prerequisite = { 
-			focus = UOB_spread_revo
-			focus = UOB_join_three
+			focus = UOB_reclaim_ireland
+			focus = UOB_socialist_ireland
+		}
+		bypass = {
+			OR = {
+				has_war_with = FRA
+				FRA = { exists = no }
+				FRA = { is_puppet_of = UOB }
+				FRA = {
+					NOT = {
+						owns_state = 16
+					}
+				}
+			}
 		}
 		available = {
 		}
-		x = 2
-		y = 7
-		cost = 10
+		x = 0
+		y = 8
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_bring_france"
-			create_wargoal = { type = annex_everything target = FRA }
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
 		}
 	}
-	
+
 	focus = {	
-		id = UOB_strike_beneleux
-		icon = GFX_goal_generic_political_pressure
+		id = UOB_intervene_spain
+		icon = GFX_focus_spr_maintain_the_republic
+		bypass = { 
+			OR = { 
+				SPF = { is_in_faction_with = BEX }
+				SPM = { is_in_faction_with = BEX }
+				SPA = { is_in_faction_with = BEX }
+				SPR = { is_in_faction_with = BEX }
+			}
+		}
 		prerequisite = { 
 			focus = UOB_reclaim_ireland
 			focus = UOB_socialist_ireland
@@ -740,104 +907,410 @@ focus_tree = {
 		}
 		x = 4
 		y = 8
-		cost = 10
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
 		}
 		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus UOB_strike_beneleux"
-			create_wargoal = { type = annex_everything target = HOL }
-			create_wargoal = { type = annex_everything target = BEL }
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_intervene_spain"
+			if = {
+				limit = {
+					SPA = { exists = yes }
+				}
+				SPA = { country_event = uob.800 }
+			}
+			declare_war_on = {
+				target = SPF
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = SPR
+				type = annex_everything
+			}
+				declare_war_on = {
+				target = SPM
+				type = annex_everything
+			}
+				
 		}
 	}
 	
 	focus = {	
-		id = UOB_socialist_ireland
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { 
-			focus = UOB_spread_revo
-			focus = UOB_join_three
-		}
-		available = {
-		}
-		mutually_exclusive = { focus = UOB_reclaim_ireland }
-		x = 8
-		y = 7
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus UOB_socialist_ireland"
-			create_wargoal = { type = annex_everything target = IRE }
-		}
-	}
-	
-	focus = {	
-		id = UOB_seize_nat
-		icon = GFX_goal_generic_territory_or_war
+		id = UOB_strike_beneleux
+		icon = GFX_goal_BEL_pacification_of_ghent
 		prerequisite = { 
 			focus = UOB_reclaim_ireland
 			focus = UOB_socialist_ireland
 		}
 		available = {
 		}
-		x = 8
-		y = 8
-		cost = 10
-		ai_will_do = {
-			factor = 1
+		bypass = {
+			OR = {
+				has_war_with = BEL
+				BEL = { exists = no }
+				BEL = { is_puppet_of = UOB }
+			}
+			OR = {
+				has_war_with = HOL
+				HOL = { exists = no }
+				HOL = { is_puppet_of = UOB }
+			}
 		}
-		
+		x = 2
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus UOB_seize_nat"
-			create_wargoal = { type = annex_everything target = DEN }
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_strike_beneleux"
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BEL
+				type = annex_everything
+			}
 		}
 	}
 	
 	focus = {	
-		id = UOB_crush_valkism
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		id = UOB_socialist_ireland
+		icon = GFX_goal_revolution_tools
 		prerequisite = { 
 			focus = UOB_spread_revo
-			focus = UOB_join_three
 		}
 		available = {
 		}
-		x = 10
+		bypass = {
+			OR = {
+				has_war_with = IRE
+				IRE = { exists = no }
+				IRE = { is_puppet_of = UOB }
+			}
+		}
+		mutually_exclusive = { focus = UOB_reclaim_ireland }
+		x = 7
 		y = 7
-		cost = 10
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_socialist_ireland"
+			declare_war_on = {
+				target = IRE
+				type = annex_everything
+			}
+			unlock_decision_tooltip = UOB_IREONE
+			unlock_decision_tooltip = UOB_IRETWO
+		}
+	}
+	
+
+	
+	focus = {	
+		id = UOB_crush_valkism
+		icon = GFX_goal_generic_attack_german_reich
+		prerequisite = { 
+			focus = UOB_reclaim_ireland
+			focus = UOB_socialist_ireland
+		}
+		available = {
+		}
+		bypass = {
+			OR = {
+				has_war_with = GER
+				GER = { exists = no }
+				GER = { is_puppet_of = UOB }
+			}
+		}
+		x = 8
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+		
+		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_crush_valkism"
-			create_wargoal = { type = annex_everything target = GER }
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
 		}
 	}
 	
 	focus = {	
 		id = UOB_secure_nsea
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_NOR_nordic_council
 		prerequisite = { 
-			focus = UOB_spread_revo
-			focus = UOB_join_three
+			focus = UOB_reclaim_ireland
+			focus = UOB_socialist_ireland
 		}
 		available = {
 		}
+		bypass = {
+			OR = {
+				has_war_with = DEN
+				DEN = { exists = no }
+				DEN = { is_puppet_of = UOB }
+			}
+			OR = {
+				NOR = { is_in_faction_with = UOB }
+				NOR = { is_puppet_of = UOB }	
+				NOR = { exists = no }
+			}
+		}
 		x = 6
-		y = 9
-		cost = 10
+		y = 8
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 20
+	
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_secure_nsea"
-			create_wargoal = { type = annex_everything target = NOR }
+			IF = {
+				limit = {
+					DEN = {	owns_state = 100 }
+					NOT = { has_war_with = DEN }
+					NOT = { DEN = { is_puppet_of = UOB } }
+				}
+				DEN = { country_event = uob.16 }
+			}
+			IF = {
+				limit = {
+					OR = { 
+						NOR = { has_government = vanguardist } 
+						NOR = { has_government = libertarian_socialist } 
+						NOR = { has_government = collectivist }				
+					}
+					NOR = { NOT = { is_in_faction_with = UOB } }
+					NOR = { NOT = { is_puppet_of = UOB } }
+					NOR = { exists = yes }
+				}
+				NOR = { country_event = uob.803 }
+			}
+		}
+	}
+
+	focus = {	
+		id = UOB_european_rev
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { 
+			focus = UOB_secure_nsea
+		}
+		prerequisite = { 
+			focus = UOB_crush_valkism
+		}
+		prerequisite = { 
+			focus = UOB_strike_beneleux
+		}
+		prerequisite = { 
+			focus = UOB_intervene_spain
+		}
+		prerequisite = { 
+			focus = UOB_bring_france
+		}
+		available = { has_war = no
+		}
+		x = 3
+		y = 9
+		cost = 8
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_european_rev"
+ 			unlock_decision_tooltip = UOB_LOCE
+		}
+	}
+
+
+	focus = {	
+		id = UOB_destroy_exiles
+		icon = GFX_focus_eng_decolonization
+		prerequisite = { 
+			focus = UOB_secure_nsea
+		}
+		prerequisite = { 
+			focus = UOB_crush_valkism
+		}
+		prerequisite = { 
+			focus = UOB_strike_beneleux
+		}
+		prerequisite = { 
+			focus = UOB_intervene_spain
+		}
+		prerequisite = { 
+			focus = UOB_bring_france
+		}
+		bypass = {
+			OR = {
+				has_war_with = BEX
+				BEX = { exists = no }
+				BEX = { is_puppet_of = UOB }
+			}
+		}
+
+		available = { has_war = no
+		}
+		x = 5
+		y = 9
+		cost = 4
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			}
+			
+
+			modifier = {
+				factor = 100
+				FROM = { alliance_strength_ratio > 1.5 }	
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_destroy_exiles"
+			declare_war_on = {
+				target = BEX
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {	
+		id = UOB_sov_split
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { 
+			focus = UOB_destroy_exiles
+		}
+		prerequisite = { 
+			focus = UOB_european_rev
+			
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				SOV = { exists = no }
+				SOV = { is_puppet_of = UOB }
+			}
+		}
+
+		available = {
+			has_country_flag = UOB_world_rev
+			has_war = no
+		}
+		x = 4
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+			
+		}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_sov_split"
+			country_event = uob.22
+		}
+	}
+
+focus = {	
+		id = UOB_global_revolution
+		icon = GFX_focus_eng_global_defense
+		prerequisite = { 
+			focus = UOB_sov_split
+		}
+
+
+
+		available = {
+			has_country_flag = UOB_world_rev
+			has_war = no
+		}
+		x = 4
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				UOB = {
+					has_war = yes
+				}
+	
+		}
+		
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_global_revolution"
+			unlock_decision_tooltip = UOB_every_country
+			unlock_decision_tooltip = UOB_every_country_alliance
 		}
 	}
 	
@@ -847,12 +1320,18 @@ focus_tree = {
 	
 	focus = {	
 		id = UOB_begin_purge
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_goal_UOB_army
 		available = {
+		NOT = { has_idea = UOB_revo_recov }
+		OR = {
+		has_country_flag = UOB_centralised_mil
+		has_country_flag = UOB_political_military
+		has_country_flag = UOB_doctrine_of_autonomy
+		}
 		}
 		x = 23
 		y = 0
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -860,65 +1339,72 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_begin_purge"
 			add_political_power = -100
-			add_stability = 0.1
+			add_stability = 0.05
+			army_experience = 10
+			country_event = {
+				id = uob.504
+				days = 1
+			}
 		}
 	}
 	
+
+### natsock mil
+
 	focus = {	
 		id = UOB_union_army
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_commune_politics
 		prerequisite = { focus = UOB_begin_purge }
-		available = {
+		available = { has_country_flag = UOB_centralised_mil
 		}
 		x = 17
 		y = 1
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_union_army"
-			army_experience = 25
+			army_experience = 50
 		}
 	}
 	
 	focus = {	
 		id = UOB_shells_soldiers
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = UOB_union_army }
 		available = {
 		}
 		x = 15
 		y = 2
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_shells_soldiers"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = artillery }
-			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 1000 producer = UOB }
+			add_ideas = UOB_bureaucraticmil
 		}
 	}
 	
 	focus = {	
 		id = UOB_modern_army
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_skull_fortification
 		prerequisite = { focus = UOB_shells_soldiers }
 		available = {
 		}
 		x = 15
 		y = 3
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_modern_army"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = motorized_equipment }
+		add_ideas = UOB_noretreat
 		}
 	}
 	
@@ -930,23 +1416,32 @@ focus_tree = {
 		}
 		x = 17
 		y = 2
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_strat_plan"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+							add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
 		}
 	}
 	
 	focus = {	
 		id = UOB_revo_guard
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_goal_intergrate_the_militia
 		prerequisite = { focus = UOB_strat_plan }
 		prerequisite = { 
 			focus = UOB_modern_army
+
+		}
+		prerequisite = { 
+	
 			focus = UOB_fist_union
 		}
 		available = {
@@ -960,6 +1455,8 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_revo_guard"
+			remove_ideas = ENG_war_fatigue
+			add_ideas = UOB_revguard
 		}
 	}
 	
@@ -971,7 +1468,7 @@ focus_tree = {
 		}
 		x = 19
 		y = 2
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -990,7 +1487,7 @@ focus_tree = {
 		}
 		x = 19
 		y = 3
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -1001,14 +1498,863 @@ focus_tree = {
 		}
 	}
 	
+
+
+### UNIONIST POLICY
+
 	focus = {	
-		id = UOB_union_air
-		icon = GFX_goal_generic_build_airforce
+		id = UOB_political_mil
+		icon = GFX_goal_constitutional_guarantees
 		prerequisite = { focus = UOB_begin_purge }
-		available = {
+		available = { has_country_flag = UOB_political_military
 		}
 		x = 23
 		y = 1
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_political_mil"
+			army_experience = 50
+		}
+	}
+
+	
+	focus = {	
+		id = UOB_political_commisars
+		icon = GFX_goal_UOB_officer_corps
+		prerequisite = { focus = UOB_political_mil }
+		available = {
+		}
+		x = 21
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_political_commisars"
+			add_ideas = UOB_commissars
+		}
+	}
+	
+	focus = {	
+		id = UOB_civilian_oversight
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = UOB_political_commisars }
+		available = {
+		}
+		x = 21
+		y = 3
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_civilian_oversight"
+		add_ideas = UOB_civ_oversight
+	}
+	}
+
+	focus = {	
+		id = UOB_superior_fp
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = UOB_political_mil }
+		available = {
+		}
+		x = 23
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_superior_fp"
+				add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	focus = {	
+		id = UOB_reinvigorated_command
+		icon = GFX_goal_brain
+		prerequisite = { focus = UOB_superior_fp }
+		prerequisite = { 
+			focus = UOB_civilian_oversight
+
+		}
+			prerequisite = { 		focus = UOB_arty_rs
+		}
+		available = {
+		}
+		x = 23
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_reinvigorated_command"
+						remove_ideas = ENG_war_fatigue
+						add_ideas = UOB_command
+		}
+	}
+	
+	focus = {	
+		id = UOB_modern_weapons
+		icon = GFX_goal_SOV_rifles_guns_cannons
+		prerequisite = { focus = UOB_political_mil }
+		available = {
+		}
+		x = 25
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_modern_weapons"
+				add_tech_bonus = { bonus = 0.5 uses = 3 category = infantry_weapons }
+		}
+	}
+	
+	focus = {	
+		id = UOB_arty_rs
+		icon = GFX_goal_artillery
+		prerequisite = { focus = UOB_modern_weapons }
+		available = {
+		}
+		x = 25
+		y = 3
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_arty_rs"
+				add_tech_bonus = { bonus = 0.5 uses = 2 category = artillery }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 50 producer = UOB }
+		}
+	}
+	
+### REV ARMY POLICY
+
+	focus = {	
+		id = UOB_revolutionary_doctrines
+		icon = GFX_goal_RUS_Markov_plan
+		prerequisite = { focus = UOB_begin_purge }
+		available = { has_country_flag = UOB_doctrine_of_autonomy
+		}
+		x = 29
+		y = 1
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_revolutionary_doctrines"
+			army_experience = 50
+		}
+	}
+	
+	focus = {	
+		id = UOB_doctrine_of_autonomie
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = UOB_revolutionary_doctrines }
+		available = {
+		}
+		x = 27
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_doctrine_of_autonomie"
+			add_ideas = UOB_autonomous_mil
+		}
+	}
+	
+	focus = {	
+		id = UOB_cult_of_offensive
+		icon = GFX_goal_offensive_army
+		prerequisite = { focus = UOB_doctrine_of_autonomie }
+		available = {
+		}
+		x = 27
+		y = 3
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_cult_of_offensive"
+		add_ideas = UOB_offensivespirit
+		}
+	}
+	
+	focus = {	
+		id = UOB_doctrine_mw
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = UOB_revolutionary_doctrines }
+		available = {
+		}
+		x = 29
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_doctrine_mw"
+						add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	
+	focus = {	
+		id = UOB_a_armoured_force
+		icon = GFX_goal_generic_army_tanks2
+		prerequisite = { 
+			focus = UOB_cult_of_offensive
+
+			
+		}
+			prerequisite = { 					focus = UOB_doctrine_mw
+		}
+			prerequisite = { 		focus = UOB_full_motorisation
+		}
+		available = {
+		}
+		x = 29
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_a_armoured_force"
+			remove_ideas = ENG_war_fatigue
+			add_ideas = UOB_armouredforce
+		}
+	}
+	
+	focus = {	
+		id = UOB_tank_research
+		icon = GFX_goal_light_tanks
+		prerequisite = { focus = UOB_revolutionary_doctrines }
+		available = {
+		}
+		x = 31
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_tank_research"
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+		}
+	}
+	
+	focus = {	
+		id = UOB_full_motorisation
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = UOB_tank_research }
+		available = {
+		}
+		x = 31
+		y = 3
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_full_motorisation"
+		add_ideas = UOB_motorisedforce
+			add_tech_bonus = { bonus = 1.0 uses = 1 category = motorized_equipment }
+		}
+	}
+
+
+	#############################
+	# - Union Economy
+	#############################
+	
+	focus = {	
+		id = UOB_economic_policy
+		icon = GFX_goal_uobritain
+		available = {
+		NOT = { has_idea = UOB_revo_recov }
+		OR = {
+		has_country_flag = UOB_collectivist_econ
+		has_country_flag = UOB_socialist_econ
+		has_country_flag = UOB_lolbert_econ
+		}
+		}
+		x = 19
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_economic_policy"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+
+### natsock econ
+
+	focus = {	
+		id = UOB_economic_nationalism
+		icon = GFX_goal_COS_Ferrer_Coup
+		prerequisite = { focus = UOB_economic_policy }
+		available = { has_country_flag = UOB_collectivist_econ
+		}
+		x = 15
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_economic_nationalism"
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {	
+		id = UOB_build_forts
+		icon = GFX_goal_skull_fortification
+		prerequisite = { focus = UOB_economic_nationalism }
+		available = {
+		}
+		x = 14
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_build_forts"
+			add_ideas = UOB_hoxha_moment
+		}
+	}
+	
+	focus = {	
+		id = UOB_state_economy
+		icon = GFX_goal_engineers
+		prerequisite = { focus = UOB_build_forts }
+		available = {
+		}
+		x = 14
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_state_economy"
+		add_ideas = UOB_exert_cont
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {	
+		id = UOB_rebuilt_britain
+		icon = GFX_goal_state_economy
+		prerequisite = { focus = UOB_state_economy }
+		prerequisite = { focus = UOB_expand_mining
+		}
+		available = {
+		}
+		x = 15
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_rebuilt_britain"
+			add_ideas = UOB_re_britain
+		}
+	}
+	
+	focus = {	
+		id = UOB_new_corn_laws
+		icon = GFX_goal_RAJ_agricultural_aid
+		prerequisite = { focus = UOB_economic_nationalism }
+		available = {
+		}
+		x = 16
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_new_corn_laws"
+			add_ideas = UOB_eco_sr
+		}
+	}
+	
+	focus = {	
+		id = UOB_expand_mining
+		icon = GFX_all_resource
+		prerequisite = { focus = UOB_new_corn_laws }
+		available = {
+		}
+		x = 16
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_expand_mining"
+			121 = { add_resource = {
+    type = oil
+    amount = 11
+} 
+}
+
+			129 = { add_resource = {
+    type = steel
+    amount = 34
+} 
+}
+			131 = { add_resource = {
+    type = aluminium
+    amount = 21
+} 
+}
+			136 = { add_resource = {
+    type = tungsten
+    amount = 13
+} 
+}
+			120 = { add_resource = {
+    type = chromium
+    amount = 7
+} 
+}
+		}
+	}
+	
+
+
+### UNIONIST economy
+
+	focus = {	
+		id = UOB_economy_for_unions
+		icon = GFX_goal_RAJ_India_Worker_Rights
+		prerequisite = { focus = UOB_economic_policy }
+		available = { has_country_flag = UOB_socialist_econ
+		}
+		x = 19
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_economy_for_unions"
+			add_political_power = 75
+		}
+	}
+
+	
+	focus = {	
+		id = UOB_revival_b
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = UOB_economy_for_unions }
+		available = {
+		}
+		x = 18
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_revival_b"
+			add_ideas = UOB_eco_rev
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = UOB_revival_a
+		icon = GFX_Hand_reaching_for_money
+		prerequisite = { focus = UOB_revival_b }
+		available = {
+		}
+		x = 18
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_revival_a"
+		swap_ideas = { remove_idea = UOB_eco_rev add_idea = UOB_eco_rev2 }
+	}
+	}
+
+	
+	focus = {	
+		id = UOB_mobilised_unions
+		icon = GFX_goal_army_guy_2
+		prerequisite = { focus = UOB_revival_a }
+		prerequisite = { 
+			focus = UOB_infrestructure_b
+		}
+		available = {
+		}
+		x = 19
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_reinvigorated_command"
+			swap_ideas = { remove_idea = UOB_eco_rev2 add_idea = UOB_eco_rev3 }
+				add_ideas = UOB_mob_unions		
+		}
+	}
+	
+	focus = {	
+		id = UOB_infrestructure_a
+		icon = GFX_goal_Fix_Shitty_Rails
+		prerequisite = { focus = UOB_economy_for_unions }
+		available = {
+		}
+		x = 20
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_infrestructure_a"
+			123 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}	
+		122 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}	
+		131 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 1
+					instant_build = yes
+				}
+			}
+		120 = {
+			add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = UOB_infrestructure_b
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = UOB_infrestructure_a }
+		available = {
+		}
+		x = 20
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_infrestructure_b"
+			unlock_decision_tooltip = UOB_south_england
+			unlock_decision_tooltip = UOB_central_britain
+			unlock_decision_tooltip = UOB_norf_briton
+		}
+	}
+	
+### REV econ
+
+	focus = {	
+		id = UOB_liberated_economy
+		icon = GFX_goal_model_cities
+		prerequisite = { focus = UOB_economic_policy }
+		available = { has_country_flag = UOB_lolbert_econ
+		}
+		x = 23
+		y = 7
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_liberated_economy"
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {	
+		id = UOB_pro_worker_policy
+		icon = GFX_goal_tblra_union_agreement
+		prerequisite = { focus = UOB_liberated_economy }
+		available = {
+		}
+		x = 22
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_pro_worker_policy"
+			add_ideas = UOB_soc_wpol
+		}
+	}
+	
+	focus = {	
+		id = UOB_free_communes
+		icon = GFX_goal_RAJ_Decentralized_Land_Reform
+		prerequisite = { focus = UOB_pro_worker_policy }
+		available = {
+		}
+		x = 22
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_free_communes"
+		add_ideas = UOB_communes
+		}
+	}
+	
+	
+	
+	focus = {	
+		id = UOB_a_mobilised_proletariat
+		icon = GFX_goal_Focus_Military_Mobilisation
+		prerequisite = { 
+			focus = UOB_free_communes
+
+			
+		}
+			prerequisite = { 					focus = UOB_dockpilled
+		}
+		available = {
+		}
+		x = 23
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_a_armoured_force"
+			add_ideas = UOB_mob_work
+		}
+	}
+	
+	focus = {	
+		id = UOB_military_factories_gooo
+		icon = GFX_goal_red_eagle
+		prerequisite = { focus = UOB_liberated_economy }
+		available = {
+		}
+		x = 24
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_military_factories_gooo"
+							random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = UOB_dockpilled
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = UOB_military_factories_gooo }
+		available = {
+		}
+		x = 24
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus UOB_dockpilled"
+				random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = UOB
+						is_on_continent = europe
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+
+
+### AIR AND NAVY
+
+
+	focus = {	
+		id = UOB_union_air
+		icon = GFX_goal_UOB_airforce
+		prerequisite = { }
+		available = {
+				NOT = { has_idea = UOB_revo_recov } 
+		OR = { has_country_flag = UOB_centralised_mil
+				has_country_flag = UOB_doctrine_of_autonomy
+				has_country_flag = UOB_political_military }
+		}
+		x = 36
+		y = 0
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1016,7 +2362,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_union_air"
-			air_experience = 50
+			air_experience = 25
 		}
 	}
 	
@@ -1026,8 +2372,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_union_air }
 		available = {
 		}
-		x = 21
-		y = 2
+		x = 34
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1042,11 +2388,11 @@ focus_tree = {
 	focus = {	
 		id = UOB_bomb_defence
 		icon = GFX_focus_generic_air_defense
-		prerequisite = { focus = UOB_union_air }
+		prerequisite = { focus = UOB_inter_force }
 		available = {
 		}
-		x = 21
-		y = 3
+		x = 34
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1093,8 +2439,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_union_air }
 		available = {
 		}
-		x = 23
-		y = 2
+		x = 36
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1108,7 +2454,7 @@ focus_tree = {
 	
 	focus = {	
 		id = UOB_modern_weap
-		icon = GFX_focus_rocketry
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = UOB_air_strat }
 		prerequisite = { 
 			focus = UOB_bomb_defence
@@ -1116,8 +2462,8 @@ focus_tree = {
 		}
 		available = {
 		}
-		x = 23
-		y = 4
+		x = 36
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1125,7 +2471,8 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_modern_weap"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = rocketry } 
+			air_experience = 50
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = air_doctrine } 
 		}
 	}
 	
@@ -1135,8 +2482,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_union_air }
 		available = {
 		}
-		x = 25
-		y = 2
+		x = 38
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1144,7 +2491,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_brit_bomb"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = tactical_bomber }
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_bomber }
 		}
 	}
 	
@@ -1154,8 +2501,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_brit_bomb }
 		available = {
 		}
-		x = 25
-		y = 3
+		x = 38
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1166,15 +2513,21 @@ focus_tree = {
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_strategic_bomber }
 		}
 	}
+
+##navy
 	
 	focus = {	
 		id = UOB_union_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = UOB_begin_purge }
-		available = {
+		icon = GFX_goal_UOB_navy
+		prerequisite = {  }
+		available = { 
+		NOT = { has_idea = UOB_revo_recov } 
+		OR = { has_country_flag = UOB_centralised_mil
+				has_country_flag = UOB_doctrine_of_autonomy
+				has_country_flag = UOB_political_military }
 		}
-		x = 29
-		y = 1
+		x = 42
+		y = 0
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1182,7 +2535,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_union_navy"
-			navy_experience = 50
+			navy_experience = 25
 		}
 	}
 	
@@ -1192,8 +2545,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_union_navy }
 		available = {
 		}
-		x = 27
-		y = 2
+		x = 40
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1207,12 +2560,12 @@ focus_tree = {
 	
 	focus = {	
 		id = UOB_defend_coast
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_generic_english_channel
 		prerequisite = { focus = UOB_our_shield }
 		available = {
 		}
-		x = 27
-		y = 3
+		x = 40
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1230,8 +2583,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_union_navy }
 		available = {
 		}
-		x = 29
-		y = 2
+		x = 42
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1249,8 +2602,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_mod_doctrines }
 		available = {
 		}
-		x = 29
-		y = 3
+		x = 42
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1272,8 +2625,8 @@ focus_tree = {
 		}
 		available = {
 		}
-		x = 29
-		y = 4
+		x = 42
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1281,8 +2634,8 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UOB_nav_trad"
+			add_ideas = UOB_rule_britannia
 			navy_experience = 50
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine }
 		}
 	}
 	
@@ -1292,8 +2645,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_union_navy }
 		available = {
 		}
-		x = 31
-		y = 2
+		x = 44
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1311,8 +2664,8 @@ focus_tree = {
 		prerequisite = { focus = UOB_our_sword }
 		available = {
 		}
-		x = 31
-		y = 3
+		x = 44
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 1

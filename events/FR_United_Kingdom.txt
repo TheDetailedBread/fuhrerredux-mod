@@ -2260,6 +2260,9 @@ country_event = {
 	}
 }
 
+###############################
+#### the british revolution ###
+###############################
 country_event = {
 	id = uk.39
 	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.39"}
@@ -2271,41 +2274,55 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	#option = {
-		#name = "Not like this!"
-		#ai_chance = {
-			#base = 0
-		#}
-		#add_political_power = -150
-		#remove_ideas = ENG_civil_unrest
-		#add_ideas = ENG_revolution
-		#hidden_effect = {
-			#country_event = { id = uk.40 days = 30 }
-		#}
-	#}
+	option = {
+		name = "Skirmishes break out between loyal Army elements and the defectors!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_country_flag = revolutionrule
+				add = 1000
+			}
+		}
+		add_political_power = -250
+		remove_ideas = ENG_civil_unrest
+		add_ideas = ENG_revolution
+		126 = { set_demilitarized_zone = yes }
+		130 = { set_demilitarized_zone = yes }
+		132 = { set_demilitarized_zone = yes }
+		122 = { set_demilitarized_zone = yes }
+		131 = { set_demilitarized_zone = yes }
+		hidden_effect = {
+			country_event = { id = uk.40 days = 7 }
+			country_event = { id = uk.900 days = 4 }
+		}
+	}
 	
 	option = {
 		name = "A Charistmatic Officer of the Army storms Parliament with the assistance of the military!"
 		ai_chance = {
-			base = 100
+			base = 90
+			modifier = {
+				has_country_flag = revolutionrule
+				add = -90
+			}
 		}
 		add_political_power = -100
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
-		remove_every_minister = yes
-		add_ideas = {
-			ENG_Jack_Churchill_hog_ade
-			ENG_Claude_Auchinleck_for_ade
-			ENG_Louis_Mountbatten_eco_ade
-			ENG_Trafford_Leigh_Mallory_ade
-		}
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.40 }
 		set_country_flag = military_control
 		hidden_effect = {
 			country_event = { id = uk.110 days = 30 }
 			add_ideas = military_junta
+      remove_every_minister = yes
+      add_ideas = {
+        ENG_Jack_Churchill_hog_ade
+        ENG_Claude_Auchinleck_for_ade
+        ENG_Louis_Mountbatten_eco_ade
+        ENG_Trafford_Leigh_Mallory_ade
+      }
 			BHU = { news_event = { id = uknews.17 } }
 			CAN = { country_event = { id = empire.3 hours = 8 } }
 			AST = { country_event = { id = empire.3 hours = 8 } }
@@ -2316,169 +2333,92 @@ country_event = {
 	}
 }
 
-country_event = {							##### - TO DO: ADD MORE EVENTS FOR BREAK-UP OF THE EMPIRE. REVOLUTION WILL MEAN COMPLETE BREAK-UP OF THE EMPIRE.
+
+country_event = {						
 	id = uk.40
 	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.40"}
 	title = "The Revolution is here!"
 	desc = uk.40.d
 	picture = report_event_generic_conference
-	
 	fire_only_once = yes
-	
 	is_triggered_only = yes
-	
-	immediate = {
-		hidden_effect = {
-			EGY = { 
-				transfer_state = 446
-				transfer_state = 447
-				transfer_state = 452
-				transfer_state = 453
-				transfer_state = 457
-				transfer_state = 456
-				transfer_state = 551
-				transfer_state = 552
-				transfer_state = 745
-				transfer_state = 549
-			}
-			USA = {
-				transfer_state = 690
-				transfer_state = 693
-				transfer_state = 689
-				transfer_state = 696
-			}
-			VEN = {
-				transfer_state = 687
-				transfer_state = 691
-			}
-			ARG = {
-				transfer_state = 299
-				transfer_state = 720
-			}
-			SAF = {
-				transfer_state = 542
-				transfer_state = 810
-			}
-			IRE = {
-				transfer_state = 815
-				transfer_state = 113
-				transfer_state = 135
-				transfer_state = 816
-				transfer_state = 134
-				transfer_state = 119
-			}
-			AST = {
-				transfer_state = 636
-				transfer_state = 643
-				transfer_state = 639
-				transfer_state = 270
-				transfer_state = 771
-				transfer_state = 712
-				transfer_state = 710
-			}
-			RAJ = {
-				transfer_state = 422
-				transfer_state = 733
-				transfer_state = 281
-			}
-			YEM = {
-				transfer_state = 293
-				transfer_state = 659
-			}
-			ARB = {
-				transfer_state = 658
-			}
-			OMA = {
-				transfer_state = 294
-			}
-			IRQ = {
-				transfer_state = 656
-			}
-			SIA = {
-				transfer_state = 805
-				transfer_state = 336
-				transfer_state = 821
-				transfer_state = 820
-				transfer_state = 822
-				transfer_state = 823
-				transfer_state = 819
-				transfer_state = 640
-				transfer_state = 288
-				transfer_state = 733
-			}
-			BEL = {
-				transfer_state = 548
-			}
-			JAP = {
-				transfer_state = 333
-			}
-			CHI = {
-				transfer_state = 326
-			}
-			PRR = {
-				transfer_state = 545
-			}
-			FRA = {
-				transfer_state = 558
-				transfer_state = 692
-				transfer_state = 703
-				transfer_state = 274
-				transfer_state = 308
-				transfer_state = 704
-				transfer_state = 700
-				transfer_state = 707
-				transfer_state = 701
-				transfer_state = 709
-			}
-			ITA = {
-				transfer_state = 116
-				transfer_state = 183
-				transfer_state = 547
-				transfer_state = 546
-				transfer_state = 769
-			}
-			ETH = {
-				transfer_state = 269
-			}
-			SPR = {
-				transfer_state = 118
-			}
-			#ANH = {
-			#	transfer_state = 894
-			#}
-		}
-	}
 	
 	option = {
 		name = "Break the chains!"
+
 		UOB = {
+      add_ideas = {
+        UOB_Clement_Attlee_hog_lib
+        UOB_Leslie_Solley_for_van
+        UOB_Annie_Kenney_eco_col
+        UOB_Clifford_Allen_sec_lib
+      }
+			transfer_technology = yes
 			transfer_state = 126
-			transfer_state = 127
-			transfer_state = 123
-			transfer_state = 338
-			transfer_state = 125
-			transfer_state = 129
-			transfer_state = 128
-			transfer_state = 122
-			transfer_state = 132
 			transfer_state = 130
+			transfer_state = 132
+			transfer_state = 122
 			transfer_state = 131
-			transfer_state = 133
-			transfer_state = 121
-			transfer_state = 120
-			transfer_state = 136
+
 			change_tag_from = ENG
 			set_politics = { ruling_party = collectivist elections_allowed = no }
 		}
-		UOB = { country_event = { id = uob.2 hours = 1 } }
+#		UOB = { country_event = { id = uob.2 hours = 1 } }
+		UOB = { country_event = { id = uob.3 hours = 1 } }
+		ENG = { country_event = { id = uk.901 days = 5 } }
+		126 = { set_demilitarized_zone = no }
+		130 = { set_demilitarized_zone = no }
+		132 = { set_demilitarized_zone = no }
+		122 = { set_demilitarized_zone = no }
+		131 = { set_demilitarized_zone = no }
 		hidden_effect = {
 			UOB = {
 				add_ideas = workers_republic
 				every_state = {
 					limit = {
-						AND = {
-							is_core_of = ENG
-							is_controlled_by = UOB
+						OR = {
+							region = 3 
+							region = 2
+							region = 1
+						}
+					}
+					UOB = {
+						add_state_core = PREV
+					}
+				}
+				add_state_claim = 119
+			}
+		}
+	}
+
+	option = {
+		name = "Stand by the King!"
+		UOB = {
+			transfer_technology = yes
+			transfer_state = 126
+			transfer_state = 130
+			transfer_state = 132
+			transfer_state = 122
+			transfer_state = 131
+			set_politics = { ruling_party = collectivist elections_allowed = no }
+		}
+#		UOB = { country_event = { id = uob.2 hours = 1 } }
+		UOB = { country_event = { id = uob.3 hours = 1 } }
+		ENG = { country_event = { id = uk.901 days = 5 } }
+		126 = { set_demilitarized_zone = no }
+		130 = { set_demilitarized_zone = no }
+		132 = { set_demilitarized_zone = no }
+		122 = { set_demilitarized_zone = no }
+		131 = { set_demilitarized_zone = no }
+		hidden_effect = {
+			UOB = {
+				add_ideas = workers_republic
+				every_state = {
+					limit = {
+						OR = {
+							region = 3 
+							region = 2
+							region = 1
 						}
 					}
 					UOB = {
@@ -5722,6 +5662,29 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = uk.880
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uk.880" }
+	title = "Peace with Indulusia"
+	desc = uk.880.d
+	
+	hidden = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ISR
+		has_war_with = INS
+		ENG = { exists = no }
+	}
+
+	option = {
+		name = "yes"
+		INS = {
+			white_peace = { tag = ISR }
+		}
+	}
+}
 
 ######################################################
 #- 				FOREIGN POLICY EVENTS				-#
@@ -16202,4 +16165,435 @@ country_event = {
 	option = {
 		name = "I love democracy"
 	}
+}
+
+
+country_event = {
+	id = uk.900
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.900"}
+	title = "Colonial Garrisons Return Home"
+	desc = uk.900.d
+	picture = report_event_generic_conference
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let us pray they stop the revolution"
+    delete_unit_template_and_units = {
+      division_template = "Colonial Garrison"
+      disband = yes #will refund equipment and manpower
+    }
+	  set_country_flag = theboog
+
+		hidden_effect = {
+	    ENG = { country_event = { id = uk.905 days = 5 } 
+        leave_faction = yes
+        end_puppet = CAN
+        end_puppet = AST
+        end_puppet = NZL
+        end_puppet = RAJ
+        end_puppet = NFL
+        end_puppet = SAF
+        end_puppet = ISR
+        end_puppet = BEA
+        white_peace = INS
+        white_peace = IND
+      }
+	    444 = {
+        owner = { transfer_state = 954 }
+      }
+      BRE = {
+        transfer_state = 446
+        transfer_state = 447
+        transfer_state = 452
+        transfer_state = 453
+        transfer_state = 457
+        transfer_state = 456
+        transfer_state = 551
+        transfer_state = 552
+        transfer_state = 745
+        transfer_state = 549
+        transfer_state = 690
+        transfer_state = 693
+        transfer_state = 689
+        transfer_state = 696
+        transfer_state = 687
+        transfer_state = 691
+        transfer_state = 299
+        transfer_state = 720
+        transfer_state = 864
+        transfer_state = 863
+        transfer_state = 422
+        transfer_state = 733
+        transfer_state = 281
+        transfer_state = 659
+        transfer_state = 658
+        transfer_state = 294
+        transfer_state = 656
+        transfer_state = 336
+        transfer_state = 821
+        transfer_state = 820
+        transfer_state = 819
+        transfer_state = 733
+        transfer_state = 548
+        transfer_state = 636
+        transfer_state = 643
+        transfer_state = 639
+        transfer_state = 270
+        transfer_state = 712
+        transfer_state = 710
+        transfer_state = 326
+        transfer_state = 545
+        transfer_state = 558
+        transfer_state = 692
+        transfer_state = 703
+        transfer_state = 274
+        transfer_state = 308
+        transfer_state = 704
+        transfer_state = 700
+        transfer_state = 707
+        transfer_state = 701
+        transfer_state = 709
+        transfer_state = 116
+        transfer_state = 183
+        transfer_state = 547
+        transfer_state = 546
+        transfer_state = 769
+        transfer_state = 269
+        transfer_state = 118
+        transfer_state = 894
+        transfer_state = 965
+        transfer_state = 957
+        transfer_state = 994
+        transfer_state = 933
+        transfer_state = 992
+        transfer_state = 993
+        transfer_state = 1029
+        transfer_state = 847
+        transfer_state = 1021
+        transfer_state = 311
+        transfer_state = 971
+        transfer_state = 813
+        transfer_state = 711
+        transfer_state = 288
+        transfer_state = 640
+        transfer_state = 812
+        transfer_state = 1007
+        transfer_state = 805
+      }
+    }
+	}
+}
+
+country_event = {
+	id = uk.901
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.901"}
+	title = "Loyalist Volunteers Rise Up"
+	desc = uk.901.d
+	picture = report_event_generic_conference
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The people side with the King!"
+	  load_oob = "ENG_Revolution_Gvt"
+    set_division_template_lock = {
+      division_template = "Militia"
+      is_locked = yes
+    }
+	}
+}
+
+country_event = {
+	id = uk.902
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.902"}
+	title = "The Government-in-Exile"
+	desc = uk.902.d
+	picture = report_event_generic_conference
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ENG
+		surrender_progress > 0.5
+		has_war_with = UOB
+	}
+
+  mean_time_to_happen = {
+    days = 1
+  }
+	
+	option = {
+		name = "We will never surrender! To Cairo!"
+		ENG = { country_event = { id = uk.903 days = 3 } }
+	  hidden_effect = {
+	    delete_unit_template_and_units = {
+        division_template = "Militia"
+        disband = no #will refund equipment and manpower
+      }
+      269 = { add_claim_by = BEX }
+      274 = { add_claim_by = BEX }
+      281 = { add_claim_by = BEX }
+      288 = { add_claim_by = BEX }
+      294 = { add_claim_by = BEX }
+      311 = { add_claim_by = BEX }
+      336 = { add_claim_by = BEX }
+      422 = { add_claim_by = BEX }
+      545 = { add_claim_by = BEX }
+      546 = { add_claim_by = BEX }
+      547 = { add_claim_by = BEX }
+      548 = { add_claim_by = BEX }
+      558 = { add_claim_by = BEX }
+      636 = { add_claim_by = BEX }
+      658 = { add_claim_by = BEX }
+      687 = { add_claim_by = BEX }
+      689 = { add_claim_by = BEX } 
+      700 = { add_claim_by = BEX }
+      701 = { add_claim_by = BEX }
+      933 = { add_claim_by = BEX }
+      957 = { add_claim_by = BEX }
+      965 = { add_claim_by = BEX }
+      971 = { add_claim_by = BEX }
+      994 = { add_claim_by = BEX }
+
+      BEX = {
+        transfer_technology = yes
+        if = {
+          limit = {
+            country_exists = EGY
+          }
+          annex_country = {
+            target = EGY
+            transfer_troops = no
+          }
+        }
+        else = {
+          transfer_state = 446
+          transfer_state = 447
+          transfer_state = 452
+          transfer_state = 453
+          transfer_state = 457
+          transfer_state = 456
+          transfer_state = 551
+          transfer_state = 552
+          transfer_state = 745
+          transfer_state = 549
+        }
+        transfer_state = 813
+        transfer_state = 547
+        transfer_state = 548
+        transfer_state = 1029
+        transfer_state = 118
+        transfer_state = 116
+        transfer_state = 183
+        transfer_state = 769
+
+        add_state_core = 446
+        add_state_core = 447
+        add_state_core = 452
+        add_state_core = 453
+        add_state_core = 457
+        add_state_core = 456
+        add_state_core = 551
+        add_state_core = 552
+        add_state_core = 745
+        add_state_core = 549
+        add_state_core = 813
+        add_state_core = 547
+        add_state_core = 548
+        add_state_core = 1029
+        add_state_core = 118
+        add_state_core = 116
+        add_state_core = 183
+        add_state_core = 769
+      }
+      BEX = { 
+        change_tag_from = ENG
+      }
+    }
+    UOB = { country_event = uk.906 }
+  }
+}		
+
+country_event = {
+	id = uk.903
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.903"}
+	title = "The Evacuation"
+	desc = uk.903.d
+	picture = report_event_generic_conference
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A Necessary Evil"
+
+		ENG = {
+      hidden_effect = {
+        set_nationality = {
+          target_country = BEX
+          character = ENG_King_George_VI
+        }
+        set_nationality = {
+          target_country = BEX
+          character = ENG_King_Edward_VIII
+        }
+        ENG_King_George_VI = {
+          add_country_leader_role = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
+      }
+			transfer_units_fraction= { 
+        target = BEX
+        size = 0.8
+        stockpile_ratio = 0.6
+        army_ratio = 0.2
+        navy_ratio = 0.8
+        air_ratio = 0.7
+        keep_unit_leaders_trigger = {
+          NOT = { has_trait = devoted_monarchist }
+        }
+		  }
+	  }
+	}
+}
+
+country_event = {
+	id = uk.904
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.904"}
+	title = uk.904.t
+	desc = uk.904.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ENG
+		has_country_flag = theboog
+		UOB = { exists = no }
+	  NOT = { has_idea = ENG_revolution }
+	}
+
+	immediate = {
+	  hidden_effect = {
+      annex_country = {
+        target = BRE
+        transfer_troops = no
+      }
+      create_faction = "Imperial Protection Alliance"
+
+      ENG = { add_to_faction = CAN }
+      ENG = { add_to_faction = SAF }
+      ENG = { add_to_faction = NZL }
+      ENG = { add_to_faction = AST }
+      ENG = { add_to_faction = BEA }
+      ENG = { add_to_faction = RAJ }
+      ENG = { add_to_faction = NFL }
+      ENG = { add_to_faction = ISR }
+
+      set_autonomy = {
+        target = CAN
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = SAF
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = NZL
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = AST
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = BEA
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = RAJ
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = NFL
+        autonomy_state = autonomy_colony
+      }
+      set_autonomy = {
+        target = ISR
+        autonomy_state = autonomy_protectorate
+      }
+    }
+	}
+	option = {
+		name = uk.904.a
+    remove_ideas = UOB_civil_war
+    delete_unit_template_and_units = {
+        division_template = "Militia"
+        disband = no #will refund equipment and manpower
+    }
+	}
+}
+
+
+country_event = {
+	id = uk.905
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.905"}
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	
+	option = {
+    every_state = { 
+      limit = { NOT = { is_core_of = ROOT }}
+      teleport_armies = {
+        to_state_array = owned_controlled_states
+      } 
+    }
+	}
+}
+
+country_event = {
+	id = uk.906
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uk.906"}
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		every_state = {
+      limit = { is_core_of = ENG }
+      UOB = {
+        transfer_state = PREV
+      }
+    }
+    BEX = {
+      annex_country = {
+        target = ENG
+        transfer_troops = no
+      }
+    }
+	}
+}
+
+country_event = { # Ireland Declares Independence
+  id = uk.907
+  title = uk.907.t
+  desc = uk.907.d
+  picture = GFX_news_event_gathering_protest
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  immediate = {
+    every_owned_state = {
+      limit = { is_core_of = IRE }
+      IRE = {
+        transfer_state = PREV
+      }
+    }
+  }
+
+  option = { # We'll be back
+    name = uk.907.a
+  }
 }

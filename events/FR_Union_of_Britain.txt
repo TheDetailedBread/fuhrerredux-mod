@@ -1,0 +1,1533 @@
+﻿###########################
+# - Union of Britain Events
+# - By SuperMarks & General Melchett
+###########################
+
+add_namespace = uob
+
+
+### text events
+
+
+country_event = {
+	id = uob.500
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.500"}
+	title = "The Destruction of York Cathedral"
+	desc = uob.500.d
+#	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "There is no limitations to revolution."
+	}
+	
+}
+
+country_event = {
+	id = uob.501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.501"}
+	title = "Richard's Family"
+	desc = uob.501.d
+#	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Sunday Roast did not occur next week."
+	}
+	
+}
+
+country_event = {
+	id = uob.502
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.502"}
+	title = "The New Arrivals"
+	desc = uob.502.d
+#	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "In time many returned home changed, and many stayed forever."
+	}
+	
+}
+
+country_event = {
+	id = uob.503
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.503"}
+	title = "The Letter"
+	desc = uob.503.d
+#	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Revolution needs flesh."
+	}
+	
+}
+
+country_event = {
+	id = uob.504
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.504"}
+	title = "The Sergeant’s Struggle"
+	desc = uob.504.d
+#	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Reforms Better Bloody Well Help."
+	}
+	
+}
+
+country_event = { #im going back to five-oh-fiveee if it's a seven hour flight or a forty-five minute drive, in my imagination....
+	id = uob.505
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.505"}
+	title = "The Execution of Edward VIII"
+	desc = uob.505.d # I'd probably still adore you with your hands around my neck, or i did last time i checked
+#	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = UOB
+		UOB = { OR = { has_country_flag = UOB_compromise_b
+				has_country_flag = UOB_compromise_a
+				has_country_flag = UOB_natcol 
+				has_country_flag = UOB_socialists_win
+				has_country_flag = UOB_lobert_victory 
+				}
+			}
+			NOT = { ENG = { has_country_flag = edward_assassinated 
+		}
+	}
+	}
+	option = {
+		name = uob.505.a
+		BEX = { country_event = { id = bex.6 days = 5 } }
+	}
+	
+}
+
+country_event = {
+	id = uob.506
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.506"}
+	title = "The Flight of British Industries"
+	desc = uob.506.d 
+#	picture = report_event_generic_conference
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+	name = "Damned Exiles..."
+		127 = { 
+			remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			remove_building = {
+					type = arms_factory
+					level = 1
+			}
+		}
+		129 = { 
+			remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			remove_building = {
+					type = arms_factory
+					level = 1
+			}
+		}
+		338 = { 
+			remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			remove_building = {
+					type = arms_factory
+					level = 1
+			}
+		}
+		125 = { 
+			remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+		}
+	}
+}
+
+
+## EVENTS
+
+
+country_event = {
+	id = uob.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.3"}
+	title = "Mass Defections from the British Army"
+	desc = uob.3.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "The Revolution is Unstoppable!"
+		hidden_effect = {
+			country_event = { id = uob.4 days = 8 }
+    }
+	  ENG = { 
+      transfer_units_fraction= { 
+        target = UOB
+        size = 0.5
+        stockpile_ratio = 0.3
+        army_ratio = 0.5
+        navy_ratio = 0.3
+        air_ratio = 0.4
+        keep_unit_leaders_trigger = {
+          has_trait = devoted_monarchist
+	      }
+	    }
+	  }	
+	}
+}
+
+country_event = {
+	id = uob.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.4"}
+	title = "Revolutionary Volunteers Rise Up"
+	desc = uob.4.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "The people side with the Revolution!"
+		country_event = { id = uob.5 days = 7 }
+
+    load_oob = "ENG_Revolution_Uob"
+    set_division_template_lock = {
+      division_template = "Revolutionary Militia"
+      is_locked = yes
+    }
+	}
+}
+
+country_event = {
+	id = uob.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.5"}
+	title = "The British Civil War Begins!"
+	desc = uob.5.d
+	picture = report_event_generic_conference
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+      add_ideas = UOB_civil_war
+      declare_war_on = {
+        target = ENG
+        type = annex_everything
+      }
+      ENG = { 
+        country_event = uk.907
+        remove_ideas = ENG_revolution 
+        add_ideas = UOB_civil_war	
+      }
+    }
+	}
+
+  option = {
+		name = "Break the Chains!"
+  }
+}
+
+country_event = {
+	id = uob.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.6"}
+	title = "The Revolution Triumphant!"
+	desc = uob.6.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UOB
+		ENG = { exists = no }
+	}
+
+	immediate = {
+    hidden_effect = {
+      every_enemy_country = {
+        white_peace = ROOT
+      }
+    }
+	}
+	
+	option = {
+		name = "Now is time to rebuild."
+		add_ideas = UOB_revo_recov
+		remove_ideas = UOB_civil_war
+	  delete_unit_template_and_units = {
+	    division_template = "Revolutionary Militia"
+  	  disband = no #will refund equipment and manpower
+	  }
+		UOB = { country_event = { id = uob.7 days = 20 } }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+### The Power Struggle
+country_event = { 
+	id = uob.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.7 FROM = [From.GetName]" }
+	title = uob.7.t
+	desc = uob.7.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = uob.7.a
+		hidden_effect = {
+			set_country_flag = {
+				flag = UOB_socialist
+				value = 0
+			}
+			set_country_flag = {
+				flag = UOB_collectivist
+				value = 0
+			}
+			set_country_flag = {
+				flag = UOB_libertarian
+				value = 0
+			}
+			country_event = {
+				id = uob.8
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # Economic policy
+	id = uob.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.8 FROM = [From.GetName]" }
+	title = uob.8.t
+	desc = uob.8.d
+	picture = GFX_report_event_generic_farming
+
+	is_triggered_only = yes
+
+	option = { # Collectivist
+		name = uob.8.a
+		ai_chance = {
+			base = 35
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_collectivist_econ
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_collectivist
+				value = 1
+			}
+			country_event = {
+				id = uob.9
+				days = 7
+			}
+		}
+	}
+	option = { # Lolbert
+		name = uob.8.b
+		ai_chance = {
+			base = 45
+		}
+		set_country_flag = UOB_lolbert_econ
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_libertarian
+				value = 1
+			}
+			country_event = {
+				id = uob.9
+				days = 7
+			}
+		}
+	}
+	option = { # Socialist
+		name = uob.8.c
+		ai_chance = {
+			base = 20
+		}
+		set_country_flag = UOB_socialist_econ
+
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.05
+		}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_socialist
+				value = 1
+			}
+			country_event = {
+				id = uob.9
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # Foreign policy
+	id = uob.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.9 FROM = [From.GetName]" }
+	title = uob.9.t
+	desc = uob.9.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = { # one nation socialism
+		name = uob.9.a
+		ai_chance = {
+			base = 25
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_knockoff_stalin
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_collectivist
+				value = 1
+			}
+			country_event = {
+				id = uob.10
+				days = 7
+			}
+		}
+	}
+	option = { #world revolution
+		name = uob.9.b
+		ai_chance = {
+			base = 35
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_world_rev
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_libertarian
+				value = 1
+			}
+			country_event = {
+				id = uob.10
+				days = 7
+			}
+		}
+	}
+	option = { #european revolution
+		name = uob.9.c
+		ai_chance = {
+			base = 40
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_euro_rev
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_socialist
+				value = 1
+			}
+			country_event = {
+				id = uob.10
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # Military policy
+	id = uob.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.10 FROM = [From.GetName]" }
+	title = uob.10.t
+	desc = uob.10.d
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+
+	option = {
+		name = uob.10.a
+		ai_chance = {
+			base = 35
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_centralised_mil
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_collectivist
+				value = 1
+			}
+			country_event = {
+				id = uob.11
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = uob.10.b
+		ai_chance = {
+			base = 45
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_doctrine_of_autonomy
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_libertarian
+				value = 1
+			}
+			country_event = {
+				id = uob.11
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = uob.10.c
+		ai_chance = {
+			base = 20
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.05
+		}
+		set_country_flag = UOB_political_military
+		hidden_effect = {
+			modify_country_flag = {
+				flag = UOB_socialist
+				value = 1
+			}
+			country_event = {
+				id = uob.11
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # Results
+	id = uob.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.11 FROM = [From.GetName]" }
+	title = uob.11.t
+	desc = uob.11.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+
+	option = {
+		name = uob.11.a
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = UOB_collectivist
+						value > 1
+					}
+				}
+				country_event = {
+					id = uob.12
+					days = 5
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = UOB_libertarian
+						value > 1
+					}
+				}
+				country_event = {
+					id = uob.13
+					days = 5
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = UOB_socialist
+						value > 1
+					}
+				}
+				country_event = {
+					id = uob.14
+					days = 5
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = UOB_collectivist
+						value < 2
+					}
+					has_country_flag = {
+						flag = UOB_libertarian
+						value < 2
+					}
+					has_country_flag = {
+						flag = UOB_socialist
+						value < 2
+					}
+				}
+				country_event = {
+					id = uob.15
+					days = 5
+				}
+			}
+		}
+	}
+}
+country_event = { # Collectivist Victory
+	id = uob.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.12 FROM = [From.GetName]" }
+	title = uob.12.t
+	desc = uob.12.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = UOB_collectivist
+		clr_country_flag = UOB_libertarian
+		clr_country_flag = UOB_socialist
+	}
+
+	option = {
+		name = uob.12.a
+		unlock_national_focus = UOB_socialist_nation
+    set_politics = {
+      ruling_party = vanguardist
+    }
+    hidden_effect = {
+      set_country_flag = UOB_natcol
+      remove_every_minister = yes
+      add_ideas = {
+        UOB_Ebeneezer_Edwards_hog_van
+        UOB_Leslie_Solley_for_van
+        UOB_Wilfred_Risdon_eco_van
+        UOB_Henry_Williamson_sec_van
+      }
+    }
+	}
+}
+
+country_event = { # Lolbert Victory
+	id = uob.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.13 FROM = [From.GetName]" }
+	title = uob.13.t
+	desc = uob.13.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = UOB_collectivist
+		clr_country_flag = UOB_libertarian
+		clr_country_flag = UOB_socialist
+	}
+
+	option = {
+		name = uob.13.a
+		unlock_national_focus = UOB_fires_revo
+		set_politics = {
+			ruling_party = libertarian_socialist
+		}
+		hidden_effect = {
+      remove_every_minister = yes
+      add_ideas = {
+        UOB_Clement_Attlee_hog_lib
+        UOB_David_Kirkwood_for_lib
+        UOB_Oswald_Mosley_eco_lib
+        UOB_Helen_Crawfurd_sec_lib
+      }
+			set_country_flag = UOB_lobert_victory
+		}
+	}
+}
+
+country_event = { # Socialists win
+	id = uob.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.14 FROM = [From.GetName]" }
+	title = uob.14.t
+	desc = uob.14.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = UOB_collectivist
+		clr_country_flag = UOB_libertarian
+		clr_country_flag = UOB_socialist
+	}
+
+	option = {
+		name = uob.14.a
+		unlock_national_focus = UOB_moderate_app
+		set_politics = {
+			ruling_party = collectivist
+		}
+		hidden_effect = {
+      remove_every_minister = yes
+      add_ideas = {
+        UOB_Eric_Blair_hog_col
+        UOB_James_Maxton_for_col
+        UOB_Aneurin_Bevan_eco_col
+        UOB_Stafford_Cripps_sec_col
+      }
+			set_country_flag = UOB_socialists_win
+		}
+	}
+}
+
+country_event = { # No majority achieved ruh roh
+	id = uob.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.15 FROM = [From.GetName]" }
+	title = uob.15.t
+	desc = uob.15.d
+	picture = GFX_report_event_election_vote
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = UOB_collectivist
+		clr_country_flag = UOB_libertarian
+		clr_country_flag = UOB_socialist
+	}
+
+	option = { # Compromise between Lolbert and Vanguard
+		name = uob.15.a
+		unlock_national_focus = UOB_socialist_nation
+		set_politics = {
+			ruling_party = libertarian_socialist
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = vanguardist
+			popularity = 0.15
+		}
+
+    set_country_flag = coalition_vanguardist
+		hidden_effect = {
+      remove_every_minister = yes
+      add_ideas = {
+        UOB_Ebeneezer_Edwards_hog_van
+        UOB_Ethel_MacDonald_for_lib
+        UOB_Alexander_Raven_Thomson_eco_van
+        UOB_Clifford_Allen_sec_lib
+      }
+			set_country_flag = UOB_compromise_a
+		}
+	}
+	option = { # Compromise between Lolberts and Socialists
+		name = uob.15.b
+		unlock_national_focus = UOB_moderate_app
+		set_politics = {
+			ruling_party = libertarian_socialist
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = collectivist
+			popularity = 0.15
+		}
+
+		set_country_flag = coalition_collectivist
+		hidden_effect = {
+      remove_every_minister = yes
+      add_ideas = {
+        UOB_Eric_Blair_hog_col
+        UOB_James_Maxton_for_col
+        UOB_Oswald_Mosley_eco_lib
+        UOB_Harold_Nicolson_sec_lib
+      }
+			set_country_flag = UOB_compromise_b
+		}
+	}
+}
+
+
+### denmark chain
+
+
+country_event = {
+	id = uob.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.16"}
+	title = "Britain Demands our North Atlantic Possessions"
+	desc = uob.16.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "Never!"
+	hidden_effect = {
+		CAN = { country_event = { id = uob.17 hours = 48 } }
+		}
+	
+	}
+	option = {
+		name = "We must give the British what they ask..."
+		trigger = {
+			is_ai = no
+		}
+		UOB = {
+			transfer_state = 100
+			transfer_state = 337
+			transfer_state = 101
+			transfer_state = 911
+		}
+	
+	}
+}
+
+
+country_event = {
+	id = uob.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.17"}
+	title = "Britain Makes Demands on Denmark"
+	desc = uob.17.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "Demand Greenland!"
+		GER = { country_event = { id = uob.18 hours = 48 } }
+	
+	}
+}
+
+country_event = {
+	id = uob.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.18"}
+	title = "Denmark is Threatened"
+	desc = uob.18.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "Prepare the invasion plans!"
+		UOB = { country_event = { id = uob.19 hours = 48 } }
+	
+	}
+}
+
+country_event = {
+	id = uob.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.19"}
+	title = "The Fate of Denmark"
+	desc = uob.19.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "This wasn't what we planned, but is satisfactory."
+		
+		UOB = {
+			transfer_state = 100
+			transfer_state = 337
+		}
+		CAN = {
+			transfer_state = 101
+			transfer_state = 911
+		}
+		GER = { country_event = { id = uob.20 hours = 48 } }
+	}
+}
+
+country_event = {
+	id = uob.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.20"}
+	title = "Invading Denmark"
+	desc = uob.20.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "We will wipe them off the map."
+		
+		declare_war_on = {
+			target = DEN
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = SHO
+			type = annex_everything
+		}
+	}
+}
+
+#mr worldwide
+
+country_event = {
+	id = uob.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.21"}
+	title = "Britain Declares War on Us!"
+	desc = uob.21.d
+	picture = report_event_generic_conference
+	
+#	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "The Whole World Stands Against British Aggression"
+		
+			UOB = { declare_war_on = {
+				target = PREV
+				type = annex_everything }
+			
+		}
+	}
+}
+
+
+# reds in da bed
+
+country_event = {
+	id = uob.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.22"}
+	title = "Our Soviet Policy"
+	desc = uob.22.d
+	picture = report_event_generic_conference
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+
+		}
+	}
+	
+	option = {
+		name = "It is time we heal the split - by force!"
+		add_stability = -0.10
+		add_political_power = -150
+	#	SOV = { country_event = uob.23}
+			declare_war_on = {
+				target = SOV
+				type = annex_everything }
+			
+		
+	}
+	option = {
+		name = "Invite them to the Fourth Internationale!"
+		SOV = { country_event = uob.806 days = 5 }
+
+	}
+}
+
+
+
+country_event = {
+	id = uob.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.24"}
+	title = "Britain Offers Us An Alliance!"
+	desc = "Britain has extended an offer of alliance to us, stating that they are engaging on a global campaign of revolution and would like us to join them. Do we accept?"
+	picture = report_event_generic_conference
+	
+#	fire_only_once = no
+	
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+
+option = { # Sure
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 24
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 49
+				}
+			}
+
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 74
+				}
+			}	
+
+			modifier = {
+				factor 2
+				threat > 0.25
+			}	
+			modifier = {
+				factor 2
+				threat > 0.5
+			}
+		}
+		name = "We Graciously Accept"
+
+		UOB = {
+			add_to_faction = PREV
+		} 
+
+		}
+		
+	
+	option = { #blomhaps
+		name = "We are quite content by ourselves"
+		
+
+	}
+}
+
+
+
+###alliance events
+
+country_event = { # SocSpain
+	id = uob.800
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.800"}
+	title = uob.800.t
+	desc = uob.800.d
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 24
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 49
+				}
+			}
+
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = SPR
+					value < 0
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = SPF
+					value < 0
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = SPM
+					value < 0
+				}
+			}
+	
+
+			modifier = {
+				factor 2
+				threat > 0.25
+			}	
+			modifier = {
+				factor 2
+				threat > 0.5
+			}
+		}
+		name = uob.800.a
+
+		UOB = {
+			country_event = uob.801 days = 1
+		} 
+
+		
+		
+}
+	
+	option = { # nah
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value < -25
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > -50
+				}
+			}	
+		}	
+		name = uob.800.b
+		add_political_power = 50
+		
+		UOB = { country_event = {
+					id = uob.802
+					days = 1
+				}	}	
+	}	
+}
+
+country_event = { # UOB - SPA joins our faction
+	id = uob.801
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.801"}
+	title = uob.801.t
+	desc = uob.801.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = uob.801.a
+			UOB = {
+				add_to_faction = SPA
+			}
+	}
+}
+
+country_event = { # UOB - SPA refuses to join our faction
+	id = uob.802
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.802"}
+	title = uob.802.t
+	desc = uob.802.d
+
+
+	is_triggered_only = yes
+
+	option = { 
+		name = uob.802.a
+			declare_war_on = {
+					type = annex_everything
+					target = SPA
+				}
+		add_stability = -0.05
+		add_political_power = -200
+	}
+	option = { 
+		name = uob.802.b
+		trigger = {
+			is_ai = no
+		}
+		IF = {
+			limit = {
+				has_war_with = SPF
+			}
+			white_peace = SPF
+		}
+		IF = {
+			limit = {
+				has_war_with = SPR
+			}
+			white_peace = SPR
+		}
+		IF = {
+			limit = {
+				has_war_with = SPM
+			}
+			white_peace = SPM
+		}
+	}
+}
+
+
+country_event = { # NOR
+	id = uob.803
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.803"}
+	title = uob.803.t
+	desc = uob.803.d
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 24
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 49
+				}
+			}	
+
+		}
+		name = uob.803.a
+
+		UOB = {
+			country_event = uob.804 days = 1
+		} 
+
+		}
+		
+
+	
+	option = { # nah
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value < -25
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > -50
+				}
+			}	
+		}	
+		name = uob.803.b
+		add_political_power = 50
+		
+		UOB = { country_event = {
+					id = uob.805
+					days = 1
+				}	}	
+	}	
+}
+
+country_event = { # UOB - nor joins our faction
+	id = uob.804
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.804"}
+	title = uob.804.t
+	desc = uob.804.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = uob.804.a
+			UOB = {
+				add_to_faction = NOR
+			}
+	}
+}
+
+country_event = { # UOB - NOR refuses to join our faction
+	id = uob.805
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.805"}
+	title = uob.805.t
+	desc = uob.805.d
+
+
+	is_triggered_only = yes
+
+
+	option = { 
+		name = uob.805.a
+
+	}
+}
+
+
+
+country_event = { # Sov
+	id = uob.806
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.806"}
+	title = uob.806.t
+	desc = uob.806.d
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 24
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > 49
+				}
+			}	
+			
+		}
+		name = uob.806.a
+
+		UOB = {
+			country_event = uob.807 days = 1
+		} 
+
+		}
+		
+
+	
+	option = { # nah
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value < -25
+				}
+			}
+			modifier = {
+				factor 2
+				has_opinion = {
+					target = UOB
+					value > -50
+				}
+			}	
+		}	
+		name = uob.806.b
+		add_political_power = 150
+		
+		UOB = { country_event = {
+					id = uob.808
+					days = 1
+				}	}	
+	}	
+}
+
+country_event = { # UOB - sov joins our faction
+	id = uob.807
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.807"}
+	title = uob.807.t
+	desc = uob.807.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = uob.807.a
+			UOB = {
+				add_to_faction = SOV
+			}
+	}
+}
+
+country_event = { # UOB - sov refuses to join our faction
+	id = uob.808
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.808"}
+	title = uob.808.t
+	desc = uob.808.d
+
+
+	is_triggered_only = yes
+
+	option = { 
+		name = uob.808.a
+			declare_war_on = {
+					type = annex_everything
+					target = SOV
+				}
+		add_stability = -0.10
+		add_political_power = -200
+	}
+	option = { 
+		name = uob.808.b
+		trigger = {
+			is_ai = no
+		}
+
+	}
+}
+
+country_event = { 
+	id = uob.900
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.900"}
+	title = "Seizing the Danish North Atlantic"
+	desc = "With the German destruction of Denmark, we should consider taking their North Atlantic territories for our security."
+	picture = GFX_report_event_communists_cheer
+
+	trigger = {
+		AND = {
+			original_tag = UOB
+			date < 1940.1.2
+			DEN = {
+				has_war_with = GER
+				OR = {
+					owns_state = 100
+					owns_state = 101
+					owns_state = 337
+					owns_state = 908
+					owns_state = 911
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	fire_only_once = yes
+
+	option = {
+	name = "Send the Marines."
+		every_state = {
+			limit = {
+				is_owned_by = DEN
+				OR = {
+					region = 161
+					region = 45
+				}
+			}
+			UOB = {
+				transfer_state = PREV
+			}
+		}	
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_owned_by = DEN
+					OR = {
+						region = 36
+					}
+				}
+				CAN = {
+					transfer_state = PREV
+				}
+			}	
+		}
+	}
+	option = {
+	name = "We do not wish to anger the German beast..."
+	trigger = {
+			is_ai = no
+		}
+	add_political_power = -10
+	}
+}
