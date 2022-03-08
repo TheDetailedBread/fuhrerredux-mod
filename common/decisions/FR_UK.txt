@@ -233,10 +233,16 @@ ENG_the_empire = {
         tag = EGY
       }
     }
+    visible = {
+      NOT = {
+        has_country_flag = ENG_reclaimed_suez
+      }
+    }
     available = {
       original_tag = ENG
       FROM = {
         NOT = { is_subject_of = ENG }
+        NOT = { is_ally_of = ENG }
       }
       OR = {
         has_completed_focus = ENG_national_effort
@@ -248,6 +254,7 @@ ENG_the_empire = {
       factor = 800
     }
     remove_effect = {
+      set_country_flag = ENG_reclaimed_suez
       declare_war_on = {
         target = EGY
         type = annex_everything
