@@ -1,4 +1,4 @@
-﻿capital = 110
+capital = 110
 
 oob = "NOR_1936"
 
@@ -22,6 +22,7 @@ set_technology = {
 	early_bomber = 1
 	tech_recon = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 if = {
@@ -48,12 +49,15 @@ if = {
 		coastal_defense_ships = 1
 	}
 }
+<<<<<<< HEAD
 
 set_convoys = 125		# biggest merchant marine in the world
 set_stability = 0.57
 set_war_support = 0.52
 add_manpower = 45000
 
+=======
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 set_country_flag = coalition_collectivist
 
 set_politics = {	
@@ -72,258 +76,131 @@ add_ideas = {
 	NOR_war_on_samfundsvernet_idea
 	NOR_socialism_surrounded_idea
 	
-	#Ministers#
-	NOR_Sverre_Stoestad_hog_lib
-	NOR_Nordahl_Grieg_for_lib
-	NOR_Adolf_Indreboe_eco_lib
-	NOR_Alfred_Madsen_sec_lib
-	
 	presidential_republic
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 8
-    libertarian_socialist = 35
-    social_democrat = 7
-    social_liberal = 13
-    market_liberal = 19
-    social_conservative = 5
-    authoritarian_democrat = 4
-    paternal_autocrat = 3
-    national_populist = 2
-    valkist = 2
+  vanguardist = 2
+  collectivist = 8
+  libertarian_socialist = 35
+  social_democrat = 7
+  social_liberal = 13
+  market_liberal = 19
+  social_conservative = 5
+  authoritarian_democrat = 4
+  paternal_autocrat = 3
+  national_populist = 2
+  valkist = 2
 }
 
-create_country_leader = {
-	name = "Olav Scheflo"
-	desc = "POLITICS_OLAV_SCHEFLO_DESC"
-	picture = "Portrait_Olav_Scheflo.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Martin Tranmæl"
-	desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-	picture = "Portrait_Martin_Tranmael.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Martin Tranmæl"
-	desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-	picture = "Portrait_Martin_Tranmael.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Johan Nygaardsvold"
-	desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-	picture = "Portrait_Johan_Nygaardsvold.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Johan Ludwig Mowinckel"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ingolf Elster Christensen"
-	desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-	picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jens Hundseid"
-	desc = "POLITICS_JENS_HUNDSEID_DESC"
-	picture = "Portrait_Jens_Hundseid.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Victor Mogens"
-	desc = "POLITICS_VICTOR_MOGENS_DESC"
-	picture = "Portrait_Victor_Mogens.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "H.M. King Haakon VII"
-	desc = "POLITICS_KING_HAAKON_VII_DESC"
-	picture = "Portrait_King_Haakon_VII.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Vidkun Quisling"
-	desc = "POLITICS_VIDKUN_QUISLING_DESC"
-	picture = "Portrait_Vidkun_Quisling.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Stein Barth-Heyerdahl"
-	desc = "POLITICS_STEIN_BARTH_HEYERDAHL_DESC"
-	picture = "Portrait_Stein_Barth_Heyerdahl.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Kristian Laake"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Kristian_Laake.tga"
-	traits = { old_guard }
-	skill = 3
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 2
-	id = 2000
-}
-
-create_corps_commander = {
-	name = "Carl Gustav Fleischer"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Carl_Gustav_Fleischer.tga"
-	traits = { trickster winter_specialist }
-	skill = 4
-	attack_skill = 3
-    defense_skill = 4
-    planning_skill = 2
-    logistics_skill = 4
-	id = 2001
-}
-
-create_corps_commander = {
-	name = "Otto Ruge"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Otto_Ruge.tga"
-	traits = { winter_specialist }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 3
-	id = 2002
-}
-
-create_corps_commander = {
-	name = "William Steffens"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_William_Steffens.tga"
-	traits = { hill_fighter }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
-	id = 2003
-}
-
-create_corps_commander = {
-	name = "Wilhelm von Tangen Hansteen"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Wilhelm_von_Tangen_Hansteen.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 1
-	id = 2004
-}
-
-create_corps_commander = {
-	name = "Hans Reidar Holtermann"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Hans_Reidar_Holtermann.tga"
-	traits = { hill_fighter }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-	id = 2005
-}
-
-create_navy_leader = {
-	name = "Elias Corneliussen"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Elias_Corneliussen.tga"
-	traits = {  }
-	skill = 3
-	id = 2006
-}
-
-create_navy_leader = {
-	name = "Edvard Christian Danielsen"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Edvard_Christian_Danielsen.tga"
-	traits = { seawolf }
-	skill = 2
-	id = 2007
-}
-
-create_navy_leader = {
-	name = "Henry Diesen"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Henry_Diesen.tga"
-	traits = {  }
-	skill = 1
-	id = 2008
-}
-
-create_navy_leader = {
-	name = "Carsten Tank-Nielsen"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Carsten_Tank_Nielsen.tga"
-	traits = { spotter }
-	skill = 1
-	id = 2009
-}
-
-create_navy_leader = {
-	name = "Odd Isaachsen Willoch"
-	portrait_path = "gfx/leaders/NOR/Portrait_NOR_Odd_Isaachsen_Willoch.tga"
-	traits = {  }
-	skill = 1
-	id = 2010
-}
+recruit_character = NOR_Olav_Scheflo
+recruit_character = NOR_Martin_Tranmæl
+recruit_character = NOR_Johan_Nygaardsvold
+recruit_character = NOR_Johan_Ludwig_Mowinckel
+recruit_character = NOR_Ingolf_Elster_Christensen
+recruit_character = NOR_Jens_Hundseid
+recruit_character = NOR_Victor_Mogens
+recruit_character = NOR_HM_King_Haakon_VII
+recruit_character = NOR_Vidkun_Quisling
+recruit_character = NOR_Stein_Barth_Heyerdahl
+recruit_character = NOR_Kristian_Laake
+recruit_character = NOR_Carl_Gustav_Fleischer
+recruit_character = NOR_Otto_Ruge
+recruit_character = NOR_William_Steffens
+recruit_character = NOR_Wilhelm_von_Tangen_Hansteen
+recruit_character = NOR_Hans_Reidar_Holtermann
+recruit_character = NOR_Elias_Corneliussen
+recruit_character = NOR_Edvard_Christian_Danielsen
+recruit_character = NOR_Henry_Diesen
+recruit_character = NOR_Carsten_Tank_Nielsen
+recruit_character = NOR_Odd_Isaachsen_Willoch
+recruit_character = NOR_Hakon_Meyer
+recruit_character = NOR_Halvard_Olsen
+recruit_character = NOR_Haakon_Lie
+recruit_character = NOR_Konrad_Nordahl
+recruit_character = NOR_Sverre_Stostad
+recruit_character = NOR_Magnus_Nilssen
+recruit_character = NOR_Hakon_Five
+recruit_character = NOR_Carl_Joachim_Hambro
+recruit_character = NOR_Johan_Henrik_Andresen
+recruit_character = NOR_Einar_Borch
+recruit_character = NOR_Carl_Gulbranson
+recruit_character = NOR_Johan_Bernhard_Hjort
+recruit_character = NOR_Gulbrand_Lunde
+recruit_character = NOR_Jonas_Lie
+recruit_character = NOR_Karl_Marthinsen
+recruit_character = NOR_Albin_Eines
+recruit_character = NOR_Elias_Volan
+recruit_character = NOR_Arnulf_Overland
+recruit_character = NOR_Arvid_Gilbert_Hansen
+recruit_character = NOR_Nordahl_Grieg
+recruit_character = NOR_Wilhelm_Morgenstierne
+recruit_character = NOR_Halvdan_Koht
+recruit_character = NOR_Trygve_Lie
+recruit_character = NOR_Erik_Colban
+recruit_character = NOR_Jacob_Worm_Muller
+recruit_character = NOR_Arne_Scheel
+recruit_character = NOR_Ivar_Lykke
+recruit_character = NOR_Birger_Braadland
+recruit_character = NOR_Jon_Leirfall
+recruit_character = NOR_Adolf_Hoel
+recruit_character = NOR_Albert_Viljam_Hagelin
+recruit_character = NOR_Finn_Storen
+recruit_character = NOR_Axel_Stang
+recruit_character = NOR_Johan_Lippestad
+recruit_character = NOR_Haavard_Langseth
+recruit_character = NOR_Johan_Strand_Johansen
+recruit_character = NOR_Fredrik_Monsen
+recruit_character = NOR_Ole_Colbjornsen
+recruit_character = NOR_Adolf_Indrebo
+recruit_character = NOR_Ragnar_Frisch
+recruit_character = NOR_Kornelius_Bergsvik
+recruit_character = NOR_Oscar_Torp
+recruit_character = NOR_Jens_Isak_Kobro
+recruit_character = NOR_Per_Berg_Lund
+recruit_character = NOR_Ole_Bæroe
+recruit_character = NOR_Sven_Nielsen
+recruit_character = NOR_Jon_Sundby
+recruit_character = NOR_Nicolai_Rygg
+recruit_character = NOR_Alf_Larsen_Whist
+recruit_character = NOR_Axel_Aubert
+recruit_character = NOR_Eivind_Blehr
+recruit_character = NOR_Frederik_Prytz
+recruit_character = NOR_Carl_Frolich_Hanssen
+recruit_character = NOR_Tormod_Hustad
+recruit_character = NOR_Henry_Wilhelm_Kristiansen
+recruit_character = NOR_Sverre_Krogh
+recruit_character = NOR_Emil_Stang
+recruit_character = NOR_Olav_Hindahl
+recruit_character = NOR_Alfred_Madsen
+recruit_character = NOR_Jakob_Friis
+recruit_character = NOR_Paul_Hartmann
+recruit_character = NOR_Terje_Wold
+recruit_character = NOR_Arne_Sunde
+recruit_character = NOR_Haakon_Sund
+recruit_character = NOR_Harald_Gram
+recruit_character = NOR_Odd_Klingenberg
+recruit_character = NOR_Ivar_Kirkeby_Garstad
+recruit_character = NOR_Nils_Trædal
+recruit_character = NOR_Herman_Harris_Aall
+recruit_character = NOR_Ragnar_Skancke
+recruit_character = NOR_Per_von_Hirsch
+recruit_character = NOR_Rolf_Jorgen_Fuglesang
+recruit_character = NOR_Arnvid_Vasbotten
+recruit_character = NOR_Sverre_Riisnæs
+recruit_character = NOR_Andreas_Wettre
+recruit_character = NOR_Carl_Johan_Erichsen
+recruit_character = NOR_Arne_Gausla
+recruit_character = NOR_Oliver_Moystad
+recruit_character = NOR_Olaf_Kullmann
+recruit_character = NOR_Kjeld_Stub_Irgens
+recruit_character = NOR_Georg_Jacob_Falck_Bull
+recruit_character = NOR_Bjarne_Oen
+recruit_character = NOR_Ole_Reistad
+recruit_character = NOR_Birger_Fredrik_Motzfeldt
+recruit_character = NOR_Hjalmar_Riiser_Larsen
+recruit_character = NOR_Tryggve_Gran
+recruit_character = NOR_Konrad_Sundlo
+recruit_character = NOR_Henrik_Rogstad
+recruit_character = NOR_Birger_Eriksen
+recruit_character = NOR_Birger_Ljungberg

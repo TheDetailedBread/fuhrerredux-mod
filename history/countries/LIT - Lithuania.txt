@@ -1,4 +1,4 @@
-﻿capital = 96
+capital = 96
 
 oob = "LIT"
 if = {
@@ -15,10 +15,6 @@ add_ideas = {
 	party_pop_0_40
 	limited_conscription
 	GEN_entente_member
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	constitutional_monarchy
 }
 
@@ -44,6 +40,7 @@ set_technology = {
 	early_battlecruiser = 1
 	transport = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -81,67 +78,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 16
-    collectivist = 0
-    libertarian_socialist = 4
-    social_democrat = 0
-    social_liberal = 8
-    market_liberal = 0
-    social_conservative = 5
-    authoritarian_democrat = 0
-    paternal_autocrat = 49
-    national_populist = 18
-    valkist = 0
-}
-
-#create_country_leader = {
-#	name = "Antanas Smetona"
-#	desc = "POLITICS_ANTANAS_SMETONA_DESC"
-#	picture = "GFX_Portrait_lithuania_antanas_smetona"
-#	expire = "1965.1.1"
-#	ideology = paternal_autocrat_subtype
-#	traits = {
-#		#
-#	}
-#}
-
-create_country_leader = {
-	name = "Stanisław Narutowicz"
-	desc = "POLITICS_PROTECTORATE_DESC"
-	picture = "Portrait_Lithuania_Stanislaw_Narutowicz.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Antanas Snieckus"
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Augustinas Voldemaras"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_LIT_Augustinas_Voldemaras.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-create_navy_leader = {
-	name = "Antanas Kaskelis"
-		picture = "Portrait_LIT_Antanas_Kaskelis.tga"
-	traits = { spotter }
-	skill = 2
+  vanguardist = 16
+  collectivist = 0
+  libertarian_socialist = 4
+  social_democrat = 0
+  social_liberal = 8
+  market_liberal = 0
+  social_conservative = 5
+  authoritarian_democrat = 0
+  paternal_autocrat = 49
+  national_populist = 18
+  valkist = 0
 }
 
 ### VARIANTS ###
@@ -201,3 +148,7 @@ if = {
 		obsolete = yes
 	}
 }
+
+recruit_character = LIT_Stanisław_Narutowicz
+recruit_character = LIT_Augustinas_Voldemaras
+recruit_character = LIT_Antanas_Kaskelis

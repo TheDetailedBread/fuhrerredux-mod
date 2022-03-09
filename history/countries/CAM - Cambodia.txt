@@ -1,4 +1,4 @@
-﻿capital = 741
+capital = 741
 
 oob = "CAM_1936"
 
@@ -8,11 +8,6 @@ set_war_support = 0.50
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_mli
-	GEN_for_mli
-	GEN_eco_mli
-	GEN_sec_mli
-
 	presidential_republic
 }
 
@@ -49,6 +44,7 @@ set_technology = {
 	early_carrier = 1
 	transport = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 set_politics = {
@@ -71,27 +67,6 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "Pol Pot" 
-	desc = "POLITICS_POL_POT_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
-	expire = "1953.3.1"
-	ideology = vanguardist_subtype
-	traits = {}
-}
-create_country_leader = {
-	name = "Sisowath Youtévong"
-	desc = "POLITICS_SISOWATH_YOUTEVONG_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
-	expire = "1953.3.1"
-	ideology = market_liberal_subtype
-	traits = {}
-}
-create_country_leader = {
-	name = "Norodom Sihanouk" 
-	desc = "POLITICS_NORODOM_SIHANOUK_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = social_conservative_subtype
-	traits = {}
-}
+recruit_character = CAM_Pol_Pot
+recruit_character = CAM_Sisowath_Youtevong
+recruit_character = CAM_Norodom_Sihanouk

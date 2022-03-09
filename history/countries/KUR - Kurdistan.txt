@@ -1,4 +1,4 @@
-﻿capital = 352
+capital = 352
 
 oob = "KUR_1936"
 
@@ -29,14 +29,11 @@ set_technology = {
 	naval_bomber1 = 1
 	transport = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	parliamentary_republic
 }
 
@@ -48,26 +45,18 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 26
-    social_liberal = 4
-    market_liberal = 1
-    social_conservative = 27
-    authoritarian_democrat = 32
-    paternal_autocrat = 10
-    national_populist = 0
-    valkist = 0
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 26
+  social_liberal = 4
+  market_liberal = 1
+  social_conservative = 27
+  authoritarian_democrat = 32
+  paternal_autocrat = 10
+  national_populist = 0
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Jeladet Bedir Khan"
-	desc = ""
-	picture = "Portrait_KUR_Jeladet_Bedir_Khan.tga"
-	expire = "1953.3.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		
-	}
-}
+recruit_character = KUR_Jeladet_Bedir_Khan
+recruit_character = KUR_Mistefa_Barzani

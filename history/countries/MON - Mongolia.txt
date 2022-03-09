@@ -1,10 +1,11 @@
-﻿capital = 330
+capital = 330
 
 oob = "MON_1936"
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+  basic_train = 1
 }
 
 add_ideas = {
@@ -14,10 +15,6 @@ add_ideas = {
 	MON_nomad
 	MON_doctrine
 	MON_industrial_combine
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	theocratic_dictatorship
 }
 
@@ -36,104 +33,23 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 4
-    libertarian_socialist = 0
-    social_democrat = 0
-    social_liberal = 0
-    market_liberal = 0
-    social_conservative = 14
-    authoritarian_democrat = 34
-    paternal_autocrat = 48
-    national_populist = 0
-    valkist = 0
+  vanguardist = 0
+  collectivist = 4
+  libertarian_socialist = 0
+  social_democrat = 0
+  social_liberal = 0
+  market_liberal = 0
+  social_conservative = 14
+  authoritarian_democrat = 34
+  paternal_autocrat = 48
+  national_populist = 0
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Mongolian Khural"
-	desc = "POLITICS_KHURAL_DESC"
-	picture = "Portrait_MON_Mongolian_Khural.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mongolian Khural"
-	desc = "POLITICS_KHURAL_DESC"
-	picture = "Portrait_MON_Mongolian_Khural.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ölziin Badrakh"
-	desc = "POLITICS_BADRAKH_DESC"
-	picture = "Portrait_MON_Ölziin_Badrakh.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ja Lama"
-	desc = "POLITICS_JA_LAMA_DESC"
-	picture = "Portrait_MON_Ja_Lama.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-
-create_field_marshal = {
-	name = "Khatanbaatar Magsarjav"
-	picture = "Portrait_MON_Khatanbaatar.tga"
-	traits = { offensive_doctrine cavalry_officer brilliant_strategist cavalry_leader }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Damdin Sükhbaatar"
-	picture = "Portrait_MON_Sukhbaatar.tga"
-	traits = { cavalry_officer trait_reckless cavalry_leader }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-	
-create_corps_commander = {
-	name = "Gonchigiin Bumtsend"
-	picture = "Portrait_MON_Bumtsend.tga"
-	traits = { cavalry_leader }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Dansranbilegiin Dogsom"
-	picture = "Portrait_MON_Dogsom.tga"
-	traits = { cavalry_leader }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
+recruit_character = MON_Mongolian_Khural
+recruit_character = MON_Olziin_Badrakh
+recruit_character = MON_Ja_Lama
+recruit_character = MON_Khatanbaatar_Magsarjav
+recruit_character = MON_Damdin_Sukhbaatar
+recruit_character = MON_Gonchigiin_Bumtsend
+recruit_character = MON_Dansranbilegiin_Dogsom

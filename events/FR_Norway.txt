@@ -347,7 +347,7 @@ country_event = {
 	}
 }
 
-country_event {
+country_event = {
 	id = nor.14
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.14"}
 	title = nor.14.t
@@ -377,16 +377,14 @@ country_event {
 		hidden_effect = {
 			add_stability = 0.03
 			set_country_flag = NOR_democracy_survives_flag
-			create_country_leader = {
-				name = "Martin Tranmæl"
-				desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-				picture = "Portrait_Martin_Tranmael.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Martin_Tranmæl
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 			country_event = { id = nor.15 days = 2 }
 			country_event = { id = nor.110 days = 3 }
 		}
@@ -425,16 +423,14 @@ country_event {
 		set_country_flag = coalition_social_democrat
 		hidden_effect = {
 			add_stability = 0.03
-			create_country_leader = {
-				name = "Martin Tranmæl"
-				desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-				picture = "Portrait_Martin_Tranmael.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Martin_Tranmæl
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 			country_event = { id = nor.111 days = 3 }
 		}
 	}
@@ -472,16 +468,14 @@ country_event {
 		set_country_flag = coalition_social_conservative
 		hidden_effect = {
 			add_stability = 0.03
-			create_country_leader = {
-				name = "Martin Tranmæl"
-				desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-				picture = "Portrait_Martin_Tranmael.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Martin_Tranmæl
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 			country_event = { id = nor.112 days = 3 }
 		}
 	}
@@ -748,26 +742,23 @@ country_event = {
 		
 		custom_effect_tooltip  = NOR_allow_nationalist_generals_tooltip
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ragnvald Hvoslef"
-				desc = "POLITICS_RAGNVALD_HVOSLEF_DESC"
-				picture = "Portrait_NOR_Ragnvald_Hvoslef.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
-			create_corps_commander = {
-				name = "Ragnvald Hvoslef"
-				portrait_path = "gfx/leaders/NOR/Portrait_NOR_Ragnvald_Hvoslef.tga"
-				traits = { old_guard }
+      add_country_leader_role = {
+        character = NOR_Ragnvald_Hvoslef
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
+      add_corps_commander_role = {
+        character = NOR_Ragnvald_Hvoslef
+        traits = { old_guard }
 				skill = 2
 				attack_skill = 2
 				defense_skill = 2
 				planning_skill = 2
 				logistics_skill = 2
-			}
+      }
 		}
 	}
 }
@@ -838,16 +829,14 @@ country_event = {
 		clr_country_flag = coalition_paternal_autocrat
 		clr_country_flag = coalition_valkist
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ragnvald Hvoslef"
-				desc = "POLITICS_RAGNVALD_HVOSLEF_DESC"
-				picture = "Portrait_NOR_Ragnvald_Hvoslef.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Ragnvald_Hvoslef
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -871,16 +860,14 @@ country_event = {
 		clr_country_flag = coalition_social_conservative
 		clr_country_flag = coalition_paternal_autocrat
 		hidden_effect = {
-			create_country_leader = {
-				name = "Vidkun Quisling"
-				desc = "POLITICS_VIDKUN_QUISLING_DESC"
-				picture = "Portrait_Vidkun_Quisling.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Vidkun_Quisling
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -1047,16 +1034,14 @@ country_event = {
 					has_government = market_liberal
 				}
 			}
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 		if = {
 			limit = {
@@ -1064,16 +1049,14 @@ country_event = {
 					has_government = social_liberal
 				}
 			}
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 		remove_ideas = NOR_monarchist_right_idea1
 		clr_country_flag = NOR_republic_flag
@@ -1119,16 +1102,14 @@ country_event = {
 	option = {
 		name = nor.33.a
 		add_political_power = 10
-		create_country_leader = {
-			name = "H.M. King Olav V"
-			desc = "POLITICS_KING_OLAV_V_DESC"
-			picture = "Portrait_Olav_V.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-				#
-			}
-		}
+		add_country_leader_role = {
+      character = NOR_Olav_V
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		remove_ideas_with_trait = head_of_government
 		add_ideas = NOR_Rudolf_Raeder_hog_npo
 	}
@@ -1149,16 +1130,14 @@ country_event = {
 		name = nor.34.a
 		add_political_power = 25
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -1186,16 +1165,14 @@ country_event = {
 		add_ideas = NOR_Sverre_Riisnaes_sec_pau
 		set_country_flag = coalition_national_populist
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -1291,16 +1268,14 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		set_country_flag = coalition_market_liberal
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Olav V"
-				desc = "POLITICS_KING_OLAV_V_DESC"
-				picture = "Portrait_Olav_V.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -1323,16 +1298,14 @@ country_event = {
 		}
 		set_country_flag = coalition_paternal_autocrat
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Olav V"
-				desc = "POLITICS_KING_OLAV_V_DESC"
-				picture = "Portrait_Olav_V.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Olav_V
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -2417,16 +2390,14 @@ country_event = {
 					}
 				}
 			}
-			create_country_leader = {
-				name = "Carl Joachim Hambro"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_Norway_Vidkun_Quisling.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Carl_Joachim_Hambro
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -3040,7 +3011,7 @@ country_event = {
 
 ### 1940 Parliamentary Election - AP 1936 Victory ###
 
-country_event {
+country_event = {
 	id = nor.99
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.99"}
 	title = nor.99.t
@@ -3089,16 +3060,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.114 days = 2 }
 			}
 			else_if = {
@@ -3106,16 +3075,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.114 days = 2 }
 			}
 			else_if = {
@@ -3123,32 +3090,28 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.114 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -3186,16 +3149,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
@@ -3203,16 +3164,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
@@ -3220,38 +3179,34 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
 }
 
-country_event {
+country_event = {
 	id = nor.100
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.100"}
 	title = nor.100.t
@@ -3292,46 +3247,40 @@ country_event {
 				limit = {
 					has_country_flag = NOR_president_tranmael_1936
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = collectivist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_president_christensen_1936
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = collectivist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_president_mowinckel_1936
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = collectivist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
 			}
 			country_event = { id = nor.113 days = 3 }
 		}
@@ -3362,46 +3311,40 @@ country_event {
 				limit = {
 					has_country_flag = NOR_president_tranmael_1936
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_president_christensen_1936
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_president_mowinckel_1936
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 			country_event = { id = nor.113 days = 3 }
 		}
@@ -3437,53 +3380,47 @@ country_event {
 				limit = {
 					has_country_flag = NOR_president_tranmael_1936
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_president_christensen_1936
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_president_mowinckel_1936
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 			country_event = { id = nor.113 days = 3 }
 		}
 	}
 }
 
-country_event {
+country_event = {
 	id = nor.101
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.101"}
 	title = nor.101.t
@@ -3530,16 +3467,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.114 days = 2 }
 			}
 			else_if = {
@@ -3547,16 +3482,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.114 days = 2 }
 			}
 			else_if = {
@@ -3564,32 +3497,28 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.114 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -3614,16 +3543,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.122 days = 2 }
 			}
 			else_if = {
@@ -3631,16 +3558,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.122 days = 2 }
 			}
 			else_if = {
@@ -3648,32 +3573,28 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.122 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -3709,16 +3630,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
@@ -3726,16 +3645,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
@@ -3743,38 +3660,34 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
 }
 
-country_event {
+country_event = {
 	id = nor.102
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.102"}
 	title = nor.102.t
@@ -3829,16 +3742,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.122 days = 2 }
 			}
 			else_if = {
@@ -3846,16 +3757,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.122 days = 2 }
 			}
 			else_if = {
@@ -3863,32 +3772,28 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.122 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -3916,16 +3821,14 @@ country_event {
 					has_country_flag = NOR_president_tranmael_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Martin Tranmæl"
-					desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-					picture = "Portrait_Martin_Tranmael.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Martin_Tranmæl
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
@@ -3933,16 +3836,14 @@ country_event {
 					has_country_flag = NOR_president_christensen_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Ingolf Elster Christensen"
-					desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-					picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Ingolf_Elster_Christensen
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
@@ -3950,38 +3851,34 @@ country_event {
 					has_country_flag = NOR_president_mowinckel_1936
 					has_country_flag = NOR_republic_flag
 				}
-				create_country_leader = {
-					name = "Johan Ludwig Mowinckel"
-					desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-					picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Ludwig_Mowinckel
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 				country_event = { id = nor.118 days = 2 }
 			}
 			else_if = {
 				limit = {
 					has_country_flag = NOR_monarchy_restored
 				}
-				create_country_leader = {
-					name = "H.M. King Haakon VII"
-					desc = "POLITICS_KING_HAAKON_VII_DESC"
-					picture = "Portrait_King_Haakon_VII.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_HM_King_Haakon_VII
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
 }
 
-country_event {
+country_event = {
 	id = nor.104
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.104"}
 	title = nor.104.t
@@ -4030,16 +3927,14 @@ country_event {
 					has_country_flag = NOR_monarchy_restored
 				}
 			}
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 
@@ -4077,21 +3972,19 @@ country_event {
 					has_country_flag = NOR_monarchy_restored
 				}
 			}
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
 
-country_event {
+country_event = {
 	id = nor.105
 	immediate = {log = "[GetDateText]: [Root.GetName]: event nor.105"}
 	title = nor.105.t
@@ -4143,16 +4036,14 @@ country_event {
 					has_country_flag = NOR_monarchy_restored
 				}
 			}
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 
@@ -4189,16 +4080,14 @@ country_event {
 					has_country_flag = NOR_monarchy_restored
 				}
 			}
-			create_country_leader = {
-				name = "H.M. King Haakon VII"
-				desc = "POLITICS_KING_HAAKON_VII_DESC"
-				picture = "Portrait_King_Haakon_VII.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_HM_King_Haakon_VII
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4226,16 +4115,14 @@ country_event = {
 		hidden_effect = {
 			remove_ideas = NOR_government_president_struggle_idea
 			set_country_flag = NOR_president_tranmael_1936
-			create_country_leader = {
-				name = "Martin Tranmæl"
-				desc = "POLITICS_MARTIN_TRANMAEL_DESC"
-				picture = "Portrait_Martin_Tranmael.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Martin_Tranmæl
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4271,16 +4158,14 @@ country_event = {
 		set_country_flag = NOR_republic_flag
 		add_ideas = NOR_government_president_struggle_idea
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ingolf Elster Christensen"
-				desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-				picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Ingolf_Elster_Christensen
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4314,16 +4199,14 @@ country_event = {
 		set_country_flag = NOR_president_mowinckel_1936
 		set_country_flag = NOR_republic_flag
 		hidden_effect = {
-			create_country_leader = {
-				name = "Johan Ludwig Mowinckel"
-				desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-				picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Johan_Ludwig_Mowinckel
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4357,16 +4240,14 @@ country_event = {
 		set_country_flag = NOR_president_christensen_1936
 		set_country_flag = NOR_republic_flag
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ingolf Elster Christensen"
-				desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-				picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Ingolf_Elster_Christensen
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4400,46 +4281,40 @@ country_event = {
 				limit = {
 					has_government = collectivist
 				}
-				create_country_leader = {
-					name = "Einar Gerhardsen"
-					desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-					picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-					expire = "1965.1.1"
-					ideology = collectivist_subtype
-					traits = {
-						#
-					}
-				}
+        add_country_leader_role = {
+          character = NOR_Einar_Gerhardsen
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = libertarian_socialist
 				}
-				create_country_leader = {
-					name = "Einar Gerhardsen"
-					desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-					picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Einar_Gerhardsen
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = social_democrat
 				}
-				create_country_leader = {
-					name = "Einar Gerhardsen"
-					desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-					picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Einar_Gerhardsen
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -4463,46 +4338,40 @@ country_event = {
 				limit = {
 					has_government = collectivist
 				}
-				create_country_leader = {
-					name = "Haavard Langseth"
-					desc = "POLITICS_HAAVARD_LANGSETH_DESC"
-					picture = "Portrait_Norway_Haavard_Langseth.tga"
-					expire = "1965.1.1"
-					ideology = collectivist_subtype
-					traits = {
-						#
-					}
-				}
+        add_country_leader_role = {
+          character = NOR_Haavard_Langseth
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = libertarian_socialist
 				}
-				create_country_leader = {
-					name = "Haavard Langseth"
-					desc = "POLITICS_HAAVARD_LANGSETH_DESC"
-					picture = "Portrait_Norway_Haavard_Langseth.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+        add_country_leader_role = {
+          character = NOR_Haavard_Langseth
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = social_democrat
 				}
-				create_country_leader = {
-					name = "Haavard Langseth"
-					desc = "POLITICS_HAAVARD_LANGSETH_DESC"
-					picture = "Portrait_Norway_Haavard_Langseth.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Haavard_Langseth
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -4523,46 +4392,40 @@ country_event = {
 				limit = {
 					has_government = collectivist
 				}
-				create_country_leader = {
-					name = "Johan Nygaardsvold"
-					desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-					picture = "Portrait_Johan_Nygaardsvold.tga"
-					expire = "1965.1.1"
-					ideology = collectivist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Nygaardsvold
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = libertarian_socialist
 				}
-				create_country_leader = {
-					name = "Johan Nygaardsvold"
-					desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-					picture = "Portrait_Johan_Nygaardsvold.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Nygaardsvold
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = social_democrat
 				}
-				create_country_leader = {
-					name = "Johan Nygaardsvold"
-					desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-					picture = "Portrait_Johan_Nygaardsvold.tga"
-					expire = "1965.1.1"
-					ideology = social_democrat_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Johan_Nygaardsvold
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -4666,16 +4529,14 @@ country_event = {
 			ideology = libertarian_socialist popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Einar Gerhardsen"
-				desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-				picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Einar_Gerhardsen
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -4691,16 +4552,14 @@ country_event = {
 			ideology = market_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Arthur Nordlie"
-				desc = "POLITICS_ARTHUR_NORDLIE_DESC"
-				picture = "Portrait_Norway_Arthur_Nordlie.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Arthur_Nordlie
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4729,16 +4588,14 @@ country_event = {
 			ideology = collectivist popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Haavard Langseth"
-				desc = "POLITICS_HAAVARD_LANGSETH_DESC"
-				picture = "Portrait_Norway_Haavard_Langseth.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Haavard_Langseth
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -4754,16 +4611,14 @@ country_event = {
 			ideology = market_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Arthur Nordlie"
-				desc = "POLITICS_ARTHUR_NORDLIE_DESC"
-				picture = "Portrait_Norway_Arthur_Nordlie.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Arthur_Nordlie
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4792,16 +4647,14 @@ country_event = {
 			ideology = social_democrat popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Johan Nygaardsvold"
-				desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-				picture = "Portrait_Johan_Nygaardsvold.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Johan_Nygaardsvold
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -4817,16 +4670,14 @@ country_event = {
 			ideology = market_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Arthur Nordlie"
-				desc = "POLITICS_ARTHUR_NORDLIE_DESC"
-				picture = "Portrait_Norway_Arthur_Nordlie.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Arthur_Nordlie
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4905,16 +4756,14 @@ country_event = {
 			ideology = market_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Arthur Nordlie"
-				desc = "POLITICS_ARTHUR_NORDLIE_DESC"
-				picture = "Portrait_Norway_Arthur_Nordlie.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Arthur_Nordlie
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -4930,16 +4779,14 @@ country_event = {
 			ideology = libertarian_socialist popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Einar Gerhardsen"
-				desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-				picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Einar_Gerhardsen
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -4968,16 +4815,14 @@ country_event = {
 			ideology = market_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Ingolf Elster Christensen"
-				desc = "POLITICS_INGOLF_ELSTER_CHRISTENSEN_DESC"
-				picture = "Portrait_Norway_Ingolf_Elster_Christensen.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Ingolf_Elster_Christensen
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -4993,16 +4838,14 @@ country_event = {
 			ideology = libertarian_socialist popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Einar Gerhardsen"
-				desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-				picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Einar_Gerhardsen
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -5035,31 +4878,27 @@ country_event = {
 				limit = {
 					has_government = social_liberal
 				}
-				create_country_leader = {
-					name = "Nils Trædal"
-					desc = "POLITICS_NILS_TRAEDAL_DESC"
-					picture = "Portrait_Nils_Traedal.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Nils_Trædal
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = market_liberal
 				}
-				create_country_leader = {
-					name = "Nils Trædal"
-					desc = "POLITICS_NILS_TRAEDAL_DESC"
-					picture = "Portrait_Nils_Traedal.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Arthur_Nordlie
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -5080,31 +4919,27 @@ country_event = {
 				limit = {
 					has_government = social_liberal
 				}
-				create_country_leader = {
-					name = "Einar Gerhardsen"
-					desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-					picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-					expire = "1965.1.1"
-					ideology = social_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Einar_Gerhardsen
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 			else_if = {
 				limit = {
 					has_government = market_liberal
 				}
-				create_country_leader = {
-					name = "Einar Gerhardsen"
-					desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-					picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-					expire = "1965.1.1"
-					ideology = market_liberal_subtype
-					traits = {
-						#
-					}
-				}
+				add_country_leader_role = {
+          character = NOR_Einar_Gerhardsen
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 	}
@@ -5184,16 +5019,14 @@ country_event = {
 			ideology = social_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Arne Sunde"
-				desc = "POLITICS_ARNE_SUNDE_DESC"
-				picture = "Portrait_Norway_Arne_Sunde.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Arne_Sunde
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -5209,16 +5042,14 @@ country_event = {
 			ideology = libertarian_socialist popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Einar Gerhardsen"
-				desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-				picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Einar_Gerhardsen
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -5247,16 +5078,14 @@ country_event = {
 			ideology = social_liberal popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Johan Ludwig Mowinckel"
-				desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-				picture = "Portrait_Johan_Ludwig_Mowinckel.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Johan_Ludwig_Mowinckel
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -5272,16 +5101,14 @@ country_event = {
 			ideology = libertarian_socialist popularity = 0.01
 		}
 		hidden_effect = {
-			create_country_leader = {
-				name = "Einar Gerhardsen"
-				desc = "POLITICS_EINAR_GERHARDSEN_DESC"
-				picture = "Portrait_Norway_Einar_Gerhardsen.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Einar_Gerhardsen
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -5325,16 +5152,14 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		set_country_flag = coalition_market_liberal
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Olav V"
-				desc = "POLITICS_KING_OLAV_V_DESC"
-				picture = "Portrait_Olav_V.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+      add_country_leader_role = {
+        character = NOR_Olav_V
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -5360,16 +5185,14 @@ country_event = {
 		set_country_flag = coalition_paternal_autocrat
 		set_country_flag = coalition_social_conservative
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Olav V"
-				desc = "POLITICS_KING_OLAV_V_DESC"
-				picture = "Portrait_Olav_V.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Olav_V
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -5394,16 +5217,14 @@ country_event = {
 		clr_country_flag = coalition_social_conservative
 		set_country_flag = coalition_paternal_autocrat
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Olav V"
-				desc = "POLITICS_KING_OLAV_V_DESC"
-				picture = "Portrait_Olav_V.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Olav_V
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 	
@@ -5426,16 +5247,14 @@ country_event = {
 		clr_country_flag = coalition_paternal_autocrat
 		set_country_flag = coalition_authoritarian_democrat
 		hidden_effect = {
-			create_country_leader = {
-				name = "H.M. King Olav V"
-				desc = "POLITICS_KING_OLAV_V_DESC"
-				picture = "Portrait_Olav_V.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
+			add_country_leader_role = {
+        character = NOR_Olav_V
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }

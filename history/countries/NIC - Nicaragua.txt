@@ -1,4 +1,4 @@
-﻿capital = 317
+capital = 317
 
 oob = "NIC_1936"
 
@@ -9,6 +9,7 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 set_country_flag = monroe_doctrine
 
@@ -18,10 +19,6 @@ set_war_support = 0.66
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	presidential_republic
 }
 
@@ -33,43 +30,18 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 1
-    collectivist = 14
-    libertarian_socialist = 2
-    social_democrat = 0
-    social_liberal = 2
-    market_liberal = 16
-    social_conservative = 8
-    authoritarian_democrat = 48
-    paternal_autocrat = 0
-    national_populist = 9
-    valkist = 0
+  vanguardist = 1
+  collectivist = 14
+  libertarian_socialist = 2
+  social_democrat = 0
+  social_liberal = 2
+  market_liberal = 16
+  social_conservative = 8
+  authoritarian_democrat = 48
+  paternal_autocrat = 0
+  national_populist = 9
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Juan Bautista Sacasa"
-	desc = "POLITICS_JUAN_BAUTISTA_SACASA_DESC"
-	picture = "Portrait_Nicaragua_Juan_Bautista_Sacasa.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Anastasio Somoza García"
-	desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
-	picture = "Portrait_Nicaragua_Anastasio_Somoza_Garcia_fx.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-
-create_field_marshal = {
-	name = "Anastasio Somoza García"
-	picture = "Portrait_Nicaragua_Anastasio_Somoza_Garcia_fx.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
+recruit_character = NIC_Anastasio_Somoza_Garcia
+recruit_character = NIC_Juan_Bautista_Sacasa

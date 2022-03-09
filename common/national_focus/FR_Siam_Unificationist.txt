@@ -1074,16 +1074,14 @@ shared_focus = {
 					ruling_only = yes
 				}
 			}
-			create_country_leader = {
-				name = "Luang Wattanarattawichit"
-				picture = "Portrait_Siam_Luang_Wattanarattawichit.tga"
-				expire = "1965.1.1"
-				desc = "LUANG_WATTANARATTAWICHIT_Eternal_Regent_DESC"
-				ideology = valkist_subtype
-				traits = {
-					eternal_unified_regent
-				}
-			}
+      add_country_leader_role = {
+        character = SIA_Luang_Wattanarattawichit
+        promote_leader = yes
+        country_leader = {
+          ideology = valkist_subtype
+          traits = { eternal_unified_regent }
+        }
+      }
 		}
 	}
 }

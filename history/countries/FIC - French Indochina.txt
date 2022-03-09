@@ -1,4 +1,4 @@
-﻿capital = 958 #Hanoi
+capital = 958 #Hanoi
 
 oob = "FIC_1936"
 
@@ -20,6 +20,7 @@ set_technology = {
 	early_destroyer = 1
 	early_light_cruiser = 1
 	transport = 1
+  basic_train = 1
 }
 
 if = {
@@ -39,10 +40,6 @@ add_ideas = {
 	FIC_vietnamese_unrest
 	FIC_the_indochinese_apparatus
 	FIC_salt_opium_alcohol
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	colonial_government
 }
 
@@ -77,121 +74,12 @@ set_popularities = {
 	valkist = 0
 }
 
-create_country_leader = {
-	name = "Maurice Graffeuil"
-	desc = ""
-	picture = "Portrait_FIC_Maurice_Graffeuil.tga"
-	expire = "1953.3.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-	
-	}
-}
-
-create_country_leader = {
-	name = "Maurice Graffeuil"
-	desc = ""
-	picture = "Portrait_FIC_Maurice_Graffeuil.tga"
-	expire = "1953.3.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Nguyen Ai Quoc"
-	desc = ""
-	picture = "Portrait_FIC_Nguyen_Ai_Quoc.tga"
-	expire = "1953.3.1"
-	ideology = vanguardist_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Nguyen Ai Quoc"
-	desc = ""
-	picture = "Portrait_FIC_Nguyen_Ai_Quoc.tga"
-	expire = "1953.3.1"
-	ideology = collectivist_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Nguyen An Ninh"
-	desc = ""
-	picture = "Portrait_FIC_Nguyen_An_Ninh.tga"
-	expire = "1953.3.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Nguyen Thai Hoc"
-	desc = ""
-	picture = "Portrait_FIC_Nguyen_Thai_Hoc.tga"
-	expire = "1953.3.1"
-	ideology = social_democrat_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Hoang Dao"
-	desc = ""
-	picture = "Portrait_FIC_Hoang_Dao.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-	
-	}
-}
-
-create_country_leader = {
-	name = "Bui Quang Chieu"
-	desc = ""
-	picture = "Portrait_FIC_Bui_Quang_Chieu.tga"
-	expire = "1953.3.1"
-	ideology = market_liberal_subtype
-	traits = {
-	
-	}
-}
-
-create_country_leader = {
-	name = "Pham Quynh"
-	desc = ""
-	picture = "Portrait_FIC_Pham_Quynh.tga"
-	expire = "1953.3.1"
-	ideology = social_conservative_subtype
-	traits = {
-	
-	}
-}
-
-create_country_leader = {
-	name = "Tran Trong Kim"
-	desc = ""
-	picture = "Portrait_FIC_Tran_Trong_Kim.tga"
-	expire = "1953.3.1"
-	ideology = national_populist_subtype
-	traits = {
-	
-	}
-}
-
-create_country_leader = {
-	name = "Truong Tu Anh"
-	desc = ""
-	picture = "Portrait_FIC_Truong_Tu_Anh.tga"
-	expire = "1953.3.1"
-	ideology = valkist_subtype
-	traits = {
-	
-	}
-}
-
-
-
+recruit_character = FIC_Maurice_Graffeuil
+recruit_character = FIC_Nguyen_Ai_Quoc
+recruit_character = FIC_Nguyen_An_Ninh
+recruit_character = FIC_Nguyen_Thai_Hoc
+recruit_character = FIC_Hoang_Dao
+recruit_character = FIC_Bui_Quang_Chieu
+recruit_character = FIC_Pham_Quynh
+recruit_character = FIC_Tran_Trong_Kim
+recruit_character = FIC_Truong_Tu_Anh

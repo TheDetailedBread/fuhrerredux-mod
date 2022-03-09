@@ -1,4 +1,4 @@
-﻿capital = 500
+capital = 500
 
 add_ideas = {
 	party_pop_0_30
@@ -52,7 +52,24 @@ if = {
 		basic_torpedo = 1
 		mtg_transport = 1
 	}
+<<<<<<< HEAD
 	set_naval_oob = "BRA_1936_naval_mtg"	
+=======
+	set_naval_oob = "BRA_naval_mtg"	
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	CAS1 = 1
+	fuel_silos = 1
+  basic_train = 1
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 }
 set_politics = {	
 	ruling_party = market_liberal
@@ -71,6 +88,7 @@ set_popularities = {
     authoritarian_democrat = 5
 }
 
+<<<<<<< HEAD
 
 create_country_leader = {
 	name = "Luís Carlos Prestes"
@@ -135,66 +153,23 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = valkist_subtype
 	traits = { }
+=======
+add_ideas = {
+	party_pop_0_30
+	limited_conscription
+	BRA_political_instability
+	GEN_hog_mli
+	GEN_for_mli
+	GEN_eco_mli
+	GEN_sec_mli
+	presidential_republic
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 }
 
 set_convoys = 40
 set_stability = 0.30
 set_war_support = 0.76
 
-create_corps_commander = {
-	name = "Eurico Gaspar Dutra"
-	portrait_path = "gfx/leaders/BRA/BRA_Erico_Gaspar_Dutra.tga"
-	traits = { 	
-	infantry_officer
-	harsh_leader
-	offensive_doctrine  
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Euclides Figueiredo"
-	portrait_path = "gfx/leaders/BRA/EuclidesFigueiredo.tga"
-	traits = {  politically_connected
-		media_personality
-		hill_fighter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Palimércio de Rezende"
-	portrait_path = "gfx/leaders/BRA/BRA_Palimerico_Rezende.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-create_field_marshal = {
-	name = "Mascarenhas de Morais"
-	picture = "Portrait_Brazil_Mascarenhas_Morais.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_navy_leader = {
-	name = "Isaías de Noronha"
-	picture = "Portrait_Brazil_Isaias_de_Noronha.tga"
-	traits = {  }
-	skill = 3
-}
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -264,6 +239,14 @@ if = {
 	}
 }
 
-
-
-
+recruit_character = BRA_Joao_Mangabeira
+recruit_character = BRA_Julio_Prestes
+recruit_character = BRA_Armando_Salles
+recruit_character = BRA_Otavio_Mangabeira
+recruit_character = BRA_Getulio_Vargas
+recruit_character = BRA_Gustavo_Dodt_Barroso
+recruit_character = BRA_Eurico_Gaspar_Dutra
+recruit_character = BRA_Euclides_Figueiredo
+recruit_character = BRA_Palimercio_de_Rezende
+recruit_character = BRA_Mascarenhas_de_Morais
+recruit_character = BRA_Isaias_de_Noronha

@@ -1,4 +1,4 @@
-﻿capital = 70
+capital = 70
 
 oob = "SLO_1936"
 
@@ -23,19 +23,15 @@ set_technology = {
 	early_bomber = 1
 	CAS1 = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	parliamentary_republic
 }
 
 set_politics = {
-
 	ruling_party = social_conservative
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -43,26 +39,18 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 2
-    libertarian_socialist = 1
-    social_democrat = 11
-    social_liberal = 26
-    market_liberal = 6
-    social_conservative = 47
-    authoritarian_democrat = 2
-    paternal_autocrat = 0
-    national_populist = 3
-    valkist = 0
+  vanguardist = 2
+  collectivist = 2
+  libertarian_socialist = 1
+  social_democrat = 11
+  social_liberal = 26
+  market_liberal = 6
+  social_conservative = 47
+  authoritarian_democrat = 2
+  paternal_autocrat = 0
+  national_populist = 3
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Andrej Hlinka"
-	desc = "POLITICS_ANDREJ_HLINKA_DESC"
-	picture = "AndrejHlinka.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = SLO_Andrej_Hlinka
+recruit_character = SLO_Anton_Korosec

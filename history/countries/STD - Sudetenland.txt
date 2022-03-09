@@ -1,4 +1,4 @@
-﻿capital = 69
+capital = 69
 
 oob = "STD"
 
@@ -17,14 +17,11 @@ set_technology = {
 	early_bomber = 1
 	CAS1 = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	parliamentary_republic
 }
 
@@ -41,23 +38,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 0
-    social_liberal = 0
-    market_liberal = 0
-    social_conservative = 45
-    authoritarian_democrat = 0
-    paternal_autocrat = 0
-    national_populist = 10
-    valkist = 45
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 0
+  social_liberal = 0
+  market_liberal = 0
+  social_conservative = 45
+  authoritarian_democrat = 0
+  paternal_autocrat = 0
+  national_populist = 10
+  valkist = 45
 }
-create_country_leader = {
-		name = "Rudolf Lodgman von Auen"
-		picture = "Portrait_STD_Lodgman.tga"
-		expire = "1970.1.1"
-		ideology = social_conservative_subtype
-		traits = {
-	}
-}
+
+recruit_character = STD_Rudolf_Lodgman_von_Auen

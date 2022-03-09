@@ -1,4 +1,4 @@
-﻿capital = 43
+capital = 43
 
 oob = "HUN_1936"
 
@@ -19,6 +19,7 @@ set_technology = {
 	naval_bomber1 = 1
 	basic_light_tank = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 set_politics = {	
@@ -29,271 +30,124 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 1
-    collectivist = 2
-    libertarian_socialist = 8
-    social_democrat = 9
-    social_liberal = 3
-    market_liberal = 7
-    social_conservative = 10
-    authoritarian_democrat = 7
-    paternal_autocrat = 1
-    national_populist = 51
-    valkist = 1
+  vanguardist = 1
+  collectivist = 2
+  libertarian_socialist = 8
+  social_democrat = 9
+  social_liberal = 3
+  market_liberal = 7
+  social_conservative = 10
+  authoritarian_democrat = 7
+  paternal_autocrat = 1
+  national_populist = 51
+  valkist = 1
 }
 
 add_ideas = {
 	party_pop_0_00
-   	hun_trianon
-   	hun_economic_ruin
-    disarmed_nation
-	HUN_Doeme_Sztojay_hog_npo
-	HUN_Ferenc_Szalasi_for_npo
-	HUN_Jeno_Racz_eco_npo
-	HUN_Andor_Jaross_sec_npo
+  hun_trianon
+  hun_economic_ruin
+  disarmed_nation
 	parliamentary_republic
 }
 
-
-
-create_country_leader = {
-	name = "Mátyás Rákosi"
-	desc = "POLITICS_MATYAS_RAKOSI_DESC"
-	picture = "Portrait_Hungary_Matyas_Rakosi.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Béla Kun"
-	desc = "POLITICS_BELA_KUN_DESC"
-	picture = "Portrait_Hungary_Bela_Kun.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Imre Nagy"
-	desc = "POLITICS_IMRE_NAGY_DESC"
-	picture = "Portrait_Hungary_Imre_Nagy.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Mihály Károlyi"
-	desc = "POLITICS_MIHALY_KAROLYI_DESC"
-	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_1.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Ferenc Nagy"
-	desc = "POLITICS_FERENC_NAGY_DESC"
-	picture = "Portrait_Hungary_Ferenc_Nagy.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "István Friedrich"
-	desc = "POLITICS_ISTVAN_FRIEDRICH_DESC"
-	picture = "Portrait_Hungary_Istvan_Friedrich.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Miklós Horthy"
-	desc = "POLITICS_MIKLOS_HORTHY_DESC"
-	picture = "Portrait_Hungary_Miklos_Horthy_fx.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Ferenc Szálasi"
-	desc = "POLITICS_FERENC_SZALASI_DESC"
-	picture = "Portrait_Hungary_Ferenc_Szalasi.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-
-#######################
-### Field Marshalls ###
-#######################
-
-create_field_marshal = { 
-	name = "Ferenc Feketehalmy-Czeydner"
-	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_8.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 4
-    defense_skill = 3
-    planning_skill = 1
-    logistics_skill = 2
-}
-################
-### Generals ###
-################
-
-
-create_corps_commander = {
-	name = "Géza Lakatos" 
-	picture = "Portrait_Hungary_Geza_Lakatos.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 4
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Iván Hindy" 
-	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_4.tga"
-	traits = {  trickster }
-	skill = 4
-	attack_skill = 3
-    defense_skill = 3
-    planning_skill = 1
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Károly Beregfy" 
-	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_5.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Lajos Veress" 
-	picture = "Portrait_Hungary_Lajos_Veress.tga"
-	traits = { panzer_leader }
-	skill = 2
-	attack_skill = 4
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Vilmos Nagy de Nagybaczon"
-	picture = "Portrait_Hungary_Vilmos_Nagybaczon.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Béla Király"
-	picture = "Portrait_Hungary_Bela_Kiraly.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Gusztáv Hennyey"
-	picture = "Portrait_Hungary_Gusztav_Hennyey.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "András Littay"
-	picture = "Portrait_Hungary_Andras_Littay.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 4
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Bela Miklos"
-	picture = "Portrait_Hungary_Bela_Miklos.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Döme Sztójay"
-	picture = "Portrait_Hungary_Dome_Sztojay.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 3
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Dezső László"
-	picture = "Portrait_Hungary_Dezso_Laszlo.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Szilard Bakay"
-	picture = "Portrait_Hungary_Szilard_Bakay.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Gusztav Jany"
-	picture = "Portrait_Hungary_Gusztav_Jany.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Karoly Bartha"
-	picture = "Portrait_Hungary_Karoly_Bartha.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-    defense_skill = 1
-    planning_skill = 4
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Kocsard Janky"
-	picture = "Portrait_Hungary_Kocsard_Janky.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Miklos Horthy"
-	picture = "Portrait_Hungary_Miklos_Horthy_fx.tga"
-	traits = { superior_tactician }
-	skill = 5
-}
+recruit_character = HUN_Matyas_Rakosi
+recruit_character = HUN_Bela_Kun
+recruit_character = HUN_Imre_Nagy
+recruit_character = HUN_Mihaly_Karolyi
+recruit_character = HUN_Ferenc_Nagy
+recruit_character = HUN_Istvan_Friedrich
+recruit_character = HUN_Miklos_Horthy
+recruit_character = HUN_Ferenc_Szalasi
+recruit_character = HUN_Ferenc_Feketehalmy_Czeydner
+recruit_character = HUN_Geza_Lakatos
+recruit_character = HUN_Ivan_Hindy
+recruit_character = HUN_Karoly_Beregfy
+recruit_character = HUN_Lajos_Veress
+recruit_character = HUN_Vilmos_Nagy_de_Nagybaczon
+recruit_character = HUN_Bela_Kiraly
+recruit_character = HUN_Gusztav_Hennyey
+recruit_character = HUN_Andras_Littay
+recruit_character = HUN_Bela_Miklos
+recruit_character = HUN_Dome_Sztojay
+recruit_character = HUN_Dezső_Laszlo
+recruit_character = HUN_Szilard_Bakay
+recruit_character = HUN_Gusztav_Jany
+recruit_character = HUN_Karoly_Bartha
+recruit_character = HUN_Kocsard_Janky
+recruit_character = HUN_Laszlo_Rajk
+recruit_character = HUN_Sandor_Garbai
+recruit_character = HUN_Arpad_Szakasits
+recruit_character = HUN_Karoly_Rassay
+recruit_character = HUN_Bela_Miklos_de_Dalnok
+recruit_character = HUN_Endre_Bajcsy_Zsilinszky
+recruit_character = HUN_Janos_Esterhazy
+recruit_character = HUN_Zoltan_Tildy
+recruit_character = HUN_Ferenc_Keresztes_Fischer
+recruit_character = HUN_Geza_Lakatos_de_Csikszentsimon
+recruit_character = HUN_Istvan_Bethlen
+recruit_character = HUN_Karoly_Bartha_de_Dalnokfalva
+recruit_character = HUN_Pal_Teleki_de_Szek
+recruit_character = HUN_Dezső_Pattantyus_Abraham
+recruit_character = HUN_Gyula_Gombos_de_Jakfa
+recruit_character = HUN_Kalman_Daranyi_de_Pusztaszentgyorgyi
+recruit_character = HUN_Laszlo_Bardossy
+recruit_character = HUN_Erik_Molnar
+recruit_character = HUN_Mate_Zalka
+recruit_character = HUN_Jozsef_Pogany
+recruit_character = HUN_Imre_Csaky
+recruit_character = HUN_Moric_Esterhazy
+recruit_character = HUN_Francois_Deak
+recruit_character = HUN_Janos_Gyongyosi
+recruit_character = HUN_Edgar_Keksz
+recruit_character = HUN_Gustav_Hennyey
+recruit_character = HUN_Istvan_Csaky
+recruit_character = HUN_Jenő_Ghyczy
+recruit_character = HUN_Kalman_Kanya
+recruit_character = HUN_Miklos_Kallay_de_Nagykallo
+recruit_character = HUN_Gabor_Kemeny
+recruit_character = HUN_Ernő_Gerő
+recruit_character = HUN_Zoltan_Vas
+recruit_character = HUN_Rezső_Fiedler
+recruit_character = HUN_Bela_Zsedenyi
+recruit_character = HUN_Gusztav_Gratz
+recruit_character = HUN_Miklos_Olgyay
+recruit_character = HUN_Imre_Oltvanyi
+recruit_character = HUN_Istvan_Winchkler
+recruit_character = HUN_Bela_Imredy_de_Omoravia
+recruit_character = HUN_Laszlo_Endre
+recruit_character = HUN_Lajos_Remenyi_Schneller
+recruit_character = HUN_Tihamer_Fabinyi
+recruit_character = HUN_Jenő_Racz
+recruit_character = HUN_Ferenc_Erdei
+recruit_character = HUN_Mihaly_Farkas
+recruit_character = HUN_Bela_Vago
+recruit_character = HUN_Jozsef_Revai
+recruit_character = HUN_Karoly_Peyer
+recruit_character = HUN_Oszkar_Jaszi
+recruit_character = HUN_Gabor_Ugron
+recruit_character = HUN_Jozsef_Szell
+recruit_character = HUN_Miklos_Bonczos
+recruit_character = HUN_Laszlo_Baky
+recruit_character = HUN_Miklos_Banffy
+recruit_character = HUN_Kalman_Szell
+recruit_character = HUN_Miklos_Kozma
+recruit_character = HUN_Andor_Jaross
+recruit_character = HUN_Gabor_Vajna
+recruit_character = HUN_Antal_Lehar
+recruit_character = HUN_Ferenc_Szombathelyi
+recruit_character = HUN_Gusztav_Cziegler
+recruit_character = HUN_Vilmos_Rőder
+recruit_character = HUN_Sandor_Szurmay
+recruit_character = HUN_Nikolaj_Berzin
+recruit_character = HUN_Janos_Voros
+recruit_character = HUN_Hugo_Sonyi
+recruit_character = HUN_Henrik_Werth
+recruit_character = HUN_Kalman_Shvoy
+recruit_character = HUN_Lajos_Csatay_de_Csataj
+recruit_character = HUN_Kalman_Hardy
+recruit_character = HUN_Rezső_Kasztner
+recruit_character = HUN_Sandor_Csia
+recruit_character = HUN_Bela_Rakosi
+recruit_character = HUN_Kalman_Ternegg_Ratz
+recruit_character = HUN_Laszlo_Tomor

@@ -495,14 +495,14 @@ country_event = { #Military Coup
 	option = {
 		name = bra.26.a
 		ai_chance = { factor = 50 }
-		create_country_leader = {
-			name = "Euclides Figueiredo"
-			desc = "EUCFIG_DESC"
-			picture = "EuclidesFigueiredo.dds"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {	}
-		}
+		add_country_leader_role = {
+      character = BRA_Euclides_Figueiredo
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.25 }
 		add_ideas = military_junta
 		set_politics = {

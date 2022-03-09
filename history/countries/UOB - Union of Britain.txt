@@ -39,6 +39,7 @@ set_technology = {
 	electronic_mechanical_engineering = 1
 	radio = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 add_ideas = {
@@ -46,10 +47,6 @@ add_ideas = {
 	civilian_economy
 	ENG_war_fatigue
 	UOB_revo_recov
-	GEN_hog_lib
-	GEN_for_lib
-	GEN_eco_lib
-	GEN_sec_lib
 	workers_republic
 }
 
@@ -65,100 +62,14 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 10
-    collectivist = 20
-    libertarian_socialist = 40
-    social_democrat = 15
-    social_liberal = 5
-    social_conservative = 10
+  vanguardist = 10
+  collectivist = 20
+  libertarian_socialist = 40
+  social_democrat = 15
+  social_liberal = 5
+  social_conservative = 10
 }
 
-create_country_leader = {
-	name = "Jock Haston"
-	desc = "POLITICS_JOCK_HASTON_DESC"
-	picture = "Portrait_Britain_Jock_Haston.png"
-	expire = "1955.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Arthur MacManus"
-	desc = "POLITICS_ARTHUR_MACMANUS_DESC"
-	picture = "Portrait_Britain_Arthur_MacManus.tga"
-	expire = "1955.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Clement Attlee"
-	desc = "POLITICS_CLEMENT_ATTLEE_DESC"
-	picture = "Portrait_Britain_Clement_Attlee.tga"
-	expire = "1955.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George VI"
-	desc = "POLITICS_GEORGE_VI_DESC"
-	picture = "Portrait_Britain_George_VI.tga"
-	expire = "1955.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
+recruit_character = UOB_Arthur_Horner
+recruit_character = UOB_Clement_Atlee
+recruit_character = UOB_Barbara_Castle

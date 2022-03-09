@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿#made by Fokeu
+=======
+
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 capital = 107
 
 oob = "SER_1936"
@@ -24,6 +28,7 @@ set_technology = {
 	interwar_antitank = 1
 	gw_artillery = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -56,10 +61,6 @@ set_convoys = 42
 
 add_ideas = {
 	party_pop_0_50
-	GEN_hog_ade
-	GEN_for_ade
-	GEN_eco_ade
-	GEN_sec_ade
 	GEN_entente_member
 	constitutional_monarchy
 	ser_ethnic_nationalism
@@ -69,6 +70,7 @@ add_ideas = {
 }
 
 set_politics = {
+<<<<<<< HEAD
     ruling_party = social_conservative
     last_election = "1935.9.8"
     election_frequency = 36
@@ -285,6 +287,29 @@ create_corps_commander = {
 #	traits = { blockade_runner }
 #	skill = 2
 #}
+=======
+  ruling_party = authoritarian_democrat
+  last_election = "1935.9.8"
+  election_frequency = 36
+  elections_allowed = no
+}
+
+set_popularities = {
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 0
+  social_liberal = 16
+  market_liberal = 0
+  social_conservative = 18
+  authoritarian_democrat = 51
+  paternal_autocrat = 13
+  national_populist = 1
+  valkist = 1
+}
+
+set_stability = 0.70
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 
 ### VARIANTS ###
 # 1936 Start #
@@ -364,3 +389,22 @@ if = {
 		}
 	}
 }
+
+recruit_character = SER_Petar_Stambolić
+recruit_character = SER_Josip_Broz_Tito
+recruit_character = SER_Zivorad_Jovanovic
+recruit_character = SER_Dragisa_Vasić
+recruit_character = SER_Milan_Grol
+recruit_character = SER_Ljubomir_Davidović
+recruit_character = SER_Anton_Korosec
+recruit_character = SER_Alexander_I
+recruit_character = SER_Prince_Paul
+recruit_character = SER_Milan_Stojadinović
+recruit_character = SER_Petar_Bojović
+recruit_character = SER_Danilo_Kalafatović
+recruit_character = SER_Draza_Mihailović
+recruit_character = SER_Dusan_Simović
+recruit_character = SER_Milorad_Petrović
+recruit_character = SER_Dusan_Trifunović
+recruit_character = SER_Petar_Kosić
+recruit_character = SER_Svetozar_Hadzić

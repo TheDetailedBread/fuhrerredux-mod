@@ -420,21 +420,17 @@ war_measures = {
 					}
 				}
 				set_country_flag = GEO_menshie_officers
-				create_corps_commander = {
-					name = "Dimitri Zedginidze-Amilakhvari"
-					picture = "Portrait_GEO_Dimitri_Amilakhvari.tga"
-					id = 995005
-					traits = { trait_reckless }
+        add_corps_commander_role = {
+          character = GEO_Dimitri_Zedginidze_Amilakhvari
+          traits = { trait_reckless }
 					skill = 3
 					attack_skill = 2
 					defense_skill = 2
 					planning_skill = 3
 					logistics_skill = 3
-				}
-				create_corps_commander = {
-					name = "Valerian Tevzadze"
-					picture = "Portrait_GEO_Valerian_Tevzadze.tga"
-					id = 995006
+        }
+        add_corps_commander_role = {
+          character = GEO_Valerian_Tevzadze
 					traits = {  }
 					skill = 3
 					attack_skill = 2
@@ -442,10 +438,8 @@ war_measures = {
 					planning_skill = 2
 					logistics_skill = 2
 				}
-				create_corps_commander = {
-					name = "Giorgi Mamaladze" #https://en.wikipedia.org/wiki/File:Mj_Giorgi_Mamaladze.jpg
-					picture = "Portrait_GEO_Giorgi_Mamaladze.tga"
-					id = 995007
+				add_corps_commander_role = {
+          character = GEO_Giorgi_Mamaladze
 					traits = {  }
 					skill = 2
 					attack_skill = 1
@@ -454,10 +448,8 @@ war_measures = {
 					logistics_skill = 3
 				}
 				else = {
-					create_field_marshal = {
-						name = "Pavle Abranmidze"
-						picture = "Portrait_GEO_Pavle_Abranmidze.tga"
-						id = 995008
+					add_field_marshal_role = {
+            character = GEO_Pavle_Abranmidze
 						traits = { infantry_officer }
 						skill = 4
 						attack_skill = 3
@@ -480,10 +472,8 @@ war_measures = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision bring_back_kvinitadze"
-			create_field_marshal = {
-				name = "Giorgi Kvinitadze"
-				picture = "Portrait_GEO_Giorgi_Kvinitadze.tga"
-				id = 995009
+			add_field_marshal_role = {
+				character = GEO_Giorgi_Kvinitadze
 				traits = { brilliant_strategist infantry_officer unyielding_defender old_guard }
 				skill = 4
 				attack_skill = 5

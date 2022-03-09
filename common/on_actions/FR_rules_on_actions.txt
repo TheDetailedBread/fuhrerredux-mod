@@ -389,6 +389,125 @@ on_actions = {
 					set_country_flag = SPF_pne
 				}
 			}
+<<<<<<< HEAD
+=======
+			### Philippine Republic
+			PHI = {
+        if = {
+            limit = {
+                has_game_rule = {
+                    rule = PHI_AI_BEHAVIOR
+                    option = PHI_RANDOM
+                }
+            }
+            set_country_flag = PHI_ai_chosen
+            random_list = {
+                25 = { set_country_flag = PHI_democratic_behavior }
+                25 = { set_country_flag = PHI_pataut_behavior }
+                25 = { set_country_flag = PHI_natpop_behavior }
+                25 = { set_country_flag = PHI_valkist_behavior }
+            }
+        }
+        else_if = {
+            limit = {
+                has_game_rule = {
+                    rule = PHI_AI_BEHAVIOR
+                    option = PHI_DEMOCRACY
+                }
+            }
+            set_country_flag = PHI_ai_chosen
+            set_country_flag = PHI_democratic_behavior
+        }
+        else_if = {
+            limit = {
+                has_game_rule = {
+                    rule = PHI_AI_BEHAVIOR
+                    option = PHI_PRUSSIA_OF_THE_EAST
+                }
+            }
+            set_country_flag = PHI_ai_chosen
+            set_country_flag = PHI_pataut_behavior
+        }
+        else_if = {
+            limit = {
+                has_game_rule = {
+                    rule = PHI_AI_BEHAVIOR
+                    option = PHI_TESTING_IMPERIALISM
+                }
+            }
+            set_country_flag = PHI_ai_chosen
+            set_country_flag = PHI_natpop_behavior
+        }
+        else_if = {
+            limit = {
+                has_game_rule = {
+                    rule = PHI_AI_BEHAVIOR
+                    option = PHI_BACK_TO_THE_PAST
+                }
+            }
+            set_country_flag = PHI_ai_chosen
+            set_country_flag = PHI_valkist_behavior
+        }
+    }
+			### Romania
+			ROM = {
+				if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = ROM_AI_BEHAVIOR
+                            option = ROM_RANDOM
+                        }
+                    }
+                    set_country_flag = ROM_ai_chosen
+                    random_list = {
+                        25 = { set_country_flag = ROM_democratic_behavior }
+                        25 = { set_country_flag = ROM_socialist_behavior }
+                        25 = { set_country_flag = ROM_valkist_behavior }
+                        25 = { set_country_flag = ROM_autocrat_behavior }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = ROM_AI_BEHAVIOR
+                            option = ROM_STATUS_QUO
+                        }
+                    }
+                    set_country_flag = ROM_ai_chosen
+                    set_country_flag = ROM_democratic_behavior
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = ROM_AI_BEHAVIOR
+                            option = ROM_THE_NEW_ERA
+                        }
+                    }
+                    set_country_flag = ROM_ai_chosen
+                    set_country_flag = ROM_socialist_behavior
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = ROM_AI_BEHAVIOR
+                            option = ROM_GREEN_DAWN
+                        }
+                    }
+                    set_country_flag = ROM_ai_chosen
+                    set_country_flag = ROM_valkist_behavior
+                }
+                else_if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = ROM_AI_BEHAVIOR
+                            option = ROM_DIRECT_RULE
+                        }
+                    }
+                    set_country_flag = ROM_ai_chosen
+                    set_country_flag = ROM_autocrat_behavior
+                }
+			}
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 		}
 	}
 }

@@ -1336,25 +1336,22 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWI_national_liberal_faction_gains_power"
 
-		set_politics = {
-				ruling_party = authoritarian_democrat
-				elections_allowed = no
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
+      add_country_leader_role = {
+        character = SWI_Robert_Tobler
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+
+		  country_event = swi.114
+		  add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
 		}
-
-		create_country_leader = {
-		name = "Robert Tobler"
-		desc = "POLITICS_ROBERT_TOBLER_DESC"
-		picture = "SWI_Portrait_Robert_Tobler.tga"
-		expire = "1965.1.1"
-		ideology = authoritarian_democrat_subtype
-		}
-
-		country_event = swi.114
-
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
-
-		}
-
 	}
 
   focus = {

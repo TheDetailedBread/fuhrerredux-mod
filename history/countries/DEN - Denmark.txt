@@ -1,4 +1,4 @@
-﻿capital = 37
+capital = 37
 
 oob = "DEN_1936"
 
@@ -20,6 +20,7 @@ set_technology = {
 	early_fighter = 1
 	cv_early_fighter = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 if = {
@@ -54,11 +55,7 @@ add_ideas = {
 	GEN_entente_member
 	DEN_danish_republicanism_idea
 	DEN_unrest_in_flensburg_idea
-	
-	DEN_Thorvald_Stauning_hog_sde
-	DEN_Peter_Munch_for_sli
-	DEN_Alsing_Andersen_eco_sde
-	DEN_Karl_Kristian_Steincke_sec_sde
+
 	constitutional_monarchy
 }
 
@@ -93,245 +90,6 @@ set_research_slots = 3
 set_convoys = 50
 set_stability = 0.62
 set_war_support = 0.22
-
-create_country_leader = {
-	name = "Olga Eggers"
-	desc = "POLITICS_OLGA_EGGERS_DESC"
-	picture = "Portrait_Denmark_Olga_Eggers.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Aksel Larsen"
-	desc = "POLITICS_AKSEL_LARSEN_DESC"
-	picture = "Portrait_Denmark_Aksel_Larsen.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Mogens Fog"
-	desc = "POLITICS_MOGENS_FOG_DESC"
-	picture = "Portrait_Denmark_Mogens_Fog.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Frederick IX"
-	desc = "POLITICS_FREDERICK_IX_DESC"
-	picture = "Portrait_Denmark_Frederick_IX.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Frederick IX"
-	desc = "POLITICS_FREDERICK_IX_DESC"
-	picture = "Portrait_Denmark_Frederick_IX.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Frederick IX"
-	desc = "POLITICS_FREDERICK_IX_DESC"
-	picture = "Portrait_Denmark_Frederick_IX.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Frederick IX"
-	desc = "POLITICS_FREDERICK_IX_DESC"
-	picture = "Portrait_Denmark_Frederick_IX.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Frederick IX"
-	desc = "POLITICS_FREDERICK_IX_DESC"
-	picture = "Portrait_Denmark_Frederick_IX.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Christian X"
-	desc = "POLITICS_CHRISTIAN_X_DESC"
-	picture = "Portrait_Denmark_Christian_X.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Cay Lembcke"
-	desc = "POLITICS_CAY_LEMBCKE_DESC"
-	picture = "Portrait_Denmark_Cay_Lembcke.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Werner Best"
-	desc = "POLITICS_WERNER_BEST_DESC"
-	picture = "Portrait_Denmark_Werner_Best.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "William Wain Prior"
-	picture = "Portrait_Denmark_William_Wain_Prior.tga"
-	traits = { 
-		trait_cautious
-		defensive_doctrine
-	}
-	skill = 3
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Hans Rolsted"
-	picture = "Portrait_Denmark_Hans_Rolsted.tga"
-	traits = {
-		old_guard
-		trickster
-	}
-	skill = 3
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Erik With"
-	picture = "Portrait_Denmark_Erik_With.tga"
-	traits = {
-		old_guard
-		harsh_leader
-		infantry_leader
-	}
-	skill = 2
-	attack_skill = 3
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Frode Lund Hvalkof"
-	picture = "Portrait_Denmark_Frode_Lund_Hvalkof.tga"
-	traits = {
-		trait_cautious
-		trait_engineer
-	}
-	skill = 2
-	attack_skill = 1
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Christian von Schalburg"
-	picture = "Portrait_Denmark_Christian_von_Schalburg.tga"
-	traits = {
-		career_officer
-		commando
-	}
-	skill = 1
-	attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Prince Aage"
-	picture = "Portrait_Denmark_Prince_Aage.tga"
-	traits = {
-		politically_connected
-	}
-	skill = 1
-	attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-#create_corps_commander = {
-#	name = "Cay Lembcke"
-#	picture = "Portrait_Cay_Lembcke.tga"
-#	traits = { }
-#	skill = 3
-#	attack_skill = 1
-#   defense_skill = 3
-#   planning_skill = 2
-#   logistics_skill = 1
-#}
-
-create_navy_leader = {
-	name = "Aage Helgesen Vedel"
-	picture = "Portrait_Denmark_Aage_Helgesen_Vedel.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Hjalmar Rechnitzer"
-	picture = "Portrait_Denmark_Hjalmar_Rechnitzer.tga"
-	traits = { spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 1
-}
-
-create_navy_leader = {
-	name = "Prince Knud"
-	picture = "Portrait_Denmark_Prince_Knud.tga"
-	traits = { spotter }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
 
 ### VARIANTS ###
 # 1936 Start #
@@ -392,3 +150,81 @@ if = {
 		}
 	}
 }
+
+recruit_character = DEN_Olga_Eggers
+recruit_character = DEN_Aksel_Larsen
+recruit_character = DEN_Mogens_Fog
+recruit_character = DEN_Frederick_IX
+recruit_character = DEN_Christian_X
+recruit_character = DEN_Cay_Lembcke
+recruit_character = DEN_Werner_Best
+recruit_character = DEN_William_Wain_Prior
+recruit_character = DEN_Hans_Rolsted
+recruit_character = DEN_Erik_With
+recruit_character = DEN_Frode_Lund_Hvalkof
+recruit_character = DEN_Christian_von_Schalburg
+recruit_character = DEN_Prince_Aage
+recruit_character = DEN_Aage_Helgesen_Vedel
+recruit_character = DEN_Hjalmar_Rechnitzer
+recruit_character = DEN_Prince_Knud
+recruit_character = DEN_Christian_Eli_Christensen
+recruit_character = DEN_Hans_Hedtoft
+recruit_character = DEN_Thorvald_Stauning
+recruit_character = DEN_Vilhelm_Buhl
+recruit_character = DEN_Erik_Scavenius
+recruit_character = DEN_Peter_Munch
+recruit_character = DEN_Knud_Kristensen
+recruit_character = DEN_Thomas_Madsen_Mygdal
+recruit_character = DEN_J_Christmas_Moller
+recruit_character = DEN_Vilhelm_Fibiger
+recruit_character = DEN_Knud_Bach
+recruit_character = DEN_Victor_Purschel
+recruit_character = DEN_Arne_Sorensen
+recruit_character = DEN_Max_Arildskov
+recruit_character = DEN_Wilfred_Petersen
+recruit_character = DEN_Ib_Norlund
+recruit_character = DEN_Martin_Andersen_Nexo
+recruit_character = DEN_Albert_Olsen
+recruit_character = DEN_Hans_C_Hansen
+recruit_character = DEN_Otto_Carl_Mohr
+recruit_character = DEN_Gustav_Rasmussen
+recruit_character = DEN_Henrik_Hauch
+recruit_character = DEN_Henrik_von_Kauffmann
+recruit_character = DEN_Jack_Westergaard
+recruit_character = DEN_Vilhelm_la_Cour
+recruit_character = DEN_Axel_Christian_Hartel
+recruit_character = DEN_Borge_Jakobsen
+recruit_character = DEN_Andreas_Fritzner
+recruit_character = DEN_Poul_Gissemann
+recruit_character = DEN_Alfred_Jensen
+recruit_character = DEN_Niels_Bohr
+recruit_character = DEN_Alsing_Andersen
+recruit_character = DEN_Jens_Otto_Krag
+recruit_character = DEN_Viggo_Kampmann
+recruit_character = DEN_Bertel_Dahlgaard
+recruit_character = DEN_Soren_Brorsen
+recruit_character = DEN_Halfdan_Henriksen
+recruit_character = DEN_Ole_Bjorn_Kraft
+recruit_character = DEN_Erik_Grevenkop_Castenskiold
+recruit_character = DEN_Jorgen_Sehested
+recruit_character = DEN_Arent_Lemvigh_Muller
+recruit_character = DEN_Harald_Bergstedt
+recruit_character = DEN_Karl_Kristian_Steincke
+recruit_character = DEN_Jorgen_Jorgensen
+recruit_character = DEN_Harald_Petersen
+recruit_character = DEN_Ivar_Stamm
+recruit_character = DEN_Aksel_Moller
+recruit_character = DEN_Eigil_Thune_Jacobsen
+recruit_character = DEN_Kaj_Munk
+recruit_character = DEN_Anders_Malling
+recruit_character = DEN_Svend_Wagner
+recruit_character = DEN_Ebbe_Gortz
+recruit_character = DEN_Hans_A_Rolsted
+recruit_character = DEN_Christian_Kryssing
+recruit_character = DEN_Thoger_Thogersen
+recruit_character = DEN_Borge_Thing
+recruit_character = DEN_Aage_H_Vedel
+recruit_character = DEN_Carl_Hammerich
+recruit_character = DEN_Kaj_Birksted
+recruit_character = DEN_Svend_Asbjorn_Holten
+recruit_character = DEN_Poul_Sommer

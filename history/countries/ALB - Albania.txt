@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿capital = 44
+=======
+capital = 44
+oob = "ALB"
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 
 OOB = "ALB_1936"
 
@@ -6,6 +11,7 @@ set_technology = {
 	infantry_weapons = 1
 	tech_support = 1
 	tech_recon = 1
+  basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -32,10 +38,6 @@ set_war_support = 0.15
 
 add_ideas = {
 	party_pop_0_10
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	ALB_liberation_movement
 	constitutional_monarchy
 }
@@ -65,157 +67,16 @@ set_convoys = 5
 
 give_military_access = ITA
 
-create_country_leader = {
-	name = "Enver Hoxha"
-	desc = "POLITICS_ENVER_HOXHA_DESC"
-	picture = "portrait_Albania_Enver_Hoxha.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mehmet Shehu"
-	desc = "POLITICS_MEHMET_SHEHU_DESC"
-	picture = "portrait_europe_generic_5.dds"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sejfulla Malëshova"
-	desc = "POLITICS_SEJFULLA_MALESHOVA_DESC"
-	picture = "portrait_europe_generic_5.dds"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nikolla bey Ivanaj"
-	desc = "POLITICS_NIKOLLA_BEY_IVANAJ_DESC"
-	picture = "Portrait_Albania_King_Zog.dds"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Pandeli Evangjeli"
-	desc = "POLITICS_PANDELI_EVANGJELI_DESC"
-	picture = "Portrait_Albania_King_Zog.dds"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Shefqet Vërlaci"
-	desc = "POLITICS_SHEFQET_VERLACI_DESC"
-	picture = "Portrait_Albania_Shefqet_Verlaci.dds"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Idhomene Kosturi"
-	desc = "POLITICS_IDHOMENE_KOSTURI_DESC"
-	picture = "Portrait_Albania_King_Zog.dds"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Zog I"
-	desc = "POLITICS_KING_ZOG_DESC"
-	picture = "gfx/leaders/ALB/Portrait_Albania_Zog_I.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ferdinand I"
-	desc = "POLITICS_KING_FERDINAND_DESC"
-	picture = "gfx/leaders/ALB/Portrait_Albania_Ferdinand_I.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Midhat Frashëri"
-	desc = "POLITICS_MIDHAT_FRASHERI_DESC"
-	picture = "Portrait_ALB_Midhat_Frasheri.dds"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Fan Stilian Noli"
-	desc = "POLITICS_FAN_STILIAN_NOLI_DESC"
-	picture = "Portrait_Albania_Fan_Noli.dds"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Xhemal Aranitasi"
-	portrait_path = "gfx/leaders/ALB/Xhemal_Aranitasi.dds"
-	traits = { defensive_doctrine }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "Prek Cali"
-	portrait_path = "gfx/leaders/ALB/Prek_Cali.dds"
-	traits = { trait_mountaineer }
-	skill = 2
-}
-
-create_corps_commander = {
-	name = "Muharrem Bajraktari"
-	portrait_path = "gfx/leaders/ALB/Muharrem_Bajraktari.dds"
-	traits = { hill_fighter }
-	skill = 2
-}
-
-create_corps_commander = {
-	name = "Ugo Cavallero"
-	portrait_path = "gfx/leaders/ALB/Ugo_Cavallero.dds"
-	traits = { ranger }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "Alberto Pariani"
-	portrait_path = "gfx/leaders/ALB/Alberto_Pariani.dds"
-	skill = 2
-}
+recruit_character = ALB_Enver_Hoxha
+recruit_character = ALB_Mehmet_Shehu
+recruit_character = ALB_Sejfulla_Maleshova
+recruit_character = ALB_Nikolla_bey_Ivanaj
+recruit_character = ALB_Pandeli_Evangjeli
+recruit_character = ALB_Shefqet_Verlaci
+recruit_character = ALB_Idhomene_Kosturi
+recruit_character = ALB_Zog_I
+recruit_character = ALB_Ferdinand_I
+recruit_character = ALB_Midhat_Frasheri
+recruit_character = ALB_Fan_Stilian_Noli
+recruit_character = ALB_Muharrem_Bajraktari
+recruit_character = ALB_Provisional_Government_of_Albania

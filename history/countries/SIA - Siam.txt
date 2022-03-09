@@ -1,4 +1,4 @@
-﻿capital = 1014
+capital = 1014
 
 oob = "SIA"
 
@@ -30,6 +30,7 @@ set_technology = {
 	early_fighter = 1 #Prajadhipok
 	early_bomber = 1 #Boripatr
 	CAS1 = 1
+	basic_train = 1
 }
 	### Royal Siamese Arsernal 1936 Estimate ###
 	# Rifles
@@ -84,13 +85,7 @@ if = {
 		coastal_defense_ships = 1
 	}
 }
-add_ideas = {
-	SIA_phraya_manopakorn_hog_socdem
-	SIA_pridi_banomyong_for_libsoc
-	SIA_phya_manavarajasevee_eco_authdem
-	SIA_phraya_udomphong_phensawat_sec_socdem
-	SIA_luang_chamnannitikaset_int_socdem
-	
+add_ideas = {	
 	pretender_crisis
 	foreign_company_investment
 	parliament_with_officers
@@ -111,117 +106,20 @@ set_politics = {
 
 set_popularities = {
 	vanguardist = 0
-
 	collectivist = 5
-
 	libertarian_socialist = 4
-
 	social_democrat = 30
-
 	social_liberal = 1
-
 	market_liberal = 6
-
 	social_conservative = 23
-
 	authoritarian_democrat = 10
-
 	paternal_autocrat = 13
-
 	national_populist = 3
-
 	valkist = 5
 }
 set_country_flag = coalition_social_conservative
 set_country_flag = can_replace_military_staff
 set_cosmetic_tag = SIA_provisional_government
-create_country_leader = {
-	name = "Prajadhipok"
-	desc = "POLITICS_RAMA_VII_DESC"
-	picture = "Portrait_Siam_Rama_VII.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Boworadet Kritdakorn"
-	picture = "Portrait_Siam_Boworadet.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	desc = "POLITICS_BOWORADET_DESC"
-}
-
-create_country_leader = {
-	name = "Plaek Phibunsongkhram"
-	picture = "gfx/leaders/SIA/Plaek_NatPop.dds"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	desc = "POLITICS_PLAEK_PHIBUNSONGKHRAM"
-}
-
-create_country_leader = {
-	name = "Luang Wattanarattawichit"
-	picture = "Portrait_Siam_Luang_Wattanarattawichit.tga"
-	expire = "1965.1.1"
-	desc = "LUANG_WATTANARATTAWICHIT_DESC"
-	ideology = valkist_subtype
-}
-create_country_leader = {
-	name = "Waas Suthonjamorn"
-	picture = "Portrait_Siam_Waas_Suthonjamorn.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#worker_unifier
-	}
-}
-
-create_country_leader = {
-	name = "Pridi Banomyong"
-	picture = "Portrait_Siam_Pridi_Banomyong.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-}
-
-create_country_leader = {
-	name = "Pridi Banomyong"
-	picture = "Portrait_Siam_Pridi_Banomyong.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-}
-
-create_country_leader = {
-	name = "Prajadhipok"
-	picture = "Portrait_Siam_Rama_VII.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	desc = "POLITICS_RAMA_VII_DESC"
-}
-
-create_country_leader = {
-	name = "Prajadhipok"
-	picture = "Portrait_Siam_Rama_VII.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	desc = "POLITICS_RAMA_VII_DESC"
-}
-
-create_country_leader = {
-	name = "Prajadhipok"
-	picture = "Portrait_Siam_Rama_VII.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	desc = "POLITICS_RAMA_VII_DESC"
-}
-create_country_leader = {
-	name = "Prajadhipok"
-	picture = "Portrait_Siam_Rama_VII.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	desc = "POLITICS_RAMA_VII_DESC"
-}
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -247,203 +145,28 @@ if = {
 		}
 	}
 }
-create_field_marshal = { ##Military Governor-General of Esan Regional Army
-	name = "Phin Choonhavan"
-	picture = "Portrait_Siam_Phin_Choonhavan.tga"
-	traits = { infantry_officer politically_connected }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-	id = 54000
-}
-create_field_marshal = { ##Military Governor-General of Lanna Regional Army
-	name = "Luang Seriroengrit"
-	picture = "Portrait_Siam_Charun_Rattanakun_Seriroengri.tga"
-	traits = { organizer logistics_wizard }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-	id = 54001
-}
-create_field_marshal = { ## Commander-in-chief of Royal Siamese Armed Forces and Military Governor-General of Phra Nakorn Army
-	name = "Prince Boworadet"
-	picture = "Portrait_Siam_Boworadet.tga"
-	traits = { old_guard cavalry_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-	id = 54002
-}
-create_field_marshal = { ##Miltary Governor-General of Tenasserim Monthon Guard and Southern Regional Army
-	name = "Luang Phibunsongkhram"
-	picture = "Portrait_Siam_Plaek_Phibunsongkhram.tga"
-	traits = { defensive_doctrine unyielding_defender }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 54003
-}
-##General-in-command
-create_corps_commander = { ##Chief of Staff of Phra Nakorn Army
-	name = "Phraya Phahon Phonphayuhasena"
-	picture = "Portrait_Siam_Phraya_Phaholponpayuhasena.tga"
-	traits = { artillery_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 54004
-}
-create_corps_commander = { ##Chief of Staff of Esan Regional Army
-	name = "Phraya Songsuradet"
-	picture = "Portrait_Siam_Phraya_Songsuradet.tga"
-	traits = { artillery_officer bearer_of_artillery }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 54005
-}
-create_corps_commander = { ##Chief of Staff of Lanna Regional Army
-	name = "Phraya Ritti-arkaney"
-	picture = "Portrait_Siam_Rithhi-arkaney.tga"
-	traits = { artillery_officer brilliant_strategist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-	id = 54006
-}
-create_corps_commander = { ##Chief of Staff of Tenasserim Monthon Guard
-	name = "Phraya Srisitthisongkhram"
-	picture = "Portrait_Siam_Phraya_Srisitthisongkhram.tga"
-	traits = { artillery_officer inflexible_strategist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-	id = 54007
-}
-create_corps_commander = { ##Chief of Staff of Southern Regional Army
-	name = "Sarit Thanarat"
-	picture = "Portrait_Siam_Sarit_Thanarat.tga"
-	traits = { artillery_officer trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 54008
-}
-create_corps_commander = { ##Chief of Staff of Royal Palace Guard 
-	name = "Phraya Promyothee"
-	picture = "Portrait_Siam_Mangkorn_Promyothee.tga"
-	traits = { cavalry_officer trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3 ##As Chief of Staff of Royal Palace Guard
-	planning_skill = 1
-	logistics_skill = 1
-	id = 54009
-}
-##General
-create_corps_commander = {
-	name = "Luang Karjsongkhram"
-	picture = "Portrait_Siam_Luang_Karjsongkhram.tga"
-	traits = { infantry_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 54010
-}
-create_corps_commander = {
-	name = "Luang Kriengsakpichit"
-	picture = "Portrait_Siam_Luang_Kriengsakpichit.tga"
-	traits = { infantry_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 54011
-}
-##War Hero
-create_corps_commander = {
-	name = "Luang Prasartpitthayayuth"
-	picture = "Portrait_Siam_Luang_Prasartpitthayayuth.tga"
-	traits = { infantry_officer war_hero }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 54012
-}
-##Candidates of Navy Commander-in-chief
-create_navy_leader = {
-	name = "Luang Sinthusongkhramchai"
-	portrait_path = "gfx/leaders/SIA/Portrait_Siam_Sindhu_Kamolnavin.tga"
-	traits = { blockade_runner }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-create_navy_leader = {
-	name = "Luang Thamrongnawasawat"
-	portrait_path = "gfx/leaders/SIA/Portrait_Siam_Thawan_Thamrongnawasawat.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
 
-create_navy_leader = {
-	name = "Phraya Witchitchollatee"
-	portrait_path = "gfx/leaders/SIA/Portrait_Siam_Phraya_Witchitchollathi.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
-
-create_navy_leader = {
-	name = "Phraya Wicharnjakkich"
-	portrait_path = "gfx/leaders/SIA/Portrait_Siam_Phraya_Wichitjakkrit.tga"
-	traits = { fly_swatter }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
-
-create_navy_leader = {
-	name = "Phra Mongkolnavin"
-	portrait_path = "gfx/leaders/SIA/Portrait_Siam_Mongkol_Mongkolnavin.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
+recruit_character = SIA_Prajadhipok
+recruit_character = SIA_Boworadet_Kritdakorn
+recruit_character = SIA_Plaek_Phibunsongkhram
+recruit_character = SIA_Luang_Wattanarattawichit
+recruit_character = SIA_Waas_Suthonjamorn
+recruit_character = SIA_Pridi_Banomyong
+recruit_character = SIA_Phin_Choonhavan
+recruit_character = SIA_Luang_Seriroengrit
+recruit_character = SIA_Prince_Boworadet
+recruit_character = SIA_Luang_Phibunsongkhram
+recruit_character = SIA_Phraya_Phahon_Phonphayuhasena
+recruit_character = SIA_Phraya_Songsuradet
+recruit_character = SIA_Phraya_Ritti_arkaney
+recruit_character = SIA_Phraya_Srisitthisongkhram
+recruit_character = SIA_Sarit_Thanarat
+recruit_character = SIA_Phraya_Promyothee
+recruit_character = SIA_Luang_Karjsongkhram
+recruit_character = SIA_Luang_Kriengsakpichit
+recruit_character = SIA_Luang_Prasartpitthayayuth
+recruit_character = SIA_Luang_Sinthusongkhramchai
+recruit_character = SIA_Luang_Thamrongnawasawat
+recruit_character = SIA_Phraya_Witchitchollatee
+recruit_character = SIA_Phraya_Wicharnjakkich
+recruit_character = SIA_Phra_Mongkolnavin

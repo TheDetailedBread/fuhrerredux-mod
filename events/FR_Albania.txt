@@ -147,16 +147,14 @@ country_event = { # Parade, Ferdinand does attend
 		name = alb.5.a
 		add_stability = -0.15
 		add_political_power = -25
-		create_country_leader = {
-			name = "Provisional Government of Albania"
-			#desc = "POLITICS_KING_FERDINAND_DESC"
-			picture = "gfx/leaders/ALB/Portrait_Regency_Council.tga"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-				#
-			}
-		}
+    add_country_leader_role = {
+      character = ALB_Provisional_Government_of_Albania
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		ITA = {
 			country_event = alb.7
 		}
@@ -443,16 +441,6 @@ country_event = { # Collectivists win
 			ideology = collectivist 
 			popularity = 0.2
 		}
-		create_country_leader = {
-			name = "Enver Hoxha"
-			desc = "POLITICS_ENVER_HOXHA_DESC"
-			picture = "portrait_Albania_Enver_Hoxha.tga"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = {
-				#
-			}
-		}
 		ITA = {
 			country_event = alb.18
 			remove_from_faction = ALB
@@ -600,16 +588,6 @@ country_event = { # National Populists putsch
 			ideology = national_populist 
 			popularity = 0.2
 		}
-		create_country_leader = {
-			name = "Midhat Frashëri"
-			desc = "POLITICS_MIDHAT_FRASHERI_DESC"
-			picture = "portrait_europe_generic_5.dds"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-				#
-			}
-		}
 		ITA = {
 			remove_from_faction = ALB
 			diplomatic_relation = { country = ALB relation = guarantee active = no }
@@ -712,16 +690,6 @@ country_event = { # Italy abandons Albania
 			ideology = national_populist 
 			popularity = 0.2
 		}
-		create_country_leader = {
-			name = "Midhat Frashëri"
-			desc = "POLITICS_MIDHAT_FRASHERI_DESC"
-			picture = "portrait_europe_generic_5.dds"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-				#
-			}
-		}
 		ITA = {
 			remove_from_faction = ALB
 			diplomatic_relation = { country = ALB relation = guarantee active = no }
@@ -743,16 +711,14 @@ country_event = { # Italy takes direct control of Albania
 
 	option = { # Purge Nat Pops	
 		name = alb.22.a
-		create_country_leader = {
-			name = "Provisional Government of Albania"
-			#desc = "POLITICS_KING_FERDINAND_DESC"
-			picture = "gfx/leaders/ALB/Portrait_Regency_Council.tga"
-			expire = "1965.1.1"
-			#ideology = paternal_autocrat_subtype
-			traits = {
-				#
-			}
-		}
+		add_country_leader_role = {
+      character = ALB_Provisional_Government_of_Albania
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		add_stability = 0.05
 		add_popularity = { ideology = national_populist popularity = -0.15 }
 	}

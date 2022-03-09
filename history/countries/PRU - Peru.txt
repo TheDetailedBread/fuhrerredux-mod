@@ -1,4 +1,4 @@
-﻿capital = 303
+capital = 303
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -18,10 +18,13 @@ add_ideas = {
 	PRU_damaged_democracy
 	PRU_proud_and_victorious
 	COL_reparations_from_colombia
+<<<<<<< HEAD
 	PRU_Manuel_Esteban_Rodriguez_hog_ade
 	PRU_Alberto_Ulloa_Sotomayor_for_ade
 	PRU_Ernesto_Scroth_eco_ade
 	PRU_Rocas_Sanchez_Mapas_sec_ade
+=======
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 	presidential_republic
 }
 
@@ -36,6 +39,7 @@ set_technology = {
 	gwtank = 1
 	tech_mountaineers = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -70,178 +74,17 @@ set_politics = {
 }
 
 set_popularities = {
-    social_conservative = 12
-    social_democrat = 4
-    social_liberal = 6
-    market_liberal = 8
-    authoritarian_democrat = 31
-    paternal_autocrat = 11
-    valkist = 3
-    national_populist = 5
-    collectivist = 3
-    vanguardist = 15
-    libertarian_socialist = 2
-}
-
-create_country_leader = {
-	name = "Víctor Raúl Haya de la Torre"
-	desc = "POLITICS_VICTOR_RAUL_KAYA_DE_LA_TORRE_DESC"
-	picture = "Portrait_Peru_Victor_Raul_Haya.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Luis Antonio Eguiguren"
-	desc = "POLITICS_LUIS_ANTONIO_EGUIGUREN_DESC"
-	picture = "Portrait_Peru_Luis_Antonio_Eguiguren.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "José Bustamante y Rivero"
-	desc = "POLITICS_JOSE_BUSTAMANTE_Y_RIVERO_DESC"
-	picture = "GFX_Portrait_peru_oscar_benavides"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Manuel Prado Ugarteche"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "GFX_Portrait_peru_oscar_benavides"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Luis Miguel Sánchez Cerro"
-	desc = "POLITICS_LUIS_SANCHEZ_DESC"
-	picture = "Portair_Peru_Luis_Sanchez_Cerro.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Luis Miguel Sánchez Cerro"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "Portair_Peru_Luis_Sanchez_Cerro.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "José de la Riva"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "GFX_Portrait_peru_oscar_benavides"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Luis A. Flores"
-	desc = "POLITICS_LUIS_A_FLORES_DESC"
-	picture = "Portrait_Peru_Luis_Flores.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-
-create_field_marshal = {
-	name = "Luis Sánchez Cerro"
-	picture = "Portair_Peru_Luis_Sanchez_Cerro.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-create_field_marshal = {
-	name = "Manuel María Ponce Brousset"
-	picture = "Portrait_Peru_Manuel_Maria_Ponce_Brousset.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Oscar Benavides"
-	picture = "Portrait_Peru_Oscar_Benavides.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Manuel A. Odría"
-	desc = "PRU_Manuel_Odria_DESC"
-	portrait_path = "gfx/leaders/PRU/Portrait_Peru_Manuel_Odria.tga"
-	traits = { infantry_officer media_personality }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Eloy G. Ureta"
-	desc = "PRU_Eloy_Ureta_DESC"
-	portrait_path = "gfx/leaders/PRU/Portrait_Peru_Eloy_Ureta.tga"
-	traits = { artillery_officer career_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Carlos Miro Quesada"
-	portrait_path = "gfx/leaders/PRU/Portrait_Peru_Carlos_Miro_Quesada.tga"
-	traits = { career_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Ernesto Montagne Markholz"
-	picture = "Portrait_Peru_Ernesto_Montagne_Markholz.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Antonio Rodríguez Ramírez"
-	picture = "Portrait_Peru_Antonio_Rodriguez_Ramirez.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 4
-	logistics_skill = 2
-}
-create_navy_leader = {
-	name = "Julio Goicochea Álvarez"
-	picture = "Portrait_Peru_Julio_Victor_Goicochea.tga"
-	traits = { }
-	skill = 2
-}
-create_navy_leader = {
-	name = "César Bielich"
-	picture = "Portrait_Peru_Cesar_Bielich.tga"
-	traits = { }
-	skill = 2
+  social_conservative = 12
+  social_democrat = 4
+  social_liberal = 6
+  market_liberal = 8
+  authoritarian_democrat = 31
+  paternal_autocrat = 11
+  valkist = 3
+  national_populist = 5
+  collectivist = 3
+  vanguardist = 15
+  libertarian_socialist = 2
 }
 
 if = {
@@ -298,3 +141,68 @@ if = {
 		}
 	}
 }
+
+recruit_character = PRU_Gamaliel_Churata
+recruit_character = PRU_Victor_Raul_Haya_de_la_Torre
+recruit_character = PRU_Jose_Galvez_Barrenechea
+recruit_character = PRU_Luis_Antonio_Eguiguren
+recruit_character = PRU_Jose_Alcamora
+recruit_character = PRU_Manuel_Cisneros_Sanchez
+recruit_character = PRU_Rafael_Belaunde_Diez
+recruit_character = PRU_Adolfo_Solf_y_Muro
+recruit_character = PRU_Alberto_Rey_de_Castro
+recruit_character = PRU_Alberto_Roque_Saldias
+recruit_character = PRU_David_S_Ocampo
+recruit_character = PRU_Alberto_Zenon_Aguero
+recruit_character = PRU_Ernesto_Montagne_Sanchez
+recruit_character = PRU_Manuel_Odria
+recruit_character = PRU_Carlos_Miro_Quesada
+recruit_character = PRU_Eloy_G_Ureta
+recruit_character = PRU_Jose_de_la_Riva_Aguero
+recruit_character = PRU_Luis_A_Flores
+recruit_character = PRU_Cesar_Atahualpa
+recruit_character = PRU_Jose_Carlos_Mariategui
+recruit_character = PRU_Cesar_Vallejo
+recruit_character = PRU_Oscar_Miro_Quesada
+recruit_character = PRU_Javier_Correa_Elias
+recruit_character = PRU_Manuel_Prado_y_Ugarteche
+recruit_character = PRU_Enrique_Goytisola_Bolognesi
+recruit_character = PRU_Alberto_Ulloa_Sotomayor
+recruit_character = PRU_Felipe_Tudela
+recruit_character = PRU_Raul_Ferrero_Rebagliati
+recruit_character = PRU_Manuel_Gonzalez_Prada
+recruit_character = PRU_Antenor_Orrego
+recruit_character = PRU_Antonio_Rodriguez_Ramirez
+recruit_character = PRU_Manuel_Vasquez_Diaz
+recruit_character = PRU_Guillermo_Almenara_Irigoyen
+recruit_character = PRU_Romulo_Ferrero
+recruit_character = PRU_Armando_Revoredo_Iglesias
+recruit_character = PRU_Eduardo_Rebagliati_Martins
+recruit_character = PRU_Oscar_Trelles_Montes
+recruit_character = PRU_Alejandro_Peralta
+recruit_character = PRU_Carlos_Manuel_Cox_Roose
+recruit_character = PRU_Ciro_Alegria
+recruit_character = PRU_Ildefonso_Ballon_Beltran
+recruit_character = PRU_Victor_N_Benavente
+recruit_character = PRU_Manuel_Gallagher
+recruit_character = PRU_Benigno_Ballon_Farfan
+recruit_character = PRU_Ernesto_Montagne_Markholz
+recruit_character = PRU_Felipe_Sassone
+recruit_character = PRU_Fortunato_Quesada_Larrea
+recruit_character = PRU_Gustavo_Jimenez
+recruit_character = PRU_Nicolas_Lindley_Lopez
+recruit_character = PRU_Eduardo_Montero_Rojas
+recruit_character = PRU_Vladimiro_Lopez_Trigoso
+recruit_character = PRU_Oscar_Benavides_Larrea
+recruit_character = PRU_Riccardo_Perez_Godoy
+recruit_character = PRU_Manuel_Odria_Amoretti
+recruit_character = PRU_Manuel_Montero_y_Tirada
+recruit_character = PRU_Jose_Bustamante_y_Rivero
+recruit_character = PRU_Manuel_Prado_Ugarteche
+recruit_character = PRU_Luis_Miguel_Sanchez_Cerro
+recruit_character = PRU_Jose_de_la_Riva
+recruit_character = PRU_Manuel_Maria_Ponce_Brousset
+recruit_character = PRU_Oscar_Benavides
+recruit_character = PRU_Manuel_A_Odria
+recruit_character = PRU_Julio_Goicochea_Alvarez
+recruit_character = PRU_Cesar_Bielich

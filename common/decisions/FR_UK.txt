@@ -223,6 +223,44 @@ ENG_economy = {
 ENG_the_empire = {
 
 	##### Imperial Coordination #####
+
+  ENG_secure_suez = {
+    fire_only_once = yes
+    icon = GFX_decision_generic_tank
+    days_remove = 14
+    target_trigger = {
+      FROM = {
+        tag = EGY
+      }
+    }
+    visible = {
+      NOT = {
+        has_country_flag = ENG_reclaimed_suez
+      }
+    }
+    available = {
+      original_tag = ENG
+      FROM = {
+        NOT = { is_subject_of = ENG }
+        NOT = { is_in_faction_with = ENG }
+      }
+      OR = {
+        has_completed_focus = ENG_national_effort
+        has_completed_focus = ENG_end_austerity
+        has_completed_focus = ENG_liberate_markets
+      }
+    }
+    ai_will_do = {
+      factor = 800
+    }
+    remove_effect = {
+      set_country_flag = ENG_reclaimed_suez
+      declare_war_on = {
+        target = EGY
+        type = annex_everything
+      }
+    }
+  }
 	
 	ENG_pax_britannica = {
 	
@@ -2560,165 +2598,6 @@ ENG_foreign_intervention = {
 			}
 		}
 	}
-	
-	ENG_fate_france = {
-	
-		visible = {
-			controls_state = 16
-			OR = {
-				FRA = { exists = no }
-				FRA = { has_capitulated = yes }
-				NOT = { has_war_with = FRA }
-			}
-			original_tag = ENG
-			NOT = { is_in_faction_with = FRA }
-		}
-		
-		available = {
-			has_war = no
-		}
-		
-		icon = generic_nationalism
-		
-		ai_will_do = {
-			factor = 320
-		}
-		
-		fire_only_once = yes
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ENG_fate_france"
-			country_event = { id = ukfate.1 }
-		}
-	}
-	
-	ENG_fate_germany = {
-	
-		visible = {
-			controls_state = 64
-			OR = {
-				GER = { exists = no }
-				GER = { has_capitulated = yes }
-				NOT = { has_war_with = GER }
-			}
-			original_tag = ENG
-			NOT = { is_in_faction_with = GER }
-		}
-		
-		available = {
-			has_war = no
-		}
-		
-		icon = generic_nationalism
-		
-		ai_will_do = {
-			factor = 320
-		}
-		
-		fire_only_once = yes
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ENG_fate_germany"
-			country_event = { id = ukfate.2 }
-		}
-	}
-	
-	ENG_fate_italy = {
-	
-		visible = {
-			controls_state = 2
-			OR = {
-				ITA = { exists = no }
-				ITA = { has_capitulated = yes }
-				NOT = { has_war_with = ITA }
-			}
-			original_tag = ENG
-			NOT = { is_in_faction_with = ITA }
-		}
-		
-		available = {
-			has_war = no
-		}
-		
-		icon = generic_nationalism
-		
-		ai_will_do = {
-			factor = 320
-		}
-		
-		fire_only_once = yes
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ENG_fate_italy"
-			country_event = { id = ukfate.3 }
-		}
-	}
-	
-	ENG_fate_usa = {
-	
-		visible = {
-			controls_state = 361
-			OR = {
-				USA = { exists = no }
-				USA = { has_capitulated = yes }
-				NOT = { has_war_with = USA }
-			}
-			original_tag = ENG
-			NOT = { is_in_faction_with = USA }
-		}
-		
-		available = {
-			has_war = no
-		}
-		
-		icon = generic_nationalism
-		
-		ai_will_do = {
-			factor = 320
-		}
-		
-		fire_only_once = yes
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ENG_fate_usa"
-			country_event = { id = ukfate.4 }
-		}
-	}
-	
-	ENG_return_land_france = {
-		visible = {
-			FRP = {
-				exists = yes
-				is_puppet_of = ENG
-			}
-			original_tag = ENG
-			AND = {
-				any_state = { is_controlled_by = ENG }
-				any_state = { is_core_of = FRA }
-			}
-		}
-		
-		available = {
-			has_war = no
-		}
-		
-		icon = generic_nationalism
-		
-		ai_will_do = {
-			factor = 320
-		}
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ENG_return_land_france"
-			every_state = {
-				limit = {
-					is_controlled_by = ENG
-					is_core_of = FRA
-				}
-				FRP = { transfer_state = PREV }
-			}
-		}
-	}
 }
 
 ENG_london_nt = {
@@ -3021,13 +2900,6 @@ ENG_imp_admin = {
 				add_ideas = RAJ_colonial_administration
 				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
 				add_popularity = { ideology = authoritarian_democrat popularity = 0.5 }
-				create_country_leader = { 
-					name = "Sir Robert Brooke-Popham" 
-					desc = "POLITICS_ROBERT_BROOKE_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_Brooke_Popham.dds" 
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
 			}
 		}
 	}
@@ -3063,13 +2935,6 @@ ENG_imp_admin = {
 				add_ideas = RAJ_colonial_administration
 				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
 				add_popularity = { ideology = authoritarian_democrat popularity = 0.5 }
-				create_country_leader = { 
-					name = "Sir Arthur Harris" 
-					desc = "POLITICS_ARTHUR_HARRIS_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_Arthur_Harris.dds" 
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
 			}
 			IF = {
 				limit = {
@@ -3111,13 +2976,6 @@ ENG_imp_admin = {
 				add_ideas = RAJ_colonial_administration
 				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
 				add_popularity = { ideology = authoritarian_democrat popularity = 0.5 }
-				create_country_leader = { 
-					name = "Sir John Maffey" 
-					desc = "POLITICS_JOHN_MAFFEY_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_John_Maffey.dds" 
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
 			}
 			transfer_state = 813
 		}
@@ -3331,13 +3189,6 @@ ENG_imp_admin = {
 				add_ideas = RAJ_colonial_administration
 				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
 				add_popularity = { ideology = authoritarian_democrat popularity = 0.5 }
-				create_country_leader = { 
-					name = "Sir Andrew Calcott" 
-					desc = "POLITICS_ANDREW_CALCOTT_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_Andrew_Calcott.dds" 
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-﻿capital = 42
+capital = 42
 oob = "RHI_1936"
 
 set_research_slots = 3
@@ -27,6 +27,7 @@ set_technology = {
 	
 	transport = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 set_convoys = 50
@@ -38,213 +39,78 @@ set_politics = {
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 10
-    social_democrat = 16
-    social_liberal = 0
-    market_liberal = 0
-    social_conservative = 15
-    authoritarian_democrat = 28
-    paternal_autocrat = 0
-    national_populist = 16
-    valkist = 15
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 10
+  social_democrat = 16
+  social_liberal = 0
+  market_liberal = 0
+  social_conservative = 15
+  authoritarian_democrat = 28
+  paternal_autocrat = 0
+  national_populist = 16
+  valkist = 15
 }
 
 add_ideas = {
 	party_pop_0_20
-disarmed_nation
-RHI_S_rhineland_coal
-RHI_S_disarmed
-RHI_S_political_powderkeg
-RHI_S_melting_pot
-RHI_S_rhenish_freikorps
-RHI_S_spectre_of_spartacists
-RHI_S_einstein
-GEN_entente_member
-#Ministers
-RHI_Victor_Hay_hog
-RHI_William_Seeds_for
-RHI_EF_Schumacher_eco
-RHI_Karl_von_Starck_sec
-RHI_Charles_Mangin_cos
+  disarmed_nation
+  RHI_S_rhineland_coal
+  RHI_S_disarmed
+  RHI_S_political_powderkeg
+  RHI_S_melting_pot
+  RHI_S_rhenish_freikorps
+  RHI_S_spectre_of_spartacists
+  RHI_S_einstein
+  GEN_entente_member
 
-colonial_government
+  colonial_government
 }
 
-create_country_leader = {
-	name = "Josef Friedrich Matthes"
-	desc = "POLITICS_JOSEF_FRIEDRICH_MATTHES_DESC"
-	picture = "Portrait_RHI_Josef_Friedrich_Matthes.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-	}
-}
 
-create_country_leader = {
-	name = "Paul Tirard"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Paul_Tirard.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Charles Mangin"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Charles_Mangin.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Hans Adam Dorten"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Hans_Adam_Dorten.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Heinrich Himmler"
-	desc = "POLITICS_HEINRICH_HIMMLER_DESC"
-	picture = "Portrait_RHI_Heinrich_Himmler.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Konrad Adenauer"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Konrad_Adenauer.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Rudolf Rocker"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Rudolf_Rocker.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Wilhelm Zaisser"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Wilhelm_Zaisser.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Hans Marchwitza"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Hans_Marchwitza.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Rudolf Breitscheid"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Rudolf_Breitscheid.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Rudolf Breitscheid"
-	desc = "POLITICS_PAUL_TIRARD_DESC"
-	picture = "Portrait_RHI_Rudolf_Breitscheid.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-	}
-}
-create_field_marshal = {
-	name = "Charles Mangin"
-	desc = "RHI_Gen_Mangin_DESC"
-	picture = "Portrait_RHI_Charles_Mangin.tga"
-	traits = {old_guard politically_connected inflexible_strategist }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-	id = 3301
-}	
-create_corps_commander = {
-	name = "Adolphe Guillaumat"
-	desc = "RHI_Adolphe_Guillaumat_DESC"
-	picture = "Portrait_RHI_Adolphe_Guillaumat.tga"
-	traits = {old_guard politically_connected infantry_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-	id = 3302
-}
-create_corps_commander = {
-	name = "Louis Théodore Kleinmann"
-	desc = "RHI_L_T_Kleinmann_DESC"
-	picture = "Portrait_RHI_L_T_Kleinmann.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 3303
-}
-create_corps_commander = {
-	name = "Henri Mordacq"
-	desc = "RHI_Henri_Mordacq_DESC"
-	picture = "Portrait_RHI_Henri_Mordacq.tga"
-	traits = { brilliant_strategist war_hero }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-	id = 3304
-}
-create_corps_commander = {
-	name = "Albert Tanant"
-	desc = "RHI_Albert_Tanant_DESC"
-	picture = "Portrait_RHI_Albert_Tanant.tga"
-	traits = {  trait_cautious }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-	id = 3305
-}
-create_corps_commander = {
-	name = "Victor-Louis Goybet"
-	desc = "RHI_Victor_Goybet_DESC"
-	picture = "Portrait_RHI_Victor_Goybet.tga"
-	traits = {  old_guard }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 3306
-}
+recruit_character = RHI_Josef_Friedrich_Matthes
+recruit_character = RHI_Paul_Tirard
+recruit_character = RHI_Charles_Mangin
+recruit_character = RHI_Hans_Adam_Dorten
+recruit_character = RHI_Heinrich_Himmler
+recruit_character = RHI_Konrad_Adenauer
+recruit_character = RHI_Rudolf_Rocker
+recruit_character = RHI_Wilhelm_Zaisser
+recruit_character = RHI_Hans_Marchwitza
+recruit_character = RHI_Rudolf_Breitscheid
+recruit_character = RHI_Adolphe_Guillaumat
+recruit_character = RHI_Louis_Theodore_Kleinmann
+recruit_character = RHI_Henri_Mordacq
+recruit_character = RHI_Albert_Tanant
+recruit_character = RHI_Victor_Louis_Goybet
+recruit_character = RHI_Kurt_Tucholsky
+recruit_character = RHI_Victor_Hay
+recruit_character = RHI_Otto_Lichtschlag
+recruit_character = RHI_Walter_Kreiser
+recruit_character = RHI_William_Seeds
+recruit_character = RHI_Andre_Francois_Poncet
+recruit_character = RHI_Theodor_Reismann_Grone
+recruit_character = RHI_Walter_Stennes
+recruit_character = RHI_Walter_Kolb
+recruit_character = RHI_Franz_Blucher
+recruit_character = RHI_EF_Schumachher
+recruit_character = RHI_Emil_Kirdorf
+recruit_character = RHI_Georg_Buch
+recruit_character = RHI_Wilhelm_Rombach
+recruit_character = RHI_Karl_von_Starck
+recruit_character = RHI_Walther_Lichtschlag
+recruit_character = RHI_Franz_Pfeffer_von_Salomon
+recruit_character = RHI_Heinrich_von_Vietinghoff
+recruit_character = RHI_Ernst_Busch
+recruit_character = RHI_Smilo_Freiher_von_Luttwitz
+recruit_character = RHI_Karl_Adolf_Hollidt
+recruit_character = RHI_Gunther_Korten
+recruit_character = RHI_Adolf_Galland
+recruit_character = RHI_Albert_Leo_Schlageter
+recruit_character = RHI_Viktor_Lutze
+recruit_character = RHI_Hans_Salmuth
+recruit_character = RHI_Ludwig_Cruwell
+recruit_character = RHI_Curt_Gallenkamp

@@ -7,7 +7,12 @@ add_namespace = intro
 
 country_event = {
 	id = intro.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event intro.1"}
+	immediate = {
+    log = "[GetDateText]: [Root.GetName]: event intro.1"
+    hidden_effect = {
+      add_starting_ministers = yes
+    }
+  }
 	title = intro.1.t
 	desc = intro.1.d
 	picture = GFX_report_event_aid_pact

@@ -1,4 +1,4 @@
-﻿capital = 5
+capital = 5
 
 oob = "ERM"
 
@@ -37,14 +37,11 @@ set_technology = {
 	electronic_mechanical_engineering = 1
 	radio = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_sde
-	GEN_FOR_Sde
-	GEN_eco_sde
-	GEN_sec_sde
 	parliamentary_republic
 }
 
@@ -62,88 +59,21 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 5
-    libertarian_socialist = 8
-    social_democrat = 30
-    social_liberal = 3
-    market_liberal = 10
-    social_conservative = 40
-    authoritarian_democrat = 0
-    paternal_autocrat = 2
-    national_populist = 0
-    valkist = 0
+  vanguardist = 2
+  collectivist = 5
+  libertarian_socialist = 8
+  social_democrat = 30
+  social_liberal = 3
+  market_liberal = 10
+  social_conservative = 40
+  authoritarian_democrat = 0
+  paternal_autocrat = 2
+  national_populist = 0
+  valkist = 0
 }
 
 
-create_country_leader = {
-	name = "Otto Braun"
-	desc = "POLITICS_OTTO_BRAUN_DESC"
-	picture = "Portrait_Ermland_Otto_Braun.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hermann Höpker-Aschoff"
-	desc = "POLITICS_HERMANN_HOPKER-ASCHOFF_DESC"
-	picture = "Portrait_Ermland_Hermann_Hopker-Aschoff.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Walther Schreiber"
-	desc = "POLITICS_WALTHER_SCHREIBER_DESC"
-	picture = "Portrait_Ermland_Walther_Schreiber.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hellmuth Will"
-	desc = "POLITICS_HELLMUTH_WILL_DESC"
-	picture = "Portrait_Ermland_Hellmuth_Will.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hellmuth Will"
-	desc = "POLITICS_HELLMUTH_WILL_DESC"
-	picture = "Portrait_Ermland_Hellmuth_Will.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hellmuth Will"
-	desc = "POLITICS_HELLMUTH_WILL_DESC"
-	picture = "Portrait_Ermland_Hellmuth_Will.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hellmuth Will"
-	desc = "POLITICS_HELLMUTH_WILL_DESC"
-	picture = "Portrait_Ermland_Hellmuth_Will.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-	}
-}
-
-
+recruit_character = ERM_Otto_Braun
+recruit_character = ERM_Hermann_Hopker_Aschoff
+recruit_character = ERM_Walther_Schreiber
+recruit_character = ERM_Hellmuth_Will

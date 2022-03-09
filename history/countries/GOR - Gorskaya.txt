@@ -1,4 +1,4 @@
-﻿capital = 232
+capital = 232
 
 oob = "GOR_1936"
 
@@ -19,14 +19,11 @@ set_technology = {
 	gwtank = 1
 	early_fighter = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	limited_conscription
 	parliamentary_republic
 }
@@ -39,37 +36,18 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 24
-    libertarian_socialist = 23
-    social_democrat = 0
-    social_liberal = 0
-    market_liberal = 0
-    social_conservative = 48
-    authoritarian_democrat = 5
-    paternal_autocrat = 0
-    national_populist = 0
-    valkist = 0
+  vanguardist = 0
+  collectivist = 24
+  libertarian_socialist = 23
+  social_democrat = 0
+  social_liberal = 0
+  market_liberal = 0
+  social_conservative = 48
+  authoritarian_democrat = 5
+  paternal_autocrat = 0
+  national_populist = 0
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Sakhanjeri Mamsurov"
-	desc = ""
-	picture = "Portrait_GOR_Sakhanjeri_Mamsurov.tga"
-	expire = "1953.3.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Said Shamil"
-	desc = ""
-	picture = "Portrait_GOR_Said_Shamil.tga"
-	expire = "1953.3.1"
-	ideology = social_conservative_subtype
-	traits = {
-		
-	}
-}
+recruit_character = GOR_Sakhanjeri_Mamsurov
+recruit_character = GOR_Said_Shamil

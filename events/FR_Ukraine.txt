@@ -556,10 +556,10 @@ country_event = { #martial law
 
 	option = { #oshit
 		name = ukraine.11.a
-	hidden_effect = {
-	set_politics = {
-			ruling_party = paternal_autocrat
-		}
+    hidden_effect = {
+    set_politics = {
+      ruling_party = paternal_autocrat
+    }
 		add_popularity = {
     		ideology = paternal_autocrat
     		popularity = 0.7
@@ -571,8 +571,7 @@ country_event = { #martial law
 			UKR_Mikola_Stsiborsky_eco_pau
 			UKR_Sergei_Kubiyovich_sec_pau
 		}
-			complete_national_focus = ukr_rada_junta
-			}
+    complete_national_focus = ukr_rada_junta
 		}
 	}
 }
@@ -1664,16 +1663,14 @@ country_event = { #kosier fights back
 
 	option = {
 		name = ukraine.41.a
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Stanislav Kosior"
-			desc = "POLITICS_STANISLAV_KOSIOR_DESC"
-			picture = "Portrait_Ukraine_Stanislav_Kosior.tga"
-			expire = "1953.3.1"
-			ideology = vanguardist_subtype
-			traits = {	
-			}
-		}
+		add_country_leader_role = {
+      character = UKR_Stanislav_Kosior
+      promote_leader = yes
+      country_leader = {
+        ideology = vanguardist_subtype
+        traits = {}
+      }
+    }
 		add_ideas = workers_republic
 		set_politics = {
 			ruling_party = vanguardist
@@ -1719,15 +1716,14 @@ country_event = { #khruschev fights back
 
 	option = {
 		name = ukraine.43.a
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Nikita Khruschev"
-			desc = "POLITICS_NIKITA_KHRUSCHEV_DESC"
-			picture = "Portrait_Ukraine_Nikita_Khruschev.tga"
-			expire = "1953.3.1"
-			ideology = collectivist_subtype
-			traits = { }
-		}
+    add_country_leader_role = {
+      character = UKR_Nikita_Khruschev
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
 		add_ideas = workers_republic
 		set_politics = {
 			ruling_party = collectivist
@@ -1771,15 +1767,14 @@ country_event = { #Makhno fights back
 
 	option = {
 		name = ukraine.45.a
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Nestor Makhno"
-			desc = "POLITICS_NESTOR_MAKHNO_DESC"
-			picture = "Portrait_Ukraine_Nestor_Makhno.tga"
-			expire = "1953.3.1"
-			ideology = libertarian_socialist_subtype
-			traits = { }
-		}
+    add_country_leader_role = {
+      character = UKR_Nestor_Makhno
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = {}
+      }
+    }
 		add_ideas = workers_republic
 		set_politics = {
 			ruling_party = libertarian_socialist
@@ -1811,4 +1806,16 @@ country_event = { #Makhno steps down
 	option = {
 		name = ukraine.46.a
 	}
+}
+
+country_event = { # Land movie
+  id = ukraine.47
+  title = ukraine.47.t
+  desc = ukraine.47.d
+  picture = GFX_report_event_UKR_land_movie
+  is_triggered_only = yes
+
+  option = {
+    name = ukraine.47.a
+  }
 }

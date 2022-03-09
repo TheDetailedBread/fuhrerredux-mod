@@ -177,14 +177,14 @@ country_event = { #STALIN'S COUP
 		hidden_effect = {
 			set_party_name = { ideology = vanguardist long_name = GEO_stalin_party_long name = GEO_stalin_party }
 			set_cosmetic_tag = GEO_STA
-			create_country_leader = {
-				name = "Ioseb Jughashvili"
-				desc = ""
-				picture = "Portrait_GEO_Ioseb_Jughashvili.tga"
-				expire = "1953.3.1"
-				ideology = vanguardist_subtype
-				traits = {	}
-			}
+      add_country_leader_role = {
+        character = GEO_Ioseb_Jugashvili
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = {}
+        }
+      }
 			add_popularity = { ideology = vanguardist popularity = 0.2 }
 			add_ideas = one_party_dictatorship
 			set_politics = {
@@ -326,9 +326,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ge.1502.a #Make him a field marshal again
-		create_field_marshal = {
-			name = "Lavrentiy Beria"
-			picture = "Portrait_GEO_Lavrentiy_Beria.tga"
+		add_field_marshal_role = {
+      character = GEO_Lavrentiy_Beria
 			traits = { media_personality expert_delegator }
 			skill = 3 
 			attack_skill = 2
@@ -384,16 +383,14 @@ country_event = { #Georgia switches to Soviet Puppet tree, test event
 						has_country_flag = GEO_isSSR
 					}
 				}
-				create_country_leader = {
-					name = "Sergo Ordzhonikidze"
-					desc = ""
-					picture = "Portrait_GEO_Sergo_Ordzhonikidze.tga"
-					expire = "1953.3.1"
-					ideology = vanguardist_subtype
-					traits = {
-						
-					}
-				}
+        add_country_leader_role = {
+          character = GEO_Sergo_Ordzhonikidze
+          promote_leader = yes
+          country_leader = {
+            ideology = vanguardist_subtype
+            traits = {}
+          }
+        }
 			}
 		}
 		if = {
@@ -569,36 +566,30 @@ country_event = {
 		name = ge.10.a
 		add_stability = -0.1
 		add_popularity = { ideology = social_conservative popularity = 0.1 }
-		create_country_leader = {
-			name = "Giorgi Bagration-Mukhraneli"
-			desc = ""
-			picture = "Portrait_GEO_Giorgi_BagrationMukhraneli.tga"
-			expire = "1953.3.1"
-			ideology = social_conservative_subtype
-			traits = {
-				
-			}
-		}
-		create_country_leader = {
-			name = "Giorgi Bagration-Mukhraneli"
-			desc = ""
-			picture = "Portrait_GEO_Giorgi_BagrationMukhraneli.tga"
-			expire = "1953.3.1"
-			ideology = social_liberal_subtype
-			traits = {
-				
-			}
-		}
-		create_country_leader = {
-			name = "Giorgi Bagration-Mukhraneli"
-			desc = ""
-			picture = "Portrait_GEO_Giorgi_BagrationMukhraneli.tga"
-			expire = "1953.3.1"
-			ideology = social_democrat_subtype
-			traits = {
-				
-			}
-		}
+    add_country_leader_role = {
+      character = GEO_Giorgi_Bagration_Mukhraneli
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GEO_Giorgi_Bagration_Mukhraneli
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      character = GEO_Giorgi_Bagration_Mukhraneli
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
 		set_country_flag = GEO_monarchy
 		if = {
 			limit = {
@@ -1590,28 +1581,24 @@ country_event = {
 					has_government = social_democrat
 				}
 				add_ideas = parliamentary_republic
-				create_country_leader = {
-					name = "Hamo Ohanjanyan"
-					desc = ""
-					picture = "Portrait_GEO_Hamo_Ohanjanyan.tga"
-					ideology = social_democrat_subtype
-					expire = "1953.3.1"
-					traits = {
-						
-					}
-				}
+        add_country_leader_role = {
+          character = GEO_Hamo_Ohanjanyan
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 				else = {
 					add_ideas = parliamentary_republic
-					create_country_leader = {
-						name = "Hamo Ohanjanyan"
-						desc = ""
-						picture = "Portrait_GEO_Hamo_Ohanjanyan.tga"
-						ideology = social_liberal_subtype
-						expire = "1953.3.1"
-						traits = {
-							
-						}
-					}
+					add_country_leader_role = {
+            character = GEO_Hamo_Ohanjanyan
+            promote_leader = yes
+            country_leader = {
+              ideology = social_liberal_subtype
+              traits = {}
+            }
+          }
 					set_politics = {
 						ruling_party = social_liberal
 					}
@@ -1628,28 +1615,27 @@ country_event = {
 					has_government = social_democrat
 				}
 				add_ideas = parliamentary_republic
-				create_country_leader = {
-					name = "Javad Malik Yeganov"
-					desc = ""
-					picture = "Portrait_AZR_Javad_Malik_Yeganov.tga"
-					ideology = social_democrat_subtype
-					expire = "1953.3.1"
-					traits = {
-						
-					}
-				}
+        AZR_Javad_Malik_Yeganov = {
+          set_nationality = GEO
+        }
+        add_country_leader_role = {
+          character = AZR_Javad_Malik_Yeganov
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 				else = {
 					add_ideas = parliamentary_republic
-					create_country_leader = {
-						name = "Javad Malik Yeganov"
-						desc = ""
-						picture = "Portrait_AZR_Javad_Malik_Yeganov.tga"
-						ideology = social_liberal_subtype
-						expire = "1953.3.1"
-						traits = {
-							
-						}
-					}
+					add_country_leader_role = {
+            character = AZR_Javad_Malik_Yeganov
+            promote_leader = yes
+            country_leader = {
+              ideology = social_liberal_subtype
+              traits = {}
+            }
+          }
 					set_politics = {
 						ruling_party = social_liberal
 					}
@@ -1667,28 +1653,24 @@ country_event = {
 					has_government = social_democrat
 				}
 				add_ideas = parliamentary_republic
-				create_country_leader = {
-					name = "Peri-Khan Sofieva"
-					desc = ""
-					picture = "Portrait_GEO_Generic_Muslim_Woman.tga"
-					ideology = social_democrat_subtype
-					expire = "1953.3.1"
-					traits = {
-							
-					}
-				}
+        add_country_leader_role = {
+          character = GEO_Peri_Khan_Sofieva
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
 				else = {
 					add_ideas = parliamentary_republic
-					create_country_leader = {
-						name = "Peri-Khan Sofieva"
-						desc = ""
-						picture = "Portrait_GEO_Generic_Muslim_Woman.tga"
-						ideology = social_liberal_subtype
-						expire = "1953.3.1"
-						traits = {
-							
-						}
-					}
+					add_country_leader_role = {
+            character = GEO_Peri_Khan_Sofieva
+            promote_leader = yes
+            country_leader = {
+              ideology = social_liberal_subtype
+              traits = {}
+            }
+          }
 					set_politics = {
 						ruling_party = social_liberal
 					}

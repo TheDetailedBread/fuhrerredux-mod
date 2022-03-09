@@ -1,4 +1,4 @@
-﻿capital = 229 #Baku
+capital = 229 #Baku
 
 oob = "AZR_1936"
 
@@ -27,14 +27,11 @@ set_technology = {
 	early_bomber = 1
 	transport = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_sli
-	GEN_for_sli
-	GEN_eco_sli
-	GEN_sec_sli
 	semi_presidential_republic
 }
 
@@ -59,46 +56,5 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "Mirza Guseynov"
-	desc = ""
-	picture = "Portrait_AZR_Mirza_Guseynov.tga"
-	expire = "1953.3.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mammad Amin Rasulzade"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = social_conservative_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Javad Malik-Yeganov"
-	desc = ""
-	picture = "Portrait_AZR_Javad_Malik_Yeganov.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Gara Garabeyov"
-	desc = ""
-	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		
-	}
-}
+recruit_character = AZR_Mirza_Guseynov
+recruit_character = AZR_Javad_Malik_Yeganov

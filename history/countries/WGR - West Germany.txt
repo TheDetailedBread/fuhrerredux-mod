@@ -34,6 +34,7 @@ set_technology = {
 	synth_oil_experiments = 1
 	transport = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 set_research_slots = 4
@@ -46,81 +47,19 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
-
 }
 
 set_popularities = {
-    social_conservative = 80
-    valkist = 10
-    collectivist = 10
-    social_democrat = 0
+  social_conservative = 80
+  valkist = 10
+  collectivist = 10
+  social_democrat = 0
 }
-
 
 add_ideas = {
 	party_pop_0_80
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	parliamentary_republic
 }
-
-create_country_leader = {
-	name = "Klaus Klauser"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Konrad Adenauer"
-	desc = "POLITICS_KONRAD_ADENAUER_DESC"
-	picture = "gfx/leaders/GER/Portrait_Germany_Konrad_Adenauer.dds"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-	}
-}
-#
-#create_country_leader = {
-#	name = "William Trieck"
-#	desc = "POLITICS_WILHELM_PIECK_DESC"
-#	picture = "Portrait_Germany_Wilhelm_Pieck.dds"
-#	expire = "1965.1.1"
-#	ideology = collectivist_subtype
-#	traits = {
-#	}
-#}
-
-#create_country_leader = {
-#	name = "Otto Wels"
-#	desc = "POLITICS_OTTO_WELS_DESC"
-#	picture = "Portrait_Germany_Adolf_Hitler.dds"
-#	expire = "1938.1.16"
-#	ideology = social_democrat_subtype
-#	traits = {
-#		exiled
-#		union_man
-#	}
-#}
-#
-#create_country_leader = {
-#	name = "Ernst Thälmann"
-#	desc = "POLITICS_ERNST_THALMANN_DESC"
-#	picture = "Portrait_Germany_Adolf_Hitler.dds"
-#	expire = "1956.1.1"
-#	ideology = collectivist_subtype
-#	traits = {
-#		assassination_survivor
-#		stalins_puppet
-#		political_prisoner
-#	}
-#}
-
 
 ### Ship Variants ###
 ## 1936 Start ##

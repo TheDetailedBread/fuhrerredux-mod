@@ -20,8 +20,17 @@ default = no
 focus = { 
 	id = RHI_watch_on_the_rhine
 	icon = GFX_RHI_Interallied_Gov
-	bypass = {has_global_flag=RHI_F_crisis_end} 
-	available = {has_global_flag=RHI_F_crisis_end}
+	bypass = {
+    hidden_trigger = {
+      has_global_flag=RHI_F_crisis_end
+    }
+  } 
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_crisis_end
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 50   
 		completion_reward = {
@@ -40,7 +49,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_mandate_1} 
 	mutually_exclusive = { focus = RHI_valkist_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_independent}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag = RHI_F_independent
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1   
 		completion_reward = {
@@ -113,7 +127,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_mandate_1} 
 	mutually_exclusive = { focus = RHI_valkist_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_autonomous}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_autonomous
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1  
 		completion_reward = {
@@ -203,7 +222,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_independence_1} 
 	mutually_exclusive = { focus = RHI_valkist_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_mandate}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_mandate
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1   
 		completion_reward = {
@@ -294,7 +318,12 @@ focus = {
 	mutually_exclusive = { focus = RHI_mandate_1} 
 	mutually_exclusive = { focus = RHI_independence_1} 
 	prerequisite = { focus = RHI_watch_on_the_rhine } 
-	available = {has_global_flag=RHI_F_valkist}
+	available = {
+    custom_trigger_tooltip = {
+      tooltip = unlocked_later
+      has_global_flag=RHI_F_valkist
+    }
+  }
 	available_if_capitulated = yes 
 	cost = 1   
 		completion_reward = {
@@ -1345,10 +1374,8 @@ focus = {
 			idea = RHI_S_military_reorganization
 			days = 365
 		}
-			create_field_marshal = {
-			name = "Heinrich von Vietinghoff"
-			desc = "RHI_Gen_Viet_DESC"
-			picture = "Portrait_RHI_Heinrich_Vietinghoff.dds"
+		add_field_marshal_role = {
+      character = RHI_Heinrich_von_Vietinghoff
 			traits = {defensive_doctrine inflexible_strategist trait_cautious }
 			skill = 4
 			attack_skill = 2
@@ -1356,10 +1383,8 @@ focus = {
 			planning_skill = 3
 			logistics_skill = 2
 		}
-		create_field_marshal = {
-			name = "Ernst Busch"
-			desc = "RHI_Gen_Busch_DESC"
-			picture = "Portrait_RHI_Ernst_Busch.dds"
+		add_field_marshal_role = {
+      character = RHI_Ernst_Busch
 			traits = {old_guard}
 			skill = 2
 			attack_skill = 2
@@ -1367,10 +1392,8 @@ focus = {
 			planning_skill = 1
 			logistics_skill = 1
 		}	
-		create_corps_commander = {
-			name = "Hans von Salmuth"
-			desc = "RHI_Gen_Salmuth_DESC"
-			picture = "Portrait_RHI_Hans_Salmuth.dds"
+		add_corps_commander_role = {
+			character = RHI_Hans_Salmuth
 			traits = {infantry_officer }
 			skill = 3
 			attack_skill = 3
@@ -1378,10 +1401,8 @@ focus = {
 			planning_skill = 2
 			logistics_skill = 2
 		}	
-		create_corps_commander = {
-			name = "Karl-Adolf Hollidt"
-			desc = "RHI_Gen_Hollidt_DESC"
-			picture = "Portrait_RHI_Karl_Adolf_Hollidt.dds"
+		add_corps_commander_role = {
+			character = RHI_Karl_Adolf_Hollidt
 			traits = {trickster}
 			skill = 2
 			attack_skill = 2
@@ -1389,10 +1410,8 @@ focus = {
 			planning_skill = 1
 			logistics_skill = 2
 		}	
-		create_corps_commander = {
-			name = "Ludwig Crüwell"
-			desc = "RHI_Gen_Cruwell_DESC"
-			picture = "Portrait_RHI_Ludwig_Cruwell.dds"
+		add_corps_commander_role = {
+			character = RHI_Ludwig_Cruwell
 			traits = {panzer_leader}
 			skill = 2
 			attack_skill = 2
@@ -1400,10 +1419,8 @@ focus = {
 			planning_skill = 2
 			logistics_skill = 1
 		}	
-		create_corps_commander = {
-			name = "Smilo Freiherr von Lüttwitz"
-			desc = "RHI_Gen_Luttwitz_DESC"
-			picture = "Portrait_RHI_Smilo_Freiherr_Luttwitz.dds"
+		add_corps_commander_role = {
+      character = RHI_Smilo_Freiher_von_Luttwitz
 			traits = {brilliant_strategist trait_reckless}
 			skill = 3
 			attack_skill = 3
@@ -1411,10 +1428,8 @@ focus = {
 			planning_skill = 2
 			logistics_skill = 3
 		}	
-		create_corps_commander = {
-			name = "Curt Gallenkamp"
-			desc = "RHI_Gen_Gallenkamp_DESC"
-			picture = "Portrait_RHI_Curt_Gallenkamp.dds"
+		add_corps_commander_role = {
+      character = RHI_Curt_Gallenkamp
 			traits = {harsh_leader}
 			skill = 1
 			attack_skill = 1
@@ -1486,65 +1501,53 @@ focus = {
 		remove_unit_leader = 3304
 		remove_unit_leader = 3305
 		remove_unit_leader = 3306
-		create_field_marshal = {
-			name = "Heinrich von Vietinghoff"
-			desc = "RHI_Gen_Viet_DESC"
-			picture = "Portrait_RHI_Heinrich_Vietinghoff.dds"
-			traits = {defensive_doctrine inflexible_strategist trait_cautious }
+		add_field_marshal_role = {
+			character = RHI_Heinrich_von_Vietinghoff
+			traits = { defensive_doctrine inflexible_strategist trait_cautious }
 			skill = 4
 			attack_skill = 2
 			defense_skill = 4
 			planning_skill = 3
 			logistics_skill = 2
 		}
-		create_field_marshal = {
-			name = "Ernst Busch"
-			desc = "RHI_Gen_Busch_DESC"
-			picture = "Portrait_RHI_Ernst_Busch.dds"
-			traits = {old_guard}
+		add_field_marshal_role = {
+			character = RHI_Ernst_Busch
+			traits = { ld_guard }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 		}	
-		create_corps_commander = {
-			name = "Hans von Salmuth"
-			desc = "RHI_Gen_Salmuth_DESC"
-			picture = "Portrait_RHI_Hans_Salmuth.dds"
-			traits = {infantry_officer }
+		add_corps_commander_role = {
+      character = RHI_Hans_Salmuth
+			traits = { infantry_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
 		}	
-		create_corps_commander = {
-			name = "Karl-Adolf Hollidt"
-			desc = "RHI_Gen_Hollidt_DESC"
-			picture = "Portrait_RHI_Karl_Adolf_Hollidt.dds"
-			traits = {trickster}
+		add_corps_commander_role = {
+      character = RHI_Karl_Adolf_Hollidt
+			traits = { trickster }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
 		}	
-		create_corps_commander = {
-			name = "Ludwig Crüwell"
-			desc = "RHI_Gen_Cruwell_DESC"
-			picture = "Portrait_RHI_Ludwig_Cruwell.dds"
-			traits = {panzer_leader}
+		add_corps_commander_role = {
+      character = RHI_Ludwig_Cruwell
+			traits = { panzer_leader }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
 		}	
-		create_corps_commander = {
-			name = "Smilo Freiherr von Lüttwitz"
-			desc = "RHI_Gen_Luttwitz_DESC"
-			picture = "Portrait_RHI_Smilo_Freiherr_Luttwitz.dds"
+		add_corps_commander_role = {
+      character = RHI_Smilo_Freiher_von_Luttwitz
 			traits = {brilliant_strategist trait_reckless}
 			skill = 3
 			attack_skill = 3
@@ -1552,10 +1555,8 @@ focus = {
 			planning_skill = 2
 			logistics_skill = 3
 		}	
-		create_corps_commander = {
-			name = "Curt Gallenkamp"
-			desc = "RHI_Gen_Gallenkamp_DESC"
-			picture = "Portrait_RHI_Curt_Gallenkamp.dds"
+		add_corps_commander_role = {
+      character = RHI_Curt_Gallenkamp
 			traits = {harsh_leader}
 			skill = 1
 			attack_skill = 1
@@ -1593,7 +1594,7 @@ focus = {
 #Focus for French Military Mandate 
 focus = { 
 	id = RHI_french_military_mandate 
-	icon = GFX_Rhineland_French
+	icon = GFX_RHI_Mandate_Flag
 	bypass = {} 
 	mutually_exclusive = { focus = RHI_rhenish_armed_forces} 
 	mutually_exclusive = { focus =RHI_rhenish_french_cooperation} 

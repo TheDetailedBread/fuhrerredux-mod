@@ -1,4 +1,4 @@
-﻿capital = 771
+capital = 160
 
 oob = "SRV"
 
@@ -30,6 +30,7 @@ set_technology = {
 	early_battlecruiser = 1
 	transport = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 set_convoys = 50
@@ -38,10 +39,6 @@ set_war_support = 0.50
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_mli
-	GEN_for_mli
-	GEN_eco_mli
-	GEN_sec_mli
 	parliamentary_republic
 }
 
@@ -50,92 +47,22 @@ set_politics = {
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
-
 }
 
 set_popularities = {
-    vanguardist = 14
-    collectivist = 0
-    libertarian_socialist = 2
-    social_democrat = 23
-    social_liberal = 5
-    market_liberal = 31
-    social_conservative = 15
-    authoritarian_democrat = 4
-    paternal_autocrat = 2
-    national_populist = 0
-    valkist = 4
+  vanguardist = 14
+  collectivist = 0
+  libertarian_socialist = 2
+  social_democrat = 23
+  social_liberal = 5
+  market_liberal = 31
+  social_conservative = 15
+  authoritarian_democrat = 4
+  paternal_autocrat = 2
+  national_populist = 0
+  valkist = 4
 }
 
-
-
-
-create_country_leader = {
-	name = "Arnaldo Azzi"
-	desc = "ARNALDO_AZZI_DESC"
-	picture = "Portrait_Venice_Arnaldo_Azzi.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {		
-	}
-}
-
-create_country_leader = {
-	name = "Arnaldo Azzi"
-	desc = "ARNALDO_AZZI_DESC"
-	picture = "Portrait_Venice_Arnaldo_Azzi.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {		
-	}
-}
-
-create_country_leader = {
-	name = "Giuseppe Volpi"
-	desc = "GIUSEPPE_VOLPI_DESC"
-	picture = "Portrait_Venice_Giuseppe_Volpi.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {		
-	}
-}
-
-create_country_leader = {
-	name = "Giuseppe Volpi"
-	desc = "GIUSEPPE_VOLPI_DESC"
-	picture = "Portrait_Venice_Giuseppe_Volpi.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {		
-	}
-}
-
-create_country_leader = {
-	name = "Giuseppe Volpi"
-	desc = "GIUSEPPE_VOLPI_DESC"
-	picture = "Portrait_Venice_Giuseppe_Volpi.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {		
-	}
-}
-
-create_country_leader = {
-	name = "Luigi Gui"
-	desc = "LUIGI_GUI_DESC"
-	picture = "Portrait_Venice_Luigi_Gui.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {		
-	}
-}
-
-create_country_leader = {
-	name = "Rodolfo Graziani"
-	desc = "RODOLFO_GRAZIANI_DESC"
-	picture = "portrait_italy_radolfo_graziani.dds"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-	}
-}
+recruit_character = SRV_Arnaldo_Azzi
+recruit_character = SRV_Giuseppe_Volpi
+recruit_character = SRV_Luigi_Gui

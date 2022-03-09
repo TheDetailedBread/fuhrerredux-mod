@@ -2621,11 +2621,7 @@ focus = {
 	id = POL_look_west
 	icon = GFX_focus_chi_reach_out_to_france
 	ai_will_do = {
-		factor = 30
-		modifier = {
-			date > 1937.6.1
-			factor = 2
-		}
+		factor = 0
 	}
 	available = {
 		OR = {
@@ -2857,11 +2853,7 @@ focus = {
 	id = POL_regional_superpower
 	icon = GFX_focus_generic_polish_deal
 	ai_will_do = {
-		factor = 20
-		modifier = {
-			date > 1937.6.1
-			factor = 3
-		}
+		factor = 200
 	}
 	available = {
 		is_in_faction = no
@@ -4364,7 +4356,7 @@ focus = {
 	cost = 5
 
 	prerequisite = { focus = POL_gain_territory }
-	mutually_exclusive = { focus = POL_invite_belarus }
+	#mutually_exclusive = { focus = POL_invite_belarus }
 
 	available_if_capitulated = no  
 		completion_reward = {
@@ -4401,7 +4393,7 @@ focus = {
 #military bills
 focus = { 
 	id = POL_review_military
-	icon = GFX_goal_rhineland
+	icon = GFX_goal_POL_army
 	ai_will_do = { factor = 10 } 
 		
 	available = { OR = { has_idea = POL_PSCD_army has_idea = POL_MOW_army has_country_flag = POL_vetoed_army_bill } }
@@ -5116,7 +5108,7 @@ focus = {
 #airforce
 focus = { 
 	id = POL_the_polish_airforce
-	icon = GFX_goal_generic_air_doctrine
+	icon = GFX_goal_POL_airforce
 	ai_will_do = { factor = 10 }
 
 	x = 39

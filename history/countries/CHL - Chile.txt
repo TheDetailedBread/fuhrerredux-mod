@@ -1,4 +1,4 @@
-﻿capital = 279
+capital = 279
 
 oob = "CHL_1936"
 
@@ -22,10 +22,13 @@ add_ideas = {
 	CHL_crumbling_government
 	CHL_collapsed_economy
 	CHL_political_polarization
+<<<<<<< HEAD
 	CHL_Juan_Esteban_Montero_hog_sli
 	CHL_Abraham_Ortega_Aguayo_for_sli
 	CHL_Pedro_Enrique_Alfonso_eco_sli
 	CHL_Marcial_Mora_sec_sli
+=======
+>>>>>>> 353366bfe4b8f5530376966281a57bf818d8f022
 	presidential_republic
 }
 
@@ -39,6 +42,7 @@ set_technology = {
 	gwtank = 1
 	tech_mountaineers = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -90,165 +94,6 @@ set_popularities = {
     national_populist = 1
     valkist = 24
 }
-
-
-create_country_leader = {
-	name = "Carlos Contreras Labarca"
-	desc = "POLITICS_CARLOS_CONTRERAS_LABARCA_DESC"
-	picture = "Portrait_Chile_Carlos_Contreras_Labarca.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Manuel Rojas"
-	desc = "POLITICS_MANUEL_ROJAS_DESC"
-	picture = "Portrait_Chile_Manuel_Rojas.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Marmaduque Grove"
-	desc = "POLITICS_MARMADUQUE_GROVE_DESC"
-	picture = "Portrait_Chile_Marmaduque_Grove.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Juan Esteban Montero"
-	desc = "POLITICS_JUAN_ESTEBAN_MONTERO_DESC"
-	picture = "Portrait_Chile_Juan_Esteban_Montero.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Gustavo Ross"
-	desc = "POLITICS_GUSTAVO_ROSS_DESC"
-	picture = "Portrait_Chile_Gustavo_Ross.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Eduardo Cruz-Coke"
-	desc = "POLITICS_EDUARDO_CRUZ_COKE_DESC"
-	picture = "Portrait_Eduardo_Cruz_Coke.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bartolomé Blanche"
-	desc = "POLITICS_BARTOLOME_BLANCHE_DESC"
-	picture = "Portrait_Chile_Bartolome_Blanche.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Carlos Ibañez del Campo"
-	desc = "POLITICS_CARLOS_CONTRERAS_LABARCA_DESC"
-	picture = "Portrait_Chile_Carlos_Ibanez_Campo.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Raúl Olivares"
-	desc = "POLITICS_RAUL_OLIVARES_DESC"
-	picture = "Portrait_Chile_Raul_Olivares.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Jorge González von Marées"
-	desc = "POLITICS_JORGE_GONZÁLEZ_VON_MARÉES_DESC"
-	picture = "Portrait_Chile_Jorge_Gonzales_von_Marees.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-
-
-
-create_field_marshal = {
-	name = "Carlos Fuentes Rabe"
-	portrait_path = "gfx/leaders/CHL/CHL_Carlos_Fuentes_Rabe.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-create_field_marshal = {
-	name = "Luis Altamirano"
-	portrait_path = "gfx/leaders/CHL/CHL_Luis_Altamirano.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Arturo Puga"
-	picture = "Portrait_Chile_Arturo_Puga.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Oscar Otárola Escudero"
-	picture = "Portrait_Chile_Oscar_Escudero_Otarola.tga"
-	traits = { trait_mountaineer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Carlos Ibañez del Campo"
-	picture = "Portrait_Chile_Carlos_Ibanez_Campo.tga"
-	traits = { trait_mountaineer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-	id= 942
-}
-create_corps_commander = {
-	name = "Bartolomé Blanche"
-	picture = "Portrait_Chile_Bartolome_Blanche.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Juan Pablo Bennett"
-	picture = "Portrait_Chile_Bartomole_Bennett.tga"
-	traits = { harsh_leader inflexible_strategist trait_mountaineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
 
 ### Ship Variants ###
 
@@ -396,3 +241,101 @@ if = {
 		}
 	}
 }
+
+recruit_character = CHL_Carlos_Diaz_Loyola
+recruit_character = CHL_Carlos_Labarca
+recruit_character = CHL_Clotario_Blest_Riffo
+recruit_character = CHL_Luis_Alberto_Corvalan_Lepe
+recruit_character = CHL_Luis_Emilio_Recabarren
+recruit_character = CHL_Oscar_Schnake
+recruit_character = CHL_Salvador_Allende
+recruit_character = CHL_Marmaduke_Grove
+recruit_character = CHL_Jeronimo_Mendez_Arancibia
+recruit_character = CHL_Juan_Antonio_Rios
+recruit_character = CHL_Juan_Esteban_Montero
+recruit_character = CHL_Arturo_Alessandri_Palma
+recruit_character = CHL_Emiliano_Figueroa_Larrain
+recruit_character = CHL_Guillermo_Izquierdo
+recruit_character = CHL_Ariosto_Herrera_Ramirez
+recruit_character = CHL_Carlos_Ibanez_del_Campo
+recruit_character = CHL_Adolfo_Matthei_Schwarzenberg
+recruit_character = CHL_Francisco_Javier_Diaz_Valderrama
+recruit_character = CHL_Jose_Santos_Salas_Morales
+recruit_character = CHL_Bernardo_Ibanez_Aguila
+recruit_character = CHL_Luis_Arteaga_Garcia
+recruit_character = CHL_Fernando_Brown_Morales
+recruit_character = CHL_Gabriela_Mandujano
+recruit_character = CHL_Enrique_Victor_Aquiles_Balmaceda_Toro
+recruit_character = CHL_J_Fernandez_y_Fernandez
+recruit_character = CHL_Luis_Alamos_Barros
+recruit_character = CHL_Manuel_Mora_Miranda
+recruit_character = CHL_JRGuiterrez_Allende
+recruit_character = CHL_Miguel_Cruchaga_Tocornal
+recruit_character = CHL_Francisco_O_Ryan_Orrego
+recruit_character = CHL_Javier_Angel_Figueroa
+recruit_character = CHL_Emilio_Bello_Codesido
+recruit_character = CHL_Luis_Altamirano_Talavera
+recruit_character = CHL_Fernando_Guarello_Fitz_Henry
+recruit_character = CHL_Victor_Contreras_Tapia
+recruit_character = CHL_Augustin_Edwards
+recruit_character = CHL_Eulogia_Roman
+recruit_character = CHL_Aurelio_Celedon_Palma
+recruit_character = CHL_Carlos_Garcia_Palacios
+recruit_character = CHL_Juan_Rios_Morales
+recruit_character = CHL_Manuel_C_Pereira
+recruit_character = CHL_Arturo_Maschke
+recruit_character = CHL_Cristobal_Saenz_Cerda
+recruit_character = CHL_Gustavo_Ross_Santa_Maria
+recruit_character = CHL_Julio_Perez_Canto
+recruit_character = CHL_Pedro_Pablo_Dartnell_Encina
+recruit_character = CHL_Ramon_Callis
+recruit_character = CHL_Evaldo_Klein_Doener
+recruit_character = CHL_Carlos_Gregorio_Davila_Espinoza
+recruit_character = CHL_Alberto_Cabero_Diaz
+recruit_character = CHL_Max_Westenhofer
+recruit_character = CHL_Eduardo_Nicanor_Frei_Montalva
+recruit_character = CHL_Manuel_Salinas
+recruit_character = CHL_Carlos_Valdovinos_Valdovinos
+recruit_character = CHL_Manuel_Rivas_Vicuna
+recruit_character = CHL_Carlos_Vergara_Montero
+recruit_character = CHL_Carlos_Keller_Rueff
+recruit_character = CHL_Gustavo_Silva
+recruit_character = CHL_Ernesto_M_Orlando
+recruit_character = CHL_CJ_de_la_Motte
+recruit_character = CHL_Carlos_Puga_Monsalve
+recruit_character = CHL_Arturo_Espinoza_Mujica
+recruit_character = CHL_Dario_Cellejas_Rojas
+recruit_character = CHL_Luis_Vidal_Vargas
+recruit_character = CHL_Raul_Array_Stiglich
+recruit_character = CHL_Arturo_Puga_Osorio
+recruit_character = CHL_E_Novoa_Fuentes
+recruit_character = CHL_Julio_Allard_Pinto
+recruit_character = CHL_Salvador_Arron_Galvez
+recruit_character = CHL_Carlos_Fuentes_Rabe
+recruit_character = CHL_Oscar_Izurieta_Molina
+recruit_character = CHL_Juan_Pablo_Bennett_Argandona
+recruit_character = CHL_Rafael_Fernandez_Reyes
+recruit_character = CHL_Luis_Otero_Mujica
+recruit_character = CHL_Juan_Rodriguez
+recruit_character = CHL_Julio_Gerken_Mahn
+recruit_character = CHL_Luis_Barros_Borgono
+recruit_character = CHL_Gaston_Kulzcewski_Garcia
+recruit_character = CHL_Carlos_Frodden_Lorenzen
+recruit_character = CHL_Francisco_Nef_Jara
+recruit_character = CHL_Vicente_Merino_Bielich
+recruit_character = CHL_Hernan_Sarratea
+recruit_character = CHL_Diego_Aracena
+recruit_character = CHL_Dario_Mujica_Gamboa
+recruit_character = CHL_Jose_Luis_Sanchez_Besa
+recruit_character = CHL_Raul_Gonzalez_Nolle
+recruit_character = CHL_Ismael_Sarazua_Teran
+recruit_character = CHL_Manuel_Tovarias
+recruit_character = CHL_Manuel_Rojas
+recruit_character = CHL_Eduardo_Cruz_Coke
+recruit_character = CHL_Bartolome_Blanche
+recruit_character = CHL_Raul_Olivares
+recruit_character = CHL_Jorge_Gonzalez_von_Marees
+recruit_character = CHL_Luis_Altamirano
+recruit_character = CHL_Arturo_Puga
+recruit_character = CHL_Oscar_Otarola_Escudero
+recruit_character = CHL_Juan_Pablo_Bennett

@@ -1,4 +1,4 @@
-﻿capital = 126
+capital = 126
 
 oob = "ENG_1936"
 
@@ -42,6 +42,7 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	fuel_refining = 1
+  basic_train = 1
 }
 
 # - Naval Tech
@@ -69,36 +70,36 @@ IF = {
 		has_dlc = "Man the Guns"
 	}
     set_technology = {
-        basic_naval_mines = 1
-        submarine_mine_laying = 1
+      basic_naval_mines = 1
+      submarine_mine_laying = 1
 
-        early_ship_hull_light = 1
+      early_ship_hull_light = 1
 			basic_ship_hull_light = 1
 			sonar = 1
 			smoke_generator = 1
 			basic_depth_charges = 1
-		early_ship_hull_cruiser = 1
+		  early_ship_hull_cruiser = 1
 			basic_ship_hull_cruiser = 1
 			basic_cruiser_armor_scheme = 1
-		early_ship_hull_heavy = 1
+	  	early_ship_hull_heavy = 1
 			basic_ship_hull_heavy = 1
 			basic_heavy_armor_scheme = 1
-		early_ship_hull_carrier = 1
+		  early_ship_hull_carrier = 1
 			basic_ship_hull_carrier = 1
-        early_ship_hull_submarine = 1
+      early_ship_hull_submarine = 1
 
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_heavy_battery = 1
-		basic_torpedo = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
+      basic_battery = 1
+      basic_light_battery = 1
+      basic_medium_battery = 1
+      basic_heavy_battery = 1
+      basic_torpedo = 1
+      basic_secondary_battery = 1
+      improved_secondary_battery = 1
 
-		damage_control_1 = 1
+      damage_control_1 = 1
 
-		mtg_transport = 1
-		basic_fire_control_system = 1
+      mtg_transport = 1
+      basic_fire_control_system = 1
     }
 }
 
@@ -108,14 +109,14 @@ add_ideas = {
 	ENG_col_unrest
 	ENG_irb
 	ENG_war_fatigue
-	ENG_Samuel_Hoare_hog_sco
-	ENG_Adrian_Carton_de_Wiart_for_sco
-	ENG_George_Lane_Fox_eco_sco
-	ENG_Edward_Cavendish_sec_sco
+	
 	constitutional_monarchy
 }
 
 set_convoys = 800
+set_country_flag = IRE_CONQ
+set_country_flag = JAM_CONQ
+set_country_flag = BLZ_CONQ
 
 # DIPLOMACY
 if = {
@@ -215,17 +216,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 5
-    libertarian_socialist = 8
-    social_democrat = 30
-    social_liberal = 3
-    market_liberal = 10
-    social_conservative = 40
-    authoritarian_democrat = 0
-    paternal_autocrat = 2
-    national_populist = 0
-    valkist = 0
+  vanguardist = 2
+  collectivist = 5
+  libertarian_socialist = 8
+  social_democrat = 30
+  social_liberal = 3
+  market_liberal = 10
+  social_conservative = 40
+  authoritarian_democrat = 0
+  paternal_autocrat = 2
+  national_populist = 0
+  valkist = 0
 }
 
 
@@ -249,6 +250,7 @@ CAN = {
 		target = ENG
 		modifier = IMP_no_statute
 	}
+  set_cosmetic_tag = CAN_dominion
 }
 
 AST = {
@@ -280,473 +282,6 @@ RAJ = {
 }
 
 country_event = { id = uk.1 days = 1 }
-
-#declare_war_on = {
-	#target = IND
-	#type = annex_everything
-#}
-
-create_country_leader = {
-	name = "Jock Haston"
-	desc = "POLITICS_JOCK_HASTON_DESC"
-	picture = "Portrait_Britain_Jock_Haston.png"
-	expire = "1955.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Arthur MacManus"
-	desc = "POLITICS_ARTHUR_MACMANUS_DESC"
-	picture = "Portrait_Britain_Arthur_MacManus.tga"
-	expire = "1955.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Clement Attlee"
-	desc = "POLITICS_CLEMENT_ATTLEE_DESC"
-	picture = "Portrait_Britain_Clement_Attlee.tga"
-	expire = "1955.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_Britain_George_V.tga"
-	expire = "1938.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-create_field_marshal = {
-	name = "Alan Brooke"
-	picture = "Portrait_Britain_Alan_Brooke_fx.tga"
-	traits = { defensive_doctrine trait_cautious career_officer }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Bernard Montgomery"
-	picture = "Portrait_Britain_Bernard_Montgomery_fx.tga"
-	traits = { logistics_wizard offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Claude Auchinleck"
-	picture = "Portrait_Britain_Claude_Auchinleck_fx.tga"
-	traits = { inflexible_strategist career_officer }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Neil Ritchie"
-	picture = "Portrait_Britain_Neil_Ritchie.dds"
-	traits = { inflexible_strategist armor_officer politically_connected  }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Alan Cunningham"
-	picture = "Portrait_Britain_Alan_Cunningham_fx.tga"
-	traits = {}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "William Slim"
-	picture = "Portrait_Britain_William_Slim_fx.tga"
-	traits = { trickster war_hero }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Richard O'Connor"
-	picture = "Portrait_Britain_Richard_OConnor_fx.tga"
-	traits = {  }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "William Platt"
-	picture = "Portrait_Britain_William_Platt.dds"
-	traits = {  }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "George Giffard"
-	picture = "Portrait_Britain_George_Giffard_fx.tga"
-	traits = { career_officer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Harold Alexander"
-	picture = "Portrait_Britain_Harold_Alexander_fx.tga"
-	traits = { politically_connected }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Jackie Smyth"
-	picture = "Portrait_Britain_John_Jackie_Smyth.dds"
-	traits = { old_guard }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Thomas Jacomb Hutton"
-	picture = "Portrait_Britain_Thomas_Jacomb_Hutton.tga"
-	traits = { old_guard }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Arthur Percival"
-	picture = "Portrait_Britain_Arthur_Percival_fx.tga"
-	traits = {  trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Merton Beckwith-Smith"
-	picture = "Portrait_Britain_Merton_Beckwith_Smith.dds"
-	traits = { commando }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Henry Pownall"
-	picture = "Portrait_Britain_Henry_Pownall.dds"
-	traits = {  trickster }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "John Vereker Lord Gort"
-	picture = "Portrait_Britain_John_Vereker.dds"
-	traits = { politically_connected trait_cautious }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Henry Wilson"
-		picture = "Portrait_Britain_Henry_Maitland_Wilson1.tga"
-	traits = { old_guard politically_connected }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "William Gott"
-	picture = "Portrait_Britain_William_Gott.tga"
-	traits = { armor_officer war_hero inflexible_strategist }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Jock Campbell"
-	picture = "Portrait_Britain_Jock_Campbell.dds"
-	traits = { armor_officer  }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Oliver Leese"
-	picture = "Portrait_Britain_Oliver_Leese.dds"
-	traits = {  armor_officer harsh_leader politically_connected }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Miles Dempsey"
-	picture = "Portrait_Britain_Miles_Dempsey.dds"
-	traits = { brilliant_strategist infantry_officer career_officer }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Brian Horrocks"
-	picture = "Portrait_Britain_Brian_Horrocks.dds"
-	traits = {  armor_officer career_officer war_hero }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Archibald Wavell"
-	picture = "Portrait_Britain_Archibald_Wavell.tga"
-	traits = { career_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_navy_leader = {
-	name = "James Fownes Somerville" # Aristocrat
-	id = 983
-	picture = "Portrait_Britain_James_Fownes_Somerville.dds"
-	traits = { superior_tactician aviation_enthusiast navy_career_officer }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 4
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Henry Harwood" # Aristocrat
-	id = 984
-	picture = "Portrait_Britain_Henry_Harwood.dds"
-	traits = { old_guard_navy bold }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Andrew Cunningham"
-	id = 985
-	picture = "Portrait_Britain_Andrew_Cunningham_fx.tga"
-	traits = { blockade_runner superior_tactician navy_career_officer bold gunnery_expert}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Bruce Fraser"
-	id = 986
-	picture = "Portrait_Britain_Bruce_Fraser.dds"
-	traits = { aviation_enthusiast naval_lineage blockade_runner }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "John Tovey" # Aristocrat
-	id = 987
-	picture = "Portrait_Britain_John_Tovey_fx.tga"
-	traits = { gentlemanly naval_lineage superior_tactician }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Bernard Rawlings" # Aristocrat
-	id = 988
-	picture = "Portrait_Britain_Bernard_Rawlings.dds"
-	traits = { gentlemanly }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "John Cunningham"
-	id = 989
-	picture = "Portrait_Britain_John_Cunningham_fx.tga"
-	traits = { navy_career_officer green_water_expert }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Charles Forbes"
-	id = 990
-	picture = "Portrait_Britain_Charles_Forbes.dds"
-	traits = { gunnery_expert fly_swatter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Algernon Willis"
-	id = 991
-	picture = "Portrait_Britain_Algernon_Willis.dds"
-	traits = { battleship_adherent spotter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Arthur Power"
-	id = 992
-	picture = "Portrait_Britain_Arthur_Power.dds"
-	traits = { gunnery_expert }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
 
 IF = {
 	limit = {
@@ -1423,3 +958,99 @@ IF = {
 		}
 	}
 }
+
+recruit_character = ENG_Jock_Haston
+recruit_character = ENG_Arthur_MacManus
+recruit_character = ENG_Clement_Attlee
+recruit_character = ENG_George_V
+recruit_character = ENG_Alan_Brooke
+recruit_character = ENG_Bernard_Montgomery
+recruit_character = ENG_Claude_Auchinleck
+recruit_character = ENG_Neil_Ritchie
+recruit_character = ENG_Alan_Cunningham
+recruit_character = ENG_William_Slim
+recruit_character = ENG_Richard_O_Connor
+recruit_character = ENG_George_Giffard
+recruit_character = ENG_Harold_Alexander
+recruit_character = ENG_Thomas_Jacomb_Hutton
+recruit_character = ENG_Arthur_Percival
+recruit_character = ENG_Henry_Pownall
+recruit_character = ENG_Henry_Wilson
+recruit_character = ENG_William_Gott
+recruit_character = ENG_Miles_Dempsey
+recruit_character = ENG_Brian_Horrocks
+recruit_character = ENG_Archibald_Wavell
+recruit_character = ENG_James_Fownes_Somerville
+recruit_character = ENG_Andrew_Cunningham
+recruit_character = ENG_Bruce_Fraser
+recruit_character = ENG_John_Tovey
+recruit_character = ENG_Bernard_Rawlings
+recruit_character = ENG_John_Cunningham
+recruit_character = ENG_Charles_Forbes
+recruit_character = ENG_Algernon_Willis
+recruit_character = ENG_Arthur_Power
+recruit_character = ENG_Oswald_Mosley
+recruit_character = ENG_Arthur_Greenwood
+recruit_character = ENG_Hugh_Gaitskell
+recruit_character = ENG_Richard_Acland
+recruit_character = ENG_Archibald_Sinclair
+recruit_character = ENG_John_Simon
+recruit_character = ENG_Anthony_Eden
+recruit_character = ENG_Robert_Cecil
+recruit_character = ENG_Samuel_Hoare
+recruit_character = ENG_Jack_Churchill
+recruit_character = ENG_Henry_Page_Croft
+recruit_character = ENG_Louis_Mountbatten
+recruit_character = ENG_Archibald_Ramsay
+recruit_character = ENG_Rotha_Beryl_Lintorn_Orman
+recruit_character = ENG_Herbert_Morrison
+recruit_character = ENG_E_H_Carr
+recruit_character = ENG_Violet_Bonham_Carter
+recruit_character = ENG_Walter_Runciman
+recruit_character = ENG_Adrian_Carton_de_Wiart
+recruit_character = ENG_John_Colville
+recruit_character = ENG_Robert_Boothby
+recruit_character = ENG_Arthur_Wellesley
+recruit_character = ENG_Vere_Ponsonby
+recruit_character = ENG_John_Hugo_Russell
+recruit_character = ENG_Alexander_Raven_Thomson
+recruit_character = ENG_Hugh_Dalton
+recruit_character = ENG_R_H_Tawney
+recruit_character = ENG_Ernest_Simon
+recruit_character = ENG_Isaac_Foot
+recruit_character = ENG_Joseph_Kenworthy
+recruit_character = ENG_George_Lane_Fox
+recruit_character = ENG_John_Siddeley
+recruit_character = ENG_Montagu_Norman
+recruit_character = ENG_Philip_Lloyd_Greame
+recruit_character = ENG_John_Carnegie
+recruit_character = ENG_Noel_Pemberton_Billing
+recruit_character = ENG_Alliott_Vernon_Roe
+recruit_character = ENG_James_Chuter_Ede
+recruit_character = ENG_H_G_Wells
+recruit_character = ENG_Ivor_Brown
+recruit_character = ENG_John_Anderson
+recruit_character = ENG_Desmond_Morton
+recruit_character = ENG_Edward_Cavendish
+recruit_character = ENG_Randolph_Churchill
+recruit_character = ENG_Maxwell_Knight
+recruit_character = ENG_Trafford_Leigh_Mallory
+recruit_character = ENG_Jeffrey_Hamm
+recruit_character = ENG_John_Beckett
+recruit_character = ENG_John_Dill
+recruit_character = ENG_John_Vereker
+recruit_character = ENG_Edmund_Ironside
+recruit_character = ENG_Dudley_Pound
+recruit_character = ENG_Ernle_Chatfield
+recruit_character = ENG_Philip_Vian
+recruit_character = ENG_Roger_Keyes
+recruit_character = ENG_Tom_Phillips
+recruit_character = ENG_Winston_Churchill
+recruit_character = ENG_Leo_Amery
+recruit_character = ENG_Duff_Cooper
+recruit_character = ENG_Arthur_Tedder
+recruit_character = ENG_Charles_Portal
+recruit_character = ENG_Hugh_Trenchard
+recruit_character = ENG_John_Chamier
+recruit_character = ENG_King_Edward_VIII
+recruit_character = ENG_King_George_VI

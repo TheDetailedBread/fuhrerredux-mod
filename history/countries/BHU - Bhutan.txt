@@ -10,10 +10,6 @@ set_technology = {
 
 add_ideas = {
 	party_pop_0_60
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	absolute_monarchy
 }
 
@@ -25,7 +21,6 @@ set_politics = {
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {
@@ -42,13 +37,4 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "Jigme Wangchuck"
-	desc = "POLITICS_JIGME_WANGCHUCK_DESC"
-	picture = "Portrait_BHU_Jigme_Wangchuck.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = BHU_Jigme_Wangchuck

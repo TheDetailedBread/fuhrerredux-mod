@@ -1,7 +1,6 @@
 GRL_German_Politics = {
-    lemko_incorporation = {
-
-        icon = border_war
+  lemko_incorporation = {
+    icon = border_war
 
 		available = {
 			has_completed_focus = generic_ideological_fanaticism
@@ -11,24 +10,17 @@ GRL_German_Politics = {
 			}
 		}
 
-        visible = {
+    visible = {
 			LMK = {
 				owns_state = 800
-			}
-		}
-
-		highlight_states = {
-			OR = {
-				state = 800
-				state = 801		
 			}
 		}
 
 		ai_will_do = {
 			base = 80
 			modifier = { 
-				has_army_manpower = { size > 20000 }
-				factor = 10
+        factor = 10
+				num_divisions > 140
 			}
 		}
 
@@ -40,5 +32,5 @@ GRL_German_Politics = {
 				country_event = ger.2072
 			}
 		}
-    }
+  }
 }

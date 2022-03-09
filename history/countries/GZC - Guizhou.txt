@@ -1,4 +1,4 @@
-﻿capital = 603 # Guiyang
+capital = 603 # Guiyang
 oob = "GZC"
 
 set_convoys = 10
@@ -9,9 +9,6 @@ set_technology = {
 	infantry_weapons = 1
 }
 
-add_ideas = {
-}
-
 set_politics = {
 	ruling_party = social_liberal
 	last_election = "1936.1.1"
@@ -20,33 +17,22 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 12
-    social_liberal = 46
-    market_liberal = 14
-    social_conservative = 9
-    authoritarian_democrat = 8
-    paternal_autocrat = 11
-    national_populist = 0
-    valkist = 0
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 12
+  social_liberal = 46
+  market_liberal = 14
+  social_conservative = 9
+  authoritarian_democrat = 8
+  paternal_autocrat = 11
+  national_populist = 0
+  valkist = 0
 }
 
 add_ideas = {
 	party_pop_0_40
 	parliamentary_republic
-	GEN_hog_sli
-	GEN_for_sli
-	GEN_eco_sli
-	GEN_sec_sli
 }
 
-create_country_leader = {
-	name = "Wang Wenhua"
-	desc = "POLITICS_WANG_WENHUA_DESC"
-	picture = "Portrait_Guizhou_Wang_Wenhua.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {}
-}
+recruit_character = GZC_Wang_Wenhua

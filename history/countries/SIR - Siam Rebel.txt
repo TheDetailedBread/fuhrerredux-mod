@@ -1,4 +1,4 @@
-﻿#capital = 289
+#capital = 289
 
 #oob = "SIR"
 
@@ -23,6 +23,7 @@ set_technology = {
 	early_fighter = 1 #Prajadhipok
 	early_bomber = 1 #Boripatr
 	CAS1 = 1
+	basic_train = 1
 }
 	### Royal Siamese Arsernal 1936 Estimate ###
 	# Rifles
@@ -89,52 +90,18 @@ set_politics = {
 
 set_popularities = {
 	vanguardist = 56
-
 	collectivist = 5
-
 	libertarian_socialist = 4
-
 	social_democrat = 0
-
 	social_liberal = 1
-
 	market_liberal = 3
-
 	social_conservative = 0
-
 	authoritarian_democrat = 10
-
 	paternal_autocrat = 13
-
 	national_populist = 3
-
 	valkist = 5
 }
 set_country_flag = can_replace_military_staff
-
-
-
-create_country_leader = {
-	name = "Song Noppakul"
-	picture = "gfx/leaders/SIA/Song_noppakul.dds"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-}
-
-create_country_leader = {
-	name = "Pridi Banomyong"
-	picture = "gfx/leaders/SIA/pridi.dds"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-}
-
-create_country_leader = {
-	name = "Pridi Banomyong"
-	picture = "gfx/leaders/SIA/pridi.dds"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-}
-
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -160,3 +127,6 @@ if = {
 		}
 	}
 }
+
+recruit_character = SIR_Song_Noppakul
+recruit_character = SIR_Pridi_Banomyong

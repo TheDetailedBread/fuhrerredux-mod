@@ -1,4 +1,4 @@
-﻿capital = 300
+capital = 300
 
 oob = "URG_1936"
 
@@ -44,10 +44,6 @@ set_war_support = 0.50
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sli
-	GEN_for_sli
-	GEN_eco_sli
-	GEN_sec_sli
 	presidential_republic
 }
 
@@ -59,28 +55,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 24
-    social_liberal = 47
-    market_liberal = 0
-    social_conservative = 16
-    authoritarian_democrat = 0
-    paternal_autocrat = 5
-    national_populist = 8
-    valkist = 0
-}
-
-create_country_leader = {
-	name = "Basilio Muñoz"
-	desc = "POLITICS_BASMUNN_DESC"
-	picture = "BasilioMunoz.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 24
+  social_liberal = 47
+  market_liberal = 0
+  social_conservative = 16
+  authoritarian_democrat = 0
+  paternal_autocrat = 5
+  national_populist = 8
+  valkist = 0
 }
 
 ### VARIANTS ###
@@ -110,3 +95,5 @@ if = {
 	}
 }
 
+recruit_character = URG_Basilio_Munoz
+recruit_character = URG_Alfredo_Baldomir_Ferrari
