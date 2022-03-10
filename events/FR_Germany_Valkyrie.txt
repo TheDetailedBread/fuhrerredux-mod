@@ -111,7 +111,6 @@ country_event = { #Chaos in the Country
 		}
 
 		hidden_effect = {
-			kill_country_leader = yes
 			if = {
 				limit = {
 					is_faction_leader = yes
@@ -147,7 +146,7 @@ country_event = { #Chaos in the Country
 		remove_every_minister = yes
 		add_ideas = {
 			GER_Hans_Juergen_Graf_von_Blumenthal_hog_ade
-			GER_Walther_von_Brauchistsch_for_ade
+			GER_Friedrich_Werner_von_der_Schulenberg_for_ade
 			GER_Hjalmar_Schacht_eco_ade
 			GER_Fritz_Dietlog_Schulenburg_sec_ade
 		}
@@ -384,8 +383,6 @@ country_event = { #inviting the local princes
 	}
 }
 
-
-
 country_event = { #the marriage
 	id = valkyrie.11
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.11"}
@@ -429,7 +426,7 @@ country_event = { #Absolutist vs Parlementarian decision
 	}
 	option = {
 		name = valkyrie.12.c
-       	add_popularity = {
+    add_popularity = {
 			ideology = market_liberal
 			popularity = 0.10
 		}
@@ -455,11 +452,9 @@ country_event = { #Accession to the throne authdem/conservativism
 	desc = valkyrie.13.d
 	picture = GFX_event_whilhem_3
 	is_triggered_only = yes
-	option = {
-	
-	retire_character = GER_Hans_von_Seeckt
-			
-	    name = valkyrie.13.a
+
+	option = {		
+	  name = valkyrie.13.a
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.15
@@ -468,61 +463,11 @@ country_event = { #Accession to the throne authdem/conservativism
 			ideology = paternal_autocrat
 			popularity = 0.05
 		}
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = social_democrat_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = social_liberal_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = market_liberal_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = social_conservative_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = authoritarian_democrat_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = paternal_autocrat_subtype
-        traits = {}
-      }
-    }
-       set_cosmetic_tag = GER_monarchist
+    GER_add_wilhelm_iii = yes
 	}
+
 	option = {
 		name = valkyrie.13.b
-		
-		retire_country_leader = yes
-		
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.4
@@ -539,62 +484,10 @@ country_event = { #Accession to the throne authdem/conservativism
 			ideology = social_democrat
 			popularity = 0.1
 		}
-add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = social_democrat_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = social_liberal_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = market_liberal_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = social_conservative_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = authoritarian_democrat_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = GER_Wilhelm_III
-      promote_leader = yes
-      country_leader = {
-        ideology = paternal_autocrat_subtype
-        traits = {}
-      }
-    }
-		set_cosmetic_tag = GER_monarchist
 		set_global_flag = GER_DEM
+    GER_add_wilhelm_iii = yes
 	}
 }
-
-
-
-
 
 country_event = { #First German election
 	id = valkyrie.14
@@ -602,12 +495,10 @@ country_event = { #First German election
 	title = valkyrie.14.t
 	desc = valkyrie.14.d
 	picture = GFX_event_german_election
-
 	is_triggered_only = yes
 
 	option = {
 		name = valkyrie.14.a
-
 		ai_chance = {
 			factor = 50
 		}
@@ -632,7 +523,6 @@ country_event = { #First German election
   }
 	option = {
 		name = valkyrie.14.b
-
 		ai_chance = {
 			factor = 50
 		}
