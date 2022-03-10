@@ -9392,11 +9392,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_saalwachter"
 			set_country_flag = GER_picked_saalwachter
-      add_naval_commander_role = {
-        character = GER_Alfred_Saalwachter
-        traits = { old_guard_navy }
-				skill = 4
-      }
 			add_tech_bonus = {
 				name = nav_doctrine_bonus
 				bonus = 0.3
@@ -9434,11 +9429,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_donitz"
 			set_country_flag = GER_picked_donitz
-      add_naval_commander_role = {
-        character = GER_Karl_Donitz
-        traits = { seawolf }
-				skill = 5
-      }
 			add_tech_bonus = {
 				name = nav_doctrine_bonus
 				bonus = 0.3
@@ -9476,11 +9466,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_raeder"
 			set_country_flag =  GER_picked_raeder
-      add_naval_commander_role = {
-        character = GER_Erich_Raeder
-        traits = { blockade_runner }
-				skill = 4
-      }
 			add_tech_bonus = {
 				name = nav_doctrine_bonus
 				bonus = 0.3
@@ -11948,14 +11933,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_anglo_german_training
-        completion_reward = {
-			custom_effect_tooltip = GER_reclamation_tt
-			unlock_decision_tooltip = fate_of_czechia
-			unlock_decision_tooltip = austrian_intervention
-			unlock_decision_tooltip = polish_intervention
-			unlock_decision_tooltip = rheinland_reclamation
-			unlock_decision_tooltip = holstein_reclamation
-	  	}
+    completion_reward = {
+			unlock_decision_tooltip = GER_fate_of_czechia
+			unlock_decision_tooltip = GER_austrian_intervention
+			unlock_decision_tooltip = GER_polish_intervention
+			unlock_decision_tooltip = GER_rheinland_reclamation
+			unlock_decision_tooltip = GER_holstein_reclamation
+	  }
 	}
 	focus = {
 		id = GER_end_France
@@ -12004,11 +11988,11 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_end_France
-        completion_reward = {
+    completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
 			increase_ruling_party_popularity_by_10 = yes
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_end_the_soviet_threat
@@ -12023,9 +12007,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_monarchism_is_back_in_fashion
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = { type = annex_everything target = SOV }
-	  	}
+	  }
 	}
 
 
@@ -12045,9 +12029,9 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GER_finding_allies
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.20
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_technology_sharing
@@ -12059,9 +12043,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_the_sovier_union
-        completion_reward = {
-			country_event = valkyrie.88
-	  	}
+    completion_reward = {
+		  country_event = valkyrie.88
+	  }
 	}
 	focus = {
 		id = GER_splitting_Eastern_Europe
@@ -12073,9 +12057,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_technology_sharing
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.84
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_Poland
@@ -12087,9 +12071,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_splitting_Eastern_Europe
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = { type = annex_everything target = POL }
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_Soviet_Germans
@@ -12101,9 +12085,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_Poland
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.85
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_a_helping_hand
@@ -12115,9 +12099,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_Poland
-        completion_reward = {
+    completion_reward = {
 			custom_effect_tooltip = GER_helping_hand_tt
-			unlock_decision_tooltip = eastern_invasion
+			unlock_decision_tooltip = GER_eastern_invasion
 	 	}
 	}
 	focus = {
@@ -12172,16 +12156,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_economic_cooperation
 		relative_position_id = GER_economic_cooperation
-        completion_reward = {
+    completion_reward = {
 			custom_effect_tooltip = GER_revolution_tt
-			unlock_decision_tooltip = rheinland_revolution
-			unlock_decision_tooltip = central_european_revolution
-			unlock_decision_tooltip = danish_revolution
-			unlock_decision_tooltip = the_revolution_austria
-			unlock_decision_tooltip = holstein_reclamation
-	  	}
+			unlock_decision_tooltip = GER_rheinland_revolution
+			unlock_decision_tooltip = GER_central_european_revolution
+			unlock_decision_tooltip = GER_danish_revolution
+			unlock_decision_tooltip = GER_the_revolution_austria
+			unlock_decision_tooltip = GER_holstein_reclamation
+	  }
 	}
-	
 	
 	focus = {
 		id = GER_the_revolution_in_France

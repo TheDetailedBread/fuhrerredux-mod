@@ -3874,17 +3874,11 @@ focus_tree = {
 		focus = { 
 		id = CZE_unite_western_slavs
 		icon = GFX_focus_unite_west_slavs
-
  		ai_will_do = { factor = 0 } 
-
  		x =8
  		y =13
  		cost = 6
  		prerequisite = { focus = CZE_zapadoslavia_rises }
- 		available = {
-			OR = {
-			}
-		}
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus cze_unite_western_slavs"
