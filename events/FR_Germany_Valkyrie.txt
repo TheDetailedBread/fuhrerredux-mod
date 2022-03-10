@@ -938,57 +938,41 @@ country_event = {
 	}
 }
 
-
-
-
 ###########################################
 ########Czech events#######################
 ###########################################
-
-
-
-
 
 country_event = { #Czech problem
 	id = valkyrie.29
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.29"}
 	title = valkyrie.29.t
 	desc = valkyrie.29.d
-	#picture = 
-
+	picture = GFX_report_event_french_british_officers
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.29.a
-
 		CZE = {
 			country_event = { id = valkyrie.30 days = 4 } #Sudentenlands
 		}
-		
 	}
 	
 	option = {
 		name = valkyrie.29.b
-
 		CZE = {
 			country_event = { id = valkyrie.31 days = 4 } #Full Submition
 		}
-		
 	}
 }
-
 
 country_event = { #Czech reaction for the Sudentenlands
 	id = valkyrie.30
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.30"}
 	title = valkyrie.30.t
 	desc = valkyrie.30.d
-    #picture = 
-
+	picture = GFX_report_event_french_british_officers
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -1012,14 +996,12 @@ country_event = { #Czech reaction for the Sudentenlands
 			}
 		}
 		
-		GER = {
-			country_event = { id = valkyrie.32 days = 4 } #Says yes
-		}
-	GER = {
-		transfer_state = 775
-		transfer_state = 74
-		transfer_state = 69
-	    }
+	  GER = {
+      transfer_state = 775
+      transfer_state = 74
+      transfer_state = 69
+      country_event = { id = valkyrie.32 days = 4 } #Says yes
+	  }
 	}
 	
 	option = {
@@ -1038,80 +1020,60 @@ country_event = { #Czech reaction for the Sudentenlands
 		GER = {
 			country_event = { id = valkyrie.33 days = 4 } #Says no
 		}
-		
 	}
 }
-
-
 
 country_event = { #Germany get the message :Czech says yes to Sudentenlands transfer.
 	id = valkyrie.32
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.32"}
 	title = valkyrie.32.t
 	desc = valkyrie.32.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_french_british_officers
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.32.a
-		
-     POL = { give_guarantee = CZE }
-	 
+    POL = { give_guarantee = CZE }
 	}
 }
-
-
 
 country_event = { #Germany get the message : Czech says no to Sudentenlands transfer.
 	id = valkyrie.33
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.33"}
 	title = valkyrie.33.t
 	desc = valkyrie.33.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.33.a #Germany declares war / Poland rallied w Czechia
-		
-			GER = {
-				declare_war_on = {
-					type = annex_everything
-					target = CZE
-				}
-			}
+    GER = {
+      declare_war_on = {
+        type = annex_everything
+        target = CZE
+      }
+    }
 		hidden_effect = {	
-			
-		POL = {
-			country_event = { id = valkyrie.34 days = 4 } #Czechs are under attack
-		}
-		
+      POL = {
+        country_event = { id = valkyrie.34 days = 4 } #Czechs are under attack
+      }
 		}
 		custom_effect_tooltip = GER_unkown_repercussions
 	}
 	option = {
-		name = valkyrie.33.b #perhaps they are hiding somthing...
-			
+		name = valkyrie.33.b #perhaps they are hiding something...
 	}
 }
-
-
-
 
 country_event = { #Poland allies w Czechia to defeat Germany
 	id = valkyrie.34
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.34"}
 	title = valkyrie.34.t
 	desc = valkyrie.34.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -1134,16 +1096,15 @@ country_event = { #Poland allies w Czechia to defeat Germany
 				}
 			}
 		}
-			POL = {
-				declare_war_on = {
-					type = annex_everything
-					target = GER
-				}
-			}
+    POL = {
+      declare_war_on = {
+        type = annex_everything
+        target = GER
+      }
+    }
 			
-			create_faction = "Czecho-Polish Entente"
-			add_to_faction = CZE
-			
+		create_faction = "Czecho-Polish Entente"
+		add_to_faction = CZE
 		GER = {
 			country_event = { id = valkyrie.35 days = 2 } #Germany receives the message
 		}
@@ -1158,53 +1119,37 @@ country_event = { #Poland allies w Czechia to defeat Germany
 }
 
 
-
 country_event = { #Germany receives the message that Poland attacked them
 	id = valkyrie.35
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.35"}
 	title = valkyrie.35.t
 	desc = valkyrie.35.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.35.a
-		
-			188 = {
-				add_core_of = GER
-			}
-			752 = {
-				add_core_of = GER
-			}
-            86 = {
-				add_core_of = GER
-			}
-			67 = {
-				add_core_of = GER
-			}
+		GER = {
+      add_state_core = 188
+      add_state_core = 752
+      add_state_core = 86
+      add_state_core = 67
+    }
 	}
 }
-
-
-
 
 country_event = { #puppeted and ripped apart or no ? Czech event
 	id = valkyrie.31
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.31"}
 	title = valkyrie.31.t
 	desc = valkyrie.31.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.31.a
-		
 		ai_chance = { 
 			factor = 40 
 			modifier = {
@@ -1228,7 +1173,6 @@ country_event = { #puppeted and ripped apart or no ? Czech event
 	}
 	option = {
 		name = valkyrie.31.b
-		
 		ai_chance = { 
 			factor = 1 
 		}
@@ -1236,21 +1180,16 @@ country_event = { #puppeted and ripped apart or no ? Czech event
 		GER = {
 			country_event = { id = valkyrie.37 days = 4 } #Czechs capitulate
 		}
-    }
+  }
 }
-
-
-
 
 country_event = { #Germany get the message : Czech says no to getting oblitarated.
 	id = valkyrie.36
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.36"}
 	title = valkyrie.36.t
 	desc = valkyrie.36.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -1263,43 +1202,42 @@ country_event = { #Germany get the message : Czech says no to getting oblitarate
 				}
 			}
 		hidden_effect = {	
-			
-		POL = {
-			country_event = { id = valkyrie.34 days = 4 } #Czechs are under attack
-		}
-		
+      POL = {
+        country_event = { id = valkyrie.34 days = 4 } #Czechs are under attack
+      }
 		}
 		custom_effect_tooltip = GER_unkown_repercussions
 	}
 	option = {
-		name = valkyrie.36.b #perhaps they are hiding somthing...
-			
+		name = valkyrie.36.b #perhaps they are hiding something...
 	}
 }
-
-
 
 country_event = { #Czechia capitulates 
 	id = valkyrie.37
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.37"}
 	title = valkyrie.37.t
 	desc = valkyrie.37.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.37.a
-		
-	    GER = {
-		transfer_state = 775
-		transfer_state = 74
-		transfer_state = 69
-	    }
-		
-		GER={ puppet= CZE} 
+	  GER = {
+		  transfer_state = 775
+		  transfer_state = 74
+		  transfer_state = 69
+      puppet = CZE
+	  }
+    CZE = {
+      remove_state_core = 775
+      remove_state_core = 74
+      remove_state_core = 69
+      add_state_claim = 775
+      add_state_claim = 74
+      add_state_claim = 69
+    }
 	}
 }
 
@@ -1308,17 +1246,13 @@ country_event = { #Czechia capitulates
 #########Austrian events###################
 ###########################################
 
-
-
 country_event = { #Germany marches on into Austria
 	id = valkyrie.38
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.38"}
 	title = valkyrie.38.t
 	desc = valkyrie.38.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -1330,21 +1264,17 @@ country_event = { #Germany marches on into Austria
 	}
 }
 
-
 country_event = { #Austria gets the events
 	id = valkyrie.39
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.39"}
 	title = valkyrie.39.t
 	desc = valkyrie.39.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.39.a
-		
 		ai_chance = { 
 			factor = 40 
 		}
@@ -1356,7 +1286,6 @@ country_event = { #Austria gets the events
 	
 	option = {
 		name = valkyrie.39.b
-		
 		ai_chance = { 
 			factor = 10 
 		}
@@ -1372,122 +1301,70 @@ country_event = { #Germany annexes the country as a whole
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.40"}
 	title = valkyrie.40.t
 	desc = valkyrie.40.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.40.a
 		
 		annex_country = { target = AUS transfer_troops = yes }
-		
-			152 = {
-				add_core_of = GER
-			}
-			803 = {
-				add_core_of = GER
-			}
-            4 = {
-				add_core_of = GER
-			}
-			772 = {
-				add_core_of = GER
-			}
-			772 = {
-				add_core_of = GER
-			}
-			912 = {
-				add_core_of = GER
-			}
-			913 = {
-				add_core_of = GER
-			}
-			153 = {
-				add_core_of = GER
-			}
-	    }
+    GER = {
+      add_state_core = 152
+      add_state_core = 803
+      add_state_core = 4
+      add_state_core = 772
+      add_state_core = 912
+      add_state_core = 913
+      add_state_core = 153
     }
+	}
+}
 
 country_event = { #Italian intervention
 	id = valkyrie.41
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.41"}
 	title = valkyrie.41.t
 	desc = valkyrie.41.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.41.a
-		
-			152 = {
-			add_core_of = GER
-			}
-			803 = {
-				add_core_of = GER
-			}
-            4 = {
-				add_core_of = GER
-			}
-			772 = {
-				add_core_of = GER
-			}
-			772 = {
-				add_core_of = GER
-			}
-			912 = {
-				add_core_of = GER
-			}
-			913 = {
-				add_core_of = GER
-			}
-			153 = {
-				add_core_of = GER
-			}
-			
-		GER = {
-		transfer_state = 152
-		transfer_state = 803
-		}
-		
-		HUN = {
-		transfer_state = 772
-	    }
-		
-		ITA={ puppet= AUS} 
-	    AUS = { set_cosmetic_tag = AUS_ITA }
-	
-		GER = {
-			country_event = { id = valkyrie.42 days = 4 } #Italy has intervened
-		}
-		
-		GER = {
-			add_manpower = 25000
-		}
-		
+    GER = {
+      add_state_core = 152
+      add_state_core = 803
+      add_state_core = 4
+      add_state_core = 772
+      add_state_core = 912
+      add_state_core = 913
+      add_state_core = 153
+      transfer_state = 152
+      transfer_state = 803
+      country_event = { id = valkyrie.42 days = 4 }
+      add_manpower = 25000
     }
- }
- 
- 
+		HUN = {
+		  transfer_state = 772
+	  }
+		ITA = { puppet = AUS } 
+	  AUS = { set_cosmetic_tag = AUS_ITA }	
+  }
+}
  
 country_event = { #German response to the Austro-Italian problem
 	id = valkyrie.42
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.42"}
 	title = valkyrie.42.t
 	desc = valkyrie.42.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.42.a
-	
+    add_political_power = -10
 	}
 	
 	option = {
@@ -1495,16 +1372,12 @@ country_event = { #German response to the Austro-Italian problem
 		
 		GER = {
 			declare_war_on = {
-			type = annex_everything
-			target = AUS
-			
+        type = annex_everything
+        target = AUS
 			}
-	    }
+	  }
 	}
 }
-
-
-
 
 ###########################################
 #########Polish events#####################
@@ -1516,10 +1389,8 @@ country_event = { #Poznan, Mazury for guns/diplo/force
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.43"}
 	title = valkyrie.43.t
 	desc = valkyrie.43.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -1553,19 +1424,15 @@ country_event = { #German provinces for guns POL EVENT
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.44"}
 	title = valkyrie.44.t
 	desc = valkyrie.44.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.44.a
-		
 		ai_chance = { 
 			factor = 80 
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.48 days = 4 } #YES
 		}
@@ -1573,11 +1440,9 @@ country_event = { #German provinces for guns POL EVENT
 	
 	option = {
 		name = valkyrie.44.b
-		
 		ai_chance = { 
 			factor = 40 
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.47 days = 4 } #NO
 		}
@@ -1590,19 +1455,15 @@ country_event = { #German provinces for guarentee POL EVENT
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.45"}
 	title = valkyrie.45.t
 	desc = valkyrie.45.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.45.a
-		
 		ai_chance = { 
 			factor = 80 
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.49 days = 4 } #YES
 		}
@@ -1610,11 +1471,9 @@ country_event = { #German provinces for guarentee POL EVENT
 	
 	option = {
 		name = valkyrie.45.b
-		
 		ai_chance = { 
 			factor = 40 
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.47 days = 4 } #NO
 		}
@@ -1627,19 +1486,15 @@ country_event = { #German provinces or war POL EVENT
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.46"}
 	title = valkyrie.46.t
 	desc = valkyrie.46.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.46.a
-		
 		ai_chance = { 
 			factor = 40 
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.50 days = 4 } #YES
 		}
@@ -1647,11 +1502,9 @@ country_event = { #German provinces or war POL EVENT
 	
 	option = {
 		name = valkyrie.46.b
-		
 		ai_chance = { 
 			factor = 40 
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.47 days = 4 } #NO
 		}
@@ -1659,39 +1512,28 @@ country_event = { #German provinces or war POL EVENT
 }
 
 
-
-
-
-
-
 country_event = { #Poland says no to all
 	id = valkyrie.47
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.47"}
 	title = valkyrie.47.t
 	desc = valkyrie.47.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.47.a
 		GER = {
 			declare_war_on = {
-			type = annex_everything
-			target = POL	
-		    }
-	    }
+        type = annex_everything
+        target = POL	
+		  }
+	  }
 	}
 	option = {
 		name = valkyrie.47.b
-	    } 
-    }
-
-
-
-
+	} 
+}
 
 
 country_event = { #yes guns
@@ -1699,15 +1541,12 @@ country_event = { #yes guns
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.48"}
 	title = valkyrie.48.t
 	desc = valkyrie.48.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.48.a
-		
 		send_equipment = {
 			target = POL
 			type = infantry_equipment
@@ -1715,11 +1554,11 @@ country_event = { #yes guns
 		}
 		
 		GER = {
-		transfer_state = 86
-		transfer_state = 752
-		transfer_state = 67
-		transfer_state = 188
-	    }
+      transfer_state = 86
+      transfer_state = 752
+      transfer_state = 67
+      transfer_state = 188
+	  }
 	}
 }
 
@@ -1728,24 +1567,20 @@ country_event = { #yes guarentee
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.49"}
 	title = valkyrie.49.t
 	desc = valkyrie.49.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
 		name = valkyrie.49.a
 		
-		GER = { give_guarantee = POL }
-		
-		GER = {
-		transfer_state = 86
-		transfer_state = 752
-		transfer_state = 67
-		transfer_state = 188
-	    }
-
+		GER = { 
+      give_guarantee = POL
+      transfer_state = 86
+      transfer_state = 752
+      transfer_state = 67
+      transfer_state = 188
+    }
 	}
 }
 
@@ -1754,25 +1589,22 @@ country_event = { #yes strenght
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.50"}
 	title = valkyrie.50.t
 	desc = valkyrie.50.d
-	#picture = GFX_report_event_ast_army
-
+  picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
+    name = valkyrie.50.a
 		ai_chance = {
 			factor = 80
 		}
 		
-		name = valkyrie.50.a
-		
 		GER = {
-		transfer_state = 86
-		transfer_state = 752
-		transfer_state = 67
-		transfer_state = 188
-	    }	
+      transfer_state = 86
+      transfer_state = 752
+      transfer_state = 67
+      transfer_state = 188
+	  }	
 	}
 }
 
@@ -1788,10 +1620,8 @@ country_event = { #Danish problem
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.51"}
 	title = valkyrie.51.t
 	desc = valkyrie.51.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
@@ -1807,15 +1637,15 @@ country_event = { #Danish problem
 		
 		GER = {
 			declare_war_on = {
-			type = annex_everything
-			target = SHO	
-		    }
+        type = annex_everything
+        target = SHO	
+		  }
 		}
 		GER = {
 			declare_war_on = {
-			type = annex_everything
-			target = DEN	
-		    }
+        type = annex_everything
+        target = DEN	
+		  }
 		}
 	}
 }
@@ -1825,10 +1655,8 @@ country_event = { #Denmark either gives land or no
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.52"}
 	title = valkyrie.52.t
 	desc = valkyrie.52.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
@@ -1860,22 +1688,20 @@ country_event = { #Denmark gives the land back II
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.53"}
 	title = valkyrie.53.t
 	desc = valkyrie.53.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.53.a
 		
 		GER = {
-		transfer_state = 915
-		transfer_state = 991
-		transfer_state = 58
-		transfer_state = 786
-		transfer_state = 784
-	    }
+      transfer_state = 915
+      transfer_state = 991
+      transfer_state = 58
+      transfer_state = 786
+      transfer_state = 784
+	  }
 	}
 }
 
@@ -1884,10 +1710,8 @@ country_event = { #Germany declares war on Denmark cause of refusal
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.54"}
 	title = valkyrie.54.t
 	desc = valkyrie.54.d
-	#picture = GFX_report_event_ast_army
-
+  picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
@@ -1895,17 +1719,15 @@ country_event = { #Germany declares war on Denmark cause of refusal
 		
 		GER = {
 			declare_war_on = {
-			type = annex_everything
-			target = SHO	
-		    }
+        type = annex_everything
+        target = SHO	
+		  }
+      declare_war_on = {
+        type = annex_everything
+        target = DEN	
+		  }
 		}
-		GER = {
-			declare_war_on = {
-			type = annex_everything
-			target = DEN	
-		    }
-	    }
-    }
+  }
 }
 
 ###########################################
@@ -1918,33 +1740,28 @@ country_event = { #Rheinland problem
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.55"}
 	title = valkyrie.55.t
 	desc = valkyrie.55.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
-	
+
 	option = {
 		name = valkyrie.55.a
-		
 		GER = {
 			country_event = { id = valkyrie.56 days = 4 } #CovOps
 		}
-    }
+  }
 	option = {
 		name = valkyrie.55.b
-		
 		GER = {
 			country_event = { id = valkyrie.60 days = 4 } #Referundum
 		}
-    }
+  }
 	option = {
 		name = valkyrie.55.c
-		
 		FRA = {
 			country_event = { id = valkyrie.67 days = 4 } #Ultimatum
 		}
-    }
+  }
 }
 
 
@@ -1953,25 +1770,20 @@ country_event = { #Covert operations funding rebels in Inter Allied Rhineland
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.56"}
 	title = valkyrie.56.t
 	desc = valkyrie.56.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
-	name = valkyrie.56.a
-	
+	  name = valkyrie.56.a
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = -10000
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.57 days = 4 } #CovOps result I
 		}
-		
-    }
+	}
 	option = {
 		name = valkyrie.56.b
 
@@ -1988,8 +1800,7 @@ country_event = { #Covert operations funding rebels in Inter Allied Rhineland
 		GER = {
 			country_event = { id = valkyrie.58 days = 4 } #CovOps result II
 		}
-		
-    }
+	}
 	option = {
 		name = valkyrie.56.c
 		
@@ -2011,8 +1822,7 @@ country_event = { #Covert operations funding rebels in Inter Allied Rhineland
 		GER = {
 			country_event = { id = valkyrie.59 days = 4 } #CovOps result III
 		}
-		
-    }
+	}
 }
 
 
@@ -2021,25 +1831,22 @@ country_event = { #Rheinland Assault result I
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.57"}
 	title = valkyrie.57.t
 	desc = valkyrie.57.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.57.a
 		
 		GER = {
-		transfer_state = 51
-	    }
-		
-		add_manpower = -6000
+		  transfer_state = 51
+      add_manpower = -6000
+	  }
 		
 		FRA = { 
-		add_manpower = -2000 
+		  add_manpower = -2000 
 		}
-    }
+  }
 }
 
 
@@ -2048,29 +1855,25 @@ country_event = { #Rheinland Assault result II
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.58"}
 	title = valkyrie.58.t
 	desc = valkyrie.58.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.58.a
 		
 		GER = {
-		transfer_state = 51
-		transfer_state = 746
-		transfer_state = 868
-	    }
-		
+		  transfer_state = 51
+		  transfer_state = 746
+		  transfer_state = 868
+	  }
 		add_manpower = -3000
 		
 		FRA = { 
-		add_manpower = -6000 
+	    add_manpower = -6000
+      annex_country = { target = RHI transfer_troops = yes }
 		}
-		
-		FRA = { annex_country = { target = RHI transfer_troops = yes } }
-    }
+	}
 }
 
 
@@ -2079,29 +1882,25 @@ country_event = { #Rheinland Assault result III
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.59"}
 	title = valkyrie.59.t
 	desc = valkyrie.59.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.59.a
 		
 		GER = {
-		transfer_state = 51
-		transfer_state = 746
-		transfer_state = 868
-	    }
-		
+		  transfer_state = 51
+		  transfer_state = 746
+		  transfer_state = 868
+	  }
 		add_manpower = -3000
 		
 		FRA = {
-        add_manpower = -8000
-        }
-		
-		FRA = { annex_country = { target = RHI transfer_troops = yes } }
+      add_manpower = -8000
+      annex_country = { target = RHI transfer_troops = yes }
     }
+	}
 }
 
 
@@ -2110,10 +1909,8 @@ country_event = { #Germany decides to send a referundum request to France
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.60"}
 	title = valkyrie.60.t
 	desc = valkyrie.60.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
@@ -2122,7 +1919,7 @@ country_event = { #Germany decides to send a referundum request to France
 		FRA = {
 			country_event = { id = valkyrie.61 days = 4 } #sends demand of referundum to france
 		}
-    }
+  }
 }
 
 
@@ -2131,10 +1928,8 @@ country_event = { #France gets the German demand for referundum
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.61"}
 	title = valkyrie.61.t
 	desc = valkyrie.61.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
@@ -2212,37 +2007,31 @@ country_event = { #Rhineland referundum
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.62"}
 	title = valkyrie.62.t
 	desc = valkyrie.62.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
-	
 		ai_chance = {
 			factor = 80
 		}
-		
 		name = valkyrie.62.a #pro-german wins
 		
 		GER = {
 			country_event = { id = valkyrie.65 days = 4 } #germany annexes the Rheinland
 		}
-    }
+  }
 	
 	option = {
-	
 		ai_chance = {
 			factor = 40
 		}
-		
 		name = valkyrie.62.a #secessionists win
 		
 		GER = {
 			country_event = { id = valkyrie.66 days = 4 } #germany doesn't annex the Rheinland
 		}
-    }
+  }
 }
 
 country_event = { #Germany gets the message, Germany says yes
@@ -2250,15 +2039,13 @@ country_event = { #Germany gets the message, Germany says yes
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.63"}
 	title = valkyrie.63.t
 	desc = valkyrie.63.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.63.a
-    }
+  }
 }
 
 country_event = { #France refuses the referundum
@@ -2266,18 +2053,15 @@ country_event = { #France refuses the referundum
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.64"}
 	title = valkyrie.64.t
 	desc = valkyrie.64.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.64.a
 		
     create_wargoal = { type = annex_everything target = RHI }
-	
-    }
+  }
 }
 
 country_event = { #Germany annexed the Rheinland
@@ -2285,19 +2069,15 @@ country_event = { #Germany annexed the Rheinland
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.65"}
 	title = valkyrie.65.t
 	desc = valkyrie.65.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.65.a
-		
     GER = { annex_country = { target = RHI transfer_troops = no } }
     add_manpower = 30000 
-
-    }
+  }
 }
 
 country_event = { #Germany doesn't annex the rheinaland
@@ -2305,10 +2085,8 @@ country_event = { #Germany doesn't annex the rheinaland
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.66"}
 	title = valkyrie.66.t
 	desc = valkyrie.66.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
@@ -2318,25 +2096,15 @@ country_event = { #Germany doesn't annex the rheinaland
     remove_state_core = 746
     remove_state_core = 868
     remove_state_core = 42
-	remove_state_core = 981
-	
-	51 = {
-		add_claim_by = GER
-	}
-	746 = {
-		add_claim_by = GER
-	}
-	868= {
-		add_claim_by = GER
-	}	
-	42 = {
-		add_claim_by = GER
-	}		
-	981 = {
-		add_claim_by = GER
-	}			
-	
+	  remove_state_core = 981
+    GER = {
+      add_state_claim = 51
+      add_state_claim = 746
+      add_state_claim = 868
+      add_state_claim = 42
+      add_state_claim = 981
     }
+  }
 }
 
 
@@ -2345,7 +2113,7 @@ country_event = { #France gets Ultimatum
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.67"}
 	title = valkyrie.67.t
 	desc = valkyrie.67.d
-	#picture = GFX_report_event_ast_army
+	picture = GFX_report_event_ast_army
 
 	is_triggered_only = yes
 
@@ -2353,20 +2121,16 @@ country_event = { #France gets Ultimatum
 	
 	option = {
 		name = valkyrie.67.a
-		
 		ai_chance = {
 			factor = 20
 		}
-		
 		GER = {
 			country_event = { id = valkyrie.68 days = 4 } #France capitulates
 		}
-		
-    }
+  }
 	
 	option = {
 		name = valkyrie.67.b
-		
 		ai_chance = {
 			factor = 80
 		}
@@ -2374,7 +2138,7 @@ country_event = { #France gets Ultimatum
 		GER = {
 			country_event = { id = valkyrie.69 days = 4 } #France doesn't capitulate
 		}
-    }
+  }
 }
 
 country_event = { #Germany gets the message the Rhineland is back to them
@@ -2382,22 +2146,19 @@ country_event = { #Germany gets the message the Rhineland is back to them
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.68"}
 	title = valkyrie.68.t
 	desc = valkyrie.68.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.68.a
 		
-    GER = { annex_country = { target = RHI transfer_troops = no } }
-	add_manpower = 30000 
-	
-	GER = {
-		transfer_state = 981
-	    }
+    GER = { 
+      annex_country = { target = RHI transfer_troops = no }
+      transfer_state = 981
     }
+	  add_manpower = 30000 
+  }
 }
 
 country_event = { #Germany gets the message the Rhineland isn't back to them
@@ -2405,18 +2166,14 @@ country_event = { #Germany gets the message the Rhineland isn't back to them
 	immediate = {log = "[GetDateText]: [Root.GetName]: event valkyrie.69"}
 	title = valkyrie.69.t
 	desc = valkyrie.69.d
-	#picture = GFX_report_event_ast_army
-
+	picture = GFX_report_event_ast_army
 	is_triggered_only = yes
-
 	fire_only_once = yes
 	
 	option = {
 		name = valkyrie.68.a
-		
     create_wargoal = { type = annex_everything target = RHI }
-		
-    }
+  }
 }
 
 
