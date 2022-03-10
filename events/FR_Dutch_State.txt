@@ -696,9 +696,11 @@ country_event = { # German Commander Arrives
 
   option = {
     name = dutchstate.29.a
-    set_nationality = {
-      target_country = HOL
-      character = GER_Friedrich_Paulus
+    GER = {
+      set_nationality = {
+        target_country = HOL
+        character = GER_Friedrich_Paulus
+      }
     }
     hidden_effect = {
       country_event = { id = dutchstate.30 days = 900 }
@@ -730,9 +732,11 @@ country_event = { # German Commander Arrives in Germany
   option = {
     name = dutchstate.31.a
     army_experience = 30
-    set_nationality = {
-      target_country = GER
-      character = GER_Friedrich_Paulus
+    HOL = {
+      set_nationality = {
+        target_country = GER
+        character = GER_Friedrich_Paulus
+      }
     }
   }
 }
