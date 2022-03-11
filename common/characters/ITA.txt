@@ -274,6 +274,9 @@ characters = {
 		}
 		field_marshal = {
 			traits = {
+        old_guard
+				thorough_planner
+				organizer
 			}
 			skill = 1
 			attack_skill = 1
@@ -1272,6 +1275,10 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
+        war_hero
+				old_guard
+				thorough_planner
+				organizer
 			}
 			skill = 2
 			attack_skill = 1
@@ -1332,8 +1339,7 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = {
-			}
+			traits = { ironside }
 			skill = 1
 			attack_skill = 4
 			defense_skill = 1
@@ -1453,6 +1459,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
+        trickster
 			}
 			skill = 3
 			attack_skill = 1
@@ -1470,6 +1477,7 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
+        infantry_officer
 			}
 			skill = 2
 			attack_skill = 1
@@ -1537,6 +1545,8 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
+				cavalry_officer
+				organizer
 			}
 			skill = 1
 			attack_skill = 4
@@ -1601,6 +1611,10 @@ characters = {
 		}
 		field_marshal = {
 			traits = {
+				offensive_doctrine
+				organizer
+				armor_officer
+				fast_planner
 			}
 			skill = 1
 			attack_skill = 1
@@ -1626,8 +1640,7 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = {
-			}
+			traits = { superior_tactician spotter }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 2
@@ -1677,8 +1690,7 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = {
-			}
+			traits = { fleet_protector }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 1
@@ -1740,6 +1752,171 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/ITA/Portrait_ITA_Tullio_Cianetti.png"
 			}
+		}
+	}
+  ITA_Ettore_Bastico = {
+		name = "Ettore Bastico"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Ettore_Bastico.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+				career_officer
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ITA_Annibale_Bergonzoli = {
+		name = "Annibale Bergonzoli"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Annibale_Bergonzoli.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				brilliant_strategist
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	ITA_Alberto_Pariani = {
+		name = "Alberto Pariani"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Alberto_Pariani.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				organizer
+				trait_mountaineer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 4
+		}
+	}
+	ITA_Arnaldo_Azzi = {
+		name = "Arnaldo Azzi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Arnaldo_Azzi.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				panzer_leader
+				armor_officer
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ITA_Gabriele_Nasci = {
+		name = "Gabriele Nasci"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Gabriele_Nasci.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_mountaineer
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	ITA_Italo_Gariboldi = {
+		name = "Italo Gariboldi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Italo_Gariboldi.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				hill_fighter
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	ITA_Venanzio_Gabriotti = {
+		name = "Venanzio Gabriotti"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Venanzio_Gabriotti.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				commando
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+		}
+	}
+	ITA_Fedele_de_Giorgis = {
+		name = "Fedele de Giorgis"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Fedele_de_Giorgis.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				trait_cautious
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 1
+		}
+	}
+	ITA_Enrico_Riccardi = {
+		name = "Enrico Riccardi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ITA/Portrait_ITA_Enrico_Riccardi.png"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
 		}
 	}
 }
