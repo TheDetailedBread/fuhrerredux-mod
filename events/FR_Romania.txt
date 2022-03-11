@@ -972,8 +972,14 @@ country_event = { # Deploying troops in Transylvania
 		name = romania.19.c
 		ai_chance = {
 			factor = 80
+      modifier = {
+        factor = 20
+        NOT = {
+          has_country_flag = ROM_autocrat_behavior
+        }
+      }
 		}
-		add_political_power = -100
+		add_political_power = -50
 	}
 }
 
