@@ -4014,16 +4014,17 @@ country_event = {
 	title = "Order Restored"
 	desc = uk.85.d
 	picture = report_event_europe_funeral
+  is_triggered_only = yes
 	
 	hidden = yes
 	
-	trigger = {
-		original_tag = RAJ
-		NOT = { has_war_with = IND }
-		NOT = { ENG = { has_country_flag = indian_armistice2 } }
-		IND = { exists = no }
-		RAJ = { has_country_flag = RAJ_the_revolt } 
-	}
+	# trigger = {
+	# 	original_tag = RAJ
+	# 	NOT = { has_war_with = IND }
+	# 	NOT = { ENG = { has_country_flag = indian_armistice2 } }
+	# 	IND = { exists = no }
+	# 	RAJ = { has_country_flag = RAJ_the_revolt } 
+	# }
 	
 	fire_only_once = yes
 	
