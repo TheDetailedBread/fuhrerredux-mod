@@ -2105,6 +2105,14 @@ country_event = { # Fate of Piedmont
 
   option = { # Puppet
     name = annex.132.a
+    trigger = {
+      NOT = {
+        OR = {
+          is_ally_with = ITA
+          is_ally_with = ITP
+        }
+      }
+    }
     ai_chance = {
       base = 100
     }
@@ -2137,18 +2145,16 @@ country_event = { # Fate of Piedmont
   option = { # Transfer
     name = annex.132.c
     ai_chance = {
-      base = 0
+      base = 100
       modifier = {
         add = 100
-        is_ally_with = ITA
-      }
-      modifier = {
-        add = 100
-        is_ally_with = ITP
+        OR = {
+          is_ally_with = ITA
+          is_ally_with = ITP
+        }
       }
     }
     trigger = {
-      is_italian_tag = yes
       OR = {
         country_exists = ITA
         country_exists = ITP
@@ -3035,18 +3041,16 @@ country_event = { # Fate of Sicily
   option = { # Transfer
     name = annex.143.c
     ai_chance = {
-      base = 0
+      base = 100
       modifier = {
         add = 100
-        is_ally_with = ITA
-      }
-      modifier = {
-        add = 100
-        is_ally_with = ITP
+        OR = {
+          is_ally_with = ITA
+          is_ally_with = ITP
+        }
       }
     }
     trigger = {
-      is_italian_tag = yes
       OR = {
         country_exists = ITA
         country_exists = ITP
@@ -3693,7 +3697,7 @@ country_event = { # Fate of West Banat
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = BUL
+        is_ally_with = SER
       }
     }
     set_temp_variable = { tag_to_release = HUN }
@@ -3709,7 +3713,7 @@ country_event = { # Fate of West Banat
       base = 100
       modifier = {
         factor = 0.25
-        is_ally_with = GRE
+        is_ally_with = HUN
       }
     }
     set_temp_variable = { tag_to_release = SER }
@@ -3722,7 +3726,7 @@ country_event = { # Fate of West Banat
       is_ai = no
     }
     occupy_small_country = yes
-    set_country_flag = ALAND_CONQ
+    set_country_flag = WEST_BANAT_CONQ
   }
 }
 
@@ -3867,6 +3871,7 @@ country_event = { # Fate of Transylvania
     }
     set_temp_variable = { tag_to_release = HUN }
     84 = { transfer_state_and_add_core = yes }
+    76 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Give in to Romania
@@ -3883,6 +3888,7 @@ country_event = { # Fate of Transylvania
     }
     set_temp_variable = { tag_to_release = ROM }
     84 = { transfer_state_and_add_core = yes }
+    76 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Occupy
@@ -5122,5 +5128,152 @@ country_event = { # Fate of Saarland
     }
     occupy_small_country  = yes
     set_country_flag = ALSACE_CONQ
+  }
+}
+
+country_event = { # Fate of Banat
+  id = annex.182
+  title = annexation_BANAT_CONQ
+  desc = annexation_BANAT_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Hungary
+    name = annex.182.a
+    trigger = {
+      HUN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ROM
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    82 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Bulgaria
+    name = annex.182.b
+    trigger = {
+      ROM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HUN
+      }
+    }
+    set_temp_variable = { tag_to_release = ROM }
+    82 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = BANAT_CONQ
+  }
+}
+
+country_event = { # Fate of Crisana
+  id = annex.183
+  title = annexation_CRISANA_CONQ
+  desc = annexation_CRISANA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Hungary
+    name = annex.183.a
+    trigger = {
+      HUN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ROM
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    83 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Bulgaria
+    name = annex.183.b
+    trigger = {
+      ROM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HUN
+      }
+    }
+    set_temp_variable = { tag_to_release = ROM }
+    83 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = CRISANA_CONQ
+  }
+}
+
+country_event = { # Fate of Crisana
+  id = annex.184
+  title = annexation_ORADEA_CONQ
+  desc = annexation_ORADEA_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Give it to Hungary
+    name = annex.184.a
+    trigger = {
+      HUN = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = ROM
+      }
+    }
+    set_temp_variable = { tag_to_release = HUN }
+    762 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to Bulgaria
+    name = annex.184.b
+    trigger = {
+      ROM = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = HUN
+      }
+    }
+    set_temp_variable = { tag_to_release = ROM }
+    762 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    trigger = {
+      is_ai = no
+    }
+    occupy_small_country = yes
+    set_country_flag = ORADEA_CONQ
   }
 }

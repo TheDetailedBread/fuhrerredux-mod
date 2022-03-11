@@ -1518,4 +1518,61 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_BANAT_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      82 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.182
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+      set_country_flag = BANAT_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_CRISANA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      83 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.183
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+      set_country_flag = CRISANA_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
+  annexation_ORADEA_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      762 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.184
+    }
+    timeout_effect = {
+      occupy_small_country = yes
+      set_country_flag = ORADEA_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
 }
