@@ -774,6 +774,7 @@ news_event = {
 	title = worldnews.100.t
 	desc = worldnews.100.d
 	picture = GFX_news_event_second_weltkrieg
+  fire_only_once = yes
 
 	trigger = {
 		FRA = { has_war_with = GER }
@@ -787,7 +788,7 @@ news_event = {
 	major = yes
 
 	mean_time_to_happen = {
-		days = 7
+		days = 1
 	}
 
 	immediate = { set_global_flag = gw2 }

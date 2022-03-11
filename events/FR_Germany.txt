@@ -3951,7 +3951,7 @@ country_event = { # Pangermanism
 		BEL = {
 			add_opinion_modifier = { target = GER modifier = GER_expansionism }
 			}
-		every_country = { news_event = worldnews.40 }
+		random_other_country = { news_event = worldnews.40 }
 		}
 	}
 
@@ -5064,7 +5064,7 @@ country_event = { # WIP Centroslavia wants Entente help
 		795 = {
 			add_core_of = GER
 		}
-		every_country = { news_event = worldnews.44 }
+		random_other_country = { news_event = worldnews.44 }
 	}
 
 	option = { # Refuse
@@ -5654,7 +5654,7 @@ country_event = { # Rhineland referendum
 			#remove_ideas = FRA_rhineland_coal
 			modify_country_flag = { flag = FRA_german_threat value = 3 }
 		}
-		every_country = { news_event = worldnews.43 }
+		random_other_country = { news_event = worldnews.43 }
 	}
 }
 
@@ -6831,7 +6831,7 @@ country_event = { #
 	option = {
 	name = "Lets hope for a great showing this year"
 		country_event = { id = ger.170 days = 15 }
-		every_country = { news_event = worldnews.39 }
+		random_other_country = { news_event = worldnews.39 }
 	}
 }
 
@@ -8509,7 +8509,7 @@ country_event = { # Ukraine Corn - no
 	fire_only_once = yes
 	
 	option = {
-		name = ger.234.a # yes
+		name = ger.235.a # no
 	}
 }
 
@@ -9203,7 +9203,7 @@ country_event = { # WIP Baltics wants Entente help
 			#}
 		}
 
-		every_country = { news_event = worldnews.45 }
+		random_other_country = { news_event = worldnews.45 }
 	}
 
 	option = { # Refuse

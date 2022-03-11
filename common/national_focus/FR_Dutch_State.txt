@@ -275,16 +275,24 @@ focus_tree = {
       }
     }
     bypass = {
-      866 = {
-        OR = {
-          owner = { tag = ROOT }
-          is_controlled_by_ROOT_or_ally = yes
+      OR = {
+        BEL = {
+          exists = no
+          has_capitulated = yes 
         }
-      }
-      867 = {
-        OR = {
-          owner = { tag = ROOT }
-          is_controlled_by_ROOT_or_ally = yes
+        AND = {
+          866 = {
+            OR = {
+              owner = { tag = ROOT }
+              is_controlled_by_ROOT_or_ally = yes
+            }
+          }
+          867 = {
+            OR = {
+              owner = { tag = ROOT }
+              is_controlled_by_ROOT_or_ally = yes
+            }
+          }
         }
       }
     }
@@ -371,8 +379,16 @@ focus_tree = {
       }
     }
     bypass = {
-      owns_state = 866
-      owns_state = 867
+      OR = {
+        BEL = {
+          exists = no
+          has_capitulated = yes
+        }
+        AND = {
+          owns_state = 866
+          owns_state = 867
+        }
+      }
     }
     mutually_exclusive = { focus = HOL_crush_belgium }
     prerequisite = { focus = HOL_subsidies_to_shell }
@@ -765,6 +781,7 @@ focus_tree = {
       OR = {
         BEL = { 
           exists = no
+          has_capitulated = yes
           has_war_with = ROOT
           OVERLORD = { is_ally_of_ROOT = yes }
         }
@@ -1021,6 +1038,15 @@ focus_tree = {
       has_government = paternal_autocrat
       HOL_Bernhard_of_the_Netherlands = {
         is_country_leader = yes
+      }
+    }
+    bypass = {
+      OR = {
+        BEL = {
+          exists = no
+          has_capitulated = yes
+          has_war_with = ROOT
+        }
       }
     }
     prerequisite = { focus = HOL_invite_german_mining_expertise }
@@ -1903,33 +1929,17 @@ focus_tree = {
     relative_position_id = HOL_southern_bunkers
     completion_reward = {
       random_owned_controlled_state = {
-        if = {
-          limit = {
-            free_building_slots = {
-              building = anti_air_building
-              size > 3
-            }
-          }
-          add_building_construction = {
-            type = anti_air_building
-            level = 3
-            instant_build = yes
-          }
+        add_building_construction = {
+          type = anti_air_building
+          level = 2
+          instant_build = yes
         }
       }
       random_owned_controlled_state = {
-        if = {
-          limit = {
-            free_building_slots = {
-              building = anti_air_building
-              size > 3
-            }
-          }
-          add_building_construction = {
-            type = anti_air_building
-            level = 3
-            instant_build = yes
-          }
+        add_building_construction = {
+          type = anti_air_building
+          level = 3
+          instant_build = yes
         }
       }
     }
