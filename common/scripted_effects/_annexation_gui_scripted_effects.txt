@@ -369,6 +369,18 @@ check_potential_annexations_europe = {
     limit = { can_release_gorskaya = yes }
     ROOT = { activate_mission = annexation_GOR_CONQ }
   }
+  else_if = {
+    limit = { can_release_banat = yes }
+    ROOT = { activate_mission = annexation_BANAT_CONQ }
+  }
+  else_if = {
+    limit = { can_release_crisana = yes }
+    ROOT = { activate_mission = annexation_CRISANA_CONQ }
+  }
+  else_if = {
+    limit = { can_release_oradea = yes }
+    ROOT = { activate_mission = annexation_ORADEA_CONQ }
+  }
 }
 
 check_potential_annexations_north_america = {
