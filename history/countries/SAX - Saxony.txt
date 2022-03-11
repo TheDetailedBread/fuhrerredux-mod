@@ -13,7 +13,7 @@ set_technology = {
 	
 	gw_artillery = 1
 	
-	gwtank = 1
+	
 	
 	early_fighter = 1
 	cv_early_fighter = 1
@@ -38,6 +38,20 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	basic_train = 1
+}
+if = {
+  limit = {
+    NOT = { has_dlc = "No Step Back" }
+  }
+  set_technology = {
+    gwtank = 1
+  }
+}
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
 }
 
 add_ideas = {
