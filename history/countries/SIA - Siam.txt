@@ -13,7 +13,7 @@ if = {
 # Starting tech
 set_technology = {
 	### Tanks ###
-	gwtank = 1 #no tankettes for ya
+	 #no tankettes for ya
 
 	### Infantry ###
 	infantry_weapons = 1
@@ -31,6 +31,20 @@ set_technology = {
 	early_bomber = 1 #Boripatr
 	CAS1 = 1
 	basic_train = 1
+}
+if = {
+  limit = {
+    NOT = { has_dlc = "No Step Back" }
+  }
+  set_technology = {
+    gwtank = 1
+  }
+}
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
 }
 	### Royal Siamese Arsernal 1936 Estimate ###
 	# Rifles
