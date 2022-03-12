@@ -1995,36 +1995,39 @@ country_event = { # Fall of the Nationalist Government
   picture = GFX_report_event_french_resistance_01
   is_triggered_only = yes
 
+  immediate = {
+    hidden_effect = {
+      retire_character = HOL_Bernhard_of_the_Netherlands
+      retire_character = HOL_Cornelis_van_Geelkerken
+      retire_character = HOL_Izaak_Reynders
+      add_country_leader_role = {
+        character = HOL_Godfried_van_Voorst_tot_Voorst
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = HOL_Henri_Nicolas_Alfred_Swart
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+    }
+  }
+
   option = { # A Government of the People has risen!
     name = dutchstate.117.a
-    if = {
-      limit = { has_idea = HOL_leftist_symphatizers }
+    hidden_effect = {
       remove_ideas = {
         HOL_leftist_symphatizers
+        HOL_leftist_symphatizers_1
       }
     }
-    else_if = {
-      limit = { has_idea = HOL_}
-    }
-    retire_character = HOL_Bernhard_of_the_Netherlands
-    retire_character = HOL_Cornelis_van_Geelkerken
-    retire_character = HOL_Izaak_Reynders
-    add_country_leader_role = {
-      character = HOL_Godfried_van_Voorst_tot_Voorst
-      promote_leader = yes
-      country_leader = {
-        ideology = authoritarian_democrat_subtype
-        traits = {}
-      }
-    }
-    add_country_leader_role = {
-      character = HOL_Henri_Nicolas_Alfred_Swart
-      promote_leader = yes
-      country_leader = {
-        ideology = paternal_autocrat_subtype
-        traits = {}
-      }
-    }
+    
     set_politics = {
       ruling_party = collectivist
       elections_allowed = no
