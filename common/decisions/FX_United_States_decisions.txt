@@ -50,7 +50,45 @@ foreign_politics = {
     cost = 100
     days_remove = 30
     ai_will_do = {
-      num_divisions > 60
+      factor = 400
+      modifier = {
+        factor = 0.2
+        OR = {
+          has_idea = USA_the_greater_depression
+          has_idea = USA_the_greater_depression_1
+          has_idea = USA_the_greater_depression_2
+          has_idea = USA_the_greater_depression_3
+          has_idea = USA_the_greater_depression_4
+        }
+      }
+      modifier = {
+        factor = 0.4
+        OR = {
+          has_idea = USA_the_greater_depression_5
+          has_idea = USA_the_greater_depression_6
+          has_idea = USA_the_greater_depression_7
+        }
+      }
+      modifier = {
+        factor = 0.6
+        OR = {
+          has_idea = USA_the_greater_depression_8
+          has_idea = USA_the_greater_depression_9
+          has_idea = USA_the_greater_depression_10
+        }
+      }
+      modifier = {
+        factor = 2
+        NOT = { has_idea = USA_failed_offensive }
+      }
+      modifier = {
+        factor = 2
+        num_divisions > 60
+      }
+      modifier = {
+        factor = 4
+        MEX = { has_war_with = CRU }
+      }
     }
     fire_only_once = yes
     allowed = { original_tag = USA }
