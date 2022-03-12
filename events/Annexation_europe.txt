@@ -1476,8 +1476,39 @@ country_event = { # Fate of Netherlands
     ai_chance = {
       base = 100
     }
+    HOL = { get_current_government_type = yes }
     set_temp_variable = { tag_to_release = HOL }
     release_targeted_tag = yes
+    if = {
+      limit = {
+        ROOT = {
+          tag = GER
+          OR = {
+            has_government = national_populist
+            has_government = valkist
+          }
+        }
+      }
+      HOL = {
+        restore_previous_government_type = yes
+        set_country_flag = HOL_junta_path
+        set_country_flag = political_branch_ready
+        mark_focus_tree_layout_dirty = yes
+        set_politics = {
+          ruling_party = paternal_autocrat
+          elections_allowed = no
+        }
+        
+        increase_ruling_party_popularity_by_10 = yes
+        remove_every_minister = yes
+        add_ideas = {
+          HOL_Henri_Nicolas_Alfred_Swart_hog_pau
+          HOL_Jan_Baars_for_pau
+          HOL_Henri_Johannes_ter_Hal_eco_pau
+          HOL_Johannes_Linthorst_Homan_sec_pau
+        }
+      }
+    }
   }
 
   option = { # Restore the House of Orange
@@ -1656,6 +1687,7 @@ country_event = { # Fate of Italy
         add_state_core = 159
         add_state_core = 160
         add_state_core = 161
+        add_state_core = 162
         add_state_core = 736
         add_state_core = 768
         add_state_core = 770
