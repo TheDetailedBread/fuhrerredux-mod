@@ -68,11 +68,50 @@ foreign_politics = {
   }
 }
 USA_mexican_american_war = {
+  USA_hold_the_line = {
+    icon = GFX_decision_border_war
+    selectable_mission = no
+    is_good = yes
+    days_mission_timeout = 360
+    allowed = { original_tag = MEX }
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = USA_hold_the_line_tt
+        AND = {
+          378 = { is_controlled_by = MEX }
+          928 = { is_controlled_by = MEX }
+          375 = { is_controlled_by = MEX }
+          919 = { is_controlled_by = MEX }
+          376 = { is_controlled_by = MEX }
+          377 = { is_controlled_by = MEX }
+          484 = { is_controlled_by = MEX }
+          920 = { is_controlled_by = MEX }
+          921 = { is_controlled_by = MEX }
+        }
+      }
+    }
+    activation = { # They crossed the border!
+      MEX = {
+        controls_state = 375 # Texas
+        controls_state = 919 # East Texas
+        controls_state = 920 # Panhandle
+        controls_state = 921 # Transpecos
+      }
+    }
+  }
+  timeout_effect = {
+    add_political_power = -20
+  }
+  complete_effect = {
+    increase_ruling_party_popularity_by_15 = yes
+    add_stability = 0.10
+  }
   USA_push_the_mexicans = {
     icon = GFX_decision_border_war
     selectable_mission = no
     is_good = no
     days_mission_timeout = 360
+    allowed = { original_tag = USA }
     available = {
       custom_trigger_tooltip = {
         tooltip = USA_push_the_mexicans_trigger_tt

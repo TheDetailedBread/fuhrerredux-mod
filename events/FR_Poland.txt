@@ -950,7 +950,25 @@ country_event = {
 			add_ideas = parliamentary_republic
 			remove_ideas = POL_advisors_council
 			set_politics = { ruling_party = social_liberal elections_allowed = no }
-			hidden_effect = { kill_country_leader = yes }
+			hidden_effect = {
+        POL_Franciszek_I_Radziwiłł = {
+          remove_country_leader_role = {
+            ideology = social_democrat_subtype
+          }
+          remove_country_leader_role = {
+            ideology = social_liberal_subtype
+          }
+          remove_country_leader_role = {
+            ideology = market_liberal_subtype
+          }
+          remove_country_leader_role = {
+            ideology = social_conservative_subtype
+          }
+          remove_country_leader_role = {
+            ideology = paternal_autocrat_subtype
+          }
+        }
+      }
       add_country_leader_role = {
         character = POL_Wincenty_Witos
         promote_leader = yes
@@ -1125,7 +1143,26 @@ country_event = {
 		add_ideas = military_junta
 		
 		set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
-		hidden_effect = { kill_country_leader = yes }
+		POL_Franciszek_I_Radziwiłł = {
+      remove_country_leader_role = {
+        ideology = social_democrat_subtype
+      }
+      remove_country_leader_role = {
+        ideology = social_liberal_subtype
+      }
+      remove_country_leader_role = {
+        ideology = market_liberal_subtype
+      }
+      remove_country_leader_role = {
+        ideology = social_conservative_subtype
+      }
+      remove_country_leader_role = {
+        ideology = authoritarian_democrat_subtype
+      }
+      remove_country_leader_role = {
+        ideology = paternal_autocrat_subtype
+      }
+    }
 		create_country_leader = {
 			name = "Edward Rydz-Śmigły"
 			picture = "Portrait_Poland_Edward_Rydz_Smigly.png"
