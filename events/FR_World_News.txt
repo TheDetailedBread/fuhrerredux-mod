@@ -1052,7 +1052,7 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.115"}
 	title = worldnews.115.t
 	desc = worldnews.115.d
-	picture = GFX_news_event_RUS_coup
+	picture = GFX_news_event_RUS_kornilov
   is_triggered_only = yes
 	major = yes
 
@@ -1076,14 +1076,14 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.117"}
 	title = worldnews.117.t
 	desc = worldnews.117.d
-	picture = GFX_news_event_RUS_coup
+	picture = GFX_news_event_JAP_admirals
   is_triggered_only = yes	
 	major = yes
 
 	show_major = {
 		OR = {
 			regional_asia_news = yes
-	  	    regional_north_america_news = yes
+	  	regional_north_america_news = yes
 		}
 	}
 
