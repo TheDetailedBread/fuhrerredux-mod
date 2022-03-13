@@ -1,0 +1,31 @@
+ideas = {
+  country = {
+    ARB_british_influence = {
+      allowed = { original_tag = ARB }
+      picture = ARB_british_influence
+    }
+    ARB_british_army_training = {
+      allowed = { original_tag = ARB }
+      picture = EGY_retired_brits
+      modifier = {
+        army_org_factor = 0.1
+        army_morale_factor = 0.1
+      }
+    }
+    ARB_ikhwan_raids = {
+      allowed = { original_tag = ARB }
+      modifier = {
+        stability_factor = -0.15
+        conscription_factor = -0.05
+      }
+    }
+    ARB_the_liquid_black_gold = {
+      allowed = { original_tag = ARB }
+      picture = generic_oil_trade
+      modifier = {
+        consumer_goods_factor = -0.1
+        fuel_gain_factor_from_states = -0.15
+      }
+    }
+  }
+}
