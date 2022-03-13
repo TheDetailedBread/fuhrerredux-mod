@@ -4,10 +4,12 @@ foreign_politics = {
     cost = 50
     days_remove = 14
     allowed = { original_tag = USA }
+    fire_only_once = yes
     visible = { 
       BRA = {
         has_war_with = BPS
         has_war_with = UBR
+        NOT = { has_idea = USA_advisors }
       }
     }
     available = { 
@@ -47,10 +49,10 @@ foreign_politics = {
   }
   USA_demand_mexican_submission = {
     icon = GFX_decision_generic_civil_support
-    cost = 100
     days_remove = 30
+    war_with_on_remove = MEX
     ai_will_do = {
-      factor = 400
+      base = 1000
       modifier = {
         factor = 0.2
         OR = {
@@ -89,6 +91,10 @@ foreign_politics = {
         factor = 4
         MEX = { has_war_with = CRU }
       }
+      modifier = {
+        factor = 10
+        date > 1938.6.1
+      }
     }
     fire_only_once = yes
     allowed = { original_tag = USA }
@@ -97,7 +103,6 @@ foreign_politics = {
       USA_union_has_collapsed = no
     }
     available = {
-      USA_has_less_great_depression = yes
       NOT = { has_war_with = MEX }
     }
     remove_effect = {
