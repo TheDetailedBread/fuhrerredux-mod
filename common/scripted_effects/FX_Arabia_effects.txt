@@ -1,0 +1,8 @@
+ARB_set_british_effects = {
+  set_variable = { ENG_effect_pp = british_control }
+  multiply_variable = { var = ENG_effect_pp value = -0.004 }
+  set_variable = { ENG_effect_construction = british_control }
+  multiply_variable = { var = ENG_effect_construction value = 0.003 }
+  set_variable = { ENG_effect_extraction = british_control }
+  multiply_variable = { var = ENG_effect_extraction value = 0.003 }
+}

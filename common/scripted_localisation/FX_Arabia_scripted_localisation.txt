@@ -1,0 +1,40 @@
+defined_text = {
+  name = ARB_british_influence_loc
+  text = {
+    trigger = {
+      check_variable = {
+        var = british_control
+        value = 70
+        compare = greater_than_or_equals
+      }
+    }
+    localization_key = ARB_british_influence_high
+  }
+  text = {
+    trigger = {
+      AND = {
+        check_variable = {
+          var = british_control
+          value = 70
+          compare = less_than
+        }
+        check_variable = {
+          var = british_control
+          value = 30
+          compare = greater_than
+        }
+      }
+    }
+    localization_key = ARB_british_influence_medium
+  }
+  text = {
+    trigger = {
+      check_variable = {
+        var = british_control
+        value = 30
+        compare = less_than_or_equals
+      }
+    }
+    localization_key = ARB_british_influence_low
+  }
+}

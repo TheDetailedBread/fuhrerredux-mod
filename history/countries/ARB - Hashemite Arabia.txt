@@ -31,6 +31,10 @@ set_war_support = 0.50
 add_ideas = {
 	party_pop_0_50
 	absolute_monarchy
+  ARB_british_influence
+  ARB_british_army_training
+  ARB_ikhwan_raids
+  ARB_the_liquid_black_gold
 }
 
 set_politics = {
@@ -54,5 +58,39 @@ set_popularities = {
   valkist = 0
 }
 
+set_variable = { var = british_control value = 50 }
+ARB_set_british_effects = yes
+add_dynamic_modifier = {
+  modifier = ARB_british_political_control
+}
+
+country_event = { id = arabia.0 days = 1 }
+
 recruit_character = ARB_Abd_al_Ilah
 recruit_character = ARB_Zeid_bin_Hussein_al_Hashmid
+recruit_character = ARB_Abdul_Qadir_Pasha_el_Jundi
+recruit_character = ARB_Ghazi_bin_Faisal_al_Hashmid
+recruit_character = ARB_Fahd_Al_Salem_Al_Sabah
+recruit_character = ARB_Husain_Sirhan
+recruit_character = ARB_Ahmad_Al_Jaber_Al_Sabah
+recruit_character = ARB_Abdullah_III_Al_Salim_Al_Sabah
+recruit_character = ARB_Ali_bin_Ashwan
+recruit_character = ARB_Eqab_bin_Mohaya
+recruit_character = ARB_Hamad_bin_Jazi_al_Hawaita
+recruit_character = ARB_Auda_Abu_Tayi
+recruit_character = ARB_Mohammed_Ahmad_Al_Jaber_Al_Sabah
+recruit_character = ARB_Abdullah_Al_Jaber_Al_Sabah
+recruit_character = ARB_Tahseen_Qadri
+recruit_character = ARB_Sabah_al_Salem_al_Sabah
+recruit_character = ARB_Mubarak_Al_Hamad_Al_Sabah
+recruit_character = ARB_Sheikh_Salih_al_Rajihi
+recruit_character = ARB_Mohammed_bin_Awad_bin_Laden
+recruit_character = ARB_Sulaiman_S_Olayan
+recruit_character = ARB_Abdullah_Al_Ahmad_Al_Jaber_Al_Sabah
+recruit_character = ARB_Hazaa_bin_Sultan_Al_Nahyan
+recruit_character = ARB_Jassim_bin_Muhammed_bin_Jassim_Al_Thani
+recruit_character = ARB_Mohammed_bin_Sharif_Al_Farouqi
+recruit_character = ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi
+recruit_character = ARB_Salem_Al_Mubarak_Al_Sabah
+recruit_character = ARB_Jamil_al_Madafi
+recruit_character = ARB_Nada_bin_Nuhair
