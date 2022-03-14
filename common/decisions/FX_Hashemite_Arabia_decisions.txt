@@ -1,0 +1,40 @@
+ARB_foreign_weapons_imports = {
+  ARB_import_from = {
+    cost = 10
+    icon = GFX_decision_generic_construction
+    days_remove = 14
+    days_re_enable = 30
+    target_trigger = {
+      FROM = {
+        OR = {
+          tag = ENG
+          tag = FRA
+          tag = ITA
+          tag = USA
+          tag = GER
+          tag = SOV
+        }
+      }
+    }
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = ARB_not_importing_weapons_tt
+        NOT = { has_country_flag = ARB_importing_weapons }
+      }
+    }
+    modifier = {
+      consumer_goods_factor = 0.05
+    }
+    complete_effect = {
+      set_country_flag = ARB_importing_weapons
+    }
+    remove_effect = {
+      clr_country_flag = ARB_importing_weapons
+      add_equipment_to_stockpile = {
+        type = infantry_equipment 
+        amount = 100
+        producer = FROM
+      }
+    }
+  }
+}

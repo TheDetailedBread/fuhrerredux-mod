@@ -22,6 +22,7 @@ country_event = { # Ikhwan Raid
     tag = ARB
     country_exists = ARB
     has_idea = ARB_ikhwan_raids
+    NOT = { has_war_with = SAU }
   }
 
   mean_time_to_happen = {
@@ -66,12 +67,13 @@ country_event = { # Hejazi Attack on Nejd
     tag = ARB
     country_exists = ARB
     has_idea = ARB_ikhwan_raids
+    NOT = { has_war_with = SAU }
   }
 
   mean_time_to_happen = {
-    days = 90
+    days = 75
     modifier = {
-      factor = 0.80
+      factor = 0.65
       check_variable = {
         var = british_control
         value = 50
@@ -95,12 +97,147 @@ country_event = { # Hejazi Attack on Nejd
 }
 
 country_event = { # British Archeologists Arrives
-  id = arabia.2
-  title = arabia.2.t
-  desc = arabia.2.d
+  id = arabia.3
+  title = arabia.3.t
+  desc = arabia.3.d
+  is_triggered_only = yes
+
+  option = { # I hope they find something!
+    name = arabia.3.a
+    hidden_effect = {
+      random_list = {
+        40 = { # They are killed by the Ikhwan
+          country_event = { id = arabia.4 days = 40 }
+        }
+        60 = { # They found something
+          country_event = { id = arabia.8 days = 60 }
+        }
+      }
+    }
+  }
+}
+
+country_event = { # Prospectors Reported Missing
+  id = arabia.4
+  title = arabia.4.t
+  desc = arabia.4.d
+  picture = GFX_report_event_physics_lab_01
   is_triggered_only = yes
 
   option = {
-    name = arabia.2.a
+    name = arabia.4.a
+    hidden_effect = {
+      country_event = { id = arabia.5 days = 30 }
+    }
+  }
+}
+
+country_event = { # A Tragedy in Al-Hasa
+  id = arabia.5
+  title = arabia.5.t
+  desc = arabia.5.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.5.a
+    ENG = {
+      country_event = { id = arabia.6 days = 3 }
+    }
+  }
+}
+
+country_event = { # British Prospectors Found Dead in Al-Hasa!
+  id = arabia.6
+  title = arabia.6.t
+  desc = arabia.6.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.6.a
+    ARB = {
+      country_event = { id = arabia.9 days = 2 }
+    }
+  }
+
+  option = {
+    name = arabia.6.b
+    ARB = {
+      country_event = { id = arabia.7 days = 2 }
+    }
+  }
+}
+
+country_event = { # RAF Conducts an Air Strike
+  id = arabia.7
+  title = arabia.7.t
+  desc = arabia.7.d
+  picture = GFX_report_event_ace_promoted
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.7.a
+    add_political_power = 10
+  }
+}
+
+country_event = { # Oil Found!
+  id = arabia.8
+  title = arabia.8.t
+  desc = arabia.8.d
+  picture = GFX_report_event_physics_lab_02
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.8.a
+    744 = {
+      add_resource = {
+        type = oil
+        amount = 8
+      }
+    }
+  }
+}
+
+country_event = { # British Demands an Apology
+  id = arabia.9
+  title = arabia.9.t
+  desc = arabia.9.d
+  picture = GFX_report_event_chamberlain
+  is_triggered_only = yes
+
+  option = { # Yeah sure why not
+    name = arabia.9.a
+    ENG = {
+      country_event = { id = arabia.10 days = 2 }
+    }
+  }
+}
+
+country_event = { # Hashemite Government Issues an Apology
+  id = arabia.10
+  title = arabia.10.t
+  desc = arabia.10.d
+  picture = GFX_report_event_generic_sign_treaty2
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.10.a
+    add_political_power = 10
+  }
+}
+
+country_event = { # Black Wednesday Hits
+  id = arabia.11
+  title = arabia.11.t
+  desc = arabia.11.d
+  picture = GFX_report_event_generic_sign_treaty2
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.11.a
+    add_political_power = -100
+    add_ideas = ARB_black_wednesday
   }
 }

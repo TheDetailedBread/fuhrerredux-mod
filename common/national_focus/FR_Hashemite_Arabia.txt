@@ -116,6 +116,19 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_london_economic_assistance }
     relative_position_id = ARB_london_economic_assistance
+    completion_reward = {
+      add_tech_bonus = {
+        category = synth_resources
+        bonus = 1.0
+        uses = 1
+      }
+      1031 = {
+        add_resource = {
+          type = oil
+          amount = 8
+        }
+      }
+    }
   }
 
   focus = { # Deals with English Electric
@@ -126,6 +139,15 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_joint_oil_explorations }
     relative_position_id = ARB_joint_oil_explorations
+    completion_reward = {
+      add_tech_bonus = {
+        category = electronics
+        bonus = 1.0
+        uses = 1
+      }
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = ARB_english_electric
+    }
   }
 
   focus = { # Invite British Scholars
@@ -136,6 +158,11 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_joint_oil_explorations }
     relative_position_id = ARB_joint_oil_explorations
+    completion_reward = {
+      add_ideas = ARB_british_scholars_idea
+      set_temp_variable = { british_control_temp = 3 }
+      ARB_increase_british_control = yes
+    }
   }
 
   focus = { # British Industrial Funding
@@ -147,6 +174,53 @@ focus_tree = {
     prerequisite = { focus = ARB_deals_with_english_electric }
     prerequisite = { focus = ARB_invite_british_scholars }
     relative_position_id = ARB_deals_with_english_electric
+    completion_reward = {
+      679 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      1031 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      1032 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
   }
 
   focus = { # British Crisis Response
@@ -155,6 +229,12 @@ focus_tree = {
     x = 3
     y = 1
     cost = 6
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = ARB_black_wednesday_hits
+        has_idea = ARB_black_wednesday
+      }
+    }
     mutually_exclusive = {
       focus = ARB_request_german_support
     }
@@ -164,6 +244,7 @@ focus_tree = {
     }
     relative_position_id = ARB_london_economic_assistance
     completion_reward = {
+      ARB_decrease_depression = yes
       set_temp_variable = { british_control_temp = 5 }
       ARB_increase_british_control = yes
     }
@@ -177,6 +258,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_british_crisis_response }
     relative_position_id = ARB_british_crisis_response
+    completion_reward = {
+      ARB_decrease_depression = yes
+    }
   }
 
   focus = { # Mecca Railway Corporation
@@ -187,6 +271,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_british_crisis_response }
     relative_position_id = ARB_british_crisis_response
+    completion_reward = {
+      add_ideas = ARB_mecca_railway_corp
+    }
   }
 
   focus = { # Improve Railway Networks
@@ -200,6 +287,19 @@ focus_tree = {
       focus = ARB_expand_trading_partners
     }
     relative_position_id = ARB_london_economic_assistance
+    completion_reward = {
+      every_owned_state = {
+        limit = {
+          is_core_of = ROOT
+          NOT = { state = 678 } # That's a desert
+        }
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
   }
 
   focus = { # Arabian Census
@@ -210,6 +310,20 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_improve_railway_networks }
     relative_position_id = ARB_improve_railway_networks
+    completion_reward = {
+      every_owned_state = {
+        limit = {
+          is_core_of = ROOT
+          NOT = { state = 678 }
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
   }
 
   focus = { # Weapons Imports
@@ -223,6 +337,9 @@ focus_tree = {
       focus = ARB_request_german_support
     }
     relative_position_id = ARB_modernize_our_ports
+    completion_reward = {
+      unlock_decision_category_tooltip = ARB_foreign_weapons_imports
+    }
   }
 
   focus = { # Modernize Our Ports
@@ -241,8 +358,44 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_full_control_of_state = 1031
+      has_full_control_of_state = 1032
+    }
     prerequisite = { focus = ARB_modernize_our_ports }
     relative_position_id = ARB_modernize_our_ports
+    completion_reward = {
+      1031 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      1032 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
   }
 
   focus = { # Expand Food Stocks
@@ -253,6 +406,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_modernize_our_ports }
     relative_position_id = ARB_modernize_our_ports
+    completion_reward = {
+      add_ideas = ARB_food_imports
+    }
   }
 
   focus = { # Request German Support
@@ -261,6 +417,12 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = ARB_black_wednesday_hits
+        has_idea = ARB_black_wednesday
+      }
+    }
     mutually_exclusive = {
       focus = ARB_british_crisis_response
     }
@@ -269,6 +431,7 @@ focus_tree = {
     }
     relative_position_id = ARB_expand_trading_partners
     completion_reward = {
+      ARB_decrease_depression = yes
       set_temp_variable = { british_control_temp = 5 }
       ARB_decrease_british_control = yes
     }
@@ -282,6 +445,15 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_request_german_support }
     relative_position_id = ARB_request_german_support
+    completion_reward = {
+      ARB_decrease_depression = yes
+      add_offsite_building = {
+        level = 1
+        type = industrial_complex
+      }
+      set_temp_variable = { british_control_temp = 5 }
+      ARB_increase_british_control = yes
+    }
   }
 
   focus = { # Contracts with IG Fabren
@@ -293,6 +465,25 @@ focus_tree = {
     prerequisite = { focus = ARB_german_industrial_expertise }
     prerequisite = { focus = ARB_import_industrial_tools }
     relative_position_id = ARB_german_industrial_expertise
+    completion_reward = {
+      1031 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = ARB_ig_farben_company
+    }
   }
 
   focus = { # Import Industrial Tools
@@ -306,6 +497,13 @@ focus_tree = {
       focus = ARB_request_german_support
     }
     relative_position_id = ARB_british_crisis_response
+    completion_reward = {
+      add_tech_bonus = {
+        category = industry
+        bonus = 1.0
+        uses = 2
+      }
+    }
   }
 
   focus = { # Academic Initiatives
@@ -316,6 +514,11 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_modernize_our_ports }
     relative_position_id = ARB_modernize_our_ports
+    completion_reward = {
+      add_research_slot = 1
+      set_temp_variable = { british_control_temp = 2 }
+      ARB_decrease_british_control = yes
+    }
   }
 
   focus = { # Towards Economic Modernization
@@ -329,5 +532,8 @@ focus_tree = {
       focus = ARB_contracts_with_ig_fabren
     }
     relative_position_id = ARB_mecca_railway_corporation
+    completion_reward = {
+      ARB_decrease_depression = yes
+    }
   }
 }

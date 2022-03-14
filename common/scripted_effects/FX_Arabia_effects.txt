@@ -28,3 +28,33 @@ ARB_decrease_british_control = {
     }
   }
 }
+
+ARB_decrease_depression = {
+  if = {
+    limit = {
+      has_idea = ARB_black_wednesday
+    }
+    custom_effect_tooltip = ARB_decrease_depression_tt
+    swap_ideas = {
+      remove_idea = ARB_black_wednesday
+      add_idea = ARB_black_wednesday_1
+    }
+  }
+  else_if = {
+    limit = {
+      has_idea = ARB_black_wednesday_1
+    }
+    custom_effect_tooltip = ARB_decrease_depression_tt
+    swap_ideas = {
+      remove_idea = ARB_black_wednesday_1
+      add_idea = ARB_black_wednesday_2
+    }
+  }
+  else_if = {
+    limit = {
+      has_idea = ARB_black_wednesday_2
+    }
+    custom_effect_tooltip = ARB_decrease_depression_tt
+    remove_ideas = ARB_black_wednesday_2
+  }
+}
