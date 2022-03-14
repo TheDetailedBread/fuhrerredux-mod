@@ -1,0 +1,333 @@
+### Hashemite Arabia focus tree
+### created by: dax0102
+
+focus_tree = {
+  id = hashemite_focus
+
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = ARB
+    }
+  }
+  default = no
+  continuous_focus_position = { x = 0 y = 1200 }
+
+  focus = { # Modernization of the Arabian Peninsula
+    id = ARB_modernize_peninsula
+    icon = GFX_goal_ARB_modernize
+    x = 3
+    y = 0
+    cost = 5
+    completion_reward = {
+      add_tech_bonus = {
+        category = industry
+        bonus = 0.75
+        uses = 2
+      }
+    }
+  }
+
+  focus = { # London's Economic Assistance
+    id = ARB_london_economic_assistance
+    icon = GFX_goal_GBR_big_ben
+    x = -3
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = ARB_expand_trading_partners
+    }
+    prerequisite = { focus = ARB_modernize_peninsula }
+    relative_position_id = ARB_modernize_peninsula
+    completion_reward = {
+      679 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = industrial_complex
+          level = 2
+          instant_build = yes
+        }
+      }
+      1031 = {
+        limit = {
+          free_building_slots = {
+            building = arms_factory
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+      set_temp_variable = { british_control_temp = 5 }
+      ARB_increase_british_control = yes
+    }
+  }
+
+  focus = { # Expand Trading Partners
+    id = ARB_expand_trading_partners
+    icon = GFX_SIA_maritmesilkroad
+    x = 3
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = ARB_london_economic_assistance
+    }
+    prerequisite = { focus = ARB_modernize_peninsula }
+    relative_position_id = ARB_modernize_peninsula
+    completion_reward = {
+      679 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      set_temp_variable = { british_control_temp = 5 }
+      ARB_decrease_british_control = yes
+    }
+  }
+
+  focus = { # Joint Oil Explorations
+    id = ARB_joint_oil_explorations
+    icon = GFX_goal_basic_oil
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_london_economic_assistance }
+    relative_position_id = ARB_london_economic_assistance
+  }
+
+  focus = { # Deals with English Electric
+    id = ARB_deals_with_english_electric
+    icon = GFX_goal_generic_lightbulb
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_joint_oil_explorations }
+    relative_position_id = ARB_joint_oil_explorations
+  }
+
+  focus = { # Invite British Scholars
+    id = ARB_invite_british_scholars
+    icon = GFX_goal_tfv_strengthen_commonwealth_ties
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_joint_oil_explorations }
+    relative_position_id = ARB_joint_oil_explorations
+  }
+
+  focus = { # British Industrial Funding
+    id = ARB_british_industrial_funding
+    icon = GFX_DAH_Topke
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_deals_with_english_electric }
+    prerequisite = { focus = ARB_invite_british_scholars }
+    relative_position_id = ARB_deals_with_english_electric
+  }
+
+  focus = { # British Crisis Response
+    id = ARB_british_crisis_response
+    icon = GFX_focus_chi_british_cooperation
+    x = 3
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = ARB_request_german_support
+    }
+    prerequisite = { 
+      focus = ARB_london_economic_assistance
+      focus = ARB_expand_trading_partners
+    }
+    relative_position_id = ARB_london_economic_assistance
+    completion_reward = {
+      set_temp_variable = { british_control_temp = 5 }
+      ARB_increase_british_control = yes
+    }
+  }
+
+  focus = { # Export Tariffs
+    id = ARB_export_tariffs
+    icon = GFX_goal_generic_trade
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_british_crisis_response }
+    relative_position_id = ARB_british_crisis_response
+  }
+
+  focus = { # Mecca Railway Corporation
+    id = ARB_mecca_railway_corporation
+    icon = GFX_goal_generic_railway_construction
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_british_crisis_response }
+    relative_position_id = ARB_british_crisis_response
+  }
+
+  focus = { # Improve Railway Networks
+    id = ARB_improve_railway_networks
+    icon = GFX_goal_generic_seize_railway
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { 
+      focus = ARB_london_economic_assistance
+      focus = ARB_expand_trading_partners
+    }
+    relative_position_id = ARB_london_economic_assistance
+  }
+
+  focus = { # Arabian Census
+    id = ARB_arabian_census
+		icon = GFX_goal_generic_banking_legislation
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_improve_railway_networks }
+    relative_position_id = ARB_improve_railway_networks
+  }
+
+  focus = { # Weapons Imports
+    id = ARB_weapons_imports
+    icon = GFX_goal_generic_military_equipment
+    x = -2
+    y = 2
+    cost = 6
+    prerequisite = { 
+      focus = ARB_modernize_our_ports
+      focus = ARB_request_german_support
+    }
+    relative_position_id = ARB_modernize_our_ports
+  }
+
+  focus = { # Modernize Our Ports
+    id = ARB_modernize_our_ports
+    icon = GFX_goal_generic_naval_base
+    x = 3
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_expand_trading_partners }
+    relative_position_id = ARB_expand_trading_partners
+  }
+
+  focus = { # Encourage Domestic Manufacturing
+    id = ARB_encourage_domestic_manufacturing
+    icon = GFX_goal_factory_complex
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_modernize_our_ports }
+    relative_position_id = ARB_modernize_our_ports
+  }
+
+  focus = { # Expand Food Stocks
+    id = ARB_expand_food_stocks
+    icon = GFX_focus_AUS_agriculture
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_modernize_our_ports }
+    relative_position_id = ARB_modernize_our_ports
+  }
+
+  focus = { # Request German Support
+    id = ARB_request_german_support
+    icon = GFX_goal_germany
+    x = 0
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = ARB_british_crisis_response
+    }
+    prerequisite = {
+      focus = ARB_expand_trading_partners
+    }
+    relative_position_id = ARB_expand_trading_partners
+    completion_reward = {
+      set_temp_variable = { british_control_temp = 5 }
+      ARB_decrease_british_control = yes
+    }
+  }
+
+  focus = { # German Industrial Expertise
+    id = ARB_german_industrial_expertise
+    icon = GFX_goal_german_worker
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_request_german_support }
+    relative_position_id = ARB_request_german_support
+  }
+
+  focus = { # Contracts with IG Fabren
+    id = ARB_contracts_with_ig_fabren
+    icon = GFX_DAH_Topke
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_german_industrial_expertise }
+    prerequisite = { focus = ARB_import_industrial_tools }
+    relative_position_id = ARB_german_industrial_expertise
+  }
+
+  focus = { # Import Industrial Tools
+    id = ARB_import_industrial_tools
+    icon = GFX_goal_generic_production2
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { 
+      focus = ARB_british_crisis_response
+      focus = ARB_request_german_support
+    }
+    relative_position_id = ARB_british_crisis_response
+  }
+
+  focus = { # Academic Initiatives
+    id = ARB_academic_initiatives
+    icon = GFX_goal_KTG_Bookstack
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_modernize_our_ports }
+    relative_position_id = ARB_modernize_our_ports
+  }
+
+  focus = { # Towards Economic Modernization
+    id = ARB_towards_economic_modernization
+    icon = GFX_focus_generic_the_giant_wakes
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { 
+      focus = ARB_mecca_railway_corporation
+      focus = ARB_contracts_with_ig_fabren
+    }
+    relative_position_id = ARB_mecca_railway_corporation
+  }
+}
