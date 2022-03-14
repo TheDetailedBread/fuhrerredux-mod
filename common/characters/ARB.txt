@@ -577,29 +577,6 @@ characters = {
 			}
 		}
 	}
-	ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi = {
-		name = "Jahjah bin Bajad bin Humaid al-Otaibi"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/ARB/ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = security_minister
-			available = {
-				hidden_trigger = { has_country_flag = ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade_hired }
-			}			
-			idea_token = ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade
-			on_add = { set_country_flag = ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade_hired }
-			on_remove = { clr_country_flag = ARB_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade_hired }
-			traits = {
-				security_minister
-				authoritarian_democrat
-				sec_man_of_the_people
-			}
-		}
-	}
 	ARB_Salem_Al_Mubarak_Al_Sabah = {
 		name = "Salem Al-Mubarak Al-Sabah"
 		portraits = {
