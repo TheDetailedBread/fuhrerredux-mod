@@ -239,5 +239,110 @@ country_event = { # Black Wednesday Hits
     name = arabia.11.a
     add_political_power = -100
     add_ideas = ARB_black_wednesday
+    
+  }
+}
+
+country_event = { # Intelligence Sources
+  id = arabia.12
+  title = arabia.12.t
+  desc = arabia.12.d
+  picture = GFX_report_event_spain_civil_war_soldiers
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.12.a
+    set_country_flag = ARB_revolt
+    set_country_flag = ARB_revolt_trigger
+    activate_mission_tooltip = ARB_saudi_revolt
+  }
+}
+
+country_event = { # Nejd Revolts!
+  id = arabia.13
+  title = arabia.13.t
+  desc = arabia.13.d
+  picture = GFX_report_event_generic_sign_treaty2
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      SAU = {
+        add_state_core = 744
+        add_state_core = 292
+        add_state_core = 1032
+        add_state_core = 678
+        transfer_state = 744
+        transfer_state = 292
+        transfer_state = 1032
+        transfer_state = 678
+        load_oob = "SAU"
+      }
+      ARB = {
+        remove_state_core = 744
+        remove_state_core = 292
+        remove_state_core = 1032
+        remove_state_core = 678
+        add_state_claim = 744
+        add_state_claim = 292
+        add_state_claim = 1032
+        add_state_claim = 678
+
+        set_province_controller = 8004
+        set_province_controller = 10892
+        set_province_controller = 8060
+
+        declare_war_on = {
+          target = SAU
+          type = annex_everything
+        }
+      }
+    }
+  }
+
+  option = {
+    name = arabia.13.a
+    hidden_effect = {
+      country_event = { id = arabia.14 days = 4 }
+    }
+  }
+}
+
+country_event = { # Rashidi
+  id = arabia.14
+  title = arabia.14.t
+  desc = arabia.14.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      RAS = {
+        add_state_core = 945
+        add_state_core = 946
+        transfer_state = 945
+        transfer_state = 946
+      }
+      ARB = {
+        remove_state_core = 945
+        remove_state_core = 946
+        add_state_claim = 945
+        add_state_claim = 946
+        declare_war_on = {
+          target = RAS
+          type = annex_everything
+        }
+      }
+      SAU = {
+        declare_war_on = {
+          target = RAS
+          type = annex_everything
+        }
+      }
+    }
+  }
+
+  option = {
+    name = arabia.14.a
   }
 }
