@@ -1,0 +1,22 @@
+on_actions = {
+  # ROOT is the winner
+  # FROM gets annexed
+  on_annex = {
+    effect = {
+      if = {
+        limit = {
+          FROM = { tag = SAU }
+          ROOT = {
+            OR = {
+              tag = ARB
+              tag = RAS
+            }
+          }
+        }
+        ROOT = {
+          country_event = { id = arabia.19 days = 1 }
+        }
+      }
+    }
+  }
+}

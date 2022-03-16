@@ -12,7 +12,7 @@ focus_tree = {
     }
   }
   default = no
-  continuous_focus_position = { x = 0 y = 1200 }
+  continuous_focus_position = { x = 0 y = 1000 }
 
   focus = { # Modernization of the Arabian Peninsula
     id = ARB_modernize_peninsula
@@ -78,7 +78,7 @@ focus_tree = {
 
   focus = { # Expand Trading Partners
     id = ARB_expand_trading_partners
-    icon = GFX_SIA_maritmesilkroad
+    icon = GFX_goal_AST_new_markets
     x = 3
     y = 1
     cost = 6
@@ -311,6 +311,7 @@ focus_tree = {
     prerequisite = { focus = ARB_improve_railway_networks }
     relative_position_id = ARB_improve_railway_networks
     completion_reward = {
+      add_manpower = 50000
       every_owned_state = {
         limit = {
           is_core_of = ROOT
@@ -324,6 +325,16 @@ focus_tree = {
         add_extra_state_shared_building_slots = 2
       }
     }
+  }
+
+  focus = { # Modernize Our Ports
+    id = ARB_modernize_our_ports
+    icon = GFX_SIA_maritmesilkroad
+    x = 3
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_expand_trading_partners }
+    relative_position_id = ARB_expand_trading_partners
   }
 
   focus = { # Weapons Imports
@@ -340,16 +351,6 @@ focus_tree = {
     completion_reward = {
       unlock_decision_category_tooltip = ARB_foreign_weapons_imports
     }
-  }
-
-  focus = { # Modernize Our Ports
-    id = ARB_modernize_our_ports
-    icon = GFX_goal_generic_naval_base
-    x = 3
-    y = 1
-    cost = 6
-    prerequisite = { focus = ARB_expand_trading_partners }
-    relative_position_id = ARB_expand_trading_partners
   }
 
   focus = { # Encourage Domestic Manufacturing
@@ -534,6 +535,491 @@ focus_tree = {
     relative_position_id = ARB_mecca_railway_corporation
     completion_reward = {
       ARB_decrease_depression = yes
+    }
+  }
+
+  focus = { # State of the Kingdom
+    id = ARB_state_of_the_kingdom
+    icon = GFX_focus_generic_home_defense
+    x = 15
+    y = 0
+    cost = 6
+    completion_reward = {
+      country_event = arabia.21
+    }
+  }
+
+  focus = { # Hashemite Hegemony
+    id = ARB_hashemite_hegemony
+    icon = GFX_goal_authoritarian
+    x = -2
+    y = 1
+    cost = 6
+    available = {
+      has_country_flag = ARB_civil_war_end
+    }
+    prerequisite = { focus = ARB_state_of_the_kingdom }
+    relative_position_id = ARB_state_of_the_kingdom
+  }
+
+  focus = { # Discredit the Saudis
+    id = ARB_discredit_the_saudis
+    icon = GFX_goal_conspiracy
+    x = -2
+    y = 1
+    cost = 6
+    available = {
+      NOT = {
+        country_exists = SAU
+      }
+    }
+    prerequisite = { focus = ARB_hashemite_hegemony }
+    relative_position_id = ARB_hashemite_hegemony
+    completion_reward = {
+      add_stability = 0.05
+      add_political_power = 50
+      custom_effect_tooltip = ARB_nejd_reintegration_tt
+    }
+  }
+
+  focus = { # Hunt the Ikhwans
+    id = ARB_hunt_the_ikhwans
+    icon = GFX_goal_purge_opposition
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      has_idea = ARB_ikhwan_raids
+    }
+    bypass = {
+      NOT = {
+        has_idea = ARB_ikhwan_raids
+      }
+    }
+    prerequisite = { focus = ARB_discredit_the_saudis }
+    relative_position_id = ARB_discredit_the_saudis
+    completion_reward = {
+      remove_ideas = {
+        ARB_ikhwan_raids
+      }
+    }
+  }
+
+  focus = { # Discredit the Rashidis
+    id = ARB_discredit_the_rashidis
+    icon = GFX_goal_skull_treaty
+    x = 0
+    y = 2
+    cost = 6
+    available = {
+      NOT = {
+        country_exists = RAS
+      }
+    }
+    prerequisite = { focus = ARB_discredit_the_saudis }
+    relative_position_id = ARB_discredit_the_saudis
+    completion_reward = {
+      add_stability = 0.05
+      add_political_power = 50
+      custom_effect_tooltip = ARB_jabal_shammar_reintegration_tt
+    }
+  }
+
+  focus = { # Prioritize Religious Education
+    id = ARB_prioritize_religious_education
+    icon = GFX_goal_ARB_islamic_education
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_hashemite_hegemony }
+    relative_position_id = ARB_hashemite_hegemony
+  }
+
+  focus = { # Reaffirm Authority Over the Peninsula
+    id = ARB_reaffirm_authority
+    icon = GFX_goal_Centralised_Government
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_hunt_the_ikhwans }
+    prerequisite = { focus = ARB_prioritize_religious_education }
+    relative_position_id = ARB_prioritize_religious_education
+    completion_reward = {
+      add_political_power = 100
+    }
+  }
+
+  focus = { # Center of Islamic Faith
+    id = ARB_center_of_islamic_faith
+    icon = GFX_goal_islamic_government
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_hashemite_hegemony }
+    relative_position_id = ARB_hashemite_hegemony
+  }
+
+  focus = { # Hajj Tax
+    id = ARB_hajj_tax
+    icon = GFX_goal_bag_of_money
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_center_of_islamic_faith }
+    relative_position_id = ARB_center_of_islamic_faith
+  }
+
+  focus = { # A New Legal Code
+    id = ARB_new_legal_code
+    icon = GFX_goal_government_icon
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_prioritize_religious_education }
+    prerequisite = { focus = ARB_center_of_islamic_faith }
+    relative_position_id = ARB_center_of_islamic_faith
+  }
+
+  focus = { # British Question
+    id = ARB_british_question
+    icon = GFX_goal_united_kingdom
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_center_of_islamic_faith }
+    relative_position_id = ARB_center_of_islamic_faith
+  }
+
+  focus = { # Royal Hashemite Army
+    id = ARB_royal_army
+    icon = GFX_goal_ARB_army
+    x = 4
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_state_of_the_kingdom }
+    relative_position_id = ARB_state_of_the_kingdom
+    completion_reward = {
+      army_experience = 25
+    }
+  }
+
+  focus = { # Adopt British Tactics
+    id = ARB_adopt_british_tactics
+    icon = GFX_goal_generic_british_officers
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_royal_army }
+    relative_position_id = ARB_royal_army
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+				name = ARB_adopt_british_tactics
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+    }
+  }
+
+  focus = { # Firepower Modernization
+    id = ARB_firepower_modernization
+    icon = GFX_goal_national_artillery
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_adopt_british_tactics }
+    prerequisite = { focus = ARB_equipment_modernization }
+    relative_position_id = ARB_adopt_british_tactics
+    completion_reward = {
+      add_tech_bonus = {
+        category = artillery
+        bonus = 0.75
+        uses = 2
+      }
+    }
+  }
+
+  focus = { # Camelry Integration
+    id = ARB_camelry_integration
+    icon = GFX_goal_OTT_camels
+    x = 0
+    y = 1
+    cost = 6
+    available = {
+      has_full_control_of_state = 679 # Hejaz
+    }
+    prerequisite = { focus = ARB_royal_army }
+    relative_position_id = ARB_royal_army
+    completion_reward = {
+      set_technology = {
+        camel_corps_tech = 1
+        desert_warfare = 1
+      }
+      custom_effect_tooltip = ARB_camelry_integration_tt
+      hidden_effect = {
+        load_oob = "ARB_camelry"
+      }
+    }
+  }
+
+  focus = { # Equipment Modernization
+    id = ARB_equipment_modernization
+    icon = GFX_goal_national_arsenal
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_camelry_integration }
+    relative_position_id = ARB_camelry_integration
+    completion_reward = {
+      add_tech_bonus = {
+        category = infantry_weapons
+        bonus = 1.0
+        uses = 1
+      }
+      add_equipment_to_stockpile = {
+        equipment = infantry_equipment
+        amount = 1000
+        producer = ARB
+      }
+    }
+  }
+
+  focus = { # Logistical and Recon Improvements
+    id = ARB_logistical_and_recon_improvements
+    icon = GFX_goal_radio
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_camelry_integration }
+    relative_position_id = ARB_camelry_integration
+    completion_reward = {
+      add_tech_bonus = {
+        category = recon_tech
+        category = logistics_tech
+        bonus = 1.0
+        uses = 2
+      }
+    }
+  }
+
+  focus = { # Motorization Experiments
+    id = ARB_motorization_experiments
+    icon = GFX_goal_generic_army_motorized
+    x = 0
+    y = 2
+    cost = 6
+    available = {
+      has_full_control_of_state = 679 # Hejaz
+    }
+    prerequisite = { focus = ARB_equipment_modernization }
+    relative_position_id = ARB_equipment_modernization
+    completion_reward = {
+      if = {
+        limit = {
+          NOT = { has_tech = motorised_infantry }
+        }
+        set_technology = {
+          motorised_infantry = 1
+        }
+      }
+      else = {
+        add_tech_bonus = {
+          category = motorized_equipment 
+        }
+      }
+      custom_effect_tooltip = ARB_motorization_experiments_tt
+      hidden_effect = {
+        load_oob = "ARB_motorized"
+      }
+    }
+  }
+
+  focus = { # Royal Hashemite Coast Guard
+    id = ARB_royal_coast_guard
+    icon = GFX_goal_ARB_navy
+    x = 6
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_state_of_the_kingdom }
+    relative_position_id = ARB_state_of_the_kingdom
+    completion_reward = {
+      navy_experience = 25
+    }
+  }
+
+  focus = { # Establish an Air Corps
+    id = ARB_establish_air_corps
+    icon = GFX_goal_ARB_airforce
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_royal_army }
+    prerequisite = { focus = ARB_royal_coast_guard }
+    relative_position_id = ARB_royal_coast_guard
+    completion_reward = {
+      air_experience = 25
+    }
+  }
+
+  focus = { # Fighter Acquisition
+    id = ARB_fighter_acquisition
+    icon = GFX_goal_generic_air_fighter
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_establish_air_corps }
+    relative_position_id = ARB_establish_air_corps
+    completion_reward = {
+      if = {
+        limit = {
+          NOT = { has_tech = early_fighter }
+        }
+        set_technology = {
+          early_fighter = 1
+        }
+      }
+      add_equipment_to_stockpile = {
+        equipment = fighter_equipment_0
+        amount = 50
+        producer = ENG
+      }
+    }
+  }
+
+  focus = { # Air Bases
+    id = ARB_air_bases
+    icon = GFX_goal_generic_airports
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_establish_air_corps }
+    relative_position_id = ARB_establish_air_corps
+    completion_reward = {
+      679 = {
+        add_building_construction = {
+          type = air_base
+          level = 2
+          instant_build = yes
+        }
+      }
+      744 = {
+        add_building_construction = {
+          type = air_base
+          level = 2
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  focus = { # Anti-Air Installations
+    id = ARB_anti_air_installations
+    icon = GFX_focus_generic_air_defense
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = ARB_camelry_integration
+      focus = ARB_establish_air_corps
+    }
+    relative_position_id = ARB_establish_air_corps
+    completion_reward = {
+      679 = {
+        add_building_construction = {
+          type = anti_air_building
+          level = 2
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  focus = { # Dammam Dockyards
+    id = ARB_damman_dockyards
+    icon = GFX_goal_generic_construct_naval_dockyard
+    x = 2
+    y = 1
+    cost = 6
+    available = {
+      has_full_control_of_state = 744
+    }
+    prerequisite = { focus = ARB_royal_coast_guard }
+    relative_position_id = ARB_royal_coast_guard
+    completion_reward = {
+      744 = {
+        limit = {
+          free_building_slots = {
+            building = dockyard
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = dockyard
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  focus = { # Purchase Foreign Ships
+    id = ARB_purchase_foreign_ships
+    icon = GFX_goal_generic_buy_ships
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_damman_dockyards }
+    relative_position_id = ARB_damman_dockyards
+    completion_reward = {
+      if = {
+        limit = { has_dlc = "Man the Guns" }
+        set_technology = {
+          early_ship_hull_light = 1
+        }
+        add_equipment_production = {
+          equipment = {
+            type = ship_hull_light_1
+            creator = "ARB" 
+            version_name = "Al-Hashimi Class"
+          }
+          requested_factories = 1
+          progress = 0.75
+          amount = 2
+        }
+      }
+      else = {
+        set_technology = {
+          early_destroyer = 1
+        }
+        add_equipment_production = {
+		      equipment = {
+            type = early_destroyer
+            creator = "ARB" 
+          }
+          requested_factories = 1
+          progress = 0.75
+          amount = 2
+        }
+      }
+    }
+  }
+
+  focus = { # Trade Convoys
+    id = ARB_trade_convoys
+    icon = GFX_goal_generic_navy_cruiser
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_damman_dockyards }
+    relative_position_id = ARB_damman_dockyards
+    completion_reward = {
+      add_equipment_to_stockpile = {
+        type = convoy_1
+        amount = 100
+        producer = ARB
+      }
     }
   }
 }

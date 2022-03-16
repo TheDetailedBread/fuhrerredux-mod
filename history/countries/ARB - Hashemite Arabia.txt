@@ -61,13 +61,14 @@ set_popularities = {
 give_military_access = ENG
 
 set_variable = { var = british_control value = 50 }
+set_variable = { british_control_percent = british_control }
 ARB_set_british_effects = yes
 add_dynamic_modifier = {
   modifier = ARB_british_political_control
 }
 
-country_event = { id = arabia.0 days = 1 }
-country_event = { id = arabia.2 days = 30 }
+country_event = { id = arabia.0 days = 1 } # Intro
+country_event = { id = arabia.20 days = 48 } # The Hajj
 
 recruit_character = ARB_Abd_al_Ilah
 recruit_character = ARB_Zeid_bin_Hussein_al_Hashmid

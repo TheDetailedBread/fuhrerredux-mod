@@ -71,7 +71,7 @@ country_event = { # Hejazi Attack on Nejd
   }
 
   mean_time_to_happen = {
-    days = 75
+    days = 130
     modifier = {
       factor = 0.65
       check_variable = {
@@ -240,21 +240,46 @@ country_event = { # Black Wednesday Hits
     add_political_power = -100
     add_ideas = ARB_black_wednesday
     
+    ENG = {
+      diplomatic_relation = {
+        country = ARB
+        relation = non_aggression_pact
+        active = no
+      }
+      diplomatic_relation = {
+        country = ARB
+        relation = guarantee
+        active = no
+      }
+      diplomatic_relation = {
+        country = ARB
+        relation = military_access
+        active = no
+      }
+    }
   }
 }
 
-country_event = { # Intelligence Sources
+country_event = { # Whispers from Najd
   id = arabia.12
   title = arabia.12.t
   desc = arabia.12.d
-  picture = GFX_report_event_spain_civil_war_soldiers
+  picture = GFX_report_event_ARB_camels
   is_triggered_only = yes
 
-  option = {
+  option = { # May Allah help us in this coming storm
     name = arabia.12.a
     set_country_flag = ARB_revolt
     set_country_flag = ARB_revolt_trigger
     activate_mission_tooltip = ARB_saudi_revolt
+    hidden_effect = {
+      744 = { set_demilitarized_zone = yes }
+      292 = { set_demilitarized_zone = yes }
+      1032 = { set_demilitarized_zone = yes }
+      678 = { set_demilitarized_zone = yes }
+      945 = { set_demilitarized_zone = yes }
+      946 = { set_demilitarized_zone = yes }
+    }
   }
 }
 
@@ -262,11 +287,15 @@ country_event = { # Nejd Revolts!
   id = arabia.13
   title = arabia.13.t
   desc = arabia.13.d
-  picture = GFX_report_event_generic_sign_treaty2
+  picture = GFX_report_event_SAU_ibn_saud
   is_triggered_only = yes
 
   immediate = {
     hidden_effect = {
+      744 = { set_demilitarized_zone = no }
+      292 = { set_demilitarized_zone = no }
+      1032 = { set_demilitarized_zone = no }
+      678 = { set_demilitarized_zone = no }
       SAU = {
         add_state_core = 744
         add_state_core = 292
@@ -300,10 +329,18 @@ country_event = { # Nejd Revolts!
     }
   }
 
-  option = {
+  option = { # Death to the traitors!
     name = arabia.13.a
     hidden_effect = {
-      country_event = { id = arabia.14 days = 4 }
+      country_event = { id = arabia.14 days = 2 }
+    }
+  }
+
+  option = { # Play as Saudis
+    name = arabia.13.b
+    trigger = { is_ai = no }
+    SAU = {
+      change_tag_from = ROOT
     }
   }
 }
@@ -312,16 +349,19 @@ country_event = { # Rashidi
   id = arabia.14
   title = arabia.14.t
   desc = arabia.14.d
-  picture = GFX_report_event_ARB_troops
+  picture = GFX_report_event_JBS_Horses
   is_triggered_only = yes
 
   immediate = {
     hidden_effect = {
+      945 = { set_demilitarized_zone = no }
+      946 = { set_demilitarized_zone = no }
       RAS = {
         add_state_core = 945
         add_state_core = 946
         transfer_state = 945
         transfer_state = 946
+        load_oob = "RAS"
       }
       ARB = {
         remove_state_core = 945
@@ -344,5 +384,223 @@ country_event = { # Rashidi
 
   option = {
     name = arabia.14.a
+  }
+}
+
+country_event = { # Appeal for British Support
+  id = arabia.15
+  title = arabia.15.t
+  desc = arabia.15.d
+  picture = GFX_report_event_chamberlain
+  is_triggered_only = yes
+
+  option = { # Send them as they need
+    name = arabia.15.a
+    ai_chance = {
+      base = 80
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_london_economic_assistance
+        }
+      }
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_british_crisis_response
+        }
+      }
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_deals_with_english_electric
+        }
+      }
+      modifier = {
+        factor = 0.4
+        has_idea = ENG_bw
+      }
+    }
+    send_equipment = {
+      equipment = infantry_equipment
+      amount = 2000
+      target = ARB
+    }
+    send_equipment = {
+      equipment = support_equipment
+      amount = 500
+      target = ARB
+    }
+    send_equipment = {
+      equipment = motorized_equipment
+      amount = 50
+      target = ARB
+    }
+    ARB = {
+      country_event = { id = arabia.16 days = 1 }
+    }
+  }
+
+  option = { # Send them limited support
+    name = arabia.15.b
+    ai_chance = {
+      base = 80
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_london_economic_assistance
+        }
+      }
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_british_crisis_response
+        }
+      }
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_deals_with_english_electric
+        }
+      }
+    }
+    send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ARB
+    }
+    ARB = {
+      country_event = { id = arabia.17 days = 1 }
+    }
+  }
+
+  option = { # We cannot spare anything
+    name = arabia.15.c
+    ai_chance = {
+      base = 80
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_expand_trading_partners
+        }
+      }
+      modifier = {
+        factor = 2
+        ARB = {
+          has_completed_focus = ARB_request_german_support
+        }
+      }
+    }
+    ARB = {
+      country_event = { id = arabia.18 days = 1 }
+    }
+  }
+}
+
+country_event = { # British Support
+  id = arabia.16
+  title = arabia.16.t
+  desc = arabia.16.d
+  picture = GFX_report_event_chamberlain
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.16.a
+    set_temp_variable = { british_control_temp = 10 }
+    ARB_increase_british_control = yes
+    set_country_flag = ARB_generous_support
+  }
+}
+
+country_event = { # Limited British Support
+  id = arabia.17
+  title = arabia.17.t
+  desc = arabia.17.d
+  picture = GFX_report_event_chamberlain
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.17.a
+    set_temp_variable = { british_control_temp = 5 }
+    ARB_increase_british_control = yes
+    set_country_flag = ARB_limited_support
+  }
+}
+
+country_event = { # No British Support
+  id = arabia.18
+  title = arabia.18.t
+  desc = arabia.18.d
+  picture = GFX_report_event_generic_sign_treaty2
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.18.a
+    set_temp_variable = { british_control_temp = 10 }
+    ARB_decrease_british_control = yes
+    set_country_flag = ARB_no_support
+  }
+}
+
+country_event = { # Annexation of Najd/Rashidi
+  id = arabia.19
+  title = arabia.19.t
+  desc = arabia.19.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = { # 
+    name = arabia.19.a
+    add_political_power = 50
+    if = {
+      limit = {
+        NOT = { country_exists = SAU }
+        NOT = { country_exists = RAS }
+      }
+      set_country_flag = ARB_civil_war_end
+    }
+  }
+}
+
+country_event = { # Hajj
+  id = arabia.20
+  title = arabia.20.t
+  desc = arabia.20.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.20.a
+  }
+}
+
+country_event = { # Question of Reforms
+  id = arabia.21
+  title = arabia.21.t
+  desc = arabia.21.d
+  picture = GFX_report_event_JBS_Horses
+  is_triggered_only = yes
+
+  option = { # The King must rule!
+    name = arabia.21.a
+    add_political_power = -50
+  }
+
+  option = { # Adopting the British style of monarchy guarantees survival
+    name = arabia.21.b
+    hidden_effect = {
+      decrease_ruling_party_popularity_by_20 = yes
+    }
+    set_politics = {
+      ruling_party = authoritarian_democrat
+      elections_allowed = no
+    }
+    increase_ruling_party_popularity_by_20 = yes
+    swap_ideas = {
+      remove_idea = absolute_monarchy
+      add_idea = constitutional_monarchy
+    }
+    set_temp_variable = { british_control_temp = 5 }
+    ARB_increase_british_control = yes
   }
 }
