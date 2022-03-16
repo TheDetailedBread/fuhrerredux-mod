@@ -40,6 +40,72 @@ ARB_foreign_weapons_imports = {
 }
 
 ARB_war_of_arabian_reunification = {
+  ARB_integrate_jabal_shammar = { 
+    icon = GFX_decision_generic_form_nation
+    cost = 20
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_and_decisions_view
+    target_trigger = {
+      owns_state = FROM
+      FROM = {
+        is_core_of = RAS
+      }
+    }
+    target = {
+      945 946
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      FROM = {
+        NOT = { is_core_of = ROOT }
+      }
+      owns_state = FROM
+      has_completed_focus = ARB_discredit_the_rashidis
+    }
+    remove_effect = {
+      FROM = {
+        remove_core_of = RAS
+        remove_claim_by = ROOT
+        add_core_of = ROOT
+      }
+    }
+  }
+  ARB_integrate_nejd = { 
+    icon = GFX_decision_generic_form_nation
+    cost = 20
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_and_decisions_view
+    target_trigger = { 
+      owns_state = FROM
+      FROM = {
+        is_core_of = SAU
+      }
+    }
+    target = {
+      744 292 1032 678
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      FROM = {
+        NOT = { is_core_of = ROOT }
+      }
+      owns_state = FROM
+      has_completed_focus = ARB_discredit_the_saudis
+    }
+    remove_effect = {
+      FROM = {
+        remove_core_of = SAU
+        remove_claim_by = ROOT
+        add_core_of = ROOT
+      }
+    }
+  }
   ARB_appeal_support = {
     target_trigger = {
       FROM = { tag = ENG }
@@ -47,10 +113,33 @@ ARB_war_of_arabian_reunification = {
     icon = GFX_decision_eng_install_government
     fire_only_once = yes
     cost = 20
+    available = {
+      has_capitulated = no
+      custom_trigger_tooltip = {
+        tooltip = ARB_civil_war_end_tt
+        NOT = {
+          has_country_flag = ARB_civil_war_end
+        }
+      }
+    }
+    visible = {
+      OR = {
+        has_war_with = SAU
+        has_war_with = RAS
+      }
+    }
+    complete_effect = {
+      ENG = {
+        country_event = arabia.15
+      }
+    }
   }
   ARB_saudi_revolt = {
     available = {
-      always = no
+      custom_trigger_tooltip = {
+        tooltip = ARB_saudi_revolt_tt
+        always = no
+      }
     }
     activation = {
       has_country_flag = ARB_revolt_trigger
@@ -63,10 +152,6 @@ ARB_war_of_arabian_reunification = {
       clr_country_flag = ARB_revolt_trigger
       country_event = { id = arabia.13 days = 1 }
     }
-    complete_effect = {
-      clr_country_flag = ARB_revolt_trigger
-      add_stability = 0.05
-    }
   }
   ARB_raise_militia = {
     icon = GFX_decision_generic_military
@@ -78,6 +163,10 @@ ARB_war_of_arabian_reunification = {
       1031 679
     }
     target_trigger = { owns_state = FROM }
+    visible = {
+      has_country_flag = ARB_revolt
+      NOT = { has_country_flag = ARB_civil_war_end }
+    }
     available = {
       has_full_control_of_state = FROM
       custom_trigger_tooltip = {
@@ -110,6 +199,10 @@ ARB_war_of_arabian_reunification = {
       1031 679
     }
     target_trigger = { owns_state = FROM }
+    visible = {
+      has_country_flag = ARB_revolt
+      NOT = { has_country_flag = ARB_civil_war_end }
+    }
     available = {
       has_full_control_of_state = FROM
       custom_trigger_tooltip = {
