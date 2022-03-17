@@ -12,7 +12,7 @@ focus_tree = {
     }
   }
   default = no
-  continuous_focus_position = { x = 0 y = 1000 }
+  continuous_focus_position = { x = 300 y = 900 }
 
   focus = { # Modernization of the Arabian Peninsula
     id = ARB_modernize_peninsula
@@ -160,7 +160,7 @@ focus_tree = {
     relative_position_id = ARB_joint_oil_explorations
     completion_reward = {
       add_ideas = ARB_british_scholars_idea
-      set_temp_variable = { british_control_temp = 3 }
+      set_temp_variable = { british_control_temp = 5 }
       ARB_increase_british_control = yes
     }
   }
@@ -517,7 +517,7 @@ focus_tree = {
     relative_position_id = ARB_modernize_our_ports
     completion_reward = {
       add_research_slot = 1
-      set_temp_variable = { british_control_temp = 2 }
+      set_temp_variable = { british_control_temp = 3 }
       ARB_decrease_british_control = yes
     }
   }
@@ -541,7 +541,7 @@ focus_tree = {
   focus = { # State of the Kingdom
     id = ARB_state_of_the_kingdom
     icon = GFX_focus_generic_home_defense
-    x = 15
+    x = 16
     y = 0
     cost = 6
     completion_reward = {
@@ -633,6 +633,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_hashemite_hegemony }
     relative_position_id = ARB_hashemite_hegemony
+    completion_reward = {
+      add_research_slot = 1
+    }
   }
 
   focus = { # Reaffirm Authority Over the Peninsula
@@ -657,6 +660,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_hashemite_hegemony }
     relative_position_id = ARB_hashemite_hegemony
+    completion_reward = {
+      add_ideas = ARB_guardians_of_hajj
+    }
   }
 
   focus = { # Hajj Tax
@@ -667,6 +673,12 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_center_of_islamic_faith }
     relative_position_id = ARB_center_of_islamic_faith
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = ARB_guardians_of_hajj
+        add_idea = ARB_guardians_of_hajj_1
+      }
+    }
   }
 
   focus = { # A New Legal Code
@@ -678,6 +690,10 @@ focus_tree = {
     prerequisite = { focus = ARB_prioritize_religious_education }
     prerequisite = { focus = ARB_center_of_islamic_faith }
     relative_position_id = ARB_center_of_islamic_faith
+    completion_reward = {
+      add_stability = 0.1
+      add_war_support = 0.1
+    }
   }
 
   focus = { # British Question
@@ -688,6 +704,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_center_of_islamic_faith }
     relative_position_id = ARB_center_of_islamic_faith
+    completion_reward = {
+      country_event = { id = arabia.23 days = 2 }
+    }
   }
 
   focus = { # Royal Hashemite Army
@@ -1021,5 +1040,354 @@ focus_tree = {
         producer = ARB
       }
     }
+  }
+
+  ###############################################
+  ###############################################
+  ###############################################
+
+  focus = {
+    id = ARB_distance_from_london
+    icon = GFX_focus_eng_decolonization
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = unlocked_later
+        always = no
+      }
+    }
+    mutually_exclusive = {
+      focus = ARB_obdience_to_westminster
+    }
+    prerequisite = { focus = ARB_reaffirm_authority }
+    prerequisite = { focus = ARB_british_question }
+    relative_position_id = ARB_reaffirm_authority
+    completion_reward = {
+      create_faction = mecca_pact
+    }
+  }
+  
+  focus = {
+    id = ARB_nationalize_the_british_oil_companies
+    icon = GFX_goal_ARB_nationalize_oil
+    x = -3
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_distance_from_london }
+    relative_position_id = ARB_distance_from_london
+    completion_reward = {
+      ENG = {
+        country_event = { id = arabia.22 days = 2 }
+        add_opinion_modifier = {
+          target = ARB
+          modifier = ITA_outraged
+        }
+      }
+      if = {
+        limit = {
+          has_completed_focus = ARB_contracts_with_ig_fabren
+        }
+        swap_ideas = {
+          remove_idea = ARB_the_liquid_black_gold
+          add_idea = ARB_the_liquid_black_gold_1
+        }
+      }
+      else = {
+        remove_ideas = ARB_the_liquid_black_gold
+      }
+    }
+  }
+
+  focus = {
+    id = ARB_visit_cairo
+    icon = GFX_goal_EGY_Pyramids
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      EGY = {
+        exists = yes
+        is_subject = no
+        NOT = { has_war_with = ARB }
+      }
+    }
+    bypass = {
+      EGY = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
+    prerequisite = { focus = ARB_distance_from_london }
+    relative_position_id = ARB_distance_from_london
+    completion_reward = {
+      EGY = { country_event = arabia.25 }
+    }
+  }
+
+  focus = {
+    id = ARB_invite_yemen
+    icon = GFX_goal_ARB_approach_yemen
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      YEM = {
+        exists = yes
+        is_subject = no
+        NOT = { has_war_with = ARB }
+      }
+    }
+    bypass = {
+      YEM = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
+    prerequisite = { focus = ARB_visit_cairo }
+    relative_position_id = ARB_visit_cairo
+    completion_reward = {
+      YEM = { country_event = arabia.26 }
+    }
+  }
+
+  focus = {
+    id = ARB_crush_commonwealth
+    icon = GFX_goal_generic_attack_israel
+    x = 0
+    y = 2
+    cost = 6
+    available = {
+      country_exists = ISR
+      any_allied_country = {
+        ISR = {
+          is_subject_of = PREV
+        }
+      }
+    }
+    bypass = {
+      has_war_with = ISR
+    }
+    mutually_exclusive = {
+      focus = ARB_snatch_the_trucial_states
+    }
+    prerequisite = { focus = ARB_visit_cairo }
+    relative_position_id = ARB_visit_cairo
+    completion_reward = {
+      unlock_decision_tooltip = ARB_reclaim_jerusalem
+    }
+  }
+
+  focus = {
+    id = ARB_our_northern_brothers
+    icon = GFX_goal_ARB_approach_mashriq
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      IRQ = {
+        exists = yes
+        is_subject = no
+        NOT = { has_war_with = ARB }
+      }
+    }
+    bypass = {
+      IRQ = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
+    prerequisite = { focus = ARB_distance_from_london }
+    relative_position_id = ARB_distance_from_london
+    completion_reward = {
+      IRQ = { country_event = arabia.25 }
+    }
+  }
+
+  focus = {
+    id = ARB_court_idris
+    icon = GFX_goal_LBA_Idris_Returns
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      LBA = {
+        exists = yes
+        LBA_Idris_Senussi = {
+          is_country_leader = yes
+        }
+        NOT = { has_war_with = ARB }
+      }
+    }
+    bypass = {
+      LBA = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
+    prerequisite = { 
+      focus = ARB_visit_cairo
+      focus = ARB_our_northern_brothers
+    }
+    relative_position_id = ARB_visit_cairo
+    completion_reward = {
+      LBA = {
+        country_event = { id = arabia.27 days = 2 }
+      }
+    }
+  }
+
+  focus = {
+    id = ARB_invite_persia
+    icon = GFX_goal_ARB_approach_persia
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      PER = {
+        exists = yes
+        is_subject = no
+        NOT = { has_war_with = ARB }
+      }
+    }
+    bypass = {
+      PER = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
+    mutually_exclusive = {
+      focus = ARB_snatch_the_trucial_states
+    }
+    prerequisite = { focus = ARB_our_northern_brothers }
+    relative_position_id = ARB_our_northern_brothers
+    completion_reward = {
+      PER = { country_event = arabia.25 }
+    }
+  }
+
+  focus = {
+    id = ARB_invite_kurdestan
+    icon = GFX_goal_ARB_approach_kurdestan
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      KUR = {
+        exists = yes
+        is_subject = no
+        NOT = { has_war_with = ARB }
+      }
+    }
+    bypass = {
+      KUR = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
+    prerequisite = { focus = ARB_invite_persia }
+    relative_position_id = ARB_invite_persia
+    completion_reward = {
+      KUR = { country_event = arabia.25 }
+    }
+  }
+
+  focus = {
+    id = ARB_snatch_the_trucial_states
+    icon = GFX_goal_generic_attack_trucial_states
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      ENG = {
+        has_full_control_of_state = 658
+        has_full_control_of_state = 656
+      }
+    }
+    bypass = {
+      owns_state = 658
+      owns_state = 656
+    }
+    mutually_exclusive = {
+      focus = ARB_crush_commonwealth
+    }
+    prerequisite = { focus = ARB_invite_persia }
+    relative_position_id = ARB_invite_persia
+    completion_reward = {
+      unlock_decision_tooltip = ARB_operation_khnum
+    }
+  }
+
+  focus = {
+    id = ARB_obdience_to_westminster
+    icon = GFX_focus_eng_the_sun_never_sets
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = unlocked_later
+        always = no
+      }
+    }
+    mutually_exclusive = {
+      focus = ARB_distance_from_london
+    }
+    prerequisite = { focus = ARB_british_question }
+    relative_position_id = ARB_british_question
+  }
+
+  focus = {
+    id = ARB_encourage_british_migration
+    icon = GFX_goal_conspiracy
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_obdience_to_westminster }
+    relative_position_id = ARB_obdience_to_westminster
+  }
+
+  focus = {
+    id = ARB_british_military_mission
+    icon = GFX_goal_Desert_Officers_2
+    x = 3
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_obdience_to_westminster }
+    relative_position_id = ARB_obdience_to_westminster
+  }
+
+  focus = {
+    id = ARB_invite_british_armament_industries
+    icon = GFX_goal_generic_construct_mil_factory
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_british_military_mission }
+    prerequisite = { focus = ARB_encourage_british_migration }
+    relative_position_id = ARB_british_military_mission
+  }
+
+  focus = {
+    id = ARB_request_control_trucial_states
+    icon = GFX_goal_molotov_ribbentrop_pact
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = ARB_british_military_mission }
+    relative_position_id = ARB_british_military_mission
   }
 }

@@ -604,3 +604,297 @@ country_event = { # Question of Reforms
     ARB_increase_british_control = yes
   }
 }
+
+country_event = { # Arabia Nationalizes the Oil Companies!
+  id = arabia.22
+  title = arabia.22.t
+  desc = arabia.22.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { # Impose an embargo on them
+    name = arabia.22.a
+    ai_chance = {
+      base = 100
+    }
+    embargo_FROM = yes
+  }
+
+  option = { # We must protect British interests!
+    name = arabia.22.b
+    ai_chance = {
+      base = 20
+    }
+    declare_war_on = {
+      target = ARB
+      type = annex_everything
+    }
+    activate_mission_tooltip = ARB_punish_the_hashemites
+    set_country_flag = ENG_punish_hashemites_flag
+  }
+}
+
+country_event = { # British Question
+  id = arabia.23
+  title = arabia.23.t
+  desc = arabia.23.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.23.a
+    ai_chance = {
+      base = 40
+      modifier = {
+        factor = 4
+        has_country_flag = ARB_no_support
+      }
+      modifier = {
+        factor = 2
+        has_completed_focus = ARB_expand_trading_partners
+      }
+      modifier = {
+        factor = 2
+        has_completed_focus = ARB_request_german_support
+      }
+      modifier = {
+        factor = 2
+        check_variable = {
+          var = british_control
+          value = 65
+          compare = less_than
+        }
+      }
+    }
+    complete_national_focus = ARB_distance_from_london
+  }
+
+  option = {
+    name = arabia.23.b
+    ai_chance = {
+      base = 20
+      modifier = {
+        factor = 4
+        has_country_flag = ARB_generous_support
+      }
+      modifier = {
+        factor = 2
+        has_country_flag = ARB_limited_support
+      }
+      modifier = {
+        factor = 2
+        has_completed_focus = ARB_london_economic_assistance
+      }
+      modifier = {
+        factor = 2
+        has_completed_focus = ARB_british_crisis_response
+      }
+      modifier = {
+        factor = 0.2
+        has_country_flag = ARB_no_support
+      }
+      modifier = {
+        factor = 4
+        check_variable = {
+          var = british_control
+          value = 75
+          compare = greater_than_or_equals
+        }
+      }
+      modifier = {
+        factor = 2
+        check_variable = {
+          var = british_control
+          value = 65
+          compare = greater_than_or_equals
+        }
+      }
+    }
+    complete_national_focus = ARB_obdience_to_westminster
+  }
+}
+
+country_event = { # Arabia Snatches the Trucial States
+  id = arabia.24
+  title = arabia.24.t
+  desc = arabia.24.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { # They will pay for this!
+    name = arabia.24.a
+    activate_mission_tooltip = ARB_punish_the_hashemites
+    set_country_flag = ENG_punish_hashemites_flag
+  }
+
+  option = { # They are not worth the war.
+    name = arabia.24.b
+    add_stability = -0.15
+    add_war_support = -0.1
+    decrease_ruling_party_popularity_by_15 = yes
+  }
+}
+
+country_event = { # Invite to Faction
+  id = arabia.25
+  title = arabia.25.t
+  desc = arabia.25.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.25.a
+    ai_chance = {
+      base = 80
+    }
+    FROM = {
+      add_to_faction = ROOT
+    }
+  }
+
+  option = {
+    name = arabia.25.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = arabia.26 days = 2 }
+    }
+  }
+}
+
+country_event = { # From Declines
+  id = arabia.26
+  title = arabia.26.t
+  desc = arabia.26.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { # We are better off without them
+    name = arabia.26.a
+    add_political_power = -10
+  }
+
+  option = { # They will join whether by force
+    name = arabia.26.b
+    trigger = {
+      OR = {
+        any_allied_country = {
+          is_neighbor_of = ROOT
+        }
+        is_neighbor_of = ROOT
+      }
+    }
+    declare_war_on = {
+      target = FROM
+      type = annex_everything
+    }
+  }
+}
+
+country_event = { # Courting Idris
+  id = arabia.27
+  title = arabia.27.t
+  desc = arabia.27.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { # We are loyal to our Italian overlords
+    name = arabia.27.a
+    ai_chance = {
+      base = 20
+    }
+    ITA = {
+      country_event = { id = arabia.31 days = 2 }
+    }
+    ARB = {
+      country_event = { id = arabia.29 days = 2 }
+    }
+  }
+
+  option = { # We will grab this opportunity
+    name = arabia.27.b
+    ai_chance = {
+      base = 80
+    }
+    ITA = {
+      country_event = { id = arabia.28 days = 2 }
+    }
+    ARB = {
+      add_to_faction = ROOT
+      country_event = { id = arabia.29 days = 2 }
+    }
+  }
+}
+
+country_event = { # ITA: Idris joins the Arabs!
+  id = arabia.28
+  title = arabia.28.t
+  desc = arabia.28.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = { # Let them be
+    name = arabia.28.a
+  }
+
+  option = { # The Kingdom's interests must be protected!
+    name = arabia.28.b
+    declare_war_on = {
+      target = LBA
+      type = annex_everything
+    }
+    set_country_flag = ARB_punish_idris_flag
+    activate_mission_tooltip = ARB_punish_idris
+  }
+}
+
+country_event = { # Libya Joins the Faction
+  id = arabia.29
+  title = arabia.29.t
+  desc = arabia.29.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { 
+    name = arabia.29.a
+  }
+}
+
+country_event = { # Libya Refused to Join the Faction
+  id = arabia.30
+  title = arabia.30.t
+  desc = arabia.30.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { 
+    name = arabia.30.a
+  }
+}
+
+country_event = { # Arabia tried to sway Libya
+  id = arabia.31
+  title = arabia.31.t
+  desc = arabia.31.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = {
+    name = arabia.31.a
+    every_country = {
+      limit = {
+        OR = {
+          tag = ARB
+          is_in_faction_with = ARB
+        }
+      }
+      ROOT = {
+        add_opinion_modifier = {
+          target = PREV
+          modifier = ITA_outraged
+        }
+      }
+    }
+  }
+}

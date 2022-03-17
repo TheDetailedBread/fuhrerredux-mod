@@ -8,8 +8,8 @@ ideas = {
       allowed = { original_tag = ARB }
       picture = EGY_retired_brits
       modifier = {
-        army_org_factor = 0.1
-        army_morale_factor = 0.1
+        army_org_factor = 0.05
+        army_morale_factor = 0.05
       }
     }
     ARB_ikhwan_raids = {
@@ -24,7 +24,15 @@ ideas = {
       picture = ARB_black_gold
       modifier = {
         consumer_goods_factor = -0.1
-        fuel_gain_factor_from_states = -0.15
+        fuel_gain_factor_from_states = -0.25
+      }
+    }
+    ARB_the_liquid_black_gold_1 = {
+      allowed = { original_tag = ARB }
+      picture = ARB_black_gold
+      modifier = {
+        consumer_goods_factor = -0.05
+        fuel_gain_factor_from_states = -0.05
       }
     }
     ARB_black_wednesday = {
@@ -73,6 +81,23 @@ ideas = {
         monthly_population = 0.40
 				supply_consumption_factor = -0.05
 				conscription = 0.01
+      }
+    }
+    ARB_guardians_of_hajj = {
+      allowed = { original_tag = ARB }
+      picture = raj_marginalized_muslim_community_happy
+      modifier = {
+        stability_factor = 0.1
+        political_power_gain = 0.15
+      }
+    }
+    ARB_guardians_of_hajj_1 = {
+      allowed = { original_tag = ARB }
+      picture = raj_marginalized_muslim_community_happy
+      modifier = {
+        stability_factor = 0.1
+        political_power_gain = 0.15
+        consumer_goods_factor = -0.05
       }
     }
   }
