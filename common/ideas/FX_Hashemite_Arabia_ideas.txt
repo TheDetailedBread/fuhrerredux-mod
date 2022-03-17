@@ -12,6 +12,14 @@ ideas = {
         army_morale_factor = 0.05
       }
     }
+    ARB_british_army_training_1 = {
+      allowed = { original_tag = ARB }
+      picture = EGY_retired_brits
+      modifier = {
+        army_org_factor = 0.1
+        army_morale_factor = 0.1
+      }
+    }
     ARB_ikhwan_raids = {
       allowed = { original_tag = ARB }
       modifier = {
@@ -100,8 +108,16 @@ ideas = {
         consumer_goods_factor = -0.05
       }
     }
+    ARB_british_migration = {
+      allowed = { original_tag = ARB }
+      picture = prc_low_popular_support3
+      modifier = {
+        monthly_population = 0.45
+      }
+    }
   }
   weapons_manufacturer = {
+    designer = yes
     ARB_bsa = {
       allowed = { original_tag = ARB }
       traits = { infantry_equipment_producer_offense_2 }
@@ -110,10 +126,60 @@ ideas = {
       }
     }
   }
+  tank_manufacturer = {
+    designer = yes
+
+    ARB_rolls_royce = {
+			allowed = { original_tag = ARB }
+      visible = {
+        has_completed_focus = ARB_invite_british_armament_industries
+      }
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+		}
+  }
+  air_naval_manufacturer = {
+    designer = yes
+
+    ARB_yarrow_shipbuilders = {
+			allowed = { original_tag = ARB }
+      visible = {
+        has_completed_focus = ARB_invite_british_armament_industries
+      }
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			traits = { small_ship_producer_offense_2 }
+		}
+    ARB_hawker = {
+			allowed = { original_tag = ARB }
+      visible = {
+        has_completed_focus = ARB_invite_british_armament_industries
+      }
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { fighter_producer_offense_2 }
+		}
+    ARB_fairey_aviation = {
+			allowed = { original_tag = ARB }
+      visible = {
+        has_completed_focus = ARB_invite_british_armament_industries
+      }
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { fighter_producer_defense_2 }
+		}	
+  }
   industrial_concern = {
     ARB_english_electric = {
       allowed = { original_tag = ARB }
-      available = {
+      visible = {
         has_completed_focus = ARB_deals_with_english_electric
       }
       traits = { electronics_manufacturer }
@@ -127,7 +193,7 @@ ideas = {
     }
     ARB_ig_farben_company = {
       allowed = { original_tag = ARB }
-      available = {
+      visible = {
         has_completed_focus = ARB_contracts_with_ig_fabren
       }
       traits = { oil_concern }

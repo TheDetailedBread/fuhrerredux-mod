@@ -1066,6 +1066,8 @@ focus_tree = {
     relative_position_id = ARB_reaffirm_authority
     completion_reward = {
       create_faction = mecca_pact
+      set_temp_variable = { var = british_control_temp value = 20 }
+      ARB_decrease_british_control = yes
     }
   }
   
@@ -1078,6 +1080,8 @@ focus_tree = {
     prerequisite = { focus = ARB_distance_from_london }
     relative_position_id = ARB_distance_from_london
     completion_reward = {
+      set_temp_variable = { var = british_control_temp value = 20 }
+      ARB_decrease_british_control = yes
       ENG = {
         country_event = { id = arabia.22 days = 2 }
         add_opinion_modifier = {
@@ -1163,15 +1167,18 @@ focus_tree = {
     y = 2
     cost = 6
     available = {
-      country_exists = ISR
-      any_allied_country = {
-        ISR = {
-          is_subject_of = PREV
-        }
+      ISR = {
+        exists = yes
+        NOT = { has_war_with = ARB }
       }
     }
     bypass = {
-      has_war_with = ISR
+      OR = {
+        has_war_with = ISR
+        NOT = {
+          country_exists = ISR 
+        }
+      }
     }
     mutually_exclusive = {
       focus = ARB_snatch_the_trucial_states
@@ -1348,6 +1355,10 @@ focus_tree = {
     }
     prerequisite = { focus = ARB_british_question }
     relative_position_id = ARB_british_question
+    completion_reward = {
+      set_temp_variable = { var = british_control_temp value = 5 }
+      ARB_increase_british_control = yes
+    }
   }
 
   focus = {
@@ -1358,6 +1369,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_obdience_to_westminster }
     relative_position_id = ARB_obdience_to_westminster
+    completion_reward = {
+      add_ideas = ARB_british_migration
+    }
   }
 
   focus = {
@@ -1368,6 +1382,13 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_obdience_to_westminster }
     relative_position_id = ARB_obdience_to_westminster
+    completion_reward = {
+      army_experience = 15
+      swap_ideas = {
+        remove_idea = ARB_british_army_training
+        add_idea = ARB_british_army_training_1
+      }
+    }
   }
 
   focus = {
@@ -1379,6 +1400,31 @@ focus_tree = {
     prerequisite = { focus = ARB_british_military_mission }
     prerequisite = { focus = ARB_encourage_british_migration }
     relative_position_id = ARB_british_military_mission
+    completion_reward = {
+      679 = {
+        limit = {
+          free_building_slots = {
+            building = arms_factory
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = arms_factory
+          level = 2
+          instant_build = yes
+        }
+      }
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = ARB_rolls_royce
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = ARB_yarrow_shipbuilders
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = ARB_hawker
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = ARB_fairey_aviation
+    }
   }
 
   focus = {
