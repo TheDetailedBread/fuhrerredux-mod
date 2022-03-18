@@ -111,6 +111,7 @@ country_event = { #Chaos in the Country
 		}
 
 		hidden_effect = {
+      add_ideas = military_junta
 			if = {
 				limit = {
 					is_faction_leader = yes
@@ -225,6 +226,7 @@ country_event = { #Popular issurection
 		}
 
 	  hidden_effect = {
+      add_ideas = revolutionary_movement
       add_country_leader_role = {
         character = GER_Willy_Brandt
         promote_leader = yes
@@ -404,6 +406,9 @@ country_event = { #Absolutist vs Parlementarian decision
 	is_triggered_only = yes
 	option = {
 		name = valkyrie.12.a
+    hidden_effect = {
+      add_ideas = absolute_monarchy
+    }
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.10
@@ -415,6 +420,9 @@ country_event = { #Absolutist vs Parlementarian decision
 	}
 	option = {
 		name = valkyrie.12.b
+    hidden_effect = {
+      add_ideas = constitutional_monarchy
+    }
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.05
@@ -426,6 +434,9 @@ country_event = { #Absolutist vs Parlementarian decision
 	}
 	option = {
 		name = valkyrie.12.c
+    hidden_effect = {
+      add_ideas = constitutional_monarchy
+    }
     add_popularity = {
 			ideology = market_liberal
 			popularity = 0.10
