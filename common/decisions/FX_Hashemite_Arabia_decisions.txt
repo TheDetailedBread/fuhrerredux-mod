@@ -39,7 +39,7 @@ war_measures = {
         limit = {
           is_in_faction_with = ARB
         }
-        whitepeace = ROOT
+        white_peace = ROOT
       }
       clr_country_flag = ARB_punish_idris_flag
     }
@@ -89,7 +89,7 @@ war_measures = {
         limit = {
           is_in_faction_with = ARB
         }
-        whitepeace = ROOT
+        white_peace = ROOT
       }
       clr_country_flag = ARB_protect_jerusalem_flag
     }
@@ -136,7 +136,7 @@ war_measures = {
         limit = {
           is_in_faction_with = ARB
         }
-        whitepeace = ROOT
+        white_peace = ROOT
       }
       clr_country_flag = ENG_punish_hashemites_flag
     }
@@ -197,7 +197,7 @@ ARB_foreign_weapons_imports = {
     cost = 10
     icon = GFX_decision_generic_construction
     days_remove = 14
-    days_re_enable = 30
+    fire_only_once = yes
     target_trigger = {
       FROM = {
         OR = {
@@ -349,8 +349,8 @@ ARB_war_of_arabian_reunification = {
   }
   ARB_raise_militia = {
     icon = GFX_decision_generic_military
-    days_re_enable = 30
-    days_remove = 7
+    fire_only_once = yes
+    days_remove = 14
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -359,6 +359,7 @@ ARB_war_of_arabian_reunification = {
     target_trigger = { owns_state = FROM }
     visible = {
       has_country_flag = ARB_revolt
+      has_war = yes
       NOT = { has_country_flag = ARB_civil_war_end }
     }
     available = {
@@ -385,8 +386,8 @@ ARB_war_of_arabian_reunification = {
   }
   ARB_raise_cavalry = {
     icon = GFX_decision_generic_cavalry
-    days_re_enable = 30
-    days_remove = 7
+    fire_only_once = yes
+    days_remove = 14
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -395,6 +396,7 @@ ARB_war_of_arabian_reunification = {
     target_trigger = { owns_state = FROM }
     visible = {
       has_country_flag = ARB_revolt
+      has_war = yes
       NOT = { has_country_flag = ARB_civil_war_end }
     }
     available = {
