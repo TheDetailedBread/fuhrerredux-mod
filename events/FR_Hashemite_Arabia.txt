@@ -994,3 +994,21 @@ country_event = { # Britain Refuses to Hand Over the Trucial States
     name = arabia.34.a
   }
 }
+
+country_event = { # Capture of Faisal al Duwaish
+  id = arabia.35
+  title = arabia.35.t
+  desc = arabia.35.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = { # Sentence him to death!
+    name = arabia.35.a
+    add_political_power = -50
+    hidden_effect = {
+      SAU = {
+        retire_character = SAU_Faisal_al_Duwaish
+      }
+    }
+  }
+}
