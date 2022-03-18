@@ -176,48 +176,54 @@ focus_tree = {
     relative_position_id = ARB_deals_with_english_electric
     completion_reward = {
       679 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
       1031 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+            limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
       1032 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+            limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
     }
@@ -289,14 +295,16 @@ focus_tree = {
     relative_position_id = ARB_london_economic_assistance
     completion_reward = {
       every_owned_state = {
-        limit = {
-          is_core_of = ROOT
-          NOT = { state = 678 } # That's a desert
-        }
-        add_building_construction = {
-          type = infrastructure
-          level = 1
-          instant_build = yes
+        if = {
+          limit = {
+            is_core_of = ROOT
+            NOT = { state = 678 } # That's a desert
+          }
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
         }
       }
     }
@@ -313,13 +321,15 @@ focus_tree = {
     completion_reward = {
       add_manpower = 50000
       every_owned_state = {
-        limit = {
-          is_core_of = ROOT
-          NOT = { state = 678 }
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            is_core_of = ROOT
+            NOT = { state = 678 }
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
         }
         add_extra_state_shared_building_slots = 2
@@ -367,33 +377,37 @@ focus_tree = {
     relative_position_id = ARB_modernize_our_ports
     completion_reward = {
       1031 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
       1032 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+            limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
     }
@@ -468,18 +482,20 @@ focus_tree = {
     relative_position_id = ARB_german_industrial_expertise
     completion_reward = {
       1031 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
       custom_effect_tooltip = available_designer
@@ -535,6 +551,40 @@ focus_tree = {
     relative_position_id = ARB_mecca_railway_corporation
     completion_reward = {
       ARB_decrease_depression = yes
+      679 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+      1031 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
     }
   }
 
@@ -1358,6 +1408,27 @@ focus_tree = {
     completion_reward = {
       set_temp_variable = { var = british_control_temp value = 5 }
       ARB_increase_british_control = yes
+      if = {
+        limit = {
+          ENG = {
+            is_faction_leader = yes
+          }
+        }
+        ENG = {
+          add_to_faction = ROOT
+        }
+      }
+      else_if = {
+        limit = {
+          FRA = {
+            is_faction_leader = yes
+            is_in_faction_with = ENG
+          }
+        }
+        FRA = {
+          add_to_faction = ROOT
+        }
+      }
     }
   }
 
@@ -1435,5 +1506,10 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = ARB_british_military_mission }
     relative_position_id = ARB_british_military_mission
+    completion_reward = {
+      ENG = {
+        country_event = { id = arabia.32 days = 2 }
+      }
+    }
   }
 }
