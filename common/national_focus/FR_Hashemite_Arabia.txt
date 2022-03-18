@@ -649,8 +649,9 @@ focus_tree = {
     prerequisite = { focus = ARB_discredit_the_saudis }
     relative_position_id = ARB_discredit_the_saudis
     completion_reward = {
-      remove_ideas = {
-        ARB_ikhwan_raids
+      remove_ideas = ARB_ikhwan_raids
+      hidden_effect = {
+        country_event = { id = arabia.35 days = 60 }
       }
     }
   }
