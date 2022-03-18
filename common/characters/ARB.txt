@@ -36,6 +36,21 @@ characters = {
 			ideology = paternal_autocrat_subtype
 			traits = { }
 		}
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = ARB_Abd_al_Ilah_hog_pau_hired }
+			}			
+			idea_token = ARB_Abd_al_Ilah_hog_pau
+			on_add = { set_country_flag = ARB_Abd_al_Ilah_hog_pau_hired }
+			on_remove = { clr_country_flag = ARB_Abd_al_Ilah_hog_pau_hired }
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_charismatic_charmer
+			}
+		}
 	}
 	ARB_Zeid_bin_Hussein_al_Hashmid = {
 		name = "Zeid bin Hussein al-Hashmid"
@@ -157,6 +172,29 @@ characters = {
 			}
 		}
 	}
+  ARB_Calouste_Gulbenkian = {
+    name = "Calouste Gulbenkian"
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ministers/ARB/ARB_Calouste_Gulbenkian.png"
+      }
+    }
+    advisor = {
+      cost = 150
+      slot = head_of_government
+      available = {
+				hidden_trigger = { has_country_flag = ARB_Calouste_Gulbenkian_hog_mli_hired }
+			}			
+			idea_token = ARB_Calouste_Gulbenkian_hog_mli
+			on_add = { set_country_flag = ARB_Calouste_Gulbenkian_hog_mli_hired }
+			on_remove = { clr_country_flag = ARB_Calouste_Gulbenkian_hog_mli_hired }
+      traits = {
+        head_of_government
+        market_liberal
+        hog_smiling_oilman
+      }
+    }
+  }
 	ARB_Abdullah_III_Al_Salim_Al_Sabah = {
 		name = "Abdullah III Al-Salim Al-Sabah"
 		portraits = {

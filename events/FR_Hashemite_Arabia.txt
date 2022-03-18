@@ -587,22 +587,41 @@ country_event = { # Question of Reforms
 
   option = { # Remain as Absolute Monarchy
     name = arabia.21.a
+    ai_chance = {
+      base = 80
+    }
     add_political_power = -50
   }
 
   option = { # Transition to a Constitutional Monarchy
     name = arabia.21.b
+    ai_chance = {
+      base = 20
+    }
     hidden_effect = {
       decrease_ruling_party_popularity_by_20 = yes
+      country_event = { id = arabia.36 days = 360 }
     }
     set_politics = {
       ruling_party = authoritarian_democrat
       elections_allowed = yes
     }
     increase_ruling_party_popularity_by_20 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      ARB_Eqab_bin_Mohaya_hog_ade
+      ARB_Sabah_al_Salem_al_Sabah_for_ade
+      ARB_Mohammed_bin_Awad_bin_Laden_eco_ade
+      ARB_Salem_Al_Mubarak_Al_Sabah_sec_ade
+    }
     swap_ideas = {
       remove_idea = absolute_monarchy
       add_idea = constitutional_monarchy
+    }
+    set_party_name = {
+      ideology = authoritarian_democrat
+      name = ARB_transitional_party
+      long_name = ARB_transitional_party_long
     }
     set_temp_variable = { british_control_temp = 5 }
     ARB_increase_british_control = yes
@@ -1009,6 +1028,107 @@ country_event = { # Capture of Faisal al Duwaish
       SAU = {
         retire_character = SAU_Faisal_al_Duwaish
       }
+    }
+  }
+}
+
+country_event = { # First General Elections
+  id = arabia.36
+  title = arabia.36.t
+  desc = arabia.36.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = { # Nationals
+    name = arabia.36.a
+    set_party_name = {
+      ideology = authoritarian_democrat
+      name = ARB_national_party
+      long_name = ARB_national_party_long
+    }
+    set_party_name = {
+      ideology = social_conservative
+      name = ARB_conservative_party
+      long_name = ARB_conservative_party_long
+    }
+    set_party_name = {
+      ideology = market_liberal
+      name = ARB_liberal_party
+      long_name = ARB_liberal_party_long
+    }
+    set_politics = {
+      ruling_party = authoritarian_democrat
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_15 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      ARB_Abd_al_Ilah_hog_pau
+      ARB_Sabah_al_Salem_al_Sabah_for_ade
+      ARB_Mohammed_bin_Awad_bin_Laden_eco_ade
+      ARB_Salem_Al_Mubarak_Al_Sabah_sec_ade
+    }
+  }
+
+  option = { # Constitutionals
+    name = arabia.36.b
+    set_party_name = {
+      ideology = authoritarian_democrat
+      name = ARB_national_party
+      long_name = ARB_national_party_long
+    }
+    set_party_name = {
+      ideology = social_conservative
+      name = ARB_conservative_party
+      long_name = ARB_conservative_party_long
+    }
+    set_party_name = {
+      ideology = market_liberal
+      name = ARB_liberal_party
+      long_name = ARB_liberal_party_long
+    }
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_15 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      ARB_Abdullah_III_Al_Salim_Al_Sabah_hog_sco
+      ARB_Abdullah_Al_Jaber_Al_Sabah_for_sco
+      ARB_Abdullah_Al_Jaber_Al_Sabah_eco_sco
+      ARB_Mohammed_bin_Sharif_Al_Farouqi_sec_sco
+    }
+  }
+
+  option = { # Liberals
+    name = arabia.36.c
+    set_party_name = {
+      ideology = authoritarian_democrat
+      name = ARB_national_party
+      long_name = ARB_national_party_long
+    }
+    set_party_name = {
+      ideology = social_conservative
+      name = ARB_conservative_party
+      long_name = ARB_conservative_party_long
+    }
+    set_party_name = {
+      ideology = market_liberal
+      name = ARB_liberal_party
+      long_name = ARB_liberal_party_long
+    }
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_15 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      ARB_Ahmad_Al_Jaber_Al_Sabah_hog_mli
+      ARB_Mohammed_Ahmad_Al_Jaber_Al_Sabah_for_mli
+      ARB_Mubarak_Al_Hamad_Al_Sabah_eco_mli
+      ARB_Hazaa_bin_Sultan_Al_Nahyan_sec_mli
     }
   }
 }
