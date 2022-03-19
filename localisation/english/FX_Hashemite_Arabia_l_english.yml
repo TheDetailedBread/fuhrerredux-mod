@@ -53,6 +53,7 @@ mecca_pact:0 "Mecca Pact"
 
 ### Modifiers
 ARB_british_control:0 "British Aid"
+ARB_british_political_control:0 "British Interference"
 
 ### Tooltips
 ARB_saudi_revolt_tt:0 "War of Arabian Reunification has started"
@@ -90,7 +91,7 @@ ARB_protect_jerusalem_tt:0 "We need to control at least §Y1§! core Arabian sta
 
 ### Ideas
 ARB_british_influence:0 "[ARB_british_influence_loc]"
-ARB_british_influence_high:0 "British Influence - §tHigh§"
+ARB_british_influence_high:0 "British Influence - §tHigh§!"
 ARB_british_influence_medium:0 "British Influence - §GModerate§!"
 ARB_british_influence_low:0 "British Influence - §CLow§!"
 ARB_british_influence_undef:0 "British Influence"
@@ -181,9 +182,9 @@ arabia.17.a:0 "Well its better than nothing"
 arabia.18.t:0 "[From.GetName] Refuses to Send Support"
 arabia.18.d:0 "Responding to our appeals of material support on this conflict against the Saudis and Rashidis, the [ENG.GetAdjective] have refused to send material support to help us defeat our rivals."
 arabia.18.a:0 "We're fools to trust the imperialists"
-arabia.19.t:0 "Defeat of [From.GetNameDef]"
+arabia.19.t:0 "Defeat of the [From.GetAdjective]s"
 arabia.19.d:0 "As our army marched to the capital of [From.GetName]; the capitulation of the [From.GetAdjective] Government have soon followed. The last holdouts of the [From.GetAdjective] troops have now successfully seized and destroyed and the instrument of formal surrender have now signed by their delegation."
-arabia.19.a:0 "Great..."
+arabia.19.a:0 "Glory to Allah!"
 arabia.20.t:0 "Pilgrims Arrive in Mecca"
 arabia.20.d:0 "A day before the official start of the Hajj, there are pilgirms already starting to arrive in different parts of the Muslim world. Egyptians, Mesopotamians, Turkish and other ethnicities performing the Islamic faith are settling in on the city of Mecca. The Hajj is an annual Islamic pilgrimage, a mandatory religious duty for Muslims that must be carried out at least once in their lifetime by all adult Muslims who are physically and financially capable of undertaking the journey, and of supporting their family during their absence from home. The rites of pilgrimage are performed over five to six days, extending from the 8th to the 12th or 13th of Dhu al-Hijjah, the last month of the Islamic calendar."
 arabia.20.a:0 "Come, fellow Muslims from different corners of the world!"
@@ -204,7 +205,7 @@ arabia.24.d:0 "In an unprecendented move, the Hashemite Kingdom of Arabia, have 
 arabia.24.a:0 "They will pay for this!"
 arabia.24.b:0 "They are not worth the war."
 arabia.25.t:0 "Invitation to the Mecca Pact"
-arabia.25.d:0 "We have been contacted by the [ARB.GetAdjective] Government in [ARB.Capital.GetName], they intend to extend the invitation to us in joining the [ARB.GetFactionName]. The aim of this alliance is to secure and unify the Arabs countries in the region, and at the same time, combatting western imperialist influence in the middle east.."
+arabia.25.d:0 "We have been contacted by the [ARB.GetAdjective] Government in [ARB.GetCapitalVictoryPointName], they intend to extend the invitation to us in joining the [ARB.GetFactionName]. The aim of this alliance is to secure and unify the Arabs countries in the region, and at the same time, combatting western imperialist influence in the middle east.."
 arabia.25.a:0 "A way for Arab unification"
 arabia.25.b:0 "This will never work"
 arabia.26.t:0 "[From.GetName] Refuses Our Offer"
@@ -216,7 +217,7 @@ arabia.27.d:0 "While performing his daily duties as Emir of Libya, Idris, have b
 arabia.27.a:0 "We are loyal to the hands that feeds us."
 arabia.27.b:0 "A perfect opportunity to cast out the Italians in Libya."
 arabia.28.t:0 "Idris Joins the [ARB.GetFactionName]"
-arabia.28.d:0 "In an unprecentended move, [LBA.GetLeader] have declared that he will now longer bow to Rome; and instead join the Arabic alliance offered to them by no other the the government in [ARB.Capital.GetName]. As this treachery was a suprise to our government, some voiced that [ITA.GetAdjective] in Libya is a liability and instead push for its recognition; while some radicals wish to not make this move by Idris unpunished, advocating to prepare for an invasion of Tripoli and the Arabian peninsula."
+arabia.28.d:0 "In an unprecentended move, [LBA.GetLeader] have declared that he will now longer bow to Rome; and instead join the Arabic alliance offered to them by no other the the government in [ARB.GetCapitalVictoryPointName]. As this treachery was a suprise to our government, some voiced that [ITA.GetAdjective] in Libya is a liability and instead push for its recognition; while some radicals wish to not make this move by Idris unpunished, advocating to prepare for an invasion of Tripoli and the Arabian peninsula."
 arabia.28.a:0 "Let them be..."
 arabia.28.b:0 "The Kingdom's interests must be protected!"
 arabia.29.t:0 "Idris Accepts our Offer"
@@ -246,6 +247,16 @@ arabia.36.d:0 "Today is another election day for the Prime Minister of Arabia. W
 arabia.36.a:0 "Nationals"
 arabia.36.b:0 "Constitutionals"
 arabia.36.c:0 "Liberals"
+arabia.38.t:0 "[GetYear] General Elections"
+arabia.38.d:0 "Another election has come to the Arabian peninsula, the people will now decide on what party that will form a government and lead the kingdom in years to come."
+arabia.38.a:0 "Nationals"
+arabia.38.b:0 "Constitutionals"
+arabia.38.c:0 "Liberals"
+arabia.39.t:0 "[GetYear] General Elections"
+arabia.39.d:0 "Another election has come to the Arabian peninsula, the people will now decide on what party that will form a government and lead the kingdom in years to come."
+arabia.39.a:0 "Nationals"
+arabia.39.b:0 "Constitutionals"
+arabia.39.c:0 "Liberals"
 
 ### Focus
 # Economy
