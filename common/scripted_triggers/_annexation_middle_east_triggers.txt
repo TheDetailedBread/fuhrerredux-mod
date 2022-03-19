@@ -37,9 +37,13 @@ can_release_lebanon = {
 #Hashimete Arabia - annexation_ARB_CONQ
 can_release_hashimete_arabia = { 
 	state = 679
-	NOT = { is_claimed_by = ROOT}
+	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		NOT = {
+      OR = {
+        tag = RAS
+        tag = SAU
+      }
 			country_exists = ARB
 			has_country_flag = ARB_CONQ
 		}
@@ -49,10 +53,14 @@ can_release_hashimete_arabia = {
 #Saudi Arabia - annexation_SAU_CONQ
 can_release_saudi_arabia = { 
 	state = 292
-	NOT = { is_claimed_by = ROOT}
+	NOT = { is_claimed_by = ROOT }
 	ROOT = {
     should_release_arabia_first = yes
 		NOT = {
+      OR = {
+        tag = ARB
+        tag = RAS
+      }
 			country_exists = SAU
 			has_country_flag = SAU_CONQ
 		}
