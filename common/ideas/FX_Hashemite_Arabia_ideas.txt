@@ -116,6 +116,51 @@ ideas = {
         monthly_population = 0.45
       }
     }
+    ARB_arab_resistance = {
+      allowed = { original_tag = ARB }
+      picture = chi_war_of_resistance3
+      modifier = {
+        political_power_gain = -0.35
+        stability_factor = -0.65
+        war_support_factor = -0.65
+      }
+    }
+    ARB_arab_resistance_1 = {
+      allowed = { original_tag = ARB }
+      picture = chi_war_of_resistance3
+      modifier = {
+        political_power_gain = -0.25
+        stability_factor = -0.45
+        war_support_factor = -0.45
+      }
+    }
+    ARB_arab_resistance_2 = {
+      allowed = { original_tag = ARB }
+      picture = chi_war_of_resistance3
+      modifier = {
+        political_power_gain = -0.15
+        stability_factor = -0.25
+        war_support_factor = -0.25
+      }
+    }
+    ARB_irrigation = {
+      allowed = { original_tag = ARB }
+      available = { has_country_flag = ARB_british_mandate_flag }
+      picture = generic_agrarian_society
+      modifier = {
+        industrial_capacity_factory = 0.15
+        production_factory_max_efficiency_factor = 0.1
+      }
+    }
+    ARB_rapid_industrialization_idea = {
+      allowed = { original_tag = ARB }
+      available = { has_country_flag = ARB_british_mandate_flag }
+      picture = generic_central_management
+      modifier = {
+        conscription_factor = -0.15
+        production_speed_buildings_factor = 0.25
+      }
+    }
   }
   weapons_manufacturer = {
     designer = yes

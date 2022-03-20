@@ -422,3 +422,199 @@ ARB_war_of_arabian_reunification = {
     }
   }
 }
+
+ARB_british_mandate = {
+  ARB_cement_our_authority = {
+    allowed = { original_tag = ARB }
+    available = {
+      has_completed_focus = ARB_silence_the_traditionalists
+    }
+    activation = {
+      has_country_flag = ARB_british_mandate_flag
+    }
+    icon = GFX_decision_generic_police_action
+    is_good = no
+    selectable_mission = no
+    days_mission_timeout = 200
+    timeout_effect = {
+      country_event = arabia.41
+    }
+  }
+  ARB_construct_pipe_al_hasa = {
+    icon = GFX_decision_generic_cement_mixer
+    days_remove = 60
+    fire_only_once = yes
+    state_target = yes
+    target_trigger = { 
+      FROM = { state = 744 }
+    }
+    available = { has_full_control_of_state = FROM }
+    visible = { has_completed_focus = ARB_transarabian_pipeline }
+    remove_effect = {
+      set_country_flag = ARB_constructed_pipe_at_al_hasa
+      FROM = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+  ARB_construct_pipe_nejd = {
+    icon = GFX_decision_generic_cement_mixer
+    days_remove = 60
+    fire_only_once = yes
+    state_target = yes
+    target_trigger = { 
+      FROM = { state = 292 }
+    }
+    available = { 
+      has_full_control_of_state = FROM
+      has_country_flag = ARB_constructed_pipe_at_al_hasa
+    }
+    visible = { has_country_flag = ARB_constructed_pipe_at_al_hasa }
+    remove_effect = {
+      set_country_flag = ARB_constructed_pipe_at_nejd
+      FROM = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+  ARB_construct_pipe_qassim = {
+    icon = GFX_decision_generic_cement_mixer
+    days_remove = 60
+    fire_only_once = yes
+    state_target = yes
+    target_trigger = { 
+      FROM = { state = 1032 }
+    }
+    available = { 
+      has_full_control_of_state = FROM
+      has_country_flag = ARB_constructed_pipe_at_nejd
+    }
+    visible = { has_country_flag = ARB_constructed_pipe_at_nejd }
+    remove_effect = {
+      set_country_flag = ARB_constructed_pipe_at_qassim
+      FROM = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+  ARB_construct_pipe_hejaz = {
+    icon = GFX_decision_generic_cement_mixer
+    days_remove = 60
+    fire_only_once = yes
+    state_target = yes
+    target_trigger = { 
+      FROM = { state = 1031 }
+    }
+    available = { 
+      has_full_control_of_state = FROM
+      has_country_flag = ARB_constructed_pipe_at_qassim
+    }
+    visible = { has_country_flag = ARB_constructed_pipe_at_qassim }
+    remove_effect = {
+      set_country_flag = ARB_constructed_pipe_at_hejaz
+      FROM = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+  ARB_construct_pipe_mecca = {
+    icon = GFX_decision_generic_cement_mixer
+    days_remove = 60
+    fire_only_once = yes
+    state_target = yes
+    target_trigger = { 
+      FROM = { state = 679 }
+    }
+    available = { 
+      has_full_control_of_state = FROM
+      has_country_flag = ARB_constructed_pipe_at_hejaz
+    }
+    visible = { has_country_flag = ARB_constructed_pipe_at_qassim }
+    remove_effect = {
+      set_country_flag = ARB_constructed_pipe_at_mecca
+      FROM = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+  ARB_expand_market = {
+    #visible = { has_completed_focus = ARB_expansion_of_market }
+    cost = 20
+    icon = GFX_decision_generic_tank
+    fire_only_once = yes
+    war_with_target_on_remove = yes
+    target_trigger = {
+      FROM = {
+        OR = {
+          tag = IRQ
+          tag = YEM
+          tag = PER
+          tag = EGY
+        }
+      }
+    }
+    available = {
+      can_declare_war_on = FROM
+      is_neighbor_of = FROM
+    }
+    visible = {
+      #has_completed_focus = ARB_expansion_of_markets
+    }
+    remove_effect = {
+      declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+    }
+  }
+}

@@ -1293,3 +1293,153 @@ country_event = { # 1945 General Elections
     }
   }
 }
+
+country_event = { # British Mandate Taken Control
+  id = arabia.40
+  title = arabia.40.t
+  desc = arabia.40.d
+  picture = GFX_report_event_ARB_british_mandate
+  is_triggered_only = yes
+
+  trigger = {
+    tag = ARB
+    NOT = { 
+      has_completed_focus = ARB_nationalize_the_british_oil_companies 
+    }
+  }
+
+  option = { # God Save the King!
+    name = arabia.40.a
+    hidden_effect = {
+      set_party_name = {
+        ideology = market_liberal
+        name = ARB_mandate_party
+        long_name = ARB_mandate_party_long
+      }
+      every_enemy_country = {
+        limit = {
+          is_in_faction_with = ENG
+        }
+        white_peace = ROOT
+      }
+      if = {
+        limit = {
+          ENG = { is_faction_leader = yes }
+        }
+        ENG = {
+          add_to_faction = ROOT
+        }
+      }
+      else_if = {
+        limit = {
+          FRA = {
+            is_in_faction_with = ENG
+            is_faction_leader = yes
+          }
+        }
+        FRA = {
+          add_to_faction = ROOT
+        }
+      }
+    }
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = no
+    }
+    add_stability = -0.15
+    add_ideas = ARB_arab_resistance
+    activate_mission_tooltip = ARB_cement_our_authority
+    increase_ruling_party_popularity_by_15 = yes
+    remove_every_minister = yes
+    set_country_flag = ARB_british_mandate_flag
+    mark_focus_tree_layout_dirty = yes
+  }
+}
+
+country_event = { # Arab Counter-Coup!
+  id = arabia.41
+  title = arabia.41.t
+  desc = arabia.41.d
+  picture = GFX_report_event_ARB_troops
+  is_triggered_only = yes
+
+  option = { # Cast them out!
+    name = arabia.41.a
+    clr_country_flag = ARB_british_mandate_flag
+    
+    mark_focus_tree_layout_dirty = yes
+    add_popularity = {
+      ideology = market_liberal
+      popularity = -0.15
+    }
+    set_temp_variable = { british_control_temp = 40 }
+    ARB_decrease_british_control = yes
+    set_party_name = {
+      ideology = market_liberal
+      name = ARB_liberal_party
+      long_name = ARB_liberal_party_long
+    }
+    set_politics = {
+      ruling_party = authoritarian_democrat
+      elections_allowed = no
+    }
+    increase_ruling_party_popularity_by_20 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      ARB_Hamad_bin_Jazi_al_Hawaita_hog_ade
+      ARB_Sabah_al_Salem_al_Sabah_for_ade
+      ARB_Sulaiman_S_Olayan_eco_ade
+      ARB_Salem_Al_Mubarak_Al_Sabah_sec_ade
+    }
+    hidden_effect = {
+      if = {
+        limit = { is_in_faction_with = ENG }
+        leave_faction = yes
+      }
+      remove_ideas = {
+        ARB_arab_resistance
+        ARB_arab_resistance_1
+        ARB_arab_resistance_2
+      }
+      ARB_Ronald_Forbes_Adam = {
+        remove_unit_leader_role = yes
+      }
+      ARB_Clement_Armitage = {
+        remove_unit_leader_role = yes
+      }
+      ARB_Herbert_Lumsdon = {
+        remove_unit_leader_role = yes
+      }
+      ARB_Zeid_bin_Hussein_al_Hashmid = {
+        add_field_marshal_role = {
+          traits = { politically_connected }
+          skill = 1
+          attack_skill = 2
+          defense_skill = 1
+          planning_skill = 3
+          logistics_skill = 2
+        }
+      }
+      ARB_Abdul_Qadir_Pasha_el_Jundi = {
+        add_corps_commander_role = {
+          traits = { infantry_expert infantry_officer infantry_leader }
+          skill = 3
+          attack_skill = 2
+          defense_skill = 2
+          planning_skill = 3
+          logistics_skill = 3
+        }
+      }
+    }
+    ARB_Ghazi_bin_Faisal_al_Hashmid = {
+      add_corps_commander_role = {
+        traits = { politically_connected }
+        skill = 1
+        attack_skill = 1
+        defense_skill = 1
+        planning_skill = 1
+        logistics_skill = 1
+      }
+    }
+  }
+}
