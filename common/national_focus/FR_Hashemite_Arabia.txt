@@ -1517,4 +1517,233 @@ focus_tree = {
       }
     }
   }
+
+  ###############################################
+  ###############################################
+  ###############################################
+
+  focus = {
+    id = ARB_rise_of_free_market
+    icon = GFX_goal_ideology_market_liberal
+    x = 29
+    y = 0
+    cost = 0
+    allow_branch = {
+      has_country_flag = ARB_british_mandate_flag
+    }
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = unlocked_later
+        has_country_flag = ARB_british_mandate_flag
+      }
+    }
+    bypass = {
+      has_country_flag = ARB_british_mandate_flag
+    }
+  }
+
+  focus = {
+    id = ARB_rapid_industrialization
+    icon = GFX_goal_generic_construct_civ_factory
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_rise_of_free_market }
+    relative_position_id = ARB_rise_of_free_market
+  }
+
+  focus = {
+    id = ARB_bribe_the_officers
+    icon = GFX_goal_bag_of_money
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_rise_of_free_market }
+    relative_position_id = ARB_rise_of_free_market
+    completion_reward = {
+      ARB_Zeid_bin_Hussein_al_Hashmid = {
+        remove_unit_leader_role = yes
+      }
+      ARB_Ghazi_bin_Faisal_al_Hashmid = {
+        remove_unit_leader_role = yes
+      }
+      ARB_Abdul_Qadir_Pasha_el_Jundi = {
+        remove_unit_leader_role = yes
+      }
+      ARB_Ronald_Forbes_Adam = {
+        add_field_marshal_role = {
+          traits = {
+            organizer
+            thorough_planner
+            infantry_leader
+            infantry_expert
+            old_guard
+          }
+          skill = 3
+          attack_skill = 2
+          defense_skill = 2
+          planning_skill = 4
+          logistics_skill = 2
+        }
+      }
+      ARB_Clement_Armitage = {
+        add_corps_commander_role = {
+          traits = {
+            infantry_leader
+            artillery_officer
+          }
+          skill = 2
+          attack_skill = 2
+          defense_skill = 1
+          planning_skill = 2
+          logistics_skill = 2
+        }
+      }
+      ARB_Herbert_Lumsdon = {
+        add_corps_commander_role = {
+          traits = {
+            cavalry_officer
+            artillery_officer
+          }
+          skill = 2
+          attack_skill = 3
+          defense_skill = 1
+          planning_skill = 1
+          logistics_skill = 2
+        }
+      }
+    }
+  }
+
+  focus = {
+    id = ARB_build_up_irrigation_schemes
+    icon = GFX_goal_dam
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_rise_of_free_market }
+    relative_position_id = ARB_rise_of_free_market
+    completion_reward = {
+      add_ideas = ARB_irrigation
+    }
+  }
+
+  focus = {
+    id = ARB_expand_oil_fields
+    icon = GFX_goal_generic_oil_refinery
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_build_up_irrigation_schemes }
+    relative_position_id = ARB_build_up_irrigation_schemes
+    completion_reward = {
+      add_resource = {
+        type = oil
+        amount = 8
+        state = 744
+      }
+      add_resource = {
+        type = oil
+        amount = 8
+        state = 292
+      }
+    }
+  }
+
+  focus = {
+    id = ARB_transarabian_pipeline
+    icon = GFX_goal_generic_pipeline
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_build_up_irrigation_schemes }
+    prerequisite = { focus = ARB_rapid_industrialization }
+    relative_position_id = ARB_build_up_irrigation_schemes
+    completion_reward = {
+      custom_effect_tooltip = ARB_transarabian_pipeline_tt
+    }
+  }
+
+  focus = {
+    id = ARB_invest_in_science
+    icon = GFX_focus_research
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_expand_oil_fields }
+    prerequisite = { focus = ARB_transarabian_pipeline }
+    relative_position_id = ARB_expand_oil_fields
+    completion_reward = {
+      add_research_slot = 1
+    }
+  }
+
+  focus = {
+    id = ARB_demand_royal_support
+    icon = GFX_focus_rom_royal_dictatorship
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_bribe_the_officers }
+    relative_position_id = ARB_bribe_the_officers
+    completion_reward = {
+      ARB_decrease_resistance = yes
+    }
+  }
+
+  focus = {
+    id = ARB_suppress_arabs
+    icon = GFX_goal_generic_police_state
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_bribe_the_officers }
+    relative_position_id = ARB_bribe_the_officers
+    completion_reward = {
+      ARB_decrease_resistance = yes
+    }
+  }
+
+  focus = {
+    id = ARB_silence_the_traditionalists
+    icon = GFX_goal_generic_oppression
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_demand_royal_support }
+    relative_position_id = ARB_demand_royal_support
+    completion_reward = {
+      add_stability = 0.15
+      add_political_power = 100
+    }
+  }
+
+  focus = {
+    id = ARB_eradicate_radicals
+    icon = GFX_goal_step_on_skull
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_demand_royal_support }
+    prerequisite = { focus = ARB_suppress_arabs }
+    relative_position_id = ARB_demand_royal_support
+    completion_reward = {
+      ARB_decrease_resistance = yes
+    }
+  }
+
+  focus = {
+    id = ARB_expansion_of_market
+    icon = GFX_goal_factory_complex
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = ARB_eradicate_radicals }
+    prerequisite = { focus = ARB_invest_in_science }
+    prerequisite = { focus = ARB_silence_the_traditionalists }
+    relative_position_id = ARB_silence_the_traditionalists
+    completion_reward = {
+      custom_effect_tooltip = ARB_expansion_of_markets_tt
+    }
+  }
 }

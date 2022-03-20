@@ -6,6 +6,19 @@ ARB_set_british_effects = {
   multiply_variable = { var = ENG_effect_construction value = 0.003 }
   set_variable = { ENG_effect_extraction = british_control }
   multiply_variable = { var = ENG_effect_extraction value = 0.003 }
+
+  if = {
+    limit = {
+      check_variable = {
+        var = british_control
+        value = 80
+        compare = greater_than_or_equals
+      }
+    }
+    ROOT = {
+      country_event = { id = arabia.40 days = 60 }
+    }
+  }
 }
 
 ARB_increase_british_control = {
@@ -57,5 +70,26 @@ ARB_decrease_depression = {
     }
     custom_effect_tooltip = ARB_decrease_depression_tt
     remove_ideas = ARB_black_wednesday_2
+  }
+}
+
+ARB_decrease_resistance = {
+  if = {
+    limit = { has_idea = ARB_arab_resistance }
+    swap_ideas = {
+      remove_idea = ARB_arab_resistance
+      add_idea = ARB_arab_resistance_1
+    }
+  }
+  else_if = {
+    limit = { has_idea = ARB_arab_resistance_1 }
+    swap_ideas = {
+      remove_idea = ARB_arab_resistance_1
+      add_idea = ARB_arab_resistance_2
+    }
+  }
+  else_if = {
+    limit = { has_idea = ARB_arab_resistance_2 }
+    remove_idea = ARB_arab_resistance_2
   }
 }
