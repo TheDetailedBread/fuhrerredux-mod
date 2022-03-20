@@ -439,6 +439,9 @@ ARB_british_mandate = {
     timeout_effect = {
       country_event = arabia.41
     }
+    complete_effect = {
+      country_event = { id = arabia.42 days = 140 }
+    }
   }
   ARB_construct_pipe_al_hasa = {
     icon = GFX_decision_generic_cement_mixer
@@ -588,7 +591,6 @@ ARB_british_mandate = {
     }
   }
   ARB_expand_market = {
-    #visible = { has_completed_focus = ARB_expansion_of_market }
     cost = 20
     icon = GFX_decision_generic_tank
     fire_only_once = yes
@@ -608,7 +610,7 @@ ARB_british_mandate = {
       is_neighbor_of = FROM
     }
     visible = {
-      #has_completed_focus = ARB_expansion_of_markets
+      has_completed_focus = ARB_expansion_of_markets
     }
     remove_effect = {
       declare_war_on = {
