@@ -38,3 +38,19 @@ defined_text = {
     localization_key = ARB_british_influence_low
   }
 }
+
+defined_text = {
+  name = ARB_escape_loc
+  text = {
+    trigger = {
+      IRQ = {
+        exists = yes
+        NOT = { is_subject_of = ENG }
+      }
+    }
+    localization_key = ARB_mesopotamia
+  }
+  text = {
+    localization_key = ARB_persia
+  }
+}
