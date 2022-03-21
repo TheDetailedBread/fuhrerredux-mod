@@ -28,6 +28,7 @@ can_release_cruzoob = {
   state = 474
   NOT = { is_claimed_by = ROOT }
   ROOT = {
+    should_release_mexico_first = yes
     NOT = {
       has_country_flag = CRU_CONQ
       country_exists = CRU
@@ -125,6 +126,7 @@ can_release_mexico = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     NOT = {
+      tag = CRU
       has_country_flag = MEX_CONQ
       country_exists = MEX
     }
