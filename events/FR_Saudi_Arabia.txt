@@ -1,0 +1,42 @@
+add_namespace = saudi
+
+country_event = { # Intro
+  id = saudi.0
+  title = saudi.0.t
+  desc = saudi.0.d
+  picture = GFX_report_event_SAU_riding_horse
+  is_triggered_only = yes
+
+  option = {
+    name = saudi.0.a
+  }
+}
+
+country_event = { 
+  id = saudi.1
+  hidden = yes
+  is_triggered_only = yes
+
+  option = { # 
+    SAU = { country_event = saudi.2 }
+  }
+}
+
+country_event = { # Defeat of FROM
+  id = saudi.2
+  title = saudi.2.t
+  desc = saudi.2.d
+  picture = GFX_report_event_SAU_riding_horse
+  is_triggered_only = yes
+
+  option = {
+    name = saudi.2.a
+    if = {
+      limit = {
+        NOT = { country_exists = ARB }
+        NOT = { country_exists = RAS }
+      }
+      set_country_flag = SAU_civil_war_end
+    }
+  }
+}

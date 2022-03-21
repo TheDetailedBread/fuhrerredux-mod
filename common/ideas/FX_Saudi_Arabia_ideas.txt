@@ -14,5 +14,29 @@ ideas = {
         army_core_defence_factor = 0.05
       }
     }
+    SAU_industry_funding = {
+      allowed = { original_tag = SAU }
+      picture = generic_foreign_capital
+      modifier = {
+        production_speed_buildings_factor = 0.15
+      }
+    }
+    SAU_foreign_economic_advisors = {
+      allowed = { original_tag = SAU }
+      picture = generic_political_support
+      modifier = {
+        production_factory_max_efficiency_factor = 0.15
+        industrial_capacity_factory = 0.15
+        industrial_capacity_dockyard = 0.15
+      }
+    }
+    SAU_wheat_imports_idea = {
+      allowed = { original_tag = SAU }
+      picture = generic_agrarian_reform
+      modifier = {
+        monthly_population = 0.45
+        out_of_supply_factor = -0.15
+      }
+    }
   }
 }
