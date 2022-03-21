@@ -342,6 +342,9 @@ country_event = { # Nejd Revolts!
   option = { # Play as Saudis
     name = arabia.13.b
     trigger = { is_ai = no }
+    hidden_effect = {
+      country_event = { id = arabia.14 days = 2 }
+    }
     SAU = {
       change_tag_from = ROOT
     }

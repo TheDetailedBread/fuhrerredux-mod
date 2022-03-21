@@ -1,0 +1,583 @@
+# Saudi National Focus
+# created by: dax0102
+
+focus_tree = {
+  id = saudi_focus
+
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = SAU
+    }
+  }
+  default = no
+  continuous_focus_position = { x = 300 y = 900 }
+
+  focus = {
+    id = SAU_new_state
+    icon = GFX_goal_liberty
+    x = 12
+    y = 0
+    cost = 6
+    completion_reward = {
+      country_event = saudi.0
+    }
+  }
+
+  focus = {
+    id = SAU_building_economy
+    icon = GFX_goal_workers_for_business
+    x = -8
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_new_state }
+    relative_position_id = SAU_new_state
+    completion_reward = {
+      add_timed_idea = {
+        idea = SAU_industry_funding
+        days = 480
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_house_of_learning
+    icon = GFX_goal_KTG_Bookstack
+    x = -3
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_building_economy }
+    relative_position_id = SAU_building_economy
+    completion_reward = {
+      add_research_slot = 1
+    }
+  }
+
+  focus = {
+    id = SAU_seize_british_assets
+    icon = GFX_goal_generic_seize_investments
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      has_capitulated = no
+    }
+    prerequisite = { focus = SAU_building_economy }
+    relative_position_id = SAU_building_economy
+    completion_reward = {
+      292 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      744 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_find_oil_traders
+    icon = GFX_goal_generic_trade
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_building_economy }
+    relative_position_id = SAU_building_economy
+  }
+
+  focus = {
+    id = SAU_construct_railway
+    icon = GFX_goal_OTT_Railroad
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      has_capitulated = no
+      has_full_control_of_state = 292
+      has_full_control_of_state = 744
+    }
+    prerequisite = { focus = SAU_seize_british_assets }
+    relative_position_id = SAU_seize_british_assets
+    completion_reward = {
+      292 = {
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
+      744 = {
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_invite_advisors
+    icon = GFX_goal_Centralised_Government
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      has_capitulated = no
+    }
+    prerequisite = { focus = SAU_seize_british_assets }
+    prerequisite = { focus = SAU_find_oil_traders }
+    relative_position_id = SAU_seize_british_assets
+    completion_reward = {
+      add_ideas = SAU_foreign_economic_advisors
+    }
+  }
+
+  focus = {
+    id = SAU_oil_expansion
+    icon = GFX_goal_generic_oil_refinery
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      has_capitulated = no
+      has_full_control_of_state = 744
+    }
+    prerequisite = { focus = SAU_construct_railway }
+    relative_position_id = SAU_construct_railway
+    completion_reward = {
+      add_resource = {
+        type = oil
+        amount = 8
+        state = 744
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_fund_farming
+    icon = GFX_goal_OTT_Land_Reform
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      has_capitulated = no
+      has_full_control_of_state = 292
+      has_full_control_of_state = 744
+    }
+    prerequisite = { focus = SAU_construct_railway }
+    relative_position_id = SAU_construct_railway
+    completion_reward = {
+      292 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+      }
+      744 = {
+        limit = {
+          free_building_slots = {
+            building = industrial_complex
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_wheat_imports
+    icon = GFX_focus_AUS_agriculture
+    x = 0
+    y = 2
+    cost = 6
+    available = {
+      has_capitulated = no
+    }
+    prerequisite = { focus = SAU_find_oil_traders }
+    relative_position_id = SAU_find_oil_traders
+    completion_reward = {
+      add_ideas = SAU_wheat_imports_idea
+    }
+  }
+
+  focus = {
+    id = SAU_import_tools
+    icon = GFX_goal_generic_improve_industry
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_fund_farming }
+    prerequisite = { focus = SAU_wheat_imports }
+    prerequisite = { focus = SAU_oil_expansion }
+    relative_position_id = SAU_fund_farming
+    completion_reward = {
+      add_tech_bonus = {
+        category = industry
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_warriors_desert
+    icon = GFX_goal_SAU_army
+    x = -5
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_new_state }
+    relative_position_id = SAU_new_state
+    completion_reward = {
+      army_experience = 25
+    }
+  }
+
+  focus = {
+    id = SAU_invite_french_weaponry
+    icon = GFX_focus_chi_reach_out_to_france
+    x = 2
+    y = 2
+    cost = 6
+    available = {
+      has_capitulated = no
+      has_full_control_of_state = 292
+    }
+    prerequisite = { 
+      focus = SAU_building_economy
+      focus = SAU_warriors_desert
+    }
+    relative_position_id = SAU_building_economy
+    completion_reward = {
+      292 = {
+        limit = {
+          free_building_slots = {
+            building = arms_factory
+            size > 0
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_command_modernize
+    icon = GFX_goal_generic_army_high_command
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_warriors_desert }
+    relative_position_id = SAU_warriors_desert
+  }
+
+  focus = {
+    id = SAU_recruitment_drive
+    icon = GFX_goal_conspiracy
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_warriors_desert }
+    relative_position_id = SAU_warriors_desert
+    completion_reward = {
+      add_manpower = 50000
+    }
+  }
+
+  focus = {
+    id = SAU_arabian_horses
+    icon = GFX_goal_generic_cavalry
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_command_modernize }
+    prerequisite = { focus = SAU_recruitment_drive }
+    relative_position_id = SAU_command_modernize
+  }
+  
+  focus = {
+    id = SAU_desert_logistics
+    icon = GFX_goal_EGY_Pyramids
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_recruitment_drive }
+    relative_position_id = SAU_recruitment_drive
+  }
+
+  focus = {
+    id = SAU_found_mechanized
+    icon = GFX_goal_generic_army_motorized
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = SAU_command_modernize }
+    prerequisite = { focus = SAU_invite_french_weaponry }
+    relative_position_id = SAU_command_modernize
+  }
+
+  focus = {
+    id = SAU_air_force
+    icon = GFX_goal_SAU_airforce
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_arabian_horses }
+    prerequisite = { focus = SAU_desert_logistics }
+    relative_position_id = SAU_arabian_horses
+    completion_reward = {
+      air_experience = 25
+    }
+  }
+
+  focus = {
+    id = SAU_new_army
+    icon = GFX_goal_army_guy_2
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_found_mechanized }
+    prerequisite = { focus = SAU_air_force }
+    relative_position_id = SAU_found_mechanized
+  }
+
+  focus = {
+    id = SAU_warriors_sea
+    icon = GFX_goal_SAU_navy
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_new_state }
+    relative_position_id = SAU_new_state
+    completion_reward = {
+      navy_experience = 25
+    }
+  }
+
+  focus = {
+    id = SAU_purchase_destroyers
+    icon = GFX_goal_generic_coastal_navy2
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_warriors_sea }
+    relative_position_id = SAU_warriors_sea
+  }
+
+  focus = {
+    id = SAU_dammam_naval_base
+    icon = GFX_goal_generic_shipyard
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_warriors_sea }
+    relative_position_id = SAU_warriors_sea
+  }
+
+  focus = {
+    id = SAU_naval_exercises
+    icon = GFX_goal_generic_navy_doctrines_tactics
+    x = 0
+    y = 3
+    cost = 6
+    prerequisite = { focus = SAU_purchase_destroyers }
+    prerequisite = { focus = SAU_recruitment_drive }
+    relative_position_id = SAU_purchase_destroyers
+  }
+
+  ###############################################
+  ###############################################
+  ###############################################
+
+  focus = {
+    id = SAU_saudi_dominance
+    icon = GFX_goal_SAU_new_state
+    x = 4
+    y = 1
+    cost = 6
+    available = {
+      has_country_flag = SAU_civil_war_end
+    }
+    prerequisite = { focus = SAU_new_state }
+    relative_position_id = SAU_new_state
+  }
+
+  focus = {
+    id = SAU_fruits_loyalty
+    icon = GFX_goal_OTT_caliph
+    x = -1
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = SAU_elimate_threats
+    }
+    prerequisite = { focus = SAU_saudi_dominance }
+    relative_position_id = SAU_saudi_dominance
+  }
+
+  focus = {
+    id = SAU_elimate_threats
+    icon = GFX_goal_backstab
+    x = 1
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = SAU_fruits_loyalty
+    }
+    prerequisite = { focus = SAU_saudi_dominance }
+    relative_position_id = SAU_saudi_dominance
+  }
+
+  focus = {
+    id = SAU_absorb_ikhwan
+    icon = GFX_goal_offensive_army
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_fruits_loyalty }
+    relative_position_id = SAU_fruits_loyalty
+  }
+
+  focus = {
+    id = SAU_houses_of_wisdom
+    icon = GFX_goal_great_science
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_absorb_ikhwan }
+    relative_position_id = SAU_absorb_ikhwan
+  }
+
+  focus = {
+    id = SAU_new_modern_cities
+    icon = GFX_focus_generic_the_giant_wakes
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_absorb_ikhwan }
+    relative_position_id = SAU_absorb_ikhwan
+  }
+
+  focus = {
+    id = SAU_crush_ikhwan
+    icon = GFX_goal_purge_the_Ikhwan
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_elimate_threats }
+    relative_position_id = SAU_elimate_threats
+  }
+
+  focus = {
+    id = SAU_kuffar_weaponry
+    icon = GFX_goal_generic_construct_mil_factory
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_crush_ikhwan }
+    relative_position_id = SAU_crush_ikhwan
+  }
+
+  focus = {
+    id = SAU_impose_jizya
+    icon = GFX_DAH_Topke
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_crush_ikhwan }
+    relative_position_id = SAU_crush_ikhwan
+  }
+
+  focus = {
+    id = SAU_purge_rashidis
+    icon = GFX_goal_purge_opposition
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = SAU_fruits_loyalty
+      focus = SAU_elimate_threats
+    }
+    relative_position_id = SAU_fruits_loyalty
+  }
+
+  focus = {
+    id = SAU_hunt_hashemites
+    icon = GFX_goal_flames_of_rebellion
+    x = 0 
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = SAU_fruits_loyalty
+      focus = SAU_elimate_threats
+    }
+    relative_position_id = SAU_elimate_threats
+  }
+
+  focus = {
+    id = SAU_unify_arabia
+    icon = GFX_focus_generic_home_defense
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = SAU_purge_rashidis
+      focus = SAU_hunt_hashemites
+    }
+    relative_position_id = SAU_purge_rashidis
+  }
+
+  focus = {
+    id = SAU_leader_of_faith
+    icon = GFX_goal_islamic_government
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = SAU_houses_of_wisdom
+      focus = SAU_impose_jizya
+      focus = SAU_new_modern_cities
+      focus = SAU_kuffar_weaponry
+    }
+    prerequisite = {
+      focus = SAU_unify_arabia
+    }
+    relative_position_id = SAU_unify_arabia
+  }
+}

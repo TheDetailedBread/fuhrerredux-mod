@@ -28,6 +28,22 @@ on_actions = {
         }
       }
 
+      # if Saudi annexed Hashemite/Rashid
+      if = {
+        limit = {
+          FROM = {
+            OR = {
+              tag = ARB
+              tag = RAS
+            }
+          }
+          ROOT = { tag = SAU }
+        }
+        FROM = {
+          country_event = saudi.1
+        }
+      }
+
       # if Rashid annexed Hashemite/Saudi
       if = {
         limit = {
