@@ -100,6 +100,7 @@ country_event = { # British Archeologists Arrives
   id = arabia.3
   title = arabia.3.t
   desc = arabia.3.d
+  picture = GFX_report_event_physics_lab_01
   is_triggered_only = yes
 
   option = { # I hope they find something!
@@ -575,6 +576,10 @@ country_event = { # Hajj
   desc = arabia.20.d
   picture = GFX_report_event_ARB_troops
   is_triggered_only = yes
+
+  trigger = {
+    owns_state = 679
+  }
 
   option = {
     name = arabia.20.a

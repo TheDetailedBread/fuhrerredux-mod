@@ -289,29 +289,7 @@ characters = {
 			}
 		}
 	}
-	ARB_Auda_Abu_Tayi = {
-		name = "Auda Abu Tayi"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/ARB/ARB_Auda_Abu_Tayi.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = {
-				hidden_trigger = { has_country_flag = ARB_Auda_Abu_Tayi_hog_npo_hired }
-			}			
-			idea_token = ARB_Auda_Abu_Tayi_hog_npo
-			on_add = { set_country_flag = ARB_Auda_Abu_Tayi_hog_npo_hired }
-			on_remove = { clr_country_flag = ARB_Auda_Abu_Tayi_hog_npo_hired }
-			traits = {
-				head_of_government
-				national_populist
-				hog_political_protege
-			}
-		}
-	}
+	
 	ARB_Mohammed_Ahmad_Al_Jaber_Al_Sabah = {
 		name = "Mohammed Ahmad Al-Jaber Al-Sabah"
 		portraits = {

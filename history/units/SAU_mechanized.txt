@@ -1,4 +1,4 @@
-﻿division_template = {
+division_template = {
 	name = "Motorized-Division"
 
 	regiments = {
@@ -19,5 +19,22 @@
 		anti_tank = { x = 0 y = 2 }
 		signal_company = { x = 0 y = 3 }
 		logistics_company = { x = 0 y = 4 }
+	}
+}
+
+units = {
+  division= {	
+		name = "1. Motorized-Division"
+		location = 12727
+		division_template = "Motorized-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.95
+	}
+	division= {	
+		name = "2. Motorized-Division"
+		location = 12727
+		division_template = "Motorized-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.95
 	}
 }
