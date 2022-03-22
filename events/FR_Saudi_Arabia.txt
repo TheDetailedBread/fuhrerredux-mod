@@ -342,3 +342,54 @@ country_event = { # ENG: Saudi Snatches the Trucial States!
     decrease_ruling_party_popularity_by_5 = yes
   }
 }
+
+country_event = { # ENG: Rebellion in Oman!
+  id = saudi.18
+  title = saudi.18.t
+  desc = saudi.18.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      SAU = {
+        country_event = saudi.19
+      }
+      OMA = {
+        transfer_state = 294
+        load_oob = "OMA"
+      }
+      ENG = {
+        declare_war_on = {
+          target = OMA
+          type = annex_everything
+        }
+        set_province_controller = 8020
+        set_province_controller = 5049
+        set_province_controller = 1947
+        set_province_controller = 8002
+        set_province_controller = 2059
+        set_province_controller = 2103
+      }
+    }
+  }
+
+  option = {
+    name = saudi.18.a
+    activate_mission_tooltip = SAU_punish_muscat
+    set_country_flag = SAU_punish_muscat_flag
+  }
+}
+
+country_event = { # Rebellion in Oman!
+  id = saudi.19
+  title = saudi.19.t
+  desc = saudi.19.d
+  picture = GFX_report_event_ARB_ministers
+  is_triggered_only = yes
+
+  option = {
+    name = saudi.19.a
+    set_country_flag = SAU_punish_muscat_flag
+  }
+}

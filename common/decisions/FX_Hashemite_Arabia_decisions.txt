@@ -1,4 +1,4 @@
-war_measures = {
+foreign_politics = {
   ARB_punish_idris = {
     allowed = { original_tag = ITA }
     icon = GFX_decision_generic_ignite_civil_war
@@ -22,10 +22,12 @@ war_measures = {
     }
     activation = {
       has_country_flag = ARB_punish_idris_flag
+      has_war_with = ARB
     }
     target_trigger = {
       FROM = {
         tag = ARB
+        has_war_with = ROOT
       }
     }
     visible = {
@@ -71,10 +73,12 @@ war_measures = {
     }
     activation = {
       has_country_flag = ARB_protect_jerusalem_flag
+      has_war_with = ARB
     }
     target_trigger = {
-      FROM = {
-        tag = ARB
+      FROM = { 
+        tag = ARB 
+        has_war_with = ROOT
       }
     }
     visible = {
@@ -121,6 +125,7 @@ war_measures = {
     target_trigger = {
       FROM = {
         tag = ARB
+        has_war_with = ROOT
       }
     }
     visible = {
