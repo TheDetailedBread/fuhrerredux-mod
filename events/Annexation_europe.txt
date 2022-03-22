@@ -1116,7 +1116,7 @@ country_event = { # Fate of Great Britain
     set_temp_variable = { tag_to_release = EGL }
     release_targeted_tag = yes
     EGL = {
-      else_if = {
+      if = {
         limit = {
           ROOT = {
             tag = GER
