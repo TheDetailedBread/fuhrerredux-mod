@@ -1,3 +1,104 @@
+war_measures = {
+  ARB_protect_jerusalem = {
+    allowed = { original_tag = ENG }
+    icon = GFX_decision_generic_ignite_civil_war
+    fire_only_once = yes
+    days_mission_timeout = 160
+    selectable_mission = no
+    is_good = no
+    available = {
+      ISR = {
+        has_capitulated = no
+      }
+      custom_trigger_tooltip = {
+        tooltip = SAU_protect_jerusalem_tt
+        any_of = {
+          array = SAU.core_states
+          var:v = {
+            controller = {
+              tag = ROOT
+            }
+          }
+        }
+      }
+    }
+    activation = {
+      has_country_flag = SAU_protect_jerusalem_flag
+    }
+    target_trigger = {
+      FROM = {
+        tag = SAU
+      }
+    }
+    visible = {
+      country_exists = FROM
+      has_war_with = FROM
+    }
+    timeout_effect = {
+      white_peace = SAU
+      every_enemy_country = {
+        limit = {
+          is_in_faction_with = SAU
+        }
+        white_peace = ROOT
+      }
+      clr_country_flag = SAU_protect_jerusalem_flag
+    }
+    complete_effect = {
+      clr_country_flag = SAU_protect_jerusalem_flag
+    }
+  }
+  SAU_reclaim_trucial_states = {
+    allowed = { original_tag = ENG }
+    icon = GFX_decision_generic_ignite_civil_war
+    fire_only_once = yes
+    days_mission_timeout = 230
+    selectable_mission = no
+    is_good = no
+    available = {
+      OR = {
+        SAU = { has_capitulated = yes }
+        custom_trigger_tooltip = {
+          tooltip = SAU_reclaim_trucial_states_tt
+          any_of = {
+            array = SAU.core_states
+            var:v = {
+              controller = {
+                tag = ROOT
+              }
+            }
+          }
+        }
+      }
+    }
+    activation = {
+      has_country_flag = SAU_reclaim_trucial_states_flag
+    }
+    target_trigger = {
+      FROM = {
+        tag = SAU
+      }
+    }
+    visible = {
+      country_exists = FROM
+      has_war_with = FROM
+    }
+    timeout_effect = {
+      white_peace = SAU
+      every_enemy_country = {
+        limit = {
+          is_in_faction_with = SAU
+        }
+        white_peace = ROOT
+      }
+      clr_country_flag = SAU_reclaim_trucial_states_flag
+    }
+    complete_effect = {
+      clr_country_flag = SAU_reclaim_trucial_states_flag
+    }
+  }
+}
+
 SAU_war_of_arabian_reunification = {
   SAU_integrate_jabal_shammar = { 
     icon = GFX_decision_generic_form_nation

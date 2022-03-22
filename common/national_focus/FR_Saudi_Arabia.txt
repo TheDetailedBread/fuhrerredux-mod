@@ -301,6 +301,8 @@ focus_tree = {
           instant_build = yes
         }
       }
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = manufacture_saint_etienne_riyadh
     }
   }
 
@@ -521,6 +523,10 @@ focus_tree = {
     }
     prerequisite = { focus = SAU_new_state }
     relative_position_id = SAU_new_state
+    completion_reward = {
+      remove_ideas = SAU_risen_from_ashes
+      add_political_power = 100
+    }
   }
 
   focus = {
@@ -534,6 +540,9 @@ focus_tree = {
     }
     prerequisite = { focus = SAU_saudi_dominance }
     relative_position_id = SAU_saudi_dominance
+    completion_reward = {
+      add_ideas = SAU_fruits_of_loyalty_idea
+    }
   }
 
   focus = {
@@ -553,6 +562,7 @@ focus_tree = {
         add_idea = SAU_ikhwan_resistance_idea
       }
       hidden_effect = {
+        country_event = { id = saudi.4 days = 30 }
         744 = {
           add_dynamic_modifier = {
             modifier = SAU_ikhwan_resistance
@@ -781,5 +791,298 @@ focus_tree = {
       focus = SAU_unify_arabia
     }
     relative_position_id = SAU_unify_arabia
+  }
+
+  ###############################################
+  ###############################################
+  ###############################################
+
+  focus = {
+    id = SAU_unite_arabs
+    icon = GFX_goal_SAU_unite_arabs
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      is_subject = no
+      has_capitulated = no
+      has_completed_focus = SAU_unify_arabia
+    }
+    mutually_exclusive = { focus = SAU_anti_imperialist_bulwark }
+    relative_position_id = SAU_leader_of_faith
+    completion_reward = {
+      add_opinion_modifier = {
+        target = ENG
+        modifier = SAU_aggressive
+      }
+      add_opinion_modifier = {
+        target = ISR
+        modifier = SAU_aggressive
+      }
+      add_opinion_modifier = {
+        target = EGY
+        modifier = SAU_aggressive
+      }
+      add_opinion_modifier = {
+        target = IRQ
+        modifier = SAU_aggressive
+      }
+      add_opinion_modifier = {
+        target = YEM
+        modifier = SAU_aggressive
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_anti_imperialist_bulwark
+    icon = GFX_focus_eng_decolonization
+    x = 2
+    y = 0
+    cost = 6
+    available = {
+      is_subject = no
+      has_capitulated = no
+      has_completed_focus = SAU_unify_arabia
+    }
+    mutually_exclusive = { focus = SAU_anti_imperialist_bulwark }
+    relative_position_id = SAU_unite_arabs
+    completion_reward = {
+      create_faction = dammam_accords
+    }
+  }
+
+  focus = {
+    id = SAU_demand_azir
+    icon = GFX_focus_renounce_the_treaty_of_trianon
+    x = 0
+    y = 1
+    cost = 6
+    available = {
+      YEM = {
+        exists = yes
+      }
+    }
+    bypass = {
+      has_war_with = YEM
+    }
+    prerequisite = {
+      focus = SAU_unite_arabs
+      focus = SAU_anti_imperialist_bulwark
+    }
+    relative_position_id = SAU_unite_arabs
+    completion_reward = {
+      YEM = {
+        country_event = { id = saudi.8 days = 2 }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_attack_yemen
+    icon = GFX_goal_generic_attack_yemen
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      YEM = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+        NOT = { is_in_faction_with = ROOT }
+      }
+    }
+    bypass = {
+      has_war_with = YEM
+    }
+    prerequisite = { focus = SAU_demand_azir }
+    relative_position_id = SAU_demand_azir
+    completion_reward = {
+      declare_war_on = {
+        target = YEM
+        type = annex_everything
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_invite_yemen
+    icon = GFX_goal_volunteer_alliance
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      YEM = {
+        exists = yes
+        is_in_faction = no
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    bypass = {
+      is_in_faction_with = YEM
+    }
+    prerequisite = { focus = SAU_demand_azir }
+    relative_position_id = SAU_demand_azir
+    completion_reward = {
+      YEM = {
+        country_event = { id = saudi.5 days = 2 }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_attack_iraq
+    icon = GFX_goal_generic_attack_iraq
+    x = -2
+    y = 1
+    cost = 6
+    available = {
+      IRQ = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+        NOT = { is_in_faction_with = ROOT }
+      }
+    }
+    bypass = {
+      has_war_with = IRQ
+    }
+    prerequisite = { focus = SAU_unite_arabs }
+    relative_position_id = SAU_unite_arabs
+  }
+
+  focus = {
+    id = SAU_attack_lebanon
+    icon = GFX_focus_attack_france
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      PHN = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+        NOT = { is_in_faction_with = ROOT }
+      }
+    }
+    bypass = {
+      OR = {
+        NOT = { country_exists = PHN }
+        has_war_with = PHN
+        has_war_with = FRA
+      }
+    }
+    prerequisite = { focus = SAU_attack_iraq }
+    relative_position_id = SAU_attack_iraq
+  }
+
+  focus = {
+    id = SAU_attack_israel
+    icon = GFX_goal_generic_attack_israel
+    x = 0
+    y = 2
+    cost = 6
+    available = {
+      ISR = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+        NOT = { is_in_faction_with = ROOT }
+      }
+    }
+    bypass = {
+      OR = {
+        NOT = { country_exists = ISR }
+        has_war_with = ISR
+        has_war_with = ENG
+      }
+    }
+    prerequisite = { focus = SAU_attack_iraq }
+    relative_position_id = SAU_attack_iraq
+    completion_reward = {
+      ENG = {
+        set_country_flag = SAU_protect_jerusalem_flag
+      }
+      declare_war_on = {
+        target = ISR
+        type = annex_everything
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_reconcile_iraq
+    icon = GFX_goal_SAU_approach_iraq
+    x = 0
+    y = 1
+    cost = 6
+    available = {
+      IRQ = {
+        exists = yes
+        is_in_faction = no
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    bypass = {
+      is_in_faction_with = IRQ
+    }
+    prerequisite = { focus = SAU_anti_imperialist_bulwark }
+    relative_position_id = SAU_anti_imperialist_bulwark
+    completion_reward = {
+      IRQ = {
+        country_event = { id = saudi.5 days = 2 }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_invite_egypt
+    icon = GFX_goal_SAU_approach_egypt
+    x = 2
+    y = 1
+    cost = 6
+    available = {
+      EGY = {
+        exists = yes
+        is_in_faction = no
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    bypass = {
+      is_in_faction_with = EGY
+    }
+    prerequisite = { focus = SAU_anti_imperialist_bulwark }
+    relative_position_id = SAU_anti_imperialist_bulwark
+    completion_reward = {
+      EGY = {
+        country_event = { id = saudi.5 days = 2 }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_demand_abu_dhabi
+    icon = GFX_goal_generic_attack_trucial_states
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = SAU_reconcile_iraq }
+    prerequisite = { focus = SAU_invite_egypt }
+    relative_position_id = SAU_reconcile_iraq
+    completion_reward = {
+      ENG = {
+        country_event = { id = saudi.14 days = 2 }
+      }
+    }
+  }
+
+  focus = {
+    id = SAU_provoke_oman_rebellion
+    icon = GFX_goal_LEC_monkey
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = SAU_attack_yemen
+      focus = SAU_invite_yemen
+    }
+    prerequisite = { focus = SAU_demand_abu_dhabi }
+    relative_position_id = SAU_demand_abu_dhabi
   }
 }

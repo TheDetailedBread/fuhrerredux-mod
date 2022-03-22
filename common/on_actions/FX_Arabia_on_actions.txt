@@ -8,6 +8,20 @@ on_actions = {
       }
     }
   }
+  on_state_control_changed = {
+    effect = {
+      if = {
+        limit = {
+          ROOT = { tag = SAU }
+          FROM = { tag = YEM }
+          FROM.FROM = { state = 831 }
+        }
+        ROOT = {
+          country_event = saudi.11
+        }
+      }
+    }
+  }
   # ROOT is the winner
   # FROM gets annexed
   on_annex = {
