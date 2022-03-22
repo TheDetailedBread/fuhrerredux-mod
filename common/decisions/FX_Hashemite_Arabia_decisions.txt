@@ -9,7 +9,7 @@ war_measures = {
     available = {
       LBA = { has_capitulated = yes }
       custom_trigger_tooltip = {
-        tooltip = ARB_protect_jerusalem_tt
+        tooltip = ARB_punish_idris_tt
         any_of = {
           array = ARB.core_states
           var:v = {
@@ -23,11 +23,9 @@ war_measures = {
     activation = {
       has_country_flag = ARB_punish_idris_flag
     }
-    targets = { ARB }
     target_trigger = {
       FROM = {
         tag = ARB
-        has_war_with = ROOT
       }
     }
     visible = {
@@ -35,6 +33,7 @@ war_measures = {
       has_war_with = FROM
     }
     timeout_effect = {
+      white_peace = ARB
       every_enemy_country = {
         limit = {
           is_in_faction_with = ARB
@@ -44,7 +43,7 @@ war_measures = {
       clr_country_flag = ARB_punish_idris_flag
     }
     complete_effect = {
-    clr_country_flag = ARB_punish_idris_flag
+      clr_country_flag = ARB_punish_idris_flag
     }
   }
   ARB_protect_jerusalem = {
@@ -73,11 +72,9 @@ war_measures = {
     activation = {
       has_country_flag = ARB_protect_jerusalem_flag
     }
-    targets = { ARB }
     target_trigger = {
       FROM = {
         tag = ARB
-        has_war_with = ROOT
       }
     }
     visible = {
@@ -85,6 +82,7 @@ war_measures = {
       has_war_with = FROM
     }
     timeout_effect = {
+      white_peace = ARB
       every_enemy_country = {
         limit = {
           is_in_faction_with = ARB
@@ -120,11 +118,9 @@ war_measures = {
     activation = {
       has_country_flag = ENG_punish_hashemites_flag
     }
-    targets = { ARB }
     target_trigger = {
       FROM = {
         tag = ARB
-        has_war_with = ROOT
       }
     }
     visible = {
@@ -132,6 +128,7 @@ war_measures = {
       has_war_with = FROM
     }
     timeout_effect = {
+      white_peace = ARB
       every_enemy_country = {
         limit = {
           is_in_faction_with = ARB
