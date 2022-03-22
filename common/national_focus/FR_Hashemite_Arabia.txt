@@ -606,6 +606,12 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
+      custom_trigger_tooltip = {
+        tooltip = unlocked_later
+        has_country_flag = ARB_civil_war_end
+      }
+    }
+    bypass = {
       has_country_flag = ARB_civil_war_end
     }
     prerequisite = { focus = ARB_state_of_the_kingdom }

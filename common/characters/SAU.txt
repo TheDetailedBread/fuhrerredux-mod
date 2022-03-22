@@ -31,6 +31,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/SAU/Portrait_SAU_Saud_bin_Abdulaziz_Al_Saud.png"
+        small = "gfx/interface/ministers/SAU/SAU_Saud_bin_Abdulaziz.png"
 			}
 			army = {
 				large = "gfx/leaders/SAU/Portrait_SAU_Saud_bin_Abdulaziz_Al_Saud.png"
@@ -43,6 +44,21 @@ characters = {
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
+			}			
+			idea_token = SAU_Saud_bin_Abdulaziz_hog_pau
+			on_add = { set_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
+			on_remove = { clr_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_respected_war_hero
+			}
 		}
 	}
   SAU_Rashid_bin_Abdulaziz_bin_Saud_bin_Mohammed_al_Saud = {
@@ -273,26 +289,41 @@ characters = {
 			}
 		}
 	}
-	SAU_Saud_bin_Abdulaziz = {
-		name = "Saud bin Abdulaziz"
+  SAU_Auda_Abu_Tayi = {
+		name = "Auda Abu Tayi"
 		portraits = {
 			civilian = {
-				small = "gfx/interface/ministers/SAU/SAU_Saud_bin_Abdulaziz.png"
+				small = "gfx/interface/ministers/SAU/SAU_Auda_Abu_Tayi.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
 			available = {
-				hidden_trigger = { has_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
+				hidden_trigger = { has_country_flag = SAU_Auda_Abu_Tayi_hog_npo_hired }
 			}			
-			idea_token = SAU_Saud_bin_Abdulaziz_hog_pau
-			on_add = { set_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
-			on_remove = { clr_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
+			idea_token = SAU_Auda_Abu_Tayi_hog_npo
+			on_add = { set_country_flag = SAU_Auda_Abu_Tayi_hog_npo_hired }
+			on_remove = { clr_country_flag = SAU_Auda_Abu_Tayi_hog_npo_hired }
 			traits = {
 				head_of_government
-				paternal_autocrat
-				hog_respected_war_hero
+				national_populist
+				hog_political_protege
+			}
+		}
+    advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = SAU_Auda_Abu_Tayi_eco_npo_hired }
+			}			
+			idea_token = SAU_Auda_Abu_Tayi_eco_npo
+			on_add = { set_country_flag = SAU_Auda_Abu_Tayi_eco_npo_hired }
+			on_remove = { clr_country_flag = SAU_Auda_Abu_Tayi_eco_npo_hired }
+			traits = {
+				economy_minister
+				national_populist
+				eco_mixed_economy
 			}
 		}
 	}
@@ -566,6 +597,21 @@ characters = {
 		portraits = {
 			army = {
 				small = "gfx/interface/ministers/SAU/SAU_Abdul_Aziz_bin_Faisal_al_Dawish.png"
+			}
+		}
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo_hired }
+			}			
+			idea_token = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo
+			on_add = { set_country_flag = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo_hired }
+			on_remove = { clr_country_flag = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo_hired }
+			traits = {
+				head_of_government
+				national_populist
+				hog_flamboyant_tough_guy
 			}
 		}
 		advisor = {

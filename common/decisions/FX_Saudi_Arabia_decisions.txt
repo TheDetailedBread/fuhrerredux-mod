@@ -22,6 +22,7 @@ SAU_war_of_arabian_reunification = {
         NOT = { is_core_of = ROOT }
       }
       owns_state = FROM
+      has_completed_focus = SAU_purge_rashidis
     }
     remove_effect = {
       FROM = {
@@ -54,6 +55,7 @@ SAU_war_of_arabian_reunification = {
         NOT = { is_core_of = ROOT }
       }
       owns_state = FROM
+      has_completed_focus = SAU_hunt_hashemites
     }
     remove_effect = {
       FROM = {
@@ -130,13 +132,71 @@ SAU_war_of_arabian_reunification = {
       clr_country_flag = SAU_raising_division
       FROM = {
         create_unit = {
-          division = "name = \"Hashemite Calvary\" division_template = \"Firqat Alfursan\" start_experience_factor = 1.0"
+          division = "name = \"Saudi Calvary\" division_template = \"Firqat Alfursan\" start_experience_factor = 1.0"
           owner = SAU
         }
       }
     }
     complete_effect = {
       set_country_flag = SAU_raising_division
+    }
+  }
+}
+
+SAU_dealing_with_the_ikhwan = {
+  SAU_punish_the_ikhwan = {
+    icon = GFX_decision_generic_police_action
+    is_good = no
+    days_mission_timeout = 240
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = SAU_punish_the_ikhwan_tt
+        744 = {
+          has_state_flag = SAU_free_of_ikhwan
+        }
+        946 = {
+          has_state_flag = SAU_free_of_ikhwan
+        }
+        1032 = {
+          has_state_flag = SAU_free_of_ikhwan
+        } 
+      }
+    }
+    activation = {
+      has_completed_focus = SAU_eliminate_threats
+    }
+    timeout_effect = {
+
+    }
+    complete_effect = {
+      remove_ideas = SAU_ikhwan_resistance_idea
+    }
+  }
+  SAU_conduct_operations_in_from = {
+    icon = GFX_decision_oppression
+    cost = 20
+    days_remove = 30
+    state_target = yes
+    visible = {
+      has_idea = SAU_ikhwan_resistance_idea
+      has_completed_focus = SAU_crush_ikhwan
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    target_trigger = {
+      FROM = {
+        OR = {
+          state = 744
+          state = 946
+          state = 1032
+        }
+      }
+    }
+    remove_effect = {
+      FROM = {
+        SAU_decrease_ikhwan_resistance = yes
+      }
     }
   }
 }

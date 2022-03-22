@@ -40,3 +40,31 @@ country_event = { # Defeat of FROM
     }
   }
 }
+
+country_event = { # Ikhwan Seizes Power
+  id = saudi.3
+  title = saudi.3.t
+  desc = saudi.3.d
+  picture = GFX_report_event_JBS_Horses
+  is_triggered_only = yes
+
+  option = { # 
+    name = saudi.3.a
+    set_politics = {
+      ruling_party = national_populist
+      elections_allowed = no
+    }
+    increase_ruling_party_popularity_by_25 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo
+      SAU_Dhaidan_Ben_Hethlain_for_ade
+      SAU_Auda_Abu_Tayi_eco_npo
+      SAU_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade
+    }
+    hidden_effect = {
+      set_country_flag = SAU_ikhwan_coup_flag
+      mark_focus_tree_layout_dirty = yes
+    }
+  }
+}

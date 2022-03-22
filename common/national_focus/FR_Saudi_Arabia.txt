@@ -22,6 +22,7 @@ focus_tree = {
     cost = 6
     completion_reward = {
       country_event = saudi.0
+      add_ideas = SAU_revaunchist_fervour
     }
   }
 
@@ -107,6 +108,12 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_building_economy }
     relative_position_id = SAU_building_economy
+    completion_reward = {
+      add_offsite_building = {
+        type = industrial_complex
+        level = 1
+      }
+    }
   }
 
   focus = {
@@ -305,6 +312,14 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_warriors_desert }
     relative_position_id = SAU_warriors_desert
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+				name = SAU_command_modernize
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+    }
   }
 
   focus = {
@@ -329,6 +344,9 @@ focus_tree = {
     prerequisite = { focus = SAU_command_modernize }
     prerequisite = { focus = SAU_recruitment_drive }
     relative_position_id = SAU_command_modernize
+    completion_reward = {
+      add_ideas = SAU_arabian_cavalry
+    }
   }
   
   focus = {
@@ -339,6 +357,13 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_recruitment_drive }
     relative_position_id = SAU_recruitment_drive
+    completion_reward = {
+      add_tech_bonus = {
+        category = logistics_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
   }
 
   focus = {
@@ -350,6 +375,17 @@ focus_tree = {
     prerequisite = { focus = SAU_command_modernize }
     prerequisite = { focus = SAU_invite_french_weaponry }
     relative_position_id = SAU_command_modernize
+    completion_reward = {
+      custom_effect_tooltip = SAU_found_mechanized_tt
+      hidden_effect = {
+        if = {
+          limit = {
+            NOT = { has_tech = motorised_infantry }
+          }
+        }
+        load_oob = "SAU_mechanized"
+      }
+    }
   }
 
   focus = {
@@ -375,6 +411,14 @@ focus_tree = {
     prerequisite = { focus = SAU_found_mechanized }
     prerequisite = { focus = SAU_air_force }
     relative_position_id = SAU_found_mechanized
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+				name = SAU_new_army
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+    }
   }
 
   focus = {
@@ -398,6 +442,24 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_warriors_sea }
     relative_position_id = SAU_warriors_sea
+    completion_reward = {
+      custom_effect_tooltip = SAU_purchase_destroyers_tt
+      hidden_effect = {
+        if = {
+          limit = { has_dlc = "Man the Guns" }
+          set_technology = {
+            early_ship_hull_light = 1
+          }
+          load_oob = "SAU_destroyer_mtg"
+        }
+        else = {
+          set_technology = {
+            early_destroyer = 1
+          }
+          load_oob = "SAU_destroyer_legacy"
+        }
+      }
+    }
   }
 
   focus = {
@@ -408,6 +470,15 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_warriors_sea }
     relative_position_id = SAU_warriors_sea
+    completion_reward = {
+      744 = {
+        add_building_construction = {
+          type = naval_base
+          level = 2
+          instant_build = yes
+        }
+      }
+    }
   }
 
   focus = {
@@ -419,6 +490,14 @@ focus_tree = {
     prerequisite = { focus = SAU_purchase_destroyers }
     prerequisite = { focus = SAU_recruitment_drive }
     relative_position_id = SAU_purchase_destroyers
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+				name = SAU_naval_exercises
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+    }
   }
 
   ###############################################
@@ -432,6 +511,12 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
+      custom_trigger_tooltip = {
+        tooltip = unlocked_later
+        has_country_flag = SAU_civil_war_end
+      }
+    }
+    bypass = {
       has_country_flag = SAU_civil_war_end
     }
     prerequisite = { focus = SAU_new_state }
@@ -445,14 +530,14 @@ focus_tree = {
     y = 1
     cost = 6
     mutually_exclusive = {
-      focus = SAU_elimate_threats
+      focus = SAU_eliminate_threats
     }
     prerequisite = { focus = SAU_saudi_dominance }
     relative_position_id = SAU_saudi_dominance
   }
 
   focus = {
-    id = SAU_elimate_threats
+    id = SAU_eliminate_threats
     icon = GFX_goal_backstab
     x = 1
     y = 1
@@ -462,6 +547,29 @@ focus_tree = {
     }
     prerequisite = { focus = SAU_saudi_dominance }
     relative_position_id = SAU_saudi_dominance
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = SAU_the_ikhwan
+        add_idea = SAU_ikhwan_resistance_idea
+      }
+      hidden_effect = {
+        744 = {
+          add_dynamic_modifier = {
+            modifier = SAU_ikhwan_resistance
+          }
+        }
+        946 = { 
+          add_dynamic_modifier = {
+            modifier = SAU_ikhwan_resistance
+          }
+        }
+        1032 = { 
+          add_dynamic_modifier = {
+            modifier = SAU_ikhwan_resistance
+          }
+        }
+      }
+    }
   }
 
   focus = {
@@ -472,6 +580,25 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_fruits_loyalty }
     relative_position_id = SAU_fruits_loyalty
+    completion_reward = {
+      add_equipment_to_stockpile = {
+        equipment = infantry_equipment
+        amount = 2000
+        producer = SAU
+      }
+      delete_unit_template_and_units = {
+        division_template = "'Iikhwan Alfursan"
+        disband = yes
+      }
+      delete_unit_template_and_units = {
+        division_template = "Ikhwan"
+        disband = yes
+      }
+      custom_effect_tooltip = SAU_absorb_ikhwan_tt
+      hidden_effect = {
+        load_oob = SAU_modern
+      }
+    }
   }
 
   focus = {
@@ -482,6 +609,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_absorb_ikhwan }
     relative_position_id = SAU_absorb_ikhwan
+    completion_reward = {
+      add_research_slot = 1
+    }
   }
 
   focus = {
@@ -492,6 +622,17 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_absorb_ikhwan }
     relative_position_id = SAU_absorb_ikhwan
+    completion_reward = {
+      every_owned_state = {
+        if = {
+          limit = {
+            is_core_of = ROOT
+            NOT = { state = 678 } # That's a desert
+          }
+          add_extra_state_shared_building_slots = 1
+        }
+      }
+    }
   }
 
   focus = {
@@ -500,8 +641,11 @@ focus_tree = {
     x = 2
     y = 1
     cost = 6
-    prerequisite = { focus = SAU_elimate_threats }
-    relative_position_id = SAU_elimate_threats
+    prerequisite = { focus = SAU_eliminate_threats }
+    relative_position_id = SAU_eliminate_threats
+    completion_reward = {
+      custom_effect_tooltip = SAU_crush_ikhwan_tt
+    }
   }
 
   focus = {
@@ -512,6 +656,42 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_crush_ikhwan }
     relative_position_id = SAU_crush_ikhwan
+    completion_reward = {
+      random_owned_controlled_state = {
+        if = {
+            limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+      random_owned_controlled_state = {
+        if = {
+            limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+    }
   }
 
   focus = {
@@ -522,6 +702,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = SAU_crush_ikhwan }
     relative_position_id = SAU_crush_ikhwan
+    completion_reward = {
+      add_ideas = SAU_the_jizya
+    }
   }
 
   focus = {
@@ -532,9 +715,13 @@ focus_tree = {
     cost = 6
     prerequisite = {
       focus = SAU_fruits_loyalty
-      focus = SAU_elimate_threats
+      focus = SAU_eliminate_threats
     }
     relative_position_id = SAU_fruits_loyalty
+    completion_reward = {
+      add_political_power = 100
+      custom_effect_tooltip = SAU_rashidi_integration_tt
+    }
   }
 
   focus = {
@@ -545,9 +732,13 @@ focus_tree = {
     cost = 6
     prerequisite = {
       focus = SAU_fruits_loyalty
-      focus = SAU_elimate_threats
+      focus = SAU_eliminate_threats
     }
-    relative_position_id = SAU_elimate_threats
+    relative_position_id = SAU_eliminate_threats
+    completion_reward = {
+      add_political_power = 100
+      custom_effect_tooltip = SAU_hashemite_integration_tt
+    }
   }
 
   focus = {
@@ -556,11 +747,22 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      679 = { is_core_of = ROOT }
+      945 = { is_core_of = ROOT }
+      946 = { is_core_of = ROOT }
+      1031 = { is_core_of = ROOT }
+    }
     prerequisite = {
       focus = SAU_purge_rashidis
       focus = SAU_hunt_hashemites
     }
     relative_position_id = SAU_purge_rashidis
+    completion_reward = {
+      add_stability = 0.15
+      add_war_support = 0.15
+      set_cosmetic_tag = SAU_ARA
+    }
   }
 
   focus = {
