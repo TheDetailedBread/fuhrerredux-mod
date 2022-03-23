@@ -361,6 +361,9 @@ country_event = { # Rashidi
 
   immediate = {
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.35 days = 1 }
+      }
       945 = { set_demilitarized_zone = no }
       946 = { set_demilitarized_zone = no }
       RAS = {
@@ -1359,6 +1362,13 @@ country_event = { # British Mandate Taken Control
     activate_mission_tooltip = ARB_cement_our_authority
     increase_ruling_party_popularity_by_15 = yes
     remove_every_minister = yes
+    add_ideas = {
+      ARB_Nuri_al_Said_hog_mli
+      ARB_Francis_Humphrys_for_mli
+      ARB_John_Cadman_eco_mli
+      ARB_Percy_Cox_sec_mli
+    }
+
     set_country_flag = ARB_british_mandate_flag
     mark_focus_tree_layout_dirty = yes
   }

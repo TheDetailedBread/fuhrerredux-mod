@@ -791,6 +791,9 @@ focus_tree = {
       focus = SAU_unify_arabia
     }
     relative_position_id = SAU_unify_arabia
+    completion_reward = {
+      add_idea = SAU_guardians_hajj
+    }
   }
 
   ###############################################
@@ -911,6 +914,9 @@ focus_tree = {
     bypass = {
       has_war_with = YEM
     }
+    mutually_exclusive = {
+      focus = SAU_invite_yemen
+    }
     prerequisite = { focus = SAU_demand_azir }
     relative_position_id = SAU_demand_azir
     completion_reward = {
@@ -918,6 +924,7 @@ focus_tree = {
         target = YEM
         type = annex_everything
       }
+      set_country_flag = YEM_CONQ
     }
   }
 
@@ -936,6 +943,9 @@ focus_tree = {
     }
     bypass = {
       is_in_faction_with = YEM
+    }
+    mutually_exclusive = {
+      focus = SAU_attack_yemen
     }
     prerequisite = { focus = SAU_demand_azir }
     relative_position_id = SAU_demand_azir
@@ -969,6 +979,7 @@ focus_tree = {
         target = IRQ
         type = annex_everything
       }
+      set_country_flag = IRQ_CONQ
     }
   }
 
@@ -1047,6 +1058,7 @@ focus_tree = {
         target = ISR
         type = annex_everything
       }
+      set_country_flag = ISR_CONQ
     }
   }
 
@@ -1128,5 +1140,8 @@ focus_tree = {
     }
     prerequisite = { focus = SAU_demand_abu_dhabi }
     relative_position_id = SAU_demand_abu_dhabi
+    completion_reward = {
+      unlock_decision_tooltip = SAU_send_equipment
+    }
   }
 }

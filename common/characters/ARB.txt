@@ -719,4 +719,96 @@ characters = {
       }
     }
   }
+  ARB_Nuri_al_Said = {
+    name = "Nuri al-Said"
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ministers/ARB/ARB_Nuri_al_Said.png"
+      }
+    }
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = {
+				hidden_trigger = { has_country_flag = ARB_Nuri_al_Said_hog_mli_hired }
+			}			
+			idea_token = ARB_Nuri_al_Said_hog_mli
+			on_add = { set_country_flag = ARB_Nuri_al_Said_hog_mli_hired }
+			on_remove = { clr_country_flag = ARB_Nuri_al_Said_hog_mli_hired }
+			traits = {
+				head_of_government
+				market_liberal
+				hog_corporate_suit
+			}
+		}
+  }
+  ARB_Francis_Humphrys = {
+    name = "Francis Humphrys"
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ministers/ARB/ARB_Francis_Humphrys.png"
+      }
+    }
+    advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = ARB_Francis_Humphrys_for_mli_hired }
+			}			
+			idea_token = ARB_Francis_Humphrys_for_mli
+			on_add = { set_country_flag = ARB_Francis_Humphrys_for_mli_hired }
+			on_remove = { clr_country_flag = ARB_Francis_Humphrys_for_mli_hired }
+			traits = {
+				foreign_minister
+				market_liberal
+				for_great_compromiser
+			}
+		}
+  }
+  ARB_John_Cadman = {
+    name = "John Cadman"
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ministers/ARB/ARB_John_Cadman.png"
+      }
+    }
+    advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = ARB_John_Cadman_eco_mli_hired }
+			}			
+			idea_token = ARB_John_Cadman_eco_mli
+			on_add = { set_country_flag = ARB_John_Cadman_eco_mli_hired }
+			on_remove = { clr_country_flag = ARB_John_Cadman_eco_mli_hired }
+			traits = {
+				economy_minister
+				market_liberal
+				eco_resource_industrialist
+			}
+		}
+  }
+  ARB_Percy_Cox = {
+    name = "Percy Cox"
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ministers/ARB/ARB_Percy_Cox.png"
+      }
+    }
+    advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = ARB_Percy_Cox_sec_mli_hired }
+			}			
+			idea_token = ARB_Percy_Cox_sec_mli
+			on_add = { set_country_flag = ARB_Percy_Cox_sec_mli_hired }
+			on_remove = { clr_country_flag = ARB_Percy_Cox_sec_mli_hired }
+			traits = {
+				security_minister
+				market_liberal
+				sec_efficient_sociopath
+			}
+		}
+  }
 }
