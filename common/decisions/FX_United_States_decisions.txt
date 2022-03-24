@@ -141,13 +141,13 @@ USA_mexican_american_war = {
         controls_state = 921 # Transpecos
       }
     }
-  }
-  timeout_effect = {
-    add_political_power = -20
-  }
-  complete_effect = {
-    increase_ruling_party_popularity_by_15 = yes
-    add_stability = 0.10
+    timeout_effect = {
+      add_political_power = -20
+    }
+    complete_effect = {
+      increase_ruling_party_popularity_by_15 = yes
+      add_stability = 0.10
+    }
   }
   USA_push_the_mexicans = {
     icon = GFX_decision_border_war
@@ -199,8 +199,11 @@ USA_mexican_american_war = {
       factor = 1000
     }
     available = {
-      MEX = {
-        has_capitulated = no
+      MEX = { has_capitulated = no }
+    }
+    visible = {
+      NOT = {
+        has_country_flag = USA_surrendered
       }
     }
     complete_effect = {
