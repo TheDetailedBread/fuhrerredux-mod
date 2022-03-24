@@ -68,33 +68,37 @@ focus_tree = {
     relative_position_id = SAU_building_economy
     completion_reward = {
       292 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
       744 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
     }
@@ -200,24 +204,28 @@ focus_tree = {
     relative_position_id = SAU_construct_railway
     completion_reward = {
       292 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
+          add_extra_state_shared_building_slots = 1
         }
-        add_extra_state_shared_building_slots = 1
       }
       744 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
+          add_extra_state_shared_building_slots = 1
         }
-        add_extra_state_shared_building_slots = 1
       }
     }
   }
@@ -592,7 +600,7 @@ focus_tree = {
     relative_position_id = SAU_fruits_loyalty
     completion_reward = {
       add_equipment_to_stockpile = {
-        equipment = infantry_equipment
+        type = infantry_equipment
         amount = 2000
         producer = SAU
       }
@@ -792,7 +800,7 @@ focus_tree = {
     }
     relative_position_id = SAU_unify_arabia
     completion_reward = {
-      add_idea = SAU_guardians_hajj
+      add_ideas = SAU_guardians_hajj
     }
   }
 

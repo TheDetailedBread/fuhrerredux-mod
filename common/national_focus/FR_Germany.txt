@@ -5699,27 +5699,75 @@ focus_tree = {
 				limit = {
 					has_completed_focus = GER_tst_manse
 				}
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = FRA }
-				add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = 100 producer = FRA }
+
+        add_equipment_to_stockpile = { 
+          type = infantry_equipment_1 
+          amount = 2000 
+          producer = FRA 
+        }
+				if = {
+          limit = { has_dlc = "No Step Back" }
+				  add_equipment_to_stockpile = { 
+            type = light_tank_chassis_2 
+            amount = 100 
+            producer = FRA 
+          }
+        }
+        else = {
+          add_equipment_to_stockpile = { 
+            type = light_tank_equipment_2 
+            amount = 100 
+            producer = FRA 
+          }
+        }
 			}
 			
 			if = {
 				limit = {
 					has_completed_focus = GER_tst_state
 				}
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = FRA }
-				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 125 producer = FRA }
-				add_equipment_to_stockpile = { type = light_tank_equipment_2 amount = 50 producer = FRA }
+				add_equipment_to_stockpile = { 
+          type = infantry_equipment_1 
+          amount = 1000 
+          producer = FRA
+        }
+				add_equipment_to_stockpile = { 
+          type = motorized_equipment_1 
+          amount = 125 
+          producer = FRA 
+        }
+				if = {
+          limit = { has_dlc = "No Step Back" }
+          add_equipment_to_stockpile = { 
+            type = light_tank_equipment_2 
+            amount = 50 
+            producer = FRA 
+          }
+        }
+        else = {
+          add_equipment_to_stockpile = { 
+            type = light_tank_chassis_2 
+            amount = 50 
+            producer = FRA 
+          }
+        }
 			}
 			
 			if = {
 				limit = {
 					has_completed_focus = GER_tst_db
 				}
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = FRA }
-				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 250 producer = FRA }
+				add_equipment_to_stockpile = { 
+          type = infantry_equipment_1 
+          amount = 2000 
+          producer = FRA 
+        }
+				add_equipment_to_stockpile = { 
+          type = motorized_equipment_1 
+          amount = 250 
+          producer = FRA 
+        }
 			}
-			
 		}
 	}
 	
@@ -11155,7 +11203,7 @@ focus_tree = {
 		relative_position_id = GER_Kriegsmarine
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-  			bonus = 0.5
+  			cost_reduction = 0.5
  				uses = 2
  				category = cat_trade_interdiction
 		  }

@@ -2383,4 +2383,27 @@ characters = {
       }
     }
   }
+  NOR_Peder_Furubotn = {
+    name = "Peder Furubotn"
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ministers/NOR/NOR_Peder_Furubotn.png"
+      }
+    }
+    advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_country_flag = NOR_Peder_Furubotn_hog_col_hired }
+			}
+			idea_token = NOR_Peder_Furubotn_hog_col
+			on_add = { set_country_flag = NOR_Peder_Furubotn_hog_col_hired }
+			on_remove = { clr_country_flag = NOR_Peder_Furubotn_hog_col_hired }
+			traits = {
+				head_of_government
+				collectivist
+				hog_ambitious_union_boss
+			}
+		}
+  }
 }
