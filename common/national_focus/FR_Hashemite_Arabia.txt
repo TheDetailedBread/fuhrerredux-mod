@@ -42,33 +42,37 @@ focus_tree = {
     relative_position_id = ARB_modernize_peninsula
     completion_reward = {
       679 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = industrial_complex
-          level = 2
-          instant_build = yes
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = industrial_complex
+            level = 2
+            instant_build = yes
+          }
         }
       }
       1031 = {
-        limit = {
-          free_building_slots = {
-            building = arms_factory
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
         }
       }
       set_temp_variable = { british_control_temp = 5 }
@@ -89,18 +93,20 @@ focus_tree = {
     relative_position_id = ARB_modernize_peninsula
     completion_reward = {
       679 = {
-        limit = {
-          free_building_slots = {
-            building = industrial_complex
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
         }
       }
       set_temp_variable = { british_control_temp = 5 }
@@ -866,7 +872,7 @@ focus_tree = {
         uses = 1
       }
       add_equipment_to_stockpile = {
-        equipment = infantry_equipment
+        type = infantry_equipment
         amount = 1000
         producer = ARB
       }
@@ -968,7 +974,7 @@ focus_tree = {
         }
       }
       add_equipment_to_stockpile = {
-        equipment = fighter_equipment_0
+        type = fighter_equipment_0
         amount = 50
         producer = ENG
       }
@@ -1036,18 +1042,20 @@ focus_tree = {
     relative_position_id = ARB_royal_coast_guard
     completion_reward = {
       744 = {
-        limit = {
-          free_building_slots = {
-            building = dockyard
-            size > 0
-            include_locked = yes
+        if = {
+          limit = {
+            free_building_slots = {
+              building = dockyard
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = dockyard
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = dockyard
+            level = 1
+            instant_build = yes
+          }
         }
       }
     }
@@ -1493,18 +1501,20 @@ focus_tree = {
     relative_position_id = ARB_british_military_mission
     completion_reward = {
       679 = {
-        limit = {
-          free_building_slots = {
-            building = arms_factory
-            size > 0
-            include_locked = yes
+        if = {
+           limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = arms_factory
-          level = 2
-          instant_build = yes
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
         }
       }
       custom_effect_tooltip = available_designer

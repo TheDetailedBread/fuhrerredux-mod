@@ -617,7 +617,9 @@ country_event = { # Fate of India
     core_india_for_faction = yes
     every_owned_state = {
       limit = { is_core_of = RAJ }
-      transfer_state = PREV
+      ROOT = {
+        transfer_state = PREV
+      }
     }
   }
 
