@@ -732,50 +732,51 @@ country_event = { # Death of Eugene Debs
 }
 
 country_event = { # Surrender to Mexico
-    id = usa.27
-    title = usa.27.t
-    desc = usa.27.d
-    picture = GFX_report_event_soviet_tanks
-    is_triggered_only = yes
+  id = usa.27
+  title = usa.27.t
+  desc = usa.27.d
+  picture = GFX_report_event_soviet_tanks
+  is_triggered_only = yes
 
-    option = {
-        name = usa.27.a
-        ai_chance = { base = 95 }
-        if = {
-            limit = { FROM = { is_faction_leader = yes } }
-            every_country = {
-                limit = { is_in_faction_with = FROM }
-                white_peace = ROOT
-            }
-        }
-        FROM = { white_peace = ROOT }
+  option = {
+    name = usa.27.a
+    ai_chance = { base = 95 }
+    if = {
+      limit = { FROM = { is_faction_leader = yes } }
+      every_country = {
+        limit = { is_in_faction_with = FROM }
+        white_peace = ROOT
+      }
+    }
+    FROM = { white_peace = ROOT }
 
-        transfer_state = 375 # Texas
-        transfer_state = 376 # New Mexico
-        transfer_state = 377 # Arizona
-        transfer_state = 378 # California
-        transfer_state = 379 # Nevada
-        transfer_state = 380 # Utah 
-        transfer_state = 484 # Baja California
-        transfer_state = 919 # East Texas
-        transfer_state = 920 # Panhandle
-        transfer_state = 921 # Transpecos
-        transfer_state = 926 # Bay Area
-        transfer_state = 927 # Northern California
-        transfer_state = 928 # Southern California
-        hidden_effect = {
-            USA = {
-                set_country_flag = USA_political_turmoil
-                country_event = { id = usa.100 days = 14 }
-            }
-        }
+    transfer_state = 375 # Texas
+    transfer_state = 376 # New Mexico
+    transfer_state = 377 # Arizona
+    transfer_state = 378 # California
+    transfer_state = 379 # Nevada
+    transfer_state = 380 # Utah 
+    transfer_state = 484 # Baja California
+    transfer_state = 919 # East Texas
+    transfer_state = 920 # Panhandle
+    transfer_state = 921 # Transpecos
+    transfer_state = 926 # Bay Area
+    transfer_state = 927 # Northern California
+    transfer_state = 928 # Southern California
+    hidden_effect = {
+      USA = {
+        set_country_flag = USA_surrendered
+        set_country_flag = USA_political_turmoil
+        country_event = { id = usa.100 days = 14 }
+      }
     }
-    option = {
-        name = usa.27.b
-        ai_chance = { base = 5 }
-        set_country_flag = MEX_crush_united_states
-        add_political_power = -100
-    }
+  }
+  option = {
+    name = usa.27.b
+    ai_chance = { base = 5 }
+    set_country_flag = MEX_crush_united_states
+    add_political_power = -100
+  }
 }
 
 country_event = { # 1940 Elections
