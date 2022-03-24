@@ -64,9 +64,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_skoropadksyi"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_mass_assault
 		}
@@ -94,9 +94,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_sinkler"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_mobile_warfare
 		}
@@ -124,9 +124,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_pavlenko"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_superior_firepower
 		}
@@ -154,9 +154,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_udovychenko"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_grand_battle_plan
 		}
@@ -297,12 +297,11 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_top_down"
-		add_tech_bonus = {
-			name = doctrine_bonus
-			bonus = 0.25
-			uses = 1
-			category = land_doctrine
-		}
+		add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 	}
 }
 focus = {
@@ -353,12 +352,11 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_doctrine_research"
-		add_tech_bonus = {
-			name = doctrine_bonus
-			bonus = 0.25
-			uses = 1
-			category = land_doctrine
-		}
+		add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 	}
 }
 focus = {
@@ -452,11 +450,11 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_maximov"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_maximov"
+		add_doctrine_cost_reduction = {
 			name = floating_airfield
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_trade_interdiction
 		}
@@ -481,11 +479,11 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_gorshkov"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_gorshkov"
+		add_doctrine_cost_reduction = {
 			name = floating_airfield
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_fleet_in_being
 		}
@@ -510,11 +508,11 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_pilipenko"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_pilipenko"
+		add_doctrine_cost_reduction = {
 			name = floating_airfield
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = cat_base_strike
 		}
@@ -621,11 +619,11 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_convoy_interdiction"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_convoy_interdiction"
+		add_doctrine_cost_reduction = {
 			name = floating_airfield
-			bonus = 0.10
+			cost_reduction = 0.10
 			uses = 1
 			category = cat_trade_interdiction
 		}
@@ -646,11 +644,11 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_floating_fortress"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_floating_fortress"
+		add_doctrine_cost_reduction = {
 			name = floating_airfield
-			bonus = 0.10
+			cost_reduction = 0.10
 			uses = 1
 			category = cat_fleet_in_being
 		}
@@ -671,11 +669,11 @@ focus = {
 	available = {
 
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_initiative"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_initiative"
+		add_doctrine_cost_reduction = {
 			name = floating_airfield
-			bonus = 0.10
+			cost_reduction = 0.10
 			uses = 1
 			category = cat_base_strike
 		}
@@ -721,9 +719,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_shtern"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = air_doctrine
 		}
@@ -749,9 +747,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_tkachev"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
-			bonus = 0.25
+			cost_reduction = 0.25
 			uses = 1
 			category = air_doctrine
 		}
@@ -833,9 +831,9 @@ focus = {
 	}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_quality"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
-			bonus = 0.10
+			cost_reduction = 0.10
 			uses = 1
 			category = air_doctrine
 		}
@@ -1252,7 +1250,7 @@ focus = {
       add_political_power = 100
       add_stability = 0.05
       add_war_support = 0.05
-      GER = { country_event = { id = ukraine.17 days = 1 } }
+      
 	}
 }
 ########################
@@ -2106,6 +2104,7 @@ focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_look_outwards"
 		add_ideas = UKR_expansionism
+    GER = { country_event = { id = ukraine.17 days = 1 } }
 	}
 }
 focus = {

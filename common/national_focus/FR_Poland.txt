@@ -4442,9 +4442,9 @@ focus = {
 	available_if_capitulated = no  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_mass_assault"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mass_assault
 			}
@@ -4519,9 +4519,9 @@ focus = {
 	available_if_capitulated = no  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_grand_battleplan"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
-			bonus = 0.5
+			cost_reduction = 0.5
 			uses = 2
 			category = cat_grand_battle_plan
 		}
@@ -4669,9 +4669,9 @@ focus = {
 	available_if_capitulated = no  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_mobile_warfare"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -4757,9 +4757,9 @@ focus = {
 	available_if_capitulated = no  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_superior_firepower"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -4893,12 +4893,11 @@ focus = {
 	available_if_capitulated = no  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_offensive_doctrine"
-		add_tech_bonus = {
-			name = doctrine_bonus
-			bonus = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+		add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = land_doctrine
+    }
 	}
 }
 
@@ -5229,10 +5228,10 @@ focus = {
 
 	available_if_capitulated = no  
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_battlefield_support"
-		add_tech_bonus = {
+		log = "[GetDateText]: [Root.GetName]: Focus POL_battlefield_support"
+		add_doctrine_cost_reduction = {
 			name = air_doctrine_bonus
-			bonus = 0.5
+			cost_reduction = 0.5
 			uses = 2
 			category = cat_battlefield_support
 		}
@@ -5385,11 +5384,11 @@ focus = {
 	mutually_exclusive = { focus = POL_strategic_destruction }
 
 	available_if_capitulated = no  
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_operational_integrity"
-		add_tech_bonus = {
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus POL_operational_integrity"
+		add_doctrine_cost_reduction = {
 			name = air_doctrine_bonus
-			bonus = 0.5
+			cost_reduction = 0.5
 			uses = 2
 			category = cat_operational_integrity
 		}

@@ -2291,10 +2291,9 @@ focus_tree = {
 		cost = 5  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRT_field_exercises"
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}  
@@ -3036,9 +3035,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRT_aerial_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

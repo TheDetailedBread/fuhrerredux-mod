@@ -123,7 +123,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Promote_Indian_Officers"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mobile_warfare }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = cat_mobile_warfare }
 			army_experience = 25
 		}
 	}
@@ -146,7 +146,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Increase_British_Control"
 			add_stability = -0.05
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 #			hidden_effect = {
 #				add_to_variable = { var = raj_revolt value = 1 }
 #			}
@@ -181,7 +185,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_British_Officers"
-			add_tech_bonus = { bonus = 1 uses = 1 category = cat_mobile_warfare }
+			add_doctrine_cost_reduction = { cost_reduction = 1 uses = 1 category = cat_mobile_warfare }
 			army_experience = 25
 		}
 	}
@@ -234,7 +238,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Training_Reforms"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -266,7 +274,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Cohesive_Strategy"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -420,9 +432,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Strategy_for_Skies"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = air_doctrine
 			}
@@ -481,7 +493,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Independent_Operations"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_destruction }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_destruction }
 		}
 	}
 
@@ -588,7 +600,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Shipbuilding_Techniques"
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
+			}
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = bb_tech }
 		}
 	}
@@ -607,7 +623,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Foreign_Schematics"
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
+			}
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = ss_tech }
 		}
 	}
@@ -626,7 +646,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Strategy_for_Waves"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 
@@ -645,8 +669,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Ocean_Supremacy"
-			add_tech_bonus = {
-  				bonus = 0.5
+			add_doctrine_cost_reduction = {
+  			cost_reduction = 0.5
  				uses = 2
  				category = cat_fleet_in_being
 			}
@@ -730,7 +754,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RAJ_Carrier_Ambitions"
-			add_tech_bonus = { bonus = 1 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 

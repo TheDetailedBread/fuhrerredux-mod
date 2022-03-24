@@ -711,10 +711,10 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEN_new_doctrines"
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 0.5
-				uses = 2
+			add_doctrine_cost_reduction = {
+				name = DEN_new_doctrines
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -1002,9 +1002,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEN_united_air_force"
 			air_experience = 20
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1090,9 +1090,9 @@
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEN_modernize_air_force_docrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
 			}
@@ -1330,9 +1330,8 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEN_uphold_naval_modernization"
-			add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}

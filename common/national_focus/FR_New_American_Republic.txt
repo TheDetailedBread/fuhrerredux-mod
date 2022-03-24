@@ -1017,11 +1017,11 @@ focus_tree = {
         prerequisite = { focus = NAR_the_new_american_army }
         relative_position_id = NAR_the_new_american_army
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
-            }
+            add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
         }
     }
 
@@ -1320,11 +1320,11 @@ focus_tree = {
         prerequisite = { focus = NAR_military_research }
         relative_position_id = NAR_new_equipment
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
-            }
+            add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
         }
     }
 
@@ -1510,10 +1510,10 @@ focus_tree = {
         prerequisite = { focus = NAR_the_new_american_navy }
         relative_position_id = NAR_the_new_american_navy
         completion_reward = {
-            add_tech_bonus = {
-                category = naval_doctrine
-                bonus = 1.0
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
                 uses = 1
+                category = naval_doctrine
             }
         }
     }
@@ -1721,9 +1721,9 @@ focus_tree = {
         prerequisite = { focus = NAR_the_new_american_air_force }
         relative_position_id = NAR_the_new_american_air_force
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = cat_battlefield_support
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -1770,9 +1770,9 @@ focus_tree = {
         prerequisite = { focus = NAR_the_new_american_air_force }
         relative_position_id = NAR_the_new_american_air_force
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = cat_strategic_destruction
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -1929,9 +1929,9 @@ focus_tree = {
         relative_position_id = NAR_air_defenses
         completion_reward = {
             air_experience = 15
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = air_doctrine
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }

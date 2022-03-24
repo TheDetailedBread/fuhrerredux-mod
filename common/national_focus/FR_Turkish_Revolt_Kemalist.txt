@@ -1893,10 +1893,9 @@ focus_tree = {
 		cost = 5  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRT2_field_exercises"
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}  
@@ -2329,15 +2328,10 @@ focus_tree = {
 		} 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRT2_naval_doctrines"
-			add_tech_bonus = {
-				name = sub_op_bonus
-				bonus = 0.5
-				uses = 2
-				technology = convoy_interdiction_ti
-				technology = unrestricted_submarine_warfare
-				technology = wolfpacks
-				technology = advanced_submarine_warfare
-				technology = combined_operations_raiding
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 		}  
 	}
@@ -2630,9 +2624,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRT2_aerial_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

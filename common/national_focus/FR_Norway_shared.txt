@@ -1194,9 +1194,9 @@
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_specialized_army"
 			add_ideas = NOR_specialized_army_idea
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -1359,9 +1359,9 @@
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_strong_in_numbers"
 			add_ideas = NOR_strong_in_numbers_idea
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1456,9 +1456,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_milita_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
@@ -1510,9 +1510,8 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_general_doctrines"
 			army_experience = 10
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1739,9 +1738,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_combined_air_force"
 			air_experience = 5
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

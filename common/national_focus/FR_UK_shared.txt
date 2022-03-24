@@ -2751,8 +2751,8 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_massingberd"
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = cat_mechanized_equipment }
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mobile_warfare }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = cat_mechanized_equipment }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = cat_mobile_warfare }
 		}
 	}
 	
@@ -2953,7 +2953,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_ironside"
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
@@ -3124,7 +3128,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_haig"
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
@@ -3422,7 +3430,7 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_harris"
 			air_experience = 20
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_destruction }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_destruction }
 		}
 	}
 	
@@ -3454,8 +3462,8 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_strat_destruct"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_bomber }
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_destruction }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_bomber }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_destruction }
 		}
 	}
 	
@@ -3584,7 +3592,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_assist_rn"
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_bomber }
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -3675,10 +3687,10 @@
 			}
 		}
 		available_if_capitulated = no  
-	completion_reward = {
+	  completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_portal"
 			air_experience = 20
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_battlefield_support }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_battlefield_support }
 		}
 	}
 	
@@ -3711,7 +3723,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_support_army"
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = cas_bomber }
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
@@ -3943,7 +3959,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_thern"
 			navy_experience = 20
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4008,7 +4028,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_exercises"
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4072,7 +4096,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_gwlessons"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4314,7 +4342,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_grandfleet"
-			add_tech_bonus = { bonus = 0.25 uses = 3 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4594,7 +4626,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_mobile_squad"
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	

@@ -818,11 +818,12 @@ focus_tree = {
         prerequisite = { focus = CRU_the_warriors_of_tomorrow }
         relative_position_id = CRU_the_warriors_of_tomorrow
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
-            }
+            add_doctrine_cost_reduction = {
+				name = CRU_adopt_modern_doctrines
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
         }
     }
 
@@ -947,10 +948,11 @@ focus_tree = {
         prerequisite = { focus = CRU_logistics_support }
         relative_position_id = CRU_logistics_support
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
+            add_doctrine_cost_reduction = {
+              name = CRU_coordinated_strikes
+              cost_reduction = 0.5
+              uses = 1
+              category = land_doctrine
             }
         }
     }
@@ -1228,11 +1230,11 @@ focus_tree = {
         prerequisite = { focus = CRU_naval_bases }
         relative_position_id = CRU_air_bases_and_defenses
         completion_reward = {
-            add_tech_bonus = {
-                category = naval_doctrine
-                category = air_doctrine
-                bonus = 1.0
-                uses = 2
+            add_doctrine_cost_reduction = {
+              cost_reduction = 0.5
+              uses = 2
+              category = naval_doctrine
+              category = air_doctrine
             }
         }
     }
