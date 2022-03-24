@@ -2096,65 +2096,80 @@ country_event = { # Panama Canal Captured
 }
 
 country_event = { # Oregon Question
-    id = usa.110
-    title = usa.110.t
-    desc = usa.110.d
-    picture = GFX_report_event_usa_british_sailors_destroyers
-    is_triggered_only = yes
+  id = usa.110
+  title = usa.110.t
+  desc = usa.110.d
+  picture = GFX_report_event_usa_british_sailors_destroyers
+  is_triggered_only = yes
 
-    option = { # Establish Oregon Administration
-        name = usa.110.a
-        every_owned_state = {
-            limit = {
-                OR = {
-                    state = 385
-                    state = 386
-                }
-                is_fully_controlled_by = ROOT
-                NOT = { is_core_of = ROOT }
-                NOT = { is_claimed_by = ROOT }
-            }
-            ORE = {
-                add_state_core = PREV
-                transfer_state = PREV
-            }
+  option = { # Establish Oregon Administration
+    name = usa.110.a
+    every_owned_state = {
+      limit = {
+        OR = {
+          state = 385
+          state = 386
         }
-        ENG = { puppet = ORE }
-        hidden_effect = {
-            ORE = {
-                set_politics = {
-                    ruling_party = paternal_autocrat
-                    last_election = "1932.11.15"
-                    election_frequency = 48
-                    elections_allowed = no
-                }
-                set_popularities = {
-                    social_democrat = 18
-                    social_liberal = 3
-                    market_liberal = 6
-                    social_conservative = 13
-                    authoritarian_democrat = 8
-                    paternal_autocrat = 44
-                    national_populist = 8
-                }
-            }
-        }
+        is_fully_controlled_by = ROOT
+        NOT = { is_core_of = ROOT }
+        NOT = { is_claimed_by = ROOT }
+      }
+      ORE = {
+        add_state_core = PREV
+        transfer_state = PREV
+      }
     }
-    option = { # To Canada
-        name = usa.110.b
-        every_owned_state = {
-            limit = {
-                OR = {
-                    state = 385
-                    state = 386
-                }
-                is_fully_controlled_by = ROOT
-                NOT = { is_core_of = ROOT }
-                NOT = { is_claimed_by = ROOT }
-            }
-            CAN = { transfer_state = PREV }
-        }
+    ENG = { 
+      puppet = ORE
+      set_nationality = {
+        character = ENG_Louis_Mountbatten
+        target_country = ORE
+      }
     }
+    hidden_effect = {
+      ORE = {
+        ENG_Louis_Mountbatten = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = paternal_autocrat_subtype
+              traits = { }
+            }
+          }
+        }
+        set_politics = {
+          ruling_party = paternal_autocrat
+          last_election = "1932.11.15"
+          election_frequency = 48
+          elections_allowed = no
+        }
+        set_popularities = {
+          social_democrat = 18
+          social_liberal = 3
+          market_liberal = 6
+          social_conservative = 13
+          authoritarian_democrat = 8
+          paternal_autocrat = 44
+          national_populist = 8
+        }
+      }
+    }
+  }
+  option = { # To Canada
+    name = usa.110.b
+    every_owned_state = {
+      limit = {
+        OR = {
+          state = 385
+          state = 386
+        }
+        is_fully_controlled_by = ROOT
+        NOT = { is_core_of = ROOT }
+        NOT = { is_claimed_by = ROOT }
+      }
+      CAN = { transfer_state = PREV }
+    }
+  }
 }
 
 country_event = { # Demand the Return of the Territories
