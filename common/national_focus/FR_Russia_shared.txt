@@ -66,9 +66,9 @@ shared_focus = {
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RUS_markov_plan"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -98,9 +98,9 @@ shared_focus = {
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RUS_shatilov_plan"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -878,11 +878,11 @@ shared_focus = {
 		ai_will_do = {
 			factor = 2
 		}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus RUS_request_fighters"
-			add_tech_bonus = {
+	  completion_reward = {
+		  log = "[GetDateText]: [Root.GetName]: Focus RUS_request_fighters"
+		  add_doctrine_cost_reduction = {
 				name = tac_air_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_operational_integrity
 			}
@@ -912,9 +912,9 @@ shared_focus = {
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RUS_request_bombers"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = strat_air_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_strategic_destruction
 			}
@@ -1246,9 +1246,9 @@ shared_focus = {
 		}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RUS_naval_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_trade_interdiction
 			}

@@ -1246,9 +1246,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_foreign_assistance"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -1363,9 +1363,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_learn_from_previous_wars"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction  = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1747,14 +1747,13 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_doctrine_for_army"
 			army_experience = 5
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 2
+      add_doctrine_cost_reduction = {
+				name = AFG_doctrine_for_army
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
-
 	}
 	shared_focus = {
 		id = AFG_recruitment_efforts
@@ -2014,10 +2013,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_train_afghan_pilots"
 			air_experience = 5
-			add_tech_bonus = {
-				name = air_doc_bonus
-				bonus = 0.5
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = air_doctrine
 			}
 		}

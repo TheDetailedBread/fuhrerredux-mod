@@ -2383,12 +2383,11 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWI_doctrine_effort"
 
-		add_tech_bonus = {
-			name = doctrine_bonus
-			bonus = 0.2
-			uses = 2
-			category = land_doctrine
-		}
+		add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = land_doctrine
+    }
 
   }
 
@@ -2608,9 +2607,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWI_air_doctrine"
 
-	add_tech_bonus = {
+	add_doctrine_cost_reduction = {
 		name = doctrine_bonus
-		bonus = 0.25
+		cost_reduction = 0.25
 		uses = 1
 		category = air_doctrine
 	}
@@ -2630,9 +2629,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWI_air_doctrine_effort"
 
-	add_tech_bonus = {
+	add_doctrine_cost_reduction = {
 		name = doctrine_bonus
-		bonus = 0.20
+		cost_reduction = 0.20
 		uses = 1
 		category = air_doctrine
 	}

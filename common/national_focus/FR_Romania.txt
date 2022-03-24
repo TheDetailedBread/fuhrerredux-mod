@@ -1058,9 +1058,9 @@ focus_tree = {
         prerequisite = { focus = ROM_the_romanian_navy }
         relative_position_id = ROM_the_romanian_navy
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = naval_doctrine
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -1158,9 +1158,9 @@ focus_tree = {
         }
         relative_position_id = ROM_carrier_experimentations
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = naval_doctrine
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -1357,10 +1357,10 @@ focus_tree = {
         prerequisite = { focus = ROM_the_romanian_army }
         relative_position_id = ROM_the_romanian_army
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
+            add_doctrine_cost_reduction = {
+              cost_reduction = 0.5
+              uses = 1
+              category = land_doctrine
             }
         }
     }
@@ -1477,11 +1477,11 @@ focus_tree = {
         prerequisite = { focus = ROM_engineer_corps }
         relative_position_id = ROM_engineer_corps
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
-            }
+          add_doctrine_cost_reduction = {
+              cost_reduction = 0.5
+              uses = 1
+              category = land_doctrine
+          }
         }
     }
 
@@ -1654,9 +1654,9 @@ focus_tree = {
         prerequisite = { focus = ROM_fighter_modernization }
         relative_position_id = ROM_fighter_modernization
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = air_doctrine
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }

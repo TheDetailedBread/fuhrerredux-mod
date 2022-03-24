@@ -89,13 +89,12 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOV_mobile_warfare"
-	     	add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+	    add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
-	    }
+	  }
 	}
 
 	shared_focus = {	
@@ -148,9 +147,8 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOV_planning"
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -563,9 +561,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SOV_doctrine_advances"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = infantry_weapons_bonus
-			bonus = 0.5
+			cost_reduction = 0.5
 			uses = 2
 			category = air_doctrine
 		}

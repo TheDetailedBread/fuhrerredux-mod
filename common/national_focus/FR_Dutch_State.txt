@@ -2767,9 +2767,9 @@ focus_tree = {
     prerequisite = { focus = HOL_reform_the_army }
     relative_position_id = HOL_reform_the_army
     completion_reward = {
-      add_tech_bonus = {
+      add_doctrine_cost_reduction = {
         category = cat_mobile_warfare
-        bonus = 1.0
+        cost_reduction = 1.0
         uses = 1
       }
     }
@@ -2790,9 +2790,9 @@ focus_tree = {
     prerequisite = { focus = HOL_reform_the_army }
     relative_position_id = HOL_reform_the_army
     completion_reward = {
-      add_tech_bonus = {
+      add_doctrine_cost_reduction  = {
         category = cat_grand_battle_plan
-        bonus = 1.0
+        cost_reduction = 1.0
         uses = 1
       }
     }
@@ -2812,9 +2812,9 @@ focus_tree = {
     prerequisite = { focus = HOL_reform_the_army }
     relative_position_id = HOL_reform_the_army
     completion_reward = {
-      add_tech_bonus = {
+      add_doctrine_cost_reduction = {
         category = cat_superior_firepower
-        bonus = 1.0
+        cost_reduction = 1.0
         uses = 1
       }
     }
@@ -2956,11 +2956,12 @@ focus_tree = {
     prerequisite = { focus = HOL_enhanced_training_programs }
     relative_position_id = HOL_enhanced_training_programs
     completion_reward = {
-      add_tech_bonus = {
-        category = land_doctrine
-        bonus = 1.0
-        uses = 1
-      }
+      add_doctrine_cost_reduction = {
+				name = HOL_adopt_new_tactics
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
     }
   }
 
@@ -3156,11 +3157,12 @@ focus_tree = {
     prerequisite = { focus = HOL_research_boost }
     relative_position_id = HOL_research_boost
     completion_reward = {
-      add_tech_bonus = {
-        category = land_doctrine
-        bonus = 1.0
-        uses = 1
-      }
+      add_doctrine_cost_reduction = {
+				name = HOL_tweaking_our_doctrines
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
     }
   }
 
@@ -3339,11 +3341,11 @@ focus_tree = {
     prerequisite = { focus = HOL_recall_the_admirals }
     relative_position_id = HOL_borrow_german_naval_designs
     completion_reward = {
-      add_tech_bonus = {
-        category = naval_doctrine
-        bonus = 1.0
-        uses = 1
-      }
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
     }
   }
 
@@ -3416,11 +3418,11 @@ focus_tree = {
     prerequisite = { focus = HOL_destroyer_modernization }
     relative_position_id = HOL_decide_on_a_doctrine
     completion_reward = {
-      add_tech_bonus = {
-        category = naval_doctrine
-        bonus = 1.0
-        uses = 1
-      }
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
     }
   }
 
@@ -3625,9 +3627,9 @@ focus_tree = {
     prerequisite = { focus = HOL_strategic_bomber }
     relative_position_id = HOL_heavy_fighters
     completion_reward = {
-      add_tech_bonus = {
+      add_doctrine_cost_reduction = {
         category = air_doctrine
-        bonus = 1.0
+        cost_reduction = 1.0
         uses = 1
       }
     }

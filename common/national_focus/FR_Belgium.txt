@@ -1403,9 +1403,9 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BEL_goal_defensive_doctrine"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction  = {
 				name = land_doc_bonus
-				bonus = 0.50
+				cost_reduction = 0.50
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -1422,9 +1422,9 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BEL_goal_offensive_doctrine"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 			}

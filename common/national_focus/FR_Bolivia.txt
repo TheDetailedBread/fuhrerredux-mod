@@ -230,9 +230,9 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = BOL_defending_the_revolution
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1109,11 +1109,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_army_of_bolivia"
 		
-		add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+      add_doctrine_cost_reduction = {
+				name = BOL_army_of_bolivia
+				cost_reduction = 0.5
 				uses = 1
-				category = land_doctrine	
+				category = land_doctrine
 			}
 		} 
 	}
@@ -1366,7 +1366,7 @@ focus_tree = {
 	}
 }
 
-		focus = { 
+	focus = { 
 		id = BOL_mastering_warfare
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = BOL_elite_forces }
@@ -1381,12 +1381,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_mastering_warfare"
-		army_experience = 100 
-		add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+		  army_experience = 100 
+		  add_doctrine_cost_reduction = {
+				name = BOL_mastering_warfare
+				cost_reduction = 0.5
 				uses = 1
-				category = land_doctrine	
+				category = land_doctrine
 			}
 	}
 }
@@ -1461,8 +1461,8 @@ focus = {
  		cost = 10  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_the_way_of_the_sea"
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1624,9 +1624,8 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_destined_to_rule_the_seas"
 			navy_experience = 100
-			add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -2187,9 +2186,9 @@ focus = {
 		prerequisite = { focus = BOL_status_of_bolivia }		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_andean_airways"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -2364,9 +2363,9 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_further_winds"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
