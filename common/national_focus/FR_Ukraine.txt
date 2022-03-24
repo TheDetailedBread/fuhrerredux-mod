@@ -1247,11 +1247,12 @@ focus = {
 		focus = ukr_junta_black_sea_germans
 	}
 
-		completion_reward = {
+	completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_ally"
       add_political_power = 100
       add_stability = 0.05
       add_war_support = 0.05
+      GER = { country_event = { id = ukraine.17 days = 1 } }
 	}
 }
 ########################
@@ -2105,7 +2106,6 @@ focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_look_outwards"
 		add_ideas = UKR_expansionism
-    GER = { country_event = { id = ukraine.17 days = 1 } }
 	}
 }
 focus = {
