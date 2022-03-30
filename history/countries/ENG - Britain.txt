@@ -28,8 +28,6 @@ set_technology = {
 
 	gw_artillery = 1
 
-	gwtank = 1
-
 	early_fighter = 1
 	cv_early_fighter = 1
 	cv_naval_bomber1 = 1
@@ -41,6 +39,20 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
   basic_train = 1
+}
+if = {
+  limit = {
+    NOT = { has_dlc = "No Step Back" }
+  }
+  set_technology = {
+    gwtank = 1
+  }
+}
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
 }
 
 # - Naval Tech
@@ -170,8 +182,9 @@ if = {
 	}
 }
 
-
+give_guarantee = ARB
 diplomatic_relation = { country = SHO relation = non_aggression_pact }
+diplomatic_relation = { country = ARB relation = non_aggression_pact }
 
 #Trade
 create_import = {

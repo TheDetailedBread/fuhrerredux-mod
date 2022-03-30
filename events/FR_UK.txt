@@ -379,41 +379,6 @@ country_event = {
 		add_political_power = -50
 		add_ideas = ENG_bw
 		hidden_effect = {
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
 			set_country_flag = ENG_stock_crash
 			#complete_national_focus = ENG_black_wed 	##### THIS CRASHES THE GAME UNLESS PLAYER CURRENTLY RESEARCHING ANOTHER FOCUS
 		}
@@ -460,6 +425,9 @@ country_event = {
 			SIA = {
 				country_event = { id = siambw.1 }
 			}
+      ARB = {
+        country_event = { id = arabia.11 days = 1 }
+      }
 		}
 	}
 }
@@ -4014,16 +3982,17 @@ country_event = {
 	title = "Order Restored"
 	desc = uk.85.d
 	picture = report_event_europe_funeral
+  is_triggered_only = yes
 	
 	hidden = yes
 	
-	trigger = {
-		original_tag = RAJ
-		NOT = { has_war_with = IND }
-		NOT = { ENG = { has_country_flag = indian_armistice2 } }
-		IND = { exists = no }
-		RAJ = { has_country_flag = RAJ_the_revolt } 
-	}
+	# trigger = {
+	# 	original_tag = RAJ
+	# 	NOT = { has_war_with = IND }
+	# 	NOT = { ENG = { has_country_flag = indian_armistice2 } }
+	# 	IND = { exists = no }
+	# 	RAJ = { has_country_flag = RAJ_the_revolt } 
+	# }
 	
 	fire_only_once = yes
 	

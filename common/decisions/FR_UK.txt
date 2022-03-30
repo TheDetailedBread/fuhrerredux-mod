@@ -238,8 +238,8 @@ ENG_the_empire = {
         has_country_flag = ENG_reclaimed_suez
       }
     }
+    allowed = { original_tag = ENG }
     available = {
-      original_tag = ENG
       FROM = {
         NOT = { is_subject_of = ENG }
         NOT = { is_in_faction_with = ENG }
@@ -258,6 +258,11 @@ ENG_the_empire = {
       declare_war_on = {
         target = EGY
         type = annex_everything
+      }
+      hidden_effect = {
+        add_ai_strategy = {
+          type = conquer
+        }
       }
     }
   }

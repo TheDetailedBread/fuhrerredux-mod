@@ -175,9 +175,9 @@ shared_focus = {
 	prerequisite = { focus = USA_review_the_army }
 	relative_position_id = USA_review_the_army
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_mobile_warfare
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -198,9 +198,9 @@ shared_focus = {
 	prerequisite = { focus = USA_review_the_army }
 	relative_position_id = USA_review_the_army
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_superior_firepower
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -221,9 +221,9 @@ shared_focus = {
 	prerequisite = { focus = USA_review_the_army }
 	relative_position_id = USA_review_the_army
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_grand_battle_plan
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -244,9 +244,9 @@ shared_focus = {
 	prerequisite = { focus = USA_review_the_army }
 	relative_position_id = USA_review_the_army
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_mass_assault
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -557,9 +557,9 @@ shared_focus = {
 	prerequisite = { focus = USA_create_the_usaf }
 	relative_position_id = USA_create_the_usaf
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_strategic_destruction
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -593,9 +593,9 @@ shared_focus = {
 	prerequisite = { focus = USA_expand_the_usaac }
 	relative_position_id = USA_expand_the_usaac
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_battlefield_support
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -771,9 +771,9 @@ shared_focus = {
 	prerequisite = { focus = USA_address_the_navy }
 	relative_position_id = USA_address_the_navy
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_base_strike
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -790,9 +790,9 @@ shared_focus = {
 	prerequisite = { focus = USA_address_the_navy }
 	relative_position_id = USA_address_the_navy
 	completion_reward = {
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			category = cat_trade_interdiction
-			bonus = 1.0
+			cost_reduction = 1.0
 			uses = 1
 		}
 	}
@@ -883,11 +883,11 @@ shared_focus = {
 	prerequisite = { focus = USA_the_waves }
 	relative_position_id = USA_the_waves
 	completion_reward = {
-		add_tech_bonus = {
-			category = naval_doctrine
-			bonus = 1.0
-			uses = 1
-		}
+    add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = naval_doctrine
+    }
 	}
 }
 

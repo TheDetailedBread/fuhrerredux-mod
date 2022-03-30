@@ -145,9 +145,8 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_prioritize_coastal_defence"
 			add_ideas = FIN_prioritize_coastal_defence_idea
-			add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -519,9 +518,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_study_old_tactics"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction  = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -886,9 +885,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_encourage_new_thinking"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -1255,9 +1254,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_finnish_air_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
 			}

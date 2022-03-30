@@ -524,12 +524,25 @@ country_event = { # Fate of India
       base = 100
     }
     trigger = {
-      is_ally_with = ENG
+      OR = {
+        tag = ENG
+        is_ally_with = ENG
+      }
+      NOT = { country_exists = RAJ }
     }
+    RAJ = { get_current_government_type = yes }
     set_temp_variable = { indian_tag_for_release = RAJ }
     core_india_for_faction = yes
     set_temp_variable = { tag_to_release = RAJ }
     release_targeted_tag = yes
+    RAJ = {
+      restore_previous_government_type = yes
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
+      increase_ruling_party_popularity_by_15 = yes
+    }
   }
 
   option = { # Puppet India
@@ -538,7 +551,10 @@ country_event = { # Fate of India
       base = 100
     }
     trigger = {
-      NOT = { is_ally_with = ENG }
+      NOT = {
+        tag = ENG
+        is_ally_with = ENG
+      }
     }
     if = {
       limit = { has_socialist_government = no }
@@ -562,7 +578,10 @@ country_event = { # Fate of India
       base = 100
     }
     trigger = {
-      NOT = { is_ally_with = ENG }
+      NOT = {
+        tag = ENG
+        is_ally_with = ENG
+      }
     }
     hidden_effect = {
       IND = {
@@ -579,6 +598,38 @@ country_event = { # Fate of India
     set_temp_variable = { tag_to_release = IND }
     release_targeted_tag = yes
     recheck_annexations_immediate = yes
+  }
+
+  option = { # Transfer
+    name = annex.3513.d
+    trigger = {
+      OR = {
+        tag = ENG
+        is_ally_with = ENG
+      }
+      country_exists = RAJ
+      NOT = { tag = RAJ }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { indian_tag_for_release = RAJ }
+    core_india_for_faction = yes
+    every_owned_state = {
+      limit = { is_core_of = RAJ }
+      ROOT = {
+        transfer_state = PREV
+      }
+    }
+  }
+
+  option = { # Integrate the territories
+    name = annex.3514.e
+    trigger = {
+      tag = RAJ
+    }
+    set_temp_variable = { indian_tag_for_release = RAJ }
+    core_india_for_faction = yes
   }
 
   option = { # Occupy
@@ -814,6 +865,26 @@ country_event = { # Fate of Peshawar
     442 = { transfer_state_and_add_core = yes }
   }
 
+  option = { # Give in to India
+    name = annex.3518.c
+    trigger = {
+      RAJ = { 
+        ROOT_can_grant_land = yes
+        owns_state = 440
+        owns_state = 441
+      }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = AFG
+      }
+    }
+    set_temp_variable = { tag_to_release = RAJ }
+    442 = { transfer_state_and_add_core = yes }
+  }
+
   option = { # Occupy
     name = annexation_occupy
     trigger = {
@@ -863,6 +934,25 @@ country_event = { # Fate of Quetta
       }
     }
     set_temp_variable = { tag_to_release = IND }
+    445 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give in to India
+    name = annex.3519.c
+    trigger = {
+      RAJ = { 
+        ROOT_can_grant_land = yes
+        owns_state = 440
+      }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = AFG
+      }
+    }
+    set_temp_variable = { tag_to_release = RAJ }
     445 = { transfer_state_and_add_core = yes }
   }
 

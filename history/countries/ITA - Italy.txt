@@ -37,15 +37,29 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
-	gwtank = 1
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
+	
 	early_fighter = 1
 	early_bomber = 1
 	naval_bomber1 = 1
 	CAS1 = 1
 	fuel_silos = 1
   basic_train = 1
+}
+if = {
+  limit = {
+    NOT = { has_dlc = "No Step Back" }
+  }
+  set_technology = {
+    gwtank = 1
+	  basic_heavy_tank = 1
+  }
+}
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+	  basic_heavy_tank_chassis = 1
+  }
 }
 
 if = {
@@ -587,3 +601,12 @@ recruit_character = ITA_Pier_Luigi_Bellini_della_Stelle
 recruit_character = ITA_Amadeo_Bordiga
 recruit_character = ITA_Arengo_del_Italia
 recruit_character = ITA_Tullio_Cianetti
+recruit_character = ITA_Ettore_Bastico
+recruit_character = ITA_Annibale_Bergonzoli
+recruit_character = ITA_Alberto_Pariani
+recruit_character = ITA_Arnaldo_Azzi
+recruit_character = ITA_Gabriele_Nasci
+recruit_character = ITA_Italo_Gariboldi
+recruit_character = ITA_Venanzio_Gabriotti
+recruit_character = ITA_Fedele_de_Giorgis
+recruit_character = ITA_Enrico_Riccardi

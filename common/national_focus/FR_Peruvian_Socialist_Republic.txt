@@ -123,9 +123,9 @@ focus_tree = {
  		available = { always = no }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_the_militias_might"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 				category = cat_mass_assault
@@ -162,9 +162,9 @@ focus_tree = {
  		available = { always = no }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_the_peoples_guard"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 				category = cat_mobile_warfare
@@ -991,9 +991,8 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_workers_fleet"
-		add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1119,10 +1118,9 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_sea_attempt"
-		navy_experience = 25
-		add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+		  navy_experience = 25
+		  add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1153,9 +1151,9 @@ focus = {
 		prerequisite = { focus = PRU_peoples_airforce }	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_strategies_of_the_skies"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1295,9 +1293,9 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_modernized_doctrines"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

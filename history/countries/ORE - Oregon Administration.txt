@@ -9,7 +9,7 @@ set_technology = {
 	tech_engineers = 1
 	gw_artillery = 1
 
-	gwtank = 1
+	
 
 	early_fighter = 1
 	cv_early_fighter = 1
@@ -20,6 +20,20 @@ set_technology = {
 	early_bomber = 1
 	fuel_silos = 1
 	basic_train = 1
+}
+if = {
+  limit = {
+    NOT = { has_dlc = "No Step Back" }
+  }
+  set_technology = {
+    gwtank = 1
+  }
+}
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -93,4 +107,3 @@ add_ideas = {
 	colonial_government
 }
 
-recruit_character = ORE_Kenneth_Anderson

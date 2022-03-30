@@ -242,6 +242,7 @@ country_event = { # Effects of Black Wednesday Dissapearing
 	option = {
 		name = romania.4.a
 		clr_country_flag = ROM_black_wednesday
+    remove_ideas = ROM_economic_expansion
 		if = {
 			limit = { has_idea = ROM_black_wednesday_recovering }
 			remove_ideas = ROM_black_wednesday_recovering
@@ -972,8 +973,14 @@ country_event = { # Deploying troops in Transylvania
 		name = romania.19.c
 		ai_chance = {
 			factor = 80
+      modifier = {
+        factor = 20
+        NOT = {
+          has_country_flag = ROM_autocrat_behavior
+        }
+      }
 		}
-		add_political_power = -100
+		add_political_power = -50
 	}
 }
 

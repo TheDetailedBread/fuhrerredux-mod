@@ -1678,9 +1678,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_rhenish_firepower"
 		add_ideas = RHI_S_superior_firepower_1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.25
+				cost_reduction = 0.25
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -1702,9 +1702,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_rhenish_firepower_2"
 		swap_ideas = { remove_idea = RHI_S_superior_firepower_1 add_idea = RHI_S_superior_firepower_2 }
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -1726,9 +1726,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_fortress_rhine"
 		add_ideas=RHI_S_defensive_doctrine_1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.25
+				cost_reduction = 0.25
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -1750,9 +1750,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_fortress_rhine_2"
 		swap_ideas = { remove_idea=RHI_S_defensive_doctrine_1 add_idea=RHI_S_defensive_doctrine_2}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1792,9 +1792,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_trench_warefare"
 		add_ideas=RHI_S_trench_war_1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.25
+				cost_reduction = 0.25
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -1816,9 +1816,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_trench_warefare_2"
 		swap_ideas = { add_idea=RHI_S_trench_war_2 remove_idea=RHI_S_trench_war_1}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1840,9 +1840,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_mechanized_guard"
 		add_ideas=RHI_S_blitz_1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.25
+				cost_reduction = 0.25
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -1865,9 +1865,9 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RHI_mechanized_guard_2"
 		swap_ideas = { add_idea=RHI_S_blitz_2 remove_idea=RHI_S_blitz_1}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -2087,10 +2087,10 @@ focus = {
 	available = {} 
 	available_if_capitulated = yes  
 	cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus RHI_CAS_Air"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus RHI_CAS_Air"
 		remove_ideas = RHI_S_air_doctrine_dispute
-		add_tech_bonus = { bonus = 0.25 uses = 3 category = cat_battlefield_support }
+		add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 3 category = cat_battlefield_support }
 	} 
 	ai_will_do = { factor = 40 } 
 	x =23
@@ -2106,10 +2106,10 @@ focus = {
 	available = {} 
 	available_if_capitulated = yes  
 	cost = 5 
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus RHI_Oper_Air"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus RHI_Oper_Air"
 		remove_ideas = RHI_S_air_doctrine_dispute
-		add_tech_bonus = { bonus = 0.25 uses = 3 category = cat_operational_integrity }
+		add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 3 category = cat_operational_integrity }
 	} 
 	ai_will_do = { factor = 40 } 
 	x =27

@@ -219,6 +219,7 @@ country_event = { # Mexican Response
             target = MEX
             type = annex_everything
         }
+        set_global_flag = mexican_american_war
         random_other_country = {
             news_event = { id = worldnews.104 }
         }
@@ -718,66 +719,64 @@ country_event = { # Death of Eugene Debs
 
 	option = {
 		name = usa.26.a
-        remove_country_leader_role = {
-            character = USA_Eugene_Debs
-            ideology = libertarian_socialist_subtype
-        }
-        add_country_leader_role = {
-            character = USA_Jack_Reed
-            promote_leader = yes
-            country_leader = {
-                ideology = libertarian_socialist_subtype
-                traits = {}
-            }
-        }
+    retire_character = USA_Eugene_Debs
+    add_country_leader_role = {
+      character = USA_Jack_Reed
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = {}
+      }
+    }
 	}
 }
 
 country_event = { # Surrender to Mexico
-    id = usa.27
-    title = usa.27.t
-    desc = usa.27.d
-    picture = GFX_report_event_soviet_tanks
-    is_triggered_only = yes
+  id = usa.27
+  title = usa.27.t
+  desc = usa.27.d
+  picture = GFX_report_event_soviet_tanks
+  is_triggered_only = yes
 
-    option = {
-        name = usa.27.a
-        ai_chance = { base = 95 }
-        if = {
-            limit = { FROM = { is_faction_leader = yes } }
-            every_country = {
-                limit = { is_in_faction_with = FROM }
-                white_peace = ROOT
-            }
-        }
-        FROM = { white_peace = ROOT }
+  option = {
+    name = usa.27.a
+    ai_chance = { base = 95 }
+    if = {
+      limit = { FROM = { is_faction_leader = yes } }
+      every_country = {
+        limit = { is_in_faction_with = FROM }
+        white_peace = ROOT
+      }
+    }
+    FROM = { white_peace = ROOT }
 
-        transfer_state = 375 # Texas
-        transfer_state = 376 # New Mexico
-        transfer_state = 377 # Arizona
-        transfer_state = 378 # California
-        transfer_state = 379 # Nevada
-        transfer_state = 380 # Utah 
-        transfer_state = 484 # Baja California
-        transfer_state = 919 # East Texas
-        transfer_state = 920 # Panhandle
-        transfer_state = 921 # Transpecos
-        transfer_state = 926 # Bay Area
-        transfer_state = 927 # Northern California
-        transfer_state = 928 # Southern California
-        hidden_effect = {
-            USA = {
-                set_country_flag = USA_political_turmoil
-                country_event = { id = usa.100 days = 14 }
-            }
-        }
+    transfer_state = 375 # Texas
+    transfer_state = 376 # New Mexico
+    transfer_state = 377 # Arizona
+    transfer_state = 378 # California
+    transfer_state = 379 # Nevada
+    transfer_state = 380 # Utah 
+    transfer_state = 484 # Baja California
+    transfer_state = 919 # East Texas
+    transfer_state = 920 # Panhandle
+    transfer_state = 921 # Transpecos
+    transfer_state = 926 # Bay Area
+    transfer_state = 927 # Northern California
+    transfer_state = 928 # Southern California
+    hidden_effect = {
+      USA = {
+        set_country_flag = USA_surrendered
+        set_country_flag = USA_political_turmoil
+        country_event = { id = usa.100 days = 14 }
+      }
     }
-    option = {
-        name = usa.27.b
-        ai_chance = { base = 5 }
-        set_country_flag = MEX_crush_united_states
-        add_political_power = -100
-    }
+  }
+  option = {
+    name = usa.27.b
+    ai_chance = { base = 5 }
+    set_country_flag = MEX_crush_united_states
+    add_political_power = -100
+  }
 }
 
 country_event = { # 1940 Elections
@@ -2097,65 +2096,80 @@ country_event = { # Panama Canal Captured
 }
 
 country_event = { # Oregon Question
-    id = usa.110
-    title = usa.110.t
-    desc = usa.110.d
-    picture = GFX_report_event_usa_british_sailors_destroyers
-    is_triggered_only = yes
+  id = usa.110
+  title = usa.110.t
+  desc = usa.110.d
+  picture = GFX_report_event_usa_british_sailors_destroyers
+  is_triggered_only = yes
 
-    option = { # Establish Oregon Administration
-        name = usa.110.a
-        every_owned_state = {
-            limit = {
-                OR = {
-                    state = 385
-                    state = 386
-                }
-                is_fully_controlled_by = ROOT
-                NOT = { is_core_of = ROOT }
-                NOT = { is_claimed_by = ROOT }
-            }
-            ORE = {
-                add_state_core = PREV
-                transfer_state = PREV
-            }
+  option = { # Establish Oregon Administration
+    name = usa.110.a
+    every_owned_state = {
+      limit = {
+        OR = {
+          state = 385
+          state = 386
         }
-        ENG = { puppet = ORE }
-        hidden_effect = {
-            ORE = {
-                set_politics = {
-                    ruling_party = paternal_autocrat
-                    last_election = "1932.11.15"
-                    election_frequency = 48
-                    elections_allowed = no
-                }
-                set_popularities = {
-                    social_democrat = 18
-                    social_liberal = 3
-                    market_liberal = 6
-                    social_conservative = 13
-                    authoritarian_democrat = 8
-                    paternal_autocrat = 44
-                    national_populist = 8
-                }
-            }
-        }
+        is_fully_controlled_by = ROOT
+        NOT = { is_core_of = ROOT }
+        NOT = { is_claimed_by = ROOT }
+      }
+      ORE = {
+        add_state_core = PREV
+        transfer_state = PREV
+      }
     }
-    option = { # To Canada
-        name = usa.110.b
-        every_owned_state = {
-            limit = {
-                OR = {
-                    state = 385
-                    state = 386
-                }
-                is_fully_controlled_by = ROOT
-                NOT = { is_core_of = ROOT }
-                NOT = { is_claimed_by = ROOT }
-            }
-            CAN = { transfer_state = PREV }
-        }
+    ENG = { 
+      puppet = ORE
+      set_nationality = {
+        character = ENG_Louis_Mountbatten
+        target_country = ORE
+      }
     }
+    hidden_effect = {
+      ORE = {
+        ENG_Louis_Mountbatten = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = paternal_autocrat_subtype
+              traits = { }
+            }
+          }
+        }
+        set_politics = {
+          ruling_party = paternal_autocrat
+          last_election = "1932.11.15"
+          election_frequency = 48
+          elections_allowed = no
+        }
+        set_popularities = {
+          social_democrat = 18
+          social_liberal = 3
+          market_liberal = 6
+          social_conservative = 13
+          authoritarian_democrat = 8
+          paternal_autocrat = 44
+          national_populist = 8
+        }
+      }
+    }
+  }
+  option = { # To Canada
+    name = usa.110.b
+    every_owned_state = {
+      limit = {
+        OR = {
+          state = 385
+          state = 386
+        }
+        is_fully_controlled_by = ROOT
+        NOT = { is_core_of = ROOT }
+        NOT = { is_claimed_by = ROOT }
+      }
+      CAN = { transfer_state = PREV }
+    }
+  }
 }
 
 country_event = { # Demand the Return of the Territories

@@ -651,3 +651,20 @@ news_event = { # Reijnders' Putsch in the Dutch State
     name = fxnews.34.a
   }
 }
+
+news_event = { # Reijnders' Putsch in the Dutch State
+  id = fxnews.35
+  title = fxnews.35.t
+  desc = fxnews.35.d
+  picture = GFX_news_event_ARB_revolt
+  major = yes
+  is_triggered_only = yes
+
+  show_major = {
+    NOT = { tag = ARB }
+  }
+
+  option = {
+    name = fxnews.34.a
+  }
+}

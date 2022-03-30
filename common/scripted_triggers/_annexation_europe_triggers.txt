@@ -1259,6 +1259,75 @@ can_release_west_banat = {
   }
 }
 
+#Banat - annexation_BANAT_CONQ
+can_release_banat = {
+  state = 82
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    OR = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+      43 = { is_valid_annexation_state = no } # Budapest
+    }
+    OR = {
+      country_exists = ROM
+      has_country_flag = ROM_CONQ
+      46 = { is_valid_annexation_state = no } # Bucharest
+    }
+    NOT = {
+      tag = HUN
+      tag = ROM
+      has_country_flag = BANAT_CONQ
+    }
+  }
+}
+
+#Crisana - annexation_CRISANA_CONQ
+can_release_crisana = {
+  state = 83
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    OR = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+      43 = { is_valid_annexation_state = no } # Budapest
+    }
+    OR = {
+      country_exists = ROM
+      has_country_flag = ROM_CONQ
+      46 = { is_valid_annexation_state = no } # Bucharest
+    }
+    NOT = {
+      tag = HUN
+      tag = ROM
+      has_country_flag = CRISANA_CONQ
+    }
+  }
+}
+
+#Oradea - annexation_ORADEA_CONQ
+can_release_oradea = {
+  state = 762
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    OR = {
+      country_exists = HUN
+      has_country_flag = HUN_CONQ
+      43 = { is_valid_annexation_state = no } # Budapest
+    }
+    OR = {
+      country_exists = ROM
+      has_country_flag = ROM_CONQ
+      46 = { is_valid_annexation_state = no } # Bucharest
+    }
+    NOT = {
+      tag = HUN
+      tag = ROM
+      has_country_flag = ORADEA_CONQ
+    }
+  }
+}
+
 #West Thrace - annexation_WEST_THRACE_CONQ
 can_release_west_thrace = {
   state = 763

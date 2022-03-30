@@ -10,11 +10,12 @@ HOL_landwacht_expansion = {
     }
     custom_cost_text = equipment_more_than_20
     remove_effect = {
-      add_tech_bonus = {
-        category = land_doctrine
-        bonus = 0.5
-        uses = 1
-      }
+      add_doctrine_cost_reduction = {
+				name = HOL_conduct_war_games
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
     }
   }
   HOL_recruitment_spree = {

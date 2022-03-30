@@ -973,4 +973,330 @@ ideas = {
 			}
 		}
 	}
+  tank_manufacturer = {
+		designer = yes
+		hitachi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea hitachi" }
+			allowed = { original_tag = JAP }
+			traits = {
+				medium_tank_producer_defense_2
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		Ishikawajima_Heavy_Industries = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Ishikawajima_Heavy_Industries" }
+			allowed = { original_tag = JAP }
+			traits = {
+				medium_tank_producer_offense_1
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		nissan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea nissan" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				small_tank_producer_offense_1
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		tokyo_gas = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tokyo_gas" }
+			allowed = { original_tag = JAP }
+			traits = {
+				small_tank_producer_mass_1
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+  }
+  air_naval_manufacturer = {
+		designer = yes
+
+		yokosuka_naval_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea yokosuka_naval_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				capital_ship_producer_offense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+		kure_naval_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kure_naval_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				capital_ship_producer_defense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+		sasebo_naval_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sasebo_naval_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				capital_ship_producer_mass_1
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+		maizuru_naval_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea maizuru_naval_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				small_ship_producer_offense_1
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+		mitsubishi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mitsubishi" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				fighter_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		kyushu_hikoki = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kyushu_hikoki" }
+			allowed = { original_tag = JAP }
+			traits = {
+				fighter_producer_defense_1
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		aichi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea aichi" }
+			allowed = { original_tag = JAP }
+			traits = {
+				fighter_producer_mass_1
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		tachikawa = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tachikawa" }
+			allowed = { original_tag = JAP }
+			traits = {
+				bomber_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		fx_nakajima = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea fx_nakajima" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				bomber_producer_defense_1
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		yokosuka = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea yokosuka" }
+			allowed = { original_tag = JAP }
+			traits = {
+				nav_cas_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+		kawanishi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kawanishi" }
+			allowed = { original_tag = JAP }
+			traits = {
+				nav_cas_producer_defense_1
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+	}
+  weapons_manufacturer = {
+		designer = yes
+
+		kokura_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kokura_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				infantry_equipment_producer_offense_1
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		nagoya_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea nagoya_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				infantry_equipment_producer_defense_1
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		fx_osaka_army_arsenal = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea fx_osaka_army_arsenal" }
+			allowed = { original_tag = JAP }
+			traits = {
+				artillery_producer_offense_1
+			}
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		isuzu = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea isuzu" }
+			allowed = { original_tag = JAP }
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+		toyota = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea toyota" }
+			allowed = { original_tag = JAP }
+			traits = {
+				motorised_equipment_producer_mass_1
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+  industrial_concern = {
+		kawasaki = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kawasaki" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		Mitsui_Zaibatsu = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Mitsui_Zaibatsu" }
+			allowed = { original_tag = JAP }
+			traits = {
+				industrial_manufacturer
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		nichitsu = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea nichitsu" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				chemical_producer
+			}
+			research_bonus = {
+				synth_resources = 0.1
+			}
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+		}
+		Nippon_Oil = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Nippon_Oil" }
+			allowed = { original_tag = JAP }
+			traits = {
+				chemical_producer
+			}
+			modifier = {
+				production_oil_factor = 0.2
+			}
+		}
+		sumitomo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sumitomo" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+		}
+		tokyo_shibaura_denki = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tokyo_shibaura_denki" }
+			allowed = { original_tag = JAP }
+			traits = {
+				electronics_manufacturer
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		Nihon_Musen = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Nihon_Musen" }
+			allowed = { original_tag = JAP }
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+		}
+		Nippon_Electric_Company = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Nippon_Electric_Company" }
+			allowed = { original_tag = JAP }
+			traits = {
+				electronics_manufacturer
+			}
+			research_bonus = {
+				industry = 0.05
+				electronics = 0.05
+				synth_resources = 0.05
+			}
+		}
+	}
 }

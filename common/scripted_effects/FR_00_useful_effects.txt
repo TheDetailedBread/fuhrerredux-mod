@@ -29,29 +29,49 @@ increase_mobilization = {
 
 # removes the country in scope from all wars (separately - it won't end the wars)
 separate_peace_all_wars = {
-	custom_effect_tooltip = "You will be separately peaced from all your wars."
-	hidden_effect = {
-		save_event_target_as = peace_country
+  if = {
+    limit = { has_war = yes }
+    custom_effect_tooltip = FX_separate_peace
+		hidden_effect = {
+			save_event_target_as = peace_country
 
-		# first peace out with faction leaders
-		every_country = {
-			limit = {
-				is_faction_leader = yes
-				has_war_with = event_target:peace_country
+			# first peace out with faction leaders
+			every_enemy_country = {
+				limit = {
+					is_faction_leader = yes
+				}
+				event_target:peace_country = { white_peace = PREV }
 			}
-			event_target:peace_country = { white_peace = PREV }
-		}
 
-		# then all non-puppets who aren't in factions
-		every_country = {
-			limit = {
-				is_in_faction = no
-				is_subject = no
-				has_war_with = event_target:peace_country
+			# then all non-puppets whose faction leaders aren't in the war
+			every_enemy_country = {
+				limit = {
+					is_subject = no
+					is_in_faction = yes
+					faction_leader = { NOT = { has_war_with = ROOT } }
+				}
+				event_target:peace_country = { white_peace = PREV }
 			}
-			event_target:peace_country = { white_peace = PREV }
+
+			# then all non-puppets who aren't in factions
+			every_enemy_country = {
+				limit = {
+					is_subject = no
+					is_in_faction = no
+				}
+				event_target:peace_country = { white_peace = PREV }
+			}
+
+			# then all puppets whose overlords aren't in the war
+			every_enemy_country = {
+				limit = {
+					is_subject = yes
+					overlord = { NOT = { has_war_with = ROOT } }
+				}
+				event_target:peace_country = { white_peace = PREV }
+			}
 		}
-	}
+  }
 }
 
 # removes all current ministers for the country in scope - no tooltips displayed

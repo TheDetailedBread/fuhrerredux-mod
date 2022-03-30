@@ -677,9 +677,9 @@ shared_focus = {
     prerequisite = { focus = PHI_army_expansion_program }
     relative_position_id = PHI_army_expansion_program
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = cat_superior_firepower
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -700,9 +700,9 @@ shared_focus = {
     prerequisite = { focus = PHI_army_expansion_program }
     relative_position_id = PHI_army_expansion_program
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = cat_mobile_warfare
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -723,9 +723,9 @@ shared_focus = {
     prerequisite = { focus = PHI_army_expansion_program }
     relative_position_id = PHI_army_expansion_program
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = cat_grand_battle_plan
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -746,9 +746,9 @@ shared_focus = {
     prerequisite = { focus = PHI_army_expansion_program }
     relative_position_id = PHI_army_expansion_program
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = cat_mass_assault
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -901,11 +901,11 @@ shared_focus = {
     prerequisite = { focus = PHI_mountaineers }
     relative_position_id = PHI_reconnaissance_improvements
     completion_reward = {
-        add_tech_bonus = {
-            category = land_doctrine
-            bonus = 1.0
-            uses = 1
-        }
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
     }
 }
 
@@ -1012,11 +1012,11 @@ shared_focus = {
     prerequisite = { focus = PHI_form_the_general_staff }
     relative_position_id = PHI_form_the_general_staff
     completion_reward = {
-        add_tech_bonus = {
-            category = land_doctrine
-            bonus = 1.0
-            uses = 1
-        }
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
     }
 }
 
@@ -1092,9 +1092,9 @@ shared_focus = {
     prerequisite = { focus = PHI_start_naval_buildup }
     relative_position_id = PHI_start_naval_buildup
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = cat_trade_interdiction
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -1111,10 +1111,10 @@ shared_focus = {
     prerequisite = { focus = PHI_start_naval_buildup }
     relative_position_id = PHI_start_naval_buildup
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = cat_base_strike
             category = cat_fleet_in_being
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -1195,11 +1195,11 @@ shared_focus = {
     }
     relative_position_id = PHI_strike_from_a_distance
     completion_reward = {
-        add_tech_bonus = {
-            category = naval_doctrine
-            bonus = 1.0
-            uses = 1
-        }
+        add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
     }
 }
 
@@ -1521,9 +1521,9 @@ shared_focus = {
     prerequisite = { focus = PHI_cas_research }
     relative_position_id = PHI_cas_research
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = air_doctrine
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 1
         }
     }
@@ -1612,7 +1612,7 @@ shared_focus = {
 # Department of Foreign Affairs
 shared_focus = {
     id = PHI_department_of_foreign_affairs
-    icon = GFX_goal_foreign_diplomacy
+    icon = GFX_focus_philippines_renounce_colonialism
     x = 7
     y = 8
     cost = 3
@@ -1701,13 +1701,16 @@ shared_focus = {
     prerequisite = { focus = PHI_our_place_in_the_sphere }
     relative_position_id = PHI_our_place_in_the_sphere
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = air_doctrine
-            category = naval_doctrine
-            category = infantry_weapons
-            bonus = 1.0
+            cost_reduction = 1.0
             uses = 2
         }
+        add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
     }
 }
 
@@ -1815,13 +1818,16 @@ shared_focus = {
     prerequisite = { focus = PHI_protection_from_the_empire }
     relative_position_id = PHI_protection_from_the_empire
     completion_reward = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
             category = air_doctrine
-            category = naval_doctrine
-            category = electronics
             uses = 2
-            bonus = 1.0
+            cost_reduction = 1.0
         }
+        add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
     }
 }
 
@@ -1865,23 +1871,23 @@ shared_focus = {
     available_if_capitulated = yes
     relative_position_id = PHI_purchase_naval_equipment
     completion_reward = {
-        add_tech_bonus = {
-            bonus = 1.0
-            uses = 1
-            category = air_doctrine
-        }
-        add_tech_bonus = {
-            bonus = 1.0
-            uses = 1
-            category = naval_doctrine
-        }
+        add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+        add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
     }
 }
 
 # No More Colonialism!
 shared_focus = {
     id = PHI_no_more_colonialism
-    icon = GFX_focus_philippines_renounce_colonialism
+    icon = GFX_goal_PHI_lapulapu
     x = 0
     y = 1
     cost = 6
@@ -2382,9 +2388,13 @@ shared_focus = {
         add_tech_bonus = {
             category = armor
             category = artillery
-            category = land_doctrine
             bonus = 1.0
             uses = 2
+        }
+        add_doctrine_cost_reduction = {
+          cost_reduction = 0.5
+          uses = 1
+          category = land_doctrine
         }
     }
 }
@@ -2481,11 +2491,15 @@ shared_focus = {
     relative_position_id = PHI_defense_treaty_with_america
     completion_reward = {
         add_tech_bonus = {
-            category = land_doctrine
             category = artillery
             category = industry
             bonus = 1.0
             uses = 2
+        }
+        add_doctrine_cost_reduction = {
+          cost_reduction = 0.5
+          uses = 1
+          category = land_doctrine
         }
     }
 }
@@ -2529,10 +2543,10 @@ shared_focus = {
     }
     relative_position_id = PHI_learn_from_the_germans
     completion_reward = {
-        add_tech_bonus = {
-            bonus = 1.0
-            uses = 2
-            category = land_doctrine
-        }
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
     }
 }

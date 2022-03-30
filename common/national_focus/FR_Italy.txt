@@ -4992,12 +4992,6 @@
 							ideology = social_conservative
 							popularity = 0.2
 						}
-						add_ideas = {
-							GEN_hog_sco
-							GEN_for_sco
-							GEN_eco_sco
-							GEN_sec_sco
-						}
 						copy_government_idea_of_ROOT = yes
             LBA_Idris_Senussi = {
               add_country_leader_role = {
@@ -5577,9 +5571,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_mobile_warfare"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -5773,9 +5767,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_superior_firepower"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -5960,9 +5954,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_officer_initiative"
 			add_ideas = ITA_officer_bonus
-			add_tech_bonus = {
+			add_doctrine_cost_reduction  = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -6205,8 +6199,8 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_mass_mobilization"
 			add_ideas = ITA_mobilisation
-			add_tech_bonus = {
-				bonus = 0.50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
 				uses = 2
 				category = cat_mass_assault
 			}
@@ -6401,9 +6395,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_doctrine_finalization"
 			army_experience = 40
-			add_tech_bonus = {
-				bonus = 0.50
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -6661,9 +6655,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_air_innovations"
 			air_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doctrine_bonus
-				bonus = 0.50
+				cost_reduction = 0.50
 				uses = 2
 				category = air_doctrine
 			}
@@ -6777,9 +6771,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_air_innovations2"
 			air_experience = 40
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doctrine2_bonus
-				bonus = 0.50
+				cost_reduction = 0.50
 				uses = 2
 				category = air_doctrine
 			}
@@ -6822,10 +6816,9 @@
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = navy_bonus
-				bonus = 0.50
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = naval_doctrine
 			}
 		}
@@ -7018,10 +7011,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ITA_finalize_navy"
 			navy_experience = 40
-			add_tech_bonus = {
-				name = marines_bonus
-				bonus = 0.50
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = naval_doctrine
 			}
 		}

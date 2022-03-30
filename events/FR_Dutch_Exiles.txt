@@ -85,6 +85,12 @@ country_event = { # Reclaimed the Birthright
         ideology = social_conservative
         popularity = 0.1
       }
+      every_owned_state = {
+        limit = { is_core_of = KNE }
+        teleport_armies = {
+          to_state_array = owned_controlled_states
+        }
+      }
     }
     every_owned_state = {
       limit = {
