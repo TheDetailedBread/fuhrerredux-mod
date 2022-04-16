@@ -668,3 +668,19 @@ news_event = { # Reijnders' Putsch in the Dutch State
     name = fxnews.34.a
   }
 }
+news_event = { # Formation of Second Northern Alliance 
+	id = fxnews.jap36
+	title = fxnews.jap36.t
+	desc = fxnews.jap36.d
+	picture = GFX_news_event_JAP_iesato_front
+	major = yes
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = { tag = JAP }
+	}
+
+	option = {
+		name = fxnews.jap36.a
+	}	
+}
