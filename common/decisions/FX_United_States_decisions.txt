@@ -5,6 +5,9 @@ foreign_politics = {
     days_remove = 14
     allowed = { original_tag = USA }
     fire_only_once = yes
+    ai_will_do = {
+      factor = 200
+    }
     visible = { 
       BRA = {
         has_war_with = BPS
@@ -29,6 +32,9 @@ foreign_politics = {
     cost = 50
     days_remove = 14
     allowed = { original_tag = USA }
+    ai_will_do = {
+      factor = 200
+    }
     visible = {
       PHI = {
         has_war_with = PHR
@@ -263,6 +269,9 @@ USA_american_unification = {
         }
       }
     }
+    ai_will_do = {
+      factor = 200
+    }
     visible = {
       country_exists = FROM
       is_neighbor_of = FROM
@@ -286,6 +295,9 @@ USA_american_unification = {
           tag = ENG
         }
       }
+    }
+    ai_will_do = {
+      factor = 200
     }
     visible = { 
       FROM = {
@@ -330,7 +342,9 @@ USA_state_reintegration = {
     cost = 25
     days_remove = 60
     fire_only_once = yes
-
+    ai_will_do = {
+      factor = 200
+    }
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -359,7 +373,9 @@ USA_state_reintegration = {
     cost = 25
     days_remove = 60
     fire_only_once = yes
-
+    ai_will_do = {
+      factor = 200
+    }
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -387,7 +403,9 @@ USA_state_reintegration = {
     cost = 25
     days_remove = 60
     fire_only_once = yes
-
+    ai_will_do = {
+      factor = 200
+    }
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -415,7 +433,9 @@ USA_state_reintegration = {
     cost = 25
     days_remove = 60
     fire_only_once = yes
-
+    ai_will_do = {
+      factor = 200
+    }
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -443,7 +463,9 @@ USA_state_reintegration = {
     cost = 25
     days_remove = 60
     fire_only_once = yes
-
+    ai_will_do = {
+      factor = 200
+    }
     state_target = yes
     on_map_mode = map_and_decisions_view
     targets = {
@@ -546,7 +568,9 @@ USA_monroe_doctrine = {
   USA_demand_return_of_free_government = {
     icon = GFX_decision_generic_civil_support
     cost = 50
-
+    ai_will_do = {
+      factor = 200
+    }
     target_trigger = {
       FROM = {
         OR = {

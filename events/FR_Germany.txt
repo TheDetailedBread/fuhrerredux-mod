@@ -10623,8 +10623,11 @@ country_event = { # Germany - Soviets White Peace
 		ai_chance = {
 			factor = 40
 		}
-		white_peace = {
-			tag = SOV
+		SOV = {
+			every_enemy_country = {
+				limit = { is_in_faction_with = GER }
+				white_peace = PREV
+			}
 		}		
         every_state = {
 			limit = {
