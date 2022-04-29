@@ -3,6 +3,9 @@ HOL_landwacht_expansion = {
     icon = GFX_decision_generic_tank
     fire_only_once = yes
     days_remove = 60
+    ai_will_do = {
+      factor = 200
+    }
     custom_cost_trigger = {
       has_equipment = {
         infantry_equipment_1 > 20
@@ -47,6 +50,9 @@ foreign_politics = {
     cost = 20
     icon = GFX_decision_generic_ignite_civil_war
     days_remove = 14
+    ai_will_do = {
+      factor = 200
+    }
     target_trigger = {
       FROM = {
         OR = {
@@ -75,6 +81,9 @@ foreign_politics = {
     visible = {
       has_completed_focus = HOL_covert_operations_in_belgium
     }
+    ai_will_do = {
+      factor = 200
+    }
     cost = 20
     icon = GFX_decision_generic_political_discourse
     complete_effect = {
@@ -88,6 +97,9 @@ foreign_politics = {
     allowed = { original_tag = HOL }
     visible = {
       has_completed_focus = HOL_espionage_in_the_city_of_lights
+    }
+    ai_will_do = {
+      factor = 200
     }
     target_trigger = {
       FROM = { tag = FRA }
@@ -105,6 +117,9 @@ foreign_politics = {
     allowed = { original_tag = HOL }
     visible = {
       has_completed_focus = HOL_unify_the_lowlands
+    }
+    ai_will_do = {
+      factor = 200
     }
     available = {
       FROM = {
@@ -152,6 +167,9 @@ foreign_politics = {
     available = {
       NOT = { has_war_with = BEL }
     }
+    ai_will_do = {
+      factor = 200
+    }
     cost = 25
     fire_only_once = yes
     icon = GFX_decision_eng_blackshirt_march
@@ -176,6 +194,9 @@ political_actions = {
       FROM = {
         has_country_flag = HOL_smuggled_guns_from
       }
+    }
+    ai_will_do = {
+      factor = 200
     }
     icon = GFX_decision_generic_prepare_civil_war
     cost = 20
@@ -210,6 +231,9 @@ political_actions = {
         has_completed_focus = HOL_the_red_scare
         has_country_flag = HOL_socialist_problem
       }  
+    }
+    ai_will_do = {
+      factor = 200
     }
     available = {
       custom_trigger_tooltip = {
@@ -258,6 +282,9 @@ political_actions = {
         has_completed_focus = HOL_crush_the_remaining_landwacht
         has_country_flag = HOL_landwacht_problem
       }
+    }
+    ai_will_do = {
+      factor = 200
     }
     available = {
       custom_trigger_tooltip = {
@@ -312,6 +339,9 @@ political_actions = {
     }
     activation = {
       has_country_flag = HOL_should_secure_the_state
+    }
+    ai_will_do = {
+      factor = 200
     }
     is_good = no
     selectable_mission = no
@@ -368,6 +398,9 @@ HOL_state_integration = {
     on_map_mode = map_and_decisions_view
     targets = {
         6 34 802 806 866 867
+    }
+    ai_will_do = {
+      factor = 200
     }
     target_trigger = { owns_state = FROM }
     

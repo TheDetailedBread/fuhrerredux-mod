@@ -253,6 +253,7 @@ country_event = { # Border Skirmish
         tag = USA
         date > 1938.5.1
         NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
     }
 
     mean_time_to_happen = {
@@ -302,6 +303,11 @@ country_event = { # Border City Attacked
 	picture = report_event_merchant_ship_01
 	is_triggered_only = yes
 
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
+
     immediate = {
         MEX = { set_country_flag = USA_border_city_attacked }
     }
@@ -345,6 +351,11 @@ country_event = { # Mexican Nationalists Attacked Border Area
 	desc = usa.23.d
 	picture = report_event_merchant_ship_01
 	is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
 
     immediate = {
         MEX = { set_country_flag = USA_border_city_attacked }
@@ -391,6 +402,11 @@ country_event = { # US Troops Rebuke our Attack!
 	picture = report_event_merchant_ship_01
 	is_triggered_only = yes
 
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
+
 	option = { # Attack the Troops!
 		name = usa.10.a
         ai_chance = {
@@ -414,6 +430,11 @@ country_event = { # Troops Attacked!
     desc = usa.11.d
     picture = report_event_merchant_ship_01
     is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
 
     option = { # War 
         name = usa.11.a
@@ -441,6 +462,11 @@ country_event = { # US Demands Mexico to Stop
 	picture = report_event_merchant_ship_01
 	is_triggered_only = yes
 
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
+
     option = { # Mexico doesn't want to stop
         name = usa.12.a
         ai_chance = {
@@ -463,6 +489,11 @@ country_event = { # Mexican Response
     desc = usa.13.d
     picture = report_event_generic_conference
     is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
 
     option = { # Declare war on Mexico
         name = usa.13.a
@@ -489,6 +520,11 @@ country_event = { # Mexico Stopped
     desc = usa.14.d
     picture = report_event_generic_conference
     is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_war_with = MEX }
+        NOT = { has_country_flag = USA_surrendered }
+    }
 
     option = {
         name = usa.14.a
