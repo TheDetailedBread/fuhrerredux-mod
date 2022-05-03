@@ -320,7 +320,10 @@ USA_dealing_with_the_great_depression = {
     is_good = no
 
     available = { has_completed_focus = USA_slow_recovery } 
-    activation = { USA_has_great_depression = yes }
+    activation = { 
+      USA_has_great_depression = yes
+      NOT = { has_completed_focus = USA_slow_recovery }
+    }
 
     days_mission_timeout = 360
     timeout_effect = {
