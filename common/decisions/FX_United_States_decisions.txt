@@ -256,6 +256,33 @@ USA_hydroelectric = {
 }
 
 USA_american_unification = {
+  USA_demand_oregon = {
+    icon = GFX_decision_generic_prepare_civil_war
+    target_trigger = {
+      FROM = {
+        OR = {
+          tag = ORE
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 200
+    }
+    visible = {
+      ORE = {
+        exists = yes
+        is_subject = yes
+      }
+    }
+    available = { has_war = no }
+    complete_effect = {
+      FROM = {
+        overlord = {
+          country_event = { id = usa.49 days = 2 }
+        }
+      }
+    }
+  }
   USA_attack_traitors = {
     icon = GFX_decision_generic_prepare_civil_war
     target_trigger = {
@@ -264,7 +291,6 @@ USA_american_unification = {
           tag = NAR
           tag = CLB
           tag = NEE
-          tag = ORE
           tag = USA
         }
       }

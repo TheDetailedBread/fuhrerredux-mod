@@ -1648,6 +1648,59 @@ country_event = { # Support the Philippines
     }
 }
 
+country_event = { # Demand Oregon
+    id = usa.49
+    title = usa.49.t
+    desc = usa.49.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = {
+        name = usa.49.a
+        FROM = {
+            country_event = { id = usa.50 days = 1 }
+        }
+    }
+    option = {
+        name = usa.49.b
+        FROM = {
+            country_event = { id = usa.51 days = 1 }
+        }
+    }
+}
+
+country_event = { # Demand Oregon - Accepted
+    id = usa.50
+    title = usa.50.t
+    desc = usa.50.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = {
+        name = usa.50.a
+        annex_country = {
+            target = ORE
+            transfer_troops = no
+        }
+    }
+}
+
+country_event = { # Demand Oregon - Refused
+    id = usa.51
+    title = usa.51.t
+    desc = usa.51.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = {
+        name = usa.51.a
+        create_wargoal = {
+            target = ORE
+            type = annex_everything
+        }
+    }
+}
+
 country_event = { # Nationwide Riots
     id = usa.100
     title = usa.100.t
