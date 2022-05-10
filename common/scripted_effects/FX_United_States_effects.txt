@@ -101,14 +101,7 @@ USA_decrease_effects_of_malnourishment = {
             add_idea = USA_malnourished_populace_3
         }
     }
-    else_if = {
-        limit = { has_idea = USA_malnourished_populace_3 }
-        swap_ideas = {
-            remove_idea = USA_malnourished_populace_3
-            add_idea = USA_malnourished_populace_4
-        }
-    }
     else = {
-        remove_ideas = USA_malnourished_populace_4
+        remove_ideas = USA_malnourished_populace_3
     }
 }
