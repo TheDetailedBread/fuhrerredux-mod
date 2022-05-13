@@ -1,25 +1,9 @@
-PHI_seato_decisions = {
-    icon = generic_political_actions
-    priority = 100
+# Philippine Decision Categories
+# created by: dax0102
 
-    allowed = { original_tag = PHI }
-    visible = { has_completed_focus = PHI_no_more_colonialism }
-}
-
-PHI_aeda_decisions = {
-    icon = generic_democracy
-    priority = 50
-
-    allowed = { original_tag = PHI }
-    visible = { 
-        has_global_flag = PHI_aeda_created
-    }
-}
-
-PHI_state_fundings = {
-    icon = generic_political_actions
-    priority = 30
-
-    allowed = { original_tag = PHI }
-    visible = { has_completed_focus = PHI_funding_for_state_investments }
+PHI_industrialization_plan = {
+  allowed = { original_tag = PHI }
+  icon = GFX_decision_category_generic_industry
+  picture = GFX_decision_cat_picture_government_in_exile
+  priority = 100
 }

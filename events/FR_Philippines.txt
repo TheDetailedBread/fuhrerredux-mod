@@ -1,0 +1,86 @@
+# Philippine Events
+# created by: dax0102
+
+add_namespace = philippines
+
+country_event = { # The Pearl of the Orient, 1936
+  id = philippines.0
+  title = philippines.0.t
+  desc = philippines.0.d
+  picture = GFX_report_event_PHI_intro
+  is_triggered_only = yes
+  
+  option = { # Mabuhay ang Pilipinas!
+    name = philippines.0.a
+  }
+}
+
+country_event = { # Independence At Last
+  id = philippines.1
+  title = philippines.1.t
+  desc = philippines.1.d
+  picture = GFX_report_event_PHI_independence
+  is_triggered_only = yes
+
+  option = { # Mabuhay ang Pilipinas!
+    name = philippines.1.a
+    give_military_access = USA
+    USA = {
+      give_guarantee = PHI
+      diplomatic_relation = { country = PHI relation = non_aggression_pact }
+    }
+  }
+}
+
+country_event = { # An Open Door Policy?
+  id = philippines.2
+  title = philippines.2.t
+  desc = philippines.2.d
+  picture = GFX_report_event_GER_konrad_henlein
+  fire_only_once = yes
+
+  trigger = {
+    tag = PHI
+    GER = { has_completed_focus = GER_form_govt }
+  }
+
+  option = { # Give them the entry visas
+    name = philippines.2.a
+    add_political_power = -50
+    add_timed_idea = {
+      idea = PHI_german_refugees
+      days = 480
+    }
+    hidden_effect = {
+      country_event = { id = philippines.3 days = 2 }
+    }
+  }
+  option = { # We have more problems to deal with
+    name = philippines.2.b
+    add_stability = -0.05
+    hidden_effect = {
+      country_event = { id = philippines.3 days = 2 }
+    }
+  }
+}
+
+country_event = { # Aguinaldo Critises the Government
+  id = philippines.3
+  title = philippines.3.t
+  desc = {
+    text = philippines.3.d.1
+    trigger = { has_idea = PHI_german_refugees }
+  }
+  desc = {
+    text = philippines.3.d.2
+    trigger = {
+      NOT = { has_idea = PHI_german_refugees }
+    }
+  }
+  picture = GFX_report_event_PHI_aguinaldo_quezon
+  is_triggered_only = yes
+
+  option = { # Such hypocrite!
+    name = philippines.3.a
+  }
+}
