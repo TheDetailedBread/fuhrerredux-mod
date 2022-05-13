@@ -205,11 +205,6 @@ characters = {
 				small = "gfx/interface/ministers/PHI/PHI_Jose_P_Laurel.png"
 			}
 		}
-		country_leader = {
-      desc = "POLITICS_JOSE_P_LAUREL_DESC"
-			ideology = authoritarian_democrat_subtype
-			traits = { }
-		}
 		advisor = {
 			cost = 150
 			slot = head_of_government
@@ -297,6 +292,11 @@ characters = {
 				large = "gfx/leaders/PHI/Portrait_PHI_Emilio_Aguinaldo.png"
 				small = "gfx/interface/ministers/PHI/PHI_Emilio_Aguinaldo.png"
 			}
+		}
+		country_leader = {
+      desc = "POLITICS_EMILIO_AGUINALDO_DESC"
+			ideology = authoritarian_democrat_subtype
+			traits = { }
 		}
 		country_leader = {
       desc = "POLITICS_EMILIO_AGUINALDO_DESC"
@@ -803,6 +803,21 @@ characters = {
 				head_of_government
 				social_conservative
 				hog_smiling_oilman
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { 
+				hidden_trigger = { has_country_flag = PHI_Sergio_P_Osmena_for_sco_hired }
+			}
+			idea_token = PHI_Sergio_P_Osmena_for_sco
+			on_add = { set_country_flag = PHI_Sergio_P_Osmena_for_sco_hired }
+			on_remove = { clr_country_flag = PHI_Sergio_P_Osmena_for_sco_hired }
+			traits = {
+				foreign_minister
+				social_conservative
+				for_relations_expert
 			}
 		}
 	}

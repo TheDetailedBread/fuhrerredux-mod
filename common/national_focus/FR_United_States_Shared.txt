@@ -17,10 +17,10 @@ shared_focus = {
 	}
 }
 
-# Pass the Economic Stilmulus Bill
+# Filipino Independence
 shared_focus = {
-	id = USA_pass_the_economic_stimulus_bill
-	icon = GFX_DAH_Topke
+	id = USA_filipino_independence
+	icon = GFX_focus_philippines_renounce_colonialism
 	x = -1
 	y = 1
 	cost = 6
@@ -28,9 +28,30 @@ shared_focus = {
 	prerequisite = { focus = USA_last_minute_reforms }
 	relative_position_id = USA_last_minute_reforms
 	completion_reward = {
+		increase_ruling_party_popularity_by_10 = yes
+		end_puppet = PHI
+		PHI = {
+			country_event = { id = philippines.1 days = 2 }
+		}
+	}
+}
+
+
+# Pass the Economic Stilmulus Bill
+shared_focus = {
+	id = USA_pass_the_economic_stimulus_bill
+	icon = GFX_DAH_Topke
+	x = 0
+	y = 1
+	cost = 6
+	ai_will_do = { factor = 800 }
+	prerequisite = { focus = USA_filipino_independence }
+	relative_position_id = USA_filipino_independence
+	completion_reward = {
 		add_stability = 0.05
 		hidden_effect = {
 			country_event = { id = usa.29 days = 2 }
+			USA_decrease_effects_of_the_depression = yes
 		}
 	}
 }
@@ -50,31 +71,16 @@ shared_focus = {
 	}
 }
 
-# Economic Incentives
-shared_focus = {
-	id = USA_economic_incentives
-	icon = GFX_goal_generic_foreign_investments
-	x = -2
-	y = 1
-	cost = 6
-	ai_will_do = { factor = 800 }
-	prerequisite = { focus = USA_pass_the_economic_stimulus_bill }
-	relative_position_id = USA_pass_the_economic_stimulus_bill
-	completion_reward = {
-		USA_decrease_effects_of_the_depression = yes
-	}
-}
-
 # Increase Corporate Taxes
 shared_focus = {
 	id = USA_increase_corporate_taxes
 	icon = GFX_goal_factory_complex
-	x = 0
+	x = -2
 	y = 1
 	cost = 6
 	ai_will_do = { factor = 800 }
-	prerequisite = { focus = USA_pass_the_economic_stimulus_bill }
-	relative_position_id = USA_pass_the_economic_stimulus_bill
+	prerequisite = { focus = USA_filipino_independence }
+	relative_position_id = USA_filipino_independence
 	completion_reward = {
 		USA_decrease_effects_of_the_depression = yes
 	}
@@ -88,8 +94,8 @@ shared_focus = {
 	y = 1
 	cost = 6
 	ai_will_do = { factor = 800 }
-	prerequisite = { focus = USA_pass_the_economic_stimulus_bill }
-	relative_position_id = USA_pass_the_economic_stimulus_bill
+	prerequisite = { focus = USA_filipino_independence }
+	relative_position_id = USA_filipino_independence
 	completion_reward = {
 		USA_decrease_effects_of_the_depression = yes
 	}
@@ -103,9 +109,9 @@ shared_focus = {
 	y = 1
 	cost = 6
 	ai_will_do = { factor = 1000 }
-	prerequisite = { focus = USA_economic_incentives }
+	prerequisite = { focus = USA_pass_the_economic_stimulus_bill }
 	prerequisite = { focus = USA_increase_corporate_taxes }
-	relative_position_id = USA_increase_corporate_taxes
+	relative_position_id = USA_pass_the_economic_stimulus_bill
 	completion_reward = {
 		USA_decrease_effects_of_malnourishment = yes
 	}
@@ -121,7 +127,7 @@ shared_focus = {
 	ai_will_do = { factor = 1000 }
 	prerequisite = { focus = USA_increase_corporate_taxes }
 	prerequisite = { focus = USA_decrease_military_spending }
-	relative_position_id = USA_increase_corporate_taxes
+	relative_position_id = USA_pass_the_economic_stimulus_bill
 	completion_reward = {
 		USA_decrease_effects_of_the_depression = yes
 	}
@@ -137,7 +143,7 @@ shared_focus = {
 	ai_will_do = { factor = 1000 }
 	prerequisite = { focus = USA_farmer_loans }
 	prerequisite = { focus = USA_liquidate_failing_companies }
-	relative_position_id = USA_increase_corporate_taxes
+	relative_position_id = USA_pass_the_economic_stimulus_bill
 	completion_reward = {
 		USA_decrease_effects_of_the_depression = yes
 		hidden_effect = {
