@@ -1,0 +1,183 @@
+# Philippine Focus Tree
+# created by: dax0102
+
+focus_tree = {
+  id = filipino_focus
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = PHI
+    }
+  }
+
+  # Osmena Industrialization Plan
+  focus = {
+    id = PHI_osmena_industrialization_plan
+    icon = GFX_goal_PHI_osmena_plan
+    x = 4
+    y = 0
+    cost = 6
+  }
+
+  # Farmer Subsidization Act
+  focus = {
+    id = PHI_farmer_subsidization_act
+    icon = GFX_goal_generic_agricultural_aid
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_osmena_industrialization_plan }
+    relative_position_id = PHI_osmena_industrialization_plan
+  }
+
+  # Build Up Irrigation Systems
+  focus = {
+    id = PHI_build_up_irrigation_systems
+    icon = GFX_goal_PAL_Irrigation_Program
+    x = -3
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_farmer_subsidization_act }
+    relative_position_id = PHI_farmer_subsidization_act
+  }
+  
+  # Import American Machinery
+  focus = {
+    id = PHI_import_american_machinery
+    icon = GFX_goal_PHI_american_machine
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_farmer_subsidization_act }
+    relative_position_id = PHI_farmer_subsidization_act
+  }
+
+  # Ensure Food Sufficiency
+  focus = {
+    id = PHI_ensure_food_sufficiency
+    icon = GFX_goal_PAL_Food_Import
+    x = -2
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_farmer_subsidization_act }
+    relative_position_id = PHI_farmer_subsidization_act
+  }
+
+  # New Cities
+  focus = {
+    id = PHI_new_cities
+    icon = GFX_goal_PHI_new_cities
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_osmena_industrialization_plan }
+    relative_position_id = PHI_osmena_industrialization_plan
+  }
+
+  # Deals with San Miguel
+  focus = {
+    id = PHI_deals_with_san_miguel
+    icon = GFX_goal_PHI_san_mig_deals
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_new_cities }
+    relative_position_id = PHI_new_cities
+  }
+
+  # Invite Foreign Investors
+  focus = {
+    id = PHI_invite_foreign_investors
+    icon = GFX_goal_generic_investments
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_new_cities }
+    relative_position_id = PHI_new_cities
+  }
+
+  # Resource Excavation
+  focus = {
+    id = PHI_resource_excavation
+    icon = GFX_goal_further_oil
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_import_american_machinery }
+    prerequisite = { focus = PHI_deals_with_san_miguel }
+    relative_position_id = PHI_deals_with_san_miguel
+  }
+
+  # New Armament Factories
+  focus = {
+    id = PHI_new_armament_factories
+    icon = GFX_goal_generic_military_equipment
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_deals_with_san_miguel
+      focus = PHI_invite_foreign_investors
+    }
+    relative_position_id = PHI_deals_with_san_miguel
+  }
+
+  # Central Luzon State University
+  focus = {
+    id = PHI_central_luzon_state_university
+    icon = GFX_focus_research
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_resource_excavation }
+    prerequisite = { focus = PHI_new_armament_factories }
+    relative_position_id = PHI_resource_excavation
+  }
+
+  # Philippine Atomic Energy Program
+  focus = {
+    id = PHI_philippine_atomic_energy_program
+    icon = GFX_focus_wonderweapons
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_resource_excavation }
+    prerequisite = { focus = PHI_central_luzon_state_university }
+    relative_position_id = PHI_resource_excavation
+  }
+
+  # Tourism Adventures
+  focus = {
+    id = PHI_tourism_adventures
+    icon = GFX_goal_generic_tourism
+    x = 3
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_osmena_industrialization_plan }
+    relative_position_id = PHI_osmena_industrialization_plan
+  }
+
+  # Railway Expansion
+  focus = {
+    id = PHI_railway_expansion
+    icon = GFX_goal_generic_railroad
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_invite_foreign_investors }
+    relative_position_id = PHI_invite_foreign_investors
+  }
+
+  # Farm to Market Roads
+  focus = {
+    id = PHI_farm_to_market_roads
+    icon = GFX_goal_generic_bridge
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_railway_expansion }
+    prerequisite = { focus = PHI_new_armament_factories }
+    relative_position_id = PHI_railway_expansion
+  }
+}
