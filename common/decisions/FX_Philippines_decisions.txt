@@ -1,6 +1,33 @@
 # Philippine Decisions
 # created by: dax0102
 
+political_actions = {
+  PHI_halt_refugee_acceptance = {
+    cost = 50
+    icon = GFX_decision_eng_trade_unions_support
+    allowed = { original_tag = PHI }
+    visible = {
+      has_completed_focus = PHI_grant_more_visas
+      has_idea = PHI_more_refugees
+    }
+    complete_effect = {
+      remove_ideas = PHI_more_refugees
+    }
+  }
+  PHI_resume_refugee_acceptance = {
+    cost = 50
+    icon = GFX_decision_eng_trade_unions_support
+    allowed = { original_tag = PHI }
+    visible = {
+      has_completed_focus = PHI_grant_more_visas
+      NOT = { has_idea = PHI_more_refugees }
+    }
+    complete_effect = {
+      add_ideas = PHI_more_refugees
+    }
+  }
+}
+
 PHI_industrialization_plan = {
   PHI_pnr_expansion = {
     icon = GFX_decision_generic_construction
