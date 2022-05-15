@@ -29,6 +29,18 @@ political_actions = {
 }
 
 PHI_industrialization_plan = {
+  PHI_find_new_trading_partners = {
+    icon = GFX_decision_generic_naval
+    cost = 50
+    days_remove = 120
+    fire_only_once = yes
+    visible = {
+      has_idea = PHI_hindered_british_trade
+    }
+    remove_effect = {
+      remove_ideas = PHI_hindered_british_trade
+    }
+  }
   PHI_pnr_expansion = {
     icon = GFX_decision_generic_construction
     cost = 40
@@ -60,6 +72,9 @@ PHI_industrialization_plan = {
         NOT = { is_subject_of = ROOT }
       }
     }
+    available = {
+      num_of_civilian_factories_available_for_projects > 2
+    }
     visible = {
       has_completed_focus = PHI_invite_foreign_investors
     }
@@ -71,13 +86,16 @@ PHI_industrialization_plan = {
   }
   PHI_new_city_construction = {
     icon = GFX_decision_hol_draw_up_staff_plans
-    cost = 10
+    cost = 25
     days_remove = 180
     fire_only_once = yes
     state_target = yes
     targets = { 327 623 624 625 626 627 628 }
     target_trigger = {
       controls_state = FROM
+    }
+    available = {
+      num_of_civilian_factories_available_for_projects > 2
     }
     visible = {
       has_completed_focus = PHI_new_cities
@@ -118,13 +136,16 @@ PHI_industrialization_plan = {
   }
   PHI_promote_tourism = {
     icon = GFX_decision_hol_attract_foreign_investors
-    cost = 10
+    cost = 25
     days_remove = 60
     fire_only_once = yes
     state_target = yes
     targets = { 623 624 625 626 }
     target_trigger = {
       controls_state = FROM
+    }
+    available = {
+      num_of_civilian_factories_available_for_projects > 2
     }
     visible = {
       has_completed_focus = PHI_tourism_adventures
@@ -155,13 +176,16 @@ PHI_industrialization_plan = {
   }
   PHI_irrigation_construction = {
     icon = generic_cement_mixer
-    cost = 10
+    cost = 25
     days_remove = 120
     fire_only_once = yes
     state_target = yes
     targets = { 623 327 628 627 }
     target_trigger = {
       controls_state = FROM
+    }
+    available = {
+      num_of_civilian_factories_available_for_projects > 2
     }
     visible = {
       has_completed_focus = PHI_build_up_irrigation_systems
@@ -192,7 +216,7 @@ PHI_industrialization_plan = {
   }
   PHI_industrial_investments = {
     icon = GFX_decision_eng_trade_unions_support
-    cost = 10
+    cost = 25
     days_remove = 120
     fire_only_once = yes
     state_target = yes
