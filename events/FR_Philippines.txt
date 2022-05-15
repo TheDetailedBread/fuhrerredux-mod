@@ -274,6 +274,15 @@ country_event = { # Proclamation of the Liberal Party
     clr_country_flag = coalition_market_liberal
     clr_country_flag = coalition_social_liberal
     hidden_effect = {
+      if = {
+        limit = {
+          has_country_flag = PHI_has_open_door_policy
+        }
+        country_event = {
+          id = philippines.14 days = 14
+        }
+      }
+
       set_party_name = {
         ideology = market_liberal
         name = PHI_new_liberal_party
@@ -285,5 +294,64 @@ country_event = { # Proclamation of the Liberal Party
         long_name = PHI_new_liberal_party_long
       }
     }
+  }
+}
+
+country_event = { # Roxas Advocates for Early Elections
+  id = philippines.14
+  title = philippines.14.t
+  desc = philippines.14.d
+  is_triggered_only = yes
+  picture = GFX_report_event_PHI_roxas_quirino
+
+  option = { # That's absurd!
+    name = philippines.14.a
+    hidden_effect = {
+      country_event = { id = philippines.15 days = 3 }
+    }
+  }
+}
+
+country_event = { # Aguinaldo Supports Early Elections
+  id = philippines.15
+  title = philippines.15.t
+  desc = philippines.15.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Just try and try Miong...
+    name = philippines.15.a
+    hidden_effect = {
+      country_event = { id = philippines.16 days = 14 }
+    }
+  }
+}
+
+country_event = { # Benigno Ramos Arrives from Tokyo
+  id = philippines.16
+  title = philippines.16.t
+  desc = philippines.16.d
+  is_triggered_only = yes
+
+  option = { # Not you too...
+    name = philippines.16.a
+    hidden_effect = {
+      country_event = { id = philippines.18 days = 2 }
+    }
+  }
+}
+
+country_event = { # Government Response
+  id = philippines.17
+  title = philippines.17.t
+  desc = philippines.17.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # No to Early Elections
+    name = philippines.17.a
+  }
+  option = { # Yes to Early Elections
+    name = philippines.17.b
   }
 }
