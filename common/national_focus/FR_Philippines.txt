@@ -11,13 +11,41 @@ focus_tree = {
     }
   }
 
+  ######################################################
+  #                                                    #
+  #                      INDUSTRY                      #
+  #                                                    #
+  ######################################################
+
   # Osmena Industrialization Plan
   focus = {
     id = PHI_osmena_industrialization_plan
     icon = GFX_goal_PHI_osmena_plan
-    x = 4
+    x = 20
     y = 0
     cost = 6
+    completion_reward = {
+      custom_effect_tooltip = PHI_osmena_industrialization_plan_tt
+    }
+  }
+
+  # Grant More Visas
+  focus = {
+    id = PHI_grant_more_visas
+    icon = GFX_goal_NOR_passport_convention
+    x = -3
+    y = 1
+    cost = 6
+    available = {
+      has_country_flag = PHI_has_open_door_policy
+      is_subject = no
+      NOT = { has_idea = PHI_german_refugees }
+    }
+    prerequisite = { focus = PHI_osmena_industrialization_plan }
+    relative_position_id = PHI_osmena_industrialization_plan
+    completion_reward = {
+      add_ideas = PHI_more_refugees
+    }
   }
 
   # Farmer Subsidization Act
@@ -29,6 +57,10 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_osmena_industrialization_plan }
     relative_position_id = PHI_osmena_industrialization_plan
+    completion_reward = {
+      add_political_power = 50
+      add_ideas = PHI_farmer_subsidies
+    }
   }
 
   # Build Up Irrigation Systems
@@ -40,6 +72,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_farmer_subsidization_act }
     relative_position_id = PHI_farmer_subsidization_act
+    completion_reward = {
+      custom_effect_tooltip = PHI_build_up_irrigation_systems_tt
+    }
   }
   
   # Import American Machinery
@@ -51,6 +86,13 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_farmer_subsidization_act }
     relative_position_id = PHI_farmer_subsidization_act
+    completion_reward = {
+      add_tech_bonus = {
+        category = industry
+        bonus = 1.0
+        uses = 2
+      }
+    }
   }
 
   # Ensure Food Sufficiency
@@ -62,6 +104,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_farmer_subsidization_act }
     relative_position_id = PHI_farmer_subsidization_act
+    completion_reward = {
+      add_ideas = PHI_food_sufficient
+    }
   }
 
   # New Cities
@@ -73,6 +118,18 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_osmena_industrialization_plan }
     relative_position_id = PHI_osmena_industrialization_plan
+    completion_reward = {
+      add_tech_bonus = {
+        technology = construction1
+        technology = construction2
+        technology = construction3
+        technology = construction4
+        technology = construction5
+        bonus = 1.0
+        uses = 1
+      }
+      custom_effect_tooltip = PHI_new_cities_tt
+    }
   }
 
   # Deals with San Miguel
@@ -84,6 +141,15 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_new_cities }
     relative_position_id = PHI_new_cities
+    completion_reward = {
+      add_offsite_building = {
+        type = industrial_complex
+        level = 1
+      }
+
+      custom_effect_tooltip = available_designer
+      show_ideas_tooltip = PHI_san_miguel_corporation
+    }
   }
 
   # Invite Foreign Investors
@@ -95,6 +161,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_new_cities }
     relative_position_id = PHI_new_cities
+    completion_reward = {
+      custom_effect_tooltip = PHI_invite_foreign_investors_tt
+    }
   }
 
   # Resource Excavation
@@ -107,6 +176,17 @@ focus_tree = {
     prerequisite = { focus = PHI_import_american_machinery }
     prerequisite = { focus = PHI_deals_with_san_miguel }
     relative_position_id = PHI_deals_with_san_miguel
+    completion_reward = {
+      add_tech_bonus = {
+        technology = excavation1
+        technology = excavation2
+        technology = excavation3
+        technology = excavation4
+        technology = excavation5
+        bonus = 1.0
+        uses = 1
+      }
+    }
   }
 
   # New Armament Factories
@@ -116,11 +196,51 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      controls_state = 623
+      controls_state = 327
+    }
     prerequisite = {
       focus = PHI_deals_with_san_miguel
       focus = PHI_invite_foreign_investors
     }
     relative_position_id = PHI_deals_with_san_miguel
+    completion_reward = {
+      623 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+      327 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
+      }
+    }
   }
 
   # Central Luzon State University
@@ -133,6 +253,9 @@ focus_tree = {
     prerequisite = { focus = PHI_resource_excavation }
     prerequisite = { focus = PHI_new_armament_factories }
     relative_position_id = PHI_resource_excavation
+    completion_reward = {
+      add_research_slot = 1
+    }
   }
 
   # Philippine Atomic Energy Program
@@ -142,9 +265,19 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      NOT = { has_idea = PHI_agricultural_society }
+    }
     prerequisite = { focus = PHI_resource_excavation }
     prerequisite = { focus = PHI_central_luzon_state_university }
     relative_position_id = PHI_resource_excavation
+    completion_reward = {
+      add_tech_bonus = {
+        category = nuclear
+        bonus = 1.0
+        uses = 1
+      }
+    }
   }
 
   # Tourism Adventures
@@ -156,6 +289,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_osmena_industrialization_plan }
     relative_position_id = PHI_osmena_industrialization_plan
+    completion_reward = {
+      custom_effect_tooltip = PHI_tourism_adventures_tt
+    }
   }
 
   # Railway Expansion
@@ -167,17 +303,813 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_invite_foreign_investors }
     relative_position_id = PHI_invite_foreign_investors
+    completion_reward = {
+      unlock_decision_tooltip = PHI_pnr_expansion
+      add_tech_bonus = {
+        category = train_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
   }
 
-  # Farm to Market Roads
+  # Expand Manila Harbour
   focus = {
-    id = PHI_farm_to_market_roads
-    icon = GFX_goal_generic_bridge
+    id = PHI_expand_manila_harbour
+    icon = GFX_goal_generic_naval_base
     x = 0
     y = 1
     cost = 6
     prerequisite = { focus = PHI_railway_expansion }
     prerequisite = { focus = PHI_new_armament_factories }
     relative_position_id = PHI_railway_expansion
+    completion_reward = {
+      327 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = dockyard
+              size > 0
+              include_locked = yes
+            }
+          }
+
+          add_extra_state_building_slots = 2
+          add_building_construction = {
+            type = dockyard
+            level = 2
+            instant_build = yes
+          }
+        }
+      }
+    }
+  }
+
+  ######################################################
+  #                                                    #
+  #                       ARMY                         #
+  #                                                    #
+  ######################################################
+
+  # Expand the Philippine Scouts
+  focus = {
+    id = PHI_expand_the_philippine_scouts
+    icon = GFX_goal_PHI_army
+    x = 10
+    y = 0
+    cost = 6
+    relative_position_id = PHI_osmena_industrialization_plan
+    completion_reward = {
+      add_manpower = 50000
+      army_experience = 25
+    }
+  }
+
+  # Combined Arms Doctrine
+  focus = {
+    id = PHI_combined_arms_doctrine
+    icon = GFX_goal_generic_army_artillery
+    x = -5
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_armor_spearhead_doctrine
+      focus = PHI_extensive_planning_doctrine
+      focus = PHI_mass_mobilization_doctrine
+    }
+    prerequisite = { focus = PHI_expand_the_philippine_scouts }
+    relative_position_id = PHI_expand_the_philippine_scouts
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_superior_firepower
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Armour Spearhead Doctrine
+  focus = {
+    id = PHI_armor_spearhead_doctrine
+    icon = GFX_goal_generic_army_tanks2
+    x = -3
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_combined_arms_doctrine
+      focus = PHI_extensive_planning_doctrine
+      focus = PHI_mass_mobilization_doctrine
+    }
+    prerequisite = { focus = PHI_expand_the_philippine_scouts }
+    relative_position_id = PHI_expand_the_philippine_scouts
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_mobile_warfare
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Extensive Planning Doctrine
+  focus = {
+    id = PHI_extensive_planning_doctrine
+    icon = GFX_goal_generic_occupy_states_ongoing_war
+    x = 1 
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_armor_spearhead_doctrine
+      focus = PHI_combined_arms_doctrine
+      focus = PHI_mass_mobilization_doctrine
+    }
+    prerequisite = { focus = PHI_expand_the_philippine_scouts }
+    relative_position_id = PHI_expand_the_philippine_scouts
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_grand_battle_plan
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Mass Mobilization Doctrine
+  focus = {
+    id = PHI_mass_mobilization_doctrine
+    icon = GFX_goal_army_guy_2
+    x = 3
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_armor_spearhead_doctrine
+      focus = PHI_extensive_planning_doctrine
+      focus = PHI_combined_arms_doctrine
+    }
+    prerequisite = { focus = PHI_expand_the_philippine_scouts }
+    relative_position_id = PHI_expand_the_philippine_scouts
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_mass_assault
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Modernize Firepower
+  focus = {
+    id = PHI_modernize_firepower
+    icon = GFX_goal_artillery
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_combined_arms_doctrine }
+    relative_position_id = PHI_combined_arms_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = artillery
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Equipment Assembly Lines
+  focus = {
+    id = PHI_equipment_assembly_lines
+    icon = GFX_goal_industry_air
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_modernize_firepower }
+    relative_position_id = PHI_modernize_firepower
+    completion_reward = {
+      add_ideas = PHI_equipment_production
+    }
+  }
+
+  # Army Engineering Corps
+  focus = {
+    id = PHI_army_engineering_corps
+    icon = GFX_goal_generic_construction2
+    x = 3
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_modernize_firepower }
+    relative_position_id = PHI_modernize_firepower
+    completion_reward = {
+      add_tech_bonus = {
+        category = engineers_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Catching up with Communications
+  focus = {
+    id = PHI_catching_up_with_communications
+    icon = GFX_goal_radio
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_armor_spearhead_doctrine }
+    relative_position_id = PHI_armor_spearhead_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = signal_company_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Tank Production Initiatives
+  focus = {
+    id = PHI_tank_production_initiatives
+    icon = GFX_goal_generic_army_tanks
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_armor_spearhead_doctrine }
+    relative_position_id = PHI_armor_spearhead_doctrine
+    completion_reward = {
+      add_ideas = PHI_tank_production
+    }
+  }
+
+  # Armor Research and Modernization
+  focus = {
+    id = PHI_armor_research_and_modernization
+    icon = GFX_focus_generic_tank_destroyer
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_armor_spearhead_doctrine }
+    relative_position_id = PHI_armor_spearhead_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = armor
+        bonus = 1.0
+        uses = 2
+      }
+    }
+  }
+
+  # Reconnaissance Improvements
+  focus = {
+    id = PHI_reconnaissance_improvements
+    icon = GFX_goal_machine
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_extensive_planning_doctrine }
+    relative_position_id = PHI_extensive_planning_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = recon_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Mountaineers
+  focus = {
+    id = PHI_mountaineers
+    icon = GFX_goal_generic_mountain_warfare
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_extensive_planning_doctrine }
+    relative_position_id = PHI_extensive_planning_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = mountaineers_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # War Games
+  focus = {
+    id = PHI_conduct_war_games
+    icon = GFX_goal_checkmate
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_reconnaissance_improvements }
+    prerequisite = { focus = PHI_mountaineers }
+    relative_position_id = PHI_reconnaissance_improvements
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 1
+        category = land_doctrine
+      }
+    }
+  }
+
+  # Standardization of Equipment
+  focus = {
+    id = PHI_standardization_of_equipment
+    icon = GFX_goal_generic_small_arms
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_mass_mobilization_doctrine }
+    relative_position_id = PHI_mass_mobilization_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = infantry_weapons
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Army Scout Rangers
+  focus = {
+    id = PHI_army_scout_rangers
+    icon = GFX_goal_generic_special_forces
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_standardization_of_equipment }
+    relative_position_id = PHI_standardization_of_equipment
+    completion_reward = {
+      add_tech_bonus = {
+        technology = tech_special_forces
+        technology = advanced_special_forces
+        technology = improved_special_forces
+        technology = extreme_environment_training
+        technology = survival_training
+        technology = elite_forces
+        technology = jungle_warfare
+        bonus = 1.0
+        uses = 2
+      }
+    }
+  }
+
+  # Logistical Improvements
+  focus = {
+    id = PHI_logistical_improvements
+    icon = GFX_goal_generic_support_equipment
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_standardization_of_equipment }
+    relative_position_id = PHI_standardization_of_equipment
+    completion_reward = {
+      add_tech_bonus = {
+        category = logistics_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Form the General Staff
+  focus = {
+    id = PHI_form_the_general_staff
+    icon = GFX_focus_generic_military_mission
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_combined_arms_doctrine
+      focus = PHI_armor_spearhead_doctrine
+      focus = PHI_extensive_planning_doctrine
+      focus = PHI_mass_mobilization_doctrine
+    }
+    relative_position_id = PHI_extensive_planning_doctrine
+    completion_reward = {
+      add_ideas = PHI_general_staff
+    }
+  }
+
+  # Philippine Military Academy
+  focus = {
+    id = PHI_expand_the_constabulary_officers_school
+    icon = GFX_focus_generic_military_academy
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_form_the_general_staff }
+    relative_position_id = PHI_form_the_general_staff
+    completion_reward = {
+      add_ideas = PHI_new_officer_schools
+    }
+  }
+
+  # Learning from the Great War
+  focus = {
+    id = PHI_learning_from_the_great_war
+    icon = GFX_goal_graveyard
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_form_the_general_staff }
+    relative_position_id = PHI_form_the_general_staff
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 1
+        category = land_doctrine
+      }
+    }
+  }
+
+  # Military Science
+  focus = {
+    id = PHI_military_science
+    icon = GFX_goal_great_science
+    x = -2
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_learning_from_the_great_war }
+    relative_position_id = PHI_expand_the_constabulary_officers_school
+    completion_reward = {
+      add_research_slot = 1
+    }
+  }
+
+  # Fortress Philippines
+  focus = {
+    id = PHI_fortress_philippines
+    icon = GFX_goal_generic_fortify_city
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_expand_the_constabulary_officers_school }
+    prerequisite = { focus = PHI_learning_from_the_great_war }
+    relative_position_id = PHI_expand_the_constabulary_officers_school
+    completion_reward = {
+      623 = {
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 1415
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 12213
+          instant_build = yes
+        }
+      }
+      327 = {
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 10265
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 7323
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 1221
+          instant_build = yes
+        }
+      }
+      627 = {
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 4241
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          province = 12158
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  # Legacy of General Luna
+  focus = {
+    id = PHI_legacy_of_general_luna
+    icon = GFX_goal_PHI_legacy_luna
+    x = 2
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_learning_from_the_great_war }
+    relative_position_id = PHI_expand_the_constabulary_officers_school
+    completion_reward = {
+      add_ideas = PHI_lunas_legacy
+    }
+  }
+
+  ######################################################
+  #                                                    #
+  #                       NAVY                         #
+  #                                                    #
+  ######################################################
+
+  # Start Naval Buildup
+  focus = {
+    id = PHI_start_naval_buildup
+    icon = GFX_goal_PHI_navy
+    x = 10
+    y = 0
+    cost = 6
+    relative_position_id = PHI_expand_the_philippine_scouts
+    completion_reward = {
+      navy_experience = 25
+    }
+  }
+
+  # An Attack Underneath
+  focus = {
+    id = PHI_an_attack_underneath
+    icon = GFX_goal_generic_wolf_pack
+    x = -3
+    y = 1
+    cost = 6
+    mutually_exclusive = { focus = PHI_strike_from_a_distance }
+    prerequisite = { focus = PHI_start_naval_buildup }
+    relative_position_id = PHI_start_naval_buildup
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_trade_interdiction
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Strike from a Distance
+  focus = {
+    id = PHI_strike_from_a_distance
+    icon = GFX_goal_generic_navy_battleship
+    x = -1
+    y = 1
+    cost = 6
+    mutually_exclusive = { focus = PHI_an_attack_underneath }
+    prerequisite = { focus = PHI_start_naval_buildup }
+    relative_position_id = PHI_start_naval_buildup
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_base_strike
+        category = cat_fleet_in_being
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Submarine Research
+  focus = {
+    id = PHI_submarine_research
+    icon = GFX_goal_generic_navy_submarine
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+        focus = PHI_an_attack_underneath
+        focus = PHI_strike_from_a_distance
+    }
+    relative_position_id = PHI_an_attack_underneath
+    completion_reward = {
+      add_tech_bonus = {
+        category = ss_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Destoyer Modernization
+  focus = {
+    id = PHI_destoyer_modernization
+    icon = GFX_focus_generic_navy_battleship2
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { 
+      focus = PHI_an_attack_underneath
+      focus = PHI_strike_from_a_distance
+    }
+    relative_position_id = PHI_an_attack_underneath
+    completion_reward = {
+      add_tech_bonus = {
+        category = dd_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Cruiser Development
+  focus = {
+    id = PHI_cruiser_development
+    icon = GFX_goal_generic_navy_cruiser
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_destoyer_modernization }
+    prerequisite = { focus = PHI_submarine_research }
+    relative_position_id = PHI_destoyer_modernization
+    completion_reward = {
+      add_tech_bonus = {
+        category = cl_tech
+        category = ca_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # New and Improved Doctrines
+  focus = {
+    id = PHI_new_and_improved_doctrines
+    icon = GFX_goal_generic_navy_doctrines_tactics
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = {
+      focus = PHI_an_attack_underneath
+      focus = PHI_strike_from_a_distance
+    }
+    relative_position_id = PHI_strike_from_a_distance
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 1
+        category = naval_doctrine
+      }
+    }
+  }
+
+  # Train Marines
+  focus = {
+    id = PHI_train_marines
+    icon = GFX_goal_generic_amphibious_assault
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_new_and_improved_doctrines }
+    prerequisite = { focus = PHI_cruiser_development }
+    relative_position_id = PHI_new_and_improved_doctrines
+    completion_reward = {
+      add_tech_bonus = {
+        category = marine_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Salvage American Designs
+  focus = {
+    id = PHI_salvage_american_designs
+    icon = GFX_focus_chi_mission_to_the_us
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_start_naval_buildup }
+    relative_position_id = PHI_start_naval_buildup
+    completion_reward = {
+      PHI_add_american_naval_tech = yes
+      PHI_add_american_naval_variants = yes
+    }
+  }
+
+  # Naval Base in Puerto Princesa
+  focus = {
+    id = PHI_naval_base_in_puerto_princesa
+    icon = GFX_goal_generic_construct_naval_dockyard
+    x = -1
+    y = 1
+    cost = 6
+    available = { owns_state = 626 }
+    prerequisite = { focus = PHI_salvage_american_designs }
+    relative_position_id = PHI_salvage_american_designs
+    completion_reward = {
+      626 = {
+        if = {
+          limit = {
+            free_building_slots = {
+                building = dockyard
+                size > 0
+                include_locked = yes
+            }
+          }
+        }
+
+        add_extra_state_building_slots = 1
+        add_building_construction = {
+          type = dockyard
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  # Construct the Davao Port
+  focus = {
+    id = PHI_construct_the_davao_port
+    icon = GFX_goal_generic_construction
+    x = 1
+    y = 1
+    cost = 6
+    available = { owns_state = 627 }
+    prerequisite = { focus = PHI_salvage_american_designs }
+    relative_position_id = PHI_salvage_american_designs
+    completion_reward = {
+      627 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = dockyard
+              size > 0
+              include_locked = yes
+            }
+          }
+        }
+
+        add_extra_state_building_slots = 1
+        add_building_construction = {
+          type = dockyard
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+  }
+
+  # Refurbish American Ships
+  focus = {
+    id = PHI_refurbish_american_ships
+    icon = GFX_goal_generic_naval_cruiser2
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_salvage_american_designs }
+    relative_position_id = PHI_salvage_american_designs
+    completion_reward = {
+      PHI_deploy_refubished_ships = yes
+    }
+  }
+
+  # Dedicated Repair Facilities
+  focus = {
+    id = PHI_dedicated_repair_facilities
+    icon = GFX_goal_generic_production2
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_refurbish_american_ships }
+    relative_position_id = PHI_refurbish_american_ships
+    completion_reward = {
+      add_ideas = PHI_naval_repair_facilities
+    }
+  }
+
+  # Landing Craft
+  focus = {
+    id = PHI_landing_craft
+    icon = GFX_goal_generic_occupy_states_coastal
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_refurbish_american_ships }
+    relative_position_id = PHI_refurbish_american_ships
+    completion_reward = {
+      if = {
+        limit = { has_dlc = "Man the Guns" }
+        add_tech_bonus = {
+          technology = mtg_landing_craft
+          technology = mtg_transport
+          technology = mtg_tank_landing_craft
+          bonus = 2.0
+          uses = 1
+        }
+      }
+      else = {
+        add_tech_bonus = {
+          bonus = 2.0
+          technology = landing_craft
+          technology = transport
+          technology = tank_landing_craft
+          uses = 1
+        }
+      }
+    }
   }
 }
+

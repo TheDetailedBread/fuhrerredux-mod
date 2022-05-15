@@ -21,7 +21,6 @@ ideas = {
     }
     PHI_hacienda_questions = {
       allowed = { original_tag = PHI }
-      picture = generic_agrarian_reform
       modifier = {
         global_building_slots_factor = -0.2
       }
@@ -33,6 +32,83 @@ ideas = {
         research_speed_factor = 0.15
         production_speed_buildings_factor = 0.15
         monthly_population = 0.15
+      }
+    }
+    PHI_farmer_subsidies = {
+      allowed = { original_tag = PHI }
+      picture = ger_mefo_bills_payment
+      modifier = {
+        monthly_population = 0.15
+        production_speed_buildings_factor = 0.05
+      }
+    }
+    PHI_food_sufficient = {
+      allowed = { original_tag = PHI }
+      picture = generic_agrarian_society
+      modifier = {
+        political_power_gain = 0.05
+        industrial_capacity_factory = 0.15
+        industrial_capacity_dockyard = 0.15
+      }
+    }
+    PHI_general_staff = {
+      allowed = { original_tag = PHI }
+      modifier = {
+        army_org_factor = 0.05
+        experience_gain_army_factor = 0.05
+        planning_speed = 0.15
+      }
+    }
+    PHI_new_officer_schools = {
+      allowed = { original_tag = PHI }
+      picture = generic_army_war_college
+      modifier = {
+        army_leader_start_level = 1
+        experience_gain_army_unit_factor = 0.15
+      }
+    }
+    PHI_equipment_production = {
+      allowed = { original_tag = PHI }
+      equipment_bonus = {
+        infantry_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+        motorized_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+        artillery_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+      }
+    }
+    PHI_tank_production = {
+      allowed = { original_tag = PHI }
+      picture = generic_armor
+      equipment_bonus = {
+        armor = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+      }
+    }
+    PHI_lunas_legacy = {
+      allowed = { original_tag = PHI }
+      modifier = {
+        army_attack_factor = 0.05
+        army_defence_factor = 0.05
+        army_morale_factor = 0.05
+        supply_consumption_factor = -0.15
+      }
+    }
+    PHI_more_refugees = {
+      allowed = { original_tag = PHI }
+      picture = prc_low_popular_support3
+      modifier = {
+        production_speed_buildings_factor = 0.05
+        research_speed_factor = 0.05
       }
     }
   }
@@ -66,8 +142,10 @@ ideas = {
     }
     PHI_san_miguel_corporation = {
       allowed = { original_tag = PHI }
+      available = { has_completed_focus = PHI_deals_with_san_miguel }
       picture = san_miguel_corporation
       traits = { industrial_concern }
+      cost = 50
       research_bonus = {
         industry = 0.15
       }
