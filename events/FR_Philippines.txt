@@ -331,12 +331,13 @@ country_event = { # Benigno Ramos Arrives from Tokyo
   id = philippines.16
   title = philippines.16.t
   desc = philippines.16.d
+  picture = GFX_report_event_PHI_benigno_ramos
   is_triggered_only = yes
 
   option = { # Not you too...
     name = philippines.16.a
     hidden_effect = {
-      country_event = { id = philippines.18 days = 2 }
+      country_event = { id = philippines.17 days = 2 }
     }
   }
 }
@@ -348,10 +349,56 @@ country_event = { # Government Response
   picture = GFX_report_event_PHI_malacanan
   is_triggered_only = yes
 
-  option = { # No to Early Elections
+  option = { # Now we wait
     name = philippines.17.a
+    hidden_effect = {
+      country_event = { id = philippines.18 days = 7 }
+    }
   }
-  option = { # Yes to Early Elections
-    name = philippines.17.b
+}
+
+country_event = { # Anti-Government Protests in Tarlac
+  id = philippines.18
+  title = philippines.18.t
+  desc = philippines.18.d
+  picture = GFX_report_event_gathering_protest
+  is_triggered_only = yes
+
+  option = { # Oh no...
+    name = philippines.18.a
+    decrease_ruling_party_popularity_by_10 = yes
+  }
+}
+
+country_event = { # London Stock Market Crash
+  id = philippines.19
+  title = philippines.19.t
+  desc = philippines.19.d
+  picture = GFX_report_event_gathering_protest
+  is_triggered_only = yes
+
+  option = { # Diyos ko!
+    name = philippines.19.a
+    add_ideas = PHI_hindered_british_trade
+    hidden_effect = {
+      country_event = { id = philippines.20 days = 4 }
+    }
+  }
+}
+
+country_event = { # Protests in Manila
+  id = philippines.20
+  title = philippines.20.t
+  desc = philippines.20.d
+  picture = GFX_report_event_gathering_protest
+  is_triggered_only = yes
+
+  option = { # Let them protest
+    name = philippines.20.a
+    add_political_power = -100
+  }
+  option = { # Deploy some troops, just to be sure
+    name = philippines.20.b
+    add_political_power = -100
   }
 }
