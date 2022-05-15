@@ -29,6 +29,11 @@ country_event = { # Independence At Last
       give_guarantee = PHI
       diplomatic_relation = { country = PHI relation = non_aggression_pact }
     }
+    hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.1 days = 2 }
+      }
+    }
   }
 }
 
@@ -51,15 +56,16 @@ country_event = { # An Open Door Policy?
       idea = PHI_german_refugees
       days = 480
     }
+    set_country_flag = PHI_has_open_door_policy
     hidden_effect = {
-      country_event = { id = philippines.3 days = 2 }
+      country_event = { id = philippines.3 days = 7 }
     }
   }
   option = { # We have more problems to deal with
     name = philippines.2.b
     add_stability = -0.05
     hidden_effect = {
-      country_event = { id = philippines.3 days = 2 }
+      country_event = { id = philippines.3 days = 7 }
     }
   }
 }
@@ -82,5 +88,176 @@ country_event = { # Aguinaldo Critises the Government
 
   option = { # Such hypocrite!
     name = philippines.3.a
+  }
+}
+
+country_event = { # Investments in the Philippines?
+  id = philippines.4
+  title = philippines.4.t
+  desc = philippines.4.d
+  picture = GFX_report_event_generic_sign_treaty1
+  is_triggered_only = yes
+
+  option = { # 
+    name = philippines.4.a
+    FROM = { 
+      country_event = { id = philippines.5 days = 1 }
+      add_opinion_modifier = {
+        target = ROOT
+        modifier = PHI_provided_investment
+      }
+    }
+    hidden_effect = {
+      country_event = { id = philippines.8 days = 360 }
+    }
+  }
+  option = { # It's not worth it
+    name = philippines.4.b
+    FROM = { 
+      country_event = { id = philippines.6 days = 1 }
+    }
+  }
+}
+
+country_event = { # FROM invests in the Philippines
+  id = philippines.5
+  title = philippines.5.t
+  desc = philippines.5.d
+  picture = GFX_report_event_generic_sign_treaty1
+  is_triggered_only = yes
+
+  option = {
+    name = philippines.5.a
+    FROM = { set_country_flag = PHI_investments }
+    add_offsite_building = {
+      type = industrial_complex
+      level = 1
+    }
+  }
+}
+
+option = { # FROM not invest in the Philippines
+  name = philippines.6
+  title = philippines.6.t
+  desc = philippines.6.d
+  picture = GFX_report_event_generic_sign_treaty1
+  is_triggered_only = yes
+
+  option = {
+    name = philippines.6.a
+  }
+}
+
+country_event = { # Removes investments from Philippines
+  id = philippines.7
+  title = philippines.7.t
+  desc = philippines.7.d
+  picture = GFX_report_event_generic_sign_treaty1
+  is_triggered_only = yes
+
+  option = {
+    name = philippines.7.a
+    hidden_effect = {
+      add_offsite_building = {
+        type = industrial_complex
+        level = -1
+      }
+    }
+  }
+}
+
+country_event = { # Profits from the Philippines
+  id = philippines.8
+  title = philippines.8.t
+  desc = philippines.8.d
+  picture = GFX_report_event_PHI_intro
+  is_triggered_only = yes
+
+  trigger = {
+    has_country_flag = PHI_investments
+  }
+
+  option = { # Let the money flow
+    name = philippines.8.a
+    add_offsite_building = {
+      type = industrial_complex
+      level = 1
+    }
+  }
+}
+
+country_event = { # The Envelope
+  id = philippines.9
+  title = philippines.9.t
+  desc = philippines.9.d
+  picture = GFX_report_event_PHI_aquino_speech
+  is_triggered_only = yes
+
+  option = { # Summon Aquino Now!
+    name = philippines.9.a
+    hidden_effect = {
+      country_event = { id = philippines.10 days = 2 }
+    }
+  }
+}
+
+country_event = { # The Arrival of the Crook
+  id = philippines.10
+  title = philippines.10.t
+  desc = philippines.10.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Let's hope this won't get ugly.
+    name = philippines.10.a
+    remove_ideas = PHI_Benigno_Aquino_Sr_eco_sco
+    add_ideas = PHI_Jose_G_David_eco_sco
+    hidden_effect = {
+      country_event = { id = philippines.11 days = 5 }
+    }
+  }
+}
+
+country_event = { # Sakdalista Popularity Growing
+  id = philippines.11
+  title = philippines.11.t
+  desc = philippines.11.d
+  picture = GFX_report_event_PHI_crowd_1
+  is_triggered_only = yes
+
+  option = { # Let's hope that their popularity stops rising
+    name = philippines.11.a
+    add_popularity = {
+      ideology = valkist
+      popularity = 0.05
+    }
+    hidden_effect = {
+      country_event = { id = philippines.12 days = 7 }
+    }
+  }
+}
+
+country_event = { # Aguinaldo Publishes Criticisms
+  id = philippines.12
+  title = philippines.12.t
+  desc = philippines.12.d
+  picture = GFX_report_event_PHI_crowd_2
+  is_triggered_only = yes
+
+  option = { # This old man won't keep mouth shut.
+    name = philippines.12.a
+    hidden_effect = {
+      country_event = { id = philippines.13 days = 30 }
+    }
+  }
+  option = { # He may have a point
+    name = philippines.12.b
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = 0.05
+    }
+    hidden_effect = {
+      country_event = { id = philippines.13 days = 30 }
+    }
   }
 }
