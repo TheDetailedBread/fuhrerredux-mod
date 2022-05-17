@@ -2,6 +2,14 @@
 # created by: dax0102
 
 political_actions = {
+  PHI_dummy = {
+    available = {
+      PHI_industrialization_complete = yes
+    }
+    complete_effect = {
+      add_political_power = 100
+    }
+  }
   PHI_halt_refugee_acceptance = {
     cost = 50
     icon = GFX_decision_eng_trade_unions_support
@@ -50,6 +58,7 @@ PHI_industrialization_plan = {
       has_completed_focus = PHI_railway_expansion
     }
     remove_effect = {
+      set_country_flag = PHI_has_expanded_pnr
       build_railway = {
         level = 5
         build_only_on_allied = yes
@@ -71,9 +80,6 @@ PHI_industrialization_plan = {
         NOT = { has_war_with = ROOT }
         NOT = { is_subject_of = ROOT }
       }
-    }
-    available = {
-      num_of_civilian_factories_available_for_projects > 2
     }
     visible = {
       has_completed_focus = PHI_invite_foreign_investors
@@ -130,6 +136,7 @@ PHI_industrialization_plan = {
             level = 1
             instant_build = yes
           }
+          set_state_flag = PHI_has_built_new_city
         }
       }
     }
@@ -170,6 +177,7 @@ PHI_industrialization_plan = {
             level = 1
             instant_build = yes
           }
+          set_state_flag = PHI_has_promoted_tourism
         }
       }
     }
@@ -210,6 +218,7 @@ PHI_industrialization_plan = {
             level = 1
             instant_build = yes
           }
+          set_state_flag = PHI_has_constructed_irrigation
         }
       }
     }
@@ -247,6 +256,7 @@ PHI_industrialization_plan = {
             level = 1
             instant_build = yes
           }
+          set_state_flag = PHI_has_invested_industry
         }
       }
     }

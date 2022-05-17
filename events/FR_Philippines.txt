@@ -390,15 +390,216 @@ country_event = { # Protests in Manila
   id = philippines.20
   title = philippines.20.t
   desc = philippines.20.d
-  picture = GFX_report_event_gathering_protest
+  picture = GFX_report_event_PHI_protests
   is_triggered_only = yes
 
   option = { # Let them protest
     name = philippines.20.a
+    add_popularity = {
+      ideology = valkist
+      popularity = 0.1
+    }
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = 0.1
+    }
     add_political_power = -100
+    hidden_effect = {
+      country_event = { id = philippines.23 days = 2 }
+    }
   }
-  option = { # Deploy some troops, just to be sure
+  option = { # Try to talk to the protesters
     name = philippines.20.b
     add_political_power = -100
+    add_popularity = {
+      ideology = valkist
+      popularity = 0.1
+    }
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = 0.1
+    }
+    hidden_effect = {
+      country_event = { id = philippines.21 days = 2 }
+    }
+  }
+}
+
+country_event = { # Farmers Demands Government Help
+  id = philippines.21
+  title = philippines.21.t
+  desc = philippines.21.d
+  picture = GFX_report_event_PHI_protests
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.21.a
+    add_ideas = PHI_farmer_help
+    hidden_effect = {
+      country_event = { id = philippines.22 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.21.b
+    add_stability = -0.15
+    hidden_effect = {
+      country_event = { id = philippines.23 days = 2 }
+    }
+  }
+}
+
+country_event = { # Protests Losing Momentum
+  id = philippines.22
+  title = philippines.22.t
+  desc = philippines.22.d
+  picture = GFX_report_event_PHI_protests
+  is_triggered_only = yes
+
+  option = { # Excellent
+    name = philippines.22.a
+    add_popularity = {
+      ideology = valkist
+      popularity = -0.1
+    }
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = -0.1
+    }
+  }
+}
+
+country_event = { # Protests Expands to Other Areas
+  id = philippines.23
+  title = philippines.23.t
+  desc = philippines.23.d
+  picture = GFX_report_event_PHI_quezon
+  is_triggered_only = yes
+
+  option = { # Evacuate the President, now!
+    name = philippines.23.a
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = 0.1
+    }
+    add_popularity = {
+      ideology = valkist
+      popularity = 0.1
+    }
+    hidden_effect = {
+      country_event = { id = philippines.24 days = 2 }
+    }
+  }
+}
+
+country_event = { # Scouts Expel Protesters in Mendiola
+  id = philippines.24
+  title = philippines.24.t
+  desc = philippines.24.d
+  picture = GFX_report_event_PHI_protests
+  is_triggered_only = yes
+
+  option = { # This is not good.
+    name = philippines.24.a
+    add_manpower = -50
+    hidden_effect = {
+      country_event = { id = philippines.25 days = 2 }
+    }
+  }
+}
+
+country_event = { # Roxas Calls for Investigation
+  id = philippines.25
+  title = philippines.25.t
+  desc = philippines.25.d
+  picture = GFX_report_event_PHI_roxas_quirino
+  is_triggered_only = yes
+
+  option = { # Just stop already...
+    name = philippines.25.a
+    add_popularity = {
+      ideology = market_liberal
+      popularity = 0.05
+    }
+    hidden_effect = {
+      country_event = { id = philippines.26 days = 2 }
+    }
+  }
+}
+
+country_event = { # Ramos and Aguinaldo Slams the Government
+  id = philippines.26
+  title = philippines.26.t
+  desc = philippines.26.d
+  picture = GFX_report_event_PHI_benigno_ramos
+  is_triggered_only = yes
+
+  option = { # Getting tired of their sh...
+    name = philippines.26.a
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = 0.05
+    }
+    add_popularity = {
+      ideology = valkist
+      popularity = 0.05
+    }
+    hidden_effect = {
+      country_event = { id = philippines.29 days = 7 }
+    }
+  }
+}
+
+country_event = { # Feast of the Black Nazarene
+  id = philippines.27
+  title = philippines.27.t
+  desc = philippines.27.d
+  picture = GFX_report_event_PHI_black_nazarene
+  is_triggered_only = yes
+
+  option = { # Everything went smoothly it seems...
+    name = philippines.27.a
+  }
+}
+
+country_event = { # The Annual Latern Festival
+  id = philippines.28
+  title = philippines.28.t
+  desc = philippines.28.d
+  picture = GFX_report_event_PHI_pampanga_lantern
+  is_triggered_only = yes
+
+  option = { # So bright!
+    name = philippines.28.a
+  }
+}
+
+country_event = { # The Secretary's Suggestions
+  id = philippines.29
+  title = philippines.29.t
+  desc = philippines.29.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # The President agrees
+    name = philippines.29.a
+    hidden_effect = {
+      country_event = { id = philippines.30 days = 3 }
+    }
+  }
+  option = { # Stop wasting my time!
+    name = philippines.29.b
+  }
+}
+
+country_event = { # The Presidential Visit
+  id = philippines.30
+  title = philippines.30.t
+  desc = philippines.30.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Condolences
+    name = philippines.30.a
+    increase_ruling_party_popularity_by_5 = yes
   }
 }
