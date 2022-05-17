@@ -2039,13 +2039,13 @@ shared_focus = {
 	x = 0
 	y = 1
 	cost = 6
-	available = { PHI = { PHI_is_socialist = no } }
+	available = { PHI = { has_socialist_government = no } }
 	prerequisite = { focus = USA_america_on_the_world_stage }
 	relative_position_id = USA_america_on_the_world_stage
 	completion_reward = {
 		PHI = {
 			reverse_add_opinion_modifier = {
-				modifier = PHI_diplomatic_mission
+				modifier = CRU_improved_relations
 				target = ROOT
 			}
 		}

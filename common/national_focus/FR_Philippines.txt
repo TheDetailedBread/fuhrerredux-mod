@@ -21,18 +21,40 @@ focus_tree = {
   focus = {
     id = PHI_elections_of_1937
     icon = GFX_goal_PHI_democracy
-    x = 7
+    x = 6
     y = 0
-    cost = 0
+    cost = 6
+    available = {
+      hidden_trigger = {
+        always = no
+      }
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = PHI_elections_concluded_tt
+        has_country_flag = PHI_elections_concluded
+      }
+    }
   }
 
   # Partido Liberal
   focus = {
     id = PHI_partido_liberal
     icon = GFX_goal_ideology_market_liberal
-    x = -5
+    x = -4
     y = 1
-    cost = 0
+    cost = 6
+    available = {
+      hidden_trigger = {
+        always = no
+      }
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = PHI_liberal_party_victory_tt
+        has_country_flag = PHI_liberal_party_victory
+      }
+    }
     prerequisite = { focus = PHI_elections_of_1937 }
     relative_position_id = PHI_elections_of_1937
   }
@@ -40,6 +62,7 @@ focus_tree = {
   # Reform the Justice System
   focus = {
     id = PHI_reform_the_justice_system
+    icon = GFX_goal_DOM_The_Trial
     x = -2
     y = 1
     cost = 6
@@ -50,6 +73,7 @@ focus_tree = {
   # Private-Public Partnerships
   focus = {
     id = PHI_private_public_partnerships
+    icon = GFX_goal_collaborate_local_elites
     x = 0
     y = 1
     cost = 6
@@ -60,6 +84,7 @@ focus_tree = {
   # Further Agricultural Modernization
   focus = {
     id = PHI_further_agricultural_modernization
+    icon = GFX_goal_generic_mechanisation
     x = -1
     y = 1
     cost = 6
@@ -70,6 +95,7 @@ focus_tree = {
   # Filipino Broadcasting Corporation
   focus = {
     id = PHI_filipino_broadcasting_corporation
+    icon = GFX_goal_EGY_Radio_Free_Cairo
     x = 1
     y = 1
     cost = 6
@@ -80,6 +106,7 @@ focus_tree = {
   # Discredit Radical Groups
   focus = {
     id = PHI_discredit_radical_groups
+    icon = GFX_goal_skull_treaty
     x = 0
     y = 2
     cost = 6
@@ -90,6 +117,7 @@ focus_tree = {
   # Wage Floors
   focus = {
     id = PHI_wage_floors
+    icon = GFX_DAH_Topke
     x = 1
     y = 1
     cost = 6
@@ -100,6 +128,7 @@ focus_tree = {
   # The Liberal Era
   focus = {
     id = PHI_the_liberal_era
+    icon = GFX_goal_DOM_End_Judicial_Corruption
     x = 1
     y = 1
     cost = 6
@@ -115,6 +144,17 @@ focus_tree = {
     x = -1
     y = 1
     cost = 0
+    available = {
+      hidden_trigger = {
+        always = no
+      }
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = PHI_nacionalista_party_victory_tt
+        has_country_flag = PHI_nacionalista_party_victory
+      }
+    }
     prerequisite = { focus = PHI_elections_of_1937 }
     relative_position_id = PHI_elections_of_1937
   }
@@ -122,6 +162,7 @@ focus_tree = {
   # The Filipino Language Act
   focus = {
     id = PHI_filipino_language
+    icon = GFX_goal_new_treaty
     x = 0
     y = 2
     cost = 6
@@ -132,6 +173,7 @@ focus_tree = {
   # Rural Support
   focus = {
     id = PHI_rural_support
+    icon = GFX_goal_conspiracy
     x = -1
     y = 1
     cost = 6
@@ -142,6 +184,7 @@ focus_tree = {
   # Intensify Land Reform Efforts
   focus = {
     id = PHI_intensify_land_reform_efforts
+    icon = GFX_goal_OTT_Land_Reform
     x = 0
     y = 2
     cost = 6
@@ -155,6 +198,7 @@ focus_tree = {
   # Farm to Market Roads
   focus = {
     id = PHI_farm_to_market_roads
+    icon = GFX_goal_generic_road_construction
     x = -1
     y = 1
     cost = 6
@@ -165,6 +209,7 @@ focus_tree = {
   # Crop Insurance
   focus = {
     id = PHI_crop_insurance
+    icon = GFX_goal_generic_rice_field
     x = 1
     y = 1
     cost = 6
@@ -175,6 +220,7 @@ focus_tree = {
   # Free Higher Education
   focus = {
     id = PHI_free_higher_education
+    icon = GFX_goal_brain
     x = 1
     y = 1
     cost = 6
@@ -185,6 +231,7 @@ focus_tree = {
   # Reserved Officers Training Corps
   focus = {
     id = PHI_rotc
+    icon = GFX_goal_generic_drafted_army
     x = 0
     y = 2
     cost = 6
@@ -195,6 +242,7 @@ focus_tree = {
   # Create the National Bureau of Investigation
   focus = {
     id = PHI_create_nbi
+    icon = GFX_goal_generic_investigation
     x = 3
     y = 1
     cost = 6
@@ -205,6 +253,7 @@ focus_tree = {
   # Combat Public Service Corruption
   focus = {
     id = PHI_combat_public_service_corruption
+    icon = GFX_goal_Centralised_Government
     x = 1
     y = 1
     cost = 6
@@ -216,6 +265,7 @@ focus_tree = {
   # Status Quo Prevails
   focus = {
     id = PHI_status_quo_prevails
+    icon = GFX_goal_COS_Ferrer_Coup
     x = 0
     y = 2
     cost = 6
@@ -427,7 +477,7 @@ focus_tree = {
               include_locked = yes
             }
           }
-          add_extra_state_building_slots = 1
+          add_extra_state_shared_building_slots = 1
           add_building_construction = {
             type = arms_factory
             level = 1
@@ -444,7 +494,7 @@ focus_tree = {
               include_locked = yes
             }
           }
-          add_extra_state_building_slots = 2
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             type = arms_factory
             level = 2
@@ -549,7 +599,7 @@ focus_tree = {
             }
           }
 
-          add_extra_state_building_slots = 2
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             type = dockyard
             level = 2
@@ -1225,7 +1275,7 @@ focus_tree = {
           }
         }
 
-        add_extra_state_building_slots = 1
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
           type = dockyard
           level = 1
@@ -1257,7 +1307,7 @@ focus_tree = {
           }
         }
 
-        add_extra_state_building_slots = 1
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
           type = dockyard
           level = 1
