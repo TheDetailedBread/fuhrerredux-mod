@@ -1,29 +1,39 @@
-is_a_filipino_tag = {
-    OR = {
-        original_tag = PHI
-        original_tag = PHR
+PHI_industrialization_complete = {
+  custom_trigger_tooltip = {
+    tooltip = PHI_industrialization_complete_tt
+    has_country_flag = PHI_has_expanded_pnr
+    327 = { # Manila 
+      has_state_flag = PHI_has_invested_industry
+      has_state_flag = PHI_has_constructed_irrigation
+      has_state_flag = PHI_has_built_new_city
     }
-}
-
-PHI_is_socialist = {
-    custom_trigger_tooltip = {
-        tooltip = FX_is_socialist_tt
-        OR = {
-            has_socialist_government = yes
-            country_exists = PHR
-        }
+    623 = { # Luzon
+      has_state_flag = PHI_has_invested_industry
+      has_state_flag = PHI_has_constructed_irrigation
+      has_state_flag = PHI_has_promoted_tourism
+      has_state_flag = PHI_has_built_new_city
     }
-}
-
-PHI_is_in_south_east_asia = {
-    OR = {
-        tag = PHI
-        tag = INS
-        tag = SIA
-        tag = VIN
-        tag = LAO
-        tag = CAM
-        tag = BRM
-        tag = MAL
+    624 = { # Central Islands
+      has_state_flag = PHI_has_invested_industry
+      has_state_flag = PHI_has_promoted_tourism
+      has_state_flag = PHI_has_built_new_city
     }
+    625 = { # Samar
+      has_state_flag = PHI_has_promoted_tourism
+      has_state_flag = PHI_has_built_new_city
+    }
+    626 = { # Palawan
+      has_state_flag = PHI_has_promoted_tourism
+      has_state_flag = PHI_has_built_new_city
+    }
+    627 = { # Mindanao
+      has_state_flag = PHI_has_invested_industry
+      has_state_flag = PHI_has_constructed_irrigation
+      has_state_flag = PHI_has_built_new_city
+    }
+    628 = { # Cebu
+      has_state_flag = PHI_has_constructed_irrigation
+      has_state_flag = PHI_has_built_new_city
+    }
+  }
 }
