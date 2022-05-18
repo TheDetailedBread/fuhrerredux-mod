@@ -58,14 +58,14 @@ country_event = { # An Open Door Policy?
     }
     set_country_flag = PHI_has_open_door_policy
     hidden_effect = {
-      country_event = { id = philippines.3 days = 7 }
+      country_event = { id = philippines.3 days = 12 }
     }
   }
   option = { # We have more problems to deal with
     name = philippines.2.b
     add_stability = -0.05
     hidden_effect = {
-      country_event = { id = philippines.3 days = 7 }
+      country_event = { id = philippines.3 days = 12 }
     }
   }
 }
@@ -101,7 +101,7 @@ country_event = { # Investments in the Philippines?
   option = { # 
     name = philippines.4.a
     FROM = { 
-      country_event = { id = philippines.5 days = 1 }
+      country_event = { id = philippines.5 days = 4 }
       add_opinion_modifier = {
         target = ROOT
         modifier = PHI_provided_investment
@@ -114,7 +114,7 @@ country_event = { # Investments in the Philippines?
   option = { # It's not worth it
     name = philippines.4.b
     FROM = { 
-      country_event = { id = philippines.6 days = 1 }
+      country_event = { id = philippines.6 days = 4 }
     }
   }
 }
@@ -137,7 +137,7 @@ country_event = { # FROM invests in the Philippines
 }
 
 option = { # FROM not invest in the Philippines
-  name = philippines.6
+  id = philippines.6
   title = philippines.6.t
   desc = philippines.6.d
   picture = GFX_report_event_generic_sign_treaty1
@@ -196,7 +196,7 @@ country_event = { # The Envelope
   option = { # Summon Aquino Now!
     name = philippines.9.a
     hidden_effect = {
-      country_event = { id = philippines.10 days = 2 }
+      country_event = { id = philippines.10 days = 7 }
     }
   }
 }
@@ -213,7 +213,7 @@ country_event = { # The Arrival of the Crook
     remove_ideas = PHI_Benigno_Aquino_Sr_eco_sco
     add_ideas = PHI_Jose_G_David_eco_sco
     hidden_effect = {
-      country_event = { id = philippines.11 days = 5 }
+      country_event = { id = philippines.11 days = 12 }
     }
   }
 }
@@ -232,7 +232,7 @@ country_event = { # Sakdalista Popularity Growing
       popularity = 0.05
     }
     hidden_effect = {
-      country_event = { id = philippines.12 days = 7 }
+      country_event = { id = philippines.12 days = 12 }
     }
   }
 }
@@ -247,7 +247,7 @@ country_event = { # Aguinaldo Publishes Criticisms
   option = { # This old man won't keep mouth shut.
     name = philippines.12.a
     hidden_effect = {
-      country_event = { id = philippines.13 days = 30 }
+      country_event = { id = philippines.13 days = 42 }
     }
   }
   option = { # He may have a point
@@ -257,7 +257,7 @@ country_event = { # Aguinaldo Publishes Criticisms
       popularity = 0.05
     }
     hidden_effect = {
-      country_event = { id = philippines.13 days = 30 }
+      country_event = { id = philippines.13 days = 42 }
     }
   }
 }
@@ -279,7 +279,7 @@ country_event = { # Proclamation of the Liberal Party
           has_country_flag = PHI_has_open_door_policy
         }
         country_event = {
-          id = philippines.14 days = 14
+          id = philippines.14 days = 18
         }
       }
 
@@ -307,7 +307,7 @@ country_event = { # Roxas Advocates for Early Elections
   option = { # That's absurd!
     name = philippines.14.a
     hidden_effect = {
-      country_event = { id = philippines.15 days = 3 }
+      country_event = { id = philippines.15 days = 8 }
     }
   }
 }
@@ -337,7 +337,7 @@ country_event = { # Benigno Ramos Arrives from Tokyo
   option = { # Not you too...
     name = philippines.16.a
     hidden_effect = {
-      country_event = { id = philippines.17 days = 2 }
+      country_event = { id = philippines.17 days = 12 }
     }
   }
 }
@@ -352,7 +352,7 @@ country_event = { # Government Response
   option = { # Now we wait
     name = philippines.17.a
     hidden_effect = {
-      country_event = { id = philippines.18 days = 7 }
+      country_event = { id = philippines.18 days = 12 }
     }
   }
 }
@@ -381,7 +381,7 @@ country_event = { # London Stock Market Crash
     name = philippines.19.a
     add_ideas = PHI_hindered_british_trade
     hidden_effect = {
-      country_event = { id = philippines.20 days = 4 }
+      country_event = { id = philippines.20 days = 8 }
     }
   }
 }
@@ -397,15 +397,15 @@ country_event = { # Protests in Manila
     name = philippines.20.a
     add_popularity = {
       ideology = valkist
-      popularity = 0.1
+      popularity = 0.05
     }
     add_popularity = {
       ideology = authoritarian_democrat
-      popularity = 0.1
+      popularity = 0.05
     }
     add_political_power = -100
     hidden_effect = {
-      country_event = { id = philippines.23 days = 2 }
+      country_event = { id = philippines.23 days = 8 }
     }
   }
   option = { # Try to talk to the protesters
@@ -413,14 +413,14 @@ country_event = { # Protests in Manila
     add_political_power = -100
     add_popularity = {
       ideology = valkist
-      popularity = 0.1
+      popularity = 0.05
     }
     add_popularity = {
       ideology = authoritarian_democrat
-      popularity = 0.1
+      popularity = 0.05
     }
     hidden_effect = {
-      country_event = { id = philippines.21 days = 2 }
+      country_event = { id = philippines.21 days = 8 }
     }
   }
 }
@@ -443,7 +443,7 @@ country_event = { # Farmers Demands Government Help
     name = philippines.21.b
     add_stability = -0.15
     hidden_effect = {
-      country_event = { id = philippines.23 days = 2 }
+      country_event = { id = philippines.23 days = 7 }
     }
   }
 }
@@ -459,11 +459,11 @@ country_event = { # Protests Losing Momentum
     name = philippines.22.a
     add_popularity = {
       ideology = valkist
-      popularity = -0.1
+      popularity = -0.05
     }
     add_popularity = {
       ideology = authoritarian_democrat
-      popularity = -0.1
+      popularity = -0.05
     }
   }
 }
@@ -479,14 +479,14 @@ country_event = { # Protests Expands to Other Areas
     name = philippines.23.a
     add_popularity = {
       ideology = authoritarian_democrat
-      popularity = 0.1
+      popularity = 0.05
     }
     add_popularity = {
       ideology = valkist
-      popularity = 0.1
+      popularity = 0.05
     }
     hidden_effect = {
-      country_event = { id = philippines.24 days = 2 }
+      country_event = { id = philippines.24 days = 7 }
     }
   }
 }
@@ -502,7 +502,7 @@ country_event = { # Scouts Expel Protesters in Mendiola
     name = philippines.24.a
     add_manpower = -50
     hidden_effect = {
-      country_event = { id = philippines.25 days = 2 }
+      country_event = { id = philippines.25 days = 12 }
     }
   }
 }
@@ -521,7 +521,7 @@ country_event = { # Roxas Calls for Investigation
       popularity = 0.05
     }
     hidden_effect = {
-      country_event = { id = philippines.26 days = 2 }
+      country_event = { id = philippines.26 days = 7 }
     }
   }
 }
@@ -600,7 +600,7 @@ country_event = { # The Presidential Visit
 
   option = { # Condolences
     name = philippines.30.a
-    increase_ruling_party_popularity_by_5 = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 
@@ -625,6 +625,7 @@ country_event = { # Bonifacio Day
 
   option = { # Mabuhay ang Supremo!
     name = philippines.32.a
+    increase_ruling_party_popularity_by_5 = yes
   }
 }
 
@@ -635,7 +636,7 @@ country_event = { # Opening of the Campaign Season
   picture = GFX_report_event_PHI_crowd_1
   is_triggered_only = yes
 
-  option = {
+  option = { # Your campaign jingles are too loud!
     name = philippines.33.a
     add_political_power = 20
   }
@@ -713,7 +714,7 @@ country_event = { # Elections of 1937
     }
   }
   option = { # Sakdalista
-    name = philippines.34.d
+    name = philippines.34.e
     set_politics = {
       ruling_party = valkist
       elections_allowed = yes
