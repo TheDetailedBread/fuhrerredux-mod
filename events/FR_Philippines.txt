@@ -603,3 +603,132 @@ country_event = { # The Presidential Visit
     increase_ruling_party_popularity_by_5 = yes
   }
 }
+
+country_event = { # Misa de Gallo
+  id = philippines.31
+  title = philippines.31.t
+  desc = philippines.31.d
+  picture = GFX_report_event_PHI_misa_de_gallo
+  is_triggered_only = yes
+
+  option = {
+    name = philippines.31.a
+  }
+}
+
+country_event = { # Bonifacio Day
+  id = philippines.32
+  title = philippines.32.t
+  desc = philippines.32.d
+  picture = GFX_report_event_PHI_bonifacio
+  is_triggered_only = yes
+
+  option = { # Mabuhay ang Supremo!
+    name = philippines.32.a
+  }
+}
+
+country_event = { # Opening of the Campaign Season
+  id = philippines.33
+  title = philippines.33.t
+  desc = philippines.33.d
+  picture = GFX_report_event_PHI_crowd_1
+  is_triggered_only = yes
+
+  option = {
+    name = philippines.33.a
+    add_political_power = 20
+  }
+}
+
+country_event = { # Elections of 1937
+  id = philippines.34
+  title = philippines.34.t
+  desc = philippines.34.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  trigger = {
+    tag = PHI
+    date > 1937.1.1
+    date < 1938.1.1
+    NOT = { has_country_flag = PHI_has_1937_elections }
+  }
+
+  option = { # Liberal
+    name = philippines.34.a
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_20 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Manuel_Roxas_hog_mli
+      PHI_Elpidio_Quirino_for_sli
+      PHI_Mariano_Garchitorena_eco_mli
+      PHI_Jose_Zulueta_sec_mli
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1937_elections
+      set_country_flag = PHI_liberal_party_victory
+    }
+  }
+  option = { # Nacionalista
+    name = philippines.34.b
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_5 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Manuel_Luis_Quezon_hog_sco
+      PHI_Sergio_P_Osmena_for_sco
+      PHI_Andres_Soriano_eco_sco
+      PHI_Basilio_J_Valdez_sec_sco
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1937_elections
+      set_country_flag = PHI_nacionalista_party_victory
+    }
+  }
+  option = { # Progressista
+    name = philippines.34.c
+    set_politics = {
+      ruling_party = authoritarian_democrat
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_20 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Emilio_Aguinaldo_hog_npo
+      PHI_Claro_M_Recto_for_ade
+      PHI_Serafin_Fausto_eco_ade
+      PHI_Benigno_Aquino_Sr_sec_ade
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1937_elections
+      set_country_flag = PHI_progressista_party_victory
+    }
+  }
+  option = { # Sakdalista
+    name = philippines.34.d
+    set_politics = {
+      ruling_party = valkist
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_20 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Benigno_Ramos_hog_val
+      PHI_Claro_M_Recto_for_ade
+      PHI_Serafin_Fausto_eco_ade
+      PHI_Benigno_Aquino_Sr_sec_ade
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1937_elections
+      set_country_flag = PHI_sakdalista_party_victory
+    }
+  }
+}

@@ -31,9 +31,12 @@ focus_tree = {
     }
     bypass = {
       custom_trigger_tooltip = {
-        tooltip = PHI_elections_concluded_tt
-        has_country_flag = PHI_elections_concluded
+        tooltip = PHI_elections_has_concluded_tt
+        has_country_flag = PHI_has_1937_elections
       }
+    }
+    completion_reward = {
+      custom_effect_tooltip = PHI_elections_concluded_tt
     }
   }
 
@@ -57,6 +60,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_elections_of_1937 }
     relative_position_id = PHI_elections_of_1937
+    completion_reward = {
+      custom_effect_tooltip = PHI_liberal_party_elected_tt
+    }
   }
 
   # Reform the Justice System
@@ -125,10 +131,10 @@ focus_tree = {
     relative_position_id = PHI_further_agricultural_modernization
   }
 
-  # The Liberal Era
+  # Light the Archipelago
   focus = {
-    id = PHI_the_liberal_era
-    icon = GFX_goal_DOM_End_Judicial_Corruption
+    id = PHI_light_the_archipelago
+    icon = GFX_goal_generic_lightbulb
     x = 1
     y = 1
     cost = 6
@@ -143,7 +149,7 @@ focus_tree = {
     icon = GFX_goal_ideology_social_conservative
     x = -1
     y = 1
-    cost = 0
+    cost = 6
     available = {
       hidden_trigger = {
         always = no
@@ -157,6 +163,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_elections_of_1937 }
     relative_position_id = PHI_elections_of_1937
+    completion_reward = {
+      custom_effect_tooltip = PHI_nacionalista_elected_tt
+    }
   }
 
   # The Filipino Language Act
@@ -184,7 +193,7 @@ focus_tree = {
   # Intensify Land Reform Efforts
   focus = {
     id = PHI_intensify_land_reform_efforts
-    icon = GFX_goal_OTT_Land_Reform
+    icon = GFX_goal_generic_land_reform
     x = 0
     y = 2
     cost = 6
@@ -262,15 +271,257 @@ focus_tree = {
     relative_position_id = PHI_free_higher_education
   }
 
-  # Status Quo Prevails
+  # New Anti-Trust Laws
   focus = {
-    id = PHI_status_quo_prevails
+    id = PHI_new_antitrust_laws
     icon = GFX_goal_COS_Ferrer_Coup
     x = 0
     y = 2
     cost = 6
     prerequisite = { focus = PHI_combat_public_service_corruption }
     relative_position_id = PHI_combat_public_service_corruption
+  }
+
+  # Partido Progressista
+  focus = {
+    id = PHI_partido_progressista
+    icon = GFX_goal_ideology_authoritarian_democrat
+    x = 4
+    y = 1
+    cost = 6
+    available = {
+      hidden_trigger = {
+        always = no
+      }
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = PHI_progressista_party_victory_tt
+        has_country_flag = PHI_progressista_party_victory
+      }
+    }
+    prerequisite = { focus = PHI_elections_of_1937 }
+    relative_position_id = PHI_elections_of_1937
+    completion_reward = {
+      custom_effect_tooltip = PHI_progressista_elected_tt
+    }
+  }
+
+  # Strengthen Presidential Powers
+  focus = {
+    id = PHI_strengthen_presidential_powers
+    icon = GFX_goal_generic_authoritarian_government
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_partido_progressista }
+    relative_position_id = PHI_partido_progressista
+  }
+
+  # Promote Nationalism
+  focus = {
+    id = PHI_promote_nationalism
+    icon = GFX_goal_PHI_nationalism
+    x = -1
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_partido_progressista }
+    relative_position_id = PHI_partido_progressista
+  }
+
+  # For the Public Good
+  focus = {
+    id = PHI_for_the_public_good
+    icon = GFX_goal_generic_seize_investments
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_promote_nationalism }
+    relative_position_id = PHI_promote_nationalism
+  }
+
+  # Silence Critics
+  focus = {
+    id = PHI_silence_critics
+    icon = GFX_goal_backstab
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_promote_nationalism }
+    relative_position_id = PHI_promote_nationalism
+  }
+
+  # Department of Public Safety
+  focus = {
+    id = PHI_department_of_public_safety
+    icon = GFX_goal_generic_espionage
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_for_the_public_good }
+    prerequisite = { focus = PHI_silence_critics }
+    relative_position_id = PHI_for_the_public_good
+  }
+
+  # Progressive Taxation
+  focus = {
+    id = PHI_progressive_taxation
+    icon = GFX_goal_generic_financial_markets
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_strengthen_presidential_powers }
+    relative_position_id = PHI_strengthen_presidential_powers
+  }
+
+  # Universal Healthcare
+  focus = {
+    id = PHI_universal_healthcare
+    icon = GFX_goal_generic_medical
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_progressive_taxation }
+    relative_position_id = PHI_progressive_taxation
+  }
+
+  # Lapiang Sakdalista
+  focus = {
+    id = PHI_lapiang_sakdalista
+    icon = GFX_goal_ideology_valkist
+    x = 4
+    y = 0
+    cost = 6
+    available = {
+      hidden_trigger = {
+        always = no
+      }
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = PHI_sakdalista_party_victory_tt
+        has_country_flag = PHI_sakdalista_party_victory
+      }
+    }
+    prerequisite = { focus = PHI_elections_of_1937 }
+    relative_position_id = PHI_partido_progressista
+    completion_reward = {
+      custom_effect_tooltip = PHI_sakdalista_elected_tt
+    }
+  }
+
+  # Nationalize the Lands
+  focus = {
+    id = PHI_nationalize_the_lands
+    icon = GFX_goal_OTT_Land_Reform
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_lapiang_sakdalista
+      focus = PHI_partido_progressista
+    }
+    relative_position_id = PHI_lapiang_sakdalista
+  }
+
+  # Agrarian Investments
+  focus = {
+    id = PHI_agrarian_investments
+    icon = GFX_goal_generic_agriculture2
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_nationalize_the_lands }
+    relative_position_id = PHI_nationalize_the_lands
+  }
+
+  # Feed the Poor
+  focus = {
+    id = PHI_feed_the_poor
+    icon = GFX_goal_famine
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_agrarian_investments }
+    relative_position_id = PHI_agrarian_investments
+  }
+
+  # Reform the National Bank
+  focus = {
+    id = PHI_reform_the_national_bank
+    icon = GFX_goal_generic_banking_legislation
+    x = 0
+    y = 1
+    cost = 6 
+    prerequisite = { focus = PHI_lapiang_sakdalista }
+    relative_position_id = PHI_lapiang_sakdalista
+  }
+
+  # Institute Wealth Ceiling
+  focus = {
+    id = PHI_institute_wealth_ceiling
+    icon = GFX_goal_generic_wealth_ceiling
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_reform_the_national_bank }
+    relative_position_id = PHI_reform_the_national_bank
+  }
+
+  # Promote Local Unions
+  focus = {
+    id = PHI_promote_local_unions
+    icon = GFX_goal_workers_for_business
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_reform_the_national_bank }
+    relative_position_id = PHI_reform_the_national_bank 
+  }
+
+  # Social Housing
+  focus = {
+    id = PHI_social_housing
+    icon = GFX_goal_generic_build_housing
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_promote_local_unions }
+    relative_position_id = PHI_promote_local_unions
+  }
+
+  # Youth Work Brigades
+  focus = {
+    id = PHI_youth_work_brigades
+    icon = GFX_goal_conscription
+    x = 3
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_promote_local_unions }
+    relative_position_id = PHI_promote_local_unions
+  }
+
+  # Economic Independence
+  focus = {
+    id = PHI_economic_independence
+    icon = GFX_goal_PHI_economic_independence
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_institute_wealth_ceiling }
+    relative_position_id = PHI_institute_wealth_ceiling
+  }
+
+  # Filipino First!
+  focus = {
+    id = PHI_filipino_first
+    icon = GFX_goal_PHI_renounce_colonialism
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_economic_independence }
+    prerequisite = { focus = PHI_promote_local_unions }
+    relative_position_id = PHI_promote_local_unions
   }
 
   ######################################################
@@ -283,7 +534,7 @@ focus_tree = {
   focus = {
     id = PHI_osmena_industrialization_plan
     icon = GFX_goal_PHI_osmena_plan
-    x = 24
+    x = 21
     y = 0
     cost = 6
     completion_reward = {
