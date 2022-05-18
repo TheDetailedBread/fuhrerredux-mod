@@ -138,6 +138,21 @@ characters = {
 				hog_pragmatic_statesman
 			}
 		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { 
+				hidden_trigger = { has_country_flag = PHI_Elpidio_Quirino_for_sli_hired }
+			}
+			idea_token = PHI_Elpidio_Quirino_for_sli
+			on_add = { set_country_flag = PHI_Elpidio_Quirino_for_sli_hired }
+			on_remove = { clr_country_flag = PHI_Elpidio_Quirino_for_sli_hired }
+			traits = {
+				foreign_minister
+				social_liberal
+				for_biased_intellectual
+			}
+		}
 	}
 	PHI_Manuel_Roxas = {
 		name = "Manuel Roxas"
@@ -268,11 +283,26 @@ characters = {
 		}
 		advisor = {
 			cost = 150
+			slot = security_minister
+			available = { 
+				hidden_trigger = { has_country_flag = PHI_Basilio_J_Valdez_sec_sco_hired }
+			}
+			idea_token = PHI_Basilio_J_Valdez_sec_sco
+			on_add = { set_country_flag = PHI_Basilio_J_Valdez_sec_sco_hired }
+			on_remove = { clr_country_flag = PHI_Basilio_J_Valdez_sec_sco_hired }
+			traits = {
+				security_minister
+				social_conservative
+				sec_driven_recruiter
+			}
+		}
+		advisor = {
+			cost = 150
 			slot = chief_of_staff
 			idea_token = PHI_Basilio_J_Valdez_cos_pau
 			traits = {
 				chief_of_staff
-				cos_school_of_fire_support
+				cos_school_of_commando_operations
 			}
 		}
 		advisor = {
@@ -1775,12 +1805,96 @@ characters = {
 			}
 		}
 	}
-  PHI_Legislative_Assembly = {
-    name = "Legislative Assembly"
-    portraits = {
-      civilian = {
-        large = "gfx/leaders/PHI/Portrait_PHI_Legislative_Assembly.png"
-      }
-    }
-  }
+	PHI_Jose_Zulueta = {
+		name = "Jose Zulueta"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Jose_Zulueta.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = security_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Jose_Zulueta_sec_mli_hired }
+			}
+			idea_token = PHI_Jose_Zulueta_sec_mli
+			on_add = { set_country_flag = PHI_Jose_Zulueta_sec_mli_hired }
+			on_remove = { clr_country_flag = PHI_Jose_Zulueta_sec_mli_hired }
+			traits = {
+				security_minister
+				market_liberal
+				sec_secret_police_chief
+			}
+		}
+	}
+  PHI_Mariano_Garchitorena = {
+		name = "Mariano Garchitorena"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Mariano_Garchitorena.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Mariano_Garchitorena_eco_mli_hired }
+			}
+			idea_token = PHI_Mariano_Garchitorena_eco_mli
+			on_add = { set_country_flag = PHI_Mariano_Garchitorena_eco_mli_hired }
+			on_remove = { clr_country_flag = PHI_Mariano_Garchitorena_eco_mli_hired }
+			traits = {
+				economy_minister
+				market_liberal
+				eco_national_liberal
+			}
+		}
+	}
+	PHI_Andres_Soriano = {
+		name = "Andres Soriano Sr."
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Andres_Soriano.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Andres_Soriano_eco_sco_hired }
+			}
+			idea_token = PHI_Andres_Soriano_eco_sco
+			on_add = { set_country_flag = PHI_Andres_Soriano_eco_sco_hired }
+			on_remove = { clr_country_flag = PHI_Andres_Soriano_eco_sco_hired }
+			traits = {
+				economy_minister
+				social_conservative
+				eco_balanced_budget_economy
+			}
+		}
+	}
+	PHI_Claro_M_Recto = {
+		name = "Claro M. Recto"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Claro_M_Recto.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Claro_M_Recto_for_ade_hired }
+			}
+			idea_token = PHI_Claro_M_Recto_for_ade
+			on_add = { set_country_flag = PHI_Claro_M_Recto_for_ade_hired }
+			on_remove = { clr_country_flag = PHI_Claro_M_Recto_for_ade_hired }
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_great_compromiser
+			}
+		}
+	}
 }
