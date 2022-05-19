@@ -672,6 +672,9 @@ country_event = { # Elections of 1937
       PHI_Jose_Zulueta_sec_mli
     }
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.2 days = 2 }
+      }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_liberal_party_victory
     }
@@ -691,6 +694,9 @@ country_event = { # Elections of 1937
       PHI_Basilio_J_Valdez_sec_sco
     }
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.3 days = 2 }
+      }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_nacionalista_party_victory
     }
@@ -710,6 +716,9 @@ country_event = { # Elections of 1937
       PHI_Benigno_Aquino_Sr_sec_ade
     }
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.4 days = 2 }
+      }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_progressista_party_victory
     }
@@ -729,6 +738,9 @@ country_event = { # Elections of 1937
       PHI_Jose_G_Lukban_sec_val
     }
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.5 days = 2 }
+      }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_sakdalista_party_victory
     }
@@ -762,10 +774,18 @@ country_event = { # Operation Merdeka - Successfull
   picture = GFX_report_event_japanese_soldiers_01
   is_triggered_only = yes
 
+  immediate = {
+    hidden_effect = {
+      transfer_state = 785
+      random_other_country = {
+        news_event = { id = fxnews.6 days = 1 }
+      }
+    }
+  }
+
   option = { # Excellent...
     name = philippines.36.a
     increase_ruling_party_popularity_by_10 = yes
-    transfer_state = 785
     INS = { country_event = { id = philippines.37 days = 2 } }
     BEA = { country_event = { id = philippines.37 days = 2 } }
     ENG = { country_event = { id = philippines.38 days = 2 } }
