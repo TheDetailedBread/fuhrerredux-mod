@@ -20,7 +20,7 @@ news_event = { # US Recognises Philippine Independence
 	}
 }
 
-news_event = { # Quezon Inaugurated
+news_event = { # Nacionalistas Wins Philippine Elections
 	id = fxnews.2
 	title = fxnews.2.t
 	desc = fxnews.2.d
@@ -37,89 +37,85 @@ news_event = { # Quezon Inaugurated
 	}
 }
 
-news_event = { # Roxas Inaugurated
-		id = fxnews.3
-		title = fxnews.3.t
-		desc = fxnews.3.d
-		picture = GFX_news_event_PHI_roxas_inaugurated
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Liberals Wins Philippine Elections
+	id = fxnews.3
+	title = fxnews.3.t
+	desc = fxnews.3.d
+	picture = GFX_news_event_PHI_roxas_inaugurated
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.3.a
-		}
+	option = { 
+		name = fxnews.3.a
+	}
 }
 
-news_event = { # Sakdalista Inaugurated
-		id = fxnews.4
-		title = fxnews.4.t
-		desc = fxnews.4.d
-		picture = GFX_news_event_PHI_ramos_inaugurated
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Progressistas Wins Philippine Elections
+	id = fxnews.4
+	title = fxnews.4.t
+	desc = fxnews.4.d
+	picture = GFX_news_event_PHI_aguinaldo_inaugurated
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.3.a
-		}
+	option = { 
+		name = fxnews.3.a
+	}
 }
 
-news_event = { # Aguinaldo Coup
-		id = fxnews.5
-		title = fxnews.5.t
-		desc = fxnews.5.d
-		picture = GFX_news_event_PHI_aguinaldo_coup
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Sakdalistas Wins Philippine Elections
+	id = fxnews.5
+	title = fxnews.5.t
+	desc = fxnews.5.d
+	picture = GFX_news_event_PHI_ramos_inaugurated
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.5.a
-		}
+	option = { 
+		name = fxnews.5.a
+	}
 }
 
-news_event = { # Army Takes Power in the Philippines
-		id = fxnews.6
-		title = fxnews.6.t
-		desc = fxnews.6.d
-		picture = GFX_news_event_PHI_army_coup
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # North Borneo Occupied by Filipino Troops
+	id = fxnews.6
+	title = fxnews.6.t
+	desc = fxnews.6.d
+	picture = GFX_news_event_PHI_filipino_troops
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.5.a
+	option = { # Generic
+		name = fxnews.6.a
+		trigger = {
+			NOT = {
+				tag = INS
+				tag = BEA
+			}
 		}
-}
-
-news_event = { # Civil War in the Philippines
-		id = fxnews.7
-		title = fxnews.7.t
-		desc = fxnews.7.d
-		picture = GFX_news_event_PHI_manila_uprising
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
+	}
+	option = { # Insulindia/East Indies
+		name = fxnews.6.b
+		trigger = {
+			tag = INS
+			tag = BEA
 		}
-
-		option = { 
-				name = fxnews.5.a
-		}
+	}
 }
 
 news_event = { # Southern Agitation
