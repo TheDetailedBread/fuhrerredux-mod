@@ -21,6 +21,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Luis_Taruc_hog_col_hired }
 			on_remove = { clr_country_flag = PHI_Luis_Taruc_hog_col_hired }
 			traits = {
+				head_of_government
 				collectivist
 				hog_flamboyant_tough_guy
 			}
@@ -48,6 +49,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Pedro_Abad_Santos_hog_van_hired }
 			on_remove = { clr_country_flag = PHI_Pedro_Abad_Santos_hog_van_hired }
 			traits = {
+				head_of_government
 				vanguardist
 				hog_red_chairmen
 			}
@@ -75,6 +77,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Crisanto_Evangelista_hog_lib_hired }
 			on_remove = { clr_country_flag = PHI_Crisanto_Evangelista_hog_lib_hired }
 			traits = {
+				head_of_government
 				libertarian_socialist
 				hog_ambitious_union_boss
 			}
@@ -102,6 +105,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Lope_K_Santos_hog_sde_hired }
 			on_remove = { clr_country_flag = PHI_Lope_K_Santos_hog_sde_hired }
 			traits = {
+				head_of_government
 				social_democrat
 				hog_privileged_socialist
 			}
@@ -129,6 +133,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Elpidio_Quirino_hog_sli_hired }
 			on_remove = { clr_country_flag = PHI_Elpidio_Quirino_hog_sli_hired }
 			traits = {
+				head_of_government
 				social_liberal
 				hog_pragmatic_statesman
 			}
@@ -143,6 +148,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Elpidio_Quirino_for_sli_hired }
 			on_remove = { clr_country_flag = PHI_Elpidio_Quirino_for_sli_hired }
 			traits = {
+				foreign_minister
 				social_liberal
 				for_biased_intellectual
 			}
@@ -171,6 +177,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Manuel_Roxas_hog_mli_hired }
 			on_remove = { clr_country_flag = PHI_Manuel_Roxas_hog_mli_hired }
 			traits = {
+				head_of_government
 				market_liberal
 				hog_corporate_suit
 			}
@@ -199,6 +206,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Manuel_Luis_Quezon_hog_sco_hired }
 			on_remove = { clr_country_flag = PHI_Manuel_Luis_Quezon_hog_sco_hired }
 			traits = {
+				head_of_government
 				social_conservative
 				hog_silent_workhorse
 			}
@@ -222,6 +230,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Jose_P_Laurel_hog_ade_hired }
 			on_remove = { clr_country_flag = PHI_Jose_P_Laurel_hog_ade_hired }
 			traits = {
+				head_of_government
 				authoritarian_democrat
 				hog_silent_workhorse
 			}
@@ -267,6 +276,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Basilio_J_Valdez_hog_pau_hired }
 			on_remove = { clr_country_flag = PHI_Basilio_J_Valdez_hog_pau_hired }
 			traits = {
+				head_of_government
 				paternal_autocrat
 				hog_reformist_soldier
 			}
@@ -281,6 +291,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Basilio_J_Valdez_sec_sco_hired }
 			on_remove = { clr_country_flag = PHI_Basilio_J_Valdez_sec_sco_hired }
 			traits = {
+				security_minister
 				social_conservative
 				sec_driven_recruiter
 			}
@@ -290,6 +301,7 @@ characters = {
 			slot = chief_of_staff
 			idea_token = PHI_Basilio_J_Valdez_cos_pau
 			traits = {
+				chief_of_staff
 				cos_school_of_commando_operations
 			}
 		}
@@ -298,6 +310,7 @@ characters = {
 			slot = chief_of_army
 			idea_token = PHI_Basilio_J_Valdez_carm_pau
 			traits = {
+				chief_of_army
 				carm_decisive_battle_doctrine
 			}
 		}
@@ -330,6 +343,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Emilio_Aguinaldo_hog_npo_hired }
 			on_remove = { clr_country_flag = PHI_Emilio_Aguinaldo_hog_npo_hired }
 			traits = {
+				head_of_government
 				national_populist
 				hog_old_general
 			}
@@ -344,6 +358,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Emilio_Aguinaldo_sec_npo_hired }
 			on_remove = { clr_country_flag = PHI_Emilio_Aguinaldo_sec_npo_hired }
 			traits = {
+				security_minister
 				national_populist
 				sec_prince_of_terror
 			}
@@ -371,6 +386,7 @@ characters = {
 			on_add = { set_country_flag = PHI_Benigno_Ramos_hog_val_hired }
 			on_remove = { clr_country_flag = PHI_Benigno_Ramos_hog_val_hired }
 			traits = {
+				head_of_government
 				valkist
 				hog_determined_populist
 			}
@@ -1878,6 +1894,52 @@ characters = {
 				foreign_minister
 				authoritarian_democrat
 				for_great_compromiser
+			}
+		}
+	}
+	PHI_Jorge_Vargas = {
+		name = "Jorge Vargas"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Jorge_Vargas.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Jorge_Vargas_for_val_hired }
+			}
+			idea_token = PHI_Jorge_Vargas_for_val
+			on_add = { set_country_flag = PHI_Jorge_Vargas_for_val_hired }
+			on_remove = { clr_country_flag = PHI_Jorge_Vargas_for_val_hired }
+			traits = {
+				foreign_minister
+				valkist
+				for_apologetic_clerk
+			}
+		}
+	}
+	PHI_Rafael_Alunan = {
+		name = "Rafael Alunan"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Rafael_Alunan.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Rafael_Alunan_eco_val_hired }
+			}
+			idea_token = PHI_Rafael_Alunan_eco_val
+			on_add = { set_country_flag = PHI_Rafael_Alunan_eco_val_hired }
+			on_remove = { clr_country_flag = PHI_Rafael_Alunan_eco_val_hired }
+			traits = {
+				economy_minister
+				valkist
+				eco_reformer
 			}
 		}
 	}

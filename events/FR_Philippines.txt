@@ -25,6 +25,7 @@ country_event = { # Independence At Last
   option = { # Mabuhay ang Pilipinas!
     name = philippines.1.a
     give_military_access = USA
+    drop_cosmetic_tag = yes
     USA = {
       give_guarantee = PHI
       diplomatic_relation = { country = PHI relation = non_aggression_pact }
@@ -337,7 +338,7 @@ country_event = { # Benigno Ramos Arrives from Tokyo
   option = { # Not you too...
     name = philippines.16.a
     hidden_effect = {
-      country_event = { id = philippines.17 days = 12 }
+      country_event = { id = philippines.17 days = 3 }
     }
   }
 }
@@ -723,13 +724,135 @@ country_event = { # Elections of 1937
     remove_every_minister = yes
     add_ideas = {
       PHI_Benigno_Ramos_hog_val
-      PHI_Claro_M_Recto_for_ade
-      PHI_Serafin_Fausto_eco_ade
-      PHI_Benigno_Aquino_Sr_sec_ade
+      PHI_Jorge_Vargas_for_val
+      PHI_Rafael_Alunan_eco_val
+      PHI_Jose_G_Lukban_sec_val
     }
     hidden_effect = {
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_sakdalista_party_victory
+    }
+  }
+}
+
+country_event = { # Operation Merdeka
+  id = philippines.35
+  title = philippines.35.t
+  desc = philippines.35.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Greenlight the operation...
+    name = philippines.35.a
+    add_political_power = 30
+    hidden_effect = {
+      country_event = { id = philippines.36 days = 30 }
+    }
+  }
+  option = { # It's too risky...
+    name = philippines.35.b
+    increase_ruling_party_popularity_by_5 = yes
+  }
+}
+
+country_event = { # Operation Merdeka - Successfull
+  id = philippines.36
+  title = philippines.36.t
+  desc = philippines.36.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Excellent...
+    name = philippines.36.a
+    increase_ruling_party_popularity_by_10 = yes
+    transfer_state = 785
+    INS = { country_event = { id = philippines.37 days = 2 } }
+    BEA = { country_event = { id = philippines.37 days = 2 } }
+    ENG = { country_event = { id = philippines.38 days = 2 } }
+  }
+}
+
+country_event = { # Filipino Troops Occupies North Borneo
+  id = philippines.37
+  title = philippines.37.t
+  desc = philippines.37.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # We'll get them back
+    name = philippines.37.a
+    add_opinion_modifier = {
+      target = PHI
+      modifier = ITA_outraged
+    }
+  }
+}
+
+country_event = { # Philippine Seizes North Borneo
+  id = philippines.38
+  title = philippines.38.t
+  desc = philippines.38.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # What?!
+    name = philippines.38.a
+    add_opinion_modifier = {
+      target = PHI
+      modifier = ITA_outraged
+    }
+  }
+}
+
+country_event = { # Filipino Equipment Arrives
+  id = philippines.39
+  title = philippines.39.t
+  desc = philippines.39.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Much needed!
+    name = philippines.39.a
+  }
+}
+
+country_event = { # Filipino Volunteers
+  id = philippines.40
+  title = philippines.40.t
+  desc = philippines.40.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Send the volunteers
+    name = philippines.40.a
+    INS = { 
+      country_event = { id = philippines.41 days = 3 }
+    }
+  }
+  option = { # Equipment are already enough
+    name = philippines.40.b
+    add_political_power = 50
+  }
+}
+
+country_event = { # Filipino Volunteers Sent
+  id = philippines.41
+  title = philippines.41.t
+  desc = philippines.41.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Excellent.
+    name = philippines.41.a
+    random_owned_controlled_state = {
+      create_unit = {
+        division = "name = \"Filipino Volunteers\" division_template = \"Divisi Infanteri\" start_experience_factor = 0.5 start_equipment_factor = 0.5 start_manpower_factor = 0.5"
+        owner = INS
+      }
+      create_unit = {
+        division = "name = \"Filipino Volunteers\" division_template = \"Divisi Infanteri\" start_experience_factor = 0.5 start_equipment_factor = 0.5 start_manpower_factor = 0.5"
+        owner = INS
+      }
     }
   }
 }

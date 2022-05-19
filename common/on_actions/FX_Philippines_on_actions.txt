@@ -10,18 +10,6 @@ on_actions = {
       }
     }
   }
-  on_release_as_free = {
-    effect = {
-      if = {
-        limit = {
-          ROOT = { tag = PHI }
-        }
-        ROOT = {
-          drop_cosmetic_tag = yes
-        }
-      }
-    }
-  }
   on_declare_war = {
     effect = {
       if = {
