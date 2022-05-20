@@ -93,8 +93,9 @@ political_actions = {
     cost = 15
     days_remove = 90
     state_target = yes
-    target = { 785 }
+    targets = { 785 }
     target_trigger = {
+      owns_state = FROM
       FROM = { has_resistance = yes }
     }
     available = {
@@ -121,8 +122,9 @@ political_actions = {
     days_remove = 60
     cost = 0
     cancel_if_not_visible = yes
-    target = { 785 }
+    targets = { 785 }
     target_trigger = {
+      owns_state = FROM
       FROM = { has_resistance = yes }
     }
     available = {

@@ -84,6 +84,7 @@ country_event = {
 	
 	option = {
 		name = insulindia.2.a
+		set_global_flag = insulindian_uprising_success
 		add_political_power = 25
 		add_manpower = -2000
 		white_peace = ENG
@@ -92,6 +93,9 @@ country_event = {
 		hidden_effect = {
 			INS = {
 				remove_ideas = INS_war_for_insulindian_independence_idea
+			}
+			PHI = {
+				country_event = { id = philippines.51 days = 90 }
 			}
 		}
 	}
