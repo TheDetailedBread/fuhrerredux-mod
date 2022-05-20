@@ -663,8 +663,39 @@ country_event = { # Fate of Philippines
     ai_chance = {
       base = 100
     }
+    PHI = { get_current_government_type = yes }
     set_temp_variable = { tag_to_release = PHI }
     release_targeted_tag = yes
+    hidden_effect = {
+      PHI = {
+        restore_previous_government_type = yes
+        set_politics = {
+          ruling_party = authoritarian_democrat
+          elections_allowed = no
+        }
+        set_party_name = {
+          name = PHI_ktp_party
+          long_name = PHI_ktp_party_long
+          ideology = authoritarian_democrat
+        }
+        increase_ruling_party_popularity_by_10 = yes
+        remove_every_minister = yes
+        add_country_leader_role = {
+          character = PHI_Jose_P_Laurel
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = { }
+          }
+        }
+        add_ideas = {
+          PHI_Jose_P_Laurel_hog_ade
+          PHI_Claro_M_Recto_for_ade
+          PHI_Serafin_Fausto_eco_ade
+          PHI_Benigno_Aquino_Sr_sec_ade
+        }
+      }
+    }
   }
 
   option = { # Occupy

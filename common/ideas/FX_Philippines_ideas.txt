@@ -36,7 +36,7 @@ ideas = {
     }
     PHI_farmer_subsidies = {
       allowed = { original_tag = PHI }
-      picture = ger_mefo_bills_payment
+      picture = generic_agrarian_reform
       modifier = {
         monthly_population = 0.15
         production_speed_buildings_factor = 0.05
@@ -124,6 +124,85 @@ ideas = {
       picture = generic_foreign_capital
       modifier = {
         consumer_goods_factor = 0.1
+      }
+    }
+    # Liberal Ideas
+    PHI_judicial_reform_idea = {
+      allowed = { original_tag = PHI }
+      modifier = {
+        political_power_gain = 0.15
+        stability_factor = 0.05
+      }
+    }
+    PHI_private_public_partnerships_idea = {
+      allowed = { original_tag = PHI }
+      picture = ROM_king_carol_ii_hedonist
+      modifier = {
+        production_speed_buildings_factor = 0.15
+        industrial_capacity_factory = 0.05
+        industrial_capacity_dockyard = 0.05
+      }
+    }
+    PHI_fbc_propaganda = {
+      allowed = { original_tag = PHI }
+      picture = radio_propaganda
+      modifier = {
+        stability_factor = 0.05
+				war_support_factor = 0.10
+				political_power_gain = 0.25
+				conscription_factor = 0.05
+      }
+    }
+    PHI_minimum_wage_idea = {
+      allowed = { original_tag = PHI }
+      picture = chi_hyper_inflation3
+      modifier = {
+        production_factory_max_efficiency_factor = 0.15
+      }
+    }
+    # Nacionalista
+    PHI_education_investments = {
+      allowed = { original_tag = PHI }
+      picture = jap_supremacy_of_technology
+      modifier = {
+        research_speed_factor = 0.1
+      }
+    }
+    PHI_education_investments_1 = {
+      allowed = { original_tag = PHI }
+      picture = jap_supremacy_of_technology
+      modifier = {
+        conscription_factor = 0.15
+        training_time_factor = -0.15
+        research_speed_factor = 0.1
+      }
+    }
+    PHI_filipino_anti_trust_laws = {
+      allowed = { original_tag = PHI }
+      picture = generic_neutrality_drift_bonus
+      modifier = {
+        industrial_capacity_factory = 0.15
+        industrial_capacity_dockyard = 0.15
+      }
+    }
+    # Nacionalista/Liberal Shared
+    PHI_land_redistribution = {
+      allowed = { original_tag = PHI }
+      picture = ger_mefo_bills_payment
+      on_remove = {
+        country_event = { id = philippines.54 days = 1 }
+      }
+      modifier = {
+        consumer_goods_factor = 0.1
+      }
+    }
+    PHI_crop_insurance_idea = {
+      allowed = { original_tag = PHI }
+      picture = HUN_treaty_of_triannon
+      modifier = {
+        consumer_goods_factor = 0.01
+        supply_consumption_factor = -0.15
+        production_factory_max_efficiency_factor = 0.05
       }
     }
   }

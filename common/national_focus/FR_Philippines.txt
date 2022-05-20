@@ -11,6 +11,10 @@ focus_tree = {
     }
   }
 
+  initial_show_position = {
+    focus = PHI_elections_of_1937
+  }
+
   ######################################################
   #                                                    #
   #                      POLITICS                      #
@@ -72,8 +76,16 @@ focus_tree = {
     x = -2
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_partido_liberal }
     relative_position_id = PHI_partido_liberal
+    completion_reward = {
+      add_ideas = PHI_judicial_reform_idea
+      increase_ruling_party_popularity_by_10 = yes
+    }
   }
 
   # Private-Public Partnerships
@@ -83,8 +95,18 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_partido_liberal }
     relative_position_id = PHI_partido_liberal
+    completion_reward = {
+      add_ideas = PHI_private_public_partnerships_idea
+      hidden_effect = {
+        country_event = { id = philippines.52 days = 30 }
+      }
+    }
   }
 
   # Further Agricultural Modernization
@@ -94,8 +116,19 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_private_public_partnerships }
     relative_position_id = PHI_private_public_partnerships
+    completion_reward = {
+      add_tech_bonus = {
+        category = industry
+        bonus = 1.0
+        uses = 1
+      }
+    }
   }
 
   # Filipino Broadcasting Corporation
@@ -105,8 +138,15 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_private_public_partnerships }
     relative_position_id = PHI_private_public_partnerships 
+    completion_reward = {
+      add_ideas = PHI_fbc_propaganda
+    }
   }
 
   # Discredit Radical Groups
@@ -116,8 +156,30 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_reform_the_justice_system }
     relative_position_id = PHI_reform_the_justice_system
+    completion_reward = {
+      add_political_power = 100
+      add_popularity = {
+        ideology = authoritarian_democrat
+        popularity = -0.05
+      }
+      add_popularity = {
+        ideology = national_populist
+        popularity = -0.05
+      }
+      add_popularity = {
+        ideology = valkist
+        popularity = -0.05
+      }
+      hidden_effect = {
+        country_event = { id = philippines.53 days = 7 }
+      }
+    }
   }
 
   # Wage Floors
@@ -127,8 +189,15 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_further_agricultural_modernization }
     relative_position_id = PHI_further_agricultural_modernization
+    completion_reward = {
+      add_ideas = PHI_minimum_wage_idea
+    }
   }
 
   # Light the Archipelago
@@ -138,9 +207,20 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = market_liberal
+    }
     prerequisite = { focus = PHI_discredit_radical_groups }
     prerequisite = { focus = PHI_wage_floors }
     relative_position_id = PHI_discredit_radical_groups
+    completion_reward = {
+      add_tech_bonus = {
+        category = electronics
+        bonus = 1.0
+        uses = 2
+      }
+    }
   }
 
   # Partido Nacionalista
@@ -175,6 +255,10 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_partido_nacionalista }
     relative_position_id = PHI_partido_nacionalista
     completion_reward = {
@@ -189,8 +273,16 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_partido_nacionalista }
     relative_position_id = PHI_partido_nacionalista
+    completion_reward = {
+      increase_ruling_party_popularity_by_10 = yes
+      remove_ideas = PHI_lingering_sakdalistas
+    }
   }
 
   # Intensify Land Reform Efforts
@@ -200,11 +292,25 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      OR = {
+        has_government = market_liberal
+        has_government = social_conservative
+      }
+    }
     prerequisite = {
       focus = PHI_private_public_partnerships
       focus = PHI_rural_support
     }
     relative_position_id = PHI_rural_support
+    completion_reward = {
+      remove_ideas = PHI_hacienda_questions
+      add_timed_idea = {
+        idea = PHI_land_redistribution
+        days = 360
+      }
+    }
   }
 
   # Farm to Market Roads
@@ -214,6 +320,13 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      OR = {
+        has_government = market_liberal
+        has_government = social_conservative
+      }
+    }
     prerequisite = { focus = PHI_intensify_land_reform_efforts }
     relative_position_id = PHI_intensify_land_reform_efforts
   }
@@ -225,8 +338,18 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      OR = {
+        has_government = market_liberal
+        has_government = social_conservative
+      }
+    }
     prerequisite = { focus = PHI_intensify_land_reform_efforts }
     relative_position_id = PHI_intensify_land_reform_efforts
+    completion_reward = {
+      add_ideas = PHI_crop_insurance_idea
+    }
   }
 
   # Free Higher Education
@@ -236,8 +359,16 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_partido_nacionalista }
     relative_position_id = PHI_partido_nacionalista
+    completion_reward = {
+      add_ideas = PHI_education_investments
+      increase_ruling_party_popularity_by_5 = yes
+    }
   }
 
   # Reserved Officers Training Corps
@@ -247,8 +378,18 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_free_higher_education }
     relative_position_id = PHI_free_higher_education
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = PHI_education_investments
+        add_idea = PHI_education_investments_1
+      }
+    }
   }
 
   # Create the National Bureau of Investigation
@@ -258,8 +399,46 @@ focus_tree = {
     x = 3
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_partido_nacionalista }
     relative_position_id = PHI_partido_nacionalista
+    completion_reward = {
+      if = {
+        limit = { has_intelligence_agency = no }
+        custom_effect_tooltip = PHI_create_nbi_tt
+        hidden_effect = {
+          create_intelligence_agency = yes
+        }
+      }
+
+      if = {
+        limit = { 
+          NOT = { has_done_agency_upgrade = upgrade_passive_defense }
+        }
+        upgrade_intelligence_agency = upgrade_passive_defense
+      }
+      if = {
+        limit = {
+          NOT = { has_done_agency_upgrade = upgrade_anti_partisan }
+        }
+        upgrade_intelligence_agency = upgrade_anti_partisan
+      }
+      if = {
+        limit = {
+          NOT = { has_done_agency_upgrade = upgrade_interrogation_techniques }
+        }
+        upgrade_intelligence_agency = upgrade_interrogation_techniques
+      }
+      if = {
+        limit = {
+          NOT = { has_done_agency_upgrade = upgrade_psycho_warfare }
+        }
+        upgrade_intelligence_agency = upgrade_psycho_warfare
+      }
+    }
   }
 
   # Combat Public Service Corruption
@@ -269,9 +448,17 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_free_higher_education }
     prerequisite = { focus = PHI_create_nbi }
     relative_position_id = PHI_free_higher_education
+    completion_reward = {
+      add_stability = 0.15
+      add_political_power = 100
+    }
   }
 
   # New Anti-Trust Laws
@@ -281,8 +468,15 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = social_conservative
+    }
     prerequisite = { focus = PHI_combat_public_service_corruption }
     relative_position_id = PHI_combat_public_service_corruption
+    completion_reward = {
+      add_ideas = PHI_filipino_anti_trust_laws
+    }
   }
 
   # Partido Progressista
@@ -317,6 +511,10 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_partido_progressista }
     relative_position_id = PHI_partido_progressista
   }
@@ -328,6 +526,10 @@ focus_tree = {
     x = -1
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_partido_progressista }
     relative_position_id = PHI_partido_progressista
   }
@@ -339,6 +541,10 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_promote_nationalism }
     relative_position_id = PHI_promote_nationalism
   }
@@ -350,6 +556,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_promote_nationalism }
     relative_position_id = PHI_promote_nationalism
   }
@@ -361,6 +571,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_for_the_public_good }
     prerequisite = { focus = PHI_silence_critics }
     relative_position_id = PHI_for_the_public_good
@@ -373,6 +587,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_strengthen_presidential_powers }
     relative_position_id = PHI_strengthen_presidential_powers
   }
@@ -384,6 +602,10 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = authoritarian_democrat
+    }
     prerequisite = { focus = PHI_progressive_taxation }
     relative_position_id = PHI_progressive_taxation
   }
@@ -420,6 +642,13 @@ focus_tree = {
     x = -2
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      OR = {
+        has_government = authoritarian_democrat
+        has_government = national_populist
+      }
+    }
     prerequisite = {
       focus = PHI_lapiang_sakdalista
       focus = PHI_partido_progressista
@@ -434,6 +663,13 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      OR = {
+        has_government = authoritarian_democrat
+        has_government = national_populist
+      }
+    }
     prerequisite = { focus = PHI_nationalize_the_lands }
     relative_position_id = PHI_nationalize_the_lands
   }
@@ -445,6 +681,13 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      OR = {
+        has_government = authoritarian_democrat
+        has_government = national_populist
+      }
+    }
     prerequisite = { focus = PHI_agrarian_investments }
     relative_position_id = PHI_agrarian_investments
   }
@@ -456,6 +699,10 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6 
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_lapiang_sakdalista }
     relative_position_id = PHI_lapiang_sakdalista
   }
@@ -467,6 +714,10 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_reform_the_national_bank }
     relative_position_id = PHI_reform_the_national_bank
   }
@@ -478,6 +729,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_reform_the_national_bank }
     relative_position_id = PHI_reform_the_national_bank 
   }
@@ -489,6 +744,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_promote_local_unions }
     relative_position_id = PHI_promote_local_unions
   }
@@ -500,6 +759,10 @@ focus_tree = {
     x = 3
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_promote_local_unions }
     relative_position_id = PHI_promote_local_unions
   }
@@ -511,6 +774,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_institute_wealth_ceiling }
     relative_position_id = PHI_institute_wealth_ceiling
   }
@@ -522,6 +789,10 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+      has_government = valkist
+    }
     prerequisite = { focus = PHI_economic_independence }
     prerequisite = { focus = PHI_promote_local_unions }
     relative_position_id = PHI_promote_local_unions
