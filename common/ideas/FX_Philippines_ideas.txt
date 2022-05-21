@@ -249,4 +249,187 @@ ideas = {
 			}
     }
   }
+
+  # Weapons Manufacturers
+  weapons_manufacturer = {
+    PHI_armscor = {
+      picture = generic_infantry_equipment_manufacturer_2
+      allowed = { original_tag = PHI }
+      traits = { infantry_equipment_producer_allround_1 }
+			research_bonus = { infantry_weapons = 0.1 }
+    }
+    PHI_mas = {
+      picture = mas
+      allowed = { original_tag = PHI }
+      visible = {
+        FRA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { infantry_equipment_producer_offense_2 }
+      research_bonus = { infantry_weapons = 0.1 }
+    }
+    PHI_remington = {
+      picture = fx_remington
+      allowed = { original_tag = PHI }
+      visible = {
+        USA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { infantry_equipment_producer_mass_1 }
+      research_bonus = { infantry_weapons = 0.1 }
+    }
+    PHI_mauser = {
+      picture = mauser
+      allowed = { original_tag = PHI }
+      visible = {
+        GER = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { infantry_equipment_producer_assualt_1 }
+      research_bonus = { infantry_weapons = 0.1 }
+    }
+  }
+
+  # Tanks
+  tank_manufacturer = {
+    PHI_brandt = {
+      picture = brandt
+      allowed = { original_tag = PHI }
+      visible = {
+        FRA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { artillery_producer_offense_1 }
+      research_bonus = { infantry_weapons = 0.1 }
+    }
+    PHI_ford = {
+      picture = fx_ford
+      allowed = { original_tag = PHI }
+      visible = {
+        USA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { motorised_equipment_producer_mass_2 }
+			research_bonus = { motorized = 0.1 }
+    }
+    PHI_rolls_royce = {
+      picture = rolls_royce
+      allowed = { original_tag = PHI }
+      visible = {
+        ENG = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { small_tank_producer_offense_2 }
+      research_bonus = { armor = 0.1 }
+    }
+    PHI_daimler_benz = {
+      picture = daimler_benz
+      allowed = { original_tag = PHI }
+      visible = {
+        GER = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { medium_tank_producer_mass_2 }
+      research_bonus = { armor = 0.1 }
+    }
+  }
+
+  # Air-Navy
+  air_naval_manufacturer = {
+    PHI_morane_saulnier = {
+      picture = morane_saulnier
+      allowed = { original_tag = PHI }
+      visible = {
+        FRA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { fighter_producer_mass_1 }
+      research_bonus = { air_equipment = 0.1 }
+    }
+    PHI_lockheed = {
+      picture = lockheed
+      allowed = { original_tag = PHI }
+      visible = {
+        USA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { bomber_producer_defense_1 }
+      research_bonus = { air_equipment = 0.1 }
+    }
+    PHI_hawker = {
+      picture = hawker
+      allowed = { original_tag = PHI }
+      visible = {
+        ENG = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { fighter_producer_offense_1 }
+      research_bonus = { air_equipment = 0.1 }
+    }
+    PHI_junkers = {
+      picture = junkers
+      allowed = { original_tag = PHI }
+      visible = {
+        GER = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { nav_cas_producer_offense_2 }
+      research_bonus = { air_equipment = 0.1 }
+    }
+    PHI_fcm = {
+      picture = fcm
+      allowed = { original_tag = PHI }
+      visible = {
+        FRA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { small_ship_producer_offense_1 }
+      research_bonus = { naval_equipment = 0.1 }
+    }
+    PHI_higgins = {
+      picture = fx_higgins
+      allowed = { original_tag = PHI }
+      visible = {
+        USA = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { cruiser_producer_mass_1 }
+      research_bonus = { naval_equipment = 0.1 }
+    }
+    PHI_harland_wolff = {
+      picture = harland_wolff
+      allowed = { original_tag = PHI }
+      visible = {
+        ENG = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { capital_ship_producer_offense_1 }
+      research_bonus = { naval_equipment = 0.1 }
+    }
+    PHI_blohm_voss = {
+      picture = blohm_voss
+      allowed = { original_tag = PHI }
+      visible = {
+        GER = {
+          has_country_flag = PHI_investments
+        }
+      }
+      traits = { small_ship_producer_mass_2 }
+      research_bonus = { naval_equipment = 0.1 }
+    }
+  }
 }
