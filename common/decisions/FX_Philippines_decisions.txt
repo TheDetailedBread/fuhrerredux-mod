@@ -88,34 +88,6 @@ foreign_politics = {
 }
 
 political_actions = {
-  PHI_suppress_resistance = {
-    icon = generic_police_action
-    cost = 15
-    days_remove = 90
-    state_target = yes
-    targets = { 785 }
-    target_trigger = {
-      owns_state = FROM
-      FROM = { has_resistance = yes }
-    }
-    available = {
-      has_full_control_of_state = FROM
-    }
-    visible = {
-      FROM = { has_resistance = yes }
-    }
-    complete_effect = {
-			FROM = {
-				add_compliance = 5
-				add_resistance_target = {
-					amount = -10
-					tooltip = PHI_suppress_resistance_tooltip
-					days = 90
-				}
-				set_garrison_strength = 1
-			}
-		}
-  }
   PHI_integrate = {
     icon = generic_army_support
     state_target = yes
@@ -125,25 +97,32 @@ political_actions = {
     targets = { 785 }
     target_trigger = {
       owns_state = FROM
-      FROM = { has_resistance = yes }
     }
     available = {
       has_full_control_of_state = FROM
-      if = {
-        limit = { FROM = { has_resistance = yes } }
-        FROM = { compliance > 40 } #separate scopes for separate trigger tooltips
-				FROM = { resistance < 10 }
-      }
+      num_of_civilian_factories_available_for_projects > 2
     }
     visible = {
 			NOT = { FROM = { is_core_of = ROOT } }
 		}
+    modifier = {
+      civilian_factory_use = 2
+    }
     remove_effect = {
       if = {
 				limit = { FROM = { is_claimed_by = ROOT } }
 				remove_state_claim = FROM
 			}
 			add_state_core = FROM
+      every_other_country = {
+        limit = {
+          FROM = {
+            is_core_of = PREV
+          }
+        }
+        remove_core_of = PREV
+        add_core_of = ROOT
+      }
     }
   }
   PHI_halt_refugee_acceptance = {

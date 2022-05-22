@@ -11,6 +11,8 @@ focus_tree = {
     }
   }
 
+  continuous_focus_position = { x = 1400 y = 1000 }
+
   initial_show_position = {
     focus = PHI_elections_of_1937
   }
@@ -517,6 +519,12 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_partido_progressista }
     relative_position_id = PHI_partido_progressista
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = presidential_republic
+        add_idea = republican_dictatorship
+      }
+    }
   }
 
   # Promote Nationalism
@@ -532,6 +540,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_partido_progressista }
     relative_position_id = PHI_partido_progressista
+    completion_reward = {
+      add_ideas = PHI_patriotic_nation
+    }
   }
 
   # For the Public Good
@@ -547,6 +558,16 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_promote_nationalism }
     relative_position_id = PHI_promote_nationalism
+    completion_reward = {
+      add_offsite_building = {
+        type = industrial_complex
+        level = 2
+      }
+      add_offsite_building = {
+        type = arms_factory
+        level = 2
+      }
+    }
   }
 
   # Silence Critics
@@ -562,6 +583,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_promote_nationalism }
     relative_position_id = PHI_promote_nationalism
+    completion_reward = {
+      remove_ideas = PHI_lingering_sakdalistas
+    }
   }
 
   # Department of Public Safety
@@ -578,6 +602,9 @@ focus_tree = {
     prerequisite = { focus = PHI_for_the_public_good }
     prerequisite = { focus = PHI_silence_critics }
     relative_position_id = PHI_for_the_public_good
+    completion_reward = {
+      add_ideas = PHI_secret_police
+    }
   }
 
   # Progressive Taxation
@@ -593,6 +620,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_strengthen_presidential_powers }
     relative_position_id = PHI_strengthen_presidential_powers
+    completion_reward = {
+      add_ideas = PHI_progressive_taxation_idea
+    }
   }
 
   # Universal Healthcare
@@ -608,6 +638,14 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_progressive_taxation }
     relative_position_id = PHI_progressive_taxation
+    completion_reward = {
+      add_tech_bonus = {
+        category = hospital_tech
+        bonus = 1.0
+        uses = 1
+      }
+      add_ideas = PHI_improved_healthcare
+    }
   }
 
   # Lapiang Sakdalista
@@ -654,6 +692,11 @@ focus_tree = {
       focus = PHI_partido_progressista
     }
     relative_position_id = PHI_lapiang_sakdalista
+    completion_reward = {
+      add_political_power = -150
+      increase_ruling_party_popularity_by_10 = yes
+      remove_ideas = PHI_hacienda_questions
+    }
   }
 
   # Agrarian Investments
@@ -672,6 +715,13 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_nationalize_the_lands }
     relative_position_id = PHI_nationalize_the_lands
+    completion_reward = {
+      add_tech_bonus = {
+        category = industry
+        bonus = 1.0
+        uses = 2
+      }
+    }
   }
 
   # Feed the Poor
@@ -705,6 +755,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_lapiang_sakdalista }
     relative_position_id = PHI_lapiang_sakdalista
+    completion_reward = {
+      add_ideas = PHI_economic_reform_1
+    }
   }
 
   # Institute Wealth Ceiling
@@ -720,6 +773,12 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_reform_the_national_bank }
     relative_position_id = PHI_reform_the_national_bank
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = PHI_economic_reform_1
+        add_idea = PHI_economic_reform_2
+      }
+    }
   }
 
   # Promote Local Unions
@@ -734,7 +793,11 @@ focus_tree = {
       has_government = valkist
     }
     prerequisite = { focus = PHI_reform_the_national_bank }
-    relative_position_id = PHI_reform_the_national_bank 
+    relative_position_id = PHI_reform_the_national_bank
+    completion_reward = {
+      add_political_power = 100
+      increase_ruling_party_popularity_by_10 = yes
+    }
   }
 
   # Social Housing
@@ -750,6 +813,12 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_promote_local_unions }
     relative_position_id = PHI_promote_local_unions
+    completion_reward = {
+      every_owned_state = {
+        limit = { is_core_of = ROOT }
+        add_extra_state_shared_building_slots = 1
+      }
+    }
   }
 
   # Youth Work Brigades
@@ -765,12 +834,15 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_promote_local_unions }
     relative_position_id = PHI_promote_local_unions
+    completion_reward ={
+      add_ideas = PHI_youth_work_brigades_idea
+    }
   }
 
   # Economic Independence
   focus = {
     id = PHI_economic_independence
-    icon = GFX_goal_PHI_economic_independence
+    icon = GFX_focus_generic_the_giant_wakes
     x = 1
     y = 1
     cost = 6
@@ -780,6 +852,12 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_institute_wealth_ceiling }
     relative_position_id = PHI_institute_wealth_ceiling
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = PHI_economic_reform_2
+        add_idea = PHI_economic_reform_3
+      }
+    }
   }
 
   # Filipino First!
@@ -796,6 +874,12 @@ focus_tree = {
     prerequisite = { focus = PHI_economic_independence }
     prerequisite = { focus = PHI_promote_local_unions }
     relative_position_id = PHI_promote_local_unions
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = PHI_economic_reform_3
+        add_idea = PHI_economic_reform_4
+      }
+    }
   }
 
   ######################################################
@@ -1133,6 +1217,373 @@ focus_tree = {
         }
       }
     }
+  }
+
+  ######################################################
+  #                                                    #
+  #                      FOREIGN                       #
+  #                                                    #
+  ######################################################
+
+  # Into the World
+  focus = {
+    id = PHI_into_the_world
+    x = 0
+    y = 2
+    cost = 6
+    relative_position_id = PHI_new_antitrust_laws
+  }
+
+  # Forgiven but Never Forgotten
+  focus = {
+    id = PHI_forgiven_but_never_forgotten
+    icon = GFX_goal_generic_spanish_civil_war
+    x = -4
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_into_the_world }
+    relative_position_id = PHI_into_the_world
+  }
+
+  # Look to the West
+  focus = {
+    id = PHI_look_to_the_west
+    icon = GFX_focus_chi_reach_out_to_france
+    x = -2
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_maintain_american_relations
+      focus = PHI_pivot_to_japan
+      focus = PHI_on_our_own
+    }
+    prerequisite = { focus = PHI_into_the_world }
+    relative_position_id = PHI_into_the_world
+  }
+
+  # Maintain American Relations
+  focus = {
+    id = PHI_maintain_american_relations
+    icon = GFX_focus_chi_mission_to_the_us
+    x = 0
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_look_to_the_west
+      focus = PHI_pivot_to_japan
+      focus = PHI_on_our_own
+    }
+    prerequisite = { focus = PHI_into_the_world }
+    relative_position_id = PHI_into_the_world
+  }
+
+  # An Entente Outpost in the East
+  focus = {
+    id = PHI_an_entente_outpost_in_the_east
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_look_to_the_west }
+    relative_position_id = PHI_look_to_the_west
+  }
+
+  # Safeguard the Colonies
+  focus = {
+    id = PHI_safeguard_the_colonies
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_an_entente_outpost_in_the_east }
+    relative_position_id = PHI_an_entente_outpost_in_the_east
+  }
+
+  # Contain Japanese Aggression
+  focus = {
+    id = PHI_contain_japanese_aggression
+    icon = GFX_goal_JAP_kohoda
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_look_to_the_west
+      focus = PHI_maintain_american_relations
+    }
+    relative_position_id = PHI_maintain_american_relations
+  }
+
+  # The Siamese Affair
+  focus = {
+    id = PHI_the_siamese_affair
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_contain_japanese_aggression }
+    relative_position_id = PHI_contain_japanese_aggression
+  }
+
+  # Strike the Empire
+  focus = {
+    id = PHI_strike_the_empire
+    icon = GFX_focus_attack_japan
+    x = 0
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_contain_japanese_aggression }
+    relative_position_id = PHI_contain_japanese_aggression
+  }
+
+  # Support the Koreans
+  focus = {
+    id = PHI_support_the_koreans
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_strike_the_empire }
+    relative_position_id = PHI_strike_the_empire
+  }
+
+  # Spanish Captaincy General Islands
+  focus = {
+    id = PHI_spanish_captaincy_general_islands
+    x = -2
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_an_entente_outpost_in_the_east
+      focus = PHI_support_the_koreans
+    }
+    relative_position_id = PHI_support_the_koreans
+  }
+
+  # Arm the White Russians
+  focus = {
+    id = PHI_arm_the_white_russians
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_strike_the_empire }
+    relative_position_id = PHI_strike_the_empire
+  }
+
+  # Support the Kuomintang
+  focus = {
+    id = PHI_support_the_kuomitang
+    icon = GFX_goal_CHI_military_affairs_cmsn
+    x = 1
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_contain_japanese_aggression }
+    relative_position_id = PHI_contain_japanese_aggression
+  }
+
+  # Pivot to Japan
+  focus = {
+    id = PHI_pivot_to_japan
+    icon = GFX_focus_chi_collaboration_with_the_japanese
+    x = 3
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_look_to_the_west
+      focus = PHI_maintain_american_relations
+      focus = PHI_on_our_own
+    }
+    prerequisite = { focus = PHI_into_the_world }
+    relative_position_id = PHI_into_the_world
+  }
+
+  # On Our Own
+  focus = {
+    id = PHI_on_our_own
+    icon = GFX_goal_flames_of_rebellion
+    x = 5
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_look_to_the_west
+      focus = PHI_maintain_american_relations
+      focus = PHI_pivot_to_japan
+    }
+    prerequisite = { focus = PHI_into_the_world }
+    relative_position_id = PHI_into_the_world
+  }
+
+  # Anti-Colonialist Crusade
+  focus = {
+    id = PHI_anti_colonialist_crusade
+    icon = GFX_goal_liberty
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_maintain_american_relations
+      focus = PHI_pivot_to_japan
+    }
+    relative_position_id = PHI_pivot_to_japan
+  }
+
+  # Liberate Indochina
+  focus = {
+    id = PHI_liberate_indochina
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_anti_colonialist_crusade }
+    mutually_exclusive = { focus = PHI_fuel_insurrection_in_indochina }
+    relative_position_id = PHI_anti_colonialist_crusade
+  }
+
+  # Fuel Insurrection in Indochina
+  focus = {
+    id = PHI_fuel_insurrection_in_indochina
+    icon = GFX_goal_PHI_indochinese_rebellion
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_anti_colonialist_crusade }
+    mutually_exclusive = { focus = PHI_liberate_indochina }
+    relative_position_id = PHI_anti_colonialist_crusade
+  }
+
+  # The Burmese Question
+  focus = {
+    id = PHI_the_burmese_question
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_fuel_insurrection_in_indochina
+      focus = PHI_liberate_indochina
+    }
+    relative_position_id = PHI_fuel_insurrection_in_indochina
+  }
+
+  # Second Insulindian Revolution
+  focus = {
+    id = PHI_second_insulindian_revolution
+    icon = GFX_goal_PHI_insulindian_rebellion
+    x = 0
+    y = 2
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_invite_insulindia
+    }
+    prerequisite = {
+      focus = PHI_liberate_indochina
+      focus = PHI_fuel_insurrection_in_indochina
+      focus = PHI_invite_siam
+      focus = PHI_operation_higante
+    }
+    relative_position_id = PHI_liberate_indochina
+  }
+
+  # Invite Insulindia
+  focus = {
+    id = PHI_invite_insulindia
+    x = 0
+    y = 2
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_second_insulindian_revolution
+    }
+    prerequisite = {
+      focus = PHI_liberate_indochina
+      focus = PHI_fuel_insurrection_in_indochina
+      focus = PHI_invite_siam
+      focus = PHI_operation_higante
+    }
+    relative_position_id = PHI_fuel_insurrection_in_indochina
+  }
+
+  # The Co-Prosperity Sphere
+  focus = {
+    id = PHI_the_co_prosperity_sphere
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_pivot_to_japan
+      focus = PHI_on_our_own
+    }
+    relative_position_id = PHI_pivot_to_japan
+  }
+
+  # Invite Siam
+  focus = {
+    id = PHI_invite_siam
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_the_co_prosperity_sphere }
+    relative_position_id = PHI_the_co_prosperity_sphere
+  }
+
+  # Strengthen Naval Presence
+  focus = {
+    id = PHI_strengthen_naval_presence
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = PHI_on_our_own }
+    relative_position_id = PHI_on_our_own
+  }
+
+  # Operation "Higante"
+  focus = {
+    id = PHI_operation_higante
+    icon = GFX_goal_generic_attack_siam
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = PHI_strengthen_naval_presence }
+    relative_position_id = PHI_strengthen_naval_presence
+  }
+
+  # Influence India
+  focus = {
+    id = PHI_influence_india
+    x = 0
+    y = 2
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_liberate_india
+    }
+    prerequisite = {
+      focus = PHI_support_the_kuomitang
+      focus = PHI_second_insulindian_revolution
+      focus = PHI_invite_insulindia
+    }
+    relative_position_id = PHI_support_the_kuomitang
+  }
+
+  # Liberate India
+  focus = {
+    id = PHI_liberate_india
+    x = 1
+    y = 1
+    cost = 6
+    mutually_exclusive = {
+      focus = PHI_influence_india
+    }
+    prerequisite = {
+      focus = PHI_second_insulindian_revolution
+      focus = PHI_invite_insulindia
+    }
+    relative_position_id = PHI_second_insulindian_revolution
+  }
+
+  # Attack Australasia
+  focus = {
+    id = PHI_attack_australasia
+    icon = GFX_focus_attack_australia
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = {
+      focus = PHI_second_insulindian_revolution
+      focus = PHI_invite_insulindia
+    }
+    relative_position_id = PHI_invite_insulindia
   }
 
   ######################################################
@@ -1613,10 +2064,10 @@ focus_tree = {
   focus = {
     id = PHI_start_naval_buildup
     icon = GFX_goal_PHI_navy
-    x = 10
-    y = 0
+    x = -3
+    y = 2
     cost = 6
-    relative_position_id = PHI_expand_the_philippine_scouts
+    relative_position_id = PHI_fortress_philippines
     completion_reward = {
       navy_experience = 25
     }
@@ -1912,7 +2363,7 @@ focus_tree = {
   focus = {
     id = PHI_fund_an_air_force
     icon = GFX_goal_PHI_air_force
-    x = 6
+    x = 7
     y = 0
     cost = 6
     relative_position_id = PHI_start_naval_buildup
