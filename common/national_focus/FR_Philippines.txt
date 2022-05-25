@@ -1228,6 +1228,7 @@ focus_tree = {
   # Into the World
   focus = {
     id = PHI_into_the_world
+    icon = GFX_goal_burning_globe
     x = 0
     y = 2
     cost = 6
@@ -1280,6 +1281,7 @@ focus_tree = {
   # An Entente Outpost in the East
   focus = {
     id = PHI_an_entente_outpost_in_the_east
+    icon = GFX_goal_skull_fortification
     x = -2
     y = 1
     cost = 6
@@ -1290,6 +1292,7 @@ focus_tree = {
   # Safeguard the Colonies
   focus = {
     id = PHI_safeguard_the_colonies
+    icon = GFX_goal_generic_military_sphere
     x = -1
     y = 1
     cost = 6
@@ -1300,7 +1303,7 @@ focus_tree = {
   # Contain Japanese Aggression
   focus = {
     id = PHI_contain_japanese_aggression
-    icon = GFX_goal_JAP_kohoda
+    icon = GFX_goal_generic_focus_japan
     x = -1
     y = 1
     cost = 6
@@ -1314,6 +1317,7 @@ focus_tree = {
   # The Siamese Affair
   focus = {
     id = PHI_the_siamese_affair
+    icon = GFX_goal_flag_siam
     x = -2
     y = 1
     cost = 6
@@ -1335,6 +1339,7 @@ focus_tree = {
   # Support the Koreans
   focus = {
     id = PHI_support_the_koreans
+    icon = GFX_goal_PHI_support_korea
     x = -1
     y = 1
     cost = 6
@@ -1345,6 +1350,7 @@ focus_tree = {
   # Spanish Captaincy General Islands
   focus = {
     id = PHI_spanish_captaincy_general_islands
+    icon = GFX_goal_spain
     x = -2
     y = 1
     cost = 6
@@ -1358,6 +1364,7 @@ focus_tree = {
   # Arm the White Russians
   focus = {
     id = PHI_arm_the_white_russians
+    icon = GFX_goal_LEC_armsRUS
     x = 0
     y = 2
     cost = 6
@@ -1395,7 +1402,7 @@ focus_tree = {
   # On Our Own
   focus = {
     id = PHI_on_our_own
-    icon = GFX_goal_flames_of_rebellion
+    icon = GFX_goal_PHI_on_our_own
     x = 5
     y = 1
     cost = 6
@@ -1425,6 +1432,7 @@ focus_tree = {
   # Liberate Indochina
   focus = {
     id = PHI_liberate_indochina
+    icon = GFX_goal_generic_attack_indochina
     x = -1
     y = 1
     cost = 6
@@ -1448,6 +1456,7 @@ focus_tree = {
   # The Burmese Question
   focus = {
     id = PHI_the_burmese_question
+    icon = GFX_goal_generic_demand_territory
     x = -1
     y = 1
     cost = 6
@@ -1480,6 +1489,7 @@ focus_tree = {
   # Invite Insulindia
   focus = {
     id = PHI_invite_insulindia
+    icon = GFX_goal_generic_forceful_treaty
     x = 0
     y = 2
     cost = 6
@@ -1498,6 +1508,7 @@ focus_tree = {
   # The Co-Prosperity Sphere
   focus = {
     id = PHI_the_co_prosperity_sphere
+    icon = GFX_goal_anschluss
     x = 1
     y = 1
     cost = 6
@@ -1511,9 +1522,13 @@ focus_tree = {
   # Invite Siam
   focus = {
     id = PHI_invite_siam
+    icon = GFX_goal_generic_improve_relations
     x = 0
     y = 2
     cost = 6
+    mutually_exclusive = {
+      focus = PHI_operation_higante
+    }
     prerequisite = { focus = PHI_the_co_prosperity_sphere }
     relative_position_id = PHI_the_co_prosperity_sphere
   }
@@ -1521,6 +1536,7 @@ focus_tree = {
   # Strengthen Naval Presence
   focus = {
     id = PHI_strengthen_naval_presence
+    icon = GFX_goal_generic_coastal_navy2
     x = 0
     y = 2
     cost = 6
@@ -1535,6 +1551,9 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    mutually_exclusive = {
+      focus = PHI_invite_siam
+    }
     prerequisite = { focus = PHI_strengthen_naval_presence }
     relative_position_id = PHI_strengthen_naval_presence
   }
@@ -1542,6 +1561,7 @@ focus_tree = {
   # Influence India
   focus = {
     id = PHI_influence_india
+    icon = GFX_goal_india_united
     x = 0
     y = 2
     cost = 6
@@ -1559,6 +1579,7 @@ focus_tree = {
   # Liberate India
   focus = {
     id = PHI_liberate_india
+    icon = GFX_goal_generic_focus_india
     x = 1
     y = 1
     cost = 6
