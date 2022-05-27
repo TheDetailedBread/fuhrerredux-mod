@@ -676,6 +676,7 @@ country_event = { # Elections of 1937
       random_other_country = {
         news_event = { id = fxnews.2 days = 2 }
       }
+      country_event = { id = philippines.55 days = 230 }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_liberal_party_victory
     }
@@ -698,6 +699,7 @@ country_event = { # Elections of 1937
       random_other_country = {
         news_event = { id = fxnews.3 days = 2 }
       }
+      country_event = { id = philippines.55 days = 230 }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_nacionalista_party_victory
     }
@@ -742,6 +744,7 @@ country_event = { # Elections of 1937
       random_other_country = {
         news_event = { id = fxnews.5 days = 2 }
       }
+      country_event = { id = philippines.55 days = 230 }
       remove_ideas = PHI_lingering_sakdalistas
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_sakdalista_party_victory
@@ -1157,6 +1160,56 @@ country_event = { # Land Reform Finished
           }
         }
         add_extra_state_shared_building_slots = 1
+      }
+    }
+  }
+}
+
+country_event = { # Aguinaldo Retires from Politics
+  id = philippines.55
+  title = philippines.55.t
+  desc = {
+    text = philippines.55.d
+    trigger = {
+      NOT = {
+        has_government = social_conservative
+      }
+    }
+  }
+  desc = {
+    text = philippines.55.d.1
+    trigger = {
+      has_government = social_conservative
+    }
+  }
+  picture = GFX_report_event_PHI_aguinaldo_quezon
+  is_triggered_only = yes
+
+  option = { # Happy retirement, Miong!
+    name = philippines.55.a
+    retire_character = PHI_Emilio_Aguinaldo
+    add_popularity = {
+      ideology = authoritarian_democrat
+      popularity = -0.15
+    }
+    add_popularity = {
+      ideology = national_populist 
+      popularity = -0.15
+    }
+    add_country_leader_role = {
+      character = PHI_Benigno_Aquino_Sr
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = { }
+      }
+    }
+    add_country_leader_role = {
+      character = PHI_Benigno_Aquino_Sr
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = { }
       }
     }
   }

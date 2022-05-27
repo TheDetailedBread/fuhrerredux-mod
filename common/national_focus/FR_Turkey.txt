@@ -2395,16 +2395,14 @@ focus_tree = {
 		id = TUR_join_stahlpakt
 		icon = GFX_goal_generic_major_alliance
 		available = {
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
+			OR = {
+				has_government = paternal_autocrat
+				has_government = national_populist
 			}
 			is_in_faction = no
+			GER = {
+				is_faction_leader = yes
+			}
 		}
 		prerequisite = { focus = TUR_foreign_policy } 
 		bypass = {

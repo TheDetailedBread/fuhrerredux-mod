@@ -1074,6 +1074,23 @@ country_event = { # Fate of France
         }
         set_cosmetic_tag = GER_FRA_rk
       }
+      else_if = {
+        limit = {
+          ROOT = {
+            tag = GER
+            has_completed_focus = GER_kaiserreich
+          }
+        }
+        set_cosmetic_tag = FRA_kingdom
+      }
+      else_if = {
+        limit = {
+          ROOT = {
+            has_socialist_government = yes
+          }
+        }
+        set_cosmetic_tag = FRA_commune
+      }
     }
   }
 
