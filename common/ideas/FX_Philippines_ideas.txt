@@ -290,6 +290,15 @@ ideas = {
         industry_free_repair_factor = 0.25
       }
     }
+    PHI_intervention_in_spain = {
+      allowed = { original_tag = PHI }
+      available = {
+        NOT = { has_global_flag = SPR_spanish_civil_war_ended_flag }
+      }
+      modifier = {
+        send_volunteer_size = 3
+      }
+    }
   }
 
   # Industrial Concern
