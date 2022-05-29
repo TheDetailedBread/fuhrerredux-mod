@@ -17,6 +17,7 @@ can_release_cambodia = {
   ROOT = {
     should_release_indochina_first = yes
     NOT = {
+      tag = ICR
       country_exists = CAM
       has_country_flag = CAM_CONQ
     }
@@ -92,6 +93,7 @@ can_release_laos = {
   ROOT = {
     should_release_indochina_first = yes
     NOT = {
+      tag = ICR
       country_exists = LAO
       has_country_flag = LAO_CONQ
     }
@@ -247,6 +249,7 @@ can_release_vietnam = {
   ROOT = {
     should_release_indochina_first = yes
     NOT = { 
+      tag = ICR
       country_exists = VIN
       has_country_flag = VIN_CONQ
     }

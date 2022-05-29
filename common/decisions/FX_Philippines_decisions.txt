@@ -1,7 +1,6 @@
 # Philippine Decisions
 # created by: dax0102
-
-foreign_politics = {
+PHI_anti_colonialist_crusade_cat = {
   PHI_support_ins = {
     icon = ger_military_buildup
     fire_only_once = yes
@@ -27,6 +26,50 @@ foreign_politics = {
       FROM = { country_event = { id = philippines.39 days = 2 } }
     }
   }
+  PHI_the_indochinese_revolt = {
+    desc = PHI_fuel_insurrection_in_indochina_desc
+    icon = GFX_decision_generic_ignite_civil_war
+    days_remove = 1
+    fire_only_once = yes
+    targets = { FIC }
+    target_trigger = {
+      FIC = {
+        exists = yes
+        has_capitulated = no
+      }
+    }
+    visible = {
+      NOT = { has_dlc = "La Resistance" }
+      has_completed_focus = PHI_fuel_insurrection_in_indochina
+    }
+    remove_effect = {
+      PHI_start_indochinese_revolt = yes
+    }
+  }
+  PHI_the_insulindian_revolt = {
+    desc = PHI_second_insulindian_revolution_desc
+    icon = GFX_decision_generic_ignite_civil_war
+    days_remove = 1
+    fire_only_once = yes
+    targets = { BEA }
+    target_trigger = {
+      BEA = {
+        exists = yes
+        has_capitulated = no
+      }
+    }
+    visible = {
+      NOT = { has_dlc = "La Resistance" }
+      has_completed_focus = PHI_second_insulindian_revolution
+    }
+    remove_effect = {
+      PHI_start_insulindian_revolt = yes
+    }
+  }
+}
+
+foreign_politics = {
+
   PHI_support_usa = {
     icon = ger_military_buildup
     fire_only_once = yes

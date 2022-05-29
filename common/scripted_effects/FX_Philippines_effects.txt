@@ -314,3 +314,79 @@ PHI_deploy_refubished_ships = {
     }
   }
 }
+
+PHI_start_insulindian_revolt = {
+  set_global_flag = insulindian_revolt_attempted
+  INS = {
+    hidden_effect = {
+      every_state = {
+        limit = { is_core_of = FROM }
+        add_core_of = INS
+      }
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
+      transfer_state = 334
+      transfer_state = 335
+      transfer_state = 672
+      transfer_state = 668
+
+      declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+      add_civil_war_target = FROM
+    }
+    custom_effect_tooltip = PHI_operation_insulindian_revolt_tt
+  }
+  hidden_effect = {
+    INS = {
+      set_province_controller = 1342
+      set_province_controller = 1386
+    }
+  }
+}
+
+PHI_start_indochinese_revolt = {
+  set_global_flag = indochinese_revolt_attempted
+  ICR = {
+    hidden_effect = {
+      every_state = {
+        limit = { is_core_of = FROM }
+        add_core_of = ICR
+      }
+      set_politics = {
+        ruling_party = social_democrat
+        elections_allowed = no
+      }
+      transfer_state = 286
+      transfer_state = 961
+      transfer_state = 963
+      transfer_state = 962
+      transfer_state = 741
+
+      declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+      add_civil_war_target = FROM
+    }
+    custom_effect_tooltip = PHI_operation_indochinese_revolt_tt
+  }
+  hidden_effect = {
+    ICR = {
+      set_province_controller = 1374
+      set_province_controller = 12210
+      set_province_controller = 7426
+      set_province_controller = 7229
+      set_province_controller = 10309
+      set_province_controller = 10137
+      set_province_controller = 4554
+      set_province_controller = 1563
+      set_province_controller = 1248
+      set_province_controller = 1328
+      set_province_controller = 1300
+    }
+  }
+}
