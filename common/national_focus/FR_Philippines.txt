@@ -1266,6 +1266,16 @@ focus_tree = {
     x = -2
     y = 1
     cost = 6
+    available = {
+      is_in_faction = no
+      FRA = {
+        exists = yes
+        is_faction_leader = yes
+      }
+    }
+    bypass = {
+      is_in_faction_with = FRA
+    }
     mutually_exclusive = {
       focus = PHI_maintain_american_relations
       focus = PHI_pivot_to_japan
@@ -1290,6 +1300,13 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    available = {
+      is_in_faction = no
+      country_exists = USA
+    }
+    bypass = {
+      is_in_faction_with = USA
+    }
     mutually_exclusive = {
       focus = PHI_look_to_the_west
       focus = PHI_pivot_to_japan
@@ -1310,7 +1327,7 @@ focus_tree = {
   # An Entente Outpost in the East
   focus = {
     id = PHI_an_entente_outpost_in_the_east
-    icon = GFX_goal_skull_fortification
+    icon = GFX_goal_PHI_entente_outpost
     x = -2
     y = 1
     cost = 6
@@ -1393,7 +1410,7 @@ focus_tree = {
   # Arm the White Russians
   focus = {
     id = PHI_arm_the_white_russians
-    icon = GFX_goal_LEC_armsRUS
+    icon = GFX_goal_PHI_support_white_russians
     x = 0
     y = 2
     cost = 6
@@ -1419,6 +1436,16 @@ focus_tree = {
     x = 3
     y = 1
     cost = 6
+    available = {
+      is_in_faction = no
+      JAP = {
+        exists = yes
+        NOT = { is_in_faction_with = GER }
+      }
+    }
+    bypass = {
+      is_in_faction_with = JAP
+    }
     mutually_exclusive = {
       focus = PHI_look_to_the_west
       focus = PHI_maintain_american_relations
@@ -1480,6 +1507,15 @@ focus_tree = {
     prerequisite = { focus = PHI_anti_colonialist_crusade }
     mutually_exclusive = { focus = PHI_liberate_indochina }
     relative_position_id = PHI_anti_colonialist_crusade
+    completion_reward = {
+      if = {
+        limit = { has_dlc = "La Resistance" }
+        custom_effect_tooltip = PHI_fuel_insurrection_in_indochina_tt
+      }
+      else = {
+        unlock_decision_tooltip = PHI_the_indochinese_revolt
+      }
+    }
   }
 
   # The Burmese Question
@@ -1503,6 +1539,20 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      country_exists = BEA
+    }
+    bypass = {
+      OR = {
+        BEA = {
+          exists = no
+          has_capitulated = yes
+        }
+        INS = {
+          exists = yes
+        }
+      }
+    }
     mutually_exclusive = {
       focus = PHI_invite_insulindia
     }
@@ -1513,6 +1563,15 @@ focus_tree = {
       focus = PHI_operation_higante
     }
     relative_position_id = PHI_liberate_indochina
+    completion_reward = {
+      if = {
+        limit = { has_dlc = "La Resistance" }
+        custom_effect_tooltip = PHI_second_insulindian_revolution_tt
+      }
+      else = {
+        unlock_decision_tooltip = PHI_the_insulindian_revolt
+      }
+    }
   }
 
   # Invite Insulindia
