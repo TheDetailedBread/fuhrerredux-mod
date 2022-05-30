@@ -51,3 +51,20 @@ PHI_infiltration_train_insulindian_fighters = {
     infantry_equipment_1 = 1000
   }
 }
+
+PHI_infiltration_train_korean_fighters = {
+  name = PHI_infiltration_train_korean_fighters
+  desc = PHI_infiltration_train_korean_fighters_desc
+  outcome = PHI_infiltration_train_korean_fighters
+  picture = "GFX_phase_lar_communist_uprising_organise_cells"
+  icon = "phase_lar_communist_uprising_organise_cells_small"
+
+  requirements = {
+    ROOT = {
+      has_equipment = { infantry_equipment_1 > 0 }
+    }
+  }
+  equipment = {
+    infantry_equipment_1 = 1000
+  }
+}

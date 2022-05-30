@@ -2040,7 +2040,18 @@ shared_focus = {
 	x = 0
 	y = 1
 	cost = 6
-	available = { PHI = { has_socialist_government = no } }
+	available = { 
+		PHI = { 
+			is_subject = no
+			is_in_faction = no
+			has_socialist_government = no
+		} 
+	}
+	bypass = {
+		PHI = {
+			is_in_faction_with = ROOT
+		}
+	}
 	prerequisite = { focus = USA_america_on_the_world_stage }
 	relative_position_id = USA_america_on_the_world_stage
 	completion_reward = {

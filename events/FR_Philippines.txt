@@ -1214,3 +1214,301 @@ country_event = { # Aguinaldo Retires from Politics
     }
   }
 }
+
+country_event = { # Philippine Entry to the Entente
+  id = philippines.61
+  title = philippines.61.t
+  desc = philippines.61.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.61.a
+    ai_chance = {
+      base = 40
+    }
+    FROM = {
+      country_event = { id = philippines.62 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.61.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.63 days = 2 }
+    }
+  }
+}
+
+country_event = { # France Accepts Philippines to the Entente
+  id = philippines.62
+  title = philippines.62.t
+  desc = philippines.62.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.62.a
+    FROM = {
+      add_to_faction = ROOT
+    }
+  }
+}
+
+country_event = { # France Refuses Philippines to the Entente
+  id = philippines.63
+  title = philippines.63.t
+  desc = philippines.63.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.63.a
+    uncomplete_national_focus = {
+      focus = PHI_look_to_the_west
+      uncomplete_children = yes
+      refund_political_power = no
+    }
+  }
+}
+
+country_event = { # Philippines Proposes Alliance
+  id = philippines.64
+  title = philippines.64.t
+  desc = philippines.64.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.64.a
+    ai_chance = {
+      base = 40
+    }
+    create_faction = PHI_USA_faction
+    FROM = {
+      country_event = { id = philippines.65 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.64.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.66 days = 2 }
+    }
+  }
+}
+
+country_event = { # US Accepts Philippine Alliance
+  id = philippines.65
+  title = philippines.65.t
+  desc = philippines.65.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.65.a
+    FROM = {
+      add_to_faction = ROOT
+    }
+  }
+}
+
+country_event = { # US Refuses Philippine Alliance
+  id = philippines.66
+  title = philippines.66.t
+  desc = philippines.66.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.66.a
+    uncomplete_national_focus = {
+      focus = PHI_maintain_american_relations
+      uncomplete_children = yes
+      refund_political_power = no
+    }
+  }
+}
+
+country_event = { # Philippines Proposes Alliance
+  id = philippines.67
+  title = philippines.67.t
+  desc = philippines.67.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.67.a
+    ai_chance = {
+      base = 40
+    }
+    create_faction = PHI_JAP_faction
+    FROM = {
+      country_event = { id = philippines.68 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.67.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.69 days = 2 }
+    }
+  }
+}
+
+country_event = { # Japan Accepts Philippine Alliance
+  id = philippines.68
+  title = philippines.68.t
+  desc = philippines.68.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.68.a
+    FROM = {
+      add_to_faction = ROOT
+    }
+  }
+}
+
+country_event = { # Japan Refuses Philippine Alliance
+  id = philippines.69
+  title = philippines.69.t
+  desc = philippines.69.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.69.a
+    uncomplete_national_focus = {
+      focus = PHI_pivot_to_japan
+      uncomplete_children = yes
+      refund_political_power = no
+    }
+  }
+}
+
+country_event = { # Philippines Invites us to their Alliance
+  id = philippines.70
+  title = philippines.70.t
+  desc = philippines.70.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.70.a
+    ai_chance = {
+      base = 40
+    }
+    FROM = {
+      country_event = { id = philippines.71 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.70.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.72 days = 2 }
+    }
+  }
+}
+
+country_event = { # Country Accepts Invitation
+  id = philippines.71
+  title = philippines.71.t
+  desc = philippines.71.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.71.a
+    add_to_faction = FROM
+  }
+}
+
+country_event = { # Country Refuses Invitation
+  id = philippines.72
+  title = philippines.72.t
+  desc = philippines.72.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Shame...
+    name = philippines.72.a
+    add_political_power = 20
+  }
+  option = { # We will force them into the alliance!
+    name = philippines.72.b
+    create_wargoal = {
+      target = FROM
+      type = annex_everything
+    }
+  }
+}
+
+country_event = { # Philippines Demands Burma
+  id = philippines.73
+  title = philippines.73.t
+  desc = philippines.73.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.73.a
+    ai_chance = {
+      base = 40
+    }
+    FROM = {
+      country_event = { id = philippines.74 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.73.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.75 days = 2 }
+    }
+  }
+}
+
+country_event = { # Country Accepts Invitation
+  id = philippines.74
+  title = philippines.74.t
+  desc = philippines.74.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.74.a
+    transfer_state = 288 # Rangoon
+    transfer_state = 640
+    transfer_state = 805
+    transfer_state = 812
+    transfer_state = 1007
+  }
+}
+
+country_event = { # Country Refuses Invitation
+  id = philippines.75
+  title = philippines.75.t
+  desc = philippines.75.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+
+  option = { # Shame...
+    name = philippines.75.a
+  }
+  option = { # We will force them into the alliance!
+    name = philippines.75.b
+  }
+}
