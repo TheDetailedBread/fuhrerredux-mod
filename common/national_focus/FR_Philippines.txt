@@ -331,6 +331,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_intensify_land_reform_efforts }
     relative_position_id = PHI_intensify_land_reform_efforts
+    completion_reward = {
+      add_stability = 0.15
+    }
   }
   
   # Crop Insurance
@@ -1232,6 +1235,10 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_country_flag = PHI_has_1937_elections
+      threat > 0.25
+    }
     relative_position_id = PHI_new_antitrust_laws
     completion_reward = {
       add_political_power = 150
@@ -1284,6 +1291,7 @@ focus_tree = {
     prerequisite = { focus = PHI_into_the_world }
     relative_position_id = PHI_into_the_world
     completion_reward = {
+      unlock_decision_tooltip = PHI_join_entente
       FRA = {
         add_opinion_modifier = {
           target = ROOT
@@ -1315,6 +1323,7 @@ focus_tree = {
     prerequisite = { focus = PHI_into_the_world }
     relative_position_id = PHI_into_the_world
     completion_reward = {
+      unlock_decision_tooltip = PHI_alliance_with_usa
       USA = {
         add_opinion_modifier = {
           target = ROOT
@@ -1358,6 +1367,15 @@ focus_tree = {
       focus = PHI_maintain_american_relations
     }
     relative_position_id = PHI_maintain_american_relations
+    completion_reward = {
+      JAP = {
+        add_opinion_modifier = {
+          target = PHI
+          modifier = ITA_outraged
+        }
+      }
+      add_ideas = PHI_anti_japanese_sentiments
+    }
   }
 
   # The Siamese Affair
@@ -1378,8 +1396,29 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    available = {
+      JAP = {
+        exists = yes
+      }
+    }
+    bypass = {
+      OR = {
+        has_war_with = JAP
+        is_in_faction_with = JAP
+        JAP = { is_subject_of = ROOT }
+        any_allied_country = {
+          has_war_with = JAP
+        }
+      }
+    }
     prerequisite = { focus = PHI_contain_japanese_aggression }
     relative_position_id = PHI_contain_japanese_aggression
+    completion_reward = {
+      create_wargoal = {
+        target = JAP
+        type = annex_everything
+      }
+    }
   }
 
   # Support the Koreans
@@ -1391,6 +1430,15 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_strike_the_empire }
     relative_position_id = PHI_strike_the_empire
+    completion_reward = {
+      if = {
+        limit = { has_dlc = "La Resistance" }
+        custom_effect_tooltip = PHI_support_the_koreans_tt
+      }
+      else = {
+        unlock_decision_tooltip = PHI_the_korean_revolt
+      }
+    }
   }
 
   # Spanish Captaincy General Islands
@@ -1414,8 +1462,30 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      RUS = {
+        exists = yes
+        has_capitulated = no
+        has_war = yes
+      }
+    }
+    bypass = {
+      NOT = {
+        country_exists = RUS
+      }
+    }
     prerequisite = { focus = PHI_strike_the_empire }
     relative_position_id = PHI_strike_the_empire
+    completion_reward = {
+      army_experience = 15
+      send_equipment = { 
+        target = RUS
+        type = infantry_equipment
+        amount = 1000
+      }
+      RUS = { country_event = { id = philippines.39 days = 2 } }
+      unlock_decision_tooltip = PHI_invite_russia_dec
+    }
   }
 
   # Support the Kuomintang
@@ -1425,8 +1495,30 @@ focus_tree = {
     x = 1
     y = 2
     cost = 6
+    available = {
+      CHI = {
+        exists = yes
+        has_capitulated = no
+        has_war = yes
+      }
+    }
+    bypass = {
+      NOT = {
+        country_exists = CHI
+      }
+    }
     prerequisite = { focus = PHI_contain_japanese_aggression }
     relative_position_id = PHI_contain_japanese_aggression
+    completion_reward = {
+      army_experience = 15
+      send_equipment = { 
+        target = CHI
+        type = infantry_equipment
+        amount = 1000
+      }
+      CHI = { country_event = { id = philippines.39 days = 2 } }
+      unlock_decision_tooltip = PHI_invite_china_dec
+    }
   }
 
   # Pivot to Japan
@@ -1453,6 +1545,15 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_into_the_world }
     relative_position_id = PHI_into_the_world
+    completion_reward = {
+      unlock_decision_tooltip = PHI_propose_idea_to_japan
+      JAP = {
+        add_opinion_modifier = {
+          target = PHI
+          modifier = CRU_improved_relations
+        }
+      }
+    }
   }
 
   # On Our Own
@@ -1469,6 +1570,9 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_into_the_world }
     relative_position_id = PHI_into_the_world
+    completion_reward = {
+      create_faction = PHI_JAP_faction
+    }
   }
 
   # Anti-Colonialist Crusade
@@ -1481,8 +1585,24 @@ focus_tree = {
     prerequisite = {
       focus = PHI_maintain_american_relations
       focus = PHI_pivot_to_japan
+      focus = PHI_on_our_own
     }
     relative_position_id = PHI_pivot_to_japan
+    completion_reward = {
+      FRA = {
+        add_opinion_modifier = {
+          target = PHI
+          modifier = ITA_outraged
+        }
+      }
+      ENG = {
+        add_opinion_modifier = {
+          target = PHI
+          modifier = ITA_outraged
+        }
+      }
+      add_ideas = PHI_liberation_preparations
+    }
   }
 
   # Liberate Indochina
@@ -1492,9 +1612,31 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    will_lead_to_war_with = FIC
+    available = {
+      FIC = {
+        exists = yes
+      }
+    }
+    bypass = {
+      OR = {
+        has_war_with = FIC
+        is_in_faction_with = FIC
+        FIC = { is_subject_of = ROOT }
+        any_allied_country = {
+          has_war_with = FIC
+        }
+      }
+    }
     prerequisite = { focus = PHI_anti_colonialist_crusade }
     mutually_exclusive = { focus = PHI_fuel_insurrection_in_indochina }
     relative_position_id = PHI_anti_colonialist_crusade
+    completion_reward = {
+      create_wargoal = {
+        target = FIC
+        type = annex_everything
+      }
+    }
   }
 
   # Fuel Insurrection in Indochina
@@ -1530,6 +1672,23 @@ focus_tree = {
       focus = PHI_liberate_indochina
     }
     relative_position_id = PHI_fuel_insurrection_in_indochina
+    completion_reward = {
+      if = {
+        limit = {
+          country_exists = BRM
+        }
+        unlock_decision_tooltip = PHI_invite_burma_dec
+      }
+      else = {
+        288 = {
+          OWNER = {
+            ROOT = {
+              activate_targeted_decision = { target = PREV decision = PHI_demand_burma }
+            }
+          }
+        }
+      }
+    }
   }
 
   # Second Insulindian Revolution
@@ -1577,7 +1736,7 @@ focus_tree = {
   # Invite Insulindia
   focus = {
     id = PHI_invite_insulindia
-    icon = GFX_goal_generic_forceful_treaty
+    icon = GFX_goal_PHI_invite_insulindia
     x = 0
     y = 2
     cost = 6
@@ -1591,12 +1750,15 @@ focus_tree = {
       focus = PHI_operation_higante
     }
     relative_position_id = PHI_fuel_insurrection_in_indochina
+    completion_reward = {
+      unlock_decision_tooltip = PHI_invite_insulindia_dec
+    }
   }
 
   # The Co-Prosperity Sphere
   focus = {
     id = PHI_the_co_prosperity_sphere
-    icon = GFX_goal_anschluss
+    icon = GFX_goal_PHI_co_prosperity_sphere
     x = 1
     y = 1
     cost = 6
@@ -1605,20 +1767,48 @@ focus_tree = {
       focus = PHI_on_our_own
     }
     relative_position_id = PHI_pivot_to_japan
+    completion_reward = {
+      if = {
+        limit = {
+          NOT = { has_completed_focus = PHI_pivot_to_japan }
+        }
+        unlock_decision_tooltip = PHI_invite_china_dec
+      }
+      if = {
+        limit = {
+          has_completed_focus = PHI_pivot_to_japan
+          ZHI = { has_country_flag = jap_help_zhi }
+        }
+        unlock_decision_tooltip = PHI_invite_zhili_dec
+      }
+      else_if = {
+        limit = {
+          has_completed_focus = PHI_pivot_to_japan
+        }
+        unlock_decision_tooltip = PHI_invite_manchuria_dec
+      }
+      unlock_decision_tooltip = PHI_invite_russia_dec
+    }
   }
 
   # Invite Siam
   focus = {
     id = PHI_invite_siam
-    icon = GFX_goal_generic_improve_relations
+    icon = GFX_goal_PHI_invite_siam
     x = 0
     y = 2
     cost = 6
     mutually_exclusive = {
       focus = PHI_operation_higante
     }
-    prerequisite = { focus = PHI_the_co_prosperity_sphere }
+    prerequisite = { 
+      focus = PHI_the_co_prosperity_sphere
+      focus = PHI_strengthen_naval_presence
+    }
     relative_position_id = PHI_the_co_prosperity_sphere
+    completion_reward = {
+      unlock_decision_tooltip = PHI_invite_siam_dec
+    }
   }
 
   # Strengthen Naval Presence
@@ -1630,6 +1820,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_on_our_own }
     relative_position_id = PHI_on_our_own
+    completion_reward = {
+      add_ideas = PHI_zenith_of_the_philippine_navy
+    }
   }
 
   # Operation "Higante"
@@ -1639,17 +1832,39 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    will_lead_to_war_with = SIA
+    available = {
+      SIA = {
+        exists = yes
+      }
+    }
+    bypass = {
+      OR = {
+        has_war_with = SIA
+        is_in_faction_with = SIA
+        SIA = { is_subject_of = ROOT }
+        any_allied_country = {
+          has_war_with = SIA
+        }
+      }
+    }
     mutually_exclusive = {
       focus = PHI_invite_siam
     }
     prerequisite = { focus = PHI_strengthen_naval_presence }
     relative_position_id = PHI_strengthen_naval_presence
+    completion_reward = {
+      create_wargoal = {
+        target = SIA
+        type = annex_everything
+      }
+    }
   }
 
   # Influence India
   focus = {
     id = PHI_influence_india
-    icon = GFX_goal_india_united
+    icon = GFX_goal_PHI_influence_india
     x = 0
     y = 2
     cost = 6
@@ -1662,15 +1877,30 @@ focus_tree = {
       focus = PHI_invite_insulindia
     }
     relative_position_id = PHI_support_the_kuomitang
+    completion_reward = {
+      unlock_decision_tooltip = PHI_invite_india_dec
+    }
   }
 
   # Liberate India
   focus = {
     id = PHI_liberate_india
-    icon = GFX_goal_generic_focus_india
+    icon = GFX_goal_PHI_attack_india
     x = 1
     y = 1
     cost = 6
+    will_lead_to_war_with = RAJ
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = PHI_british_controls_india_tt
+        RAJ = { 
+          exists = yes
+          NOT = {
+            has_country_flag = RAJ_Ceylon
+          }
+        }
+      }
+    }
     mutually_exclusive = {
       focus = PHI_influence_india
     }
@@ -1679,6 +1909,12 @@ focus_tree = {
       focus = PHI_invite_insulindia
     }
     relative_position_id = PHI_second_insulindian_revolution
+    completion_reward = {
+      create_wargoal = {
+        target = RAJ
+        type = annex_everything
+      }
+    }
   }
 
   # Attack Australasia
@@ -1688,11 +1924,33 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    will_lead_to_war_with = AST
+    available = {
+      AST = {
+        exists = yes
+      }
+    }
+    bypass = {
+      OR = {
+        has_war_with = AST
+        is_in_faction_with = AST
+        AST = { is_subject_of = ROOT }
+        any_allied_country = {
+          has_war_with = AST
+        }
+      }
+    }
     prerequisite = {
       focus = PHI_second_insulindian_revolution
       focus = PHI_invite_insulindia
     }
     relative_position_id = PHI_invite_insulindia
+    completion_reward = {
+      create_wargoal = {
+        target = AST
+        type = annex_everything
+      }
+    }
   }
 
   ######################################################
@@ -2178,6 +2436,7 @@ focus_tree = {
     cost = 6
     relative_position_id = PHI_fortress_philippines
     completion_reward = {
+      add_ideas = PHI_naval_devotion
       navy_experience = 25
     }
   }
@@ -2478,6 +2737,11 @@ focus_tree = {
     relative_position_id = PHI_start_naval_buildup
     completion_reward = {
       air_experience = 25
+      add_equipment_to_stockpile = {
+        type = fighter_equipment
+        amount = 100
+        producer = USA
+      }
     }
   }
 
@@ -2665,19 +2929,11 @@ focus_tree = {
     prerequisite = { focus = PHI_construct_new_air_bases }
     relative_position_id = PHI_construct_new_air_bases
     completion_reward = {
-      random_owned_controlled_state = {
-        if = {
-          limit = {
-            free_building_slots = {
-              building = anti_air_building
-              size > 1
-            }
-          }
-          add_building_construction = {
-            type = anti_air_building
-            level = 2
-            instant_build = yes
-          }
+      623 = {
+        add_building_construction = {
+          type = anti_air_building
+          level = 2
+          instant_build = yes
         }
       }
     }

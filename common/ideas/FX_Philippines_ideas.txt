@@ -126,6 +126,21 @@ ideas = {
         consumer_goods_factor = 0.1
       }
     }
+    PHI_naval_devotion = {
+      allowed = { original_tag = PHI }
+      available = {
+        has_navy_size = {
+          size > 10
+          type = capital_ship
+          archetype = ship_hull_heavy
+        }
+      }
+      picture = generic_coastal_defense_ships
+      modifier = {
+        industrial_capacity_dockyard = 0.35
+        production_speed_dockyard_factor = 0.25
+      }
+    }
     # Liberal Ideas
     PHI_judicial_reform_idea = {
       allowed = { original_tag = PHI }
@@ -290,6 +305,7 @@ ideas = {
         industry_free_repair_factor = 0.25
       }
     }
+    # Foreign
     PHI_intervention_in_spain = {
       allowed = { original_tag = PHI }
       available = {
@@ -299,7 +315,47 @@ ideas = {
         send_volunteer_size = 3
       }
     }
+    PHI_anti_japanese_sentiments = {
+      allowed = { original_tag = PHI }
+      picture  = warrior_traditions_idea
+      modifier = {
+				army_morale_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+    }
+    PHI_liberation_preparations = {
+      allowed = { original_tag = PHI }
+      picture = generic_victors_of_ww1
+      modifier = {
+				army_morale_factor = 0.05
+			}
+      targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+      targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+    }
+    PHI_zenith_of_the_philippine_navy = {
+      allowed = { original_tag = PHI }
+      picture = generic_coastal_defense_ships2
+      modifier = {
+        amphibious_invasion = 0.15
+        spotting_chance = 0.25
+        naval_coordination = 0.25
+        naval_speed_factor = 0.25
+      }
+    }
   }
+  
 
   # Industrial Concern
   industrial_concern = {

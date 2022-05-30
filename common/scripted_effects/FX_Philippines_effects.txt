@@ -390,3 +390,31 @@ PHI_start_indochinese_revolt = {
     }
   }
 }
+
+PHI_start_korean_revolt = {
+  set_global_flag = korean_revolt_attempted
+  KOR = {
+    hidden_effect = {
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
+      transfer_state = 527
+      transfer_state = 525
+      transfer_state = 829
+
+      declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+    }
+    custom_effect_tooltip = PHI_operation_korean_revolt_tt
+  }
+  hidden_effect = {
+    KOR = {
+      add_province_controller = 4052
+      add_province_controller = 4126
+      add_province_controller = 1081
+    }
+  }
+}
