@@ -436,7 +436,10 @@ country_event = { # Farmers Demands Government Help
 
   option = { # Accept
     name = philippines.21.a
-    add_ideas = PHI_farmer_help
+    add_timed_idea = {
+      idea = PHI_farmer_help
+      days = 30
+    }
     hidden_effect = {
       country_event = { id = philippines.22 days = 2 }
     }
@@ -730,7 +733,7 @@ country_event = { # Elections of 1937
     name = philippines.34.e
     set_politics = {
       ruling_party = valkist
-      elections_allowed = yes
+      elections_allowed = no
     }
     increase_ruling_party_popularity_by_20 = yes
     remove_every_minister = yes
@@ -1510,5 +1513,133 @@ country_event = { # Country Refuses Invitation
   }
   option = { # We will force them into the alliance!
     name = philippines.75.b
+  }
+}
+
+country_event = { # Singapore Falls
+  id = philippines.76
+  title = philippines.76.t
+  desc = {
+    text = philippines.76.d
+    trigger = {
+      BEA = { has_capitulated = yes }
+    }
+  }
+  desc = {
+    text = philippines.76.d.1
+    trigger = {
+      INS = { exists = yes }
+    }
+  }
+  picture = GFX_report_event_PHI_scouts_2
+  is_triggered_only = yes
+
+  option = { # Prepare to sue peace
+    name = philippines.76.a
+    ai_chance = {
+      base = 100
+    }
+    add_war_support = -0.05
+    every_enemy_country = {
+      limit = { 
+        OR = {
+          tag = PHI
+          is_in_faction_with = PHI
+        } 
+      }
+      white_peace = PREV
+    }
+    hidden_effect = {
+      every_other_country = {
+        limit = { is_in_faction_with = ROOT }
+        PREV = {
+          country_event = philippines.78
+        }
+      }
+      FROM = {
+        annex_country = {
+          target = BEA
+          transfer_troops = no
+        }
+        transfer_state = 819
+        transfer_state = 820
+        transfer_state = 336
+        transfer_state = 821
+      }
+    }
+  }
+  option = { # Not all is lost!
+    name = philippines.76.b
+    ai_chance = {
+      base = 0
+    }
+    add_stability = -0.05
+    add_war_support = -0.15
+  }
+}
+
+country_event = { # Defeat in Indochina
+  id = philippines.77
+  title = philippines.77.t
+  desc = philippines.77.d
+  picture = GFX_report_event_PHI_scouts_2
+  is_triggered_only = yes
+
+  option = { # Abandon Indochina
+    name = philippines.77.a
+    ai_chance = {
+      base = 100
+    }
+    add_war_support = -0.05
+    every_enemy_country = {
+      limit = { 
+        OR = {
+          tag = PHI
+          is_in_faction_with = PHI
+        } 
+      }
+      white_peace = PREV
+    }
+    hidden_effect = {
+      every_other_country = {
+        limit = { is_in_faction_with = ROOT }
+        PREV = {
+          country_event = philippines.78
+        }
+      }
+      FROM = {
+        annex_country = {
+          target = FIC
+          transfer_troops = no
+        }
+      }
+    }
+  }
+
+  option = { # Not all is lost!
+    name = philippines.77.b
+    ai_chance = {
+      base = 0
+    }
+    add_stability = -0.05
+    add_war_support = -0.15
+  }
+}
+
+country_event = { # Hidden Event to whitepeace other British allies
+  id = philippines.78
+  is_triggered_only = yes
+  hidden = yes
+  option = {}
+  immediate = {
+    every_enemy_country = {
+      limit = {
+        OR = {
+          tag = PHI
+          is_in_faction_with = PHI
+        }
+      }
+      white_peace = PREV
+    }
   }
 }

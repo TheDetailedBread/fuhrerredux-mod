@@ -1,6 +1,35 @@
 # Philippine Decisions
 # created by: dax0102
 PHI_co_prosperity_sphere = {
+  PHI_join_japan = {
+    icon = GFX_decision_generic_political_discourse
+    cost = 20
+    fire_only_once = yes
+    targets = { JAP }
+    allowed = { original_tag = PHI }
+    available = {
+      PHI = {
+        has_capitulated = no
+        is_subject = no
+      }
+      JAP = {
+        exists = yes
+        is_subject = no
+        is_faction_leader = yes
+      }
+    }
+    visible = {
+      has_completed_focus = PHI_pivot_to_japan
+      JAP = {
+        NOT = { is_in_faction_with = GER }
+      }
+    }
+    complete_effect = {
+      JAP = {
+        country_event = { id = philippines.61 days = 2 }
+      }
+    }
+  }
   PHI_propose_idea_to_japan = {
     icon = GFX_decision_generic_political_discourse
     cost = 20
@@ -16,10 +45,11 @@ PHI_co_prosperity_sphere = {
         exists = yes
         is_in_faction = no
         is_subject = no
+        is_faction_leader = no
       }
     }
     visible = {
-      has_completed_focus = PHI_the_co_prosperity_sphere
+      has_completed_focus = PHI_pivot_to_japan
       JAP = {
         NOT = { is_in_faction_with = GER }
       }
@@ -61,7 +91,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_burma_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { BRM }
@@ -73,6 +103,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_the_burmese_question
     }
     remove_effect = {
@@ -83,7 +116,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_russia_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { RUS }
@@ -94,6 +127,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_co_prosperity_sphere
     }
     remove_effect = {
@@ -104,7 +140,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_manchuria_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { MAN }
@@ -115,6 +151,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_co_prosperity_sphere
     }
     remove_effect = {
@@ -125,7 +164,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_zhili_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { ZHI }
@@ -136,6 +175,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_co_prosperity_sphere
     }
     remove_effect = {
@@ -146,7 +188,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_china_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { CHI }
@@ -157,6 +199,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       OR = {
         has_completed_focus = PHI_co_prosperity_sphere
         has_completed_focus = PHI_support_the_kuomitang
@@ -170,7 +215,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_india_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { IND }
@@ -181,6 +226,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_influence_india
     }
     remove_effect = {
@@ -191,7 +239,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_insulindia_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { INS }
@@ -202,6 +250,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_invite_insulindia
     }
     remove_effect = {
@@ -212,7 +263,7 @@ PHI_anti_colonialist_crusade_cat = {
   }
   PHI_invite_siam_dec = {
     icon = GFX_decision_generic_civil_support
-    days_remove = 30
+    days_remove = 7
     fire_only_once = yes
     allowed = { original_tag = PHI }
     targets = { SIA }
@@ -223,6 +274,9 @@ PHI_anti_colonialist_crusade_cat = {
     }
     visible = { 
       is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
       has_completed_focus = PHI_invite_siam
     }
     remove_effect = {
@@ -495,7 +549,7 @@ political_actions = {
 PHI_industrialization_plan = {
   PHI_find_new_trading_partners = {
     icon = GFX_decision_generic_naval
-    cost = 50
+    cost = 20
     days_remove = 120
     fire_only_once = yes
     visible = {
@@ -563,7 +617,7 @@ PHI_industrialization_plan = {
       has_completed_focus = PHI_new_cities
     }
     modifier = {
-      civilian_factory_use = 3
+      civilian_factory_use = 2
     }
     remove_effect = {
       FROM = {
@@ -608,7 +662,7 @@ PHI_industrialization_plan = {
       controls_state = FROM
     }
     available = {
-      num_of_civilian_factories_available_for_projects > 2
+      num_of_civilian_factories_available_for_projects > 1
     }
     visible = {
       has_completed_focus = PHI_tourism_adventures
@@ -649,13 +703,13 @@ PHI_industrialization_plan = {
       controls_state = FROM
     }
     available = {
-      num_of_civilian_factories_available_for_projects > 2
+      num_of_civilian_factories_available_for_projects > 1
     }
     visible = {
       has_completed_focus = PHI_build_up_irrigation_systems
     }
     modifier = {
-      civilian_factory_use = 2
+      civilian_factory_use = 1
     }
     remove_effect = {
       FROM = {
@@ -679,6 +733,21 @@ PHI_industrialization_plan = {
       }
     }
   }
+  PHI_finalize_plan = {
+    icon = GFX_decision_generic_break_treaty
+    fire_only_once = yes
+    days_remove = 30
+    available = {
+      PHI_industrialization_complete = yes
+    }
+    visible = {
+      has_completed_focus = PHI_osmena_industrialization_plan
+      has_idea = PHI_agricultural_society
+    }
+    remove_effect = {
+      remove_ideas = PHI_agricultural_society
+    }
+  }
   PHI_industrial_investments = {
     icon = GFX_decision_eng_trade_unions_support
     cost = 25
@@ -690,13 +759,13 @@ PHI_industrialization_plan = {
       controls_state = FROM
     }
     available = {
-      num_of_civilian_factories_available_for_projects > 2
+      num_of_civilian_factories_available_for_projects > 1
     }
     visible = {
       has_completed_focus = PHI_osmena_industrialization_plan
     }
     modifier = {
-      civilian_factory_use = 2
+      civilian_factory_use = 1
     }
     remove_effect = {
       FROM = {

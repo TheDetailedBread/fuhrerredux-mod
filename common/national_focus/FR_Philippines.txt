@@ -523,6 +523,10 @@ focus_tree = {
     prerequisite = { focus = PHI_partido_progressista }
     relative_position_id = PHI_partido_progressista
     completion_reward = {
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
       swap_ideas = {
         remove_idea = presidential_republic
         add_idea = republican_dictatorship
@@ -743,6 +747,11 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_agrarian_investments }
     relative_position_id = PHI_agrarian_investments
+    completion_reward = {
+      add_stability = 0.1
+      add_war_support = 0.1
+      add_political_power = 100
+    }
   }
 
   # Reform the National Bank
@@ -1274,6 +1283,7 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
+      has_democratic_government = yes
       is_in_faction = no
       FRA = {
         exists = yes
@@ -1310,6 +1320,7 @@ focus_tree = {
     cost = 6
     available = {
       is_in_faction = no
+      has_democratic_government = yes
       country_exists = USA
     }
     bypass = {
@@ -1385,6 +1396,17 @@ focus_tree = {
     x = -2
     y = 1
     cost = 6
+    available = {
+      country_exists = SIA
+    }
+    bypass = {
+      SIA = {
+        OR = {
+          has_war_with = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
     prerequisite = { focus = PHI_contain_japanese_aggression }
     relative_position_id = PHI_contain_japanese_aggression
   }
@@ -1428,6 +1450,9 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      NOT = { country_exists = KOR }
+    }
     prerequisite = { focus = PHI_strike_the_empire }
     relative_position_id = PHI_strike_the_empire
     completion_reward = {
@@ -1466,7 +1491,7 @@ focus_tree = {
       RUS = {
         exists = yes
         has_capitulated = no
-        has_war = yes
+        has_war_with = SOV
       }
     }
     bypass = {
@@ -1546,7 +1571,15 @@ focus_tree = {
     prerequisite = { focus = PHI_into_the_world }
     relative_position_id = PHI_into_the_world
     completion_reward = {
-      unlock_decision_tooltip = PHI_propose_idea_to_japan
+      if = {
+        limit = { 
+          JAP = { is_faction_leader = yes }
+        }
+        unlock_decision_tooltip = PHI_join_japan
+      }
+      else = {
+        unlock_decision_tooltip = PHI_propose_idea_to_japan
+      }
       JAP = {
         add_opinion_modifier = {
           target = PHI
@@ -1646,6 +1679,12 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      FIC = {
+        exists = yes
+        has_capitulated = no
+      }
+    }
     prerequisite = { focus = PHI_anti_colonialist_crusade }
     mutually_exclusive = { focus = PHI_liberate_indochina }
     relative_position_id = PHI_anti_colonialist_crusade
@@ -1667,6 +1706,20 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      288 = { is_owned_by_ROOT_or_ally = no }
+      640 = { is_owned_by_ROOT_or_ally = no }
+      812 = { is_owned_by_ROOT_or_ally = no }
+      1007 = { is_owned_by_ROOT_or_ally = no }
+    }
+    bypass = {
+      OR = {
+        is_in_faction_with = BRM
+        BRM = {
+          is_subject_of = ROOT
+        }
+      }
+    }
     prerequisite = {
       focus = PHI_fuel_insurrection_in_indochina
       focus = PHI_liberate_indochina
@@ -1740,6 +1793,22 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      INS = {
+        exists = yes
+        is_subject = no
+        is_in_faction = no
+        NOT = { hsa_war_with = ROOT }
+      }
+    }
+    bypass = {
+      INS = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
     mutually_exclusive = {
       focus = PHI_second_insulindian_revolution
     }
@@ -1798,6 +1867,22 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      SIA = {
+        exists = yes
+        is_subject = no
+        is_in_faction = no
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    bypass = {
+      SIA = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
     mutually_exclusive = {
       focus = PHI_operation_higante
     }
@@ -1818,6 +1903,9 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      has_capitulated = no
+    }
     prerequisite = { focus = PHI_on_our_own }
     relative_position_id = PHI_on_our_own
     completion_reward = {
@@ -1868,6 +1956,22 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    available = {
+      IND = {
+        exists = yes
+        is_subject = no
+        is_in_faction = no
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    bypass = {
+      IND = {
+        OR = {
+          is_subject_of = ROOT
+          is_in_faction_with = ROOT
+        }
+      }
+    }
     mutually_exclusive = {
       focus = PHI_liberate_india
     }
@@ -1895,10 +1999,12 @@ focus_tree = {
         tooltip = PHI_british_controls_india_tt
         RAJ = { 
           exists = yes
+          owns_state = 439
           NOT = {
             has_country_flag = RAJ_Ceylon
           }
         }
+        NOT = { country_exists = IND }
       }
     }
     mutually_exclusive = {
