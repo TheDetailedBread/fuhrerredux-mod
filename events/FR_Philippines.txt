@@ -1218,6 +1218,86 @@ country_event = { # Aguinaldo Retires from Politics
   }
 }
 
+country_event = { # 1941 Presidential Elections
+  id = philippines.57
+  title = philippines.57.t
+  desc = {
+    text = philippines.57.d
+    trigger = {
+      NOT = { has_government = market_liberal }
+    }
+  }
+  desc = {
+    text = philippines.57.d.1
+    trigger = {
+      has_government = market_liberal
+    }
+  }
+  is_triggered_only = yes
+
+  trigger = {
+    tag = PHI
+    date > 1941.1.1
+    date < 1942.1.1
+    NOT = { has_country_flag = PHI_has_1941_elections }
+  }
+
+  option = { # Sergio Osmena
+    name = philippines.57.a
+    if = {
+      limit = { 
+        NOT = { has_country_flag = PHI_quezon_in_the_usa }
+      }
+      remove_country_leader_role = {
+        character = PHI_Manuel_Luis_Quezon
+        ideology = social_conservative_subtype
+      }
+      add_country_leader_role = {
+        character = PHI_Sergio_P_Osmena
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+    }
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Sergio_P_Osmena_hog_sco
+      PHI_Manuel_Quadrino_for_sco
+      PHI_Andres_Soriano_eco_sco
+      PHI_Jose_Yulo_sec_sco
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1941_elections
+    }
+  }
+
+  option = { # Manuel A. Roxas
+    name = philippines.57.b
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Manuel_Roxas_hog_mli
+      PHI_Quentin_Paredes_for_mli
+      PHI_Mariano_Garchitorena_eco_mli
+      PHI_Jose_Zulueta_sec_mli
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1941_elections
+    }
+  }
+}
+
 country_event = { # Philippine Entry to the Entente
   id = philippines.61
   title = philippines.61.t
@@ -1641,5 +1721,73 @@ country_event = { # Hidden Event to whitepeace other British allies
       }
       white_peace = PREV
     }
+  }
+}
+
+country_event = { # Philippines Wants to Safeguard Indochina/East Indies
+  id = philippines.79
+  title = philippines.79.t
+  desc = philippines.79.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.79.a
+    ai_chance = {
+      base = 40
+    }
+    add_offsite_building = {
+      type = industrial_complex 
+      level = 2
+    }
+    add_manpower = 100000
+    FROM = {
+      country_event = { id = philippines.80 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.79.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.81 days = 2 }
+    }
+  }
+}
+
+country_event = { # ENG/FRA Accepts Control
+  id = philippines.80
+  title = philippines.80.t
+  desc = philippines.80.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.80.a
+    if = {
+      limit = {
+        FROM = { tag = ENG }
+      }
+      puppet = BEA
+    }
+    else_if = {
+      limit = {
+        FROM = { tag = FRA }
+      }
+      puppet = FIC
+    }
+  }
+}
+
+country_event = { # ENG/FRA Refuses Control
+  id = philippines.81
+  title = philippines.81.t
+  desc = philippines.81.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Shame...
+    name = philippines.81.a
   }
 }

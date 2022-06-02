@@ -320,6 +320,29 @@ country_event = { # Fate of Insulindia
     release_targeted_tag = yes
   }
 
+  option = {
+    name = annex.integrate
+    trigger = {
+      tag = PHI
+      has_completed_focus = PHI_on_our_own
+    }
+
+    ROOT = {
+      add_state_claim = 333
+      add_state_claim = 334
+      add_state_claim = 340
+      add_state_claim = 667
+      add_state_claim = 785
+      add_state_claim = 790 
+      add_state_claim = 797
+      add_state_claim = 822
+      add_state_claim = 823
+      add_state_claim = 943
+      add_state_claim = 944
+      add_state_claim = 951
+    }
+  }
+
   option = { # Occupy
     name = annexation_occupy
     ai_chance = {
@@ -482,7 +505,6 @@ country_event = { # Fate of Malaya
       add_to_temp_array = { core_removal_array = MAL }
       remove_all_cores_and_claims_of_tags = yes
       MAL = {
-        add_state_core = 333
         add_state_core = 336
         add_state_core = 819
         add_state_core = 820
@@ -507,6 +529,20 @@ country_event = { # Fate of Malaya
         }
         set_cosmetic_tag = ENG_MAL
       }
+    }
+  }
+
+  option = { # Assimilate to Root territory
+    name = annex.integrate
+    trigger = {
+      tag = PHI
+      has_completed_focus = PHI_on_our_own
+    }
+    ROOT = {
+      add_state_claim = 336
+      add_state_claim = 820
+      add_state_claim = 821
+      add_state_claim = 944
     }
   }
 
@@ -687,12 +723,6 @@ country_event = { # Fate of Philippines
             ideology = authoritarian_democrat_subtype
             traits = { }
           }
-        }
-        add_ideas = {
-          PHI_Jose_P_Laurel_hog_ade
-          PHI_Claro_M_Recto_for_ade
-          PHI_Serafin_Fausto_eco_ade
-          PHI_Benigno_Aquino_Sr_sec_ade
         }
       }
     }

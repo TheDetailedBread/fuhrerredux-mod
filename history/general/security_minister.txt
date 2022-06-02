@@ -1,0 +1,251 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+# Head of Government
+every_possible_country = {
+	limit = {
+		has_custom_ministers = no
+	}
+	generate_character = {
+		token_base = GEN_sec_van
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_van_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_van_hired }
+			on_remove = { clr_country_flag = GEN_sec_van_hired }
+			traits = {
+				security_minister
+				vanguardist
+				sec_secret_police_chief
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_col
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_col_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_col_hired }
+			on_remove = { clr_country_flag = GEN_sec_col_hired }
+			traits = {
+				security_minister
+				collectivist
+				sec_man_of_the_people
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_lib
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_lib_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_lib_hired }
+			on_remove = { clr_country_flag = GEN_sec_lib_hired }
+			traits = {
+				security_minister
+				libertarian_socialist
+				sec_efficient_sociopath
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_sde
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_sde_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_sde_hired }
+			on_remove = { clr_country_flag = GEN_sec_sde_hired }
+			traits = {
+				security_minister
+				social_democrat
+				sec_prince_of_terror
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_sli
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_sli_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_sli_hired }
+			on_remove = { clr_country_flag = GEN_sec_sli_hired }
+			traits = {
+				security_minister
+				social_liberal
+				sec_silent_lawyer
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_mli
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_mli_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_mli_hired }
+			on_remove = { clr_country_flag = GEN_sec_mli_hired }
+			traits = {
+				security_minister
+				market_liberal
+				sec_efficient_sociopath
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_sco
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_sco_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_sco_hired }
+			on_remove = { clr_country_flag = GEN_sec_sco_hired }
+			traits = {
+				security_minister
+				social_conservative
+				sec_driven_recruiter
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_ade
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_ade_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_ade_hired }
+			on_remove = { clr_country_flag = GEN_sec_ade_hired }
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_compassionate_gentleman
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_pau
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_pau_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_pau_hired }
+			on_remove = { clr_country_flag = GEN_sec_pau_hired }
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_preserver_of_culture
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_npo
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_npo_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_npo_hired }
+			on_remove = { clr_country_flag = GEN_sec_npo_hired }
+			traits = {
+				security_minister
+				national_populist
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+  generate_character = {
+		token_base = GEN_sec_val
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			cost = 150
+			available = { 
+				hidden_trigger = { has_country_flag = GEN_sec_val_hired }
+			}
+			on_add = { set_country_flag = GEN_sec_val_hired }
+			on_remove = { clr_country_flag = GEN_sec_val_hired }
+			traits = {
+				security_minister
+				valkist
+				sec_back_stabber
+			}
+		}
+	}
+}
