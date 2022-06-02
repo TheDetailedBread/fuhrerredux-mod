@@ -11326,6 +11326,7 @@ country_event = { # France Capitulates to North Africa
 
 	option = {
 	name = ger.401.a
+		set_global_flag = france_in_algeria
 		add_political_power = 50
 	}
 }
@@ -12880,57 +12881,53 @@ country_event = { # England Capitulates to Canada? will edit
 	fire_only_once = yes
 
 	option = {
+		name = ger.420.a
 		trigger = {
-			CAN = {
-				is_ai = no
-			}
+			CAN = { is_ai = no }
 		}
-	name = ger.420.a
-	    hidden_effect = {
-        	every_state = {
-			limit = {
-				is_owned_by = ENG
-				NOT = {
-					is_controlled_by = ENG
-				}
-			}
-		}
-			GER = {
-			if = {
+
+		hidden_effect = {
+			every_state = {
 				limit = {
-					has_war_with = ENG
-					controls_state = PREV
+					is_owned_by = ENG
+					NOT = {
+						is_controlled_by = ENG
+					}
 				}
-				transfer_state = PREV
-				}
-			}
-
-
-		every_state = {
-			limit = {
-				is_core_of = ENG
-				is_on_continent = europe
-				is_controlled_by = ENG
 			}
 			GER = {
 				if = {
 					limit = {
-						controls_state = 126
+						has_war_with = ENG
+						controls_state = PREV
 					}
-					transfer_state = PREV
+				transfer_state = PREV
 				}
 			}
-		}
-
-		every_state = {
-			limit = {
-				is_core_of = ENG
-				is_on_continent = europe
-				is_controlled_by = ENG
+			every_state = {
+				limit = {
+					is_core_of = ENG
+					is_on_continent = europe
+					is_controlled_by = ENG
+				}
+				GER = {
+					if = {
+						limit = {
+							controls_state = 126
+						}
+						transfer_state = PREV
+					}
+				}
 			}
+			every_state = {
+				limit = {
+					is_core_of = ENG
+					is_on_continent = europe
+					is_controlled_by = ENG
+				}
 				remove_core_of = ENG
+			}
 		}
-	}
 
 		set_capital = { state = 331 }
 		331 = {
@@ -12941,76 +12938,75 @@ country_event = { # England Capitulates to Canada? will edit
 		}
 		add_ideas = ENG_government_in_exile
 
+		set_global_flag = england_in_canada
 		hidden_effect = {
-		GER = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.421 }
+			GER = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.421 }
 			}
-		POR = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4211 }
+			POR = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4211 }
 			}
-		SAF = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4212 }
+			SAF = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4212 }
 			}
-		AST = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4213 }
+			AST = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4213 }
 			}
-		RAJ = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4214 }
+			RAJ = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4214 }
 			}
-		JAP = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4215 }
+			JAP = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4215 }
 			}
-		ARG = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4216 }
+			ARG = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4216 }
 			}
-		SAU = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4218 }
-		}
-		NZL = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4219 }
-		}
-		SPR = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4221 }
-		}
-		FRA = {
-			set_country_flag = GER_england_escapes
+			SAU = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4218 }
+			}
+			NZL = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4219 }
+			}
+			SPR = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4221 }
+			}
+			FRA = {
+				set_country_flag = GER_england_escapes
 			}
 		}
 	}
 	option = {
+		name = ger.420.a
 		trigger = {
-			CAN = {
-				is_ai = yes
-			}
+			CAN = { is_ai = yes }
 		}
-	name = ger.420.a
 		ENG = {
 			annex_country = { target = CAN transfer_troops = yes }
 			set_capital = { state = 276 }
 			add_ideas = ENG_government_in_exile
 		}
 
+		set_global_flag = england_in_canada
 		hidden_effect = {
-		GER = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.421 }
-		}
-
+			GER = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.421 }
+			}
 			every_state = {
 				limit = {
 					is_core_of = CAN
 				}
-					add_core_of = ENG
+				add_core_of = ENG
 			}
 			every_state = {
 				limit = {
@@ -13018,7 +13014,7 @@ country_event = { # England Capitulates to Canada? will edit
 					is_on_continent = europe
 					is_controlled_by = ENG
 				}
-					remove_core_of = ENG
+				remove_core_of = ENG
 			}
 		}
 
@@ -13069,9 +13065,9 @@ country_event = { # England Capitulates to Canada? will edit
 		FRA = {
 			set_country_flag = GER_england_escapes
 			country_event = { id = ger.4230 }
-			}
 		}
 	}
+}
 
 country_event = { # England Capitulates to Canada? will probably change
 	id = ger.421

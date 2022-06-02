@@ -1353,6 +1353,9 @@ focus_tree = {
     cost = 6
     prerequisite = { focus = PHI_look_to_the_west }
     relative_position_id = PHI_look_to_the_west
+    completion_reward = {
+      add_ideas = PHI_bastion_of_liberty
+    }
   }
 
   # Safeguard the Colonies
@@ -1362,8 +1365,18 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      OR = {
+        has_global_flag = france_in_algeria
+        has_global_flag = england_in_canada
+      }
+    }
     prerequisite = { focus = PHI_an_entente_outpost_in_the_east }
     relative_position_id = PHI_an_entente_outpost_in_the_east
+    completion_reward = {
+      unlock_decision_tooltip = PHI_safeguard_indochina
+      unlock_decision_tooltip = PHI_safeguard_insulindia
+    }
   }
 
   # Contain Japanese Aggression
@@ -1409,6 +1422,12 @@ focus_tree = {
     }
     prerequisite = { focus = PHI_contain_japanese_aggression }
     relative_position_id = PHI_contain_japanese_aggression
+    completion_reward = {
+      create_wargoal = {
+        target = SIA
+        type = annex_everything
+      }
+    }
   }
 
   # Strike the Empire

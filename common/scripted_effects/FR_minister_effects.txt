@@ -414,4 +414,113 @@ add_starting_ministers = {
       ZHI_Pan_Juying_sec_pau
     }
   }
+  # Others
+  every_possible_country = {
+    limit = {
+      has_custom_ministers = no
+    }
+    add_generic_ministers = yes
+  }
+}
+
+add_generic_ministers = {
+  if = {
+    limit = { has_government = vanguardist }
+    add_ideas = {
+      GEN_hog_van
+      GEN_for_van
+      GEN_eco_van
+      GEN_sec_van
+    }
+  }
+  else_if = {
+    limit = { has_government = collectivist }
+    add_ideas = {
+      GEN_hog_col
+      GEN_for_col
+      GEN_eco_col
+      GEN_sec_col
+    }
+  }
+  else_if = {
+    limit = { has_government = libertarian_socialist }
+    add_ideas = {
+      GEN_hog_lib
+      GEN_for_lib
+      GEN_eco_lib
+      GEN_sec_lib
+    }
+  }
+  else_if = {
+    limit = { has_government = social_democrat }
+    add_ideas = {
+      GEN_hog_sde
+      GEN_for_sde
+      GEN_eco_sde
+      GEN_sec_sde
+    }
+  }
+  else_if = {
+    limit = { has_government = social_liberal }
+    add_ideas = {
+      GEN_hog_sli
+      GEN_for_sli
+      GEN_eco_sli
+      GEN_sec_sli
+    }
+  }
+  else_if = {
+    limit = { has_government = market_liberal }
+    add_ideas = {
+      GEN_hog_mli
+      GEN_for_mli
+      GEN_eco_mli
+      GEN_eco_mli
+    }
+  }
+  else_if = {
+    limit = { has_government = social_conservative }
+    add_ideas = {
+      GEN_hog_sco
+      GEN_for_sco
+      GEN_eco_sco
+      GEN_sec_sco
+    }
+  }
+  else_if = {
+    limit = { has_government = authoritarian_democrat }
+    add_ideas = {
+      GEN_hog_ade
+      GEN_for_ade
+      GEN_eco_ade
+      GEN_sec_ade
+    }
+  }
+  else_if = {
+    limit = { has_government = paternal_autocrat }
+    add_ideas = {
+      GEN_hog_pau
+      GEN_for_pau
+      GEN_eco_pau
+      GEN_sec_pau
+    }
+  }
+  else_if = {
+    limit = { has_government = national_populist }
+    add_ideas = {
+      GEN_hog_npo
+      GEN_for_npo
+      GEN_eco_npo
+      GEN_sec_npo
+    }
+  }
+  else_if = {
+    limit = { has_government = valkist }
+    add_ideas = {
+      GEN_hog_val
+      GEN_for_val
+      GEN_eco_val
+      GEN_sec_val
+    }
+  }
 }

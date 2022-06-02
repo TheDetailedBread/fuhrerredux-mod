@@ -261,30 +261,6 @@ PHI_anti_colonialist_crusade_cat = {
       }
     }
   }
-  PHI_invite_siam_dec = {
-    icon = GFX_decision_generic_civil_support
-    days_remove = 7
-    fire_only_once = yes
-    allowed = { original_tag = PHI }
-    targets = { SIA }
-    target_trigger = {
-      FROM = {
-        exists = yes
-      }
-    }
-    visible = { 
-      is_in_faction = yes
-      FROM = {
-        NOT = { is_in_faction_with = ROOT }
-      }
-      has_completed_focus = PHI_invite_siam
-    }
-    remove_effect = {
-      FROM = {
-        country_event = { id = philippines.70 days = 2 }
-      }
-    }
-  }
   PHI_support_ins = {
     icon = ger_military_buildup
     fire_only_once = yes
@@ -308,33 +284,6 @@ PHI_anti_colonialist_crusade_cat = {
         amount = 1000
       }
       FROM = { country_event = { id = philippines.39 days = 2 } }
-    }
-  }
-  PHI_the_korean_revolt = {
-    desc = PHI_support_the_koreans_desc
-    icon = GFX_decision_generic_ignite_civil_war
-    days_remove = 1
-    fire_only_once = yes
-    targets = { JAP }
-    target_trigger = {
-      FROM = {
-        exists = yes
-        has_capitulated = no
-        owns_state = 525
-        owns_state = 527
-        owns_state = 827
-        owns_state = 828
-        owns_state = 829
-        owns_state = 830
-        owns_state = 832
-      }
-    }
-    visible = {
-      NOT = { has_dlc = "La Resistance" }
-      has_completed_focus = PHI_support_the_koreans
-    }
-    remove_effect = {
-      PHI_start_korean_revolt = yes
     }
   }
   PHI_the_indochinese_revolt = {
@@ -380,6 +329,95 @@ PHI_anti_colonialist_crusade_cat = {
 }
 
 foreign_politics = {
+  PHI_invite_siam_dec = {
+    icon = GFX_decision_generic_civil_support
+    days_remove = 7
+    fire_only_once = yes
+    allowed = { original_tag = PHI }
+    targets = { SIA }
+    target_trigger = {
+      FROM = {
+        exists = yes
+      }
+    }
+    visible = { 
+      is_in_faction = yes
+      FROM = {
+        NOT = { is_in_faction_with = ROOT }
+      }
+      has_completed_focus = PHI_invite_siam
+    }
+    remove_effect = {
+      FROM = {
+        country_event = { id = philippines.70 days = 2 }
+      }
+    }
+  }
+  PHI_safeguard_indochina = {
+    icon = GFX_decision_hol_war_on_pacifism
+    fire_only_once = yes
+    targets = { FRA }
+    allowed = { original_tag = PHI }
+    available = {
+      has_global_flag = france_in_algeria
+      FIC = {
+        has_capitulated = no
+      }
+    }
+    visible = {
+      country_exists = FIC
+      has_completed_focus = PHI_safeguard_the_colonies
+    }
+    complete_effect = {
+      FROM = { country_event = philippines.79 }
+    }
+  }
+  PHI_safeguard_insulindia = {
+    icon = GFX_decision_hol_war_on_pacifism
+    fire_only_once = yes
+    targets = { ENG }
+    allowed = { original_tag = PHI }
+    available = {
+      has_global_flag = england_in_canada
+      BEA = {
+        has_capitulated = no
+      }
+    }
+    visible = {
+      country_exists = BEA
+      has_completed_focus = PHI_safeguard_the_colonies
+    }
+    complete_effect = {
+      FROM = { country_event = philippines.79 }
+    }
+  }
+  PHI_the_korean_revolt = {
+    desc = PHI_support_the_koreans_desc
+    icon = GFX_decision_generic_ignite_civil_war
+    days_remove = 1
+    fire_only_once = yes
+    targets = { JAP }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        has_capitulated = no
+        owns_state = 525
+        owns_state = 527
+        owns_state = 827
+        owns_state = 828
+        owns_state = 829
+        owns_state = 830
+        owns_state = 832
+      }
+    }
+    visible = {
+      NOT = { has_dlc = "La Resistance" }
+      has_completed_focus = PHI_support_the_koreans
+    }
+    remove_effect = {
+      PHI_start_korean_revolt = yes
+    }
+  }
   PHI_alliance_with_usa = {
     icon = GFX_decision_generic_tank
     fire_only_once = yes
