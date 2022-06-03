@@ -141,6 +141,28 @@ ideas = {
         production_speed_dockyard_factor = 0.25
       }
     }
+    PHI_naval_repair_facilities = {
+      allowed = { original_tag = PHI }
+      picture = AST_oversized_fleet
+      modifier = {
+        repair_speed_factor = 0.25
+      }
+    }
+    PHI_filipino_advisors = {
+      picture = PHI_general_staff
+      available = { country_exists = PHI }
+      modifier = {
+				army_org_factor = 0.04
+				max_planning = 0.04
+				planning_speed = 0.04
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+    }
     # Liberal Ideas
     PHI_judicial_reform_idea = {
       allowed = { original_tag = PHI }

@@ -1438,22 +1438,6 @@ shared_focus = {
 	}
 }
 
-# Economic Rehabilitation
-shared_focus = {
-	id = USA_economic_rehabilitation
-	icon = GFX_goal_generic_consumer_goods
-	x = -2
-	y = 1
-	cost = 6
-	ai_will_do = { factor = 2000 }
-	prerequisite = { focus = USA_federal_pensions_reform }
-	prerequisite = { focus = USA_public_works_administration }
-	relative_position_id = USA_public_works_administration
-	completion_reward = {
-		USA_decrease_effects_of_the_depression = yes
-	}
-}
-
 # Education for All
 shared_focus = {
 	id = USA_education_for_all
@@ -1543,6 +1527,23 @@ shared_focus = {
 	}
 }
 
+
+# Economic Rehabilitation
+shared_focus = {
+	id = USA_economic_rehabilitation
+	icon = GFX_goal_generic_consumer_goods
+	x = -2
+	y = 1
+	cost = 6
+	ai_will_do = { factor = 2000 }
+	prerequisite = { focus = USA_federal_pensions_reform }
+	prerequisite = { focus = USA_public_works_administration }
+	relative_position_id = USA_public_works_administration
+	completion_reward = {
+		USA_decrease_effects_of_the_depression = yes
+	}
+}
+
 # Hydroelectric Conquest
 shared_focus = {
 	id = USA_hydroelectric_conquest
@@ -1570,21 +1571,6 @@ shared_focus = {
 	relative_position_id = USA_hydroelectric_conquest
 	completion_reward = {
 		USA_decrease_effects_of_the_depression = yes
-	}
-}
-
-# Ensure Press Freedoms
-shared_focus = {
-	id = USA_ensure_press_freedoms
-	icon = GFX_goal_big_news
-	x = 1
-	y = 1
-	cost = 6
-	prerequisite = { focus = USA_private_partnerships }
-	relative_position_id = USA_private_partnerships
-	completion_reward = {
-		add_stability = 0.05
-		add_war_support = 0.05
 	}
 }
 
@@ -1649,6 +1635,21 @@ shared_focus = {
 	relative_position_id = USA_president_landon
 	completion_reward = {
 		USA_decrease_effects_of_the_depression = yes
+	}
+}
+
+# Ensure Press Freedoms
+shared_focus = {
+	id = USA_ensure_press_freedoms
+	icon = GFX_goal_big_news
+	x = 1
+	y = 1
+	cost = 6
+	prerequisite = { focus = USA_private_partnerships }
+	relative_position_id = USA_private_partnerships
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
 	}
 }
 
