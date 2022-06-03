@@ -5,6 +5,9 @@ PHI_co_prosperity_sphere = {
     icon = GFX_decision_generic_political_discourse
     cost = 20
     fire_only_once = yes
+    ai_will_do = {
+      base = 800 # Do as soon as possible
+    }
     targets = { JAP }
     allowed = { original_tag = PHI }
     available = {
@@ -34,6 +37,9 @@ PHI_co_prosperity_sphere = {
     icon = GFX_decision_generic_political_discourse
     cost = 20
     fire_only_once = yes
+    ai_will_do = {
+      base = 800 # Do as soon as possible
+    }
     targets = { JAP }
     allowed = { original_tag = PHI }
     available = {
@@ -63,16 +69,156 @@ PHI_co_prosperity_sphere = {
 }
 
 PHI_anti_colonialist_crusade_cat = {
+  PHI_ally_insulindian_rebels = {
+    icon = GFX_decision_generic_civil_support
+    cost = 20
+    fire_only_once = yes
+    ai_will_do = {
+      base = 80
+      modifier = {
+        factor = 10
+        num_divisions > 40
+      }
+    }
+    allowed = { original_tag = PHI }
+    available = {
+      FROM = {
+        has_war_with = BEA
+      }
+    }
+    visible = {
+      has_global_flag = insulindian_revolt_attempted
+    }
+    targets = { INS }
+    target_trigger = {
+      country_exists = FROM
+    }
+    complete_effect = {
+      FROM = { get_current_government_type = yes }
+      if = {
+        add_to_war = { 
+          targeted_alliance = FROM 
+          enemy = BEA
+          hostility_reason = asked_to_join
+        }
+        limit = { has_dlc = "Together for Victory" }
+        set_autonomy = {
+          target = FROM
+          autonomy_state = special_autonomous_dependency
+        }
+      } 
+      else = {
+        puppet = FROM
+      }
+      FROM = { restore_previous_government_type = yes }
+    }
+  }
+  PHI_ally_indochinese_rebels = {
+    icon = GFX_decision_generic_civil_support
+    cost = 20
+    fire_only_once = yes
+    ai_will_do = {
+      base = 80
+      modifier = {
+        factor = 10
+        num_divisions > 40
+      }
+    }
+    allowed = { original_tag = PHI }
+    available = {
+      FROM = {
+        has_war_with = FIC
+      }
+    }
+    visible = {
+      has_global_flag = indochinese_revolt_attempted
+    }
+    targets = { ICR }
+    target_trigger = {
+      country_exists = FROM
+    }
+    complete_effect = {
+      FROM = { get_current_government_type = yes }
+      if = {
+        add_to_war = { 
+          targeted_alliance = FROM 
+          enemy = FIC
+          hostility_reason = asked_to_join
+        }
+        limit = { has_dlc = "Together for Victory" }
+        set_autonomy = {
+          target = FROM
+          autonomy_state = special_autonomous_dependency
+        }
+      } 
+      else = {
+        puppet = FROM
+      }
+      FROM = { restore_previous_government_type = yes }
+    }
+  }
+  PHI_ally_korean_rebels = {
+    icon = GFX_decision_generic_civil_support
+    cost = 20
+    fire_only_once = yes
+    ai_will_do = {
+      base = 80
+      modifier = {
+        factor = 10
+        num_divisions > 40
+      }
+    }
+    allowed = { original_tag = PHI }
+    available = {
+      FROM = {
+        has_war_with = JAP
+      }
+    }
+    visible = {
+      has_global_flag = korean_revolt_attempted
+    }
+    targets = { KOR }
+    target_trigger = {
+      country_exists = FROM
+    }
+    complete_effect = {
+      FROM = { get_current_government_type = yes }
+      if = {
+        add_to_war = { 
+          targeted_alliance = FROM 
+          enemy = JAP
+          hostility_reason = asked_to_join
+        }
+        limit = { has_dlc = "Together for Victory" }
+        set_autonomy = {
+          target = FROM
+          autonomy_state = special_autonomous_dependency
+        }
+      } 
+      else = {
+        puppet = FROM
+      }
+      FROM = { restore_previous_government_type = yes }
+    }
+  }
   PHI_demand_burma = {
     icon = GFX_decision_generic_civil_support
     cost = 50
     fire_only_once = yes
+    ai_will_do = {
+      base = 80
+      modifier = {
+        factor = 10
+        num_divisions > 40
+      }
+    }
     allowed = { original_tag = PHI }
     available = {
       NOT = { country_exists = BRM }
       FROM = {
         controls_state = 288
       }
+      is_neighbor_of = FROM
     }
     visible = {
       has_completed_focus = PHI_the_burmese_question
@@ -93,6 +239,9 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 800 # do as soon as possible
+    }
     allowed = { original_tag = PHI }
     targets = { BRM }
     target_trigger = {
@@ -118,6 +267,13 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     allowed = { original_tag = PHI }
     targets = { RUS }
     target_trigger = {
@@ -142,6 +298,13 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     allowed = { original_tag = PHI }
     targets = { MAN }
     target_trigger = {
@@ -166,6 +329,13 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     allowed = { original_tag = PHI }
     targets = { ZHI }
     target_trigger = {
@@ -190,6 +360,13 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     allowed = { original_tag = PHI }
     targets = { CHI }
     target_trigger = {
@@ -217,6 +394,13 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     allowed = { original_tag = PHI }
     targets = { IND }
     target_trigger = {
@@ -241,6 +425,13 @@ PHI_anti_colonialist_crusade_cat = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     allowed = { original_tag = PHI }
     targets = { INS }
     target_trigger = {
@@ -264,6 +455,9 @@ PHI_anti_colonialist_crusade_cat = {
   PHI_support_ins = {
     icon = ger_military_buildup
     fire_only_once = yes
+    ai_will_do = {
+      base = 200
+    }
     custom_cost_text = 1000_infantry_equipment_1
     custom_cost_trigger = {
 			has_equipment = { infantry_equipment > 999 }
@@ -272,6 +466,9 @@ PHI_anti_colonialist_crusade_cat = {
     targets = { INS }
     target_trigger = {
       FROM = { has_war_with = BEA }
+    }
+    visible = {
+      NOT = { has_global_flag = insulindian_revolt_attempted }
     }
     ai_will_do = {
       factor = 1000
@@ -289,8 +486,20 @@ PHI_anti_colonialist_crusade_cat = {
   PHI_the_indochinese_revolt = {
     desc = PHI_fuel_insurrection_in_indochina_desc
     icon = GFX_decision_generic_ignite_civil_war
-    days_remove = 1
+    days_remove = 30
     fire_only_once = yes
+    war_with_on_remove = FIC
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+      modifier = {
+        factor = 20
+        is_in_faction_with = JAP
+      }
+    }
     targets = { FIC }
     target_trigger = {
       FIC = {
@@ -309,8 +518,20 @@ PHI_anti_colonialist_crusade_cat = {
   PHI_the_insulindian_revolt = {
     desc = PHI_second_insulindian_revolution_desc
     icon = GFX_decision_generic_ignite_civil_war
-    days_remove = 1
+    days_remove = 30
     fire_only_once = yes
+    war_with_on_remove = BEA
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+      modifier = {
+        factor = 20
+        is_in_faction_with = JAP
+      }
+    }
     targets = { BEA }
     target_trigger = {
       BEA = {
@@ -333,6 +554,9 @@ foreign_politics = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7
     fire_only_once = yes
+    ai_will_do = {
+      base = 800
+    }
     allowed = { original_tag = PHI }
     targets = { SIA }
     target_trigger = {
@@ -356,6 +580,13 @@ foreign_politics = {
   PHI_safeguard_indochina = {
     icon = GFX_decision_hol_war_on_pacifism
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     targets = { FRA }
     allowed = { original_tag = PHI }
     available = {
@@ -375,6 +606,13 @@ foreign_politics = {
   PHI_safeguard_insulindia = {
     icon = GFX_decision_hol_war_on_pacifism
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+    }
     targets = { ENG }
     allowed = { original_tag = PHI }
     available = {
@@ -394,8 +632,20 @@ foreign_politics = {
   PHI_the_korean_revolt = {
     desc = PHI_support_the_koreans_desc
     icon = GFX_decision_generic_ignite_civil_war
-    days_remove = 1
+    days_remove = 30
     fire_only_once = yes
+    war_with_on_remove = JAP
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 20
+        num_divisions > 80
+      }
+      modifier = {
+        factor = 20
+        is_in_faction_with = USA
+      }
+    }
     targets = { JAP }
     target_trigger = {
       FROM = {
@@ -421,6 +671,9 @@ foreign_politics = {
   PHI_alliance_with_usa = {
     icon = GFX_decision_generic_tank
     fire_only_once = yes
+    ai_will_do = {
+      base = 800
+    }
     targets = { USA }
     allowed = { original_tag = PHI }
     visible = {
@@ -442,6 +695,13 @@ foreign_politics = {
   PHI_join_entente = {
     icon = GFX_decision_generic_tank
     fire_only_once = yes
+    ai_will_do = {
+      base = 80 # do as soon as possible
+      modifier = {
+        factor = 2
+        num_divisions > 80
+      }
+    }
     targets = { FRA }
     allowed = { original_tag = PHI }
     visible = {
@@ -463,6 +723,9 @@ foreign_politics = {
   PHI_support_usa = {
     icon = ger_military_buildup
     fire_only_once = yes
+    ai_will_do = {
+      base = 100
+    }
     custom_cost_text = 1000_infantry_equipment_1
     custom_cost_trigger = {
 			has_equipment = { infantry_equipment > 999 }
@@ -492,6 +755,9 @@ foreign_politics = {
   PHI_support_mex = {
     icon = ger_military_buildup
     fire_only_once = yes
+    ai_will_do = {
+      base = 100
+    }
     custom_cost_text = 1000_infantry_equipment_1
     custom_cost_trigger = {
 			has_equipment = { infantry_equipment > 999 }
@@ -527,6 +793,9 @@ political_actions = {
     days_remove = 60
     cost = 0
     cancel_if_not_visible = yes
+    ai_will_do = {
+      base = 800
+    }
     targets = { 785 }
     target_trigger = {
       owns_state = FROM
@@ -590,6 +859,9 @@ PHI_industrialization_plan = {
     cost = 20
     days_remove = 120
     fire_only_once = yes
+    ai_will_do = {
+      base = 1000
+    }
     visible = {
       has_idea = PHI_hindered_british_trade
     }
@@ -602,6 +874,9 @@ PHI_industrialization_plan = {
     cost = 40
     days_remove = 140
     fire_only_once = yes
+    ai_will_do = {
+      base = 800
+    }
     visible = {
       has_completed_focus = PHI_railway_expansion
     }
@@ -622,6 +897,9 @@ PHI_industrialization_plan = {
     cost = 20
     days_remove = 4
     fire_only_once = yes
+    ai_will_do = {
+      base = 200
+    }
     targets = { ENG FRA GER USA }
     target_trigger = {
       FROM = {
@@ -644,6 +922,9 @@ PHI_industrialization_plan = {
     days_remove = 180
     fire_only_once = yes
     state_target = yes
+    ai_will_do = {
+      base = 1200
+    }
     targets = { 327 623 624 625 626 627 628 }
     target_trigger = {
       controls_state = FROM
@@ -695,6 +976,9 @@ PHI_industrialization_plan = {
     days_remove = 60
     fire_only_once = yes
     state_target = yes
+    ai_will_do = {
+      base = 1200
+    }
     targets = { 623 624 625 626 }
     target_trigger = {
       controls_state = FROM
@@ -736,6 +1020,9 @@ PHI_industrialization_plan = {
     days_remove = 120
     fire_only_once = yes
     state_target = yes
+    ai_will_do = {
+      base = 1200
+    }
     targets = { 623 327 628 627 }
     target_trigger = {
       controls_state = FROM
@@ -775,6 +1062,9 @@ PHI_industrialization_plan = {
     icon = GFX_decision_generic_break_treaty
     fire_only_once = yes
     days_remove = 30
+    ai_will_do = {
+      base = 2000
+    }
     available = {
       PHI_industrialization_complete = yes
     }
@@ -792,6 +1082,9 @@ PHI_industrialization_plan = {
     days_remove = 120
     fire_only_once = yes
     state_target = yes
+    ai_will_do = {
+      base = 1400
+    }
     targets = { 623 327 627 624 }
     target_trigger = {
       controls_state = FROM

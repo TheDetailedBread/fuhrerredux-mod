@@ -1513,7 +1513,13 @@ country_event = { # Country Accepts Invitation
 
   option = { # Great!
     name = philippines.71.a
-    add_to_faction = FROM
+    random_other_country = {
+      limit = {
+        is_in_faction_with = ROOT
+        is_faction_leader = yes
+      }
+      add_to_faction = FROM
+    }
   }
 }
 

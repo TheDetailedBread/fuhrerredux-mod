@@ -1282,6 +1282,18 @@ focus_tree = {
     x = -2
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 200
+      modifier = {
+        factor = 0.2
+        has_global_flag = france_in_algeria
+      }
+      modifier = {
+        factor = 0.2
+        has_global_flag = england_in_canada
+        ENG = { is_in_faction_with = FRA }
+      }
+    }
     available = {
       has_democratic_government = yes
       is_in_faction = no
@@ -1318,6 +1330,15 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 200
+      modifier = {
+        factor = 0.2
+        USA = {
+          has_country_flag = USA_surrendered
+        }
+      }
+    }
     available = {
       is_in_faction = no
       has_democratic_government = yes
@@ -1386,6 +1407,9 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 200
+    }
     prerequisite = {
       focus = PHI_look_to_the_west
       focus = PHI_maintain_american_relations

@@ -318,6 +318,7 @@ PHI_deploy_refubished_ships = {
 PHI_start_insulindian_revolt = {
   set_global_flag = insulindian_revolt_attempted
   INS = {
+    add_ideas = PHI_filipino_advisors
     hidden_effect = {
       every_state = {
         limit = { is_core_of = FROM }
@@ -331,26 +332,25 @@ PHI_start_insulindian_revolt = {
       transfer_state = 335
       transfer_state = 672
       transfer_state = 668
+      set_province_controller = 1342
+      set_province_controller = 1386
 
       declare_war_on = {
         target = FROM
         type = annex_everything
       }
       add_civil_war_target = FROM
+      load_oob = "INS"
     }
     custom_effect_tooltip = PHI_operation_insulindian_revolt_tt
-  }
-  hidden_effect = {
-    INS = {
-      set_province_controller = 1342
-      set_province_controller = 1386
-    }
   }
 }
 
 PHI_start_indochinese_revolt = {
   set_global_flag = indochinese_revolt_attempted
   ICR = {
+    add_ideas = ICR_revolution
+    add_ideas = PHI_filipino_advisors
     hidden_effect = {
       every_state = {
         limit = { is_core_of = FROM }
@@ -365,17 +365,6 @@ PHI_start_indochinese_revolt = {
       transfer_state = 963
       transfer_state = 962
       transfer_state = 741
-
-      declare_war_on = {
-        target = FROM
-        type = annex_everything
-      }
-      add_civil_war_target = FROM
-    }
-    custom_effect_tooltip = PHI_operation_indochinese_revolt_tt
-  }
-  hidden_effect = {
-    ICR = {
       set_province_controller = 1374
       set_province_controller = 12210
       set_province_controller = 7426
@@ -387,13 +376,23 @@ PHI_start_indochinese_revolt = {
       set_province_controller = 1248
       set_province_controller = 1328
       set_province_controller = 1300
+
+      declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+      add_civil_war_target = FROM
+      load_oob = "ICR"
     }
+    custom_effect_tooltip = PHI_operation_indochinese_revolt_tt
   }
 }
 
 PHI_start_korean_revolt = {
   set_global_flag = korean_revolt_attempted
   KOR = {
+    add_ideas = KOR_revolution
+    add_ideas = PHI_filipino_advisors
     hidden_effect = {
       set_politics = {
         ruling_party = authoritarian_democrat
@@ -402,19 +401,16 @@ PHI_start_korean_revolt = {
       transfer_state = 527
       transfer_state = 525
       transfer_state = 829
+      add_province_controller = 4052
+      add_province_controller = 4126
+      add_province_controller = 1081
 
       declare_war_on = {
         target = FROM
         type = annex_everything
       }
+      load_oob = "KOR"
     }
     custom_effect_tooltip = PHI_operation_korean_revolt_tt
-  }
-  hidden_effect = {
-    KOR = {
-      add_province_controller = 4052
-      add_province_controller = 4126
-      add_province_controller = 1081
-    }
   }
 }

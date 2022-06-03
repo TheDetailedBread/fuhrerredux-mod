@@ -132,9 +132,9 @@ every_possible_country = {
 			slot = head_of_government
 			cost = 150
 			idea_token = GEN_hog_mli
-			available = { 
-				hidden_trigger = { has_country_flag = GEN_hog_mli_hired }
-			}
+			#available = { 
+				#hidden_trigger = { has_country_flag = GEN_hog_mli_hired }
+			#}
 			on_add = { set_country_flag = GEN_hog_mli_hired }
 			on_remove = { clr_country_flag = GEN_hog_mli_hired }
 			traits = {
@@ -237,7 +237,7 @@ every_possible_country = {
 		}
 	}
   generate_character = {
-		token_base = generic_hog_sco
+		token_base = generic_hog_val
 		portraits = {
 			civilian = {
 				small = "gfx/interface/ideas/GEN/ministers/GEN_minister_unknown.png"

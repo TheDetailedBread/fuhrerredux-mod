@@ -31,23 +31,19 @@
 #			3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
 #									the current game version.
 
-INC_INF_01 =
-{
+ICR_INF_01 = {
 	name = "Infantry Divisions"
-
-	for_countries = { INC }
-
+	for_countries = { ICR }
 	division_types = { "infantry" "bicycle_battalion" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_GAR_01 }
+	#link_numbering_with = { ICR_GAR_01 }
 
 	fallback_name = "Su doan %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		320 = { "Su doan %d 'Dong Bang'" }
 		316 = { "Su doan %d 'Bong Lau'" }
 		325 = { "Su doan %d 'Binh Tri Thien'" }
@@ -101,72 +97,19 @@ INC_INF_01 =
 	}
 }
 
-INC_INF_03 =
-{
-	name = "Pathet Lao Division"
-
-	for_countries = { INC }
-
-	can_use = { has_country_flag = INC_can_core_Laos }
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { LAO_INF_01 }
-
-	fallback_name = "Korngpon Taharn Rarb Thi %d" # %dth Infantry Div.
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered =
-	{
-		1 = { "Korngpon Taharn Rarb Thi %d" }
-	}
-}
-
-
-INC_INF_02 =
-{
-	name = "Khmer Issarak Division"
-
-	for_countries = { INC }
-
-	can_use = { has_country_flag = INC_can_core_Cambodia }
-
-	division_types = { "infantry" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_GAR_01 }
-
-	fallback_name = "Kong Pol Tmer Jerng Ti %d"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered =
-	{
-		7 = { "Kong Pol Tmer Jerng Ti %d" }
-		9 = { "Kong Pol Tmer Jerng Ti %d" }
-	}
-}
-
-INC_CAV_01 =
-{
+ICR_CAV_01 = {
 	name = "Cavalry Divisions"
-
-	for_countries = { INC }
-
-
+	for_countries = { ICR }
 	division_types = { "cavalry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan ky binh %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan ky binh %d" }
 		2 = { "Su doan ky binh %d" }
 		3 = { "Su doan ky binh %d" }
@@ -177,29 +120,22 @@ INC_CAV_01 =
 		8 = { "Su doan ky binh %d" }
 		9 = { "Su doan ky binh %d" }
 		10 = { "Su doan ky binh %d" }
-
 	}
 }
 
-INC_MOT_01 =
-{
+ICR_MOT_01 = {
 	name = "Motorised Divisions"
-
-	for_countries = { INC }
-
-
-
+	for_countries = { ICR }
 	division_types = { "motorized" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { INC_INF_01 }
+	link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		3 = { "Su doan %d 'Sao Vang'" }
 		2 = { "Su doan %d 'Thep'" }
 		4 = { "Su doan %d 'Hau Giang'" }
@@ -251,25 +187,19 @@ INC_MOT_01 =
 	}
 }
 
-INC_ARM_01 =
-{
+ICR_ARM_01 = {
 	name = "Tank Divisions"
-
-	for_countries = { INC }
-
-
-
+	for_countries = { ICR }
 	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan xe tang %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan xe tang %d" }
 		2 = { "Su doan xe tang %d" }
 		3 = { "Su doan xe tang %d" }
@@ -283,23 +213,19 @@ INC_ARM_01 =
 	}
 }
 
-INC_ARM_02 =
-{
+ICR_ARM_02 = {
 	name = "Armored Divisions"
-
-	for_countries = { INC }
-
+	for_countries = { ICR }
 	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan Tang thiep giap %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan Tang thiep giap %d" }
 		2 = { "Su doan Tang thiep giap %d" }
 		3 = { "Su doan Tang thiep giap %d" }
@@ -310,30 +236,23 @@ INC_ARM_02 =
 		8 = { "Su doan Tang thiep giap %d" }
 		9 = { "Su doan Tang thiep giap %d" }
 		10 = { "Su doan Tang thiep giap %d" }
-
 	}
 }
 
 
-INC_MEC_01 =
-{
+ICR_MEC_01 = {
 	name = "Mechanized Divisions"
-
-	for_countries = { INC }
-
-
-
-	division_types = { "mechanized"  }
+	for_countries = { ICR }
+	division_types = { "mechanized" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { INC_INF_01 }
+	link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan Bo binh co gioi %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		3 = { "Su doan %d 'Sao Vang'" }
 		2 = { "Su doan %d 'Thep'" }
 		4 = { "Su doan %d 'Hau Giang'" }
@@ -385,73 +304,19 @@ INC_MEC_01 =
 	}
 }
 
-# INC_GAR_01 =
-# {
-	# name = "National Defense Divisions"
-
-	# for_countries = { INC }
-
-
-
-	# division_types = { "garrison" }
-
-	# # Number reservation system will tie to another group.
-	# link_numbering_with = { INC_MLT_01 }
-
-	# fallback_name = "Su doan Kinh te-Quoc Phong %d"
-
-	# # Names with numbers (only one number per entry).
-	# # It's okay to have gaps in numbering.
-	# ordered =
-	# {
-		# 1 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 2 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 3 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 5 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 7 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 9 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 71 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 10 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 11 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 12 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 13 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 14 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 15 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 16 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 17 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 18 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 19 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 20 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 21 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 22 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 23 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 24 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 25 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 26 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 27 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 28 = { "Su doan Kinh te-Quoc Phong %d" }
-		# 29 = { "Su doan Kinh te-Quoc Phong %d" }
-
-	# }
-# }
-
-INC_MLT_01 =
-{
+ICR_MLT_01 = {
 	name = "Militia Divisions"
-
-	for_countries = { INC }
-
+	for_countries = { ICR }
 	division_types = { "militia" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan Dan quan tu ve %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan Dan quan tu ve %d" }
 		2 = { "Su doan Dan quan tu ve %d" }
 		3 = { "Su doan Dan quan tu ve %d" }
@@ -462,29 +327,22 @@ INC_MLT_01 =
 		8 = { "Su doan Dan quan tu ve %d" }
 		9 = { "Su doan Dan quan tu ve %d" }
 		10 = { "Su doan Dan quan tu ve %d" }
-
 	}
 }
 
-INC_MAR_01 =
-{
+ICR_MAR_01 = {
 	name = "Marine Divisions"
-
-	for_countries = { INC }
-
-
-
+	for_countries = { ICR }
 	division_types = { "marine" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan Hai quan danh bo %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan Hai quan danh bo %d" }
 		2 = { "Su doan Hai quan danh bo %d" }
 		3 = { "Su doan Hai quan danh bo %d" }
@@ -499,25 +357,20 @@ INC_MAR_01 =
 	}
 }
 
-INC_MTN_01 =
-{
+ICR_MTN_01 = {
 	name = "Mountain Divisions"
-
-	for_countries = { INC }
-
-
+	for_countries = { ICR }
 
 	division_types = { "mountaineers" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan son cuoc %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan son cuoc %d" }
 		2 = { "Su doan son cuoc %d" }
 		3 = { "Su doan son cuoc %d" }
@@ -528,29 +381,22 @@ INC_MTN_01 =
 		8 = { "Su doan son cuoc %d" }
 		9 = { "Su doan son cuoc %d" }
 		10 = { "Su doan son cuoc %d" }
-
 	}
 }
 
-INC_MTN_02 =
-{
+ICR_MTN_02 = {
 	name = "Special Force Divisions"
-
-	for_countries = { INC }
-
-
-
+	for_countries = { ICR }
 	division_types = { "mountaineers" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan son cuoc %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Su doan Dac cong %d" }
 		2 = { "Su doan Dac cong %d" }
 		3 = { "Su doan Dac cong %d" }
@@ -561,27 +407,22 @@ INC_MTN_02 =
 		8 = { "Su doan Dac cong %d" }
 		9 = { "Su doan Dac cong %d" }
 		10 = { "Su doan Dac cong %d" }
-
 	}
 }
 
-INC_PAR_01 =
-{
+ICR_PAR_01 = {
 	name = "Paratrooper Divisions"
-
-	for_countries = { INC }
-
+	for_countries = { ICR }
 	division_types = { "paratrooper" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { INC_INF_01 }
+	#link_numbering_with = { ICR_INF_01 }
 
 	fallback_name = "Su doan nhay du %d"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered =	{
 		1 = { "Su doan nhay du %d" }
 		2 = { "Su doan nhay du %d" }
 		3 = { "Su doan nhay du %d" }
@@ -592,7 +433,6 @@ INC_PAR_01 =
 		8 = { "Su doan nhay du %d" }
 		9 = { "Su doan nhay du %d" }
 		10 = { "Su doan nhay du %d" }
-
 	}
 }
 
