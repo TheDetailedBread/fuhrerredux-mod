@@ -40,6 +40,9 @@ country_event = { #Lenin Death
 				id = sovietpol.1304
 				days = 2
 			}
+			random_other_country = {
+				news_event = { id = fxnews.36 days = 1 }
+			}
 		}
 	}
 	option = {
@@ -1500,6 +1503,14 @@ country_event = {
         traits = { SOV_the_soldier }
       }
     }
+	hidden_effect = {
+		random_other_country = {
+			news_event = {
+				id = fxnews.38
+				days = 1
+			}
+		}
+	}
 		SP_NS_clear_coalition_effect = yes
 	}
 }
@@ -2952,7 +2963,11 @@ country_event = {
 				id = sovietpol.1112
 				days = 3
 				}
-			}		
+			}
+			random_other_country = {
+				id = fxnews.39
+				days = 1
+			}	
 	    }
 		option = {	
 			ai_chance = {

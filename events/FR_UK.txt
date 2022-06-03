@@ -5728,9 +5728,26 @@ country_event = {
 		trigger = {
 			has_country_flag = ENG_c_imperial
 		}
-		create_wargoal = {
-			target = ARB
-			type = annex_everything
+		if = {
+			limit = { country_exists = RAS }
+			create_wargoal = {
+				target = RAS
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = ARB }
+			create_wargoal = {
+				target = ARB
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SAU }
+			create_wargoal = {
+				target = SAU
+				type = annex_everything
+			}
 		}
     }
 	
@@ -5739,12 +5756,29 @@ country_event = {
 			has_country_flag = ENG_c_imperial
 		}
         name = "Forget diplomacy, crush them!"
+		if = {
+			limit = { country_exists = RAS }
+			declare_war_on = {
+				target = RAS
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = ARB }
+			declare_war_on = {
+				target = ARB
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SAU }
+			declare_war_on = {
+				target = ARB
+				type = annex_everything
+			}
+		}
 		ai_chance = {
 			base = 100
-		}
-		declare_war_on = {
-			target = ARB
-			type = annex_everything
 		}
     }
 }
