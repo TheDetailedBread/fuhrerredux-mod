@@ -1498,3 +1498,34 @@ JAP_south_asian_expansion = {
 		}
 	}
 }
+
+foreign_politics = {
+	JAP_seize_american_pacific_territories = {
+		icon = GFX_decision_generic_civil_support
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			base = 800
+		}
+		targets = { USA }
+		target_trigger = {
+			FROM = {
+				owns_state = 638
+				owns_state = 631
+				owns_state = 632
+				owns_state = 832
+				owns_state = 642
+				owns_state = 727
+			}
+		}
+		allowed = { original_tag = JAP }
+		available = {
+			USA_union_has_collapsed = yes
+		}
+		remove_effect = {
+			FROM = {
+				country_event = { id = jap.54 days = 2 }
+			}
+		}
+	}
+}

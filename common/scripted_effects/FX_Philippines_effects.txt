@@ -352,6 +352,9 @@ PHI_start_indochinese_revolt = {
     add_ideas = ICR_revolution
     add_ideas = PHI_filipino_advisors
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.42 days = 2 }
+      }
       every_state = {
         limit = { is_core_of = FROM }
         add_core_of = ICR
@@ -394,6 +397,9 @@ PHI_start_korean_revolt = {
     add_ideas = KOR_revolution
     add_ideas = PHI_filipino_advisors
     hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.41 days = 2 }
+      }
       set_politics = {
         ruling_party = authoritarian_democrat
         elections_allowed = no

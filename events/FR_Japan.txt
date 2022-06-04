@@ -3083,9 +3083,31 @@ country_event = {
 	}
 }
 
+country_event = { # Japan Seizes Guam
+	id = jap.54
+	title = jap.54.t
+	desc = jap.54.d
+	picture = GFX_report_event_ast_navy
+	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			JAP = {
+				transfer_state = 638
+				transfer_state = 631
+				transfer_state = 632
+				transfer_state = 832
+				transfer_state = 642
+				transfer_state = 727
+			}
+		}
+	}
 
-
+	option = { # Too bad...
+		name = jap.54.a
+		add_political_power = -50
+	}
+}
 
 
 
