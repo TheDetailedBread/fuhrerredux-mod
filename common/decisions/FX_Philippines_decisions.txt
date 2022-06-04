@@ -550,6 +550,96 @@ PHI_anti_colonialist_crusade_cat = {
 }
 
 foreign_politics = {
+  PHI_guam_issue = {
+    icon = GFX_decision_generic_ignite_civil_war
+    is_good = no
+    selectable_mission = no
+    days_mission_timeout = 240
+    allowed = {
+      OR = {
+        tag = USA
+        tag = ENG
+        tag = JAP
+      }
+    }
+    available = {
+      any_controlled_state = {
+        OR = {
+          is_core_of = PHI
+          state = 638
+        }
+      }
+    }
+    activation = {
+      has_war_with = PHI
+      has_global_flag = filipino_occupied_guam
+      NOT = { has_global_flag = guam_whitepeace }
+    }
+    complete_effect = {
+      increase_ruling_party_popularity_by_15 = yes
+    }
+    timeout_effect = {
+      every_enemy_country = {
+        limit = { 
+          OR = {
+            tag = PHI
+            is_in_faction_with = PHI
+          } 
+        }
+        white_peace = PREV
+      }
+      hidden_effect = {
+        every_other_country = {
+          limit = { is_in_faction_with = ROOT }
+          PREV = {
+            country_event = philippines.78 # whitepeace
+          }
+        }
+      }
+    }
+  }
+  PHI_take_guam_force = {
+    icon = GFX_decision_generic_naval
+    cost = 50
+    fire_only_once = yes
+    allowed = { original_tag = PHI }
+    targets = { JAP USA ENG }
+    target_trigger = {
+      FROM = {
+        owns_state = 638
+      }
+    }
+    visible = {
+      NOT = { owns_state = 638 }
+      has_country_flag = PHI_refused_guam
+    }
+    complete_effect = {
+      random_list = {
+        50 = { country_event = { id = philippines.85 days = 2 } }
+        50 = { country_event = { id = philippines.86 days = 2 } }
+      }
+    } 
+  }
+  PHI_take_guam = {
+    icon = GFX_decision_infiltrate_state
+    cost = 50
+    fire_only_once = yes
+    allowed = { original_tag = PHI }
+    targets = { JAP USA ENG }
+    target_trigger = {
+      FROM = {
+        owns_state = 638
+      }
+    }
+    visible = {
+      NOT = { owns_state = 638 }
+    }
+    complete_effect = {
+      FROM = {
+        country_event = { id = philippines.82 days = 2 }
+      }
+    }
+  }
   PHI_invite_siam_dec = {
     icon = GFX_decision_generic_civil_support
     days_remove = 7

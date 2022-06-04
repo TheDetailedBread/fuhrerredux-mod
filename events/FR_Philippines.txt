@@ -309,7 +309,7 @@ country_event = { # Roxas Advocates for Early Elections
   option = { # That's absurd!
     name = philippines.14.a
     hidden_effect = {
-      country_event = { id = philippines.15 days = 8 }
+      country_event = { id = philippines.15 days = 2 }
     }
   }
 }
@@ -324,7 +324,7 @@ country_event = { # Aguinaldo Supports Early Elections
   option = { # Just try and try Miong...
     name = philippines.15.a
     hidden_effect = {
-      country_event = { id = philippines.16 days = 14 }
+      country_event = { id = philippines.16 days = 4 }
     }
   }
 }
@@ -354,7 +354,7 @@ country_event = { # Government Response
   option = { # Now we wait
     name = philippines.17.a
     hidden_effect = {
-      country_event = { id = philippines.18 days = 12 }
+      country_event = { id = philippines.18 days = 2 }
     }
   }
 }
@@ -676,6 +676,7 @@ country_event = { # Elections of 1937
       PHI_Jose_Zulueta_sec_mli
     }
     hidden_effect = {
+      add_stability = 0.15
       random_other_country = {
         news_event = { id = fxnews.2 days = 2 }
       }
@@ -699,6 +700,7 @@ country_event = { # Elections of 1937
       PHI_Basilio_J_Valdez_sec_sco
     }
     hidden_effect = {
+      add_stability = 0.15
       random_other_country = {
         news_event = { id = fxnews.3 days = 2 }
       }
@@ -722,6 +724,7 @@ country_event = { # Elections of 1937
       PHI_Benigno_Aquino_Sr_sec_ade
     }
     hidden_effect = {
+      add_stability = 0.15
       random_other_country = {
         news_event = { id = fxnews.4 days = 2 }
       }
@@ -744,6 +747,7 @@ country_event = { # Elections of 1937
       PHI_Jose_G_Lukban_sec_val
     }
     hidden_effect = {
+      add_stability = 0.15
       random_other_country = {
         news_event = { id = fxnews.5 days = 2 }
       }
@@ -1219,20 +1223,21 @@ country_event = { # Aguinaldo Retires from Politics
 }
 
 country_event = { # 1941 Presidential Elections
-  id = philippines.57
-  title = philippines.57.t
+  id = philippines.56
+  title = philippines.56.t
   desc = {
-    text = philippines.57.d
+    text = philippines.56.d
     trigger = {
       NOT = { has_government = market_liberal }
     }
   }
   desc = {
-    text = philippines.57.d.1
+    text = philippines.56.d.1
     trigger = {
       has_government = market_liberal
     }
   }
+  picture = GFX_report_event_election_vote
   is_triggered_only = yes
 
   trigger = {
@@ -1243,7 +1248,7 @@ country_event = { # 1941 Presidential Elections
   }
 
   option = { # Sergio Osmena
-    name = philippines.57.a
+    name = philippines.56.a
     if = {
       limit = { 
         NOT = { has_country_flag = PHI_quezon_in_the_usa }
@@ -1279,7 +1284,7 @@ country_event = { # 1941 Presidential Elections
   }
 
   option = { # Manuel A. Roxas
-    name = philippines.57.b
+    name = philippines.56.b
     set_politics = {
       ruling_party = market_liberal
       elections_allowed = yes
@@ -1298,6 +1303,365 @@ country_event = { # 1941 Presidential Elections
   }
 }
 
+country_event = { # 1945 Presidential Elections
+  id = philippines.57
+  title = philippines.57.t
+  desc = {
+    text = philippines.57.d
+    trigger = {
+      NOT = { has_government = market_liberal }
+    }
+  }
+  desc = {
+    text = philippines.57.d.1
+    trigger = {
+      has_government = market_liberal
+    }
+  }
+  picture = GFX_report_event_election_vote
+  is_triggered_only = yes
+
+  trigger = {
+    tag = PHI
+    date > 1945.1.1
+    date < 1946.1.1
+    NOT = { has_country_flag = PHI_has_1945_elections }
+  }
+
+  option = { # Sergio Osmena
+    name = philippines.57.a
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Sergio_P_Osmena_hog_sco
+      PHI_Manuel_Quadrino_for_sco
+      PHI_Andres_Soriano_eco_sco
+      PHI_Jose_Yulo_sec_sco
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1945_elections
+    }
+  }
+
+  option = { # Elpidio Quirino
+    name = philippines.57.b
+    set_politics = {
+      ruling_party = social_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Elpidio_Quirino_hog_sli
+      PHI_Joaquin_Elizalde_for_sli
+      PHI_Antonio_de_las_Alas_eco_sli
+      PHI_Alberto_Ramos_sec_sli
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1945_elections
+    }
+  }
+
+  option = { # Juan Sumulong
+    name = philippines.57.c
+    set_politics = {
+      ruling_party = social_democrat
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Juan_Sumulong_hog_sde
+      PHI_Rafael_Liwanag_for_sde
+      PHI_Carlos_P_Garcia_eco_sde
+      PHI_Pardo_de_Tavera_sec_sde
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1945_elections
+    }
+  }
+}
+
+country_event = { # 1949 Presidential Elections
+  id = philippines.58
+  title = philippines.58.t
+  desc = philippines.58.d
+  picture = GFX_report_event_election_vote
+  is_triggered_only = yes
+
+  trigger = {
+    tag = PHI
+    date > 1949.1.1
+    date < 1950.1.1
+    NOT = { has_country_flag = PHI_has_1949_elections }
+  }
+
+  option = { # Eulogio Rodriguez Sr
+    name = philippines.58.a
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Eulogio_Rodriguez_Sr_hog_sco
+      PHI_Manuel_Quadrino_for_sco
+      PHI_Andres_Soriano_eco_sco
+      PHI_Jose_Yulo_sec_sco
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1949_elections
+      remove_country_leader_role = {
+        character = PHI_Sergio_P_Osmena
+        ideology = social_conservative_subtype
+      }
+      add_country_leader_role = {
+        character = PHI_Eulogio_Rodriguez_Sr
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = { }
+        }
+      }
+    }
+  }
+
+  option = { # Elpidio Quirino
+    name = philippines.58.b
+    set_politics = {
+      ruling_party = social_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Elpidio_Quirino_hog_sli
+      PHI_Joaquin_Elizalde_for_sli
+      PHI_Antonio_de_las_Alas_eco_sli
+      PHI_Alberto_Ramos_sec_sli
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1949_elections
+    }
+  }
+
+  option = { # Claro M. Recto
+    name = philippines.58.c
+    set_politics = {
+      ruling_party = social_democrat
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Claro_M_Recto_hog_sde
+      PHI_Rafael_Liwanag_for_sde
+      PHI_Carlos_P_Garcia_eco_sde
+      PHI_Pardo_de_Tavera_sec_sde
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1949_elections
+      remove_country_leader_role = {
+        character = PHI_Juan_Sumulong
+        ideology = social_democrat_subtype
+      }
+      add_country_leader_role = {
+        character = PHI_Claro_M_Recto
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = { }
+        }
+      }
+    }
+  }
+}
+
+country_event = { # 1953 Presidential Elections
+  id = philippines.59
+  title = philippines.59.t
+  desc = philippines.59.d
+  picture = GFX_report_event_election_vote
+  is_triggered_only = yes
+
+  trigger = {
+    tag = PHI
+    date > 1953.1.1
+    date < 1954.1.1
+    NOT = { has_country_flag = PHI_has_1953_elections }
+  }
+
+  option = { # Eulogio Rodriguez Sr
+    name = philippines.59.a
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Eulogio_Rodriguez_Sr_hog_sco
+      PHI_Manuel_Quadrino_for_sco
+      PHI_Andres_Soriano_eco_sco
+      PHI_Jose_Yulo_sec_sco
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1953_elections
+    }
+  }
+
+  option = { # J. Antonio Araneta
+    name = philippines.59.b
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_J_Antonio_Araneta_hog_mli
+      PHI_Quentin_Paredes_for_mli
+      PHI_Ramon_Magsaysay_eco_mli
+      PHI_Jose_Zulueta_sec_mli
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1953_elections
+      remove_country_leader_role = {
+        character = PHI_Manuel_Roxas
+        ideology = market_liberal_subtype
+      }
+      add_country_leader_role = {
+        character = PHI_J_Antonio_Araneta
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = { }
+        }
+      }
+    }
+  }
+
+  option = { # Claro M. Recto
+    name = philippines.59.c
+    set_politics = {
+      ruling_party = social_democrat
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Claro_M_Recto_hog_sde
+      PHI_Rafael_Liwanag_for_sde
+      PHI_Carlos_P_Garcia_eco_sde
+      PHI_Pardo_de_Tavera_sec_sde
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1953_elections
+    }
+  }
+}
+
+country_event = { # 1953 Presidential Elections
+  id = philippines.59
+  title = philippines.59.t
+  desc = philippines.59.d
+  picture = GFX_report_event_election_vote
+  is_triggered_only = yes
+
+  trigger = {
+    tag = PHI
+    date > 1953.1.1
+    date < 1954.1.1
+    NOT = { has_country_flag = PHI_has_1953_elections }
+  }
+
+  option = { # Camilio Osias
+    name = philippines.59.a
+    set_politics = {
+      ruling_party = social_conservative
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Camilio_Osias_hog_sco
+      PHI_Manuel_Quadrino_for_sco
+      PHI_Andres_Soriano_eco_sco
+      PHI_Jose_Yulo_sec_sco
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1953_elections
+      remove_country_leader_role = {
+        character = PHI_Eulogio_Rodriguez_Sr
+        ideology = social_conservative_subtype
+      }
+      add_country_leader_role = {
+        character = PHI_Camilio_Osias
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = { }
+        }
+      }
+    }
+  }
+
+  option = { # J. Antonio Araneta
+    name = philippines.60.b
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_J_Antonio_Araneta_hog_mli
+      PHI_Quentin_Paredes_for_mli
+      PHI_Ramon_Magsaysay_eco_mli
+      PHI_Jose_Zulueta_sec_mli
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1957_elections
+    }
+  }
+
+  option = { # Lope K. Santos
+    name = philippines.60.c
+    set_politics = {
+      ruling_party = social_democrat
+      elections_allowed = yes
+    }
+    increase_ruling_party_popularity_by_10 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Claro_M_Recto_hog_sde
+      PHI_Rafael_Liwanag_for_sde
+      PHI_Carlos_P_Garcia_eco_sde
+      PHI_Pardo_de_Tavera_sec_sde
+    }
+    hidden_effect = {
+      set_country_flag = PHI_has_1957_elections
+      remove_country_leader_role = {
+        character = PHI_Claro_M_Recto
+        ideology = social_democrat_subtype
+      }
+      add_country_leader_role = {
+        character = PHI_Lope_K_Santos
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = { }
+        }
+      }
+    }
+  }
+}
+
 country_event = { # Philippine Entry to the Entente
   id = philippines.61
   title = philippines.61.t
@@ -1312,6 +1676,11 @@ country_event = { # Philippine Entry to the Entente
     }
     FROM = {
       country_event = { id = philippines.62 days = 2 }
+    }
+    hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.7 days = 2 }
+      }
     }
   }
   option = { # Refuse
@@ -1432,6 +1801,11 @@ country_event = { # Philippines Proposes Alliance
     create_faction = PHI_JAP_faction
     FROM = {
       country_event = { id = philippines.68 days = 2 }
+    }
+    hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.40 days = 2 }
+      }
     }
   }
   option = { # Refuse
@@ -1795,5 +2169,135 @@ country_event = { # ENG/FRA Refuses Control
 
   option = { # Shame...
     name = philippines.81.a
+  }
+}
+
+country_event = { # Philippines Wants Guam
+  id = philippines.82
+  title = philippines.82.t
+  desc = philippines.82.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Accept
+    name = philippines.82.a
+    ai_chance = {
+      base = 40
+    }
+    FROM = {
+      country_event = { id = philippines.83 days = 2 }
+    }
+  }
+  option = { # Refuse
+    name = philippines.82.b
+    ai_chance = {
+      base = 20
+    }
+    FROM = {
+      country_event = { id = philippines.84 days = 2 }
+    }
+  }
+}
+
+country_event = { # Guam owner accepts
+  id = philippines.83
+  title = philippines.83.t
+  desc = philippines.83.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Great!
+    name = philippines.83.a
+    transfer_state = 638
+  }
+}
+
+country_event = { # Guam owner refuses
+  id = philippines.84
+  title = philippines.84.t
+  desc = philippines.84.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Extradite their ambassador!
+    name = philippines.84.a
+    FROM = {
+      add_opinion_modifier = {
+        modifier = ITA_outraged
+        target = ROOT
+      }
+    }
+  }
+  option = { # We will take it by force!
+    name = philippines.84.b
+    unlock_decision_tooltip = PHI_take_guam_force
+    set_country_flag = PHI_refused_guam
+  }
+}
+
+country_event = { # Guam Successfully Occupied
+  id = philippines.85
+  title = philippines.85.t
+  desc = philippines.85.d
+  picture = GFX_report_event_PHI_scouts_2
+  is_triggered_only = yes
+
+  immediate = {
+    638 = {
+      OWNER = {
+        country_event = { id = philippines.87 days = 2 }
+      }
+    }
+  }
+
+  option = { # Now we wait.
+    name = philippines.85.a
+    transfer_state = 638
+  }
+}
+
+country_event = { # Guam Failure Occupation
+  id = philippines.86
+  title = philippines.86.t
+  desc = philippines.86.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+
+  option = { # Now we wait.
+    name = philippines.86.a
+    add_war_support = -0.025
+  }
+}
+
+country_event = { # Philippines Seizes Guam!
+  id = philippines.87
+  title = philippines.87.t
+  desc = philippines.87.d
+  picture = GFX_report_event_PHI_scouts_2
+  is_triggered_only = yes
+
+  option = { # Now we wait.
+    name = philippines.87.a
+    declare_war_on = {
+      target = FROM
+      type = annex_everything
+    }
+    set_global_flag = filipino_occupied_guam
+  }
+  option = { # Back down
+    name = philippines.87.b
+  }
+}
+
+country_event = { # Bountiful Harvest this Year
+  id = philippines.88
+  title = philippines.88.t
+  desc = philippines.88.d
+  picture = GFX_report_event_PHI_assembly
+  is_triggered_only = yes
+
+  option = { # Let's go eat!
+    name = philippines.88.a
+    add_stability = 0.05
   }
 }
