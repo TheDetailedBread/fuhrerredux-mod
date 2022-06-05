@@ -209,3 +209,33 @@ PHI_invade_east_indies = {
 		value = 200
 	}
 }
+
+PHI_build_navy = {
+	allowed = { original_tag = PHI }
+	enable = {
+		has_completed_focus = PHI_start_naval_buildup
+		has_navy_size = { size < 120 } 
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 45
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 0
+	}
+}
