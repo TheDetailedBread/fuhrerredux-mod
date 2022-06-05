@@ -67,3 +67,19 @@ defined_text = {
 		localization_key = vp_algiers
 	}
 }
+
+defined_text = {
+	name = PHIGetIntelligenceText
+	text = {
+		trigger = {
+			NOT = { has_completed_focus = PHI_create_nbi }
+		}
+		localization_key = PHI_no_nbi
+	}
+	text = {
+		trigger = {
+			has_completed_focus = PHI_create_nbi
+		}
+		localization_key = PHI_nbi
+	}
+}
