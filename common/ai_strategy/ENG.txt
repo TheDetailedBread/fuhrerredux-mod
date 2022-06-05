@@ -815,7 +815,10 @@ prepare_arabia = {
 			focus = ENG_dip_arabia
 			progress > 0.01
 		}
-		country_exists = ARB
+		OR = {
+			country_exists = ARB
+			country_exists = SAU
+		}
 		NOT = { 
 			has_completed_focus = ENG_dip_arabia 
 		}
@@ -824,9 +827,15 @@ prepare_arabia = {
 	abort = {
 		OR = {
 			NOT = { country_exists = ARB }
+			NOT = { country_exists = SAU }
 			AND = {
 				has_completed_focus = ENG_dip_arabia
-				ENG = { has_war_with = ARB }
+				ENG = {
+					OR = {
+						has_war_with = ARB
+						has_war_with = SAU
+					}
+				}
 			}
 		}
 	}
@@ -834,6 +843,41 @@ prepare_arabia = {
 	ai_strategy = {
 		type = conquer
 		id = "ARB"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SAU"
+		value = 100
+	}
+}
+
+prepare_egypt = {
+	enable = {
+		original_tag = ENG
+		OR = {
+			has_completed_focus = ENG_national_effort
+			has_completed_focus = ENG_end_austerity
+			has_completed_focus = ENG_liberate_markets
+		}
+		country_exists = EGY
+	}
+	
+	abort = {
+		OR = {
+			NOT = { country_exists = EGY }
+			EGY = { is_subject_of = ENG }
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "IRQ"
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "EGY"
 		value = 100
 	}
 }
