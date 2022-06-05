@@ -24,10 +24,8 @@ country_event = { # Independence At Last
 
   option = { # Mabuhay ang Pilipinas!
     name = philippines.1.a
-    give_military_access = USA
     drop_cosmetic_tag = yes
     USA = {
-      give_guarantee = PHI
       diplomatic_relation = { country = PHI relation = non_aggression_pact }
     }
     hidden_effect = {
@@ -678,7 +676,7 @@ country_event = { # Elections of 1937
     hidden_effect = {
       add_stability = 0.15
       random_other_country = {
-        news_event = { id = fxnews.2 days = 2 }
+        news_event = { id = fxnews.3 days = 2 }
       }
       country_event = { id = philippines.55 days = 230 }
       set_country_flag = PHI_has_1937_elections
@@ -702,7 +700,7 @@ country_event = { # Elections of 1937
     hidden_effect = {
       add_stability = 0.15
       random_other_country = {
-        news_event = { id = fxnews.3 days = 2 }
+        news_event = { id = fxnews.2 days = 2 }
       }
       country_event = { id = philippines.55 days = 230 }
       set_country_flag = PHI_has_1937_elections
@@ -728,6 +726,7 @@ country_event = { # Elections of 1937
       random_other_country = {
         news_event = { id = fxnews.4 days = 2 }
       }
+      country_event = { id = philippines.93 days = 60 }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_progressista_party_victory
     }
@@ -752,6 +751,7 @@ country_event = { # Elections of 1937
         news_event = { id = fxnews.5 days = 2 }
       }
       country_event = { id = philippines.55 days = 230 }
+      country_event = { id = philippines.93 days = 60 }
       remove_ideas = PHI_lingering_sakdalistas
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_sakdalista_party_victory
@@ -2299,5 +2299,89 @@ country_event = { # Bountiful Harvest this Year
   option = { # Let's go eat!
     name = philippines.88.a
     add_stability = 0.05
+  }
+}
+
+country_event = { # Landlords Resists the Land Reform
+  id = philippines.89
+  title = philippines.89.t
+  desc = philippines.89.d
+  picture = GFX_report_event_PHI_crowd_1
+  is_triggered_only = yes
+
+  option = { # How dare they?
+    name = philippines.89.a
+    add_stability = 0.05
+    hidden_effect = {
+      country_event = { id = philippines.90 days = 120 }
+    }
+  }
+}
+
+country_event = { # Trial of the Landlords
+  id = philippines.90
+  title = philippines.90.t
+  desc = philippines.90.d
+  picture = GFX_report_event_PHI_crowd_1
+  is_triggered_only = yes
+
+  option = { # Arrest these vultures!
+    name = philippines.90.a
+    add_stability = 0.05
+    increase_ruling_party_popularity_by_5 = yes
+  }
+}
+
+country_event = { # Socialist Symphaties in the Unions
+  id = philippines.91
+  title = philippines.91.t
+  desc = philippines.91.d
+  picture = GFX_report_event_PHI_crowd_1
+  is_triggered_only = yes
+
+  option = { # They are mere minority
+    name = philippines.91.a
+    add_popularity = {
+      ideology = libertarian_socialist
+      popularity = 0.05
+    }
+    add_popularity = {
+      ideology = social_democrat
+      popularity = 0.10
+    }
+  }
+}
+
+country_event = { # Gregorio Aglipay Has Died
+  id = philippines.92
+  title = philippines.92.t
+  desc = philippines.92.d
+  picture = GFX_report_event_PHI_aglipay
+  is_triggered_only = yes
+
+  option = { # You will be missed
+    name = philippines.92.a
+    retire_character = PHI_Gregorio_Aglipay
+  }
+}
+
+country_event = { # Status of the English Language
+  id = philippines.93
+  title = philippines.93.t
+  desc = philippines.93.d
+  picture = GFX_report_event_PHI_school
+  is_triggered_only = yes
+
+  option = { # Remove it
+    name = philippines.93.a
+    add_political_power = 100
+  }
+  option = { # Focus on our own
+    name = philippines.93.b
+    add_stability = 0.05
+  }
+  option = { # Let it be
+    name = philippines.93.c
+    increase_ruling_party_popularity_by_5 = yes 
   }
 }
