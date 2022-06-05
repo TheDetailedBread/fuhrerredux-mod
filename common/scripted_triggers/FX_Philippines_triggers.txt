@@ -1,17 +1,32 @@
 PHI_industrialization_complete = {
+  has_country_flag = PHI_has_expanded_pnr
   custom_trigger_tooltip = {
-    tooltip = PHI_industrialization_complete_tt
-    has_country_flag = PHI_has_expanded_pnr
-    327 = { # Manila 
+    tooltip = PHI_has_invested_industry_tt
+    327 = { # Manila
       has_state_flag = PHI_has_invested_industry
-      has_state_flag = PHI_has_built_new_city
     }
-    623 = { # Luzon
+    623 = { # North Luzon
       has_state_flag = PHI_has_invested_industry
-      has_state_flag = PHI_has_built_new_city
     }
     624 = { # Central Islands
       has_state_flag = PHI_has_invested_industry
+    }
+    627 = { # Mindanao
+      has_state_flag = PHI_has_invested_industry
+    }
+    1033 = { # Central Luzon
+      has_state_flag = PHI_has_invested_industry
+    }
+  }
+  custom_trigger_tooltip = {
+    tooltip = PHI_has_built_new_city_tt
+    327 = { # Manila 
+      has_state_flag = PHI_has_built_new_city
+    }
+    623 = { # Luzon
+      has_state_flag = PHI_has_built_new_city
+    }
+    624 = { # Central Islands
       has_state_flag = PHI_has_built_new_city
     }
     625 = { # Samar
@@ -21,15 +36,14 @@ PHI_industrialization_complete = {
       has_state_flag = PHI_has_built_new_city
     }
     627 = { # Mindanao
-      has_state_flag = PHI_has_invested_industry
+      
       has_state_flag = PHI_has_built_new_city
     }
     628 = { # Cebu
       has_state_flag = PHI_has_built_new_city
     }
-    1033 = {
+    1033 = { # Central Luzon
       has_state_flag = PHI_has_built_new_city
-      has_state_flag = PHI_has_invested_industry
     }
   }
 }
