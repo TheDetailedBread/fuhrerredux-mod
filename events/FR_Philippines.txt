@@ -661,6 +661,17 @@ country_event = { # Elections of 1937
 
   option = { # Liberal
     name = philippines.34.a
+    ai_chance = {
+      base = 200
+      modifier = {
+        factor = 2
+        has_country_flag = PHI_west_focus
+      }
+      modifier = {
+        factor = 2
+        has_country_flag = PHI_usa_focus
+      }
+    }
     set_politics = {
       ruling_party = market_liberal
       elections_allowed = yes
@@ -679,12 +690,24 @@ country_event = { # Elections of 1937
         news_event = { id = fxnews.3 days = 2 }
       }
       country_event = { id = philippines.55 days = 230 }
+      country_event = { id = philippines.95 days = 14 }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_liberal_party_victory
     }
   }
   option = { # Nacionalista
     name = philippines.34.b
+    ai_chance = {
+      base = 200
+      modifier = {
+        factor = 2
+        has_country_flag = PHI_west_focus
+      }
+      modifier = {
+        factor = 2
+        has_country_flag = PHI_usa_focus
+      }
+    }
     set_politics = {
       ruling_party = social_conservative
       elections_allowed = yes
@@ -703,6 +726,7 @@ country_event = { # Elections of 1937
         news_event = { id = fxnews.2 days = 2 }
       }
       country_event = { id = philippines.55 days = 230 }
+      country_event = { id = philippines.95 days = 14 }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_nacionalista_party_victory
     }
@@ -712,6 +736,13 @@ country_event = { # Elections of 1937
     set_politics = {
       ruling_party = authoritarian_democrat
       elections_allowed = yes
+    }
+    ai_chance = {
+      base = 200
+      modifier = {
+        factor = 2
+        has_country_flag = PHI_japan_focus
+      }
     }
     increase_ruling_party_popularity_by_20 = yes
     remove_every_minister = yes
@@ -727,12 +758,20 @@ country_event = { # Elections of 1937
         news_event = { id = fxnews.4 days = 2 }
       }
       country_event = { id = philippines.93 days = 60 }
+      country_event = { id = philippines.94 days = 14 }
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_progressista_party_victory
     }
   }
   option = { # Sakdalista
     name = philippines.34.e
+    ai_chance = {
+      base = 200
+      modifier = {
+        factor = 2
+        has_country_flag = PHI_japan_focus
+      }
+    }
     set_politics = {
       ruling_party = valkist
       elections_allowed = no
@@ -752,6 +791,7 @@ country_event = { # Elections of 1937
       }
       country_event = { id = philippines.55 days = 230 }
       country_event = { id = philippines.93 days = 60 }
+      country_event = { id = philippines.94 days = 14 }
       remove_ideas = PHI_lingering_sakdalistas
       set_country_flag = PHI_has_1937_elections
       set_country_flag = PHI_sakdalista_party_victory
@@ -1270,7 +1310,6 @@ country_event = { # 1941 Presidential Elections
       ruling_party = social_conservative
       elections_allowed = yes
     }
-    increase_ruling_party_popularity_by_10 = yes
     remove_every_minister = yes
     add_ideas = {
       PHI_Sergio_P_Osmena_hog_sco
@@ -1280,6 +1319,17 @@ country_event = { # 1941 Presidential Elections
     }
     hidden_effect = {
       set_country_flag = PHI_has_1941_elections
+      if = {
+        limit = { social_conservative < 0.1 }
+        increase_ruling_party_popularity_by_20 = yes
+      }
+      else_if = {
+        limit = { social_conservative < 0.2 }
+        increase_ruling_party_popularity_by_15 = yes
+      }
+      else = {
+        increase_ruling_party_popularity_by_10 = yes
+      }
     }
   }
 
@@ -1299,6 +1349,17 @@ country_event = { # 1941 Presidential Elections
     }
     hidden_effect = {
       set_country_flag = PHI_has_1941_elections
+      if = {
+        limit = { market_liberal < 0.1 }
+        increase_ruling_party_popularity_by_20 = yes
+      }
+      else_if = {
+        limit = { market_liberal < 0.2 }
+        increase_ruling_party_popularity_by_15 = yes
+      }
+      else = {
+        increase_ruling_party_popularity_by_10 = yes
+      }
     }
   }
 }
@@ -2383,5 +2444,31 @@ country_event = { # Status of the English Language
   option = { # Let it be
     name = philippines.93.c
     increase_ruling_party_popularity_by_5 = yes 
+  }
+}
+
+country_event = { # Japan Seeks Increased Diplomatic Relations
+  id = philippines.94
+  title = philippines.94.t
+  desc = philippines.94.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+  
+  option = { # That's nice of them...
+    name = philippines.94.a
+    add_political_power = 100
+  }
+}
+
+country_event = { # United States Supports New President
+  id = philippines.94
+  title = philippines.94.t
+  desc = philippines.94.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+  
+  option = { # That's nice of them...
+    name = philippines.94.a
+    add_political_power = 100
   }
 }
