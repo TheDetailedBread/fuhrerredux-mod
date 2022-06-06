@@ -27,10 +27,10 @@ ideas = {
     PHI_german_refugees = {
       allowed = { original_tag = PHI }
       modifier = {
-        consumer_goods_factor = 0.05
+        consumer_goods_factor = 0.025
         research_speed_factor = 0.15
         production_speed_buildings_factor = 0.15
-        monthly_population = 0.15
+        monthly_population = 0.45
       }
     }
     PHI_farmer_subsidies = {
@@ -107,7 +107,7 @@ ideas = {
       allowed = { original_tag = PHI }
       picture = prc_low_popular_support3
       modifier = {
-        monthly_population = 0.05
+        monthly_population = 0.25
         production_speed_buildings_factor = 0.05
         research_speed_factor = 0.05
       }
@@ -130,15 +130,14 @@ ideas = {
       allowed = { original_tag = PHI }
       available = {
         has_navy_size = {
-          size < 10
-          type = capital_ship
-          archetype = ship_hull_heavy
+          size < 150
         }
       }
-      picture = AST_oversized_fleet
+      picture = eng_preparing_the_second_front
       modifier = {
         industrial_capacity_dockyard = 0.35
-        production_speed_dockyard_factor = 0.25
+        production_speed_dockyard_factor = 0.35
+        experience_gain_navy = 0.05
       }
     }
     PHI_naval_repair_facilities = {
