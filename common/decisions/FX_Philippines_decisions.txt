@@ -1,5 +1,66 @@
 # Philippine Decisions
 # created by: dax0102
+PHI_form_confederation_cat = {
+  PHI_convince_insulindia = {
+    icon = GFX_decision_generic_political_discourse
+    cost = 100
+    fire_only_once = yes
+    ai_will_do = {
+      base = 200
+    }
+    targets = { INS }
+    target_trigger = {
+      country_exists = FROM
+    }
+    available = {
+      FROM = {
+        has_capitulated = no
+      }
+    }
+    visible = {
+      FROM = {
+        NOT = { 
+          has_war_with = ROOT
+          is_subject_of = ROOT
+        }
+      }
+    }
+    complete_effect = {
+      FROM = {
+        country_event = { id = philippines.96 days = 2 }
+      }
+    }
+  }
+  PHI_form_confederation = {
+    icon = GFX_decision_generic_form_nation
+    cost = 100
+    days_remove = 120
+    fire_only_once = yes
+    available = {
+      PHI_owns_and_controls_insulindia = yes
+      PHI_owns_and_controls_malaya = yes
+    }
+    modifier = {
+      civilian_factory_use = 5
+    }
+    remove_effect = {
+      every_owned_state = {
+        limit = { is_core_of = INS }
+        add_core_of = ROOT
+        add_claim_by = INS
+        remove_core_of = INS
+      }
+      every_owned_state = {
+        limit = { is_core_of = MAL }
+        add_core_of = ROOT
+        add_claim_by = MAL
+        remove_core_of = MAL
+      }
+      set_cosmetic_tag = PHI_CONFED
+    }
+  }
+}
+
 PHI_co_prosperity_sphere = {
   PHI_join_japan = {
     icon = GFX_decision_generic_political_discourse
