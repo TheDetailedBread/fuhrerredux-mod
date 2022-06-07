@@ -1627,22 +1627,22 @@ country_event = { # 1953 Presidential Elections
   }
 }
 
-country_event = { # 1953 Presidential Elections
-  id = philippines.59
-  title = philippines.59.t
-  desc = philippines.59.d
+country_event = { # 1957 Presidential Elections
+  id = philippines.60
+  title = philippines.60.t
+  desc = philippines.60.d
   picture = GFX_report_event_election_vote
   is_triggered_only = yes
 
   trigger = {
     tag = PHI
-    date > 1953.1.1
-    date < 1954.1.1
-    NOT = { has_country_flag = PHI_has_1953_elections }
+    date > 1957.1.1
+    date < 1958.1.1
+    NOT = { has_country_flag = PHI_has_1957_elections }
   }
 
   option = { # Camilio Osias
-    name = philippines.59.a
+    name = philippines.60.a
     set_politics = {
       ruling_party = social_conservative
       elections_allowed = yes
@@ -1665,7 +1665,7 @@ country_event = { # 1953 Presidential Elections
         character = PHI_Camilio_Osias
         promote_leader = yes
         country_leader = {
-          ideology = social_democrat_subtype
+          ideology = social_conservative_subtype
           traits = { }
         }
       }
