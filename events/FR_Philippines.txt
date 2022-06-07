@@ -2461,14 +2461,74 @@ country_event = { # Japan Seeks Increased Diplomatic Relations
 }
 
 country_event = { # United States Supports New President
-  id = philippines.94
-  title = philippines.94.t
-  desc = philippines.94.d
+  id = philippines.95
+  title = philippines.95.t
+  desc = philippines.95.d
   picture = GFX_report_event_PHI_malacanan
   is_triggered_only = yes
   
   option = { # That's nice of them...
-    name = philippines.94.a
+    name = philippines.95.a
     add_political_power = 100
+  }
+}
+
+country_event = { # PH Proposes Confederation
+  id = philippines.96
+  title = philippines.96.t
+  desc = philippines.96.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+  
+  option = { # Together we are strong
+    name = philippines.96.a
+    FROM = {
+      country_event = { id = philippines.97 days = 2 }
+    }
+  }
+  option = { # We are fine by our own
+    name = philippines.96.b
+    FROM = {
+      country_event = { id = philippines.98 days = 2 }
+    }
+  }
+}
+
+country_event = { # From Accepts
+  id = philippines.97
+  title = philippines.97.t
+  desc = philippines.97.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+  
+  option = { # Together we are strong
+    name = philippines.97.a
+    annex_country = {
+      target = FROM
+      transfer_troops = yes
+    }
+  }
+}
+
+country_event = { # From Refuses
+  id = philippines.98
+  title = philippines.98.t
+  desc = philippines.98.d
+  picture = GFX_report_event_PHI_malacanan
+  is_triggered_only = yes
+  
+  option = { # Fine
+    name = philippines.98.a
+  }
+  option = { # War
+    name = philippines.98.b
+    if = {
+      limit = { is_in_faction_with = FROM }
+      remove_from_faction = FROM
+    }
+    declare_war_on = {
+      target = FROM
+      type = annex_everything
+    }
   }
 }
