@@ -1095,3 +1095,61 @@ country_event = {
 		}
 	}
 }
+
+country_event = { # Join PH faction
+	id = insulindia.112
+	immediate = {log = "[GetDateText]: [Root.GetName]: event insulindia.111"}
+	title = insulindia.112.t
+	desc = insulindia.112.d
+	picture = GFX_report_event_PHI_malacanan
+	is_triggered_only = yes
+	
+	option = {
+		name = insulindia.112.a
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			country_event = { id = insulindia.113 days = 1 }
+		}
+	}
+	option = {
+		name = insulindia.112.b
+		ai_chance = {
+			base = 20
+		}
+		FROM = {
+			country_event = { id = insulindia.114 days = 1 }
+		}
+	}
+}
+
+country_event = { # Accept PH faction
+	id = insulindia.113
+	immediate = {log = "[GetDateText]: [Root.GetName]: event insulindia.111"}
+	title = insulindia.113.t
+	desc = insulindia.113.d
+	picture = GFX_report_event_PHI_malacanan
+	is_triggered_only = yes
+	
+	option = {
+		name = insulindia.113.a
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+country_event = { # Refused PH faction
+	id = insulindia.114
+	immediate = {log = "[GetDateText]: [Root.GetName]: event insulindia.111"}
+	title = insulindia.114.t
+	desc = insulindia.114.d
+	picture = GFX_report_event_PHI_malacanan
+	is_triggered_only = yes
+	
+	option = {
+		name = insulindia.114.a
+		add_political_power = -100
+	}
+}

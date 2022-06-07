@@ -1833,7 +1833,7 @@
 				add_political_power = -30
 				add_stability = -0.02
 			}
-			VIN = {
+			FIC = {
 				add_political_power = -30
 				add_stability = -0.02
 			}
@@ -1869,7 +1869,9 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus INS_anti_colonialist_alliance"
 			add_political_power = 30
-			create_faction = INS_insulindian_faction
+			#create_faction = INS_insulindian_faction
+			unlock_decision_tooltip = INS_join_co_prosperity_sphere
+			unlock_decision_tooltip = INS_create_new_alliance
 		}
 
 	}
