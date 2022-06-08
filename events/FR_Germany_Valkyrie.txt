@@ -4605,3 +4605,40 @@ country_event = { # Ukraine - refuses German alliance
 		set_country_flag = UKR_fall_weiss
 	}
 }
+
+country_event = { # Fate of the TST Officers
+	id = valkyrie.10016
+	title = valkyrie.10016.t
+	desc = valkyrie.10016.d
+	picture = GFX_report_event_GER_dressler_poster
+	is_triggered_only = yes
+
+	option = {
+		name = valkyrie.10016.a
+		add_political_power = 100
+		retire_character = GER_Eduard_Deisenhofer
+		retire_character = GER_Felix_Steiner
+		retire_character = GER_Gottlob_Berger
+		retire_character = GER_Sepp_Dietrich
+		retire_character = GER_Wilhelm_Bittrich
+		retire_character = GER_Willy_Rohr
+		retire_character = GER_Otto_Kumm
+		retire_character = GER_Paul_Hausser
+		retire_character = GER_Max_Otto_von_Stierlitz
+		retire_character = GER_Artur_Mahraun
+	}
+	option = {
+		name = valkyrie.10016.b
+		add_stability = 0.05
+		retire_character = GER_Eduard_Deisenhofer
+		retire_character = GER_Felix_Steiner
+		retire_character = GER_Gottlob_Berger
+		retire_character = GER_Sepp_Dietrich
+		retire_character = GER_Wilhelm_Bittrich
+		retire_character = GER_Willy_Rohr
+		retire_character = GER_Otto_Kumm
+		retire_character = GER_Paul_Hausser
+		retire_character = GER_Max_Otto_von_Stierlitz
+		retire_character = GER_Artur_Mahraun
+	}
+}
