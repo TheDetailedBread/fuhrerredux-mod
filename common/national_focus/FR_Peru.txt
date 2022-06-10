@@ -1217,7 +1217,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_army_direction
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_PRU_army
 		prerequisite = { focus = PRU_peru_in_1936 }
  		ai_will_do = { factor = 10 } 
 
@@ -1409,7 +1409,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_what_we_will_sacrifice
-		icon = GFX_goal_conscription
+		icon = GFX_goal_generic_drafted_army
 		prerequisite = { focus = PRU_mechanized_masses focus = PRU_bring_in_the_tanks }
  		ai_will_do = { factor = 10 } 
  		x =18
@@ -1471,7 +1471,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_further_renovations
-		icon = GFX_goal_RUS_Markov_plan
+		icon = GFX_goal_generic_army_tanks3
 		prerequisite = { focus = PRU_a_new_structure }
 		prerequisite = { focus = PRU_extend_our_reach focus = PRU_reinforce_our_men }
  		ai_will_do = { factor = 10 } 
@@ -1494,7 +1494,7 @@ focus_tree = {
 	focus = {
 		id = PRU_building_up_bases
 		prerequisite = { focus = PRU_marine_strategy }
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_generic_naval_base
 		x = 35
 		y = 2
 		cost = 10
@@ -1538,7 +1538,7 @@ focus_tree = {
 
 focus = {
 		id = PRU_marine_strategy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_PRU_navy
 		x = 35
 		y = 1
 		cost = 10
@@ -1685,7 +1685,7 @@ focus = {
 
 focus = {
 		id = PRU_lessons_from_our_war_with_colombia
-		icon = GFX_goal_civil_war_lessons
+		icon = GFX_goal_PRU_airforce
 		x = 41
 		y = 1
 		cost = 10
@@ -1800,7 +1800,7 @@ focus = {
 
 focus = {
 		id = PRU_seashore_strike
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_goal_generic_air_naval_bomber2_new
 		x = 43
 		y = 5
 		cost = 10
@@ -1820,7 +1820,7 @@ focus = {
 
 focus = {
 		id = PRU_fighter_squadrons
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_goal_generic_air_fighter2_new
 		x = 39
 		y = 5
 		cost = 10
@@ -1861,7 +1861,7 @@ focus = {
 
 focus = {
 		id = PRU_dominating_the_winds
-		icon = GFX_goal_continuous_air_production
+		icon = GFX_goal_generic_airports
 		x = 41
 		y = 7
 		cost = 10

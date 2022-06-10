@@ -2117,9 +2117,7 @@ focus_tree = {
     cost = 6
     will_lead_to_war_with = AST
     available = {
-      AST = {
-        exists = yes
-      }
+      country_exists = AST
     }
     bypass = {
       OR = {
@@ -2130,6 +2128,7 @@ focus_tree = {
           has_war_with = AST
         }
       }
+      has_country_flag = PHI_whitepeaced_with_britain
     }
     prerequisite = {
       focus = PHI_second_insulindian_revolution

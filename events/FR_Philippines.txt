@@ -1779,10 +1779,25 @@ country_event = { # France Refuses Philippines to the Entente
 
   option = { # Great!
     name = philippines.63.a
-    uncomplete_national_focus = {
-      focus = PHI_look_to_the_west
-      uncomplete_children = yes
-      refund_political_power = no
+    if = {
+      limit = { 
+        FROM = { tag = FRA } 
+      }
+      uncomplete_national_focus = {
+        focus = PHI_look_to_the_west
+        uncomplete_children = yes
+        refund_political_power = no
+      }
+    }
+    else_if = {
+      limit = {
+        FROM = { tag = JAP }
+      }
+      uncomplete_national_focus = {
+        focus = PHI_pivot_to_japan
+        uncomplete_children = yes
+        refund_political_power = no
+      }
     }
   }
 }
@@ -2071,6 +2086,9 @@ country_event = { # Singapore Falls
       white_peace = PREV
     }
     hidden_effect = {
+      PHI = {
+        set_country_flag = PHI_whitepeaced_with_britain
+      }
       every_other_country = {
         limit = { is_in_faction_with = ROOT }
         PREV = {
