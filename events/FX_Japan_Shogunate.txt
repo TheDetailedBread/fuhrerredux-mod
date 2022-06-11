@@ -31,15 +31,104 @@ country_event = { #Resignation of Prince Fumimaro
 		custom_effect_tooltip = "Prince Kuniyuki's appointed President of House of Peers"
 	}
 }
-country_event = { #Counter Coup 
+country_event = { #Preparation of Anti-Militarist 
 	id = jap_shogun.3
 	title = jap_shogun.3.t 
 	desc = jap_shogun.3.d 
 	
 	is_triggered_only = yes 
 	
-	option = { #Tokugawa Rises
+	option = {
 		name = jap_shogun.3.a 
+		add_popularity = {
+			ideology = authoritarian_democrat 
+			popularity = 0.03 
+		}
+		add_stability = -0.05
+	}
+}
+#####################
+#Constitution Crisis#
+#####################
+country_event = { #House of Peers' President and Prime Minister 
+	id = jap_shogun.4
+	title = jap_shogun.4.t 
+	desc = jap_shogun.4.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.4.a 
+		add_popularity = {
+			ideology = authoritarian_democrat 
+			popularity = 0.05
+		}
+	}
+}
+#######Army Coup IRAA#######
+country_event = { #Demand the Election by Genro / Emperor
+	id = jap_shogun.5
+	title = jap_shogun.5.t 
+	desc = jap_shogun.5.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.5.a 
+		add_political_power = -50
+		add_stability = -0.1
+	}
+}
+country_event = { #Prince Iesato Prowoke the War 
+	id = jap_shogun.6
+	title = jap_shogun.6.t 
+	desc = jap_shogun.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		#JAP_set_civil_war = yes 
+	}
+}
+#######Navy Coup IRAA#######
+country_event = { #Prince Kuniyuki and Admiral
+	id = jap_shogun.7
+	title = jap_shogun.7.t 
+	desc = jap_shogun.7.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.7.a 
+		
+	}
+}
+country_event = { #National Government of Royalist Front
+	id = jap_shogun.8
+	title = jap_shogun.8.t 
+	desc = jap_shogun.8.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.8.a 
+		#JAP_set_national_government_cabinet = yes 
+	}
+	option = {
+		name = jap_shogun.8.b 
+		#JAP_shogunate_take_over = yes 
+	}
+}
+
+country_event = { #Counter Coup 
+	id = jap_shogun.x
+	title = jap_shogun.x.t 
+	desc = jap_shogun.x.d 
+	
+	is_triggered_only = yes 
+	
+	option = { #Tokugawa Rises
+		name = jap_shogun.x.a 
 		JAP = {
 			set_cosmetic_tag = JAP_Shogunate 
 			set_politics = {
