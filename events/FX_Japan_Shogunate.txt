@@ -1,0 +1,71 @@
+# Japanese Shogunate Events
+# Contributed by Kaiczer
+
+add_namespace = jap_shogun
+
+country_event = { #Response the Japanese Martial Law in Korea
+	id = jap_shogun.1
+	title = jap_shogun.1.t
+	desc = jap_shogun.1.d 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = jap_shogun.1.a 
+		add_stability = -0.02
+	}
+}
+country_event = { #Resignation of Prince Fumimaro
+	id = jap_shogun.2
+	title = jap_shogun.2.t
+	desc = jap_shogun.2.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.2.a 
+		custom_effect_tooltip = "Prince Iesato's reappointed President of House of Peers"
+	}
+	option = {
+		name = jap_shogun.2.b
+		custom_effect_tooltip = "Prince Kuniyuki's appointed President of House of Peers"
+	}
+}
+country_event = { #Counter Coup 
+	id = jap_shogun.3
+	title = jap_shogun.3.t 
+	desc = jap_shogun.3.d 
+	
+	is_triggered_only = yes 
+	
+	option = { #Tokugawa Rises
+		name = jap_shogun.3.a 
+		JAP = {
+			set_cosmetic_tag = JAP_Shogunate 
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.4
+			}
+			set_party_name = { 
+				ideology = authoritarian_democrat 
+				long_name = JAP_authoritarian_democrat_party_shogun_long 
+				name = JAP_authoritarian_democrat_party_shogun 
+			}
+			set_party_name = { 
+				ideology = paternal_autocrat 
+				long_name = JAP_paternal_autocrat_party_shogun_long 
+				name = JAP_paternal_autocrat_party_shogun 
+			}
+			set_party_name = { 
+				ideology = national_populist 
+				long_name = JAP_national_populist_party_long_shogun 
+				name = JAP_national_populist_party_shogun 
+			}
+		}
+		
+	}
+}
