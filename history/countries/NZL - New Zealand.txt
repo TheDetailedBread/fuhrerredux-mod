@@ -62,15 +62,8 @@ add_ideas = {
 set_stability = 0.50
 set_war_support = 0.50
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_cosmetic_tag = NZL_ENG
-	else = {
-	set_cosmetic_tag = NZL_ENG
-    }
-}
+set_cosmetic_tag = NZL_ENG
 set_politics = {
-
 	ruling_party = social_democrat
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -105,6 +98,13 @@ create_equipment_variant = {
 }
 
 recruit_character = NZL_Lord_Monckton_Arundell
+recruit_character = NZL_Alexander_Galbraith
+recruit_character = NZL_Michael_Joseph_Savage
+recruit_character = NZL_Eruera_Tirikatene
+recruit_character = NZL_Albert_Ernest_Davy
+recruit_character = NZL_Adam_Hamilton
+recruit_character = NZL_Sidney_Holland
+recruit_character = NZL_Robert_Begg
 recruit_character = NZL_John_Ormond
 recruit_character = NZL_Bernard_Freyberg
 recruit_character = NZL_Robert_Row

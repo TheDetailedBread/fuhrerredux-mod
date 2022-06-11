@@ -2550,3 +2550,77 @@ country_event = { # From Refuses
     }
   }
 }
+
+country_event = { # Capitulation of Australia
+  id = philippines.99
+  title = philippines.98.t
+  desc = philippines.98.d
+  picture = GFX_report_event_PHI_scouts_1
+  is_triggered_only = yes
+  
+  option = { # Sue for peace
+    name = philippines.99.a
+    ai_chance = {
+      base = 40
+      modifier = {
+        factor = 10
+        has_war_with = GER
+      }
+      modifier = {
+        factor = 10
+        has_war_with = SOV
+      }
+      modifier = {
+        factor = 10
+        has_war_with = FRA
+      }
+    }
+    add_war_support = -0.1
+    decrease_ruling_party_popularity_by_10 = yes
+    hidden_effect = {
+      every_enemy_country = {
+        limit = { 
+          OR = {
+            tag = PHI
+            is_in_faction_with = PHI
+          } 
+        }
+        white_peace = PREV
+      }
+      every_other_country = {
+        limit = { is_in_faction_with = ROOT }
+        PREV = {
+          country_event = philippines.78
+        }
+      }
+    }
+    custom_effect_tooltip = PHI_annex_australia_tt
+    FROM = {
+      country_event = { id = philippines.100 days = 1 }
+    }
+  }
+  option = { # No peace
+    name = philippines.99.b
+    add_political_power = -100
+  }
+}
+
+country_event = { # Britain Sues for Peace
+  id = philippines.100
+  title = philippines.100.t
+  desc = philippines.100.d
+  picture = GFX_report_event_PHI_scouts_2
+  is_triggered_only = yes
+
+  option = { # Excellent...
+    name = philippines.100.a
+    annex_country = {
+      target = AST
+      transfer_troops = no
+    }
+    annex_country = {
+      target = NZL
+      transfer_troops = no
+    }
+  }
+}
