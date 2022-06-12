@@ -257,6 +257,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_RUS_CONQ }
   }
   else_if = {
+    limit = { can_release_russian_puppet = yes }
+    ROOT = { activate_mission = annexation_VRS_CONQ }
+  }
+  else_if = {
     limit = { can_release_saarland = yes }
     ROOT = { activate_mission = annexation_SAARLAND_CONQ }
   }
@@ -296,7 +300,6 @@ check_potential_annexations_europe = {
     limit = { can_release_shkoder = yes }
     ROOT = { activate_mission = annexation_SHKODER_CONQ }
   }
-  
   else_if = {
     limit = { can_release_soviet = yes }
     ROOT = { activate_mission = annexation_SOV_CONQ }
