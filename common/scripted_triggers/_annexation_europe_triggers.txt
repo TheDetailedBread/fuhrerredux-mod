@@ -839,6 +839,16 @@ can_release_russia = {
   }
 }
 
+#Russian Puppet - annexation_VRS_CONQ
+can_release_russian_puppet = {
+  state = 219
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    is_russian_tag = no
+    has_global_flag = soviets_retreats_in_urals
+  }
+}
+
 #Saarland - annexation_SAARLAND_CONQ
 can_release_saarland = {
   state = 981
