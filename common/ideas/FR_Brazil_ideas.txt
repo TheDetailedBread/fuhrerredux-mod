@@ -1,15 +1,9 @@
 ideas = {
-##############
-# Country ideas (Peru) 
-##############
 	country = {
 		BRA_workerstrike = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_workerstrike"}
-			allowed = {
-			original_tag = "BRA"
-			}
-
-			picture = generic_industrial_concern_1
+			allowed = { original_tag = BRA }
+			picture = NOR_labour_conflicts
 			modifier = {
 				production_speed_industrial_complex_factor = -0.10
 				production_speed_arms_factory_factor = -0.10	
@@ -17,23 +11,17 @@ ideas = {
 		}
 		BRA_political_instability = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_political_instability"}
-			allowed = {
-			original_tag = "BRA"
-			}
-
+			allowed = { original_tag = BRA }
 			picture = generic_disjointed_gov
 		}
 		BRA_black_wednesday = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_black_wednesday"}
-			allowed = {
-			original_tag = "BRA"
-			}
-
+			allowed = { original_tag = BRA }
 			picture = great_depression
 			modifier = {
-                production_factory_max_efficiency_factor = -0.15
-                industrial_capacity_factory = -0.10
-                production_speed_buildings_factor = -0.15		
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.15		
 			}
 		}
 		BRA_american_advisors = {
