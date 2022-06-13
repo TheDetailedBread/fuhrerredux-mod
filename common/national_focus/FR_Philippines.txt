@@ -44,6 +44,7 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = PHI_elections_concluded_tt
     }
+    search_filters = { FOCUS_FILTER_POLITICAL }
   }
 
   # Partido Liberal
@@ -69,6 +70,7 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = PHI_liberal_party_elected_tt
     }
+    search_filters = { FOCUS_FILTER_POLITICAL }
   }
 
   # Reform the Justice System
@@ -87,6 +89,10 @@ focus_tree = {
     completion_reward = {
       add_ideas = PHI_judicial_reform_idea
       increase_ruling_party_popularity_by_10 = yes
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
     }
   }
 
@@ -108,6 +114,10 @@ focus_tree = {
       hidden_effect = {
         country_event = { id = philippines.52 days = 30 }
       }
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -131,6 +141,9 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Filipino Broadcasting Corporation
@@ -148,6 +161,9 @@ focus_tree = {
     relative_position_id = PHI_private_public_partnerships 
     completion_reward = {
       add_ideas = PHI_fbc_propaganda
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -182,6 +198,10 @@ focus_tree = {
         country_event = { id = philippines.53 days = 7 }
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+    }
   }
 
   # Wage Floors
@@ -199,6 +219,10 @@ focus_tree = {
     relative_position_id = PHI_further_agricultural_modernization
     completion_reward = {
       add_ideas = PHI_minimum_wage_idea
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -222,6 +246,9 @@ focus_tree = {
         bonus = 1.0
         uses = 2
       }
+    }
+    search_filters = { 
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -248,6 +275,9 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = PHI_nacionalista_elected_tt
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # The Filipino Language Act
@@ -265,6 +295,10 @@ focus_tree = {
     relative_position_id = PHI_partido_nacionalista
     completion_reward = {
       country_event = { id = philippines.45 days = 2 }
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
     }
   }
 
@@ -284,6 +318,10 @@ focus_tree = {
     completion_reward = {
       increase_ruling_party_popularity_by_10 = yes
       remove_ideas = PHI_lingering_sakdalistas
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
     }
   }
 
@@ -316,6 +354,10 @@ focus_tree = {
         country_event = { id = philippines.89 days = 30 }
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+    }
   }
 
   # Farm to Market Roads
@@ -336,6 +378,9 @@ focus_tree = {
     relative_position_id = PHI_intensify_land_reform_efforts
     completion_reward = {
       add_stability = 0.15
+    }
+    search_filters = {
+      FOCUS_FILTER_STABILITY
     }
   }
   
@@ -358,6 +403,9 @@ focus_tree = {
     completion_reward = {
       add_ideas = PHI_crop_insurance_idea
     }
+    search_filters = { 
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Free Higher Education
@@ -376,6 +424,9 @@ focus_tree = {
     completion_reward = {
       add_ideas = PHI_education_investments
       increase_ruling_party_popularity_by_5 = yes
+    }
+    search_filters = { 
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -397,6 +448,10 @@ focus_tree = {
         remove_idea = PHI_education_investments
         add_idea = PHI_education_investments_1
       }
+    }
+    search_filters = { 
+      FOCUS_FILTER_MANPOWER
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
@@ -447,6 +502,11 @@ focus_tree = {
         upgrade_intelligence_agency = upgrade_psycho_warfare
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_STABILITY
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_RESISTANCE
+    }
   }
 
   # Combat Public Service Corruption
@@ -467,6 +527,10 @@ focus_tree = {
       add_stability = 0.15
       add_political_power = 100
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+    }
   }
 
   # New Anti-Trust Laws
@@ -484,6 +548,11 @@ focus_tree = {
     relative_position_id = PHI_combat_public_service_corruption
     completion_reward = {
       add_ideas = PHI_filipino_anti_trust_laws
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -509,6 +578,9 @@ focus_tree = {
     relative_position_id = PHI_elections_of_1937
     completion_reward = {
       custom_effect_tooltip = PHI_progressista_elected_tt
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -538,6 +610,10 @@ focus_tree = {
         add_idea = republican_dictatorship
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+    }
   }
 
   # Promote Nationalism
@@ -558,6 +634,10 @@ focus_tree = {
     relative_position_id = PHI_partido_progressista
     completion_reward = {
       add_ideas = PHI_patriotic_nation
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_MANPOWER
     }
   }
 
@@ -587,6 +667,10 @@ focus_tree = {
         level = 2
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_PRODUCTION
+    }
   }
 
   # Silence Critics
@@ -607,6 +691,10 @@ focus_tree = {
     relative_position_id = PHI_promote_nationalism
     completion_reward = {
       remove_ideas = PHI_lingering_sakdalistas
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
     }
   }
 
@@ -630,6 +718,11 @@ focus_tree = {
     completion_reward = {
       add_ideas = PHI_secret_police
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+      FOCUS_FILTER_RESISTANCE
+    }
   }
 
   # Progressive Taxation
@@ -650,6 +743,9 @@ focus_tree = {
     relative_position_id = PHI_strengthen_presidential_powers
     completion_reward = {
       add_ideas = PHI_progressive_taxation_idea
+    }
+    search_filters = { 
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -677,6 +773,9 @@ focus_tree = {
       }
       add_ideas = PHI_improved_healthcare
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Lapiang Sakdalista
@@ -701,6 +800,9 @@ focus_tree = {
     relative_position_id = PHI_partido_progressista
     completion_reward = {
       custom_effect_tooltip = PHI_sakdalista_elected_tt
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -734,6 +836,10 @@ focus_tree = {
         country_event = { id = philippines.89 days = 30 }
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Agrarian Investments
@@ -762,6 +868,10 @@ focus_tree = {
         uses = 2
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Feed the Poor
@@ -788,6 +898,9 @@ focus_tree = {
       add_war_support = 0.1
       add_political_power = 100
     }
+    search_filters = { 
+      FOCUS_FILTER_STABILITY
+    }
   }
 
   # Reform the National Bank
@@ -805,6 +918,9 @@ focus_tree = {
     relative_position_id = PHI_lapiang_sakdalista
     completion_reward = {
       add_ideas = PHI_economic_reform_1
+    }
+    search_filters = { 
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -827,6 +943,9 @@ focus_tree = {
         add_idea = PHI_economic_reform_2
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Promote Local Unions
@@ -845,6 +964,9 @@ focus_tree = {
     completion_reward = {
       add_political_power = 100
       increase_ruling_party_popularity_by_10 = yes
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -867,6 +989,9 @@ focus_tree = {
         add_extra_state_shared_building_slots = 1
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Youth Work Brigades
@@ -884,6 +1009,9 @@ focus_tree = {
     relative_position_id = PHI_promote_local_unions
     completion_reward ={
       add_ideas = PHI_youth_work_brigades_idea
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -905,6 +1033,10 @@ focus_tree = {
         remove_idea = PHI_economic_reform_2
         add_idea = PHI_economic_reform_3
       }
+    }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -928,6 +1060,11 @@ focus_tree = {
         add_idea = PHI_economic_reform_4
       }
     }
+    search_filters = { 
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_STABILITY
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   ######################################################
@@ -945,6 +1082,9 @@ focus_tree = {
     cost = 6
     completion_reward = {
       custom_effect_tooltip = PHI_osmena_industrialization_plan_tt
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -965,6 +1105,10 @@ focus_tree = {
     completion_reward = {
       add_ideas = PHI_more_refugees
     }
+    search_filters = { 
+      FOCUS_FILTER_MANPOWER
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Farmer Subsidization Act
@@ -980,6 +1124,9 @@ focus_tree = {
       add_political_power = 50
       add_ideas = PHI_farmer_subsidies
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Build Up Irrigation Systems
@@ -993,6 +1140,9 @@ focus_tree = {
     relative_position_id = PHI_farmer_subsidization_act
     completion_reward = {
       custom_effect_tooltip = PHI_build_up_irrigation_systems_tt
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
     }
   }
   
@@ -1012,6 +1162,10 @@ focus_tree = {
         uses = 2
       }
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Ensure Food Sufficiency
@@ -1025,6 +1179,9 @@ focus_tree = {
     relative_position_id = PHI_farmer_subsidization_act
     completion_reward = {
       add_ideas = PHI_food_sufficient
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -1049,6 +1206,10 @@ focus_tree = {
       }
       custom_effect_tooltip = PHI_new_cities_tt
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Deals with San Miguel
@@ -1069,6 +1230,9 @@ focus_tree = {
       custom_effect_tooltip = available_designer
       show_ideas_tooltip = PHI_san_miguel_corporation
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Invite Foreign Investors
@@ -1082,6 +1246,10 @@ focus_tree = {
     relative_position_id = PHI_new_cities
     completion_reward = {
       custom_effect_tooltip = PHI_invite_foreign_investors_tt
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1105,6 +1273,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -1160,6 +1332,9 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+    }
   }
 
   # Central Luzon State University
@@ -1177,6 +1352,9 @@ focus_tree = {
     relative_position_id = PHI_resource_excavation
     completion_reward = {
       add_research_slot = 1
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -1200,6 +1378,9 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Tourism Adventures
@@ -1213,6 +1394,10 @@ focus_tree = {
     relative_position_id = PHI_osmena_industrialization_plan
     completion_reward = {
       custom_effect_tooltip = PHI_tourism_adventures_tt
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1232,6 +1417,9 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -1267,6 +1455,9 @@ focus_tree = {
           increase_ruling_party_popularity_by_10 = yes
         }
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
     }
   }
 
@@ -2161,6 +2352,10 @@ focus_tree = {
       add_manpower = 50000
       army_experience = 25
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_MANPOWER
+    }
   }
 
   # Combined Arms Doctrine
@@ -2183,6 +2378,10 @@ focus_tree = {
         cost_reduction = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2207,6 +2406,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Extensive Planning Doctrine
@@ -2229,6 +2432,10 @@ focus_tree = {
         cost_reduction = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2253,6 +2460,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Modernize Firepower
@@ -2271,6 +2482,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Equipment Assembly Lines
@@ -2284,6 +2499,10 @@ focus_tree = {
     relative_position_id = PHI_modernize_firepower
     completion_reward = {
       add_ideas = PHI_equipment_production
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
@@ -2303,6 +2522,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Catching up with Communications
@@ -2321,6 +2544,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Tank Production Initiatives
@@ -2334,6 +2561,10 @@ focus_tree = {
     relative_position_id = PHI_armor_spearhead_doctrine
     completion_reward = {
       add_ideas = PHI_tank_production
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
@@ -2353,6 +2584,10 @@ focus_tree = {
         uses = 2
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Reconnaissance Improvements
@@ -2371,6 +2606,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Mountaineers
@@ -2388,6 +2627,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2408,6 +2651,10 @@ focus_tree = {
         category = land_doctrine
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Standardization of Equipment
@@ -2425,6 +2672,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2450,6 +2701,10 @@ focus_tree = {
         uses = 2
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Logistical Improvements
@@ -2467,6 +2722,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2487,6 +2746,9 @@ focus_tree = {
     completion_reward = {
       add_ideas = PHI_general_staff
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Philippine Military Academy
@@ -2500,6 +2762,9 @@ focus_tree = {
     relative_position_id = PHI_form_the_general_staff
     completion_reward = {
       add_ideas = PHI_new_officer_schools
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
@@ -2519,6 +2784,9 @@ focus_tree = {
         category = land_doctrine
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Military Science
@@ -2532,6 +2800,9 @@ focus_tree = {
     relative_position_id = PHI_expand_the_constabulary_officers_school
     completion_reward = {
       add_research_slot = 1
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2595,6 +2866,9 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Legacy of General Luna
@@ -2608,6 +2882,9 @@ focus_tree = {
     relative_position_id = PHI_expand_the_constabulary_officers_school
     completion_reward = {
       add_ideas = PHI_lunas_legacy
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
@@ -2629,6 +2906,9 @@ focus_tree = {
       add_ideas = PHI_naval_devotion
       navy_experience = 25
     }
+    search_filters = {
+      FOCUS_FILTER_NAVY_BONUS
+    }
   }
 
   # An Attack Underneath
@@ -2647,6 +2927,10 @@ focus_tree = {
         cost_reduction = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_NAVY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2667,6 +2951,10 @@ focus_tree = {
         cost_reduction = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_NAVY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2689,6 +2977,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_NAVY_BONUS
+    }
   }
 
   # Destoyer Modernization
@@ -2710,6 +3002,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_NAVY_BONUS
+    }
   }
 
   # Cruiser Development
@@ -2729,6 +3025,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_NAVY_BONUS
     }
   }
 
@@ -2751,6 +3051,10 @@ focus_tree = {
         category = naval_doctrine
       }
     }
+    search_filters = {
+      FOCUS_FILTER_NAVY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Train Marines
@@ -2770,6 +3074,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Salvage American Designs
@@ -2784,6 +3092,10 @@ focus_tree = {
     completion_reward = {
       PHI_add_american_naval_tech = yes
       PHI_add_american_naval_variants = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_NAVY_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2817,6 +3129,10 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_PRODUCTION
+    }
   }
 
   # Construct the Davao Port
@@ -2849,6 +3165,10 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Refurbish American Ships
@@ -2863,6 +3183,9 @@ focus_tree = {
     completion_reward = {
       PHI_deploy_refubished_ships = yes
     }
+    search_filters = {
+      FOCUS_FILTER_NAVY_BONUS
+    }
   }
 
   # Dedicated Repair Facilities
@@ -2876,6 +3199,11 @@ focus_tree = {
     relative_position_id = PHI_refurbish_american_ships
     completion_reward = {
       add_ideas = PHI_naval_repair_facilities
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_NAVY_BONUS
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -2909,6 +3237,10 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_NAVY_BONUS
+    }
   }
 
   ######################################################
@@ -2933,6 +3265,9 @@ focus_tree = {
         producer = USA
       }
     }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
   }
 
   # Bomber Research
@@ -2950,6 +3285,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -2969,6 +3308,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Train New Pilots
@@ -2985,6 +3328,10 @@ focus_tree = {
     relative_position_id = PHI_bomber_research
     completion_reward = {
       add_manpower = 15000
+    }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+      FOCUS_FILTER_MANPOWER
     }
   }
 
@@ -3004,6 +3351,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
   }
 
   # RADAR Development
@@ -3021,6 +3372,9 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -3043,6 +3397,10 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Aviation Doctrine
@@ -3061,6 +3419,9 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
   }
 
   # Protect our Coasts from Above
@@ -3078,6 +3439,10 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+      FOCUS_FILTER_AIRFORCE_BONUS
     }
   }
 
@@ -3107,6 +3472,10 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
   }
 
   # Air Defenses
@@ -3126,6 +3495,10 @@ focus_tree = {
           instant_build = yes
         }
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_INDUSTRY
+      FOCUS_FILTER_AIRFORCE_BONUS
     }
   }
 }
