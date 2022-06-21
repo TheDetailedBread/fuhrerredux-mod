@@ -12550,23 +12550,23 @@ option = { # Germany shall conquer all
 country_event = { # Valkist Italy - Establish administration
 	id = ger.414
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.414"}
-    title = ger.414.t
-    desc = ger.414.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.414.t
+	desc = ger.414.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
-        original_tag = SRV
+	trigger = {
+		original_tag = SRV
 		SRV = {
 			is_puppet_of = GER
 		}
-        owns_state = 2
-    }
+		owns_state = 2
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+			days = 1
+	}
 
-    fire_only_once = yes
+	fire_only_once = yes
 
 	option = {
 	name = ger.414.a
@@ -12578,7 +12578,7 @@ country_event = { # Valkist Italy - Establish administration
 			set_province_controller = 3780
 			set_province_controller = 11584
 			set_province_controller = 6788
-			load_oob = VIT
+			load_oob = SRV
 			add_ideas = VIT_illegitimate_government
 		}
 	}
