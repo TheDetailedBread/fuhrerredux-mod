@@ -152,3 +152,19 @@ PHI_alternate_plan_defense = {
     PHI_anti_colonialist_crusade = 20.0
   }
 }
+
+PHI_foreign_intervention = {
+  name = "Philippine Foreign Plan"
+  desc = "This is the strategy plan for the Philippines to intervene in the Second Great War"
+
+  enable = {
+    original_tag = PHI
+    has_country_flag = PHI_west_focus
+  }
+  abort = {
+    OR = {
+      has_country_flag = PHI_japan_focus
+      has_country_flag = PHI_usa_focus
+    }
+  }
+}

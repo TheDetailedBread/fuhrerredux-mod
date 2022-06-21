@@ -1,89 +1,90 @@
 # French Focus Tree
-# created by: dax0102
+# modified by: dax0102
+# from original Fuhrerreich authors, just removed the dynamicness
 
 focus_tree = {
-    id = french_focus
+	id = french_focus
 
-    country = {
-        factor = 0
+	country = {
+		factor = 0
 		modifier = {
 			add = 10
 			tag = FRA
 		}
-    }
+	}
 
 	continuous_focus_position = { x = 950 y = 600 }
 
 	initial_show_position = {
-        focus = fra_invest_budget
-    }
+		focus = fra_invest_budget
+	}
 
-    # Investigation of the National Budget
-    focus = {
-        id = fra_invest_budget
-        icon = GFX_missing_budget
-        x = 6
-        y = 0
-        cost = 2
-        available = {
-            has_capitulated = no
-            has_country_flag = fra_missing_money
-        }
-        ai_will_do = { factor = 4000 }
-        completion_reward = {
-            country_event = fra.2
-        }
-    }
-    # Investigation of the Army
-    focus = {
-        id = fra_invest_army
-        icon = GFX_goal_army_guy_2
-        x = -1
-        y = 1
-        cost = 3
-        available = {
-            has_capitulated = no
-        }
-        prerequisite = { focus = fra_invest_budget }
-        ai_will_do = { factor = 320 }
-        relative_position_id = fra_invest_budget
-        completion_reward = {
-            country_event = fra.4
-        }
-    }
-    # The Best Offense...
-    focus = {
-        id = fra_promote_defense
-        icon = GFX_goal_generic_defence
-        x = -4
-        y = 1
-        cost = 3
-        available = { 
-            has_capitulated = no
-        }
-        ai_will_do = {
-            factor = 40
-            modifier = {
-                factor = 2
-                date > 1937.1.1
-            }
-            modifier = {
-                factor = 4
-                GER = {
-                    has_completed_focus = GER_pangerman
-                }
-            }
-        }
-        mutually_exclusive = { focus = fra_promote_offense }
-        prerequisite = { focus = fra_invest_army }
-        relative_position_id = fra_invest_army
-        completion_reward = {
-            add_ideas = FRA_defense_boost
-        }
-    }
-    # Experimental Fortifications Research
-    focus = {
-        id = fra_fort_research
+	# Investigation of the National Budget
+	focus = {
+		id = fra_invest_budget
+		icon = GFX_missing_budget
+		x = 6
+		y = 0
+		cost = 2
+		available = {
+			has_capitulated = no
+			has_country_flag = fra_missing_money
+		}
+		ai_will_do = { factor = 4000 }
+		completion_reward = {
+			country_event = fra.2
+		}
+	}
+	# Investigation of the Army
+	focus = {
+		id = fra_invest_army
+		icon = GFX_goal_army_guy_2
+		x = -1
+		y = 1
+		cost = 3
+		available = {
+			has_capitulated = no
+		}
+		prerequisite = { focus = fra_invest_budget }
+		ai_will_do = { factor = 320 }
+		relative_position_id = fra_invest_budget
+		completion_reward = {
+			country_event = fra.4
+		}
+	}
+	# The Best Offense...
+	focus = {
+		id = fra_promote_defense
+		icon = GFX_goal_generic_defence
+		x = -4
+		y = 1
+		cost = 3
+		available = { 
+			has_capitulated = no
+		}
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 4
+				GER = {
+					has_completed_focus = GER_pangerman
+				}
+			}
+		}
+		mutually_exclusive = { focus = fra_promote_offense }
+		prerequisite = { focus = fra_invest_army }
+		relative_position_id = fra_invest_army
+		completion_reward = {
+			add_ideas = FRA_defense_boost
+		}
+	}
+  # Experimental Fortifications Research
+  focus = {
+    id = fra_fort_research
 		icon = GFX_goal_fortify_the_westwall
 		x = 0
 		y = 1
@@ -106,26 +107,26 @@ focus_tree = {
 				remove_idea = FRA_defense_boost
 			}
 		}
-    }
-    # Allocate Funds to the Calais-Metz Line
-    focus = {
-        id = fra_allocate_fort_funds
+  }
+  # Allocate Funds to the Calais-Metz Line
+  focus = {
+		id = fra_allocate_fort_funds
 		icon = GFX_goal_new_treaty
 		x = 0
 		y = 1
-        cost = 2
+		cost = 2
 		available = {
-            has_capitulated = no
-            has_full_control_of_state = 29
-            has_full_control_of_state = 18
-            has_full_control_of_state = 747
-            has_full_control_of_state = 28
+			has_capitulated = no
+			has_full_control_of_state = 29
+			has_full_control_of_state = 18
+			has_full_control_of_state = 747
+			has_full_control_of_state = 28
 		}
 		ai_will_do = {
 			factor = 40
 		}
 		prerequisite = { focus = fra_fort_research }
-        relative_position_id = fra_fort_research
+    relative_position_id = fra_fort_research
 		completion_reward = {
 			add_political_power = -10
 			29 = {
@@ -191,14 +192,14 @@ focus_tree = {
 				}
 			}
 		}
-    }
-    # ... is the Perfect Defense
-    focus = {
-        id = fra_good_defense
+  }
+  # ... is the Perfect Defense
+  focus = {
+    id = fra_good_defense
 		icon = GFX_goal_panzerwaffe
 		x = 0
 		y = 1
-        cost = 2
+    cost = 2
 		available = {
 			has_capitulated = no
 		}
@@ -206,7 +207,7 @@ focus_tree = {
 			factor = 80
 		}
 		prerequisite = { focus = fra_allocate_fort_funds }
-        relative_position_id = fra_allocate_fort_funds
+    relative_position_id = fra_allocate_fort_funds
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = FRA_defense_boost2
@@ -214,14 +215,14 @@ focus_tree = {
 			}
 			remove_ideas = FRA_divided_military_staff
 		}
-    }
-    # Out with the Old...
-    focus = {
-        id = fra_promote_offense
+  }
+  # Out with the Old...
+  focus = {
+    id = fra_promote_offense
 		icon = GFX_goal_generic_small_arms
 		x = -2
 		y = 1
-        cost = 3
+    cost = 3
 		available = {
 			has_capitulated = no
 		}
@@ -234,18 +235,18 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = fra_promote_defense }
 		prerequisite = { focus = fra_invest_army }
-        relative_position_id = fra_invest_army
+    relative_position_id = fra_invest_army
 		completion_reward = {
 			add_ideas = FRA_offense_boost
 		}
-    }
-    # Fund Military Colleges
-    focus = {
-        id = fra_fund_military_uni
+  }
+  # Fund Military Colleges
+  focus = {
+    id = fra_fund_military_uni
 		icon = GFX_focus_generic_military_academy
 		x = 0
 		y = 1
-        cost = 3
+    cost = 3
 		available = {
 			has_capitulated = no
 		}
@@ -263,14 +264,14 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = fra_promote_offense }
-        relative_position_id = fra_promote_offense
+    relative_position_id = fra_promote_offense
 		completion_reward = {
 			add_ideas = FRA_new_officers
 		}
-    }
-    # Modern Doctrines
-    focus = {
-        id = fra_modern_doctrine
+  }
+  # Modern Doctrines
+  focus = {
+    id = fra_modern_doctrine
 		icon = GFX_goal_great_science
 		x = 0
 		y = 1
@@ -285,19 +286,19 @@ focus_tree = {
 				factor = 2
 			}
 		}
-        prerequisite = { focus = fra_fund_military_uni }
-        relative_position_id = fra_fund_military_uni
+    prerequisite = { focus = fra_fund_military_uni }
+    relative_position_id = fra_fund_military_uni
 		completion_reward = {
 			country_event = fra.10
 		}
-    }
-    # ... in With the New
-    focus = {
-        id = fra_in_new
+  }
+  # ... in With the New
+  focus = {
+    id = fra_in_new
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1
-        cost = 2
+    cost = 2
 		available = {
 			has_capitulated = no
 		}
@@ -309,7 +310,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = fra_modern_doctrine }
-        relative_position_id = fra_modern_doctrine
+    relative_position_id = fra_modern_doctrine
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = FRA_offense_boost
@@ -317,29 +318,29 @@ focus_tree = {
 			}
 			remove_ideas = FRA_divided_military_staff
 		}
-    }
-    # Investigation of the Capitalists
-    focus = {
-        id = fra_invest_ic
+  }
+  # Investigation of the Capitalists
+  focus = {
+    id = fra_invest_ic
 		icon = GFX_goal_generic_investigate_corruption
 		x = 1
 		y = 1
-        cost = 3
+    cost = 3
 		available = {
 			has_capitulated = no
 		}
 		ai_will_do = {
 			factor = 2000
 		}
-        prerequisite = { focus = fra_invest_budget }
-        relative_position_id = fra_invest_budget
+    prerequisite = { focus = fra_invest_budget }
+    relative_position_id = fra_invest_budget
 		completion_reward = {
 			country_event = fra.5
 		}
-    }
-    # Redistribute Seized Land
-    focus = {
-        id = fra_give_land
+  }
+  # Redistribute Seized Land
+  focus = {
+    id = fra_give_land
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 2
 		y = 1
@@ -354,8 +355,8 @@ focus_tree = {
 				factor = 4
 			}
 		}
-        prerequisite = { focus = fra_invest_ic }
-        relative_position_id = fra_invest_ic
+    prerequisite = { focus = fra_invest_ic }
+    relative_position_id = fra_invest_ic
 		completion_reward = {
 			33 = {
 				add_extra_state_shared_building_slots = 2
@@ -367,15 +368,15 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
-    }
-    # Encourage Colonial Cooperation
-    focus = {
-        id = fra_colony_coop
+  }
+  # Encourage Colonial Cooperation
+  focus = {
+    id = fra_colony_coop
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 1
-        cost = 2
-        available = {
+      cost = 2
+      available = {
 			has_capitulated = no
 		}
 		ai_will_do = {
@@ -387,89 +388,89 @@ focus_tree = {
 				factor = 4
 			}
 		}
-        prerequisite = { focus = fra_give_land }
-        relative_position_id = fra_give_land
+    prerequisite = { focus = fra_give_land }
+    relative_position_id = fra_give_land
 		completion_reward = {
 			add_ideas = FRA_colonial_coop
 		}
-    }
-    # Investigation of the Government
-    focus = {
-        id = fra_invest_government
+  }
+  # Investigation of the Government
+  focus = {
+    id = fra_invest_government
 		icon = GFX_focus_generic_self_management
 		x = -1
 		y = 1
-        cost = 3
-        available = {
+    cost = 3
+    available = {
 			has_capitulated = no
 		}
 		ai_will_do = {
 			factor = 4000
 		}
-        prerequisite = { focus = fra_invest_ic }
+    prerequisite = { focus = fra_invest_ic }
 		prerequisite = { focus = fra_invest_army }
-        relative_position_id = fra_invest_ic
+    relative_position_id = fra_invest_ic
 		completion_reward = {
 			country_event = fra.6
 		}
-    }
-    # Trial of the Eleven
-    focus = {
-        id = fra_the_trial
+	}
+	# Trial of the Eleven
+	focus = {
+		id = fra_the_trial
 		icon = GFX_trial_of_11
 		x = 0
 		y = 1
-        cost = 3
-        available = {
+		cost = 3
+		available = {
 			has_capitulated = no
 		}
 		ai_will_do = {
 			factor = 4000
 		}
 		prerequisite = { focus = fra_invest_government }
-        relative_position_id = fra_invest_government
+		relative_position_id = fra_invest_government
 		completion_reward = {
 			country_event = fra.7
 			remove_ideas = fra_missing_funds
 		}
-    }
-    # Disband the National Bloc
-    focus = {
-        id = fra_nuc_dead
+	}
+	# Disband the National Bloc
+	focus = {
+		id = fra_nuc_dead
 		icon = GFX_goal_revolution
 		x = -1
 		y = 1
-        cost = 1
+		cost = 1
 		available = {
-            custom_trigger_tooltip = {
-                tooltip = unlocked_later
-                always = no
-            }
-        }
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				always = no
+			}
+		}
 		mutually_exclusive = {
 			focus = fra_nuc_alive
 		}
 		bypass = {
 			has_country_flag = fra_nuc_bad
 		}
-        prerequisite = { focus = fra_the_trial }
-        relative_position_id = fra_the_trial
+		prerequisite = { focus = fra_the_trial }
+		relative_position_id = fra_the_trial
 		completion_reward = {
 			custom_effect_tooltip = fra_nuc_begone
 		}
-    }
-    # The Bloc National Survives
-    focus = {
-        id = fra_nuc_alive
+	}
+	# The Bloc National Survives
+	focus = {
+		id = fra_nuc_alive
 		icon = GFX_goal_support_democracy
-        x = 1
+		x = 1
 		y = 1
-        available = {
-            custom_trigger_tooltip = {
-                tooltip = unlocked_later
-                always = no
-            }
-        }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				always = no
+			}
+		}
 		ai_will_do = {
 			factor = 4000
 		}
@@ -479,25 +480,25 @@ focus_tree = {
 		bypass = {
 			has_country_flag = fra_nuc_good
 		}
-        prerequisite = { focus = fra_the_trial }
-        relative_position_id = fra_the_trial
+    prerequisite = { focus = fra_the_trial }
+    relative_position_id = fra_the_trial
 		completion_reward = {
 			custom_effect_tooltip = fra_nuc_org
 		}
-    }
-    # Taming Tunisia
-    focus = {
-        id = fra_taming_tunisia
+  }
+  # Taming Tunisia
+  focus = {
+    id = fra_taming_tunisia
 		icon = GFX_goal_generic_military_sphere
 		x = 4
 		y = 1
-        cost = 3
-        available = {
+      cost = 3
+      available = {
 			has_capitulated = no
-            TUN = {
-                has_full_control_of_state = 458
-                has_full_control_of_state = 665
-            }
+			TUN = {
+				has_full_control_of_state = 458
+				has_full_control_of_state = 665
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -508,8 +509,8 @@ focus_tree = {
 				factor = 4
 			}
 		}
-        prerequisite = { focus = fra_invest_ic }
-        relative_position_id = fra_invest_ic
+    prerequisite = { focus = fra_invest_ic }
+    relative_position_id = fra_invest_ic
 		completion_reward = {
 			458 = {
 				add_extra_state_shared_building_slots = 2
@@ -527,18 +528,18 @@ focus_tree = {
 				}
 			}
 		}
-    }
-    # Algerian Adventure
-    focus = {
-        id = fra_algeria_adventure
+  }
+  # Algerian Adventure
+  focus = {
+    id = fra_algeria_adventure
 		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 1
 		cost = 3
-        available = {
+      available = {
 			FRA = {
 				has_capitulated = no
-                has_full_control_of_state = 513
+        has_full_control_of_state = 513
 			}
 		}
 		ai_will_do = {
@@ -578,14 +579,14 @@ focus_tree = {
 				}
 			}
 		}
-    }
+  }
 	# The 1936 Elections
-    focus = {
-        id = fra_1936_election
-        icon = GFX_french_election
+  focus = {
+  	id = fra_1936_election
+    icon = GFX_french_election
 		x = 1
 		y = 3
-        cost = 1
+    cost = 1
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = unlocked_later
@@ -598,7 +599,7 @@ focus_tree = {
 				date < 1936.11.1
 				factor = 0
 			}
-        }
+    }
 		prerequisite = { 
 			focus = fra_nuc_dead
 			focus = fra_nuc_alive
@@ -607,7 +608,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 		}
-    }	
+  }	
 	# Military Takeover
 	focus = {
 		id = fra_prov_govt
@@ -1526,11 +1527,9 @@ focus_tree = {
 			factor = 4000
 		}
 		available = {
-			FRA = {
-				has_capitulated = no
-			}
+			has_capitulated = no
 			64 = {
-				is_controlled_by = FRA
+				is_controlled_by_ROOT_or_ally = yes
 			}
 		}
 		prerequisite = { focus = fra_march_to_berlin }
