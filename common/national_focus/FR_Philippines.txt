@@ -1289,6 +1289,7 @@ focus_tree = {
     cost = 6
     available = {
       controls_state = 623
+      controls_state = 1033
       controls_state = 327
     }
     prerequisite = {
@@ -1306,10 +1307,27 @@ focus_tree = {
               include_locked = yes
             }
           }
-          add_extra_state_shared_building_slots = 1
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             type = arms_factory
-            level = 1
+            level = 2
+            instant_build = yes
+          }
+        }
+      }
+      1033 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
             instant_build = yes
           }
         }
@@ -1474,6 +1492,13 @@ focus_tree = {
     x = 0
     y = 2
     cost = 6
+    ai_will_do = {
+      base = 100
+      modifier = {
+        factor = 10
+        has_global_flag = gw2
+      }
+    }
     available = {
       has_country_flag = PHI_has_1937_elections
       threat > 0.25
@@ -1513,7 +1538,11 @@ focus_tree = {
     y = 1
     cost = 6
     ai_will_do = {
-      base = 200
+      base = 20
+      modifier = {
+        factor = 10
+        has_global_flag = gw2
+      }
       modifier = {
         factor = 0.2
         has_global_flag = france_in_algeria
@@ -1561,7 +1590,11 @@ focus_tree = {
     y = 1
     cost = 6
     ai_will_do = {
-      base = 200
+      base = 20
+      modifier = {
+        factor = 10
+        has_global_flag = gw2
+      }
       modifier = {
         factor = 0.2
         USA = {
@@ -1829,6 +1862,17 @@ focus_tree = {
     x = 3
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 20
+      modifier = {
+        factor = 10
+        has_global_flag = gw2
+      }
+      modifier = {
+        factor = 2
+        num_divisions > 50
+      }
+    }
     available = {
       is_in_faction = no
       JAP = {
@@ -1872,6 +1916,17 @@ focus_tree = {
     x = 5
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 20
+      modifier = {
+        factor = 10
+        has_global_flag = gw2
+      }
+      modifier = {
+        factor = 2
+        num_divisions > 100
+      }
+    }
     mutually_exclusive = {
       focus = PHI_look_to_the_west
       focus = PHI_maintain_american_relations
