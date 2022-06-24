@@ -128,7 +128,6 @@ country_event = { # Fate of Austria
       add_to_temp_array = { core_removal_array = AUS }
       remove_all_cores_and_claims_of_tags = yes
       4 = { add_core_of = AUS } # Vienna
-      39 = { add_core_of = AUS } # Sudtirol
       152 = { add_core_of = AUS } # Upper Austria
       153 = { add_core_of = AUS } # Tyrol
       803 = { add_core_of = AUS } # North Austria
@@ -4913,7 +4912,7 @@ country_event = { # Fate of Sudtirol
     39 = { transfer_state_and_add_core = yes }
   }
 
-  option = { # Give it to the Italian
+  option = { # Give it to the Italians
     name = annex.173.b
     trigger = {
       ITA = { ROOT_can_grant_land = yes }
@@ -4926,6 +4925,22 @@ country_event = { # Fate of Sudtirol
       }
     }
     set_temp_variable = { tag_to_release = ITA }
+    39 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Italians
+    name = annex.173.b
+    trigger = {
+      ITP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = AUS
+      }
+    }
+    set_temp_variable = { tag_to_release = ITP }
     39 = { transfer_state_and_add_core = yes }
   }
 
