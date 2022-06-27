@@ -59,7 +59,7 @@ foreign_politics = {
     days_remove = 30
     war_with_on_remove = MEX
     ai_will_do = {
-      base = 100
+      base = 10
       modifier = {
         factor = 0.2
         OR = {
@@ -88,15 +88,11 @@ foreign_politics = {
       }
       modifier = {
         factor = 10
-        num_divisions > 80
+        num_divisions > 120
       }
       modifier = {
         factor = 2
         NOT = { has_idea = USA_failed_offensive }
-      }
-      modifier = {
-        factor = 2
-        num_divisions > 60
       }
       modifier = {
         factor = 4

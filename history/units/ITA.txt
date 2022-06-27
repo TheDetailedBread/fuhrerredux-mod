@@ -1,6 +1,7 @@
 ﻿##### Division Templates #####
 division_template = {
-	name = "Divisione di Fanteria"		
+	name = "Divisione di Fanteria"	
+	division_names_group = ITA_INF_01	
 	# Represents nearly all infantry divisions
 	# In later years, CCNN Brigade added to Inf Division (1x2 militia/inf regiment)
 	# Also represent semi-mountain divisions (1st, 2nd, 3rd, 4th, 6th Divisions)
@@ -22,6 +23,7 @@ division_template = {
 }
 division_template = {
 	name = "Divisione Alpina"					# Divisione Alpina
+	division_names_group = ITA_MTN_01
 	regiments = {
 		mountaineers = { x = 0 y = 0 }			# Elite Alpina Regiments
 		mountaineers = { x = 0 y = 1 }
@@ -41,6 +43,7 @@ division_template = {
 }
 division_template = {
 	name = "Divisione Celere" 		# Divisione Celere (Fast Division)
+	division_names_group = ITA_MOT_01
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
@@ -55,6 +58,7 @@ division_template = {
 }
 division_template = {
 	name = "Divisione Coloniale"		
+	division_names_group = ITA_MIL_01
 	# Represents lesser-equipped colonial units
 	regiments = {
 		militia = { x = 0 y = 0 }
@@ -68,6 +72,7 @@ division_template = {
 }
 division_template = {
 	name = "Raggruppamento Celere" 			# Raggruppamento Celere
+	division_names_group = ITA_CAV_01
 	# Note: these groups were gradually expanded to army-level supprt of cavalry rgts, bersaglieri rgts, and tankette bns.
 	regiments = {
 		cavalry = { x = 0 y = 0 }

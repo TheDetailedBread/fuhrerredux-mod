@@ -1693,7 +1693,7 @@ ENG_foreign_intervention = {
 					has_country_flag = ENG_c_isol
 					OR = {
 						16 = { is_controlled_by = GER }
-						16 = { is_controlled_by = ORL }
+						16 = { is_controlled_by = FRP }
 					}
 				}
 				AND = { 
@@ -1771,10 +1771,10 @@ ENG_foreign_intervention = {
 			GER = { has_war_with = SOV }
 			NOT = { GER = { has_war_with = FRA } }
 			OR = {
-				ORL = { exists = no }
+				FRP = { exists = no }
 				AND = {
-					ORL = { exists = yes }
-					ORL = { is_puppet_of = ENG }
+					FRP = { exists = yes }
+					FRP = { is_puppet_of = ENG }
 				}
 			}
 			NOT = { GER = { has_completed_focus = GER_anti_british } }

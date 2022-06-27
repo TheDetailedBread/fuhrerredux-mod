@@ -127,6 +127,7 @@ country_event = { # Fate of China
       is_chinese_tag = no
       tag = JAP
       country_exists = MAN
+      is_ally_with = MAN
     }
 
     set_temp_variable = { tag_to_release = MAN }
@@ -142,6 +143,31 @@ country_event = { # Fate of China
       is_chinese_tag = yes
     }
     set_country_flag = CHI_CONQ
+  }
+
+  option = { # Reorganized Government
+    name = annex.4002.e
+    ai_chance = {
+      base = 100
+    }
+    trigger = {
+      is_chinese_tag = no
+      NOT = { is_ally_with = MAN }
+      NOT = { is_ally_with = ZHI }
+      NOT = { is_ally_with = CHI }
+    }
+
+    set_temp_variable = { tag_to_release = KMT }
+    transfer_chinese_territories = yes
+    hidden_effect = {
+      KMT = {
+        set_politics = {
+          ruling_party = authoritarian_democrat
+          elections_allowed = no
+        }
+        increase_ruling_party_popularity_by_10 = yes
+      }
+    }
   }
 
   option = { # Occupy
@@ -643,6 +669,7 @@ country_event = { # Fate of Mongolia
         add_state_core = 611
         add_state_core = 612
         add_state_core = 801
+        add_state_core = 935
         add_state_core = 936
         add_state_core = 1018
         add_state_core = 1019
@@ -689,6 +716,7 @@ country_event = { # Fate of Philippines
         add_state_core = 626
         add_state_core = 627
         add_state_core = 628
+        add_state_core = 1033
         drop_cosmetic_tag = yes
       }
     }
@@ -1214,6 +1242,7 @@ country_event = { # Fate of Vietnam
         add_state_core = 671
         add_state_core = 958
         add_state_core = 961
+        add_state_core = 1009
         drop_cosmetic_tag = yes
       }
     }
