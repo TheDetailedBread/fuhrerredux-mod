@@ -1635,6 +1635,9 @@ focus_tree = {
     x = -2
     y = 1
     cost = 6
+    available = {
+      is_in_faction = yes
+    }
     prerequisite = { focus = PHI_look_to_the_west }
     relative_position_id = PHI_look_to_the_west
     completion_reward = {
@@ -1670,6 +1673,9 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      is_in_faction = yes
+    }
     ai_will_do = {
       base = 200
     }
@@ -1946,6 +1952,9 @@ focus_tree = {
     x = -1
     y = 1
     cost = 6
+    available = {
+      is_in_faction = yes
+    }
     prerequisite = {
       focus = PHI_maintain_american_relations
       focus = PHI_pivot_to_japan
@@ -2162,6 +2171,9 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      is_in_faction = yes
+    }
     prerequisite = {
       focus = PHI_pivot_to_japan
       focus = PHI_on_our_own
@@ -2235,6 +2247,7 @@ focus_tree = {
     y = 2
     cost = 6
     available = {
+      is_faction_leader = yes
       has_capitulated = no
     }
     prerequisite = { focus = PHI_on_our_own }
