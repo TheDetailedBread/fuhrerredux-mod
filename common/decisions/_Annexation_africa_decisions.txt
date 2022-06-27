@@ -189,6 +189,25 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_EQG_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+      297 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.2009
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = EQG_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_ERI_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes
