@@ -2,6 +2,39 @@
 spriteTypes = {
   
   spriteType = {
+    name = "GFX_goal_BOL_indigenous_shine"
+    texturefile = "gfx/interface/goals/BOL_indigenous.png"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/BOL_indigenous.png"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/BOL_indigenous.png"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+    
+
+  spriteType = {
     name = "GFX_goal_ARG_airforce_shine"
     texturefile = "gfx/interface/goals/ARG_airforce.png"
     effectFile = "gfx/FX/buttonstate.lua"
@@ -6521,39 +6554,6 @@ spriteTypes = {
 
     animation = {
       animationmaskfile = "gfx/interface/goals/ENG_liberate_the_market.png"
-      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-      animationrotation = 90.0
-      animationlooping = no
-      animationtime = 0.75
-      animationdelay = 0
-      animationblendmode = "add"
-      animationtype = "scrolling"
-      animationrotationoffset = { x = 0.0 y = 0.0 }
-      animationtexturescale = { x = 1.0 y = 1.0 }
-    }
-    legacy_lazy_load = no
-  }
-    
-
-  spriteType = {
-    name = "GFX_goal_ENG_renew_interest_army_shine"
-    texturefile = "gfx/interface/goals/ENG_renew_interest_army.png"
-    effectFile = "gfx/FX/buttonstate.lua"
-    animation = {
-      animationmaskfile = "gfx/interface/goals/ENG_renew_interest_army.png"
-      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-      animationrotation = -90.0
-      animationlooping = no
-      animationtime = 0.75
-      animationdelay = 0
-      animationblendmode = "add"
-      animationtype = "scrolling"
-      animationrotationoffset = { x = 0.0 y = 0.0 }
-      animationtexturescale = { x = 1.0 y = 1.0 }
-    }
-
-    animation = {
-      animationmaskfile = "gfx/interface/goals/ENG_renew_interest_army.png"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = 90.0
       animationlooping = no

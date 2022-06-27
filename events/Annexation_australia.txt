@@ -68,14 +68,37 @@ country_event = { # Fate of Australia
 
   option = { # Puppet
     name = annex.5001.a
+    trigger = { tag = ENG }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = AST }
     release_targeted_tag = yes
-    if = {
-      limit = { tag = ENG }
-      AST = { set_cosmetic_tag = AST_ENG }
+    AST = {
+      set_cosmetic_tag = AST_ENG
+      if = {
+        limit = { has_country_flag = AST_is_republic }
+        AST_remove_republic = yes
+      }
+    }
+  }
+  option = { # Puppet - Republic
+    name = annex.5001.b
+    trigger = {
+      NOT = { tag = ENG }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = AST }
+    release_targeted_tag = yes
+    AST = {
+      if = {
+        limit = { 
+          NOT = { has_country_flag = AST_is_republic }
+        }
+        AST_become_republic = yes
+      }
     }
   }
   option = { # Occupy
@@ -109,11 +132,38 @@ country_event = { # Fate of New Zealand
 
   option = { # Puppet
     name = annex.5002.a
+    trigger = { tag = ENG }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = NZL }
     release_targeted_tag = yes
+    NZL = {
+      set_cosmetic_tag = NZL_ENG
+      if = {
+        limit = { has_country_flag = NZL_is_republic }
+        NZL_remove_republic = yes
+      }
+    }
+  }
+  option = { # Puppet
+    name = annex.5003.b
+    trigger = {
+      NOT = { tag = ENG }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = NZL }
+    release_targeted_tag = yes
+    NZL = {
+      if = {
+        limit = { 
+          NOT = { has_country_flag = NZL_is_republic }
+        }
+        NZL_become_republic = yes
+      }
+    }
   }
   option = { # Occupy
     name = annexation_occupy

@@ -834,12 +834,12 @@ create_ambition_areas = {
 			}
 			set_variable = { ambition_area_@NZL = 1 }
 		}
-		# ORL = Orleans (Valkist France)
+		# FRP = (Puppet France)
 		if = {
 			limit = {
 				OR = {
-					is_core_of = ORL
-					is_claimed_by = ORL
+					is_core_of = FRP
+					is_claimed_by = FRP
 					is_core_of = FRA
 					is_claimed_by = FRA
 					region = 20 #Southern France
@@ -849,7 +849,7 @@ create_ambition_areas = {
 					is_french_colonial_claim = yes
 				}
 			}
-			set_variable = { ambition_area_@ORL = 1 }
+			set_variable = { ambition_area_@FRP = 1 }
 		}
 		# PAN - Panama
 		if = {

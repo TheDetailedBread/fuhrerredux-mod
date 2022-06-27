@@ -11,7 +11,7 @@ country_event = { #intro event
 	immediate = {log = "[GetDateText]: [Root.GetName]: event fra.1"}
 	title = fra.1.t
 	desc = fra.1.d
-	picture = GFX_report_event_physics_lab_02
+	picture = GFX_report_event_NFA_event_NFAGenericArmy
 
 	trigger = {
 		tag = FRA
@@ -3786,11 +3786,8 @@ country_event = { #Gabon revolts
 	id = fra.101
 	title = fra.101.t
 	desc = fra.101.d
-
 	picture = GFX_report_event_diplomacy3
-
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -3800,20 +3797,20 @@ country_event = { #Gabon revolts
 			transfer_state = 966
 			transfer_state = 297
 			declare_war_on = {
-    			target = FRA
-    			type = annex_everything
+				target = FRA
+				type = annex_everything
 			}
 			load_oob = GAB_revolt
 		}
 		if = {
 			limit = {
-				ORL = {
+				FRP = {
 					exists = yes
 					has_capitulated = no
 					is_puppet_of = GER
 				}
 			}
-			ORL = {
+			FRP = {
 				country_event = {
 					id = fra.102
 					days = 3
@@ -3831,15 +3828,12 @@ country_event = { #Gabon revolts
 	}
 }
 
-country_event = { #ORL gets notified about Gabonese revolt
+country_event = { #FRP gets notified about Gabonese revolt
 	id = fra.102
 	title = fra.102.t
 	desc = fra.102.d
-
 	picture = GFX_report_event_diplomacy3
-
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -3847,7 +3841,7 @@ country_event = { #ORL gets notified about Gabonese revolt
 		GAB = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 1000 producer = ORL
+				amount = 1000 producer = FRP
 			}
 		}
 		add_political_power = -10
@@ -3862,11 +3856,8 @@ country_event = { #dahomey revolts
 	id = fra.103
 	title = fra.103.t
 	desc = fra.103.d
-
 	picture = GFX_report_event_diplomacy3
-
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = {
@@ -3881,7 +3872,7 @@ country_event = { #dahomey revolts
 			load_oob = DAH_revolt_oob
 		}
 		hidden_effect = {
-			ORL = {
+			FRP = {
 				country_event = {
 					id = fra.104
 					days = 30
@@ -3891,15 +3882,12 @@ country_event = { #dahomey revolts
 	}
 }
 
-country_event = { #ORL event, resistance spawns
+country_event = { #FRP event, resistance spawns
 	id = fra.104
 	title = fra.104.t
 	desc = fra.104.d
-
 	picture = GFX_report_event_diplomacy3
-
 	is_triggered_only = yes
-
 	fire_only_once = yes
 
 	option = { #big oof
@@ -3908,7 +3896,7 @@ country_event = { #ORL event, resistance spawns
 			FRA = {
 				load_oob = FRA_resistance_1
 			}
-			ORL = {
+			FRP = {
 				country_event = {
 					id = fra.105
 					days = 35
@@ -3918,7 +3906,7 @@ country_event = { #ORL event, resistance spawns
 	}
 }
 
-country_event = { #ORL event, resistance spawns
+country_event = { #FRP event, resistance spawns
 	id = fra.105
 	title = fra.105.t
 	desc = fra.105.d
@@ -3935,7 +3923,7 @@ country_event = { #ORL event, resistance spawns
 			FRA = {
 				load_oob = FRA_resistance_2
 			}
-			ORL = {
+			FRP = {
 				country_event = {
 					id = fra.106
 					days = 75
@@ -3945,17 +3933,15 @@ country_event = { #ORL event, resistance spawns
 	}
 }
 
-country_event = { #ORL event, resistance spawns
+country_event = { #FRP event, resistance spawns
 	id = fra.106
 	title = fra.106.t
 	desc = fra.106.d
-
 	picture = GFX_report_event_diplomacy3
-
 	is_triggered_only = yes
 
 	trigger = {
-		original_tag = ORL
+		original_tag = FRP
 		FRA = {
 			exists = yes
 		}
@@ -3969,7 +3955,7 @@ country_event = { #ORL event, resistance spawns
 			FRA = {
 				load_oob = FRA_resistance_3
 			}
-			ORL = {
+			FRP = {
 				country_event = {
 					id = fra.104
 					days = 100
@@ -3988,7 +3974,7 @@ country_event = { #FRA retakes Marseille
 
 	trigger = {
 		original_tag = FRA
-		ORL = {
+		FRP = {
 			exists = yes
 			has_capitulated = no
 			has_war_with = FRA
@@ -3997,7 +3983,7 @@ country_event = { #FRA retakes Marseille
 			exists = yes
 		}
 		21 = {
-			is_owned_by = ORL
+			is_owned_by = FRP
 			is_controlled_by = FRA
 		}
 	}
@@ -4026,7 +4012,7 @@ country_event = { #FRA retakes Bordeaux
 
 	trigger = {
 		original_tag = FRA
-		ORL = {
+		FRP = {
 			exists = yes
 			has_capitulated = no
 			has_war_with = FRA
@@ -4035,7 +4021,7 @@ country_event = { #FRA retakes Bordeaux
 			exists = yes
 		}
 		19 = {
-			is_owned_by = ORL
+			is_owned_by = FRP
 			is_controlled_by = FRA
 		}
 	}
@@ -4061,7 +4047,7 @@ country_event = { #FRA retakes Paris
 
 	trigger = {
 		original_tag = FRA
-		ORL = {
+		FRP = {
 			exists = yes
 			has_capitulated = no
 			has_war_with = FRA
@@ -4070,7 +4056,7 @@ country_event = { #FRA retakes Paris
 			exists = yes
 		}
 		16 = {
-			is_owned_by = ORL
+			is_owned_by = FRP
 			is_controlled_by = FRA
 		}
 	}
