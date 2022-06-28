@@ -249,6 +249,7 @@ can_release_libya = {
   state = 448
   NOT = { is_claimed_by = ROOT }
   ROOT = {
+		should_release_algeria_first = yes
     NOT = {
       country_exists = LBA
       has_country_flag = LBA_CONQ
@@ -310,6 +311,7 @@ can_release_morocco = {
 	state = 898
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+		should_release_algeria_first = yes
 		NOT = {
 			country_exists = MOR
 			has_country_flag = MOR_CONQ
@@ -481,6 +483,7 @@ can_release_tunisia = {
   state = 458
   NOT = { is_claimed_by = ROOT }
   ROOT = {
+		should_release_algeria_first = yes
     NOT = {
       country_exists = TUN
       has_country_flag = TUN_CONQ
@@ -548,6 +551,14 @@ can_establish_colony = {
     }
   }
   has_socialist_government = no
+}
+
+should_release_algeria_first = {
+	OR = {
+		country_exists = ALG
+		has_country_flag = ALG_CONQ
+		459 = { is_valid_annexation_state = no }
+	}
 }
 
 should_release_central_africa_first = {

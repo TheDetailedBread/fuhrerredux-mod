@@ -150,10 +150,12 @@ country_event = { # Fate of Central African Republic
     ai_chance = {
       base = 100
     }
+    NFA = { get_current_government_type = yes }
     set_temp_variable = { tag_to_release = NFQ }
     release_targeted_tag = NFQ
     hidden_effect = {
       NFQ = {
+        restore_previous_government_type = yes
         set_politics = {
           ruling_party = paternal_autocrat
           elections_allowed = no
@@ -362,11 +364,32 @@ country_event = { # Fate of Cameroon
 
   option = { # Puppet
     name = annex.2005.a
+    trigger = {
+      NFQ = {
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = CMR }
     release_targeted_tag = yes
+  }
+
+  option = { # Transfer to Equitorial Africa
+    name = annex.2005.b
+    trigger = {
+      NFQ = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    CMR = {
+      every_core_state = {
+        transfer_state_to = NFQ
+        add_core_of = NFQ
+      }
+    }
   }
 
   option = { # Occupy
@@ -793,11 +816,34 @@ country_event = { # Fate of Guinea-Bissau
 
   option = { # Puppet
     name = annex.2016.a
+    trigger = {
+      NFA = {
+        NOT = {
+          is_subject_of = ROOT
+        }
+      }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = GNB }
     release_targeted_tag = yes
+  }
+
+  option = { # Transfer the territories to West Africa
+    name = annex.2016.b
+    trigger = {
+      NFA = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    GNB = {
+      every_core_state = {
+        transfer_state_to = NFA
+        add_core_of = NFA
+      }
+    }
   }
 
   option = { # Occupy
@@ -956,11 +1002,34 @@ country_event = { # Fate of Morocco
 
   option = { # Puppet
     name = annex.2020.a
+    trigger = {
+      ALG = {
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = MOR }
     release_targeted_tag = yes
+  }
+
+  option = { # Transfer to North Africa
+    name = annex.2020.b
+    trigger = {
+      tag = ENG
+      ALG = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = ALG }
+    898 = { transfer_state_and_add_core = yes }
+    461 = { transfer_state_and_add_core = yes }
+    462 = { transfer_state_and_add_core = yes }
+    922 = { transfer_state_and_add_core = yes }
+    923 = { transfer_state_and_add_core = yes }
+    924 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Occupy
@@ -1226,7 +1295,7 @@ country_event = { # Fate of Senegal
 
   option = { # Puppet
     name = annex.2027.a
-    ai_chance = {
+    trigger = {
       can_establish_colony = no
     }
     ai_chance = {
@@ -1244,10 +1313,90 @@ country_event = { # Fate of Senegal
     ai_chance = {
       base = 100
     }
+    hidden_effect = {
+      if = {
+        limit = { owns_state = 701 }
+        701 = { 
+          add_core_of = NFA 
+          remove_claim_by = ROOT
+        }
+      } 
+      else = {
+        701 = { remove_core_of = NFA }
+      }
+
+      if = {
+        limit = { owns_state = 700 }
+        700 = { 
+          add_core_of = NFA
+          remove_claim_by = ROOT
+        }
+      }
+      else = {
+        700 = { remove_core_of = NFA }
+      }
+
+      if = {
+        limit = { owns_state = 274 }
+        274 = { 
+          add_core_of = NFA
+          remove_claim_by = ROOT
+        }
+      }
+      else = {
+        274 = { remove_core_of = NFA }
+      }
+
+      if = {
+        limit = { owns_state = 994 }
+        994 = { 
+          add_core_of = NFA
+          remove_claim_by = ROOT
+        }
+      }
+      else = {
+        994 = { remove_core_of = NFA }
+      }
+
+      if = {
+        limit = { owns_state = 558 }
+        558 = { 
+          add_core_of = NFA
+          remove_claim_by = ROOT
+        }
+      }
+      else = {
+        588 = { remove_core_of = NFA }
+      }
+
+      if = {
+        limit = { owns_state = 965 }
+        965 = { 
+          add_core_of = NFA
+          remove_claim_by = ROOT
+        }
+      }
+      else = {
+        965 = { remove_core_of = NFA }
+      }
+
+      if = {
+        limit = { owns_state = 957 }
+        957 = { 
+          add_core_of = NFA
+          remove_claim_by = ROOT
+        }
+      }
+      else = {
+        957 = { remove_core_of = NFA }
+      }
+    }
+    NFA = { get_current_government_type = yes }
     set_temp_variable = { tag_to_release = NFA }
     release_targeted_tag = NFA
     hidden_effect = {
       NFA = {
+        restore_previous_government_type = yes
         set_politics = {
           ruling_party = paternal_autocrat
           elections_allowed = no
@@ -1609,11 +1758,32 @@ country_event = { # Fate of Liberia
 
   option = { # Puppet
     name = annex.2034.a
+    trigger = {
+      NFA = {
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = LIB }
     release_targeted_tag = yes
+  }
+
+  option = { # Transfer the territories to West Africa
+    name = annex.2034.b
+    trigger = {
+      NFA = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    LIB = {
+      every_core_state = {
+        transfer_state_to = NFA
+        add_core_of = NFA
+      }
+    }
   }
 
   option = { # Occupy
@@ -1647,11 +1817,30 @@ country_event = { # Fate of Tunisia
 
   option = { # Puppet
     name = annex.2035.a
+    trigger = {
+      ALG = {
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = TUN }
     release_targeted_tag = yes
+  }
+
+  option = { # Transfer to North Africa
+    name = annex.2035.b
+    trigger = {
+      tag = ENG
+      ALG = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = ALG }
+    458 = { transfer_state_and_add_core = yes }
+    665 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Occupy
@@ -1692,6 +1881,12 @@ country_event = { # Fate of Algeria
     }
     set_temp_variable = { tag_to_release = ALG }
     release_targeted_tag = yes
+    hidden_effect = {
+      if = {
+        limit = { tag = ENG }
+        ALG = { set_cosmetic_tag = ENG_ALG }
+      }
+    }
   }
 
   option = { # Occupy
@@ -1771,11 +1966,37 @@ country_event = { # Fate of Libya
 
   option = { # Puppet
     name = annex.2038.a
+    trigger = {
+      ALG = {
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = LBA }
     release_targeted_tag = yes
+  }
+
+  option = { # Transfer to North Africa
+    name = annex.2038.b
+    trigger = {
+      tag = ENG
+      ALG = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = ALG }
+    273 = { transfer_state_and_add_core = yes }
+    448 = { transfer_state_and_add_core = yes }
+    449 = { transfer_state_and_add_core = yes }
+    450 = { transfer_state_and_add_core = yes }
+    451 = { transfer_state_and_add_core = yes }
+    661 = { transfer_state_and_add_core = yes }
+    662 = { transfer_state_and_add_core = yes }
+    663 = { transfer_state_and_add_core = yes }
+    769 = { transfer_state_and_add_core = yes }
   }
 
   option = { # Occupy
@@ -1809,6 +2030,11 @@ country_event = { # Fate of Western Sahara
 
   option = { # Puppet
     name = annex.2039.a
+    trigger = {
+      NFA = {
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_chance = {
       base = 100
     }
@@ -1818,10 +2044,26 @@ country_event = { # Fate of Western Sahara
 
   option = { # Give it to Morroco
     name = annex.2039.b
+    trigger = {
+      MOR = { ROOT_can_grant_land = yes }
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = MOR }
+    699 = { transfer_state_and_add_core = yes }
+    1002 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Transfer it to West Africa
+    name = annex.2039.c
+    trigger = {
+      NFA = { is_subject_of = ROOT }
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = NFA }
     699 = { transfer_state_and_add_core = yes }
     1002 = { transfer_state_and_add_core = yes }
   }
