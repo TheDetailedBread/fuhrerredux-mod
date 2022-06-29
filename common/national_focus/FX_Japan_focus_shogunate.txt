@@ -1,0 +1,212 @@
+###Japanese Civil War Tree
+###Japanese Coup d'etat
+###Iesato Shogunalistic Democracy
+##Daijo-Daijin Succession Crisis
+#Radical Shogunate
+#Purist Nichirenism
+#Pan-Asianist Eternal Union
+#Northern Court Empire
+##Promise of Democracy 
+#Burakumin Compromise
+#Socialist Take Over
+################################################
+focus_tree = {
+	id = FX_Japan_Shogunate
+	country = {
+		factor = 0
+		modifier = {
+			add = 25 #5 is default value
+			tag = JAP
+		}
+	}
+	default = no
+	#shared_focus =
+	focus = { 
+		id = JAP_alliance_triumphant
+		#icon = GFX_goal_shogunate_triumphant
+		x = 20
+		y = 0
+		cost = 5
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = "The Northern Alliance has consolidated the ruling authority over the island"
+				OR = {
+					has_country_flag = JAP_counter_coup_win
+					has_country_flag = JAP_alliance_win_over_civilwar
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_alliance_triumphant"
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = JAP_great_council_of_state
+		#icon = GFX_goal_Council_of_State_Japan
+		prerequisite = {
+			focus = JAP_alliance_triumphant
+		}
+		relative_position_id = JAP_alliance_triumphant
+		x = 0
+		y = 1
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_great_council_of_state"
+			custom_effect_tooltip = "The Cabinet will soon be replaced by Great Council of State"
+			#add_trait = {
+			#	character = TAG_jane_smith
+			#	slot = political_advisor
+			#	trait = really_good_boss
+			#}
+			#Dual Leader Portrait
+		}
+	}
+	focus = {
+		id = JAP_embrace_ritsuryo_in_provisional_law
+		#icon = GFX_goal_old_japan_law
+		prerequisite = {
+			focus = JAP_great_council_of_state
+		}
+		relative_position_id = JAP_great_council_of_state
+		x = -2
+		y = 1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_embrace_ritsuryo_in_provisional_law"
+			add_stability = 0.05
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = JAP_empower_shogunate_authority
+		#icon = GFX_goal_shogun_power
+		prerequisite = {
+			focus = JAP_great_council_of_state
+		}
+		relative_position_id = JAP_great_council_of_state
+		x = 2
+		y = 1
+		cost = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_empower_shogunate_authority"
+			#add_ideas = JAP_first_amongs_equal
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = JAP_kyujidai_doctrine
+		#icon = GFX_goal_kyujidai_doctrine
+		prerequisite = {
+			focus = JAP_great_council_of_state
+		}
+		available = {
+			NOT = {
+				has_completed_focus = JAP_shinjidai_doctrine
+			}
+		}
+		relative_position_id = JAP_great_council_of_state
+		x = -4
+		y = 2
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_kyujidai_doctrine"
+			#add_ideas = JAP_kyujidai_idea_0
+		}
+	}
+	focus = {
+		id = JAP_shinjidai_doctrine
+		#icon = GFX_goal_shinjidai_doctrine
+		prerequisite = {
+			focus = JAP_great_council_of_state
+		}
+		available = {
+			NOT = {
+				has_completed_focus = JAP_kyujidai_doctrine
+			}
+		}
+		relative_position_id = JAP_great_council_of_state
+		x = 4
+		y = 2
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_shinjidai_doctrine"
+			#add_ideas = JAP_shinjidai_idea_0
+		}
+	}
+	focus = {
+		id = JAP_supreme_tribunal_of_nagasaki
+		prerequisite = {
+			focus = JAP_empower_shogunate_authority
+		}
+		prerequisite = {
+			focus = JAP_embrace_ritsuryo_in_provisional_law
+		}
+		relative_position_id = JAP_great_council_of_state
+		x = 0
+		y = 2
+		cost = 11
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_supreme_tribunal_of_nagasaki"
+		}
+	}
+	focus = {
+		id = JAP_the_ultranationalists
+		prerequisite = {
+			focus = JAP_supreme_tribunal_of_nagasaki
+		}
+		relative_position_id = JAP_supreme_tribunal_of_nagasaki
+		x = -3 
+		y = 1
+		cost = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_supreme_tribunal_of_nagasaki"
+		}
+	}
+	focus = {
+		id = JAP_the_military_command
+		prerequisite = {
+			focus = JAP_supreme_tribunal_of_nagasaki
+		}
+		relative_position_id = JAP_supreme_tribunal_of_nagasaki
+		x = 0
+		y = 1
+		cost = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_the_military_command"
+		}
+	}
+	focus = {
+		id = JAP_the_ultraroyalists
+		prerequisite = {
+			focus = JAP_supreme_tribunal_of_nagasaki
+		}
+		relative_position_id = JAP_supreme_tribunal_of_nagasaki
+		x = 3
+		y = 1
+		cost = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_the_ultraroyalists"
+		}
+	}
+	focus = {
+		id = JAP_tribunal_final_phase
+		prerequisite = { focus = JAP_the_ultranationalists }
+		prerequisite = { focus = JAP_the_military_command }
+		prerequisite = { focus = JAP_the_ultraroyalists }
+		relative_position_id = JAP_supreme_tribunal_of_nagasaki
+		x = 0
+		y = 2
+		cost = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_tribunal_final_phase"
+		}
+	}
+}
