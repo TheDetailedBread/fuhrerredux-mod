@@ -50,7 +50,6 @@ characters = {
 			traits = { }
 		}
 	}
-	
 	CAN_John_Ross_Taylor = {
 		name = "John Ross Taylor"
 		portraits = {
@@ -93,20 +92,17 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	CAN_Arthur_Currie = {
-		name = "Arthur Currie"
+	CAN_Garner_Ormsby_Currie = {
+		name = "Garner Ormsby Currie"
 		portraits = {
 			army = {
-				large = "gfx/leaders/CAN/Portrait_CAN_Arthur_Currie.png"
+				large = "gfx/leaders/CAN/Portrait_CAN_Garner_Ormsby_Currie.png"
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = {
-        brilliant_strategist
-        offensive_doctrine
-        war_hero
         infantry_officer
-        infantry_leader
+				trait_mountaineer
 			}
 			skill = 4
 			attack_skill = 2
@@ -218,7 +214,7 @@ characters = {
 		name = "H.T. Baillie-Grohman"
 		portraits = {
 			navy = {
-				large = "gfx/leaders/CAN/Portrait_CAN_HT_Baillie_Grohman.png"
+				large = "gfx/leaders/Generic/Portrait_Britain_Generic_navy_3.png"
 			}
 		}
 		navy_leader = {
@@ -235,7 +231,7 @@ characters = {
 		name = "James D. Prentice"
 		portraits = {
 			navy = {
-				large = "gfx/leaders/CAN/Portrait_CAN_James_D_Prentice.png"
+				large = "gfx/leaders/Generic/Portrait_Britain_Generic_navy_2.png"
 			}
 		}
 		navy_leader = {
@@ -629,11 +625,12 @@ characters = {
 				small = "gfx/interface/ministers/CAN/CAN_Henry_Crerar.png"
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {
-        inflexible_strategist
-        old_guard
-        trait_cautious
+        inspirational_leader
+				trait_engineer
+				organizer
+				fast_planner
       }
 			skill = 2
 			attack_skill = 4
@@ -690,7 +687,6 @@ characters = {
 			on_add = { set_country_flag = CAN_Henry_Herbert_Stevens_hog_hired }
 			on_remove = { clr_country_flag = CAN_Henry_Herbert_Stevens_hog_hired }
 			traits = {
-				
 				hog_charismatic_charmer
 			}
 		}
@@ -717,7 +713,6 @@ characters = {
 			on_add = { set_country_flag = CAN_John_Diefenbaker_hog_hired }
 			on_remove = { clr_country_flag = CAN_John_Diefenbaker_hog_hired }
 			traits = {
-				
 				hog_corporate_suit
 			}
 		}
@@ -1739,6 +1734,86 @@ characters = {
 			}
 		}
 	}
+	CAN_Kenneth_Stuart = {
+		name = "Kenneth Stuart"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAN/Portrait_CAN_Kenneth_Stuart.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				trait_reckless
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+		}
+	}
+	CAN_George_Kitching = {
+		name = "George Kitching"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAN/Portrait_CAN_George_Kitching.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				trait_engineer
+				fortress_buster
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	CAN_Harry_Leonard_Nowell_Salmon = {
+		name = "Harry Leonard Nowell Salmon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAN/Portrait_CAN_HLN_Salmon.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				commando
+				skirmisher
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	CAN_John_Hamilton_Roberts = {
+		name = "John Hamilton Roberts"
+		portraits = {
+			army = {
+				large = "gfx/leaders/CAN/Portrait_CAN_John_Hamilton_Roberts.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				winter_specialist
+				winter_expert
+				panzer_leader
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
 	CAN_George_Vanier = {
 		name = "George Vanier"
 		portraits = {
@@ -1752,22 +1827,6 @@ characters = {
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 2
-			logistics_skill = 3
-		}
-	}
-	CAN_John_Campbell = {
-		name = "John Campbell"
-		portraits = {
-			army = {
-				large = "gfx/leaders/CAN/Portrait_CAN_John_Campbell.png"
-			}
-		}
-		corps_commander = {
-			traits = { }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 4
 			logistics_skill = 3
 		}
 	}
