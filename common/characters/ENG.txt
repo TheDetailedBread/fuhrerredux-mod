@@ -213,7 +213,10 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { war_hero trickster }
+			traits = { 
+				war_hero 
+				trickster
+			}
 			skill = 1
 			attack_skill = 2
 			defense_skill = 4
@@ -441,7 +444,8 @@ characters = {
 		}
 		corps_commander = {
 			traits = {
-				career_officer
+				old_guard 
+				infantry_leader
 			}
 			skill = 3
 			attack_skill = 4
@@ -1076,6 +1080,9 @@ characters = {
 			civilian = {
 				small = "gfx/interface/ministers/ENG/ENG_Adrian_Carton_de_Wiart.png"
 			}
+			army = {
+				large = "gfx/leaders/ENG/Portrait_ENG_Adrian_Carton_de_Wiart.png"
+			}
 		}
 		advisor = {
 			cost = 150
@@ -1090,6 +1097,17 @@ characters = {
 				social_conservative
 				for_apologetic_clerk
 			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+				commando
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
 		}
 	}
 	ENG_John_Colville = {
@@ -1819,7 +1837,13 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = {
+				logistics_wizard
+				war_hero
+				career_officer
+				logistics_wizard
+				thorough_planner
+			}
 			skill = 2
 			attack_skill = 4
 			defense_skill = 4
@@ -1852,7 +1876,10 @@ characters = {
 			}
 		}
 		navy_leader = {
-			traits = { }
+			traits = {
+				old_guard_navy
+				ironside
+			}
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
@@ -2073,6 +2100,42 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/ENG/Portrait_ENG_King_George_VI_fx.png"
 			}
+		}
+	}
+	ENG_John_Campbell = {
+		name = "John Campbell"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/Portrait_ENG_John_Campbell.png"
+			}
+		}
+		corps_commander = {
+			traits = { trickster }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	ENG_Orde_Wingate = {
+		name = "Orde Wingate"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ENG/Portrait_ENG_Orde_Wingate.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster
+				jungle_rat
+				CAN_british_exile_trait
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 5
 		}
 	}
 }

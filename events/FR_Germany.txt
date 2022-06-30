@@ -7422,7 +7422,20 @@ country_event = { # Otto Straser flees to Kiel
 
 	option = {
 		name = "Damn that Shadow Marxist!"
+		set_nationality = {
+			target_country = SHO
+			character = GER_Otto_Strasser
+		}
 		SHO = {
+			GER_Otto_Strasser = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = vanguardist_subtype
+						traits = { }
+					}
+				}
+			}
 			set_country_flag = SHO_here_comes_strasser
 		}
 	}
