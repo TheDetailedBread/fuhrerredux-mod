@@ -4396,24 +4396,9 @@ focus_tree = {
 		prerequisite = {
 			focus = jap_military_contracts
 		}
-		
 		ai_will_do = {
 			factor = 40
-		}	
-	
-		available = {
-            NOT = {
-                OR = {
-                    has_idea = JAP_LSMC_complete # Cant have any one of these ideas
-                    has_idea = JAP_LSMC_stage1_rec
-                    has_idea = JAP_LSMC_stage2_rec
-                    has_idea = JAP_LSMC_stage3_rec
-                    has_idea = JAP_LSMC_stage4_rec
-                    has_idea = JAP_LSMC_stage5_rec
-                }
-            }
 		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus jap_the_great_recovery"
 			add_ideas = jap_LSMC_conquered
