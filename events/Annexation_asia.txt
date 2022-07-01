@@ -733,9 +733,20 @@ country_event = { # Fate of Philippines
     hidden_effect = {
       PHI = {
         restore_previous_government_type = yes
-        set_politics = {
-          ruling_party = authoritarian_democrat
-          elections_allowed = no
+        if = {
+          limit = {
+            ROOT = { has_socialist_government = yes }
+          }
+          set_politics = {
+            ruling_party = libertarian_socialist
+            elections_allowed = no
+          }
+        }
+        else = {
+          set_politics = {
+            ruling_party = authoritarian_democrat
+            elections_allowed = no
+          }
         }
         set_party_name = {
           name = PHI_ktp_party

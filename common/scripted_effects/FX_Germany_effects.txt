@@ -38,3 +38,78 @@ GER_add_wilhelm_iii = {
     }
   }
 }
+
+# Transfer some non-valkist characters to the new puppet
+# As of now, the criteria of non-valkists are those
+# who are OTL opposition to funny mustache man
+GER_transfer_characters_to_puppet = {
+  GER = {
+    set_nationality = {
+      target_country = GRP
+      character = GER_Wilhelm_Pieck
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Ernst_Thalmann
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Walter_Ulbricht
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Otto_Wels
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Theodor_Heuss
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Gustav_Stresemann
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Heinrich_Bruning
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Franz_von_Papen
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Ritter_von_Leeb
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Werner_von_Blomberg
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Erwin_von_Witzleben
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Carl_Heinrich_von_Stuelpnagel
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Ewald_von_Kleist
+    }
+    set_nationality = {
+      target_country = GRP
+      character = GER_Ferdinand_Schoerner
+    }
+  }
+  GRP = {
+    promote_character = GER_Wilhelm_Pieck
+    promote_character = GER_Ernst_Thalmann
+    promote_character = GER_Walter_Ulbricht
+    promote_character = GER_Otto_Wels
+    promote_character = GER_Gustav_Stresemann
+    promote_character = GER_Theodor_Heuss
+    promote_character = GER_Franz_von_Papen
+    promote_character = GER_Heinrich_Bruning
+    promote_character = GER_Ritter_von_Leeb
+  }
+}
