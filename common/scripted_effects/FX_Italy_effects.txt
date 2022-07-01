@@ -1,0 +1,20 @@
+ITA_create_east_africa = {
+  if = {
+    limit = { owns_state = 550 }
+    550 = {
+      transfer_state_and_add_claim_or_core = yes
+      remove_claim_by = ITA
+    }
+  }
+  if = {
+    limit = { owns_state = 559 }
+    559 = {
+      transfer_state_and_add_claim_or_core = yes
+      remove_claim_by = ITA
+    }
+  }
+
+  ETH = {
+    set_cosmetic_tag = ETH_ITA_puppet
+  }
+}
