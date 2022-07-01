@@ -1847,8 +1847,13 @@ characters = {
 		name = "Franz von Papen"
 		portraits = {
 			civilian = {
+				large = "gfx/leaders/GER/Portrait_GER_Franz_von_Papen.png"
 				small = "gfx/interface/ministers/GER/GER_Franz_von_Papen.png"
 			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			traits = { }
 		}
 		advisor = {
 			cost = 150
@@ -2659,6 +2664,35 @@ characters = {
 			idea_token = GER_Adolf_Heusinger_carm_ade
 			traits = {
 				carm_decisive_battle_doctrine
+			}
+		}
+	}
+	GER_Werner_von_Blomberg = {
+		name = "Werner von Blomberg"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_GER_Werner_von_Blomberg.png"
+				small = "gfx/interface/ministers/GER/GER_Werner_von_Blomberg.png"
+			}
+		}
+		corps_commander = {
+			traits = { 
+				career_officer 
+				armor_officer 
+				trickster 
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_army
+			idea_token = GER_Werner_von_Blomberg_carm_pau
+			traits = {
+				cos_school_of_psychology
 			}
 		}
 	}
