@@ -33,9 +33,22 @@ on_actions = {
 		   }
 		}
 	}
-  on_startup = {
+	on_startup = { ##Temporary China Core Fixed
+		effect = {
+			every_state = {
+				limit = {
+					is_claimed_by = CHI 
+					NOT = { is_core_of = RAJ }
+				}
+				CHI = {
+					add_state_core = PREV 
+					remove_state_claim = PREV 
+				}
+			}
+		}
+	}
+	on_startup = {
 	    effect = {
-
 			if = {
 				limit = {
 					has_game_rule = {
