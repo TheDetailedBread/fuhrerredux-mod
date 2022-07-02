@@ -377,7 +377,10 @@ focus_tree = {
     prerequisite = { focus = PHI_intensify_land_reform_efforts }
     relative_position_id = PHI_intensify_land_reform_efforts
     completion_reward = {
-      add_stability = 0.15
+      add_offsite_building = {
+        type = industrial_complex
+        level = 2
+      }
     }
     search_filters = {
       FOCUS_FILTER_STABILITY
@@ -894,9 +897,10 @@ focus_tree = {
     prerequisite = { focus = PHI_agrarian_investments }
     relative_position_id = PHI_agrarian_investments
     completion_reward = {
-      add_stability = 0.1
-      add_war_support = 0.1
-      add_political_power = 100
+      add_offsite_building = {
+        type = industrial_complex
+        level = 2
+      }
     }
     search_filters = { 
       FOCUS_FILTER_STABILITY
