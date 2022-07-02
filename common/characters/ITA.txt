@@ -582,23 +582,23 @@ characters = {
 			}
 		}
 	}
-	ITA_Amadeo_di_Savoia_Aosta = {
-		name = "Amadeo di Savoia Aosta"
+	ITA_Amedeo_di_Savoia_Aosta = {
+		name = "Amedeo di Savoia Aosta"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/ITA/Portrait_ITA_Amadeo_di_Savoia_Aosta.png"
-				small = "gfx/interface/ministers/ITA/ITA_Amadeo_di_Savoia_Aosta.png"
+				large = "gfx/leaders/ITA/Portrait_ITA_Amedeo_di_Savoia_Aosta.png"
+				small = "gfx/interface/ministers/ITA/ITA_Amedeo_di_Savoia_Aosta.png"
 			}
 		}
 		advisor = {
 			cost = 150
 			slot = foreign_minister
 			available = { 
-				hidden_trigger = { has_country_flag = ITA_Amadeo_di_Savoia_Aosta_for_pau_hired }
+				hidden_trigger = { has_country_flag = ITA_Amedeo_di_Savoia_Aosta_for_pau_hired }
 			}
-			idea_token = ITA_Amadeo_di_Savoia_Aosta_for_pau
-			on_add = { set_country_flag = ITA_Amadeo_di_Savoia_Aosta_for_pau_hired }
-			on_remove = { clr_country_flag = ITA_Amadeo_di_Savoia_Aosta_for_pau_hired }
+			idea_token = ITA_Amedeo_di_Savoia_Aosta_for_pau
+			on_add = { set_country_flag = ITA_Amedeo_di_Savoia_Aosta_for_pau_hired }
+			on_remove = { clr_country_flag = ITA_Amedeo_di_Savoia_Aosta_for_pau_hired }
 			traits = {
 				paternal_autocrat
 				for_the_cloak_n_dagger_schemer
