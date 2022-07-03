@@ -2625,15 +2625,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		available = {
 			KUR = { exists = yes }
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
-			}
+			has_socialist_government = no
+			has_democratic_government = no
 		}
 		prerequisite = {
 			focus = TUR_erz_pleb
@@ -2680,18 +2673,14 @@ focus_tree = {
 		id = TUR_conquer_arabia
 		icon = GFX_goal_generic_attack_arabia
 		available = {
-			ARB = { exists = yes }
+			OR = {
+				country_exists = ARB
+				country_exists = SAU
+			}
 			has_army_manpower = { size > 299999 }
 			has_government = paternal_autocrat
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
-			}
+			has_socialist_government = no
+			has_democratic_government = no
 		}
 		prerequisite = {
 			focus = TUR_destroy_kurds
@@ -2730,10 +2719,20 @@ focus_tree = {
 		will_lead_to_war_with = ARB
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TUR_conquer_arabia"
-			declare_war_on = {
-				type = annex_everything
-				target = ARB
+			if = {
+				limit = { country_exists = ARB }
+				declare_war_on = {
+					type = annex_everything
+					target = ARB
+				}
 			}
+			else = {
+				declare_war_on = {
+					type = annex_everything
+					target = SAU
+				}
+			}
+			
 			add_named_threat = { threat = 3.5 name = TUR_war_with_arabia_threat }
 		}
 	}
@@ -2742,18 +2741,11 @@ focus_tree = {
 		id = TUR_put_down_the_mashriqis
 		icon = GFX_goal_generic_attack_iraq
 		available = {
-			IRQ = { exists = yes }
+			country_exists = IRQ
 			has_army_manpower = { size > 299999 }
 			has_government = paternal_autocrat
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
-			}
+			has_socialist_government = no
+			has_democratic_government = no
 		}
 		prerequisite = {
 			focus = TUR_destroy_kurds
