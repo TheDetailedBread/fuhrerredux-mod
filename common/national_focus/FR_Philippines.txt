@@ -2068,7 +2068,13 @@ focus_tree = {
       }
     }
     available = {
-      has_democratic_government = yes
+      OR = {
+        has_democratic_government = yes
+        custom_trigger_tooltip = {
+          tooltip = PHI_junta_in_control_tt
+          has_country_flag = PHI_junta_in_control
+        }
+      }
       is_in_faction = no
       FRA = {
         exists = yes
@@ -2117,8 +2123,14 @@ focus_tree = {
       }
     }
     available = {
+      OR = {
+        has_democratic_government = yes
+        custom_trigger_tooltip = {
+          tooltip = PHI_junta_in_control_tt
+          has_country_flag = PHI_junta_in_control
+        }
+      }
       is_in_faction = no
-      has_democratic_government = yes
       country_exists = USA
     }
     bypass = {
