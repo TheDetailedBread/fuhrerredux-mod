@@ -651,6 +651,12 @@ country_event = { # Opening of the Campaign Season
   picture = GFX_report_event_PHI_crowd_1
   is_triggered_only = yes
 
+  trigger = {
+    NOT = {
+      has_government = paternal_autocrat
+    }
+  }
+
   option = { # Your campaign jingles are too loud!
     name = philippines.33.a
     add_political_power = 20
@@ -2669,7 +2675,7 @@ country_event = { # President Quezon Assassinated
     remove_every_minister = yes
     add_ideas = {
       PHI_Basilio_J_Valdez_hog_pau
-      PHI_Ferdinand_E_Marcos_for_ade
+      PHI_Vicente_P_Lim_for_pau
       PHI_Ramon_A_Alcaraz_eco_pau
       PHI_Jose_Yulo_sec_sco
     }
