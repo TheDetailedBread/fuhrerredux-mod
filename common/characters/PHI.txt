@@ -263,9 +263,9 @@ characters = {
 			}
 		}
 		country_leader = {
-      desc = "POLITICS_BASILIO_J_VALDEZ_DESC"
+      desc = POLITICS_BASILIO_J_VALDEZ_DESC
 			ideology = paternal_autocrat_subtype
-			traits = { }
+			traits = { PHI_the_surgeon }
 		}
 		field_marshal = {
       desc = POLITICS_BASILIO_J_VALDEZ_DESC
@@ -1898,6 +1898,28 @@ characters = {
 			traits = {
 				market_liberal
 				sec_secret_police_chief
+			}
+		}
+	}
+	PHI_Jose_Avelino = {
+		name = "Jose Avelino"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/PHI/PHI_Jose_Avelino.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = economy_minister
+			available = {
+				hidden_trigger = { has_country_flag = PHI_Jose_Avelino_eco_sco_hired }
+			}
+			idea_token = PHI_Jose_Avelino_eco_sco
+			on_add = { set_country_flag = PHI_Jose_Avelino_eco_sco_hired }
+			on_remove = { clr_country_flag = PHI_Jose_Avelino_eco_sco_hired }
+			traits = {
+				social_conservative
+				eco_balanced_budget_economy
 			}
 		}
 	}
