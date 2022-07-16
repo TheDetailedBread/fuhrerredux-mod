@@ -226,6 +226,28 @@ country_event = { #Popular issurection
 		}
 
 	  hidden_effect = {
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				dismantle_faction = yes
+			}
+			if = {
+				limit = {
+					is_in_faction  = yes
+				}
+				remove_from_faction = GER
+			}
+
+			if = {
+				limit = { has_idea = HOL_dutch_german_economic_cooperation }
+				remove_ideas = HOL_dutch_german_economic_cooperation
+			}
+			else_if = {
+				limit = { has_idea = HOL_dutch_german_economic_cooperation_1 }
+				remove_ideas = HOL_dutch_german_economic_cooperation_1
+			}
+			
       add_ideas = revolutionary_movement
       add_country_leader_role = {
         character = GER_Willy_Brandt
