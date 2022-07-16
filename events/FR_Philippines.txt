@@ -492,6 +492,13 @@ country_event = { # Protests Expands to Other Areas
       country_event = { id = philippines.24 days = 7 }
     }
   }
+
+  option = { # It will be fine...
+    name = philippines.23.b
+    hidden_effect = {
+      country_event = { id = philippines.101 days = 8 }
+    }
+  }
 }
 
 country_event = { # Scouts Expel Protesters in Mendiola
@@ -505,7 +512,12 @@ country_event = { # Scouts Expel Protesters in Mendiola
     name = philippines.24.a
     add_manpower = -50
     hidden_effect = {
-      country_event = { id = philippines.25 days = 12 }
+      if = {
+        limit = {
+          NOT = { has_government = paternal_autocrat }
+        }
+        country_event = { id = philippines.25 days = 12 }
+      }
     }
   }
 }
@@ -639,6 +651,12 @@ country_event = { # Opening of the Campaign Season
   picture = GFX_report_event_PHI_crowd_1
   is_triggered_only = yes
 
+  trigger = {
+    NOT = {
+      has_government = paternal_autocrat
+    }
+  }
+
   option = { # Your campaign jingles are too loud!
     name = philippines.33.a
     add_political_power = 20
@@ -656,7 +674,10 @@ country_event = { # Elections of 1937
     tag = PHI
     date > 1937.1.1
     date < 1938.1.1
-    NOT = { has_country_flag = PHI_has_1937_elections }
+    NOT = { 
+      has_country_flag = PHI_has_1937_elections
+      has_country_flag = PHI_junta_in_control
+    }
   }
 
   option = { # Liberal
@@ -2621,6 +2642,48 @@ country_event = { # Britain Sues for Peace
     annex_country = {
       target = NZL
       transfer_troops = no
+    }
+  }
+}
+
+country_event = { # President Quezon Assassinated
+  id = philippines.101
+  title = philippines.101.t
+  desc = philippines.101.d
+  picture = GFX_report_event_PHI_quezon
+  is_triggered_only = yes
+
+  option = {
+    name = philippines.101.a
+    retire_character = PHI_Manuel_Luis_Quezon
+    PHI_Sergio_P_Osmena = {
+      add_country_leader_role = {
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = { }
+        }
+      }
+    }
+    set_country_flag = PHI_junta_in_control
+    mark_focus_tree_layout_dirty = yes
+    set_politics = {
+      ruling_party = paternal_autocrat
+      elections_allowed = no
+    }
+    increase_ruling_party_popularity_by_20 = yes
+    remove_every_minister = yes
+    add_ideas = {
+      PHI_Basilio_J_Valdez_hog_pau
+      PHI_Vicente_P_Lim_for_pau
+      PHI_Ramon_A_Alcaraz_eco_pau
+      PHI_Jose_Yulo_sec_sco
+    }
+    hidden_effect = {
+      random_other_country = {
+        news_event = { id = fxnews.44 days = 1 }
+      }
+      country_event = { id = philippines.24 days = 2 }
     }
   }
 }

@@ -336,7 +336,7 @@ country_event = {
 				id = worldnews.117
 			}
 		}
-    }
+  }
 }
 
 country_event = {
@@ -3070,7 +3070,10 @@ country_event = {
 
 	option = {
 		name = "This might go very good, or very bad for our nation."
-		add_ideas = JAP_fund_terrorists
+		add_timed_idea = {
+			idea = JAP_fund_terrorists
+			days = 80
+		}
 	}
 }
 
