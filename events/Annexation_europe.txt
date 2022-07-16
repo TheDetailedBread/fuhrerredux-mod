@@ -1113,7 +1113,26 @@ country_event = { # Fate of Great Britain
   immediate = {
     hidden_effect = {
       every_owned_state = {
-        limit = { is_core_of = ENG }
+        limit = {
+          OR = {
+            state = 119
+            state = 120
+            state = 121
+            state = 122
+            state = 123
+            state = 125
+            state = 126
+            state = 127
+            state = 128
+            state = 129
+            state = 130
+            state = 131
+            state = 132
+            state = 133
+            state = 136
+            state = 338
+          }
+        }
         add_core_of = EGL
       }
       add_to_temp_array = { core_removal_array = ENG }
@@ -1531,7 +1550,12 @@ country_event = { # Fate of Netherlands
   }
 
   option = { # Restore the House of Orange
-    name = annex.112.b
+    name = annex.122.b
+    trigger = {
+      NOT = {
+        country_exists = KNE
+      }
+    }
     ai_chance = {
       base = 0
       modifier = {

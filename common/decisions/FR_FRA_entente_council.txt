@@ -635,18 +635,16 @@ FRA_entente_council = {
     }
 	
 	GEN_austria_forts = {	
-
-        icon = generic_industry
-
+    icon = generic_industry
 		available = {
 			GER = {
 				has_completed_focus = GER_central_europe
 			}
 		}
-
-        visible = {
+    visible = {
 			has_idea = GEN_entente_leader
 			AUS = {
+				exists = yes
 				is_puppet = no
 				has_idea = GEN_entente_member
 				has_war = no
@@ -654,37 +652,31 @@ FRA_entente_council = {
 			GER = {
 				has_completed_focus = GER_pangerman
 			}			
-        }
-
+    }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GEN_austria_forts"
 			AUS = {
 				country_event = FRA.council.15
 			}
 		}
-		
 		fire_only_once = yes
-
-        cost = 50
-
-        ai_will_do = {
-            factor = 100
-        }
-    }
+		cost = 50
+		ai_will_do = {
+				factor = 100
+		}
+  }
 	
 	GEN_cze_forts = {	
-
-        icon = generic_industry
-
+    icon = generic_industry
 		available = {
 			GER = {
 				has_completed_focus = GER_central_europe
 			}
 		}
-
-        visible = {
+    visible = {
 			has_idea = GEN_entente_leader
 			CZE = {
+				exists = yes
 				is_puppet = no
 				has_idea = GEN_entente_member
 				has_war = no
@@ -692,37 +684,30 @@ FRA_entente_council = {
 			GER = {
 				has_completed_focus = GER_pangerman
 			}			
-        }
-
+    }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GEN_cze_forts"
 			CZE = {
 				country_event = FRA.council.18
 			}
 		}
-		
 		fire_only_once = yes
-
-        cost = 50
-
-        ai_will_do = {
-            factor = 100
-        }
-    }
-	
+		cost = 50
+		ai_will_do = {
+				factor = 100
+		}
+  }
 	GEN_den_forts = {	
-
-        icon = generic_industry
-
+		icon = generic_industry
 		available = {
 			GER = {
 				has_completed_focus = GER_scandinavia_focus
 			}
 		}
-
-        visible = {
+		visible = {
 			has_idea = GEN_entente_leader
 			DEN = {
+				exists = yes
 				is_puppet = no
 				has_idea = GEN_entente_member
 				has_war = no
@@ -730,37 +715,30 @@ FRA_entente_council = {
 			GER = {
 				has_completed_focus = GER_pangerman
 			}			
-        }
-
+		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GEN_den_forts"
 			DEN = {
 				country_event = FRA.council.19
 			}
 		}
-		
 		fire_only_once = yes
-
-        cost = 50
-
-        ai_will_do = {
-            factor = 100
-        }
-    }
-	
+    cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+  }
 	GEN_pol_forts = {	
-
-        icon = generic_industry
-
+    icon = generic_industry
 		available = {
 			GER = {
 				has_completed_focus = GER_eastern_focus
 			}
 		}
-
-        visible = {
+    visible = {
 			has_idea = GEN_entente_leader
 			POL = {
+				exists = yes
 				is_puppet = no
 				has_idea = GEN_entente_member
 				has_war = no
@@ -768,30 +746,21 @@ FRA_entente_council = {
 			GER = {
 				has_completed_focus = GER_pangerman
 			}			
-        }
-
+    }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GEN_pol_forts"
 			POL = {
 				country_event = FRA.council.20
 			}
 		}
-		
 		fire_only_once = yes
-
-        cost = 50
-
-        ai_will_do = {
-            factor = 100
-        }
-    }
-	
-	
-	
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+  }
 	GEN_leave_council = {
-
-        icon = generic_industry
-
+    icon = generic_industry
 		available = {
 			FRA = {
 				check_variable = {
@@ -799,8 +768,7 @@ FRA_entente_council = {
 				}
 			}
 		}
-
-        visible = {
+    visible = {
 			OR = {
 				has_idea = GEN_entente_member
 				has_idea = GEN_entente_leader
@@ -808,8 +776,7 @@ FRA_entente_council = {
 			NOT = {
 				original_tag = FRA
 			}
-        }
-
+    }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GEN_leave_council"
 			if = {
@@ -825,11 +792,9 @@ FRA_entente_council = {
 				remove_ideas = GEN_entente_leader
 			}
 		}
-
-        cost = 25
-
-        ai_will_do = {
-            factor = 10
+    cost = 25
+    ai_will_do = {
+      factor = 10
 			modifier = {
 				factor = 10
 				ROOT = {
@@ -838,6 +803,6 @@ FRA_entente_council = {
 					}
 				}
 			}
-        }
     }
+  }
 }
