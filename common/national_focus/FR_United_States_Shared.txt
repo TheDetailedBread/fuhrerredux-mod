@@ -126,7 +126,7 @@ shared_focus = {
 	y = 1
 	cost = 6
 	ai_will_do = { factor = 1000 }
-	prerequisite = { focus = USA_increase_corporate_taxes }
+	prerequisite = { focus = USA_pass_the_economic_stimulus_bill }
 	prerequisite = { focus = USA_decrease_military_spending }
 	relative_position_id = USA_pass_the_economic_stimulus_bill
 	completion_reward = {
@@ -298,7 +298,7 @@ shared_focus = {
 # Experimental Tank Divisions
 shared_focus = {
 	id = USA_experimental_tank_divisions
-	icon = GFX_goal_cavalry
+	icon = GFX_goal_American_Armor
 	x = -1
 	y = 2
 	cost = 6
@@ -433,7 +433,7 @@ shared_focus = {
 # Reform the Command Structure
 shared_focus = {
 	id = USA_reform_the_command_structure
-	icon = GFX_goal_USA_police_state
+	icon = GFX_goal_generic_army_high_command
 	x = 1
 	y = 1
 	cost = 6
@@ -503,7 +503,7 @@ shared_focus = {
 # Air Force Debate
 shared_focus = {
 	id = USA_air_force_debate
-	icon = GFX_goal_generic_air_fighter2
+	icon = GFX_goal_generic_air_command
 	x = 19
 	y = 0
 	cost = 6
@@ -626,10 +626,10 @@ shared_focus = {
 	}
 }
 
-# New Pilots
+# The Screaming Eagles
 shared_focus = {
-	id = USA_new_pilots
-	icon = GFX_goal_conscription
+	id = USA_the_screaming_eagles
+	icon = GFX_goal_USA_screaming_eagles
 	x = 1
 	y = 2
 	cost = 6
@@ -639,7 +639,11 @@ shared_focus = {
 	}
 	relative_position_id = USA_create_the_usaf
 	completion_reward = {
-		add_manpower = 10000
+		add_tech_bonus = {
+			category = para_tech
+			bonus = 1.0
+			uses = 1
+		}
 	}
 }
 
@@ -650,8 +654,8 @@ shared_focus = {
 	x = 0
 	y = 1
 	cost = 6
-	prerequisite = { focus = USA_new_pilots }
-	relative_position_id = USA_new_pilots
+	prerequisite = { focus = USA_the_screaming_eagles }
+	relative_position_id = USA_the_screaming_eagles
 	completion_reward = {
 		add_tech_bonus = {
 			category = light_fighter
@@ -668,8 +672,8 @@ shared_focus = {
 	x = -1
 	y = 2 
 	cost = 6
-	prerequisite = { focus = USA_new_pilots }
-	relative_position_id = USA_new_pilots
+	prerequisite = { focus = USA_the_screaming_eagles }
+	relative_position_id = USA_the_screaming_eagles
 	completion_reward = {
 		add_tech_bonus = {
 			category = naval_bomber
@@ -686,8 +690,8 @@ shared_focus = {
 	x = 1
 	y = 2
 	cost = 6
-	prerequisite = { focus = USA_new_pilots }
-	relative_position_id = USA_new_pilots
+	prerequisite = { focus = USA_the_screaming_eagles }
+	relative_position_id = USA_the_screaming_eagles
 	completion_reward = {
 		add_tech_bonus = {
 			category = cat_strategic_bomber
@@ -704,8 +708,8 @@ shared_focus = {
 	x = -2
 	y = 1
 	cost = 6
-	prerequisite = { focus = USA_new_pilots }
-	relative_position_id = USA_new_pilots
+	prerequisite = { focus = USA_the_screaming_eagles }
+	relative_position_id = USA_the_screaming_eagles
 	completion_reward = {
 		random_owned_controlled_state = {
 			if = {
@@ -732,8 +736,8 @@ shared_focus = {
 	x = 2
 	y = 1
 	cost = 6
-	prerequisite = { focus = USA_new_pilots }
-	relative_position_id = USA_new_pilots
+	prerequisite = { focus = USA_the_screaming_eagles }
+	relative_position_id = USA_the_screaming_eagles
 	completion_reward = {
 		random_owned_controlled_state = {
 			if = {
@@ -1673,7 +1677,7 @@ shared_focus = {
 # Privatization of Services
 shared_focus = {
 	id = USA_privitization_of_services
-	icon = GFX_goal_generic_seize_investments
+	icon = GFX_goal_generic_autarky
 	x = -1
 	y = 1
 	cost = 6
