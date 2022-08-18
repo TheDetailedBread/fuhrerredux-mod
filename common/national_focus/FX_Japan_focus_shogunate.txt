@@ -22,7 +22,7 @@ focus_tree = {
 	default = no
 	shared_focus = JAP_alliance_triumphant
 	shared_focus = JAP_grand_triumvirate
-	#shared_focus = JAP_northern_court
+	shared_focus = JAP_northern_court
 	#shared_focus = JAP_republic_proclaim
 	#shared_focus = JAP_shogunate_army
 	#shared_focus = JAP_foreign_gt
@@ -30,7 +30,7 @@ focus_tree = {
 }
 shared_focus = { 
 	id = JAP_alliance_triumphant
-	#icon = GFX_goal_shogunate_triumphant
+	icon = GFX_goal_JAP_victory_of_alliance
 	x = 13
 	y = 0
 	cost = 5
@@ -53,7 +53,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_great_council_of_state
-	#icon = GFX_goal_Council_of_State_Japan
+	icon = GFX_goal_JAP_combined_government
 	relative_position_id = JAP_alliance_triumphant
 	x = 0
 	y = 1
@@ -73,8 +73,8 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_embrace_ritsuryo_in_provisional_law
-	#icon = GFX_goal_old_japan_law
+	id = JAP_establish_ritsuryo_in_provisional_charter
+	icon = GFX_goal_JAP_ritsuryo_code
 	relative_position_id = JAP_great_council_of_state
 	x = -2
 	y = 1
@@ -83,7 +83,7 @@ shared_focus = {
 	}
 	cost = 6
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_embrace_ritsuryo_in_provisional_law"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_establish_ritsuryo_in_provisional_charter"
 		add_stability = 0.05
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -93,7 +93,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_empower_shogunate_authority
-	#icon = GFX_goal_shogun_power
+	icon = GFX_goal_JAP_the_two_tokugawas
 	relative_position_id = JAP_great_council_of_state
 	x = 2
 	y = 1
@@ -113,7 +113,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_kyujidai_doctrine
-	#icon = GFX_goal_kyujidai_doctrine
+	icon = GFX_goal_JAP_kyujidai
 	relative_position_id = JAP_great_council_of_state
 	x = -5
 	y = 2
@@ -122,7 +122,7 @@ shared_focus = {
 	}
 	available = {
 		NOT = {
-			has_completed_shared_focus = JAP_shinjidai_doctrine
+			has_completed_focus = JAP_shinjidai_doctrine
 		}
 	}
 	cost = 5
@@ -133,7 +133,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_shinjidai_doctrine
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_shinjidai
 	relative_position_id = JAP_great_council_of_state
 	x = 5
 	y = 2
@@ -142,7 +142,7 @@ shared_focus = {
 	}
 	available = {
 		NOT = {
-			has_completed_shared_focus = JAP_kyujidai_doctrine
+			has_completed_focus = JAP_kyujidai_doctrine
 		}
 	}
 	cost = 5
@@ -153,7 +153,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_supreme_tribunal_of_nagasaki
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_special_tribunal_nagasaki
 	relative_position_id = JAP_great_council_of_state
 	x = 0
 	y = 2
@@ -161,7 +161,7 @@ shared_focus = {
 		focus = JAP_empower_shogunate_authority
 	}
 	prerequisite = {
-		focus = JAP_embrace_ritsuryo_in_provisional_law
+		focus = JAP_establish_ritsuryo_in_provisional_charter
 	}
 	cost = 11
 	completion_reward = {
@@ -170,9 +170,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_the_ultranationalists
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_ultranat_question
 	relative_position_id = JAP_supreme_tribunal_of_nagasaki
-	x = -3 
+	x = -2 
 	y = 1
 	prerequisite = {
 		focus = JAP_supreme_tribunal_of_nagasaki
@@ -184,7 +184,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_admiralty_question
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_admiralty_question
 	relative_position_id = JAP_supreme_tribunal_of_nagasaki
 	x = 0
 	y = 1
@@ -198,9 +198,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_the_ultraroyalists
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_ultraroyal_question
 	relative_position_id = JAP_supreme_tribunal_of_nagasaki
-	x = 3
+	x = 2
 	y = 1
 	prerequisite = {
 		focus = JAP_supreme_tribunal_of_nagasaki
@@ -212,7 +212,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_tribunal_final_phase
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_last_answer
 	relative_position_id = JAP_supreme_tribunal_of_nagasaki
 	x = 0
 	y = 2
@@ -226,9 +226,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_restore_han_system
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_feudal_domain_return
 	relative_position_id = JAP_kyujidai_doctrine
-	x = 0
+	x = 1
 	y = 1
 	prerequisite = { focus = JAP_kyujidai_doctrine }
 	cost = 5
@@ -238,9 +238,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_centralise_the_armed_forces
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_feudalism_returns
 	relative_position_id = JAP_kyujidai_doctrine
-	x = 0
+	x = 2
 	y = 2
 	prerequisite = { focus = JAP_restore_han_system }
 	cost = 5
@@ -250,9 +250,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_guilty_of_former_shogun
-	#icon = GFX_goal_shinjidai_doctrine
+	icon = GFX_goal_JAP_sin_of_lastshogun
 	relative_position_id = JAP_kyujidai_doctrine
-	x = 0
+	x = 3
 	y = 3
 	prerequisite = { focus = JAP_centralise_the_armed_forces }
 	cost = 5
@@ -262,9 +262,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_reform_kazoku_law
-	#icon =
+	icon = GFX_goal_JAP_kazoku_election
 	relative_position_id = JAP_shinjidai_doctrine
-	x = 0
+	x = -1
 	y = 1
 	prerequisite = { focus = JAP_shinjidai_doctrine }
 	cost = 5
@@ -274,9 +274,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_next_bastion_of_democracy
-	#icon =
+	icon = GFX_goal_JAP_shogunal_democracy
 	relative_position_id = JAP_shinjidai_doctrine
-	x = 0
+	x = -2
 	y = 2
 	prerequisite = { focus = JAP_reform_kazoku_law }
 	cost = 5
@@ -286,9 +286,9 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_new_legacy_of_iesato
-	#icon =
+	icon = GFX_goal_JAP_new_legacy_of_tokugawa
 	relative_position_id = JAP_shinjidai_doctrine
-	x = 0
+	x = -3
 	y = 3
 	prerequisite = { focus = JAP_next_bastion_of_democracy }
 	cost = 5
@@ -298,7 +298,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_address_to_the_emperor
-	#icon = 
+	icon = GFX_goal_JAP_report_to_emperor
 	relative_position_id = JAP_tribunal_final_phase
 	x = 0
 	y = 1
@@ -310,7 +310,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = JAP_long_live_the_shogunate
-	#icon = 
+	icon = GFX_goal_JAP_long_live_shogun
 	relative_position_id = JAP_tribunal_final_phase
 	x = 0
 	y = 2
@@ -955,60 +955,80 @@ shared_focus = {
 	id = JAP_the_past
 	icon = GFX_ 
 	relative_position_id = JAP_supreme_bureau_of_national_purification_process
-	x = -2
+	x = 0
 	y = 1
 	prerequisite = { focus = JAP_supreme_bureau_of_national_purification_process }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_the_past"
+		set_country_flag = {
+			flag = JAP_the_past 
+			value = 0
+		}
 	}
 }
 shared_focus = {
 	id = JAP_canonize_the_resistance_of_lese_majeste_law
 	icon = GFX_ 
 	relative_position_id = JAP_the_past
-	x = 0
+	x = -3
 	y = 1
 	prerequisite = { focus = JAP_the_past }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_canonize_the_resistance_of_lese_majeste_law"
+		modify_country_flag = {
+			flag = JAP_the_past
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_purge_more_ultraroyalists
 	icon = GFX_ 
 	relative_position_id = JAP_the_past
-	x = 0
-	y = 2
-	prerequisite = { focus = JAP_canonize_the_resistance_of_lese_majeste_law }
+	x = -1
+	y = 1
+	prerequisite = { focus = JAP_the_past }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_purge_more_ultraroyalists"
+		modify_country_flag = {
+			flag = JAP_the_past
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_detain_the_emperor
 	icon = GFX_ 
 	relative_position_id = JAP_the_past
-	x = 0
-	y = 3
-	prerequisite = { focus = JAP_purge_more_ultraroyalists }
+	x = 1
+	y = 1
+	prerequisite = { focus = JAP_the_past }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_detain_the_emperor"
+		modify_country_flag = {
+			flag = JAP_the_past
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_four_truth_of_humanity
 	icon = GFX_ 
 	relative_position_id = JAP_the_past
-	x = 0
-	y = 4
-	prerequisite = { focus = JAP_detain_the_emperor }
+	x = 3
+	y = 1
+	prerequisite = { focus = JAP_the_past }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_four_truth_of_humanity"
+		modify_country_flag = {
+			flag = JAP_the_past
+			value = 1
+		}
 	}
 }
 shared_focus = {
@@ -1016,132 +1036,200 @@ shared_focus = {
 	icon = GFX_ 
 	relative_position_id = JAP_supreme_bureau_of_national_purification_process
 	x = 0
-	y = 1
-	prerequisite = { focus = JAP_supreme_bureau_of_national_purification_process }
+	y = 3
+	prerequisite = { focus = JAP_the_past }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_the_present"
+		set_country_flag = {
+			flag = JAP_the_present 
+			value = 0 
+		}
 	}
 }
+
 shared_focus = {
 	id = JAP_atarashi_shinbutsu_shugo
 	icon = GFX_ 
 	relative_position_id = JAP_the_present
-	x = 0
+	x = -3
 	y = 1
 	prerequisite = { focus = JAP_the_present }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_atarashi_shinbutsu_shugo"
+		modify_country_flag = {
+			flag = JAP_the_present
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_holy_cause_of_war
 	icon = GFX_ 
 	relative_position_id = JAP_the_present
-	x = 0
-	y = 2
-	prerequisite = { focus = JAP_atarashi_shinbutsu_shugo }
+	x = -1
+	y = 1
+	prerequisite = { focus = JAP_the_present }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_holy_cause_of_war"
+		modify_country_flag = {
+			flag = JAP_the_present
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_court_of_divine_judgement
 	icon = GFX_ 
 	relative_position_id = JAP_the_present
-	x = 0
-	y = 3
-	prerequisite = { focus = JAP_holy_cause_of_war }
+	x = 1
+	y = 1
+	prerequisite = { focus = JAP_the_present }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_court_of_divine_judgement"
+		modify_country_flag = {
+			flag = JAP_the_present
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_yamato_damashii
 	icon = GFX_ 
 	relative_position_id = JAP_the_present
-	x = 0
-	y = 4
-	prerequisite = { focus = JAP_court_of_divine_judgement }
+	x = 3
+	y = 1
+	prerequisite = { focus = JAP_the_present }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_yamato_damashii"
+		modify_country_flag = {
+			flag = JAP_the_present
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_the_future
 	icon = GFX_ 
 	relative_position_id = JAP_supreme_bureau_of_national_purification_process
-	x = 2
-	y = 1
-	prerequisite = { focus = JAP_supreme_bureau_of_national_purification_process }
+	x = 0
+	y = 5
+	prerequisite = { focus = JAP_the_present }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_the_future"
+		set_country_flag = {
+			flag = JAP_the_future 
+			value = 0
+		}
 	}
 }
 shared_focus = {
 	id = JAP_committee_of_planned_economy
 	icon = GFX_ 
 	relative_position_id = JAP_the_future
-	x = 0
+	x = -3
 	y = 1
 	prerequisite = { focus = JAP_the_future }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_committee_of_planned_economy"
+		modify_country_flag = {
+			flag = JAP_the_future
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_found_the_youth_league_of_bodhisatva
 	icon = GFX_ 
 	relative_position_id = JAP_the_future
-	x = 0
-	y = 2
-	prerequisite = { focus = JAP_committee_of_planned_economy }
+	x = -1
+	y = 1
+	prerequisite = { focus = JAP_the_future }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_found_the_youth_league_of_bodhisatva"
+		modify_country_flag = {
+			flag = JAP_the_future
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_factional_amalgamation
 	icon = GFX_ 
 	relative_position_id = JAP_the_future
-	x = 0
-	y = 3
-	prerequisite = { focus = JAP_found_the_youth_league_of_bodhisatva }
+	x = 1
+	y = 1
+	prerequisite = { focus = JAP_the_future }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_factional_amalgamation"
+		modify_country_flag = {
+			flag = JAP_the_future
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_all_faiths_under_state_religion
 	icon = GFX_ 
 	relative_position_id = JAP_the_future
-	x = 0
-	y = 4
-	prerequisite = { focus = JAP_factional_amalgamation }
+	x = 3
+	y = 1
+	prerequisite = { focus = JAP_the_future }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_all_faiths_under_state_religion"
+		modify_country_flag = {
+			flag = JAP_the_future
+			value = 1
+		}
 	}
 }
 shared_focus = {
 	id = JAP_nirvana_of_far_east
 	icon = GFX_ 
-	relative_position_id = JAP_yamato_damashii
+	relative_position_id = JAP_the_future
 	x = 0
-	y = 1
-	prerequisite = { focus = JAP_four_truth_of_humanity }
-	prerequisite = { focus = JAP_yamato_damashii }
-	prerequisite = { focus = JAP_all_faiths_under_state_religion }
+	y = 2
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = "The Protector has traveled all of the past, present, and future"
+			AND = {
+				has_country_flag = {
+					flag = JAP_the_past 
+					value = 4
+				}
+				has_country_flag = {
+					flag = JAP_the_present
+					value = 4
+				}
+				has_country_flag = {
+					flag = JAP_the_future 
+					value = 4
+				}
+			}
+		}
+	}
+	prerequisite = { focus = JAP_the_future }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_nirvana_of_far_east"
+		clr_country_flag = JAP_the_past 
+		clr_country_flag = JAP_the_present 
+		clr_country_flag = JAP_the_future 
 	}
+}
+#############Northern Court#################
+shared_focus = {
+	id = JAP_northern_court
+	icon = GFX_ 
+	x = 30
+	y = 0 
 }

@@ -67,3 +67,47 @@ JAP_interservice_rivalry_towards_navy = {
 
 }
 
+JAP_setup_civil_war = {
+	set_country_flag = JAP_second_northern_war
+	#remove_ultraroyalist_generals 
+	#remove_ultraroyalist_ministers
+	every_owned_state = { #Rebellion
+		limit = {
+			OR = {
+				state = 531 #Kaisai
+				state = 529 #Chugoku
+				state = 530 #Shikoku
+				state = 528 #Nagasaki
+			}
+		}
+		JPR = {
+			add_state_core = PREV
+			transfer_state = PREV
+		}
+	}
+	every_owned_state = { #Japanese Pacific Authority
+		limit = {
+			OR = {
+				state = 668
+				state = 673
+				state = 646 
+				state = 647
+				state = 684
+				state = 633
+				state = 648
+			}
+		}
+		PAJ = {
+			add_state_core = PREV
+			transfer_state = PREV
+			set_demilitarized_zone = yes 
+		}
+	}
+	release = KOR 
+	CHI = {
+		transfer_state = 524
+	}
+	524 = {
+		add_claim_by = JAP 
+	}
+}

@@ -66,7 +66,7 @@ country_event = { #House of Peers' President and Prime Minister
 	}
 }
 #######Army Coup IRAA#######
-country_event = { #Demand the Election by Genro / Emperor
+country_event = { #Korean Righteous Army / Taiwanese Anarchy / Recalling Governor-Generals
 	id = jap_shogun.5
 	title = jap_shogun.5.t 
 	desc = jap_shogun.5.d 
@@ -87,7 +87,43 @@ country_event = { #Prince Iesato Prowoke the War
 	is_triggered_only = yes 
 	
 	option = {
-		#JAP_set_civil_war = yes 
+		add_country_leader_role = {
+			character = JAP_Tokugawa_Iesato
+			promote_leader = yes
+			country_leader = {
+				ideology = authoritarian_democrat_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
+		add_country_leader_role = {
+			character = JAP_Tokugawa_Kuniyuki
+			promote_leader = yes
+			country_leader = {
+				ideology = paternal_autocrat_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
+		add_country_leader_role = {
+			character = JAP_Nakano_Seigo
+			promote_leader = yes
+			country_leader = {
+				ideology = national_populist_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
+		add_country_leader_role = {
+			character = JAP_Inoue_Nissho
+			promote_leader = yes
+			country_leader = {
+				ideology = valkism_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+		}
+		#JAP_setup_civil_war = yes 
 	}
 }
 #######Navy Coup IRAA#######
