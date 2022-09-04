@@ -81,29 +81,36 @@ add_ideas = {
 	party_pop_0_50
 	ENG_statute_autonomy
 	constitutional_monarchy
+
+	AST_anzac_spirit
+	AST_stolen_generations
+	AST_white_australia_policy
+	AST_terra_nullius
+	AST_monetary_peg
 }
 
 set_politics = {	
 	ruling_party = market_liberal
 	last_election = "1934.9.15"
 	election_frequency = 36
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 3
-    libertarian_socialist = 2
-    social_democrat = 32
-    social_liberal = 3
-    market_liberal = 56
-    social_conservative = 0
-    authoritarian_democrat = 0
-    paternal_autocrat = 0
-    national_populist = 4
-    valkist = 0
+	vanguardist = 0
+	collectivist = 0
+	libertarian_socialist = 2
+	social_democrat = 32
+	social_liberal = 3
+	market_liberal = 38
+	social_conservative = 16
+	authoritarian_democrat = 3
+	paternal_autocrat = 0
+	national_populist = 6
+	valkist = 0
 }
 
+set_cosmetic_tag = AST_ENG
 set_convoys = 56
 
 if = {
@@ -249,8 +256,14 @@ if = {
 }
 
 recruit_character = AST_Lord_Birdwood
-recruit_character = AST_Eric_Campbell
 recruit_character = AST_Richard_Dixon
+recruit_character = AST_John_Curtin
+recruit_character = AST_Jack_Lang
+recruit_character = AST_Earle_Page
+recruit_character = AST_Robert_Menzies
+recruit_character = AST_Billy_Hughes
+recruit_character = AST_Percy_Stephensen
+recruit_character = AST_Eric_Campbell
 recruit_character = AST_Thomas_Blamey
 recruit_character = AST_Leslie_Morshead
 recruit_character = AST_Alan_Vasey

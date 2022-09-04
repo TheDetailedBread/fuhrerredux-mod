@@ -3,11 +3,11 @@
 
 add_namespace = fxnews
 
-news_event = { # Laurel Assassinated
+news_event = { # US Recognises Philippine Independence
 	id = fxnews.1
 	title = fxnews.1.t
 	desc = fxnews.1.d
-	picture = GFX_news_event_assassination
+	picture = GFX_news_event_PHI_independence
 	major = yes
 	is_triggered_only = yes
 
@@ -20,7 +20,7 @@ news_event = { # Laurel Assassinated
 	}
 }
 
-news_event = { # Quezon Inaugurated
+news_event = { # Nacionalistas Wins Philippine Elections
 	id = fxnews.2
 	title = fxnews.2.t
 	desc = fxnews.2.d
@@ -37,89 +37,118 @@ news_event = { # Quezon Inaugurated
 	}
 }
 
-news_event = { # Roxas Inaugurated
-		id = fxnews.3
-		title = fxnews.3.t
-		desc = fxnews.3.d
-		picture = GFX_news_event_PHI_roxas_inaugurated
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Liberals Wins Philippine Elections
+	id = fxnews.3
+	title = fxnews.3.t
+	desc = fxnews.3.d
+	picture = GFX_news_event_PHI_roxas_inaugurated
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.3.a
-		}
+	option = { 
+		name = fxnews.3.a
+	}
 }
 
-news_event = { # Sakdalista Inaugurated
-		id = fxnews.4
-		title = fxnews.4.t
-		desc = fxnews.4.d
-		picture = GFX_news_event_PHI_ramos_inaugurated
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Progressistas Wins Philippine Elections
+	id = fxnews.4
+	title = fxnews.4.t
+	desc = fxnews.4.d
+	picture = GFX_news_event_PHI_aguinaldo_inaugurated
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.3.a
-		}
+	option = { 
+		name = fxnews.3.a
+	}
 }
 
-news_event = { # Aguinaldo Coup
-		id = fxnews.5
-		title = fxnews.5.t
-		desc = fxnews.5.d
-		picture = GFX_news_event_PHI_aguinaldo_coup
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Sakdalistas Wins Philippine Elections
+	id = fxnews.5
+	title = fxnews.5.t
+	desc = fxnews.5.d
+	picture = GFX_news_event_PHI_ramos_inaugurated
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.5.a
-		}
+	option = { 
+		name = fxnews.5.a
+	}
 }
 
-news_event = { # Army Takes Power in the Philippines
-		id = fxnews.6
-		title = fxnews.6.t
-		desc = fxnews.6.d
-		picture = GFX_news_event_PHI_army_coup
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # North Borneo Occupied by Filipino Troops
+	id = fxnews.6
+	title = fxnews.6.t
+	desc = fxnews.6.d
+	picture = GFX_news_event_PHI_filipino_troops
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.5.a
+	option = { # Generic
+		name = fxnews.6.a
+		trigger = {
+			NOT = {
+				tag = INS
+				tag = BEA
+			}
 		}
+	}
+	option = { # Insulindia/East Indies
+		name = fxnews.6.b
+		trigger = {
+			tag = INS
+			tag = BEA
+		}
+	}
 }
 
-news_event = { # Civil War in the Philippines
-		id = fxnews.7
-		title = fxnews.7.t
-		desc = fxnews.7.d
-		picture = GFX_news_event_PHI_manila_uprising
-		major = yes
-		is_triggered_only = yes
-		
-		show_major = { 
-				NOT = { tag = PHI }
-		}
+news_event = { # Filipino Entry to the Entente
+	id = fxnews.7
+	title = fxnews.7.t
+	desc = fxnews.7.d
+	picture = GFX_news_event_PHI_sign
+	major = yes
+	is_triggered_only = yes
+	
+	show_major = { 
+		NOT = { tag = PHI }
+	}
 
-		option = { 
-				name = fxnews.5.a
+	option = { # They will be just a prey for the Japanese
+		name = fxnews.6.a
+		trigger = {
+			any_country = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
+	}
+	option = { # We will win this war!
+		name = fxnews.6.b
+		trigger = {
+			any_country = {
+				OR = {
+					tag = FRA
+					is_in_faction_with = FRA
+				}
+			}
+		}
+	}
 }
 
 news_event = { # Southern Agitation
@@ -741,6 +770,12 @@ news_event = { # Formation of Second Northern Alliance
 	title = fxnews.jap36.t
 	desc = fxnews.jap36.d
 	picture = GFX_news_event_JAP_iesato_front
+
+news_event = { # Indochinese Revolt
+	id = fxnews.40
+	title = fxnews.40.t
+	desc = fxnews.40.d
+	picture = GFX_news_event_JAP_co_prosperity_sphere
 	major = yes
 	is_triggered_only = yes
 
@@ -751,4 +786,78 @@ news_event = { # Formation of Second Northern Alliance
 	option = {
 		name = fxnews.jap36.a
 	}	
+		NOT = { tag = ICR }
+	}
+
+	option = {
+		name = fxnews.41.a
+	}
+}
+
+news_event = { # Korean Revolt
+	id = fxnews.41
+	title = fxnews.41.t
+	desc = fxnews.41.d
+	picture = GFX_news_event_KOR_revolt
+	major = yes
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = { tag = KOR }
+	}
+
+	option = {
+		name = fxnews.41.a
+	}
+}
+
+news_event = { # Indochinese Revolt
+	id = fxnews.42
+	title = fxnews.42.t
+	desc = fxnews.42.d
+	picture = GFX_news_event_ICR_revolt
+	major = yes
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = { tag = ICR }
+	}
+
+	option = {
+		name = fxnews.42.a
+	}
+}
+
+news_event = { # Indochinese Revolt
+	id = fxnews.43
+	title = fxnews.43.t
+	desc = fxnews.43.d
+	picture = GFX_news_event_PHI_sign
+	major = yes
+	is_triggered_only = yes
+
+	show_major = {
+		NOT = { tag = PHI }
+	}
+
+	option = {
+		name = fxnews.43.a
+	}
+}
+
+news_event = { # US Recognises Philippine Independence
+	id = fxnews.44
+	title = fxnews.44.t
+	desc = fxnews.44.d
+	picture = GFX_news_event_PHI_army_coup
+	major = yes
+	is_triggered_only = yes
+
+	show_major = { 
+		NOT = { tag = PHI }
+	}
+
+	option = { 
+		name = fxnews.44.a
+	}
 }

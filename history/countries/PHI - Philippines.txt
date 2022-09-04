@@ -1,17 +1,5 @@
 capital = 327
-
 oob = "PHI"
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "PHI_naval_mtg"
-	else = { 
-		set_naval_oob = "PHI_naval_legacy"
-	}
-}
-
-country_event = { id = phi.29 days = 366 }
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -42,38 +30,42 @@ if = {
     basic_light_tank_chassis = 1
   }
 }
-if = {
-	limit = { NOT = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
-	}
-}
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		basic_battery = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		basic_torpedo = 1
-		mtg_transport = 1
+USA = {
+	if = {
+		limit = { has_dlc = "Together for Victory" }
+		set_autonomy = {
+			target = PHI
+			autonomous_state = autonomy_colony
+			freedom_level = 0.50
+		}
+	} 
+	else = {
+		puppet = PHI
 	}
 }
+set_cosmetic_tag = PHI_USA
+country_event = { id = philippines.0 days = 1 } # Intro Event
+country_event = { id = philippines.9 days = 120 } # The Envelope
+country_event = { id = philippines.32 days = 335 } # Bonifacio Day
+country_event = { id = philippines.28 days = 350 } # Pampanga Lantern Festival
+country_event = { id = philippines.27 days = 374 } # Feast of the Black Nazarene
+country_event = { id = philippines.46 days = 448 } # Crucifixion in the Philippines
+country_event = { id = philippines.33 days = 508 } # Opening of the Election Campaign
+country_event = { id = philippines.42 days = 580 } # Aftermath of Typhoon Seling
+country_event = { id = philippines.88 days = 630 } # Bountiful Harvest this Year
+country_event = { id = philippines.31 days = 715 } # Misa de Gallo
+country_event = { id = philippines.43 days = 867 } # Quezon Flies to US
+country_event = { id = philippines.90 days = 1028 } # Socialist Sympathies
+country_event = { id = philippines.91 days = 1705 } # Gregorio Aglipay Dies
 
 add_ideas = {
 	party_pop_0_20
-	PHI_promise_of_elections
-	PHI_agriculture_economy
-	PHI_marxist_professors
-
 	presidential_republic
+
+	PHI_lingering_sakdalistas
+	PHI_agricultural_society
+	PHI_hacienda_questions
 }
 
 set_convoys = 25
@@ -81,115 +73,25 @@ set_stability = 0.72
 set_war_support = 0.38
 
 set_politics = {	
-	ruling_party = authoritarian_democrat
-	last_election = "1932.11.15"
+	ruling_party = social_conservative
+	last_election = "1933.7.10"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-    collectivist = 8
-    libertarian_socialist = 3
-    social_democrat = 10
-    social_liberal = 4
-    market_liberal = 20
-    social_conservative = 25
-    authoritarian_democrat = 22
-    national_populist = 4
-    valkist = 4
+	libertarian_socialist = 3
+	social_democrat = 10
+	social_liberal = 4
+	market_liberal = 20
+	social_conservative = 37
+	authoritarian_democrat = 10
+	national_populist = 4
+	valkist = 12
 }
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-
-	create_equipment_variant = {
-		name = "Clemson Class"
-		type = ship_hull_light_1
-		name_group = PHI_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Omaha Class"
-		type = ship_hull_cruiser_1
-		name_group = PHI_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_light_medium_battery_1
-		}
-	}
-
-	create_equipment_variant = {
-		name = "S Class"
-		type = ship_hull_submarine_1
-		name_group = PHI_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Barracuda Class"
-		type = ship_hull_submarine_2
-		name_group = PHI_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-	}
-}
-
-if = {
-	limit = { NOT = { has_dlc = "Man the Guns" } }
-	
-	create_equipment_variant = {
-		name = "Barracuda Class"
-		type = submarine_1
-		parent_version = 1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			sub_engine_upgrade = 2
-			sub_stealth_upgrade = 2
-			sub_torpedo_upgrade = 2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Clemson Class"
-		type = destroyer_1
-		parent_version = 0
-		upgrades = {
-			ship_torpedo_upgrade = 1
-			destroyer_engine_upgrade = 3
-			ship_ASW_upgrade = 2
-			ship_anti_air_upgrade = 1
-		}
-	}
-}
+set_country_flag = coalition_market_liberal
+set_country_flag = coalition_social_liberal
 
 recruit_character = PHI_Luis_Taruc
 recruit_character = PHI_Pedro_Abad_Santos
@@ -260,4 +162,10 @@ recruit_character = PHI_Pelagio_Cruz
 recruit_character = PHI_Victor_H_Dizon
 recruit_character = PHI_Felix_Pestana
 recruit_character = PHI_Jesus_Lava
-recruit_character = PHI_Legislative_Assembly
+recruit_character = PHI_Jose_Zulueta
+recruit_character = PHI_Mariano_Garchitorena
+recruit_character = PHI_Andres_Soriano
+recruit_character = PHI_Claro_M_Recto
+recruit_character = PHI_Jorge_Vargas
+recruit_character = PHI_Rafael_Alunan
+recruit_character = PHI_Camilio_Osias

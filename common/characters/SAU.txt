@@ -1,31 +1,4 @@
 characters = {
-  SAU_Abdulazis_Ibn_Saud = {
-    name = "Abdulaziz Ibn Saud"
-    portraits = {
-      civilian = {
-        large = "gfx/leaders/SAU/Portrait_SAU_Abdulazis_Ibn_Saud_fx.png"
-      }
-      army = {
-        large = "gfx/leaders/SAU/Portrait_SAU_Abdulazis_Ibn_Saud_fx.png"
-      }
-    }
-    country_leader = {
-      ideology = authoritarian_democrat_subtype
-      traits = {}
-    }
-    country_leader = {
-      ideology = paternal_autocrat_subtype
-      traits = {}
-    }
-    field_marshal = {
-			traits = { politically_connected trait_reckless offensive_doctrine harsh_leader }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 2
-		}
-  }
   SAU_Saud_bin_Abdulaziz_al_Saud = {
 		name = "Saud bin Abdulaziz al-Saud"
 		portraits = {
@@ -37,8 +10,16 @@ characters = {
 				large = "gfx/leaders/SAU/Portrait_SAU_Saud_bin_Abdulaziz_Al_Saud.png"
 			}
 		}
-		corps_commander = {
-			traits = { politically_connected }
+		country_leader = {
+      ideology = authoritarian_democrat_subtype
+      traits = {}
+    }
+    country_leader = {
+      ideology = paternal_autocrat_subtype
+      traits = {}
+    }
+		field_marshal = {
+			traits = { politically_connected offensive_doctrine }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -55,7 +36,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
 			on_remove = { clr_country_flag = SAU_Saud_bin_Abdulaziz_hog_pau_hired }
 			traits = {
-				head_of_government
 				paternal_autocrat
 				hog_respected_war_hero
 			}
@@ -122,7 +102,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Saad_bin_Abdulaziz_al_Saud_eco_sco_hired }
 			on_remove = { clr_country_flag = SAU_Saad_bin_Abdulaziz_al_Saud_eco_sco_hired }
 			traits = {
-				economy_minister
 				social_conservative
 				eco_resource_industrialist
 			}
@@ -132,7 +111,6 @@ characters = {
 			slot = chief_of_army			
 			idea_token = SAU_Saad_bin_Abdulaziz_al_Saud_carm_sco
 			traits = {
-				chief_of_army
 				carm_doctrine_of_autonomy
 			}
 		}
@@ -160,7 +138,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Khalid_bin_Abdulaziz_Al_Saud_hog_pau_hired }
 			on_remove = { clr_country_flag = SAU_Khalid_bin_Abdulaziz_Al_Saud_hog_pau_hired }
 			traits = {
-				head_of_government
 				paternal_autocrat
 				hog_flamboyant_tough_guy
 			}
@@ -170,7 +147,6 @@ characters = {
 			slot = chief_of_army			
 			idea_token = SAU_Khalid_bin_Abdulaziz_Al_Saud_carm_pau
 			traits = {
-				chief_of_army
 				carm_elastic_defence_doctrine
 			}
 		}
@@ -239,7 +215,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Shakhbut_bin_Sultan_Al_Nahyan_hog_mli_hired }
 			on_remove = { clr_country_flag = SAU_Shakhbut_bin_Sultan_Al_Nahyan_hog_mli_hired }
 			traits = {
-				head_of_government
 				market_liberal
 				hog_smiling_oilman
 			}
@@ -262,7 +237,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Zaid_Al_Kader_hog_sco_hired }
 			on_remove = { clr_country_flag = SAU_Zaid_Al_Kader_hog_sco_hired }
 			traits = {
-				head_of_government
 				social_conservative
 				hog_happy_amateur
 			}
@@ -292,7 +266,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Prince_Abdul_Aziz_bin_Musaed_Bin_Jalawi_bin_Turki_bin_Abdullah_Al_Saud_hog_pau_hired }
 			on_remove = { clr_country_flag = SAU_Prince_Abdul_Aziz_bin_Musaed_Bin_Jalawi_bin_Turki_bin_Abdullah_Al_Saud_hog_pau_hired }
 			traits = {
-				head_of_government
 				paternal_autocrat
 				hog_silent_workhorse
 			}
@@ -302,7 +275,6 @@ characters = {
 			slot = chief_of_staff			
 			idea_token = SAU_Prince_Abdul_Aziz_bin_Musaed_Bin_Jalawi_bin_Turki_bin_Abdullah_Al_Saud_cos_pau
 			traits = {
-				chief_of_staff
 				cos_school_of_psychology
 			}
 		}
@@ -311,7 +283,6 @@ characters = {
 			slot = chief_of_army			
 			idea_token = SAU_Prince_Abdul_Aziz_bin_Musaed_Bin_Jalawi_bin_Turki_bin_Abdullah_Al_Saud_carm_pau
 			traits = {
-				chief_of_army
 				carm_guns_and_butter_doctrine
 			}
 		}
@@ -333,7 +304,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Auda_Abu_Tayi_hog_npo_hired }
 			on_remove = { clr_country_flag = SAU_Auda_Abu_Tayi_hog_npo_hired }
 			traits = {
-				head_of_government
 				national_populist
 				hog_political_protege
 			}
@@ -348,7 +318,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Auda_Abu_Tayi_eco_npo_hired }
 			on_remove = { clr_country_flag = SAU_Auda_Abu_Tayi_eco_npo_hired }
 			traits = {
-				economy_minister
 				national_populist
 				eco_mixed_economy
 			}
@@ -371,7 +340,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Saud_Al_Kabeer_bin_Abdulaziz_bin_Saud_bin_Faisal_Al_Saud_for_sco_hired }
 			on_remove = { clr_country_flag = SAU_Saud_Al_Kabeer_bin_Abdulaziz_bin_Saud_bin_Faisal_Al_Saud_for_sco_hired }
 			traits = {
-				foreign_minister
 				social_conservative
 				for_biased_intellectual
 			}
@@ -394,7 +362,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Dhaidan_Ben_Hethlain_for_ade_hired }
 			on_remove = { clr_country_flag = SAU_Dhaidan_Ben_Hethlain_for_ade_hired }
 			traits = {
-				foreign_minister
 				authoritarian_democrat
 				for_iron_fisted_brute
 			}
@@ -417,7 +384,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Mutlag_ibn_al_Juba_a_for_ade_hired }
 			on_remove = { clr_country_flag = SAU_Mutlag_ibn_al_Juba_a_for_ade_hired }
 			traits = {
-				foreign_minister
 				authoritarian_democrat
 				for_relations_expert
 			}
@@ -440,7 +406,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Faisal_bin_Abdulaziz_for_pau_hired }
 			on_remove = { clr_country_flag = SAU_Faisal_bin_Abdulaziz_for_pau_hired }
 			traits = {
-				foreign_minister
 				paternal_autocrat
 				for_the_cloak_n_dagger_schemer
 			}
@@ -463,7 +428,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Mohammed_bin_Jassim_Al_Thani_eco_sco_hired }
 			on_remove = { clr_country_flag = SAU_Mohammed_bin_Jassim_Al_Thani_eco_sco_hired }
 			traits = {
-				economy_minister
 				social_conservative
 				eco_oil_baron
 			}
@@ -486,7 +450,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Mohammed_bin_Awad_bin_Laden_eco_ade_hired }
 			on_remove = { clr_country_flag = SAU_Mohammed_bin_Awad_bin_Laden_eco_ade_hired }
 			traits = {
-				economy_minister
 				authoritarian_democrat
 				eco_industrialiser
 			}
@@ -509,7 +472,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Muhammad_bin_Abdulaziz_Al_Saud_eco_pau_hired }
 			on_remove = { clr_country_flag = SAU_Muhammad_bin_Abdulaziz_Al_Saud_eco_pau_hired }
 			traits = {
-				economy_minister
 				paternal_autocrat
 				eco_mixed_economy
 			}
@@ -532,7 +494,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Bandar_bin_Abdulaziz_Al_Saud_sec_pau_hired }
 			on_remove = { clr_country_flag = SAU_Bandar_bin_Abdulaziz_Al_Saud_sec_pau_hired }
 			traits = {
-				security_minister
 				paternal_autocrat
 				sec_efficient_sociopath
 			}
@@ -555,7 +516,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade_hired }
 			on_remove = { clr_country_flag = SAU_Jahjah_bin_Bajad_bin_Humaid_al_Otaibi_sec_ade_hired }
 			traits = {
-				security_minister
 				authoritarian_democrat
 				sec_prince_of_terror
 			}
@@ -578,7 +538,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Mohammed_bin_Sharif_Al_Farouqi_sec_sco_hired }
 			on_remove = { clr_country_flag = SAU_Mohammed_bin_Sharif_Al_Farouqi_sec_sco_hired }
 			traits = {
-				security_minister
 				social_conservative
 				sec_compassionate_gentleman
 			}
@@ -601,7 +560,6 @@ characters = {
 			on_add = { set_country_flag = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo_hired }
 			on_remove = { clr_country_flag = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_hog_npo_hired }
 			traits = {
-				head_of_government
 				national_populist
 				hog_flamboyant_tough_guy
 			}
@@ -611,7 +569,6 @@ characters = {
 			slot = chief_of_staff			
 			idea_token = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_cos_ade
 			traits = {
-				chief_of_staff
 				cos_school_of_psychology
 			}
 		}
@@ -620,7 +577,6 @@ characters = {
 			slot = chief_of_army			
 			idea_token = SAU_Abdul_Aziz_bin_Faisal_al_Dawish_carm_ade
 			traits = {
-				chief_of_army
 				carm_commando_doctrine
 			}
 		}
@@ -637,7 +593,6 @@ characters = {
 			slot = chief_of_air_force			
 			idea_token = SAU_Abdel_Salam_Sarhan_cair
 			traits = {
-				chief_of_air_force
 				cair_air_superiority_doctrine
 			}
 		}

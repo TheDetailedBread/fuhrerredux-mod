@@ -63,6 +63,7 @@ can_release_chad = {
 	state = 771
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_central_africa_first = yes
 		NOT = {
 			country_exists = CHA
 			has_country_flag = CHA_CONQ
@@ -75,6 +76,7 @@ can_release_cameroon = {
 	state = 817
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_central_africa_first = yes
 		NOT = {
 			country_exists = CMR
 			has_country_flag = CMR_CONQ
@@ -130,6 +132,19 @@ can_release_eritrea = {
 	}
 }
 
+#Equitorial Guinea - annexation_EQG_CONQ
+can_release_equitorial_guinea = {
+  state = 297
+  NOT = { is_claimed_by = ROOT }
+  ROOT = {
+    should_release_central_africa_first = yes
+    NOT = {
+      country_exists = EQG
+      has_country_flag = EQG_CONQ
+    }
+  }
+}
+
 #Ethiopia - annexation_ETH_CONQ
 can_release_ethiopia = { 
 	state = 271
@@ -147,6 +162,7 @@ can_release_gabon = {
 	state = 539
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_central_africa_first = yes
 		NOT = {
 			country_exists = GAB
 			has_country_flag = GAB_CONQ
@@ -195,6 +211,7 @@ can_release_guinea = {
 	state = 973
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = GNA
 			has_country_flag = GNA_CONQ
@@ -219,6 +236,7 @@ can_release_ivory_coast = {
 	state = 974
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = IVO
 			has_country_flag = IVO_CONQ
@@ -231,6 +249,7 @@ can_release_libya = {
   state = 448
   NOT = { is_claimed_by = ROOT }
   ROOT = {
+		should_release_algeria_first = yes
     NOT = {
       country_exists = LBA
       has_country_flag = LBA_CONQ
@@ -279,6 +298,7 @@ can_release_mali = {
 	state = 556
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = MLI
 			has_country_flag = MLI_CONQ
@@ -291,6 +311,7 @@ can_release_morocco = {
 	state = 898
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+		should_release_algeria_first = yes
 		NOT = {
 			country_exists = MOR
 			has_country_flag = MOR_CONQ
@@ -303,6 +324,7 @@ can_release_mauritania = {
 	state = 557 
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = MRT
 			has_country_flag = MRT_CONQ
@@ -339,6 +361,7 @@ can_release_niger = {
 	state = 979
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = NGR
 			has_country_flag = NGR_CONQ
@@ -423,6 +446,7 @@ can_release_togo = {
 	state = 976
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = TOG
 			has_country_flag = TOG_CONQ
@@ -459,6 +483,7 @@ can_release_tunisia = {
   state = 458
   NOT = { is_claimed_by = ROOT }
   ROOT = {
+		should_release_algeria_first = yes
     NOT = {
       country_exists = TUN
       has_country_flag = TUN_CONQ
@@ -483,6 +508,7 @@ can_release_volta = {
 	state = 980
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
+    should_release_senegal_first = yes
 		NOT = {
 			country_exists = VOL
 			has_country_flag = VOL_CONQ
@@ -512,4 +538,41 @@ can_release_zimbabwe = {
 			has_country_flag = ZIM_CONQ
 		}
 	}
+}
+
+can_establish_colony = {
+  OR = {
+    tag = ENG
+    tag = FRA
+    tag = ITA
+    AND = {
+      tag = GER
+      NOT = { has_government = valkist }
+    }
+  }
+  has_socialist_government = no
+}
+
+should_release_algeria_first = {
+	OR = {
+		country_exists = ALG
+		has_country_flag = ALG_CONQ
+		459 = { is_valid_annexation_state = no }
+	}
+}
+
+should_release_central_africa_first = {
+  OR = {
+    country_exists = CAR
+    has_country_flag = CAR_CONQ
+    660 = { is_valid_annexation_state = no }
+  }
+}
+
+should_release_senegal_first = {
+  OR = {
+    country_exists = SEN
+    has_country_flag = SEN_CONQ
+    272 = { is_valid_annexation_state = no }
+  }
 }

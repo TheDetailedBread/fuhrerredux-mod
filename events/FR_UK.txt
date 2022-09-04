@@ -428,6 +428,9 @@ country_event = {
       ARB = {
         country_event = { id = arabia.11 days = 1 }
       }
+			PHI = {
+				country_event = { id = philippines.19 days = 2 }
+			}
 		}
 	}
 }
@@ -2184,9 +2187,16 @@ country_event = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
+		set_portraits = {
+			character = ENG_King_Edward_VIII
+			civilian = { 
+				large = "gfx/leaders/ENG/Portrait_ENG_Edward_VIII_autocrat.png" 
+				small = "gfx/interface/ministers/ENG/ENG_King_Edward_VIII.png"
+			}
+		} 
 		remove_every_minister = yes
 		add_ideas = {
-			ENG_Edward_VIII_hog_pau
+			ENG_King_Edward_VIII_hog_pau
 			ENG_John_Hugo_Russell_for_pau
 			ENG_Noel_Pemberton_Billing_eco_pau
 			ENG_Jeffrey_Hamm_sec_pau
@@ -4057,6 +4067,12 @@ country_event = {
 				}
 			}
 			puppet = RAJ
+			RAJ = {
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				} 
+			}
 		}
 	}
 }

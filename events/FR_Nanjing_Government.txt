@@ -19,14 +19,14 @@ country_event = {
         add_ideas = CHI_socialist_opposition1
         add_ideas = CHI_bsb_opposition1
 
-        create_country_leader = {
-            name = "Chiang Kai-Shek"
-            desc = "POLITICS_CHIANG_KAI_SHEK_DESC"
-            picture = "Portrait_China_Jiang_Jieshi.png"
-            expire = "1965.1.1"
-            ideology = paternal_autocrat_subtype
-            traits = {}
-        }
+        add_country_leader_role = {
+			character = CHI_Chiang_Kai_Shek
+			promote_leader = yes
+			country_leader = {
+				ideology = paternal_autocrat_subtype
+				traits = {}
+			}
+		}
         set_politics = {
             ruling_party = paternal_autocrat
             elections_allowed = no
@@ -40,23 +40,6 @@ country_event = {
             add_popularity = {
                 ideology = paternal_autocrat
                 popularity = 0.15
-            }
-
-            swap_ideas = {
-                remove_idea = GEN_hog_ade
-                add_idea = GEN_hog_pau
-            }
-            swap_ideas = {
-                remove_idea = GEN_for_ade
-                add_idea = GEN_for_pau
-            }
-            swap_ideas = {
-                remove_idea = GEN_eco_ade
-                add_idea = GEN_eco_pau
-            }
-            swap_ideas = {
-                remove_idea = GEN_sec_ade
-                add_idea = GEN_sec_pau
             }
         }
     }

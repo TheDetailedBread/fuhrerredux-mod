@@ -1,6 +1,6 @@
 ﻿division_template = {
 	name = "Infanterie-Division"
-  division_names_group = GER_Inf_01
+  division_names_group = GER_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -21,6 +21,7 @@
 }
 division_template = {
 	name = "Panzer-Division"
+	division_names_group = GER_ARM_01
 
 	regiments = {
 		light_armor = { x = 0 y = 0 }		
@@ -39,11 +40,11 @@ division_template = {
 }
 division_template = {
 	name = "Standarte der Thuleschutztruppe" 			# SS analogue
-	    division_names_group = GER_TST_01
+	division_names_group = GER_TST_01
 
 	regiments = {
 		motorized = { x = 0 y = 0 }
-	    motorized = { x = 0 y = 1 }
+	  motorized = { x = 0 y = 1 }
 		motorized = { x = 0 y = 2 }
 		
 		motorized = { x = 1 y = 0 }
@@ -51,13 +52,13 @@ division_template = {
 		motorized = { x = 1 y = 2 }
 		
 		motorized = { x = 2 y = 0 }
-	    motorized = { x = 2 y = 1 }
+	  motorized = { x = 2 y = 1 }
 		motorized = { x = 2 y = 2 }
 	}
 	support = {
-        recon = { x = 0 y = 0 }
+    recon = { x = 0 y = 0 }
 	 	engineer = { x = 0 y = 1 }
-        artillery = { x = 0 y = 2 }
+    artillery = { x = 0 y = 2 }
 	}
 	priority = 2
 }
@@ -66,7 +67,7 @@ division_template = {
 	#Note: precursor to Gebirgs-Divisions
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
-	    mountaineers = { x = 0 y = 1 }
+	  mountaineers = { x = 0 y = 1 }
 		mountaineers = { x = 0 y = 2 }
 		mountaineers = { x = 1 y = 0 }
 		mountaineers = { x = 1 y = 1 }
@@ -75,6 +76,7 @@ division_template = {
 }
 division_template = {
 	name = "Kavallerie-Brigade"
+	division_names_group = GER_Cav_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -277,27 +279,6 @@ units = {
 	division= {	
 		name = "25. Infanterie-Division"
 		location = 3571
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.95
-	}
-	division= {	
-		name = "26. Infanterie-Division"
-		location = 532
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.95
-	}
-	division= {	
-		name = "27. Infanterie-Division"
-		location = 6298
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.95
-	}
-	division= {	
-		name = "28. Infanterie-Division"
-		location = 707
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.95

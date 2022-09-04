@@ -257,6 +257,10 @@ check_potential_annexations_europe = {
     ROOT = { activate_mission = annexation_RUS_CONQ }
   }
   else_if = {
+    limit = { can_release_russian_puppet = yes }
+    ROOT = { activate_mission = annexation_VRS_CONQ }
+  }
+  else_if = {
     limit = { can_release_saarland = yes }
     ROOT = { activate_mission = annexation_SAARLAND_CONQ }
   }
@@ -296,7 +300,6 @@ check_potential_annexations_europe = {
     limit = { can_release_shkoder = yes }
     ROOT = { activate_mission = annexation_SHKODER_CONQ }
   }
-  
   else_if = {
     limit = { can_release_soviet = yes }
     ROOT = { activate_mission = annexation_SOV_CONQ }
@@ -609,6 +612,10 @@ check_potential_annexations_africa = {
     ROOT = { activate_mission = annexation_ERI_CONQ }
   }
   else_if = {
+    limit = { can_release_equitorial_guinea = yes }
+    ROOT = { activate_mission = annexation_EQG_CONQ }
+  }
+  else_if = {
     limit = { can_release_ethiopia = yes }
     ROOT = { activate_mission = annexation_ETH_CONQ }
   }
@@ -728,8 +735,8 @@ check_potential_annexations_middle_east = {
     ROOT = { activate_mission = annexation_IRQ_CONQ }
   }
   else_if = {
-    limit = { can_release_lebanon = yes }
-    ROOT = { activate_mission = annexation_LEB_CONQ }
+    limit = { can_release_phoenicia = yes }
+    ROOT = { activate_mission = annexation_PHN_CONQ }
   }
   else_if = {
     limit = { can_release_hashimete_arabia = yes }
@@ -894,7 +901,7 @@ check_potential_annexations_australia = {
     ROOT = { activate_mission = annexation_FIJ_CONQ }
   }
   else_if = {
-    limit = { can_release_austrailia = yes }
+    limit = { can_release_australia = yes }
     ROOT = { activate_mission = annexation_AST_CONQ }
   }
   else_if = {

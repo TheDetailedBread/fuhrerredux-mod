@@ -2885,59 +2885,43 @@ country_event = { # Fate of East Africa
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
 			}
-            	}
+    }
 	}
 
 	option = { # South Africa shall conquer all
 		ai_chance = {
 			factor = 0
 		}
-    		name = southafrica.102.c
-        	add_political_power = -150
-    	}
+    name = southafrica.102.c
+    add_political_power = -150
+  }
 }
 
 country_event = { # East Africa - Establish administration
 	id = southafrica.103
 	immediate = {log = "[GetDateText]: [Root.GetName]: event southafrica.103"}
-    title = southafrica.103.t
-    desc = southafrica.103.d
-    picture = GFX_report_event_communists_cheer
+	title = southafrica.103.t
+	desc = southafrica.103.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
-        original_tag = TZN
+	trigger = {
+		original_tag = TZN
 		TZN = {
 			is_puppet_of = SAF
 		}
-        owns_state = 546
-    }
+		owns_state = 546
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
-
-    fire_only_once = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+  fire_only_once = yes
 
 	option = {
-	name = southafrica.103.a
-#		TZN = {
-#			set_province_controller = 9904 # Units loading in enemy territory cause errors
-#			set_province_controller = 819
-#			set_province_controller = 10074
-#			set_province_controller = 11837
-#			set_province_controller = 3780
-#			set_province_controller = 11584
-#			set_province_controller = 6788
-#			load_oob = VIT
-#			add_ideas = VIT_illegitimate_government
-#		}
+		name = southafrica.103.a
 	}
 }
 
@@ -3142,23 +3126,19 @@ country_event = { # Fate of Egypt
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
 			}
-            	}
+    }
 	}
 
 	option = { # South Africa shall conquer all
 		ai_chance = {
 			factor = 0
 		}
-    		name = southafrica.104.c
-        	add_political_power = -150
-    	}
+    name = southafrica.104.c
+    add_political_power = -150
+  }
 }
 
 country_event = { # Fate of Abyssinia
@@ -3278,23 +3258,19 @@ country_event = { # Fate of Abyssinia
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
 			}
-            	}
+    }
 	}
 
 	option = { # South Africa shall conquer all
 		ai_chance = {
 			factor = 0
 		}
-    		name = southafrica.105.c
-        	add_political_power = -150
-    	}
+    name = southafrica.105.c
+    add_political_power = -150
+  }
 }
 
 

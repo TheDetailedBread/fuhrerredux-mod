@@ -11,21 +11,12 @@ add_namespace = jap
 ### Introduction Event
 
 country_event = { 
-	id = jap.10
+	id = jap.0
 	immediate = {log = "[GetDateText]: [Root.GetName]: event jap.10"}
 	title = jap.0.t
 	desc = jap.0.d
-	picture = GFX_japan_ultimatum
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = JAP
-	}
-	
-	mean_time_to_happen = {
-		days = 5
-	}
+	picture = GFX_report_event_JAP_rising_sun
+	is_triggered_only = yes
 
 	option = {
 		name = jap.0.a
@@ -154,7 +145,7 @@ country_event = {
 country_event = {
 	id = jap.6
 	immediate = {log = "[GetDateText]: [Root.GetName]: event jap.6"}
-	title = "Japanese-German army exercise"
+	title = "Japanese-German Army Exercises"
 	desc = jap.6.d
 	picture = GFX_report_event_generic_panzer_attack
 	
@@ -345,7 +336,7 @@ country_event = {
 				id = worldnews.117
 			}
 		}
-    }
+  }
 }
 
 country_event = {
@@ -2413,7 +2404,7 @@ country_event = {
 		remove_every_minister = yes
 		add_ideas = {
 			JAP_Katayama_Tetsu_hog_sde
-			JAP_Katayama_Tetsu_for_sde
+			JAP_Shidehara_Kijuro_for_mli
 			JAP_Mizutani_Chozaburo_eco_sde
 			JAP_Matsuoka_Komakichi_sec_sde
 		}	
@@ -3079,13 +3070,38 @@ country_event = {
 
 	option = {
 		name = "This might go very good, or very bad for our nation."
-		add_ideas = JAP_fund_terrorists
+		add_timed_idea = {
+			idea = JAP_fund_terrorists
+			days = 80
+		}
 	}
 }
 
+country_event = { # Japan Seizes Guam
+	id = jap.54
+	title = jap.54.t
+	desc = jap.54.d
+	picture = GFX_report_event_ast_navy
+	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			JAP = {
+				transfer_state = 638
+				transfer_state = 631
+				transfer_state = 632
+				transfer_state = 832
+				transfer_state = 642
+				transfer_state = 727
+			}
+		}
+	}
 
-
+	option = { # Too bad...
+		name = jap.54.a
+		add_political_power = -50
+	}
+}
 
 
 

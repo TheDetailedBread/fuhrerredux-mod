@@ -2624,7 +2624,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = "We should show the superiority of Valkist engineering om the world stage"
+		name = "We should show the superiority of Valkist engineering om the wFRPd stage"
 			country_event = { id = ger.175 months = 3 }
 		}
 
@@ -3298,7 +3298,7 @@ country_event = { # WIP Hungary wants Entente help
 			}
 		}
 
-		news_event = worldnews.41
+		news_event = wFRPdnews.41
 	}
 
 	option = { # Refuse
@@ -3951,7 +3951,7 @@ country_event = { # Pangermanism
 		BEL = {
 			add_opinion_modifier = { target = GER modifier = GER_expansionism }
 			}
-		random_other_country = { news_event = worldnews.40 }
+		random_other_country = { news_event = wFRPdnews.40 }
 		}
 	}
 
@@ -4304,7 +4304,7 @@ country_event = { # WIP Austria wants Entente help
 		153 = {
 			add_core_of = GER
 		}
-		news_event = worldnews.41
+		news_event = wFRPdnews.41
 	}
 
 	option = { # Refuse
@@ -4675,7 +4675,7 @@ country_event = { # Denmark asks France for help
 			add_core_of = GER
 		}
 		random_other_country = {
-			news_event = worldnews.42
+			news_event = wFRPdnews.42
 		}
 	}
 
@@ -5064,7 +5064,7 @@ country_event = { # WIP Centroslavia wants Entente help
 		795 = {
 			add_core_of = GER
 		}
-		random_other_country = { news_event = worldnews.44 }
+		random_other_country = { news_event = wFRPdnews.44 }
 	}
 
 	option = { # Refuse
@@ -5654,7 +5654,7 @@ country_event = { # Rhineland referendum
 			#remove_ideas = FRA_rhineland_coal
 			modify_country_flag = { flag = FRA_german_threat value = 3 }
 		}
-		random_other_country = { news_event = worldnews.43 }
+		random_other_country = { news_event = wFRPdnews.43 }
 	}
 }
 
@@ -6831,7 +6831,7 @@ country_event = { #
 	option = {
 	name = "Lets hope for a great showing this year"
 		country_event = { id = ger.170 days = 15 }
-		random_other_country = { news_event = worldnews.39 }
+		random_other_country = { news_event = wFRPdnews.39 }
 	}
 }
 
@@ -6897,7 +6897,7 @@ country_event = { #
 
 	trigger = {
 		tag = GER
-		ORL = {
+		FRP = {
 			is_puppet_of = GER
 		}
 	}
@@ -6914,7 +6914,7 @@ country_event = { #
 	}
 	name = "Of course we support our fellow Valkists"
 		add_political_power = 50
-		ORL = {
+		FRP = {
 			country_event = ger.173
 		}
 	}
@@ -7422,7 +7422,20 @@ country_event = { # Otto Straser flees to Kiel
 
 	option = {
 		name = "Damn that Shadow Marxist!"
+		set_nationality = {
+			target_country = SHO
+			character = GER_Otto_Strasser
+		}
 		SHO = {
+			GER_Otto_Strasser = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = vanguardist_subtype
+						traits = { }
+					}
+				}
+			}
 			set_country_flag = SHO_here_comes_strasser
 		}
 	}
@@ -7958,7 +7971,7 @@ country_event = { # Germany declares Versailles dead. Sorry Drowse, I hijacked t
 		}
 		name = ger.210.b
 		#every_country = {
-		#	news_event = worldnews.202
+		#	news_event = wFRPdnews.202
 		#}
 		set_global_flag = FRA_ARMY_REFORM_ENABLED
 		custom_effect_tooltip  = FRA_Army_Reform_Enabled_tooltip
@@ -9203,7 +9216,7 @@ country_event = { # WIP Baltics wants Entente help
 			#}
 		}
 
-		random_other_country = { news_event = worldnews.45 }
+		random_other_country = { news_event = wFRPdnews.45 }
 	}
 
 	option = { # Refuse
@@ -10623,13 +10636,14 @@ country_event = { # Germany - Soviets White Peace
 		ai_chance = {
 			factor = 40
 		}
+		set_global_flag = soviets_retreats_in_urals
 		SOV = {
 			every_enemy_country = {
 				limit = { is_in_faction_with = GER }
 				white_peace = PREV
 			}
 		}		
-        every_state = {
+    every_state = {
 			limit = {
 				OR = {
 					AND = {
@@ -10746,14 +10760,14 @@ country_event = { # Germany - Soviets White Peace
 				}
 			}
 		}
-    }
+  }
 
 	option = {
 		name = ger.283.b
 		ai_chance = {
 			factor = 0
 		}
-        add_political_power = -150
+    add_war_support = -0.05
 	}
 }
 
@@ -11170,7 +11184,7 @@ country_event = { # France Capitulates to North Africa
 				is_on_continent = europe
 			}
 			THIS = {
-				add_core_of = ORL
+				add_core_of = FRP
 			}
 		}
 
@@ -11299,7 +11313,7 @@ country_event = { # France Capitulates to North Africa
 				is_on_continent = europe
 			}
 			THIS = {
-				add_core_of = ORL
+				add_core_of = FRP
 			}
 		}
 
@@ -11326,6 +11340,7 @@ country_event = { # France Capitulates to North Africa
 
 	option = {
 	name = ger.401.a
+		set_global_flag = france_in_algeria
 		add_political_power = 50
 	}
 }
@@ -11422,7 +11437,7 @@ country_event = { # Germany - The fate for occupied France
 			limit = {
 				OR = {
 					is_core_of = FRA
-					is_core_of = ORL
+					is_core_of = FRP
 				}
 				is_owned_by = GER
 				NOT = {
@@ -11432,20 +11447,35 @@ country_event = { # Germany - The fate for occupied France
 					}
 				}
 			}
-			ORL = {
+			FRP = {
 				transfer_state = PREV
 			}
 		}
 		GER = {
-			puppet = ORL
-		}
-		ORL = {
-			set_cosmetic_tag = GER_FRA_rk
-			copy_government_idea_of_ROOT = yes
-			set_political_party = {
-				ideology = valkist
-				popularity = 60
+			puppet = FRP
+			if = {
+				limit = { has_cosmetic_tag = GER_kaiserreich }
+				FRP = {
+					set_cosmetic_tag = FRA_kingdom
+					copy_government_idea_of_ROOT = yes
+				}
 			}
+			else_if = {
+				limit = { has_cosmetic_tag = GER_socialist }
+				FRP = {
+					set_cosmetic_tag = FRA_commune
+					copy_government_idea_of_ROOT = yes
+				}
+			}
+			else_if = {
+				limit = { has_government = valkist }
+				FRP = {
+					set_cosmetic_tag = GER_FRA_rk
+					copy_government_idea_of_ROOT = yes
+				}
+			}
+		}
+		FRP = {
 			add_ideas = {
 				limited_conscription
 			}
@@ -11454,71 +11484,44 @@ country_event = { # Germany - The fate for occupied France
 			limit = {
 				is_owned_by = FRA
 			}
-			add_claim_by = ORL
+			add_claim_by = FRP
 		}
 		
 		if = {
 			limit = {
-				ORL = {
-					owns_state = 28
-				}
+				FRP = { owns_state = 28 }
 			}
-			GER = {
-				transfer_state = 28
-			}
+			transfer_state = 28
 		}
-		
 		if = {
 			limit = {
-				ORL = {
-					owns_state = 747
-				}
+				FRP = { owns_state = 747 }
 			}
-			GER = {
-				transfer_state = 747
-			}
+			transfer_state = 747
 		}
-
+		if = {
+			limit = { owns_state = 755 }
+			FRP = { transfer_state = 755 }
+		}
 		if = {
 			limit = {
-				GER = {
-					owns_state = 755
-				}
+				FRP = { owns_state = 868 }
 			}
-			ORL = {
-				transfer_state = 755
-			}
+			transfer_state = 868
 		}
-
 		if = {
 			limit = {
-				ORL = {
-					owns_state = 868
-				}
+				FRP = { owns_state = 981 }
 			}
-			GER = {
-				transfer_state = 868
-			}
+			transfer_state = 981
 		}
-
-		if = {
-			limit = {
-				ORL = {
-					owns_state = 981
-				}
-			}
-			GER = {
-				transfer_state = 981
-			}
-		}
-    }
-
+  }
 	option = { # Puppet France
 		name = ger.403.c
 		ai_chance = {
 			factor = 0
 		}
-        add_political_power = -150
+    add_political_power = -150
 	}
 }
 
@@ -11530,22 +11533,22 @@ country_event = { # Valkist France - Establish administration
     picture = GFX_report_event_communists_cheer
 
     trigger = {
-        original_tag = ORL
-		ORL = {
-			is_puppet_of = GER
-		}
-        owns_state = 16
+      original_tag = FRP
+			FRP = {
+				is_puppet_of = GER
+			}
+      owns_state = 16
     }
 
     mean_time_to_happen = {
-        days = 1
+      days = 1
     }
 
     fire_only_once = yes
 
 	option = {
 	name = ger.404.a
-		ORL = {
+		FRP = {
 			set_province_controller = 11506
 			set_province_controller = 11548
 			set_province_controller = 3552
@@ -11565,87 +11568,86 @@ country_event = { # Valkist France - Establish administration
 country_event = { # Valkist France - partisan problem
 	id = ger.4041
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.4041"}
-    title = ger.4041.t
-    desc = ger.4041.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.4041.t
+	desc = ger.4041.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
-        original_tag = ORL
-        has_idea = VFR_illegitimate_government
-    }
+	trigger = {
+		original_tag = FRP
+		has_idea = VFR_illegitimate_government
+	}
 
-    mean_time_to_happen = {
-        days = 30
-    }
+	mean_time_to_happen = {
+		days = 30
+	}
 
-    fire_only_once = yes
+	fire_only_once = yes
 
-    option = {
-        name = ger.4041.a
-        add_political_power = -25
-        hidden_effect = {
-			set_country_flag = VFR_partisan_problem
-            country_event = { id = ger.405 days = 45 }
-        }
-    }
+	option = {
+		name = ger.4041.a
+		add_political_power = -25
+		hidden_effect = {
+		set_country_flag = VFR_partisan_problem
+			country_event = { id = ger.405 days = 45 }
+		}
+	}
 }
 
 country_event = { # Valkist France - partisans damage industry
 	id = ger.405
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.405"}
-    title = ger.405.t
-    desc = ger.405.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.405.t
+	desc = ger.405.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
+  trigger = {
 		AND ={
-			original_tag = ORL
+			original_tag = FRP
 			has_country_flag = VFR_partisan_problem
 		}
 	}
 
 	is_triggered_only = yes
 
-    option = {
-        name = ger.405.a
+  option = {
+    name = ger.405.a
 		random_owned_state = {
-            limit = {
-                is_core_of = ORL
-            }
-            damage_building = {
-                type = industrial_complex
-                damage = 0.7
-            }
-        }
+			limit = {
+				is_core_of = FRP
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.7
+			}
+		}
 	}
 }
 
 country_event = { # Valkist France - At peace
 	id = ger.406
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.406"}
-    title = ger.406.t
-    desc = ger.406.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.406.t
+	desc = ger.406.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
+	trigger = {
 		AND = {
-			original_tag = ORL
+			original_tag = FRP
 			has_war = no
-			ORL = {
+			FRP = {
 				is_puppet_of = GER
 			}
 			owns_state = 16
 		}
-    }
+  }
 
 	fire_only_once = yes
-
 	mean_time_to_happen = {
 		days = 15
 	}
 
-    option = {
-        name = ger.406.a
+  option = {
+    name = ger.406.a
 		remove_ideas = VFR_illegitimate_government
 	}
 }
@@ -11653,11 +11655,11 @@ country_event = { # Valkist France - At peace
 country_event = { # France - liberation of the mainland
 	id = ger.407
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.407"}
-    title = ger.407.t
-    desc = ger.407.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.407.t
+	desc = ger.407.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
+  trigger = {
 		AND = {
 			original_tag = FRA
 			controls_state = 14
@@ -11668,7 +11670,7 @@ country_event = { # France - liberation of the mainland
 			controls_state = 29
 			has_idea = FRA_government_in_exile
 		}
-    }
+  }
 
 	fire_only_once = yes
 
@@ -11676,8 +11678,8 @@ country_event = { # France - liberation of the mainland
 		days = 1
 	}
 
-    option = {
-        name = ger.407.a
+  option = {
+    name = ger.407.a
 		remove_ideas = FRA_government_in_exile
 		set_capital = { state = 16 }
 		hidden_effect = {
@@ -12036,7 +12038,7 @@ country_event = { # Italy Capitulates to North Africa
 				}
 			}
 			
-        	every_state = {
+    every_state = {
 			limit = {
 				is_owned_by = ITA
 				is_on_continent = europe
@@ -12091,7 +12093,7 @@ country_event = { # Italy Capitulates to North Africa
 					}
 				}
 			}
-			GER = {
+			ITP = {
 				transfer_state = PREV
 			}
 		}
@@ -12102,9 +12104,12 @@ country_event = { # Italy Capitulates to North Africa
 				is_on_continent = europe
 				is_controlled_by = ITA
 			}
-			GER = {
+			ITP = {
 				transfer_state = PREV
 			}
+		}
+		GER = {
+			puppet = ITP
 		}
 
 		every_state = {
@@ -12113,7 +12118,7 @@ country_event = { # Italy Capitulates to North Africa
 				is_on_continent = europe
 				is_controlled_by = ITA
 			}
-				remove_core_of = ITA
+			remove_core_of = ITA
 		}
 
 		if = {
@@ -12248,26 +12253,25 @@ country_event = { # Italy Capitulates to North Africa
 country_event = { # Germany - The fate for occupied Italy
 	id = ger.413
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.413"}
-    title = ger.413.t
-    desc = ger.413.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.413.t
+	desc = ger.413.d
+	picture = GFX_report_event_communists_cheer
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-option = { # Puppet Italy
-	ai_chance = {
-		factor = 4000
-	}
+	option = { # Puppet Italy
+		ai_chance = {
+			factor = 4000
+		}
     name = ger.413.b
 		GER = {
-            puppet = SRV
-        }
+			puppet = ITP
+		}
 		hidden_effect = {
-			SRV = {
+			ITP = {
 				set_cosmetic_tag = GER_ITA_rk
 			}
-			
-            every_state = {
+      every_state = {
 				limit = {
 					is_owned_by = GER
 					OR = {
@@ -12281,7 +12285,7 @@ option = { # Puppet Italy
 						}
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = PREV
 				}
 			}
@@ -12308,7 +12312,6 @@ option = { # Puppet Italy
 					}
 				}
 			}
-
 			if = {
 				limit = {
 					GER = {
@@ -12319,14 +12322,13 @@ option = { # Puppet Italy
 					transfer_state = 448
 				}
 			}
-
 			if = {
 				limit = {
 					GER = {
 						owns_state = 449
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 449
 				}
 			}
@@ -12336,7 +12338,7 @@ option = { # Puppet Italy
 						owns_state = 450
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 450
 				}
 			}
@@ -12347,7 +12349,7 @@ option = { # Puppet Italy
 						owns_state = 451
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 451
 				}
 			}
@@ -12358,7 +12360,7 @@ option = { # Puppet Italy
 						owns_state = 663
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 663
 				}
 			}
@@ -12369,7 +12371,7 @@ option = { # Puppet Italy
 						owns_state = 662
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 662
 				}
 			}
@@ -12380,7 +12382,7 @@ option = { # Puppet Italy
 						owns_state = 661
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 661
 				}
 			}
@@ -12391,7 +12393,7 @@ option = { # Puppet Italy
 						owns_state = 273
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 273
 				}
 			}
@@ -12402,7 +12404,7 @@ option = { # Puppet Italy
 						owns_state = 769
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 769
 				}
 			}
@@ -12413,7 +12415,7 @@ option = { # Puppet Italy
 						owns_state = 550
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 550
 				}
 			}
@@ -12424,7 +12426,7 @@ option = { # Puppet Italy
 						owns_state = 559
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 559
 				}
 			}
@@ -12435,7 +12437,7 @@ option = { # Puppet Italy
 						owns_state = 817
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 817
 				}
 			}
@@ -12446,109 +12448,66 @@ option = { # Puppet Italy
 						owns_state = 163
 					}
 				}
-				SRV = {
+				ITP = {
 					transfer_state = 163
 				}
 			}
-			SRV = {
+			ITP = {
 				set_political_party = {
 					ideology = valkist
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
       }
 
-		2 = {
-            add_core_of = SRV
-        }
-        103 = {
-            add_core_of = SRV
-        }
-        114 = {
-            add_core_of = SRV
-        }
-        115 = {
-            add_core_of = SRV
-        }
-        117 = {
-            add_core_of = SRV
-        }
-        156 = {
-            add_core_of = SRV
-        }
-        157 = {
-            add_core_of = SRV
-        }
-        158 = {
-            add_core_of = SRV
-        }
-        159 = {
-            add_core_of = SRV
-        }
-        160 = {
-            add_core_of = SRV
-        }
-        161 = {
-            add_core_of = SRV
-        }
-        162 = {
-            add_core_of = SRV
-        }
-        163 = {
-            add_core_of = SRV
-        }
-        768 = {
-            add_core_of = SRV
-        }
-        789 = {
-            add_core_of = SRV
-        }
-        790 = {
-            add_core_of = SRV
-        }
-        849 = {
-            add_core_of = SRV
-        }
-        850 = {
-            add_core_of = SRV
-        }
-        851 = {
-            add_core_of = SRV
-        }
-        852 = {
-            add_core_of = SRV
-        }
+		ITP = {
+			add_state_core = 2
+			add_state_core = 103
+			add_state_core = 114
+			add_state_core = 115
+			add_state_core = 117
+			add_state_core = 156
+			add_state_core = 157
+			add_state_core = 158
+			add_state_core = 159
+			add_state_core = 160
+			add_state_core = 161
+			add_state_core = 162
+			add_state_core = 163
+			add_state_core = 768
+			add_state_core = 789
+			add_state_core = 849
+			add_state_core = 850
+			add_state_core = 851
+			add_state_core = 852
+		}
 
-        every_state = {
-            limit = {
-                is_core_of = ITA
-            }
-                add_claim_by = SRV
-        }
+		every_state = {
+			limit = {
+				is_core_of = ITA
+			}
+			add_claim_by = ITP
+		}
 
-        every_state = {
-            limit = {
-                is_claimed_by = ITA
-            }
-                add_claim_by = SRV
-        }
+		every_state = {
+			limit = {
+				is_claimed_by = ITA
+			}
+			add_claim_by = ITP
+		}
 
 		if = {
-            limit = {
-                GER = {
+			limit = {
+				GER = {
 					controls_state = 756
 				}
-            }
+      }
 			SRV = {
 				transfer_state = 756
 			}
-        }
+		}
 	}
 }
 
@@ -12564,23 +12523,23 @@ option = { # Germany shall conquer all
 country_event = { # Valkist Italy - Establish administration
 	id = ger.414
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.414"}
-    title = ger.414.t
-    desc = ger.414.d
-    picture = GFX_report_event_communists_cheer
+	title = ger.414.t
+	desc = ger.414.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
-        original_tag = SRV
+	trigger = {
+		original_tag = SRV
 		SRV = {
 			is_puppet_of = GER
 		}
-        owns_state = 2
-    }
+		owns_state = 2
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
+	mean_time_to_happen = {
+			days = 1
+	}
 
-    fire_only_once = yes
+	fire_only_once = yes
 
 	option = {
 	name = ger.414.a
@@ -12592,7 +12551,7 @@ country_event = { # Valkist Italy - Establish administration
 			set_province_controller = 3780
 			set_province_controller = 11584
 			set_province_controller = 6788
-			load_oob = VIT
+			load_oob = SRV
 			add_ideas = VIT_illegitimate_government
 		}
 	}
@@ -12892,57 +12851,53 @@ country_event = { # England Capitulates to Canada? will edit
 	fire_only_once = yes
 
 	option = {
+		name = ger.420.a
 		trigger = {
-			CAN = {
-				is_ai = no
-			}
+			CAN = { is_ai = no }
 		}
-	name = ger.420.a
-	    hidden_effect = {
-        	every_state = {
-			limit = {
-				is_owned_by = ENG
-				NOT = {
-					is_controlled_by = ENG
-				}
-			}
-		}
-			GER = {
-			if = {
+
+		hidden_effect = {
+			every_state = {
 				limit = {
-					has_war_with = ENG
-					controls_state = PREV
+					is_owned_by = ENG
+					NOT = {
+						is_controlled_by = ENG
+					}
 				}
-				transfer_state = PREV
-				}
-			}
-
-
-		every_state = {
-			limit = {
-				is_core_of = ENG
-				is_on_continent = europe
-				is_controlled_by = ENG
 			}
 			GER = {
 				if = {
 					limit = {
-						controls_state = 126
+						has_war_with = ENG
+						controls_state = PREV
 					}
-					transfer_state = PREV
+				transfer_state = PREV
 				}
 			}
-		}
-
-		every_state = {
-			limit = {
-				is_core_of = ENG
-				is_on_continent = europe
-				is_controlled_by = ENG
+			every_state = {
+				limit = {
+					is_core_of = ENG
+					is_on_continent = europe
+					is_controlled_by = ENG
+				}
+				GER = {
+					if = {
+						limit = {
+							controls_state = 126
+						}
+						transfer_state = PREV
+					}
+				}
 			}
+			every_state = {
+				limit = {
+					is_core_of = ENG
+					is_on_continent = europe
+					is_controlled_by = ENG
+				}
 				remove_core_of = ENG
+			}
 		}
-	}
 
 		set_capital = { state = 331 }
 		331 = {
@@ -12953,76 +12908,75 @@ country_event = { # England Capitulates to Canada? will edit
 		}
 		add_ideas = ENG_government_in_exile
 
+		set_global_flag = england_in_canada
 		hidden_effect = {
-		GER = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.421 }
+			GER = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.421 }
 			}
-		POR = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4211 }
+			POR = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4211 }
 			}
-		SAF = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4212 }
+			SAF = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4212 }
 			}
-		AST = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4213 }
+			AST = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4213 }
 			}
-		RAJ = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4214 }
+			RAJ = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4214 }
 			}
-		JAP = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4215 }
+			JAP = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4215 }
 			}
-		ARG = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4216 }
+			ARG = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4216 }
 			}
-		SAU = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4218 }
-		}
-		NZL = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4219 }
-		}
-		SPR = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.4221 }
-		}
-		FRA = {
-			set_country_flag = GER_england_escapes
+			SAU = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4218 }
+			}
+			NZL = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4219 }
+			}
+			SPR = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.4221 }
+			}
+			FRA = {
+				set_country_flag = GER_england_escapes
 			}
 		}
 	}
 	option = {
+		name = ger.420.a
 		trigger = {
-			CAN = {
-				is_ai = yes
-			}
+			CAN = { is_ai = yes }
 		}
-	name = ger.420.a
 		ENG = {
 			annex_country = { target = CAN transfer_troops = yes }
 			set_capital = { state = 276 }
 			add_ideas = ENG_government_in_exile
 		}
 
+		set_global_flag = england_in_canada
 		hidden_effect = {
-		GER = {
-			set_country_flag = GER_england_escapes
-			country_event = { id = ger.421 }
-		}
-
+			GER = {
+				set_country_flag = GER_england_escapes
+				country_event = { id = ger.421 }
+			}
 			every_state = {
 				limit = {
 					is_core_of = CAN
 				}
-					add_core_of = ENG
+				add_core_of = ENG
 			}
 			every_state = {
 				limit = {
@@ -13030,7 +12984,7 @@ country_event = { # England Capitulates to Canada? will edit
 					is_on_continent = europe
 					is_controlled_by = ENG
 				}
-					remove_core_of = ENG
+				remove_core_of = ENG
 			}
 		}
 
@@ -13081,9 +13035,9 @@ country_event = { # England Capitulates to Canada? will edit
 		FRA = {
 			set_country_flag = GER_england_escapes
 			country_event = { id = ger.4230 }
-			}
 		}
 	}
+}
 
 country_event = { # England Capitulates to Canada? will probably change
 	id = ger.421

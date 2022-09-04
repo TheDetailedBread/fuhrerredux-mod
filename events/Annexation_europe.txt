@@ -128,7 +128,6 @@ country_event = { # Fate of Austria
       add_to_temp_array = { core_removal_array = AUS }
       remove_all_cores_and_claims_of_tags = yes
       4 = { add_core_of = AUS } # Vienna
-      39 = { add_core_of = AUS } # Sudtirol
       152 = { add_core_of = AUS } # Upper Austria
       153 = { add_core_of = AUS } # Tyrol
       803 = { add_core_of = AUS } # North Austria
@@ -1074,6 +1073,23 @@ country_event = { # Fate of France
         }
         set_cosmetic_tag = GER_FRA_rk
       }
+      else_if = {
+        limit = {
+          ROOT = {
+            tag = GER
+            has_completed_focus = GER_kaiserreich
+          }
+        }
+        set_cosmetic_tag = FRA_kingdom
+      }
+      else_if = {
+        limit = {
+          ROOT = {
+            has_socialist_government = yes
+          }
+        }
+        set_cosmetic_tag = FRA_commune
+      }
     }
   }
 
@@ -1097,7 +1113,26 @@ country_event = { # Fate of Great Britain
   immediate = {
     hidden_effect = {
       every_owned_state = {
-        limit = { is_core_of = ENG }
+        limit = {
+          OR = {
+            state = 119
+            state = 120
+            state = 121
+            state = 122
+            state = 123
+            state = 125
+            state = 126
+            state = 127
+            state = 128
+            state = 129
+            state = 130
+            state = 131
+            state = 132
+            state = 133
+            state = 136
+            state = 338
+          }
+        }
         add_core_of = EGL
       }
       add_to_temp_array = { core_removal_array = ENG }
@@ -1121,6 +1156,9 @@ country_event = { # Fate of Great Britain
           }
         }
         set_cosmetic_tag = GER_ENG_rk
+      }
+      else = {
+        set_cosmetic_tag = EGL_uk
       }
     }
   }
@@ -1195,6 +1233,9 @@ country_event = { # Fate of Germany
 
     set_temp_variable = { tag_to_release = GRP }
     release_targeted_tag = yes
+    hidden_effect = {
+      GER_transfer_characters_to_puppet = yes
+    }
   }
 
   option = {
@@ -1509,7 +1550,12 @@ country_event = { # Fate of Netherlands
   }
 
   option = { # Restore the House of Orange
-    name = annex.112.b
+    name = annex.122.b
+    trigger = {
+      NOT = {
+        country_exists = KNE
+      }
+    }
     ai_chance = {
       base = 0
       modifier = {
@@ -4893,7 +4939,7 @@ country_event = { # Fate of Sudtirol
     39 = { transfer_state_and_add_core = yes }
   }
 
-  option = { # Give it to the Italian
+  option = { # Give it to the Italians
     name = annex.173.b
     trigger = {
       ITA = { ROOT_can_grant_land = yes }
@@ -4906,6 +4952,22 @@ country_event = { # Fate of Sudtirol
       }
     }
     set_temp_variable = { tag_to_release = ITA }
+    39 = { transfer_state_and_add_core = yes }
+  }
+
+  option = { # Give it to the Italians
+    name = annex.173.b
+    trigger = {
+      ITP = { ROOT_can_grant_land = yes }
+    }
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 0.25
+        is_ally_with = AUS
+      }
+    }
+    set_temp_variable = { tag_to_release = ITP }
     39 = { transfer_state_and_add_core = yes }
   }
 
@@ -5349,5 +5411,84 @@ country_event = { # Fate of Crisana
     }
     occupy_small_country = yes
     set_country_flag = ORADEA_CONQ
+  }
+}
+
+country_event = { # Fate of European Russia
+  id = annex.185
+  title = annexation_VRS_CONQ
+  desc = annexation_VRS_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      every_owned_state = {
+        limit = { 
+          is_core_of = SOV 
+        }
+        VRS = { add_state_core = PREV }
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.185.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = VRS }
+    release_targeted_tag = yes
+    if = {
+      limit = {
+        ROOT = {
+          tag = GER
+          has_government = valkist
+        }
+      }
+      VRS = {
+        set_party_name = { 
+          ideology = valkist 
+          long_name = VRS_rk_party 
+          name = VRS_rk_party_long 
+        }
+      }
+    }
+    else = {
+      VRS = {
+        set_party_name = { 
+          ideology = valkist 
+          long_name = VRS_valkist_party 
+          name = VRS_valkist_party_long 
+        }
+      }
+    }
+  }
+
+  option = { # Give to Russia
+    name = annex.185.b
+    ai_chance = {
+      base = 100
+      modifier = {
+        factor = 2
+        is_ally_with = RUS
+      }
+    }
+    trigger = {
+      is_ally_with = RUS
+    }
+    every_owned_state = {
+      limit = { is_core_of = VRS }
+      RUS = { transfer_state = PREV }
+    }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    occupy_massive_country = yes
+    set_country_flag = VRS_CONQ
   }
 }

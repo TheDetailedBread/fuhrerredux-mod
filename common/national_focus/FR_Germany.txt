@@ -663,7 +663,7 @@ focus_tree = {
 				GER = {
 					controls_state = 15
 				}
-				ORL = {
+				FRP = {
 					OR = {
 						AND = {
 							is_puppet_of = GER
@@ -2087,13 +2087,13 @@ focus_tree = {
 
 			if = {
 				limit = {
-					ORL = { # Valkist France
+					FRP = { # Valkist France
 						is_in_faction_with = GER
 					}
 				}
-				ORL = {
+				FRP = {
 					755 = {
-						add_core_of = ORL
+						add_core_of = FRP
 					}
 				}
 			}
@@ -9871,6 +9871,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_assasination_dessler"
 			country_event = valkyrie.2
+			hidden_effect = {
+				country_event = { id = valkyrie.10016 days = 120 }
+			}
 		}
 	}
 	focus = {
@@ -11393,17 +11396,17 @@ focus_tree = {
 				has_completed_focus = GER_charisma_and_strengh 
 			}
 		}
-        completion_reward = {
+    completion_reward = {
 			add_political_power = 100
 			increase_ruling_party_popularity_by_5 = yes
-	    }
+	  }
 	}
 	focus = {
 		id = GER_expantionism
 		icon = GFX_goal_generic_attack_allies
 		cost = 4
 		available = {
-            has_government = national_populist
+      has_government = national_populist
 		}
 		prerequisite = {
 			focus = GER_Germany_in_Europe
@@ -11414,10 +11417,10 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = GER_Germany_in_Europe
-        completion_reward = {
+    completion_reward = {
 			create_faction = "Reichspakt"
 			add_war_support	= 0.1
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_Western_Europe
@@ -11469,9 +11472,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_covert_operations
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.92
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_old_contacts
@@ -11483,9 +11486,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_covert_operations
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.93
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_start_the_uprising
@@ -11500,13 +11503,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_arm_the_loyalists
-        completion_reward = {
+    completion_reward = {
 			RHI = {
 				country_event = { id = valkyrie.94 days = 4 }
 			}
-	  	}
+	  }
 	}
-	
 	focus = {
 		id = GER_referundum_rheinland
 		icon = GFX_goal_RHI_referendum
@@ -11518,10 +11520,18 @@ focus_tree = {
 			focus = GER_covert_operations
 		}
 		bypass = {
-		    has_global_flag = GER_RHEIN_ULTI
+			OR = {
+				has_global_flag = GER_RHEIN_ULTI
+				RHI = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
 		}
 		available = {
-		    has_global_flag = GER_RHEIN_ULTI
+			country_exists = RHI
+		  has_global_flag = GER_RHEIN_ULTI
 		}
 		x = 1
 		y = 1
@@ -11544,13 +11554,27 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
+		available = {
+			country_exists = FRA
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_start_the_uprising
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = {
 				type = annex_everything
 				target = FRA
 			}
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_throught_the_belux
@@ -11564,17 +11588,69 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
+		available = {
+			OR = {
+				country_exists = BEL
+				country_exists = HOL
+				country_exists = KNE
+			}
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			BEL = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+			HOL = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+			KNE = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_war_with_france
-        completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = BEL
+    completion_reward = {
+			if = {
+				limit = {
+					country_exists = BEL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BEL
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = HOL
+			if = {
+				limit = {
+					country_exists = HOL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = HOL
+				}
 			}
-	  	}
+			if = {
+				limit = {
+					country_exists = KNE
+					owns_state = 7
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KNE
+				}
+			}
+	  }
 	}
 	focus = {
 		id = GER_throught_switzerland
@@ -11588,13 +11664,27 @@ focus_tree = {
 		}
 		x = -2
 		y = 1
+		available = {
+			country_exists = SWI
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			SWI = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_war_with_france
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = {
 				type = annex_everything
 				target = SWI
 			}
-	  	}
+	  }
 	}
 
 
@@ -11608,9 +11698,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_expantionism
-        completion_reward = {
+    completion_reward = {
 			add_war_support = 0.05
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_the_austrian_coup
@@ -11621,13 +11711,27 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
+		available = {
+			country_exists = AUS
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			AUS = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_central_Europe
-        completion_reward = {
+      completion_reward = {
 			AUS = {
 				country_event = valkyrie.105
 			}
 			custom_effect_tooltip = GER_france_warning
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_Czech_referundum
@@ -11638,14 +11742,28 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		available = {
+			country_exists = CZE
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			CZE = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_central_Europe
-        completion_reward = {
+    completion_reward = {
 			CZE = {
 				set_country_flag = CEN_gib_silesia
 				country_event = valkyrie.139
 			}
 			custom_effect_tooltip = GER_france_warning
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_danish_intervention
@@ -11656,13 +11774,27 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
+		available = {
+			country_exists = DEN
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			DEN = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_central_Europe
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = {
 				type = annex_everything
 				target = DEN
 			}
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_secure_the_scandinavia
@@ -11674,9 +11806,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_danish_intervention
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.89
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_invasion
@@ -11689,14 +11821,14 @@ focus_tree = {
 			focus = GER_guarentees_and_pacts
 		}
 		available = {
-		    has_global_flag = GER_SCANDI_WAR
+		  has_global_flag = GER_SCANDI_WAR
 		}
 		x = -1
 		y = 1
 		relative_position_id = GER_secure_the_scandinavia
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.90
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_guarentees_and_pacts
@@ -11714,12 +11846,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_secure_the_scandinavia
-        completion_reward = {
+    completion_reward = {
 			ENG = { give_guarantee = SWE }
 			ENG = { give_guarantee = NOR }
 			give_guarantee = SWE
 			give_guarantee = NOR
-	  	}
+	  }
 	}
 
 	focus = {
@@ -11735,10 +11867,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GER_expantionism
-        completion_reward = {
+    completion_reward = {
 			add_war_support = 0.05
 			increase_ruling_party_popularity_by_5 = yes
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_Polish_invasion
@@ -11749,12 +11881,26 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		available = {
+			country_exists = POL
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			POL = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_Eastern_Europe
-        completion_reward = {
+    completion_reward = {
 			POL = {
 				country_event = valkyrie.254
 			}
-	    }
+	  }
 	}
 	focus = {
 		id = GER_ennemies_on_all_side
@@ -11768,17 +11914,51 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
+		available = {
+			OR = {
+				country_exists = UKR
+				country_exists = BLR
+			}
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			UKR = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+			BLR = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_Polish_invasion
-        completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = UKR
+    completion_reward = {
+			if = {
+				limit = {
+					country_exists = UKR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = UKR
+				}
 			}
-			create_wargoal = {
-				type = annex_everything
-				target = BLR
+			if = {
+				limit = {
+					country_exists = BLR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BLR
+				}
 			}
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_friends_out_east
@@ -11793,8 +11973,32 @@ focus_tree = {
 		ai_will_do = { factor = 200 }
 		x = 1
 		y = 1
+		available = {
+			OR = {
+				country_exists = UKR
+				country_exists = BLR
+			}
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			UKR = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+			BLR = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_Polish_invasion
-        completion_reward = {
+    completion_reward = {
 			UKR = {
 				country_event = valkyrie.246
 			}
@@ -11813,8 +12017,22 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		available = {
+			country_exists = SOV
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			SOV = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		relative_position_id = GER_ennemies_on_all_side
-        completion_reward = {
+      completion_reward = {
 			create_wargoal = {
 				type = annex_everything
 				target = SOV
@@ -11827,13 +12045,8 @@ focus_tree = {
 		cost = 4
 		available = {
 			OR = {
-				has_government = social_democrat  
-				has_government = social_liberal
-				has_government = market_liberal
-				has_government = social_conservative
-				has_government = authoritarian_democrat
-				has_government = paternal_autocrat
-				has_government = libertarian_socialist
+				has_democratic_government = yes
+				has_socialist_government = yes
 			}
 		}
 		prerequisite = {
@@ -11845,10 +12058,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GER_Germany_in_Europe
-        completion_reward = {
+      completion_reward = {
 			add_political_power= 150
 			add_stability = 0.1
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_finding_allies
@@ -11860,22 +12073,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_Realpolitics
-        completion_reward = {
+    completion_reward = {
 			add_political_power = 100
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_United_Kingdom
 		icon = GFX_focus_eng_the_sun_never_sets
 		cost = 4
 		available = {
-			OR = {
-				has_government = social_democrat  
-				has_government = social_liberal
-				has_government = market_liberal
-				has_government = social_conservative
-				has_government = authoritarian_democrat
-				has_government = paternal_autocrat
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				has_global_flag = GER_ADECOUP
 			}
 		}	
 		prerequisite = {
@@ -11887,9 +12096,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_finding_allies
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.18
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_hands_off_zones
@@ -11901,9 +12110,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_United_Kingdom
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.22
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_kings_visit_to_germany
@@ -11915,9 +12124,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_United_Kingdom
-        completion_reward = {
+    completion_reward = {
 			country_event = valkyrie.23
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_accept_british_naval_dominance
@@ -11932,9 +12141,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_hands_off_zones
-        completion_reward = {
+    completion_reward = {
 			add_ideas = GER_shade_of_the_ern
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_open_trade_space
@@ -11946,11 +12155,11 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_accept_british_naval_dominance
-        completion_reward = {
+    completion_reward = {
 			ENG = {
 				country_event = valkyrie.27
 	 		}
-	    }
+	  }
 	}
 	focus = {
 		id = GER_anglo_german_training
@@ -11962,11 +12171,11 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_accept_british_naval_dominance
-        completion_reward = {
+    completion_reward = {
 			ENG = {
 				country_event = valkyrie.24
 			}
-	    }
+	  }
 	}
 	focus = {
 		id = GER_German_claims
@@ -11997,14 +12206,24 @@ focus_tree = {
 			focus = GER_German_claims
 		}
 		available = {
+			country_exists = FRA
 			has_army_manpower = { size > 1000000 }
+		}
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
 		}
 		x = -1
 		y = 1
 		relative_position_id = GER_German_claims
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = { type = annex_everything target = FRA }
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_end_Italy
@@ -12014,14 +12233,24 @@ focus_tree = {
 			focus = GER_German_claims
 		}
 		available = {
+			country_exists = ITA
 			has_army_manpower = { size > 1000000 }
+		}
+		bypass = {
+			ITA = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
 		}
 		x = 1
 		y = 1
 		relative_position_id = GER_German_claims
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = { type = annex_everything target = ITA }
-	  	}
+	  }
 	}
 	focus = {
 		id = GER_monarchism_is_back_in_fashion
@@ -12050,7 +12279,17 @@ focus_tree = {
 			focus = GER_monarchism_is_back_in_fashion
 		}
 		available = {
+			country_exists = SOV
 			has_army_manpower = { size > 1500000 }
+		}
+		bypass = {
+			SOV = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
 		}
 		x = 0
 		y = 1
@@ -12059,13 +12298,11 @@ focus_tree = {
 			create_wargoal = { type = annex_everything target = SOV }
 	  }
 	}
-
-
 	focus = {
 		id = GER_the_sovier_union
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		available = {
-			has_government = libertarian_socialist
+			has_socialist_government = yes
 		}
 		cost = 4
 		prerequisite = {
@@ -12085,6 +12322,9 @@ focus_tree = {
 		id = GER_technology_sharing
 		icon = GFX_focus_generic_socialist_science
 		cost = 4
+		available = {
+			has_socialist_government = yes
+		}
 		prerequisite = {
 			focus = GER_the_sovier_union
 		}
@@ -12099,6 +12339,9 @@ focus_tree = {
 		id = GER_splitting_Eastern_Europe
 		icon = GFX_goal_generic_position_armies
 		cost = 4
+		available = {
+			has_socialist_government = yes
+		}
 		prerequisite = {
 			focus = GER_technology_sharing
 		}
@@ -12113,6 +12356,18 @@ focus_tree = {
 		id = GER_Poland
 		icon = GFX_goal_poland
 		cost = 4
+		available = {
+			country_exists = POL
+		}
+		bypass = {
+			POL = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
 		prerequisite = {
 			focus = GER_splitting_Eastern_Europe
 		}
@@ -12127,6 +12382,9 @@ focus_tree = {
 		id = GER_Soviet_Germans
 		icon = GFX_goal_generic_improve_relations
 		cost = 4
+		available = {
+			has_socialist_government = yes
+		}
 		prerequisite = {
 			focus = GER_Poland
 		}
@@ -12141,6 +12399,9 @@ focus_tree = {
 		id = GER_a_helping_hand
 		icon = GFX_goal_commune_politics
 		cost = 4
+		available = {
+			has_socialist_government = yes
+		}
 		prerequisite = {
 			focus = GER_Poland
 		}
@@ -12156,6 +12417,9 @@ focus_tree = {
 		id = GER_economic_cooperation
 		icon = GFX_goal_revolution_tools
 		cost = 4
+		available = {
+			has_socialist_government = yes
+		}
 		prerequisite = {
 			focus = GER_Soviet_Germans
 		}
@@ -12197,6 +12461,9 @@ focus_tree = {
 		id = GER_soviet_diplomatic_assistance
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 4
+		available = {
+			has_socialist_government = yes
+		}
 		prerequisite = {
 			focus = GER_economic_cooperation
 		}
@@ -12213,7 +12480,7 @@ focus_tree = {
 			unlock_decision_tooltip = GER_holstein_reclamation
 	  }
 	}
-	
+
 	focus = {
 		id = GER_the_revolution_in_France
 		icon = GFX_goal_comfrance
@@ -12222,7 +12489,17 @@ focus_tree = {
 			focus = GER_soviet_diplomatic_assistance
 		}
 		available = {
+			country_exists = FRA
 			has_army_manpower = { size > 1000000 }
+		}
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
 		}
 		x = -2
 		y = 1
@@ -12239,12 +12516,22 @@ focus_tree = {
 			focus = GER_soviet_diplomatic_assistance
 		}
 		available = {
+			country_exists = FRA
 			has_army_manpower = { size > 1000000 }
+		}
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
 		}
 		x = 2
 		y = 1
 		relative_position_id = GER_soviet_diplomatic_assistance
-        completion_reward = {
+    completion_reward = {
 			create_wargoal = { type = annex_everything target = ENG }
 	 	}
 	}
@@ -12261,10 +12548,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_the_revolution_in_France
-        completion_reward = {
+    completion_reward = {
 			increase_ruling_party_popularity_by_15 = yes
 			add_political_power = 150
-	  	}
+	  }
 	}
 
 	#############################################
@@ -12286,7 +12573,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		   log = "[GetDateText]: [Root.GetName]: Focus GER_New_order"
-           add_war_support = 0.1
+        add_war_support = 0.1
 	   }
 	}
 	

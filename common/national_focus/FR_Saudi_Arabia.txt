@@ -295,18 +295,20 @@ focus_tree = {
     relative_position_id = SAU_building_economy
     completion_reward = {
       292 = {
-        limit = {
-          free_building_slots = {
-            building = arms_factory
-            size > 0
-            include_locked = yes
+        if = {
+            limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
           }
-        }
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
         }
       }
       custom_effect_tooltip = available_designer

@@ -263,6 +263,14 @@ country_event = { # Fate of Canada
     }
     set_temp_variable = { tag_to_release = CAN }
     release_targeted_tag = yes
+    if = {
+      limit = { tag = ENG }
+      set_cosmetic_tag = CAN_ENG
+      CAN_remove_republic = yes
+    }
+    else = {
+      CAN_become_republic = yes
+    }
   }
 
   option = { # Separate Quebec from Canada
@@ -283,6 +291,14 @@ country_event = { # Fate of Canada
     release_targeted_tag = yes
     set_temp_variable = { tag_to_release = CAN }
     release_targeted_tag = yes
+    if = {
+      limit = { tag = ENG }
+      set_cosmetic_tag = CAN_ENG
+      CAN_remove_republic = yes
+    }
+    else = {
+      CAN_become_republic = yes
+    }
   }
 
   option = { # Occupy

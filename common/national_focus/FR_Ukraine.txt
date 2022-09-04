@@ -7,11 +7,10 @@
 ### NOTE: please contact me before touching this file.
 
 focus_tree = {
-	id = FR_Ukraine
+	id = ukrainian_focus
 
 	country = {
 		factor = 0
-
 		modifier = {
 			add = 10
 			tag = UKR
@@ -37,8 +36,8 @@ focus = {
 	}
 	available = {
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_start"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_start"
 		army_experience = 25
 	}
 }
@@ -59,11 +58,8 @@ focus = {
 		focus = ukr_army_pavlenko
 		focus = ukr_army_sinkler
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_skoropadksyi"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_skoropadksyi"
 		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
 			cost_reduction = 0.25
@@ -89,11 +85,8 @@ focus = {
 		focus = ukr_army_pavlenko
 		focus = ukr_army_skoropadksyi
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_sinkler"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_sinkler"
 		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
 			cost_reduction = 0.25
@@ -119,11 +112,8 @@ focus = {
 		focus = ukr_army_sinkler
 		focus = ukr_army_skoropadksyi
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_pavlenko"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_pavlenko"
 		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
 			cost_reduction = 0.25
@@ -149,11 +139,8 @@ focus = {
 		focus = ukr_army_sinkler
 		focus = ukr_army_skoropadksyi
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_udovychenko"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_udovychenko"
 		add_doctrine_cost_reduction = {
 			name = doctrine_bonus
 			cost_reduction = 0.25
@@ -177,8 +164,8 @@ focus = {
 		focus = ukr_army_sinkler
 		focus = ukr_army_skoropadksyi
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_modernization"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_modernization"
 		add_ideas = UKR_modern_army
 	}
 }
@@ -198,11 +185,8 @@ focus = {
 		focus = ukr_army_french_officers
 		focus = ukr_army_british_officers
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_german_officers"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_german_officers"
 		add_opinion_modifier = {
 			target = GER
 			modifier = UKR_german_officers
@@ -229,11 +213,8 @@ focus = {
 		focus = ukr_army_french_officers
 		focus = ukr_army_german_officers
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_british_officers"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_british_officers"
 		add_opinion_modifier = {
 			target = ENG
 			modifier = UKR_british_officers
@@ -260,11 +241,8 @@ focus = {
 		focus = ukr_army_german_officers
 		focus = ukr_army_british_officers
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_french_officers"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_french_officers"
 		add_opinion_modifier = {
 			target = FRA
 			modifier = UKR_french_officers
@@ -292,11 +270,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_army_bottom_up
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_top_down"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_top_down"
 		add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 1
@@ -321,11 +296,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_army_top_down
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_bottom_up"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_bottom_up"
 		add_tech_bonus = {
 			name = doctrine_bonus
 			bonus = 0.25
@@ -347,16 +319,13 @@ focus = {
 		focus = ukr_army_bottom_up
 		focus = ukr_army_top_down
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_doctrine_research"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_doctrine_research"
 		add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+      cost_reduction = 0.5
+      uses = 1
+      category = land_doctrine
+    }
 	}
 }
 focus = {
@@ -372,11 +341,8 @@ focus = {
 		focus = ukr_army_bottom_up
 		focus = ukr_army_top_down
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_artillery_integration"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_artillery_integration"
 		add_tech_bonus = {
 			name = doctrine_bonus
 			bonus = 0.50
@@ -398,11 +364,8 @@ focus = {
 		focus = ukr_army_bottom_up
 		focus = ukr_army_top_down
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_army_support_companies"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_army_support_companies"
 		add_tech_bonus = {
 			name = infantry_bonus
 			bonus = 0.50
@@ -423,11 +386,8 @@ focus = {
 	ai_will_do = {
 		factor = 40
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_start"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_start"
 		navy_experience = 25
 	}
 }
@@ -446,9 +406,6 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_navy_pilipenko
 		focus = ukr_navy_gorshkov
-	}
-	available = {
-
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_maximov"
@@ -476,9 +433,6 @@ focus = {
 		focus = ukr_navy_maximov
 		focus = ukr_navy_pilipenko
 	}
-	available = {
-
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_gorshkov"
 		add_doctrine_cost_reduction = {
@@ -505,9 +459,6 @@ focus = {
 		focus = ukr_navy_maximov
 		focus = ukr_navy_gorshkov
 	}
-	available = {
-
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_pilipenko"
 		add_doctrine_cost_reduction = {
@@ -530,11 +481,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_navy_maximov
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_sea_wolves"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_sea_wolves"
 		add_tech_bonus = {
 			name = ss_bonus
 			bonus = 0.5
@@ -558,11 +506,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_navy_gorshkov
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_sea_titans"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_sea_titans"
 		add_tech_bonus = {
 			name = capital_ships_bonus
 			bonus = 0.5
@@ -588,11 +533,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_navy_pilipenko
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_fleet_integralism"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_fleet_integralism"
 		add_tech_bonus = {
 			name = dd_bonus
 			bonus = 0.5
@@ -616,9 +558,6 @@ focus = {
 	prerequisite = {
 		focus = ukr_navy_sea_wolves
 	}
-	available = {
-
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_convoy_interdiction"
 		add_doctrine_cost_reduction = {
@@ -640,9 +579,6 @@ focus = {
 	}
 	prerequisite = {
 		focus = ukr_navy_sea_titans
-	}
-	available = {
-
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_floating_fortress"
@@ -666,9 +602,6 @@ focus = {
 	prerequisite = {
 		focus = ukr_navy_fleet_integralism
 	}
-	available = {
-
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_navy_initiative"
 		add_doctrine_cost_reduction = {
@@ -691,11 +624,8 @@ focus = {
 	ai_will_do = {
 		factor = 40
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_start"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_start"
 		air_experience = 25
 	}
 }
@@ -714,11 +644,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_air_tkachev
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_shtern"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_shtern"
 		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
 			cost_reduction = 0.25
@@ -742,11 +669,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_air_shtern
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_tkachev"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_tkachev"
 		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
 			cost_reduction = 0.25
@@ -770,11 +694,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_air_army_support
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_navy_support"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_navy_support"
 		add_tech_bonus = {
 			name = nav_bomber_bonus
 			bonus = 0.25
@@ -798,11 +719,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_air_navy_support
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_army_support"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_army_support"
 		add_tech_bonus = {
 			name = CAS_bonus
 			bonus = 0.25
@@ -826,11 +744,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_air_quantity
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_quality"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_quality"
 		add_doctrine_cost_reduction = {
 			name = air_doc_bonus
 			cost_reduction = 0.10
@@ -854,11 +769,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_air_quality
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_air_quantity"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_air_quantity"
 		add_ideas = UKR_fighter_quantity
 	}
 }
@@ -880,8 +792,8 @@ focus = {
 			has_country_flag = UKR_bw
 		}
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_1936_rada"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_1936_rada"
 		UKR = { country_event = { id = ukraine.3 days = 1 }	}
 	}
 }
@@ -905,9 +817,8 @@ focus = {
 	available = {
 		always = no
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_nationalist"
-
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_nationalist"
 	}
 }
 focus = {
@@ -930,9 +841,8 @@ focus = {
 	available = {
 		always = no
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_junta"
-
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_junta"
 	}
 }
 focus = {
@@ -955,9 +865,8 @@ focus = {
 	available = {
 		always = no
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_democratic"
-
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_democratic"
 	}
 }
 focus = {
@@ -981,9 +890,8 @@ focus = {
 	available = {
 		always = no
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_socialist"
-
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_rada_socialist"
 	}
 }
 ##################
@@ -1001,11 +909,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_junta
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_reforms"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_reforms"
 		add_ideas = UKR_admin_reforms
 	}
 }
@@ -1021,11 +926,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_reforms
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_economy"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_economy"
 		add_opinion_modifier = {
 			target = GER
 			modifier = UKR_german_economy
@@ -1051,11 +953,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_german_economy
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_widescale_reforms"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_widescale_reforms"
 		swap_ideas = {
 			remove_idea = UKR_admin_reforms
 			add_idea = UKR_admin_reforms2
@@ -1074,11 +973,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_widescale_reforms
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_official_language"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_official_language"
 		remove_ideas = UKR_language_problem
 	}
 }
@@ -1094,11 +990,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_reforms
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_training"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_training"
 		army_experience = 25
 		GER = {
 			army_experience = 25
@@ -1117,11 +1010,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_german_training
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_destroy_commies"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_destroy_commies"
 		add_popularity = {
 			ideology = collectivist
 			popularity = -0.1
@@ -1144,11 +1034,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_destroy_commies
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_black_sea_germans"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_black_sea_germans"
 		add_ideas = UKR_black_sea_ger
 		add_opinion_modifier = {
 			target = GER
@@ -1168,11 +1055,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_reforms
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_land_distribute"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_land_distribute"
 		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 1
 		}
@@ -1196,11 +1080,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_land_distribute
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_puppet_rada"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_puppet_rada"
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.05
@@ -1219,11 +1100,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_junta_puppet_rada
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_end_elections"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_end_elections"
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.1
@@ -1244,13 +1122,11 @@ focus = {
 		focus = ukr_junta_official_language
 		focus = ukr_junta_black_sea_germans
 	}
-
 	completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_ally"
-      add_political_power = 100
-      add_stability = 0.05
-      add_war_support = 0.05
-      
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_junta_german_ally"
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
 	}
 }
 ########################
@@ -1268,11 +1144,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_nationalist
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_purge_reds"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_purge_reds"
 		add_popularity = {
 			ideology = collectivist
 			popularity = -0.1
@@ -1295,11 +1168,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_nationalist
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_ukraine_culture"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_ukraine_culture"
 		add_ideas = UKR_culture
 		add_political_power = 25
 	}
@@ -1316,11 +1186,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_nationalist
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_centralize"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_centralize"
 		add_timed_idea = {
 			idea = UKR_centralize
 			days = 150
@@ -1342,11 +1209,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_nat_ukraine_culture
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_no_russian"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_no_russian"
 		227 = {
 			add_core_of = UKR
 		}
@@ -1370,11 +1234,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_nat_centralize
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_construction_projects"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_construction_projects"
 		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -1405,11 +1266,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_nat_no_russian
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_peoples_militia"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_peoples_militia"
 		hidden_effect = {
 			load_oob = UKR_militia
 		}
@@ -1431,11 +1289,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_nat_construction_projects
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_secret_police"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_secret_police"
 		add_ideas = UKR_secret_police
 	}
 }
@@ -1451,11 +1306,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_nat_construction_projects
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_militarize_state"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_militarize_state"
 		add_ideas = UKR_state_militarism
 		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 2
@@ -1485,9 +1337,6 @@ focus = {
 	prerequisite = {
 		focus = ukr_nat_peoples_militia
 	}
-	available = {
-
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_nat_claim_land"
 		UKR = {
@@ -1512,12 +1361,9 @@ focus = {
 	}
 	prerequisite = {
 		focus = ukr_rada_democratic
-	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_voting_reform"
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_voting_reform"
 		add_ideas = UKR_voting_reform
 	}
 }
@@ -1533,17 +1379,12 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_democratic
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_farming_help"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_farming_help"
 		add_ideas = UKR_big_corn
 		IF = {
 			LIMIT = {
-				UKR = {
-					has_idea = UKR_famine_spook
-				}
+				has_idea = UKR_famine_spook
 			}
 			remove_ideas = UKR_famine_spook
 		}
@@ -1561,11 +1402,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_democratic
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_left_coop"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_left_coop"
 		add_popularity = {
 			ideology = libertarian_socialist
 			popularity = 0.05
@@ -1591,11 +1429,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_demo_farming_help
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_public_works"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_public_works"
 		random_owned_controlled_state = {
 			add_building_construction = {
 				type = industrial_complex
@@ -1620,11 +1455,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_demo_left_coop
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_urbanization"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_urbanization"
 		UKR = {
 			random_owned_controlled_state = {
 				add_building_construction = {
@@ -1662,11 +1494,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_demo_public_works
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_ukraine_language"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_ukraine_language"
 		add_opinion_modifier = {
 			target = SOV
 			modifier = UKR_promote_ukrainian
@@ -1694,12 +1523,9 @@ focus = {
 	}
 	prerequisite = {
 		focus = ukr_demo_urbanization
-	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_farming_innovation"
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_farming_innovation"
 		add_ideas = UKR_breadbasket
 	}
 }
@@ -1715,11 +1541,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_demo_urbanization
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_farm_union"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_farm_union"
 		add_ideas = UKR_farmer_unions
 		add_popularity = {
 			ideology = libertarian_socialist
@@ -1749,11 +1572,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_demo_french_pact
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_british_pact"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_british_pact"
 		ENG = {
 			country_event = {
 				id = ukraine.13
@@ -1780,11 +1600,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_demo_british_pact
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_french_pact"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_french_pact"
 		FRA = {
 			country_event = {
 				id = ukraine.14
@@ -1806,8 +1623,8 @@ focus = {
 		focus = ukr_demo_french_pact
 		focus = ukr_demo_british_pact
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_bastion"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demo_bastion"
 		add_political_power = 100
 	}
 }
@@ -1826,11 +1643,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_socialist
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_solve_no_food"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_solve_no_food"
 		add_ideas = UKR_agriculture_boost
 		remove_ideas = UKR_famine_spook
 	}
@@ -1847,11 +1661,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_socialist
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_consolidate"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_consolidate"
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.10
@@ -1870,11 +1681,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_rada_socialist
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_extort_kulaks"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_extort_kulaks"
 		add_stability = 0.02
 	}
 }
@@ -1890,11 +1698,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_soc_solve_no_food
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_farm_money"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_farm_money"
 		add_ideas = UKR_farm_money
 	}
 }
@@ -1910,11 +1715,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_soc_consolidate
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_purge_right"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_purge_right"
 		add_popularity = {
 			ideology = national_populist
 			popularity = -0.1
@@ -1933,11 +1735,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_soc_extort_kulaks
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_reorganize_land"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_reorganize_land"
 		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 1
 		}
@@ -1964,11 +1763,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_soc_purge_right
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_language_debate"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_language_debate"
 		UKR = {
 			country_event = {
 				id = ukraine.15
@@ -1992,11 +1788,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_soc_reorganize_land
 	}
-	available = {
-
-	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_demote_valkism"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_demote_valkism"
 		add_opinion_modifier = {
 			target = GER
 			modifier = UKR_demote_valkism
@@ -2023,13 +1816,10 @@ focus = {
 		focus = ukr_soc_demote_valkism
 		focus = ukr_soc_language_debate
 	}
-	available = {
-
-	}
 	mutually_exclusive = {
 		focus = ukr_soc_russian_pact
 	}
-		completion_reward = {
+	completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_socialist_haven"
 		add_stability = 0.1
 	}
@@ -2047,14 +1837,11 @@ focus = {
 		focus = ukr_soc_demote_valkism
 		focus = ukr_soc_language_debate
 	}
-	available = {
-
-	}
 	mutually_exclusive = {
 		focus = ukr_soc_socialist_haven
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_russian_pact"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_russian_pact"
 		SOV = {
 			country_event = {
 				id = ukraine.16
@@ -2076,9 +1863,8 @@ focus = {
 		focus = ukr_soc_socialist_haven
 		focus = ukr_soc_russian_pact
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_socialist_republic"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_soc_socialist_republic"
 		add_ideas = UKR_socialist_republic
 		add_political_power = 50
 	}
@@ -2104,7 +1890,9 @@ focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ukr_look_outwards"
 		add_ideas = UKR_expansionism
-    GER = { country_event = { id = ukraine.17 days = 1 } }
+		unlock_decision_tooltip = UKR_join_entente
+		unlock_decision_tooltip = UKR_join_stahlpakt
+		unlock_decision_tooltip = UKR_join_international
 	}
 }
 focus = {
@@ -2125,9 +1913,8 @@ focus = {
 	mutually_exclusive = {
 		focus = ukr_attack_poland
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_poland_deal"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_poland_deal"
 		POL = {
 			country_event = {
 				id = ukraine.21
@@ -2145,6 +1932,9 @@ focus = {
 	ai_will_do = {
 		factor = 4000
 	}
+	available = {
+		is_faction_leader = yes
+	}
 	bypass = {
 		ROM = {
 			is_in_faction_with = UKR
@@ -2153,9 +1943,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_poland_deal
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_invite_romania"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_invite_romania"
 		ROM = {
 			country_event = {
 				id = ukraine.27
@@ -2180,9 +1969,11 @@ focus = {
 	prerequisite = {
 		focus = ukr_invite_romania
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_invite_belarus"
+	available = {
+		is_faction_leader = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_invite_belarus"
 		BLR = {
 			country_event = {
 				id = ukraine.24
@@ -2208,9 +1999,11 @@ focus = {
 	prerequisite = {
 		focus = ukr_invite_belarus
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_invite_lithuania"
+	available = {
+		is_faction_leader = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_invite_lithuania"
 		LIT = {
 			country_event = {
 				id = ukraine.30
@@ -2262,9 +2055,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_attack_poland
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_core_galicia"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_core_galicia"
 		UKR = {
 			add_state_core = 91
 			add_state_core = 89
@@ -2290,9 +2082,8 @@ focus = {
 		focus = ukr_core_galicia
 		focus = ukr_poland_deal
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_towards_ruthenia"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_towards_ruthenia"
 		create_wargoal = {
     		type = annex_everything
     		target = SLO
@@ -2311,9 +2102,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_towards_ruthenia
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_demand_bessarabia"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_demand_bessarabia"
 		ROM = {
 			country_event = {
 				id = ukraine.18
@@ -2334,12 +2124,11 @@ focus = {
 	prerequisite = {
 		focus = ukr_look_outwards
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_attack_russia"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_attack_russia"
 		create_wargoal = {
-    		type = annex_everything
-    		target = SOV
+    	type = annex_everything
+    	target = SOV
 		}
 	}
 }
@@ -2360,8 +2149,8 @@ focus = {
 	available = {
 		threat > 0.05
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_prepare_for_war"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_prepare_for_war"
 		add_ideas = UKR_wartime_prep
 	}
 }
@@ -2377,14 +2166,14 @@ focus = {
 	prerequisite = {
 		focus = ukr_prepare_for_war
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_infrastructure_effort"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_infrastructure_effort"
 		add_ideas = UKR_infrastructure_effort
 	}
 }
 focus = {
 	id = ukr_factories_for_farms
-	icon = GFX_goal_generic_construct_civilian
+	icon = GFX_goal_generic_improve_industry
 	cost = 5
 	x = 20
 	y = 7
@@ -2394,8 +2183,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_civilian_initiative
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_factories_for_farms"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_factories_for_farms"
 		203 = {
 			add_extra_state_shared_building_slots = -1
 		}
@@ -2422,7 +2211,7 @@ focus = {
 }
 focus = {
 	id = ukr_import_food
-	icon = GFX_goal_generic_forceful_treaty
+	icon = GFX_focus_AUS_agriculture
 	cost = 5
 	x = 20
 	y = 9
@@ -2432,8 +2221,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_factories_for_farms
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_import_food"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_import_food"
 		add_timed_idea = {
 			idea = UKR_food_imports
 			days = 150
@@ -2452,8 +2241,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_infrastructure_effort
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_logistics_improvements"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_logistics_improvements"
 		add_ideas = UKR_logistics
 	}
 }
@@ -2469,8 +2258,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_logistics_improvements
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_expand_sevastopol"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_expand_sevastopol"
 		72 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
@@ -2498,14 +2287,14 @@ focus = {
 	prerequisite = {
 		focus = ukr_prepare_for_war
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_civilian_initiative"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_civilian_initiative"
 		add_ideas = UKR_industrial_effort
 	}
 }
 focus = {
 	id = ukr_city_highways
-	icon = GFX_goal_generic_army_motorized
+	icon = GFX_goal_generic_highway
 	cost = 5
 	x = 18
 	y = 8
@@ -2518,8 +2307,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_civilian_initiative
 	}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_city_highways"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_city_highways"
 		random_owned_controlled_state = {
 			add_building_construction = {
 				type = infrastructure
@@ -2545,7 +2334,7 @@ focus = {
 }
 focus = {
 	id = ukr_crisis_aftermath
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_goal_generic_phone_crisis
 	cost = 5
 	x = 14
 	y = 7
@@ -2560,9 +2349,8 @@ focus = {
 			has_country_flag = ukr_lsmc
 		}
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_crisis_aftermath"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_crisis_aftermath"
 		swap_ideas = {
 			remove_idea = UKR_lsmc
 			add_idea = UKR_lsmc2
@@ -2572,7 +2360,7 @@ focus = {
 
 focus = {
 	id = ukr_public_works
-	icon = GFX_goal_generic_consumer_goods
+	icon = GFX_goal_generic_cash_stimulus_plan
 	cost = 5
 	x = 14
 	y = 8
@@ -2582,9 +2370,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_crisis_aftermath
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_public_works"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_public_works"
 		swap_ideas = {
 			remove_idea = UKR_lsmc2
 			add_idea = UKR_lsmc3
@@ -2594,7 +2381,7 @@ focus = {
 
 focus = {
 	id = ukr_electric_cities
-	icon = GFX_goal_generic_fortify_city
+	icon = GFX_goal_generic_electricity
 	cost = 5
 	x = 14
 	y = 9
@@ -2604,9 +2391,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_public_works
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_electric_cities"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_electric_cities"
 		swap_ideas = {
 			remove_idea = UKR_lsmc3
 			add_idea = UKR_lsmc4
@@ -2616,7 +2402,7 @@ focus = {
 
 focus = {
 	id = ukr_crisis_resolved
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_goal_generic_austerity_measures
 	cost = 5
 	x = 14
 	y = 10
@@ -2626,9 +2412,8 @@ focus = {
 	prerequisite = {
 		focus = ukr_electric_cities
 	}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ukr_crisis_resolved"
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus ukr_crisis_resolved"
 		swap_ideas = {
 			remove_idea = UKR_lsmc4
 			add_idea = UKR_economic_boost

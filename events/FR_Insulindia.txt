@@ -84,6 +84,7 @@ country_event = {
 	
 	option = {
 		name = insulindia.2.a
+		set_global_flag = insulindian_uprising_success
 		add_political_power = 25
 		add_manpower = -2000
 		white_peace = ENG
@@ -92,6 +93,9 @@ country_event = {
 		hidden_effect = {
 			INS = {
 				remove_ideas = INS_war_for_insulindian_independence_idea
+			}
+			PHI = {
+				country_event = { id = philippines.51 days = 90 }
 			}
 		}
 	}
@@ -1089,5 +1093,63 @@ country_event = {
 		add_political_power = -20
 		hidden_effect = {
 		}
+	}
+}
+
+country_event = { # Join PH faction
+	id = insulindia.112
+	immediate = {log = "[GetDateText]: [Root.GetName]: event insulindia.111"}
+	title = insulindia.112.t
+	desc = insulindia.112.d
+	picture = GFX_report_event_PHI_malacanan
+	is_triggered_only = yes
+	
+	option = {
+		name = insulindia.112.a
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			country_event = { id = insulindia.113 days = 1 }
+		}
+	}
+	option = {
+		name = insulindia.112.b
+		ai_chance = {
+			base = 20
+		}
+		FROM = {
+			country_event = { id = insulindia.114 days = 1 }
+		}
+	}
+}
+
+country_event = { # Accept PH faction
+	id = insulindia.113
+	immediate = {log = "[GetDateText]: [Root.GetName]: event insulindia.111"}
+	title = insulindia.113.t
+	desc = insulindia.113.d
+	picture = GFX_report_event_PHI_malacanan
+	is_triggered_only = yes
+	
+	option = {
+		name = insulindia.113.a
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+country_event = { # Refused PH faction
+	id = insulindia.114
+	immediate = {log = "[GetDateText]: [Root.GetName]: event insulindia.111"}
+	title = insulindia.114.t
+	desc = insulindia.114.d
+	picture = GFX_report_event_PHI_malacanan
+	is_triggered_only = yes
+	
+	option = {
+		name = insulindia.114.a
+		add_political_power = -100
 	}
 }

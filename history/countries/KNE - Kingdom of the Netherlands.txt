@@ -45,21 +45,6 @@ set_popularities = {
   valkist = 0
 }
 
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = DEI
-		autonomous_state = autonomy_colony
-		freedom_level = 0.25
-	}
-	else = {
-		puppet = DEI
-	}
-
-}
-
 set_convoys = 50
 set_stability = 0.39
 set_war_support = 0.72

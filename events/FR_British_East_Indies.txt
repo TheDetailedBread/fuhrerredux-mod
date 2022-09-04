@@ -428,6 +428,7 @@ country_event = {
 			add_stability = 0.03
 		}
 		hidden_effect = {
+			set_global_flag = insulindian_uprising
 			INS = {
 				set_province_controller = 1342
 				set_province_controller = 1386
@@ -466,11 +467,17 @@ country_event = {
 			news_event = {
 				id = worldnews.130 days = 1
 			}
+			PHI = {
+				country_event = { id = philippines.35 days = 3 }
+			}
 		}
-    }
+  }
 	
 	option = {
-        name = bei.13.b
+		trigger = {
+			is_ai = no
+		}
+    name = bei.13.b
 		BEA = {
 			add_political_power = -15
 			add_stability = 0.03
@@ -536,6 +543,9 @@ country_event = {
     option = {
         name = bei.14.a
 		set_country_flag = BEA_continuation_of_british_rule_flag
+		PHI = {
+				country_event = { id = philippines.47 days = 90 }
+			}
     }
 }
 

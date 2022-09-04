@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Infantry Division"
+	division_names_group = PHI_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -13,11 +14,12 @@
 		infantry = { x = 2 y = 2 }
 	}
 	support = {
-	        engineer = { x = 0 y = 0 }
+	  engineer = { x = 0 y = 0 }
 	}
 }
 division_template = {
 	name = "Militia"
+	division_names_group = PHI_GAR_01
 
 	regiments = {
 		militia = { x = 0 y = 0 }
@@ -28,59 +30,62 @@ division_template = {
 		militia = { x = 1 y = 2 }
 	}
 }
+division_template = {
+	name = "Cavalry Scouts Brigade"
+	division_names_group = PHI_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+    cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+	}
+	support = {
+    recon = { x = 0 y = 0 }
+	}
+}
 
 units = {
 	division = {
-		name = "1st Infantry Division"
+		name = "1st Scouts Division"
 		location = 10167
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "2nd Infantry Division"
+		name = "2nd Scouts Division"
 		location = 1415
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "3rd Infantry Division"
+		name = "3rd Scouts Division"
 		location = 10167
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "4th Infantry Division"
+		name = "4th Scouts Division"
 		location = 4288
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "5th Infantry Division"
+		name = "5th Scouts Division"
 		location = 4241
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "6th Infantry Division"
+		name = "6th Scouts Division"
 		location = 12118
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "7th Infantry Division"
+		name = "7th Scouts Division"
 		location = 12213
-		division_template = "Infantry Division"		
-		start_experience_factor = 0.1
-	}
-	division = {
-		name = "8th Infantry Division"
-		location = 12118
-		division_template = "Infantry Division"		
-		start_experience_factor = 0.1
-	}
-	division = {
-		name = "9th Infantry Division"
-		location = 10167
 		division_template = "Infantry Division"		
 		start_experience_factor = 0.1
 	}
