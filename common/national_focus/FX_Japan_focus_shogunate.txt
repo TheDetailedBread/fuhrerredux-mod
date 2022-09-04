@@ -1232,4 +1232,355 @@ shared_focus = {
 	icon = GFX_ 
 	x = 30
 	y = 0 
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = "The Claimant has intervened the Shogunal conference"
+			has_country_flag = JAP_northern_court_stepped_in 
+		}
+	}
+	cost = 1
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_on_matter_of_capital
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_northern_court }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_form_imperial_provisional_cabinet
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = 0
+	y = 2
+	prerequisite = { focus = JAP_on_matter_of_capital }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_shogunate_abolision
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = 2
+	y = 1
+	prerequisite = { focus = JAP_northern_court }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_shogunal_law_revision
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = 2
+	y = 2
+	prerequisite = { focus = JAP_shogunate_abolision }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_imperial_constitution
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = 1
+	y = 3
+	prerequisite = { focus = JAP_shogunal_law_revision }
+	prerequisite = { focus = JAP_form_imperial_provisional_cabinet }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_fate_of_former_emperor
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = -2
+	y = 1
+	prerequisite = { focus = JAP_northern_court }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_palace_occupation
+	icon = GFX_ 
+	relative_position_id = JAP_fate_of_former_emperor
+	x = -2
+	y = 1
+	prerequisite = { focus = JAP_fate_of_former_emperor }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_detention_the_southern_court
+	icon = GFX_ 
+	relative_position_id = JAP_fate_of_former_emperor
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_fate_of_former_emperor }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_true_lord_of_heaven
+	icon = GFX_ 
+	relative_position_id = JAP_fate_of_former_emperor
+	x = 0
+	y = 2
+	prerequisite = { focus = JAP_detention_the_southern_court }
+	prerequisite = { focus = JAP_palace_occupation }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_northern_court_supremacy
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court
+	x = 0
+	y = 4
+	prerequisite = { focus = JAP_true_lord_of_heaven }
+	prerequisite = { focus = JAP_imperial_constitution }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_eight_rays_to_primodial_sun
+	icon = GFX_ 
+	relative_position_id = JAP_northern_court_supremacy
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_northern_court_supremacy }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_western_affair
+	icon = GFX_ 
+	relative_position_id = JAP_eight_rays_to_primodial_sun
+	x = -12
+	y = 1
+	prerequisite = { focus = JAP_eight_rays_to_primodial_sun }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_commanding_consolidation
+	icon = GFX_ 
+	relative_position_id = JAP_western_affair
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_western_affair }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_imperial_battle_control_secretariat
+	icon = GFX_ 
+	relative_position_id = JAP_commanding_consolidation
+	x = -2
+	y = 1
+	prerequisite = { focus = JAP_commanding_consolidation }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_appoint_the_loyal
+	icon = GFX_ 
+	relative_position_id = JAP_commanding_consolidation
+	x = 2
+	y = 1
+	prerequisite = { focus = JAP_commanding_consolidation }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_supremacy_of_new_world
+	icon = GFX_ 
+	relative_position_id = JAP_commanding_consolidation
+	x = -2
+	y = 2
+	mutually_exclusive = { focus = JAP_supremacy_of_ancient }
+	prerequisite = { focus = JAP_imperial_battle_control_secretariat }
+	prerequisite = { focus = JAP_appoint_the_loyal }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_supremacy_of_ancient
+	icon = GFX_ 
+	relative_position_id = JAP_commanding_consolidation
+	x = 2
+	y = 2
+	mutually_exclusive = { focus = JAP_supremacy_of_new_world }
+	prerequisite = { focus = JAP_appoint_the_loyal }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_demand_fengtian_subjugation
+	icon = GFX_ 
+	relative_position_id = JAP_commanding_consolidation
+	x = 0
+	y = 3
+	prerequisite = { 
+		focus = JAP_supremacy_of_ancient
+		focus = JAP_supremacy_of_new_world
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_war_with_nanjing
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = 0
+	y = 1
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_war_with_shanxi
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = -2
+	y = 2
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_our_fruitation_from_sponsoring_zhili
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = -3
+	y = 1
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_war_with_yunnan
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = 2
+	y = 2
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_seihoku_shinsen
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = 3
+	y = 1
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_destroy_turks
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = -1
+	y = 3
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_strike_chongqing
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = 1
+	y = 3
+	prerequisite = { 
+		focus = JAP_demand_fengtian_subjugation
+	}
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_divine_central_state
+	icon = GFX_ 
+	relative_position_id = JAP_demand_fengtian_subjugation
+	x = 0
+	y = 4
+	prerequisite = { focus = JAP_war_with_nanjing }
+	prerequisite = { focus = JAP_war_with_shanxi }
+	prerequisite = { focus = JAP_war_with_yunnan }
+	prerequisite = { focus = JAP_strike_chongqing }
+	prerequisite = { focus = JAP_seihoku_shinsen }
+	prerequisite = { focus = JAP_destroy_turks }
+	prerequisite = { focus = JAP_our_fruitation_from_sponsoring_zhili}
+	cost = 5
+	completion_reward = {
+	
+	}
 }
