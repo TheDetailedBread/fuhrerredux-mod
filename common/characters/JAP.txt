@@ -72,11 +72,26 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/JAP/Portrait_JAP_Oyama_Ikuo.png"
+				small = "gfx/interface/ministers/JAP/JAP_Oyama_Ikuo.png"
 			}
 		}
 		country_leader = {
 			ideology = collectivist_subtype
 			traits = { }
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
+			}
+			idea_token = JAP_Oyama_Ikuo_hog_col
+			on_add = { set_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
+			on_remove = { clr_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
+			traits = {
+				collectivist
+				hog_red_chairmen
+			}
 		}
 	}
 	JAP_Arahata_Kanson = {
@@ -954,28 +969,6 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 1
 			coordination_skill = 1
-		}
-	}
-	JAP_Oyama_Ikuo = {
-		name = "Oyama Ikuo"
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ministers/JAP/JAP_Oyama_Ikuo.png"
-			}
-		}
-		advisor = {
-			cost = 150
-			slot = head_of_government
-			available = { 
-				hidden_trigger = { has_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
-			}
-			idea_token = JAP_Oyama_Ikuo_hog_col
-			on_add = { set_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
-			on_remove = { clr_country_flag = JAP_Oyama_Ikuo_hog_col_hired }
-			traits = {
-				collectivist
-				hog_red_chairmen
-			}
 		}
 	}
 	JAP_Suzuki_Mosaburo = {
