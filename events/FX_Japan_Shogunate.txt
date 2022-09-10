@@ -3,16 +3,25 @@
 
 add_namespace = jap_shogun
 
-country_event = { #Response the Japanese Martial Law in Korea
+country_event = { #Response the Japanese Martial Law
 	id = jap_shogun.1
 	title = jap_shogun.1.t
 	desc = jap_shogun.1.d 
 	
-	is_triggered_only = yes
+	trigger = {
+		tag = JAP 
+		has_completed_focus = jap_allow_marshall_law
+	}
+	mean_time_to_happen = { days = 7 }
+	fire_only_once = yes 
 	
 	option = {
 		name = jap_shogun.1.a 
 		add_stability = -0.02
+		country_event = {
+			id = jap_shogun.2
+			days = 17 
+		}
 	}
 }
 country_event = { #Resignation of Prince Fumimaro
@@ -25,10 +34,30 @@ country_event = { #Resignation of Prince Fumimaro
 	option = {
 		name = jap_shogun.2.a 
 		custom_effect_tooltip = "Prince Iesato's reappointed President of House of Peers"
+		add_popularity = {
+			ideology = authoritarian_democrat 
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.3
+				days = 20
+			}
+		}
 	}
 	option = {
 		name = jap_shogun.2.b
 		custom_effect_tooltip = "Prince Kuniyuki's appointed President of House of Peers"
+		add_popularity = {
+			ideology = paternal_autocrat 
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.3
+				days = 20
+			}
+		}
 	}
 }
 country_event = { #Preparation of Anti-Militarist 
@@ -50,12 +79,20 @@ country_event = { #Preparation of Anti-Militarist
 #####################
 #Constitution Crisis#
 #####################
-country_event = { #House of Peers' President and Prime Minister 
+country_event = { #Lord President / Tairo vs. Prime Minister 
 	id = jap_shogun.4
 	title = jap_shogun.4.t 
 	desc = jap_shogun.4.d 
 	
-	is_triggered_only = yes 
+	trigger = {
+		tag = JAP 
+		OR = {
+			has_completed_focus = jap_the_admiral_plot
+			has_completed_focus = jap_the_army_coup
+		}
+	}
+	mean_time_to_happen = { days = 3 }
+	fire_only_once = yes 
 	
 	option = {
 		name = jap_shogun.4.a 
@@ -63,10 +100,18 @@ country_event = { #House of Peers' President and Prime Minister
 			ideology = authoritarian_democrat 
 			popularity = 0.05
 		}
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.5
+				days = 70 
+			}
+		}
 	}
 }
 #######Army Coup IRAA#######
 country_event = { #Korean Righteous Army / Taiwanese Anarchy / Recalling Governor-Generals
+#Army - Jap.11 > Jap.13 > Jappol.6
+#Navy - Jap.12 > Jappol.1 > Jappol.2/3 
 	id = jap_shogun.5
 	title = jap_shogun.5.t 
 	desc = jap_shogun.5.d 
@@ -75,8 +120,31 @@ country_event = { #Korean Righteous Army / Taiwanese Anarchy / Recalling Governo
 	
 	option = {
 		name = jap_shogun.5.a 
-		add_political_power = -50
-		add_stability = -0.1
+		add_political_power = -300
+		add_stability = -0.3
+		custom_effect_tooltip = "Our empire shall demise by our own hand"
+		hidden_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						NOT = { is_core_of = JAP }
+						is_core_of = KOR 
+						is_core_of = CHI 
+						is_core_of = INS  
+					}
+				}
+				set_demilitarized_zone = yes 
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = JAP 
+					NOT = {
+						state = 282
+					}
+				}
+				set_demilitarized_zone = yes 
+			}
+		}
 	}
 }
 country_event = { #Prince Iesato Prowoke the War 
@@ -84,9 +152,24 @@ country_event = { #Prince Iesato Prowoke the War
 	title = jap_shogun.6.t 
 	desc = jap_shogun.6.d 
 	
-	is_triggered_only = yes 
+	trigger = {
+		tag = JAP 
+		AND = {
+			has_completed_focus = jap_the_army_coup
+			has_completed_focus = jap_ally_the_military
+		} 
+	}
+	mean_time_to_happen = { days = 3 }
+	fire_only_once = yes  
 	
 	option = {
+		name = "Time to kick those Militarists butthole" 
+		set_country_flag = JAP_shogunate_focus_unlock
+		set_cosmetic_tag = JAP_Shogunate 
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
 		add_country_leader_role = {
 			character = JAP_Tokugawa_Iesato
 			promote_leader = yes
@@ -114,16 +197,37 @@ country_event = { #Prince Iesato Prowoke the War
 				traits = {  }
 			}
 		}
-		add_country_leader_role = {
-			character = JAP_Inoue_Nissho
-			promote_leader = yes
-			country_leader = {
-				ideology = valkism_subtype
-				expire = "1965.1.1.1"
-				traits = {  }
+		hidden_effect = {
+			set_party_name = { 
+				ideology = authoritarian_democrat 
+				long_name = JAP_authoritarian_democrat_party_shogun_long 
+				name = JAP_authoritarian_democrat_party_shogun 
 			}
+			set_party_name = { 
+				ideology = paternal_autocrat 
+				long_name = JAP_paternal_autocrat_party_shogun_long 
+				name = JAP_paternal_autocrat_party_shogun 
+			}
+			set_party_name = { 
+				ideology = national_populist 
+				long_name = JAP_national_populist_party_long_shogun 
+				name = JAP_national_populist_party_shogun 
+			}
+			every_controlled_state = {
+				set_demilitarized_zone = no 
+			}
+			release = KOR 
+			CHI = { transfer_state = 524 }
+			ZHI = { transfer_state = 869 }
+			FNG = { transfer_state = 793 }
+			BEA = { transfer_state = 673 }
+			AST = { transfer_state = 668 }
 		}
-		#JAP_setup_civil_war = yes 
+		JAP_setup_civil_war = yes 
+		hidden_effect = {
+			load_focus_tree = FX_Japan_Shogunate
+			mark_focus_tree_layout_dirty = yes 
+		}
 	}
 }
 #######Navy Coup IRAA#######
@@ -132,11 +236,22 @@ country_event = { #Prince Kuniyuki and Admiral
 	title = jap_shogun.7.t 
 	desc = jap_shogun.7.d 
 	
-	is_triggered_only = yes 
+	trigger = {
+		tag = JAP 
+		AND = {
+			has_completed_focus = jap_the_navy_plot
+			has_completed_focus = jap_ally_the_military
+		} 
+	}
+	mean_time_to_happen = { days = 3 }
+	fire_only_once = yes 
 	
 	option = {
 		name = jap_shogun.7.a 
-		
+		country_event = {
+			id = jap_shogun.8
+			days = 7 
+		}
 	}
 }
 country_event = { #National Government of Royalist Front
@@ -152,19 +267,27 @@ country_event = { #National Government of Royalist Front
 	}
 	option = {
 		name = jap_shogun.8.b 
-		#JAP_shogunate_take_over = yes 
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.9
+				days = 30 
+			}
+		}
 	}
 }
 
 country_event = { #Counter Coup 
-	id = jap_shogun.x
-	title = jap_shogun.x.t 
-	desc = jap_shogun.x.d 
+	id = jap_shogun.9
+	title = jap_shogun.9.t 
+	desc = jap_shogun.9.d 
 	
 	is_triggered_only = yes 
 	
 	option = { #Tokugawa Rises
-		name = jap_shogun.x.a 
+		name = jap_shogun.9.a 
+		load_focus_tree = FX_Japan_Shogunate
+		set_country_flag = JAP_shogunate_focus_unlock
+		set_country_flag = JAP_counter_coup_win
 		JAP = {
 			set_cosmetic_tag = JAP_Shogunate 
 			set_politics = {
@@ -190,7 +313,10 @@ country_event = { #Counter Coup
 				long_name = JAP_national_populist_party_long_shogun 
 				name = JAP_national_populist_party_shogun 
 			}
+			hidden_effect = {
+				load_focus_tree = FX_Japan_Shogunate
+				mark_focus_tree_layout_dirty = yes 
+			}
 		}
-		
 	}
 }

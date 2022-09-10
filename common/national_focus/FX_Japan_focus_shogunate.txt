@@ -1,4 +1,4 @@
-###Japanese Civil War Tree
+###Japanese Civil War
 ###Japanese Coup d'etat
 ###Iesato Shogunalistic Democracy
 ##Daijo-Daijin Succession Crisis
@@ -15,7 +15,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 25 #5 is default value
+			add = 5 #5 is default value
 			tag = JAP
 		}
 	}
@@ -35,7 +35,7 @@ shared_focus = {
 	y = 0
 	cost = 5
 	allow_branch = {
-		always = yes
+		has_country_flag = JAP_shogunate_focus_unlock
 	}
 	available = { 
 		custom_trigger_tooltip = {
@@ -73,7 +73,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_establish_ritsuryo_in_provisional_charter
+	id = JAP_restore_ritsuryo
 	icon = GFX_goal_JAP_ritsuryo_code
 	relative_position_id = JAP_great_council_of_state
 	x = -2
@@ -83,7 +83,7 @@ shared_focus = {
 	}
 	cost = 6
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_establish_ritsuryo_in_provisional_charter"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_restore_ritsuryo"
 		add_stability = 0.05
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -92,7 +92,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_empower_shogunate_authority
+	id = JAP_empower_shogunal_authority
 	icon = GFX_goal_JAP_the_two_tokugawas
 	relative_position_id = JAP_great_council_of_state
 	x = 2
@@ -102,7 +102,7 @@ shared_focus = {
 	}
 	cost = 6
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_empower_shogunate_authority"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_empower_shogunal_authority"
 		#add_ideas = JAP_first_amongs_equal
 		add_war_support = 0.05
 		add_popularity = {
@@ -158,10 +158,10 @@ shared_focus = {
 	x = 0
 	y = 2
 	prerequisite = {
-		focus = JAP_empower_shogunate_authority
+		focus = JAP_empower_shogunal_authority
 	}
 	prerequisite = {
-		focus = JAP_establish_ritsuryo_in_provisional_charter
+		focus = JAP_restore_ritsuryo
 	}
 	cost = 11
 	completion_reward = {
@@ -297,7 +297,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_address_to_the_emperor
+	id = JAP_report_to_the_emperor
 	icon = GFX_goal_JAP_report_to_emperor
 	relative_position_id = JAP_tribunal_final_phase
 	x = 0
@@ -305,7 +305,7 @@ shared_focus = {
 	prerequisite = { focus = JAP_tribunal_final_phase }
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_address_to_the_emperor"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_report_to_the_emperor"
 	}
 }
 shared_focus = {
@@ -314,16 +314,17 @@ shared_focus = {
 	relative_position_id = JAP_tribunal_final_phase
 	x = 0
 	y = 2
-	prerequisite = { focus = JAP_address_to_the_emperor }
+	prerequisite = { focus = JAP_report_to_the_emperor }
 	prerequisite = { 
 		focus = JAP_new_legacy_of_iesato 
 		focus = JAP_guilty_of_former_shogun
 	}
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_address_to_the_emperor"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_report_to_the_emperor"
 	}
 }
+#######Post Iesato Death Tree
 shared_focus = {
 	id = JAP_grand_triumvirate
 	icon = GFX_  
@@ -1238,9 +1239,14 @@ shared_focus = {
 			has_country_flag = JAP_northern_court_stepped_in 
 		}
 	}
+	allow_branch = {
+		JAP = {
+			has_country_flag = JAP_northern_court_stepped_in
+		}
+	}
 	cost = 1
 	completion_reward = {
-	
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_northern_court"
 	}
 }
 shared_focus = {
@@ -1252,7 +1258,7 @@ shared_focus = {
 	prerequisite = { focus = JAP_northern_court }
 	cost = 5
 	completion_reward = {
-	
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_on_matter_of_capital"
 	}
 }
 shared_focus = {

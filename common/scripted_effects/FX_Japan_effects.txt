@@ -68,9 +68,14 @@ JAP_interservice_rivalry_towards_navy = {
 }
 
 JAP_setup_civil_war = {
-	set_country_flag = JAP_second_northern_war
-	#remove_ultraroyalist_generals 
-	#remove_ultraroyalist_ministers
+	every_unit_leader = {
+		limit = {
+			OR = {
+				#has_id = 
+			}
+		}
+		set_nationality = JPR 
+	} 
 	every_owned_state = { #Rebellion
 		limit = {
 			OR = {
@@ -85,29 +90,72 @@ JAP_setup_civil_war = {
 			transfer_state = PREV
 		}
 	}
-	every_owned_state = { #Japanese Pacific Authority
+	transfer_units_fraction = {
+		target = JPR
+		size = 0.2
+		navy_ratio = 0
+		keep_unit_leaders_trigger = { always = yes }
+	}
+	if = {
 		limit = {
-			OR = {
-				state = 668
-				state = 673
-				state = 646 
-				state = 647
-				state = 684
-				state = 633
-				state = 648
+			ROOT = { has_completed_focus = jap_the_army_coup }
+		}
+		JPR = {
+			set_stability = 0.3
+			set_war_support = 0.4
+			set_politics = {	
+				ruling_party = national_populist
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
 			}
 		}
-		PAJ = {
-			add_state_core = PREV
-			transfer_state = PREV
-			set_demilitarized_zone = yes 
+		create_country_leader = {
+			name = "Araki Sadao"
+			desc = ""
+			picture = "gfx/leaders/JAP/Portrait_JAP_Sadao_Araki.png"
+			expire = "1965.1.1"
+			ideology = national_populist_subtype
 		}
 	}
-	release = KOR 
-	CHI = {
-		transfer_state = 524
+	else_if = {
+		limit = {
+			ROOT = { has_completed_focus = jap_the_admiral_plot }
+		}
+		JPR = {
+			set_stability = 0.3
+			set_war_support = 0.4
+			set_politics = {	
+				ruling_party = paternal_autocrat
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		create_country_leader = {
+			name = "Honjo Shigeru"
+			desc = ""
+			picture = "gfx/leaders/JAP/Portrait_JAP_Shigeru_Honjo.png"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+		}
 	}
-	524 = {
-		add_claim_by = JAP 
-	}
+	# every_owned_state = { #Japanese Pacific Authority
+	# 	limit = {
+	# 		OR = {
+	# 			state = 668
+	# 			state = 673
+	# 			state = 646 
+	# 			state = 647
+	# 			state = 684
+	# 			state = 633
+	# 			state = 648
+	# 		}
+	# 	}
+	# 	PAJ = {
+	# 		add_state_core = PREV
+	# 		transfer_state = PREV
+	# 		set_demilitarized_zone = yes 
+	# 	}
+	# }
 }
