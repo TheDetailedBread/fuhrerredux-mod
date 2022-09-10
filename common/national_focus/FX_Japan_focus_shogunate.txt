@@ -1947,3 +1947,200 @@ shared_focus = {
 	
 	}
 }
+shared_focus = {
+	id = JAP_eastern_affair 
+	icon = GFX_ 
+	relative_position_id = JAP_eight_rays_to_primodial_sun
+	x = 15
+	y = 1
+	prerequisite = { focus = JAP_eight_rays_to_primodial_sun }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_trust_the_zaibutsu 
+	icon = GFX_ 
+	relative_position_id = JAP_eastern_affair
+	x = -2
+	y = 1
+	prerequisite = { focus = JAP_eastern_affair }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_issue_free_loan_bond 
+	icon = GFX_ 
+	relative_position_id = JAP_trust_the_zaibutsu
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_trust_the_zaibutsu }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_create_the_economic_district 
+	icon = GFX_ 
+	relative_position_id = JAP_trust_the_zaibutsu
+	x = 0
+	y = 2
+	prerequisite = { focus = JAP_issue_free_loan_bond }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_the_fruit_of_economic_advancement 
+	icon = GFX_ 
+	relative_position_id = JAP_issue_free_loan_bond
+	x = -2
+	y = 2
+	prerequisite = { focus = JAP_create_the_economic_district }
+	prerequisite = { focus = JAP_force_the_labour }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_challenge_the_zaibutsu 
+	icon = GFX_ 
+	relative_position_id = JAP_eastern_affair
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_eastern_affair }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_nationalize_the_industry 
+	icon = GFX_ 
+	relative_position_id = JAP_challenge_the_zaibutsu
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_challenge_the_zaibutsu }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_national_institute_of_industry 
+	icon = GFX_ 
+	relative_position_id = JAP_challenge_the_zaibutsu
+	x = 0
+	y = 2
+	prerequisite = { focus = JAP_nationalize_the_industry }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_nagasaki_economic_department
+	icon = GFX_ 
+	relative_position_id = JAP_eastern_affair
+	x = 2
+	y = 1
+	prerequisite = { focus = JAP_eastern_affair }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_expand_pacific_security_zone
+	icon = GFX_ 
+	relative_position_id = JAP_nagasaki_economic_department
+	x = 0
+	y = 1
+	prerequisite = { focus = JAP_nagasaki_economic_department }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_kingo_affair
+	icon = GFX_ 
+	relative_position_id = JAP_nagasaki_economic_department
+	x = 0
+	y = 2
+	prerequisite = { focus = JAP_expand_pacific_security_zone }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_bring_mexico_to_our_fold 
+	icon = GFX_ 
+	relative_position_id = JAP_challenge_the_zaibutsu
+	x = 0
+	y = 3
+	prerequisite = { focus = JAP_national_institute_of_industry }
+	prerequisite = { focus = JAP_create_the_economic_district }
+	prerequisite = { focus = JAP_kingo_affair }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_strike_central_america
+	icon = GFX_ 
+	relative_position_id = JAP_bring_mexico_to_our_fold
+	x = -2
+	y = 1
+	prerequisite = { focus = JAP_bring_mexico_to_our_fold }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_destroy_washington_regime
+	icon = GFX_ 
+	relative_position_id = JAP_bring_mexico_to_our_fold
+	x = 2
+	y = 1
+	prerequisite = { focus = JAP_bring_mexico_to_our_fold }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_form_the_america_commission 
+	icon = GFX_ 
+	relative_position_id = JAP_bring_mexico_to_our_fold
+	x = 0
+	y = 2
+	prerequisite = { focus = JAP_strike_central_america }
+	prerequisite = { focus = JAP_destroy_washington_regime }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = JAP_victory_over_republicanism 
+	icon = GFX_ 
+	relative_position_id = JAP_the_fruit_of_economic_advancement
+	x = -1
+	y = 3
+	prerequisite = { focus = JAP_form_the_america_commission }
+	prerequisite = { focus = JAP_no_red_must_be_spared }
+	cost = 5
+	completion_reward = {
+	
+	}
+}
