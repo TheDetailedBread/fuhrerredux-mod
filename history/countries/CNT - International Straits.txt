@@ -1,0 +1,86 @@
+﻿oob = "CNT_1936"
+capital = 341
+set_research_slots = 2
+set_stability = 0.65
+set_war_support = 0.34
+set_convoys = 250
+
+diplomatic_relation = { 
+	country = ENG
+	relation = non_aggression_pact 
+}
+diplomatic_relation = { 
+	country = USA
+	relation = non_aggression_pact 
+}
+diplomatic_relation = { 
+	country = FRA
+	relation = non_aggression_pact 
+}
+diplomatic_relation = { 
+	country = GRE
+	relation = non_aggression_pact 
+}
+diplomatic_relation = { 
+	country = ITA
+	relation = non_aggression_pact 
+}
+
+ENG = {give_guarantee = CNT}
+USA = {give_guarantee = CNT}
+FRA = {give_guarantee = CNT}
+GRE = {give_guarantee = CNT}
+ITA = {give_guarantee = CNT}
+give_military_access = ENG
+give_military_access = USA
+give_military_access = FRA
+give_military_access = GRE
+give_military_access = ITA
+
+add_ideas = {
+	party_pop_0_36
+	disarmed_nation
+	civilian_economy
+	parliamentary_republic
+	GEN_entente_member
+}
+
+
+#Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	early_fighter = 1
+	early_bomber = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+
+#Politics for 1936.1.1
+set_politics = {	
+	ruling_party = authoritarian_democrat
+	last_election = "1929.3.5"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 5
+  social_liberal = 10
+  market_liberal = 18
+  social_conservative = 15
+  authoritarian_democrat = 36
+  paternal_autocrat = 4
+  national_populist = 12
+  valkist = 0
+}
+
+recruit_character = nikolaospolitis
