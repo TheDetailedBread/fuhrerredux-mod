@@ -20,7 +20,7 @@ country_event = { #Response the Japanese Martial Law
 		add_stability = -0.02
 		country_event = {
 			id = jap_shogun.2
-			days = 17 
+			days = 30 
 		}
 	}
 }
@@ -33,7 +33,7 @@ country_event = { #Resignation of Prince Fumimaro
 	
 	option = {
 		name = jap_shogun.2.a 
-		custom_effect_tooltip = "Prince Iesato's reappointed President of House of Peers"
+		custom_effect_tooltip = "Prince Iesato's been reappointed the president"
 		add_popularity = {
 			ideology = authoritarian_democrat 
 			popularity = 0.05
@@ -47,7 +47,7 @@ country_event = { #Resignation of Prince Fumimaro
 	}
 	option = {
 		name = jap_shogun.2.b
-		custom_effect_tooltip = "Prince Kuniyuki's appointed President of House of Peers"
+		custom_effect_tooltip = "Prince Kuniyuki's been appointed the president"
 		add_popularity = {
 			ideology = paternal_autocrat 
 			popularity = 0.05
@@ -122,7 +122,7 @@ country_event = { #Korean Righteous Army / Taiwanese Anarchy / Recalling Governo
 		name = jap_shogun.5.a 
 		add_political_power = -300
 		add_stability = -0.3
-		custom_effect_tooltip = "Our empire shall demise by our own hand"
+		custom_effect_tooltip = "Our empire shall reach her demise by our own hand"
 		hidden_effect = {
 			every_controlled_state = {
 				limit = {
@@ -178,6 +178,26 @@ country_event = { #Prince Iesato Prowoke the War
 				expire = "1965.1.1.1"
 				traits = {  }
 			}
+			country_leader = {
+				ideology = social_conservative_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+			country_leader = {
+				ideology = social_liberal_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+			country_leader = {
+				ideology = market_liberal_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
+			country_leader = {
+				ideology = social_democrat_subtype
+				expire = "1965.1.1.1"
+				traits = {  }
+			}
 		}
 		add_country_leader_role = {
 			character = JAP_Tokugawa_Kuniyuki
@@ -226,7 +246,7 @@ country_event = { #Prince Iesato Prowoke the War
 		JAP_setup_civil_war = yes 
 		hidden_effect = {
 			load_focus_tree = FX_Japan_Shogunate
-			mark_focus_tree_layout_dirty = yes 
+			#mark_focus_tree_layout_dirty = yes 
 		}
 	}
 }

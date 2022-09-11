@@ -92,7 +92,7 @@ JAP_setup_civil_war = {
 	}
 	transfer_units_fraction = {
 		target = JPR
-		size = 0.2
+		size = 0.15
 		navy_ratio = 0
 		keep_unit_leaders_trigger = { always = yes }
 	}
@@ -140,6 +140,11 @@ JAP_setup_civil_war = {
 			ideology = paternal_autocrat_subtype
 		}
 	}
+	declare_war_on = {
+		target = JPR
+		type = annex_everything
+	}
+	
 	# every_owned_state = { #Japanese Pacific Authority
 	# 	limit = {
 	# 		OR = {
