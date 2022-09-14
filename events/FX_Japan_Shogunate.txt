@@ -163,7 +163,7 @@ country_event = { #Prince Iesato Prowoke the War
 	fire_only_once = yes  
 	
 	option = {
-		name = "Time to kick those Militarists butthole" 
+		name = "Time to kick those Militarists buttocks" 
 		set_country_flag = JAP_shogunate_focus_unlock
 		set_cosmetic_tag = JAP_Shogunate 
 		set_politics = {
@@ -175,26 +175,6 @@ country_event = { #Prince Iesato Prowoke the War
 			promote_leader = yes
 			country_leader = {
 				ideology = authoritarian_democrat_subtype
-				expire = "1965.1.1.1"
-				traits = {  }
-			}
-			country_leader = {
-				ideology = social_conservative_subtype
-				expire = "1965.1.1.1"
-				traits = {  }
-			}
-			country_leader = {
-				ideology = social_liberal_subtype
-				expire = "1965.1.1.1"
-				traits = {  }
-			}
-			country_leader = {
-				ideology = market_liberal_subtype
-				expire = "1965.1.1.1"
-				traits = {  }
-			}
-			country_leader = {
-				ideology = social_democrat_subtype
 				expire = "1965.1.1.1"
 				traits = {  }
 			}
@@ -218,6 +198,30 @@ country_event = { #Prince Iesato Prowoke the War
 			}
 		}
 		hidden_effect = {
+			create_country_leader = {
+				name = "Tokugawa Iesato"
+				picture = "gfx/leaders/JAP/Portrait_JAP_Tokugawa_Iesato.png"
+				ideology = social_conservative_subtype
+				expire = "1965.1.1.1"
+			}
+			create_country_leader = {
+				name = "Tokugawa Iesato"
+				picture = "gfx/leaders/JAP/Portrait_JAP_Tokugawa_Iesato.png"
+				ideology = social_liberal_subtype
+				expire = "1965.1.1.1"
+			}
+			create_country_leader = {
+				name = "Tokugawa Iesato"
+				picture = "gfx/leaders/JAP/Portrait_JAP_Tokugawa_Iesato.png"
+				ideology = market_liberal_subtype
+				expire = "1965.1.1.1"
+			}
+			create_country_leader = {
+				name = "Tokugawa Iesato"
+				picture = "gfx/leaders/JAP/Portrait_JAP_Tokugawa_Iesato.png"
+				ideology = social_democrat_subtype
+				expire = "1965.1.1.1"
+			}
 			set_party_name = { 
 				ideology = authoritarian_democrat 
 				long_name = JAP_authoritarian_democrat_party_shogun_long 
