@@ -66,16 +66,7 @@ JAP_interservice_rivalry_towards_navy = {
 	}
 
 }
-
 JAP_setup_civil_war = {
-	every_unit_leader = {
-		limit = {
-			OR = {
-				#has_id = 
-			}
-		}
-		set_nationality = JPR 
-	} 
 	every_owned_state = { #Rebellion
 		limit = {
 			OR = {
@@ -89,6 +80,31 @@ JAP_setup_civil_war = {
 			add_state_core = PREV
 			transfer_state = PREV
 		}
+	}
+	every_unit_leader = {
+		limit = {
+			OR = {
+				has_id = 31004
+				has_id = 31005
+				has_id = 31008
+				has_id = 31009
+				has_id = 31012
+				has_id = 31013
+				has_id = 31017
+				has_id = 31019
+				has_id = 31023
+				has_id = 32007
+				has_id = 31003
+				has_id = 31006
+				has_id = 31007
+				has_id = 31015
+				has_id = 31011
+				has_id = 31028
+				has_id = 31020
+				has_id = 32009
+			}
+		}
+		set_nationality = JPR 
 	}
 	transfer_units_fraction = {
 		target = JPR
@@ -133,7 +149,7 @@ JAP_setup_civil_war = {
 			}
 		}
 		create_country_leader = {
-			name = "Honjo Shigeru"
+			name = "Shigeru Honjo"
 			desc = ""
 			picture = "gfx/leaders/JAP/Portrait_JAP_Shigeru_Honjo.png"
 			expire = "1965.1.1"
