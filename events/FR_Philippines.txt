@@ -2091,6 +2091,10 @@ country_event = { # Singapore Falls
   picture = GFX_report_event_PHI_scouts_2
   is_triggered_only = yes
 
+  trigger = {
+    NOT = { tag = PHI }
+  }
+
   option = { # Prepare to sue peace
     name = philippines.76.a
     ai_chance = {
