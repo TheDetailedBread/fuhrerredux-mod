@@ -770,6 +770,15 @@ news_event = { # Formation of Second Northern Alliance
 	title = fxnews.jap36.t
 	desc = fxnews.jap36.d
 	picture = GFX_news_event_JAP_iesato_front
+	is_triggered_only = yes
+	show_major = {
+		always = yes 
+	}
+
+	option = {
+		name = fxnews.jap36.a
+	}
+} 
 
 news_event = { # Indochinese Revolt
 	id = fxnews.40
@@ -780,12 +789,6 @@ news_event = { # Indochinese Revolt
 	is_triggered_only = yes
 
 	show_major = {
-		NOT = { tag = JAP }
-	}
-
-	option = {
-		name = fxnews.jap36.a
-	}	
 		NOT = { tag = ICR }
 	}
 
