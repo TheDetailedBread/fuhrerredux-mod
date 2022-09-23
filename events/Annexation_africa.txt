@@ -132,11 +132,163 @@ country_event = { # Fate of Central African Republic
 
   option = { # Puppet
     name = annex.2003.a
+    trigger = {
+      can_establish_colony = no
+    }
     ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = CAR }
     release_targeted_tag = yes
+  }
+
+  option = { # Puppet - Imperialist
+    name = annex.2003.b
+    trigger = {
+      can_establish_colony = yes
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = NFQ }
+    release_targeted_tag = NFQ
+    hidden_effect = {
+      NFQ = {
+        set_politics = {
+          ruling_party = paternal_autocrat
+          elections_allowed = no
+        }
+
+        if = {
+          limit = {
+            ROOT = { tag = ENG }
+          }
+          set_cosmetic_tag = NFQ_ENG
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFQ_british
+            long_name = NFQ_british_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFQ_british
+            long_name = NFQ_british_long
+          }
+          NFQ_Derek_Anthony_Seagrim = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+        else_if = {
+          limit = {
+            ROOT = { tag = FRA }
+          }
+          set_cosmetic_tag = NFQ_FRA
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFQ_authoritarian_democrat_party
+            long_name = NFQ_authoritarian_democrat_party_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFQ_authoritarian_democrat_party
+            long_name = NFQ_authoritarian_democrat_party_long
+          }
+          NFQ_Joseph_Francois_de_Roca = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+        else_if = {
+          limit = {
+            ROOT = { tag = GER }
+          }
+          set_cosmetic_tag = NFQ_GER
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFQ_deutsch
+            long_name = NFQ_deutsch_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFQ_deutsch
+            long_name = NFQ_deutsch_long
+          }
+          NFQ_Theodor_von_Hippel = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+        else_if = {
+          limit = {
+            ROOT = { tag = ITA }
+          }
+          set_cosmetic_tag = NFQ_ITA
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFQ_italian
+            long_name = NFQ_italian_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFQ_italian
+            long_name = NFQ_italian_long
+          }
+          NFQ_Adalberto_di_Savoia = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   option = { # Occupy
@@ -1075,10 +1227,130 @@ country_event = { # Fate of Senegal
   option = { # Puppet
     name = annex.2027.a
     ai_chance = {
+      can_establish_colony = no
+    }
+    ai_chance = {
       base = 100
     }
     set_temp_variable = { tag_to_release = SEN }
     release_targeted_tag = yes
+  }
+
+  option = { # Puppet - Imperialist
+    name = annex.2027.b
+    trigger = {
+      can_establish_colony = yes
+    }
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = NFA }
+    release_targeted_tag = NFA
+    hidden_effect = {
+      NFA = {
+        set_politics = {
+          ruling_party = paternal_autocrat
+          elections_allowed = no
+        }
+
+        if = {
+          limit = {
+            ROOT = { tag = ENG }
+          }
+          set_cosmetic_tag = NFA_ENG
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFA_british
+            long_name = NFA_british_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFA_british
+            long_name = NFA_british_long
+          }
+          NFA_Frederick_Joseph_Loftus_Tottenham = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+        else_if = {
+          limit = {
+            ROOT = { tag = FRA }
+          }
+          set_cosmetic_tag = NFA_FRA
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFA_authoritarian_democrat_party
+            long_name = NFA_authoritarian_democrat_party_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFA_authoritarian_democrat_party
+            long_name = NFA_authoritarian_democrat_party_long
+          }
+          NFA_Charles_Noufflard = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+        else_if = {
+          limit = {
+            ROOT = { tag = GER }
+          }
+          set_cosmetic_tag = NFA_GER
+          set_party_name = {
+            ideology = paternal_autocrat
+            name = NFA_deutsch
+            long_name = NFA_deutsch_long
+          }
+          set_party_name = {
+            ideology = authoritarian_democrat
+            name = NFA_deutsch
+            long_name = NFA_deutsch_long
+          }
+          NFA_Julian_Scherner = {
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = authoritarian_democrat_subtype
+                traits = { }
+              }
+            }
+            add_country_leader_role = {
+              promote_leader = yes
+              country_leader = {
+                ideology = paternal_autocrat_subtype
+                traits = { }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   option = { # Occupy
@@ -1672,7 +1944,44 @@ country_event = { # Fate of Chad
     ai_chance = {
       base = 0
     }
-    set_country_flag = SIE_CONQ
+    set_country_flag = CHA_CONQ
+    occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Equitorial Guinea
+  id = annex.2043
+  title = annexation_EQG_CONQ
+  desc = annexation_EQG_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  immediate = {
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = EQG }
+      remove_all_cores_and_claims_of_tags = yes
+      EQG = {
+        add_state_core = 297
+        drop_cosmetic_tag = yes
+      }
+    }
+  }
+
+  option = { # Puppet
+    name = annex.2043.a
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = EQG }
+    release_targeted_tag = yes
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    set_country_flag = EQG_CONQ
     occupy_small_country = yes
   }
 }

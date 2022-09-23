@@ -609,6 +609,10 @@ check_potential_annexations_africa = {
     ROOT = { activate_mission = annexation_ERI_CONQ }
   }
   else_if = {
+    limit = { can_release_equitorial_guinea = yes }
+    ROOT = { activate_mission = annexation_EQG_CONQ }
+  }
+  else_if = {
     limit = { can_release_ethiopia = yes }
     ROOT = { activate_mission = annexation_ETH_CONQ }
   }
