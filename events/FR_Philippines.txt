@@ -1755,6 +1755,10 @@ country_event = { # Philippine Entry to the Entente
     name = philippines.61.a
     ai_chance = {
       base = 40
+      modifier = {
+        factor = 40
+        has_democratic_government = yes
+      }
     }
     FROM = {
       country_event = { id = philippines.62 days = 2 }
@@ -1834,6 +1838,10 @@ country_event = { # Philippines Proposes Alliance
     name = philippines.64.a
     ai_chance = {
       base = 40
+      modifier = {
+        factor = 100
+        has_democratic_government = yes
+      }
     }
     create_faction = PHI_USA_faction
     FROM = {
@@ -1893,7 +1901,7 @@ country_event = { # Philippines Proposes Alliance
   option = { # Accept
     name = philippines.67.a
     ai_chance = {
-      base = 40
+      base = 100
     }
     create_faction = PHI_JAP_faction
     FROM = {
@@ -2090,6 +2098,10 @@ country_event = { # Singapore Falls
   }
   picture = GFX_report_event_PHI_scouts_2
   is_triggered_only = yes
+
+  trigger = {
+    NOT = { tag = PHI }
+  }
 
   option = { # Prepare to sue peace
     name = philippines.76.a
