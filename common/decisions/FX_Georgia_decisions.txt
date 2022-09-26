@@ -65,7 +65,9 @@ GEO_fortify_border = {
 	fort_soviet = {
 		icon = generic_construction
 		highlight_states = {
-			state = 858
+			highlight_state_targets = {
+				state = 858
+			}
 		}
 		available = {
 			NOT = {
@@ -105,7 +107,9 @@ GEO_fortify_border = {
 	fort_azerbaijan = {
 		icon = generic_construction
 		highlight_states = {
-			state = 904
+			highlight_state_targets = {
+				state = 904
+			}
 		}
 		available = {
 			NOT = {
@@ -150,7 +154,9 @@ GEO_fortify_border = {
 	fort_armenia = {
 		icon = generic_construction
 		highlight_states = {
-			state = 902
+			highlight_state_targets = {
+				state = 902
+			}
 		}
 		available = {
 			NOT = {
@@ -413,10 +419,8 @@ war_measures = {
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_government = vanguardist
-							has_government = collectivist
-						}
+						has_government = vanguardist
+						has_government = collectivist
 					}
 				}
 				set_country_flag = GEO_menshie_officers
@@ -431,7 +435,6 @@ war_measures = {
         }
         add_corps_commander_role = {
           character = GEO_Valerian_Tevzadze
-					traits = {  }
 					skill = 3
 					attack_skill = 2
 					defense_skill = 4
@@ -440,7 +443,6 @@ war_measures = {
 				}
 				add_corps_commander_role = {
           character = GEO_Giorgi_Mamaladze
-					traits = {  }
 					skill = 2
 					attack_skill = 1
 					defense_skill = 2

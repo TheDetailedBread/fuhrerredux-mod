@@ -186,9 +186,9 @@ news_event = { # Southern Agitation
 
 	option = {
 		trigger = {
-			AND = {
-				NOT = { tag = USA }
-				NOT = { tag = MEX }
+			NOT = { 
+				tag = USA
+				tag = MEX 
 			}
 		}
 		name = fxnews.8.b

@@ -336,7 +336,6 @@ IND_unification = {
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision IND_conquer_india_prep"
-			IND = { country_event = { id = india.90 } }
 			unlock_decision_tooltip = IND_conquer_travancore
 			unlock_decision_tooltip = IND_conquer_mysore
 			unlock_decision_tooltip = IND_conquer_madras
@@ -352,6 +351,65 @@ IND_unification = {
 			unlock_decision_tooltip = IND_conquer_kashmir
 			
 			set_country_flag = uniting_india
+		}
+	}
+	IND_conquer_punjab = {
+		visible = {
+			country_exists = PUN
+			has_war_with = PUN
+			has_country_flag = uniting_india
+		}
+		icon = infiltrate_state
+		available = {
+			country_exists = RAJ
+			country_exists = PUN
+		}
+		complete_effect = {
+			create_wargoal = {
+				target = PUN
+				type = annex_everything
+			}
+		}
+	}
+	IND_conquer_bengal = {
+		visible = {
+			OR = {
+				country_exists = BNG
+				country_exists = INC
+			}
+			NOT = {
+				has_war_with = BNG
+				has_war_with = INC
+			}
+			has_country_flag = uniting_india
+		}
+		icon = infiltrate_state
+		available = {
+			country_exists = RAJ
+			OR = {
+				country_exists = BNG
+				country_exists = INC
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = BNG
+				}
+				create_wargoal = {
+					target = BNG
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = INC
+				}
+				create_wargoal = {
+					target = INC
+					type = annex_everything
+				}
+			}
 		}
 	}
 
