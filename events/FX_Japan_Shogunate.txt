@@ -196,6 +196,13 @@ country_event = { #Political Turmoil
 			long_name = JAP_authoritarian_democrat_party_shogun_long
 			name = JAP_authoritarian_democrat_party_shogun
 		}
+		remove_every_minister = yes 
+		add_ideas = {
+			JAP_Tokugawa_Kuniyuki_hog_pau
+			JAP_Inoue_Nissho_sec_val
+			JAP_Nakano_Seigo_eco_npo
+			JAP_Naotake_Sato_for_sco
+		}
 		hidden_effect = {
 			every_controlled_state = {
 				limit = {
@@ -213,14 +220,10 @@ country_event = { #Political Turmoil
 			set_country_flag = JAP_counter_coup_win
 			set_country_flag = JAP_Tokugawa_Iesato_Not_Dead
 			set_country_flag = JAP_Shogun_Regime
+			set_country_flag = HOG_veiw
+			set_country_flag = LEADER_GUI_VISIBLE
 	 		set_cosmetic_tag = JAP_Shogunate
 			load_focus_tree = FX_Japan_Shogunate
-			add_ideas = {
-				JAP_Tokugawa_Kuniyuki_hog_pau
-				JAP_Inoue_Nissho_sec_val
-				JAP_Nakano_Seigo_eco_npo
-				JAP_Naotake_Sato_for_sco
-			}
 			set_politics = {
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
