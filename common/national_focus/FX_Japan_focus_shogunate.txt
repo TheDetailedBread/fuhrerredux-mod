@@ -19,7 +19,7 @@ focus_tree = {
 			tag = JAP
 		}
 	}
-	default = no
+	default = yes 
 	shared_focus = JAP_alliance_triumphant
 	shared_focus = JAP_grand_triumvirate
 	shared_focus = JAP_northern_court
@@ -36,6 +36,7 @@ shared_focus = {
 	cost = 5
 	allow_branch = {
 		has_country_flag = JAP_shogunate_focus_unlock
+		#always = yes 
 	}
 	available = { 
 		custom_trigger_tooltip = {
@@ -64,12 +65,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_great_council_of_state"
 		custom_effect_tooltip = "The Cabinet will soon be replaced by Great Council of State"
-		add_trait = {
-			character = JAP_Tokugawa_Iesato
-			ideology = authoritarian_democrat_subtype
-			trait = chancellor_of_state
-		}
-		set_country_flag = JAP_dual_portrait_activate
+		add_idea = JAP_daijo_kan_idea
 	}
 }
 shared_focus = {
@@ -103,7 +99,7 @@ shared_focus = {
 	cost = 6
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_empower_shogunal_authority"
-		#add_ideas = JAP_first_amongs_equal
+		add_ideas = JAP_first_amongs_equal
 		add_war_support = 0.05
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -128,7 +124,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_kyujidai_doctrine"
-		#add_ideas = JAP_kyujidai_idea_0
+		add_ideas = JAP_kyujidai_idea_0
 	}
 }
 shared_focus = {
@@ -148,7 +144,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_shinjidai_doctrine"
-		#add_ideas = JAP_shinjidai_idea_0
+		add_ideas = JAP_shinjidai_idea_0
 	}
 }
 shared_focus = {
@@ -164,8 +160,15 @@ shared_focus = {
 		focus = JAP_restore_ritsuryo
 	}
 	cost = 11
+	select_effect = {
+		country_event = {
+			id = jap_shogundom.1
+			days = 2
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_supreme_tribunal_of_nagasaki"
+		custom_effect_tooltip = "Shogun has opened the provisional Supreme Court of Nagasaki to decide the fate of nation"
 	}
 }
 shared_focus = {
@@ -177,9 +180,22 @@ shared_focus = {
 	prerequisite = {
 		focus = JAP_supreme_tribunal_of_nagasaki
 	}
-	cost = 7
+	cost = 4.3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_supreme_tribunal_of_nagasaki"
+		custom_effect_tooltip = jap_nagasaki_court_tt 
+		if = {
+			limit = {
+				has_country_flag = JAP_ultranat_1
+			}
+			custom_effect_tooltip = jap_ultranat_effect_1_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = JAP_ultranat_2
+			}
+			custom_effect_tooltip = jap_ultranat_effect_2_tt
+		}
 	}
 }
 shared_focus = {
@@ -191,9 +207,22 @@ shared_focus = {
 	prerequisite = {
 		focus = JAP_supreme_tribunal_of_nagasaki
 	}
-	cost = 7
+	cost = 4.3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_admiralty_question"
+		custom_effect_tooltip = jap_nagasaki_court_tt
+		if = {
+			limit = {
+				has_country_flag = JAP_admiralty_1
+			}
+			custom_effect_tooltip = jap_admiralty_effect_1_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = JAP_admiralty_2
+			}
+			custom_effect_tooltip = jap_admiralty_effect_2_tt
+		}
 	}
 }
 shared_focus = {
@@ -205,9 +234,22 @@ shared_focus = {
 	prerequisite = {
 		focus = JAP_supreme_tribunal_of_nagasaki
 	}
-	cost = 7
+	cost = 4.3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_the_ultraroyalists"
+		custom_effect_tooltip = jap_nagasaki_court_tt 
+		if = {
+			limit = {
+				has_country_flag = JAP_ultraroy_1
+			}
+			custom_effect_tooltip = jap_ultraroy_effect_1_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = JAP_ultraroy_2
+			}
+			custom_effect_tooltip = jap_ultraroy_effect_2_tt
+		}
 	}
 }
 shared_focus = {
@@ -219,9 +261,10 @@ shared_focus = {
 	prerequisite = { focus = JAP_the_ultranationalists }
 	prerequisite = { focus = JAP_admiralty_question }
 	prerequisite = { focus = JAP_the_ultraroyalists }
-	cost = 7
+	cost = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_tribunal_final_phase"
+		country_event = jap_shogundom.5
 	}
 }
 shared_focus = {
@@ -234,6 +277,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_restore_han_system"
+		JAP_kyujidai_shinjidai_swap = yes 
 	}
 }
 shared_focus = {
@@ -246,6 +290,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_centralise_the_armed_forces"
+		JAP_kyujidai_shinjidai_swap = yes
 	}
 }
 shared_focus = {
@@ -258,6 +303,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_guilty_of_former_shogun"
+		JAP_kyujidai_shinjidai_swap = yes
 	}
 }
 shared_focus = {
@@ -270,6 +316,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_reform_kazoku_law"
+		JAP_kyujidai_shinjidai_swap = yes
 	}
 }
 shared_focus = {
@@ -282,6 +329,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_next_bastion_of_democracy"
+		JAP_kyujidai_shinjidai_swap = yes
 	}
 }
 shared_focus = {
@@ -294,6 +342,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_new_legacy_of_iesato"
+		JAP_kyujidai_shinjidai_swap = yes
 	}
 }
 shared_focus = {
@@ -306,6 +355,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_report_to_the_emperor"
+		country_event = jap_shogundom.6
 	}
 }
 shared_focus = {
@@ -322,6 +372,7 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_report_to_the_emperor"
+		country_event = jap_shogun.7
 	}
 }
 #######Post Iesato Death Tree
@@ -941,7 +992,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_supreme_bureau_of_national_purification_process
+	id = JAP_kokkajoukakeikaku_cho
 	icon = GFX_ 
 	relative_position_id = JAP_the_protector_assumed_shogunate
 	x = 0
@@ -949,16 +1000,16 @@ shared_focus = {
 	prerequisite = { focus = JAP_the_protector_assumed_shogunate }
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_supreme_bureau_of_national_purification_process"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_kokkajoukakeikaku_cho"
 	}
 }
 shared_focus = {
 	id = JAP_the_past
 	icon = GFX_ 
-	relative_position_id = JAP_supreme_bureau_of_national_purification_process
+	relative_position_id = JAP_kokkajoukakeikaku_cho
 	x = 0
 	y = 1
-	prerequisite = { focus = JAP_supreme_bureau_of_national_purification_process }
+	prerequisite = { focus = JAP_kokkajoukakeikaku_cho }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_the_past"
@@ -1035,7 +1086,7 @@ shared_focus = {
 shared_focus = {
 	id = JAP_the_present
 	icon = GFX_ 
-	relative_position_id = JAP_supreme_bureau_of_national_purification_process
+	relative_position_id = JAP_kokkajoukakeikaku_cho
 	x = 0
 	y = 3
 	prerequisite = { focus = JAP_the_past }
@@ -1116,7 +1167,7 @@ shared_focus = {
 shared_focus = {
 	id = JAP_the_future
 	icon = GFX_ 
-	relative_position_id = JAP_supreme_bureau_of_national_purification_process
+	relative_position_id = JAP_kokkajoukakeikaku_cho
 	x = 0
 	y = 5
 	prerequisite = { focus = JAP_the_present }
