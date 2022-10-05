@@ -1,0 +1,213 @@
+BLR_increase_home_guard = {
+  set_temp_variable = { BLR_home_guard_power_temp = BLR.home_guard_power }
+  set_temp_variable = { BLR_nat_soc_power_temp = BLR.nat_soc_power }
+  add_to_temp_variable = { var = BLR_home_guard_power_temp value = 1 }
+  add_to_temp_variable = { var = BLR_nat_soc_power_temp value = -1 }
+
+  if = {
+    limit = {
+      check_variable = { BLR_home_guard_power_temp = BLR_nat_soc_power_temp }
+    }
+    if = {
+      limit = { has_idea = BLR_power_struggle_nat_soc }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_nat_soc
+        add_idea = BLR_power_struggle
+      }
+    }
+    else_if = {
+      limit = { has_idea = BLR_power_struggle_home_guard }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_home_guard
+        add_idea = BLR_power_struggle
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      check_variable = { BLR_home_guard_power_temp > BLR_nat_soc_power_temp }
+    }
+    if = {
+      limit = { has_idea = BLR_power_struggle_nat_soc }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_nat_soc
+        add_idea = BLR_power_struggle_home_guard
+      }
+    }
+    else_if = {
+      limit = { has_idea = BLR_power_struggle }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle
+        add_idea = BLR_power_struggle_home_guard
+      }
+    }
+  }
+  else_if = {
+    limit = { 
+      check_variable = { BLR_home_guard_power_temp < BLR_nat_soc_power_temp }
+    }
+    if = {
+      limit = { has_idea = BLR_power_struggle }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle
+        add_idea = BLR_power_struggle_nat_soc
+      }
+    }
+    else_if = {
+      limit = { has_idea = BLR_power_struggle_home_guard }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_home_guard
+        add_idea = BLR_power_struggle
+      }
+    }
+  }
+
+  add_to_variable = { var = BLR.home_guard_power value = 1 }
+  add_to_variable = { var = BLR.nat_soc_power value = -1 }
+}
+
+BLR_increase_nat_soc = {
+  set_temp_variable = { BLR_home_guard_power_temp = BLR.home_guard_power }
+  set_temp_variable = { BLR_nat_soc_power_temp = BLR.nat_soc_power }
+  add_to_temp_variable = { var = BLR_home_guard_power_temp value = -1 }
+  add_to_temp_variable = { var = BLR_nat_soc_power_temp value = 1 }
+
+  if = {
+    limit = {
+      check_variable = { BLR_home_guard_power_temp = BLR_nat_soc_power_temp }
+    }
+    if = {
+      limit = { has_idea = BLR_power_struggle_nat_soc }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_nat_soc
+        add_idea = BLR_power_struggle
+      }
+    }
+    else_if = {
+      limit = { has_idea = BLR_power_struggle_home_guard }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_home_guard
+        add_idea = BLR_power_struggle
+      }
+    }
+  }
+  else_if = {
+    limit = {
+      check_variable = { BLR_home_guard_power_temp > BLR_nat_soc_power_temp }
+    }
+    if = {
+      limit = { has_idea = BLR_power_struggle_nat_soc }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_nat_soc
+        add_idea = BLR_power_struggle_home_guard
+      }
+    }
+    else_if = {
+      limit = { has_idea = BLR_power_struggle }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle
+        add_idea = BLR_power_struggle_home_guard
+      }
+    }
+  }
+  else_if = {
+    limit = { 
+      check_variable = { BLR_home_guard_power_temp < BLR_nat_soc_power_temp }
+    }
+    if = {
+      limit = { has_idea = BLR_power_struggle }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle
+        add_idea = BLR_power_struggle_nat_soc
+      }
+    }
+    else_if = {
+      limit = { has_idea = BLR_power_struggle_home_guard }
+      swap_ideas = {
+        remove_idea = BLR_power_struggle_home_guard
+        add_idea = BLR_power_struggle
+      }
+    }
+  }
+
+  add_to_variable = { var = BLR.home_guard_power value = -1 }
+  add_to_variable = { var = BLR.nat_soc_power value = 1 }
+}
+
+BLR_improve_economy = {
+  if = {
+    limit = { has_idea = BLR_agriarian_traditions }
+    swap_ideas = {
+      remove_idea = BLR_agriarian_traditions
+      add_idea = BLR_agriarian_traditions_1
+    }
+  }
+  else_if = {
+    limit = { has_idea = BLR_agriarian_traditions_1 }
+    swap_ideas = {
+      remove_idea = BLR_agriarian_traditions_1
+      add_idea = BLR_agriarian_traditions_2
+    }
+  }
+  else_if = {
+    limit  = { has_idea = BLR_agriarian_traditions_2 }
+    swap_ideas = {
+      remove_idea = BLR_agriarian_traditions_2
+      add_idea = BLR_agriarian_traditions_2
+    }
+  }
+  else_if = {
+    limit = { has_idea = BLR_agriarian_traditions_3 }
+    remove_ideas = BLR_agriarian_traditions_3
+  }
+  else = {
+    hidden_effects = {
+      remove_ideas = {
+        BLR_agriarian_traditions
+        BLR_agriarian_traditions_1
+        BLR_agriarian_traditions_2
+        BLR_agriarian_traditions_3
+      }
+    }
+  }
+}
+
+BLR_recover_from_black_wednesday = {
+  custom_effect_tooltip = BLR_recover_from_black_wednesday_tt
+
+  if = {
+    limit = { has_idea = BLR_black_wednesday_idea }
+    swap_ideas = {
+      remove_idea = BLR_black_wednesday_idea
+      add_idea = BLR_black_wednesday_idea_1
+    }
+  }
+  else_if = {
+    limit = { has_idea = BLR_black_wednesday_idea_1 }
+    swap_ideas = {
+      remove_idea = BLR_black_wednesday_idea_1
+      add_idea = BLR_black_wednesday_idea_2
+    }
+  }
+  else_if = {
+    limit = { has_idea = BLR_black_wednesday_idea_2 }
+    swap_ideas = {
+      remove_idea = BLR_black_wednesday_idea_2
+      add_idea = BLR_black_wednesday_idea_3
+    }
+  }
+  else_if = {
+    limit = { has_idea = BLR_black_wednesday_idea_3 }
+    remove_ideas = BLR_black_wednesday_idea_3
+  }
+  else = {
+    hidden_effects = {
+      remove_ideas = {
+        BLR_black_wednesday_idea
+        BLR_black_wednesday_idea_1
+        BLR_black_wednesday_idea_2
+        BLR_black_wednesday_idea_3
+      }
+    }
+  }
+}

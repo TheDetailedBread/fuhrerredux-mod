@@ -1,0 +1,957 @@
+focus_tree = {
+	id = belarusian_focus
+	continuous_focus_position = { x = -40 y = 1570 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BLR
+		}
+	}
+
+	###############################################
+	# POWER STRUGGLE
+	###############################################
+
+	# Half Mast
+	focus = {
+		id = BLR_half_mast
+		icon = GFX_goal_graveyard
+		x = 4
+		y = 0
+		cost = 6
+		available = {
+      hidden_trigger = {
+        always = no
+      }
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = BLR_otaman_assassinated_tt
+        has_country_flag = BLR_otaman_assassinated
+      }
+    }
+		completion_reward = {
+			custom_effect_tooltip = BLR_half_mast_tt
+		}
+	}
+
+	# Remember His Legacy
+	focus = {
+		id = BLR_remember_his_legacy
+		icon = GFX_goal_authoritarian
+		x = -2
+		y = 1
+		cost = 3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				always = no
+			}
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = BLR_select_home_guard
+			}
+		}
+		prerequisite = {
+			focus = BLR_half_mast
+		}
+		relative_position_id = BLR_half_mast
+		mutually_exclusive = {
+			focus = BLR_dawn_of_a_new_belarus
+		}
+		completion_reward = {
+			custom_effect_tooltip = BLR_home_guard_branch_tt
+		}
+	}
+
+	# Dawn of a New Belarus
+	focus = {
+		id = BLR_dawn_of_a_new_belarus
+		icon = GFX_goal_BLR_coat_of_arms2
+		x = 3
+		y = 1
+		cost = 3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				always = no
+			}
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = BLR_select_nat_soc
+			}
+		}
+		prerequisite = {
+			focus = BLR_half_mast
+		}
+		relative_position_id = BLR_half_mast
+		mutually_exclusive = {
+			focus = BLR_remember_his_legacy
+		}
+		completion_reward = {
+			custom_effect_tooltip = BLR_nat_soc_branch_tt
+		}
+	}
+
+	# Ensure Unit Loyalty
+	focus = {
+		id = BLR_ensure_unit_loyalty
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_remember_his_legacy
+		}
+		relative_position_id = BLR_remember_his_legacy
+		completion_reward = {
+			add_political_power = 50
+			add_command_power = 100
+		}
+	}
+
+	# Meet with the Moderates
+	focus = {
+		id = BLR_meet_with_the_moderates
+		icon = GFX_goal_generic_parliament
+		x = 1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_remember_his_legacy
+		}
+		relative_position_id = BLR_remember_his_legacy
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = BLR_increase_home_guard_tt
+			BLR_increase_home_guard = yes
+		}
+	}
+
+	# Deploy Garrisons
+	focus = {
+		id = BLR_deploy_the_garrisons
+		icon = GFX_goal_army_guy_2
+		x = -1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_ensure_unit_loyalty
+		}
+		relative_position_id = BLR_ensure_unit_loyalty
+		completion_reward = {
+			custom_effect_tooltip = BLR_increase_home_guard_tt
+			BLR_increase_home_guard = yes
+			add_stability = 0.05
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+		}
+	}
+
+	# Request Foreign Support
+	focus = {
+		id = BLR_request_foreign_support
+		icon = GFX_focus_chi_reach_out_to_france
+		x = -1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_meet_with_the_moderates
+		}
+		relative_position_id = BLR_meet_with_the_moderates
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = ITA
+			}
+		}
+	}
+
+	# Entente Economic Advisors
+	focus = {
+		id = BLR_entente_economic_advisors
+		icon = GFX_goal_generic_financial_markets
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = {
+			focus = BLR_meet_with_the_moderates
+		}
+		relative_position_id = BLR_meet_with_the_moderates
+		completion_reward = {
+			add_ideas = BLR_economic_advisors
+		}
+	}
+
+	# Increase Entente Trade
+	focus = {
+		id = BLR_increase_entente_trade
+		icon = GFX_goal_generic_debt_negotiations
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_entente_economic_advisors }
+		relative_position_id = BLR_entente_economic_advisors
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BLR_economic_advisors
+				add_idea = BLR_entente_economic_alignment
+			}
+		}
+	}
+
+	# Final Preparations
+	focus = {
+		id = BLR_final_preparations
+		icon = GFX_HOL_crackdown_natpop
+		x = 1
+		y = 1
+		cost = 3
+		prerequisite = { focus = BLR_deploy_the_garrisons }
+		prerequisite = { focus = BLR_request_foreign_support }
+		relative_position_id = BLR_deploy_the_garrisons
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+		}
+	}
+
+	# Approach Germany
+	focus = {
+		id = BLR_approach_germany
+		icon = GFX_goal_germany
+		x = -2
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_dawn_of_a_new_belarus
+		}
+		relative_position_id = BLR_dawn_of_a_new_belarus
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1000
+				producer = GER
+			}
+		}
+	}
+
+	# Invite German Industrialists
+	focus = {
+		id = BLR_invite_german_industrialists
+		icon = GFX_goal_HOL_progressive_tax
+		x = 0
+		y = 2
+		cost = 6
+		prerequisite = { focus = BLR_approach_germany }
+		relative_position_id = BLR_approach_germany
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# The People's Militia
+	focus = {
+		id = BLR_the_peoples_militia
+		icon = GFX_goal_enlist_the_police
+		x = 0
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_dawn_of_a_new_belarus
+		}
+		relative_position_id = BLR_dawn_of_a_new_belarus
+		completion_reward = {
+			custom_effect_tooltip = BLR_increase_nat_soc_tt
+			BLR_increase_home_guard = yes
+			add_stability = -0.05
+		}
+	}
+
+	# Pass Populist Policies
+	focus = {
+		id = BLR_pass_populist_policies
+		icon = GFX_focus_HOL_deal_with_right
+		x = 1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BLR_approach_germany
+		}
+		relative_position_id = BLR_approach_germany
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	# Make Accidents Happen
+	focus = {
+		id = BLR_make_accidents_happen
+		icon = GFX_goal_backstab
+		x = 1
+		y = 2
+		cost = 3
+		prerequisite = {
+			focus = BLR_dawn_of_a_new_belarus
+		}
+		relative_position_id = BLR_dawn_of_a_new_belarus
+		completion_reward = {
+			custom_effect_tooltip = BLR_increase_nat_soc_tt
+			BLR_increase_nat_soc = yes
+			random_list = {
+				25 = {
+					add_popularity = {
+						ideology = social_conservative
+						popularity = -0.05
+					}
+				}
+				25 = {
+					add_popularity = {
+						ideology = social_liberal
+						popularity = -0.05
+					}
+				}
+				25 = {
+					add_popularity = {
+						ideology = social_democrat
+						popularity = -0.05
+					}
+				}
+				25 = {
+					add_popularity = {
+						ideology = market_liberal
+						popularity = -0.05
+					}
+				}
+			}
+		}
+	}
+
+	# Consolidate State Assets
+	focus = {
+		id = BLR_consolidate_state_assets
+		icon = GFX_goal_Centralised_Government
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_dawn_of_a_new_belarus }
+		relative_position_id = BLR_dawn_of_a_new_belarus
+		completion_reward = {
+			206 = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+		}
+	}
+
+	# Study the Home Guard
+	focus = {
+		id = BLR_study_the_home_guard
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_pass_populist_policies }
+		prerequisite = { focus = BLR_make_accidents_happen }
+		prerequisite = { focus = BLR_the_peoples_militia }
+		relative_position_id = BLR_pass_populist_policies
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = valkist
+				popularity = 0.05
+			}
+		}
+	}
+
+	###############################################
+	# INDUSTRIAL
+	###############################################
+
+	# Industrialization of Belarus
+	focus = {
+		id = BLR_industrialization_of_belarus
+		icon = GFX_goal_generic_deals
+		x = 6
+		y = -2
+		cost = 6
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLR_power_struggle_resolved_tt
+				OR = {
+					has_country_flag = BLR_nat_soc_win
+					has_country_flag = BLR_home_guard_win
+				}
+			}
+		}
+		relative_position_id = BLR_consolidate_state_assets
+		completion_reward = {
+			add_tech_bonus = {
+				technology = construction1
+				technology = construction2
+				technology = construction3
+				technology = construction4
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+
+	# Start Land Reform
+	focus = {
+		id = BLR_start_land_reform
+		icon = GFX_goal_OTT_Land_Reform
+		x = -3
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_industrialization_of_belarus }
+		relative_position_id = BLR_industrialization_of_belarus
+		completion_reward = {
+			BLR_improve_economy = yes
+			add_political_power = 100
+		}
+	}
+
+	# Concessions to the Land Owners
+	focus = {
+		id = BLR_concessions_to_the_land_owners
+		icon = GFX_goal_OTT_Tithe
+		x = -1
+		y = 1
+		cost = 6
+		mutually_exclusive = { focus = BLR_seize_large_estates }
+		prerequisite = { focus = BLR_start_land_reform }
+		relative_position_id = BLR_start_land_reform
+		completion_reward = {
+			add_timed_idea = {
+				idea = BLR_concessions
+				days = 360
+			}
+			95 = { add_extra_state_shared_building_slots = 1 }
+			97 = { add_extra_state_shared_building_slots = 2 }
+			194 = { add_extra_state_shared_building_slots = 2 }
+			204 = { add_extra_state_shared_building_slots = 1 }
+			206 = { add_extra_state_shared_building_slots = 2 }
+			207 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	# Seize Large Estates
+	focus = {
+		id = BLR_seize_large_estates
+		icon = GFX_goal_revolution_tools
+		x = 1
+		y = 1
+		cost = 6
+		mutually_exclusive = { focus = BLR_concessions_to_the_land_owners }
+		prerequisite = { focus = BLR_start_land_reform }
+		relative_position_id = BLR_start_land_reform
+		completion_reward = {
+			add_political_power = -100
+			95 = { add_extra_state_shared_building_slots = 1 }
+			97 = { add_extra_state_shared_building_slots = 2 }
+			194 = { add_extra_state_shared_building_slots = 2 }
+			204 = { add_extra_state_shared_building_slots = 1 }
+			206 = { add_extra_state_shared_building_slots = 2 }
+			207 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	# Resolve Land Disputes
+	focus = {
+		id = BLR_resolve_land_disputes
+		icon = GFX_focus_generic_concessions
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { 
+			focus = BLR_concessions_to_the_land_owners
+			focus = BLR_seize_large_estates
+		}
+		relative_position_id = BLR_concessions_to_the_land_owners
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	# Expand the Recyca Hardware Plant
+	focus = {
+		id = BLR_expand_the_recyca_hardware_plant
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_industrialization_of_belarus }
+		relative_position_id = BLR_industrialization_of_belarus
+		completion_reward = {
+			BLR_improve_economy = yes
+			random_owned_controlled_state = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+		}
+	}
+
+	# The Maladziecna Machine Tool Plant
+	focus = {
+		id = BLR_the_maladziecna_machine_tool_plant
+		icon = GFX_goal_workers_for_business
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_industrialization_of_belarus }
+		relative_position_id = BLR_industrialization_of_belarus
+		completion_reward = {
+			BLR_improve_economy = yes
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+			}
+		}
+	}
+
+	# The Mahilou Metallurgical Plant
+	focus = {
+		id = BLR_the_mahilou_metallurgical_plant
+		icon = GFX_goal_generic_coal_mining
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_expand_the_recyca_hardware_plant }
+		prerequisite = { focus = BLR_the_maladziecna_machine_tool_plant }
+		relative_position_id = BLR_expand_the_recyca_hardware_plant
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 16
+					state = THIS
+				}
+			}
+		}
+	}
+
+	# Zodzina Power Station
+	focus = {
+		id = BLR_zodzina_power_station
+		icon = GFX_goal_generic_electricity
+		x = 0
+		y = 2
+		cost = 6
+		prerequisite = { focus = BLR_expand_the_recyca_hardware_plant }
+		relative_position_id = BLR_expand_the_recyca_hardware_plant
+		completion_reward = {
+			add_tech_bonus = {
+				category = electronics
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# Expand the Belarusian Railways
+	focus = {
+		id = BLR_expand_the_belarusian_railways
+		icon = GFX_goal_OTT_Railroad
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_zodzina_power_station }
+		relative_position_id = BLR_zodzina_power_station
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+      show_ideas_tooltip = BLR_belarusian_railway
+		}
+	}
+
+	# Mazyr Oil Refinery
+	focus = {
+		id = BLR_mazyr_oil_refinery
+		icon = GFX_goal_basic_oil
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_zodzina_power_station }
+		relative_position_id = BLR_zodzina_power_station
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = oil
+					amount = 8
+					state = THIS
+				}
+				if = {
+          limit = {
+            free_building_slots = {
+              building = fuel_silo
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = fuel_silo
+            level = 1
+            instant_build = yes
+          }
+        }
+			}
+		}
+	}
+
+	# Minsk Arms Factory
+	focus = {
+		id = BLR_minsk_arms_factory
+		icon = GFX_goal_generic_military_equipment
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_expand_the_belarusian_railways }
+		relative_position_id = BLR_expand_the_belarusian_railways
+		completion_reward = {
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
+			}
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
+			}
+		}
+	}
+
+	# Haradzieja Sugar Plant
+	focus = {
+		id = BLR_harajzieja_sugar_plant
+		icon = GFX_goal_YUN_Bamboo_King_Society
+		x = -3
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_expand_the_belarusian_railways }
+		relative_position_id = BLR_expand_the_belarusian_railways
+		completion_reward = {
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+			}
+		}
+	}
+
+	# Open New Universities
+	focus = {
+		id = BLR_open_new_universities
+		icon = GFX_goal_KTG_Bookstack
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_expand_the_belarusian_railways }
+		relative_position_id = BLR_expand_the_belarusian_railways
+		completion_reward = {
+			add_research_slot = 1
+			custom_effect_tooltip = available_designer
+      show_ideas_tooltip = BLR_belarus_state_university
+		}
+	}
+
+	# Black Wednesday Woes
+	focus = {
+		id = BLR_black_wednesday_woes
+		icon = GFX_goal_bankruptcy
+		x = 3
+		y = 1
+		cost = 6
+		available = {
+			has_country_flag = BLR_black_wednesday
+		}
+		bypass = {
+			hidden_trigger = {
+				has_country_flag = BLR_black_wednesday
+			}
+		}
+		prerequisite = { focus = BLR_industrialization_of_belarus }
+		relative_position_id = BLR_industrialization_of_belarus
+		completion_reward = {
+			custom_effect_tooltip = BLR_black_wednesday_woes_tt
+		}
+	}
+
+	# Nationalize Key Industries
+	focus = {
+		id = BLR_nationalize_key_industries
+		icon = GFX_goal_state_economy
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_black_wednesday_woes }
+		relative_position_id = BLR_black_wednesday_woes
+		completion_reward = {
+			BLR_recover_from_black_wednesday = yes
+		}
+	}
+
+	# New Industrial Tools
+	focus = {
+		id = BLR_new_industrial_tools
+		icon = GFX_goal_production
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { 
+			focus = BLR_nationalize_key_industries
+			focus = BLR_the_mahilou_metallurgical_plant 
+		}
+		relative_position_id = BLR_nationalize_key_industries
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_new_industrial_tools
+				category = industry
+				bonus = 1.0
+				uses = 2
+			}
+		}
+	}
+
+	# Invest in Hydroelecricity
+	focus = {
+		id = BLR_invest_in_hydroelectricity
+		icon = GFX_goal_dam
+		x = 0
+		y = 2
+		cost = 6
+		available = {
+			has_full_control_of_state = 95
+		}
+		prerequisite = { focus = BLR_nationalize_key_industries }
+		relative_position_id = BLR_nationalize_key_industries
+		completion_reward = {
+			95 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	# Subsidize the Agricultural Sector
+	focus = {
+		id = BLR_subsidize_the_agricultural_sector
+		icon = GFX_goal_agriculture
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_black_wednesday_woes }
+		relative_position_id = BLR_black_wednesday_woes
+		completion_reward = {
+			BLR_recover_from_black_wednesday = yes
+		}
+	}
+
+	# Expand Farm-to-City Connections
+	focus = {
+		id = BLR_expand_farm_to_city_connections
+		icon = GFX_goal_generic_road_construction
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_subsidize_the_agricultural_sector }
+		relative_position_id = BLR_subsidize_the_agricultural_sector
+		completion_reward = {
+			add_stability = 0.05
+			every_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Modernize Agricultural Tools
+	focus = {
+		id = BLR_modernize_agricultural_tools
+		icon = GFX_goal_SZC_improvised_farming_machinery
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_subsidize_the_agricultural_sector }
+		relative_position_id = BLR_subsidize_the_agricultural_sector
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_modernize_agricultural_tools
+				category = industry
+				category = electronics
+				bonus = 1.0
+				uses = 2
+			}
+		}
+	}
+
+	# Increase Food Exports
+	focus = {
+		id = BLR_increase_food_exports
+		icon = GFX_goal_generic_food_processing
+		x = 1
+		y = 1 
+		cost = 6
+		prerequisite = { focus = BLR_expand_farm_to_city_connections }
+		prerequisite = { focus = BLR_modernize_agricultural_tools }
+		relative_position_id = BLR_expand_farm_to_city_connections
+		completion_reward = {
+			BLR_recover_from_black_wednesday = yes
+		}
+	}
+
+	# End of the Economic Catastrophe
+	focus = {
+		id = BLR_end_of_the_economic_catastrophe
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_invest_in_hydroelectricity }
+		prerequisite = { focus = BLR_increase_food_exports }
+		relative_position_id = BLR_invest_in_hydroelectricity
+		completion_reward = {
+			add_ideas = BLR_thriving_economy
+		}
+	}
+}
