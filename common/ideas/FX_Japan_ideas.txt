@@ -229,6 +229,16 @@ ideas = {
 				chief_of_navy_cost_factor = -0.05
 			}
 		}
+		JAP_first_amongs_equal = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_first_amongs_equal"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				political_power_cost = -0.2
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
 		#####Original
 		jap_war_propaganda = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea jap_war_propaganda"}
