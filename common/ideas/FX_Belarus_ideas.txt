@@ -174,6 +174,64 @@ ideas = {
 				industrial_capacity_factory = 0.15
 			}
 		}
+		BLR_pilot_training_idea = {
+			allowed = { original_tag = BLR }
+			picture = generic_army_war_college
+			modifier = {
+				air_ace_generation_chance_factor = 0.25
+				air_superiority_efficiency = 0.15
+				ground_attack_factor = 0.15 
+			}
+		}
+		BLR_general_staff = {
+			allowed = { original_tag = BLR }
+			picture = advisors_belarus
+			modifier = {
+				army_org_factor = 0.1
+        experience_gain_army_factor = 0.05
+        planning_speed = 0.15
+			}
+		}
+		BLR_streamlined_production = {
+			allowed = { original_tag = BLR }
+			picture = man_five_year_plan_tank
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+			equipment_bonus = {
+        infantry_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+        support_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+        artillery_equipment = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+      }
+		}
+		BLR_repair_facilities = {
+			allowed = { original_tag = BLR }
+			picture = generic_license_production
+			equipment_bonus = {
+        motorized = {
+          build_cost_ic = -0.15
+          instant = yes
+        }
+      }
+		}
+		BLR_defensive_maneuvers = {
+			allowed = { original_tag = BLR }
+			picture = chi_war_of_resistance
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_morale_factor = 0.05
+				dig_in_speed_factor = 0.15
+			}
+		}
 	}
 
 	######################

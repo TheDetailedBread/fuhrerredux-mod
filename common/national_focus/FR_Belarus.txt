@@ -9,6 +9,8 @@ focus_tree = {
 		}
 	}
 
+	continuous_focus_position = { x = 100 y = 1750 }
+
 	###############################################
 	# POWER STRUGGLE
 	###############################################
@@ -39,7 +41,7 @@ focus_tree = {
 	# Remember His Legacy
 	focus = {
 		id = BLR_remember_his_legacy
-		icon = GFX_goal_authoritarian
+		icon = GFX_goal_generic_council
 		x = -2
 		y = 1
 		cost = 3
@@ -712,7 +714,7 @@ focus_tree = {
 	# Haradzieja Sugar Plant
 	focus = {
 		id = BLR_harajzieja_sugar_plant
-		icon = GFX_goal_YUN_Bamboo_King_Society
+		icon = GFX_HON_sugar_plantations
 		x = -3
 		y = 1
 		cost = 6
@@ -952,6 +954,459 @@ focus_tree = {
 		relative_position_id = BLR_invest_in_hydroelectricity
 		completion_reward = {
 			add_ideas = BLR_thriving_economy
+		}
+	}
+
+	###############################################
+	# MILITARY
+	###############################################
+
+	# Formalize the Belarusian Armed Forces
+	focus = {
+		id = BLR_formalize_the_belarusian_armed_forces
+		icon = GFX_goal_BLR_army
+		x = 1
+		y = 2
+		cost = 6
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLR_power_struggle_resolved_tt
+				OR = {
+					has_country_flag = BLR_nat_soc_win
+					has_country_flag = BLR_home_guard_win
+				}
+			}
+		}
+		relative_position_id = BLR_increase_entente_trade
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	# Establish the Belarusian Air Force
+	focus = {
+		id = BLR_establish_the_belarusian_air_force
+		icon = GFX_goal_BLR_air_force
+		x = -2
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_formalize_the_belarusian_armed_forces }
+		relative_position_id = BLR_formalize_the_belarusian_armed_forces
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+
+	# Fighter Modernization
+	focus = {
+		id = BLR_fighter_modernization
+		icon = GFX_goal_generic_air_fighter2_new
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_establish_the_belarusian_air_force }
+		relative_position_id = BLR_establish_the_belarusian_air_force
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_fighter_modernization
+				category = fighter_techs
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# Bomber Acquisition
+	focus = {
+		id = BLR_bomber_acquisition
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_establish_the_belarusian_air_force }
+		relative_position_id = BLR_establish_the_belarusian_air_force
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_bomber_acquisition
+				category = tactical_bomber
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# CAS Development
+	focus = {
+		id = BLR_cas_development
+		icon = GFX_goal_generic_CAS
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_fighter_modernization }
+		relative_position_id = BLR_fighter_modernization
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_cas_development
+				category = cas_bomber
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# Pilot Training
+	focus = {
+		id = BLR_pilot_training
+		icon = GFX_goal_conscription
+		x = 0
+		y = 2
+		cost = 6
+		prerequisite = { focus = BLR_cas_development }
+		relative_position_id = BLR_cas_development
+		completion_reward = {
+			add_manpower = 15000
+			add_ideas = BLR_pilot_training_idea
+		}
+	}
+
+	# Nowogrodek Airfields
+	focus = {
+		id = BLR_nowogrodek_airfields
+		icon = GFX_goal_generic_airports
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			has_full_control_of_state = 95
+		}
+		prerequisite = {
+			focus = BLR_fighter_modernization
+			focus = BLR_bomber_acquisition
+		}
+		relative_position_id = BLR_fighter_modernization
+		completion_reward = {
+			95 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Construct Air Defenses
+	focus = {
+		id = BLR_construct_air_defenses
+		icon = GFX_focus_generic_air_defense
+		x = -1
+		y = 1
+		cost = 6
+		available = {
+			has_full_control_of_state = 206
+			has_full_control_of_state = 95
+		}
+		prerequisite = { focus = BLR_nowogrodek_airfields }
+		relative_position_id = BLR_nowogrodek_airfields
+		completion_reward = {
+			206 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			95 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Rocketry Technology
+	focus = {
+		id = BLR_rocketry_technology
+		icon = GFX_focus_rocketry
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_construct_air_defenses }
+		relative_position_id = BLR_construct_air_defenses
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_rocketry_technology
+				category = rocketry
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# Status of the Home Guard
+	focus = {
+		id = BLR_status_of_the_home_guard
+		icon = GFX_goal_BLR_coat_of_arms
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_formalize_the_belarusian_armed_forces }
+		relative_position_id = BLR_formalize_the_belarusian_armed_forces
+		completion_reward = {
+			country_event = { id = belarus.15 days = 1 }
+		}
+	}
+
+	# The High Command
+	focus = {
+		id = BLR_the_high_command
+		icon = GFX_goal_generic_army_high_command
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_status_of_the_home_guard }
+		relative_position_id = BLR_status_of_the_home_guard
+		completion_reward = {
+			add_ideas = BLR_general_staff
+		}
+	}
+
+	# An Art of War
+	focus = {
+		id = BLR_an_art_of_war
+		icon = GFX_goal_generic_army_grand_battleplan
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_the_high_command }
+		relative_position_id = BLR_the_high_command
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+        category = land_doctrine
+        cost_reduction = 1.0
+        uses = 1
+      }
+		}
+	}
+
+	# Increase Conscription
+	focus = {
+		id = BLR_increase_conscription
+		icon = GFX_goal_generic_paramilitary
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_an_art_of_war }
+		relative_position_id = BLR_an_art_of_war
+		completion_reward = {
+			increase_conscription = yes
+		}
+	}
+
+	# Fortify Defensive Positions
+	focus = {
+		id = BLR_fortify_defensive_positions
+		icon = GFX_goal_nested_fortifications
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_increase_conscription }
+		relative_position_id = BLR_increase_conscription
+		completion_reward = {
+			custom_effect_tooltip = BLR_fortify_defensive_positions_tt
+		}
+	}
+
+	# Support Companies
+	focus = {
+		id = BLR_support_companies
+		icon = GFX_goal_checkmate
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_the_high_command }
+		relative_position_id = BLR_the_high_command
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_support_companies
+				category = support_tech
+				bonus = 1.0
+				uses = 1
+			}
+		}
+	}
+
+	# Equipment Production
+	focus = {
+		id = BLR_equipment_production
+		icon = GFX_goal_generic_military_equipment
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_support_companies }
+		relative_position_id = BLR_support_companies
+		completion_reward = {
+			add_ideas = BLR_streamlined_production
+		}
+	}
+
+	# New Arsenals
+	focus = {
+		id = BLR_new_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			has_capitulated = no
+		}
+		prerequisite = { focus = BLR_equipment_production }
+		prerequisite = { focus = BLR_cavalry_motorization }
+		relative_position_id = BLR_equipment_production
+		completion_reward = {
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
+			}
+		}
+	}
+
+	# Equipment Standardization
+	focus = {
+		id = BLR_equipment_standardization
+		icon = GFX_goal_generic_design_equipment_standards
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_status_of_the_home_guard }
+		relative_position_id = BLR_status_of_the_home_guard
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_equipment_standardization
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	# Artillery Modernization
+	focus = {
+		id = BLR_artillery_modernization
+		icon = GFX_goal_generic_army_superior_firepower
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_equipment_standardization }
+		relative_position_id = BLR_equipment_standardization
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_artillery_modernization
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	# Cavalry Motorization
+	focus = {
+		id = BLR_cavalry_motorization
+		icon = GFX_goal_generic_armored_cars
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_artillery_modernization }
+		relative_position_id = BLR_artillery_modernization
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_cavalry_motorization
+				bonus = 0.75
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+	# Tank Procurement
+	focus = {
+		id = BLR_tank_procurement
+		icon = GFX_goal_generic_army_tanks2
+		x = 2
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_equipment_standardization }
+		relative_position_id = BLR_equipment_standardization
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLR_tank_procurement
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	# Experimental Tank Corps
+	focus = {
+		id = BLR_experimental_tank_corps
+		icon = GFX_focus_generic_tank_destroyer
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_tank_procurement }
+		relative_position_id = BLR_tank_procurement
+		completion_reward = {
+			custom_effect_tooltip = BLR_experimental_tank_corps_tt
+			hidden_effect = {
+				load_oob = BLR_armor
+			}
+		}
+	}
+
+	# Automobile Repair Facilities
+	focus = {
+		id = BLR_automobile_repair_facilities
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_experimental_tank_corps }
+		relative_position_id = BLR_cavalry_motorization
+		completion_reward = {
+			add_ideas = BLR_repair_facilities
+		}
+	}
+
+	# Defense of Belarus
+	focus = {
+		id = BLR_defense_of_belarus
+		icon = GFX_goal_generic_drafted_army
+		x = 0
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_rocketry_technology }
+		prerequisite = { focus = BLR_fortify_defensive_positions }
+		prerequisite = { focus = BLR_new_arsenals }
+		prerequisite = { focus = BLR_automobile_repair_facilities }
+		relative_position_id = BLR_fortify_defensive_positions
+		completion_reward = {
+			add_ideas = BLR_defensive_maneuvers
 		}
 	}
 }
