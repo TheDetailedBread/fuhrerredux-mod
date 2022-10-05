@@ -325,3 +325,188 @@ BLR_power_struggle_category = {
     }
   }
 }
+
+BLR_defense_fortifications = {
+  BLR_against_ukraine = {
+    icon = GFX_decision_generic_construction
+    fire_only_once = yes
+    days_remove = 120
+    targets = { SOV }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        NOT = {
+          has_war_with = ROOT
+          is_in_faction_with = ROOT 
+        }
+      }
+    }
+    available = {
+      FROM = {
+        is_neighbor_of = ROOT
+      }
+      num_of_available_civilian_factories > 1
+      has_full_control_of_state = 194
+    }
+    modifier = {
+      civilian_factory_use = 2
+    }
+    remove_effect = {
+      194 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 3203 
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 215
+					instant_build = yes
+        }
+      }
+      204 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 11285
+					instant_build = yes
+        }
+        
+      }
+      95 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 3556
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 6280
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 3556
+					instant_build = yes
+        }
+      }
+      97 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 3256
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 6306
+					instant_build = yes
+        }
+      }
+    }
+  }
+  BLR_against_soviets = {
+    icon = GFX_decision_generic_construction
+    fire_only_once = yes
+    days_remove = 120
+    targets = { SOV }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        NOT = {
+          has_war_with = ROOT
+          is_in_faction_with = ROOT 
+        }
+      }
+    }
+    available = {
+      FROM = {
+        is_neighbor_of = ROOT
+      }
+      num_of_available_civilian_factories > 1
+      has_full_control_of_state = 194
+      has_full_control_of_state = 204
+      has_full_control_of_state = 206
+      has_full_control_of_state = 207
+    }
+    modifier = {
+      civilian_factory_use = 2
+    }
+    remove_effect = {
+      194 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 6319
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 9249
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 3507
+					instant_build = yes
+        }
+      }
+      204 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 6373
+					instant_build = yes
+        }
+      }
+      206 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 9289
+					instant_build = yes
+        }
+      }
+      207 = {
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 233
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 358
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 6371
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 9241
+					instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+					level = 3
+					province = 3331
+					instant_build = yes
+        }
+      }
+    }
+  }
+}
