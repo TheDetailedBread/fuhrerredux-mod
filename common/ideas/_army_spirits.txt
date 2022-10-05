@@ -62,7 +62,7 @@ ideas = {
 			ledger = army
 			visible = {
 				OR = {
-					has_government = totalist
+					has_government = vanguardist
 					has_authoritarian_government = yes
 				}
 			}
@@ -202,8 +202,8 @@ ideas = {
 			ledger = army
 			visible = {
 				OR = {
-					has_government = syndicalist
-					has_government = radical_socialist
+					has_government = collectivist
+					has_government = libertarian_socialist
 				}
 			}
 			modifier = {
@@ -413,62 +413,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-			}
-		}
-		entente_invasion_spirit = {
-			ledger = army
-			picture = long_range_patrol_spirit
-			visible = { is_in_faction_with = ENT }
-			equipment_bonus = {
-				floating_harbor_equipment = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-			}
-			modifier = {
-				naval_invasion_penalty = -0.25
-			}
-			ai_will_do = {
-				factor = 2
-			}
-		}
-		reichspakt_defense_spirit = {
-			ledger = army
-			picture = political_connections_spirit
-			visible = {
-				is_in_faction_with = GER
-				GER = { is_faction_leader = yes }
-			}
-			modifier = {
-				army_org_factor = 0.1
-				army_morale_factor = 0.05
-			}
-			ai_will_do = {
-				factor = 2
-			}
-		}
-		international_revolution_spirit = {
-			ledger = army
-			picture = upbeat_command_spirit
-			visible = { is_in_faction_with = INT }
-			modifier = {
-				coordination_bonus = 0.05
-				experience_loss_factor = -0.15
-
-			}
-			ai_will_do = {
-				factor = 2
-			}
-		}
-		decentralised_logistics_spirit = {
-			ledger = army
-			visible = { has_country_flag = is_chinese_tag }
-			modifier = {
-				supply_combat_penalties_on_core_factor = -0.2
-				supply_node_range = 0.1
-			}
-			ai_will_do = {
-				factor = 2
 			}
 		}
 	}

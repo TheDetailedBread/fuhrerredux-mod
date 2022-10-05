@@ -1552,7 +1552,7 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = PHI_homeguard_expansion_tt
       hidden_effect = {
-        load_obb = "PHI_expand"
+        load_oob = "PHI_expand"
       }
     }
   }
@@ -2014,8 +2014,11 @@ focus_tree = {
       }
     }
     available = {
-      has_country_flag = PHI_has_1937_elections
-      threat > 0.25
+      OR = {
+        has_country_flag = PHI_has_1937_elections
+        has_country_flag = PHI_junta_in_control
+      }
+      threat > 0.2
     }
     relative_position_id = PHI_new_antitrust_laws
     completion_reward = {
@@ -2664,7 +2667,7 @@ focus_tree = {
         exists = yes
         is_subject = no
         is_in_faction = no
-        NOT = { hsa_war_with = ROOT }
+        NOT = { has_war_with = ROOT }
       }
     }
     bypass = {
@@ -3284,13 +3287,13 @@ focus_tree = {
     relative_position_id = PHI_standardization_of_equipment
     completion_reward = {
       add_tech_bonus = {
+        name = PHI_army_scout_rangers
         technology = tech_special_forces
         technology = advanced_special_forces
         technology = improved_special_forces
         technology = extreme_environment_training
         technology = survival_training
         technology = elite_forces
-        technology = jungle_warfare
         bonus = 1.0
         uses = 2
       }
@@ -3373,6 +3376,7 @@ focus_tree = {
     relative_position_id = PHI_form_the_general_staff
     completion_reward = {
       add_doctrine_cost_reduction = {
+        name = PHI_learning_from_the_great_war
         cost_reduction = 0.5
         uses = 1
         category = land_doctrine
