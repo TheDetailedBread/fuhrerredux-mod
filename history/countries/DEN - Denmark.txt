@@ -96,6 +96,30 @@ set_war_support = 0.22
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Rota Class"
+		type = submarine_1
+		parent_version = 1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			sub_engine_upgrade = 2
+			sub_stealth_upgrade = 2
+			sub_torpedo_upgrade = 2
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Herluf Trolle Class"
+		type = heavy_cruiser_1
+		name_group = DEN_CA_HISTORICAL
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 3
+			ship_armor_upgrade = 3
+			ship_gun_upgrade = 3
+		}
+	}
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }

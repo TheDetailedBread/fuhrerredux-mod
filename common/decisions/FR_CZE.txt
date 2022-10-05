@@ -19,8 +19,10 @@ CZE_legacy_of_czechoslovakia = {
 			71 = { is_owned_by = SLO }
  		}
 		highlight_states = {
-			state = 70
-			state = 71
+			highlight_state_targets = {
+				state = 70
+				state = 71
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -98,9 +100,11 @@ CZE_the_oo = {
  			owns_state = 775
  		}
 		highlight_states = {
-			state = 69
-			state = 74
-			state = 775
+			highlight_state_targets = {
+				state = 69
+				state = 74
+				state = 775
+			}
 		}
 		ai_will_do = {
 			factor = 1
