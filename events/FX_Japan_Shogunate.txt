@@ -131,7 +131,7 @@ country_event = { #Korean Righteous Army / Taiwanese Anarchy / Recalling Governo
 		name = jap_shogun.5.a 
 		add_political_power = -300
 		add_stability = -0.3
-		custom_effect_tooltip = "Our empire shall reach her demise by our own hand"
+		custom_effect_tooltip = "The empire will no longer be the empire we'd ever known"
 		hidden_effect = {
 			every_controlled_state = {
 				limit = {
@@ -294,7 +294,7 @@ country_event = {
 
 	option = {
 		name = "Let decide the matters immediately"
-		custom_effect_tooltip = "This event will launch the chain event about Nagasaki supreme court"
+		custom_effect_tooltip = "This event will launch the chain event about Nagasaki supreme tribunal"
 		hidden_effect = {
 			country_event = {
 				id = jap_shogundom.2
@@ -319,7 +319,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "No need to kill those nation's root of evil, show some mercy"
+		name = "No need to kill, show some mercy"
 		set_country_flag = JAP_ultraroy_2
 		country_event = {
 			id = jap_shogundom.3
@@ -335,7 +335,7 @@ country_event = {
 	is_triggered_only = yes 
 
 	option = {
-		name = "Thee the root of bringing nation disadvantage, we must execute in no time"
+		name = "Thee the root of bringing nation on disadvantage, we must execute in no time"
 		set_country_flag = JAP_ultranat_1
 		country_event = {
 			id = jap_shogundom.4
@@ -343,7 +343,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "No need to kill those nation's root of evil, show some mercy"
+		name = "No need to kill, show some mercy"
 		set_country_flag = JAP_ultranat_2
 		country_event = {
 			id = jap_shogundom.4
@@ -387,7 +387,13 @@ country_event = {
 	is_triggered_only = yes 
 
 	option = {
-		name = "Your reign no needs of those ultramilitarists, your majesty"
+		name = "Your reign is secure from the ultramilitarists, your majesty"
+		add_political_power = 150
+		add_stability = 0.25
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.2
+		}
 	}
 }
 country_event = {
