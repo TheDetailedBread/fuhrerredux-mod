@@ -17,40 +17,45 @@
 # 	}
 # }
 
-# defined_text = {
-# 	name = GUIHOGNAME
-# 	text = {
-# 		trigger = {
-# 			NOT = {
-				
-# 			}
-# 		}
-# 		localization_key = GUIHOGNAME
-# 	}
-# 	text = {
-# 		trigger = {
-# 			OR = {
-				
-# 			}
-# 		}
-# 		localization_key = GUIHOGNAMETRAIT
-# 	}
+defined_text = {
+	name = GUIHOGNAME
+	text = {
+		trigger = {
+			NOT = {
+				has_idea = JAP_great_council_of_state_idea
+			}
+		}
+		localization_key = GUIHOGNAME
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_idea = JAP_great_council_of_state_idea
+			}
+		}
+		localization_key = GUIHOGNAMETRAIT
+	}
 
-# }
+}
 
 # defined_text = {
 # 	name = GetLeaderTrait
-	
+# 	text = {
+# 		trigger = {
+# 			has_idea = JAP_great_council_of_state_idea
+# 		}
+# 		localization_key = DAIJO_DAIJIN_TRAIT
+# 	}
 # }
 
 defined_text = {
 	name = GetHOGTrait
-	# text = {
-	# 	trigger = {
-	# 		has_idea = NFA_Camille_Chautemps_hog_sli
-	# 	}
-	# 	localization_key = NFA_Sublime_Radical_TRAITS
-	# }
+	text = {
+		trigger = {
+			has_idea = JAP_great_council_of_state_idea
+		}
+		localization_key = DAIJO_DAIJIN_TRAIT
+	}
 	# text = {
 	# 	trigger = {
 	# 		has_idea = NFA_Louis_Marin_hog_sco
@@ -296,9 +301,21 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetLeaderDescription
-}
+	name = GetHOGTrait
 
+	text = { #Not by Minister Ideas
+		trigger = {
+			AND = {
+				or = {
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+				}
+				has_idea = JAP_great_council_of_state_idea
+			}
+		}
+		localization_key = DAIJO_DAIJIN_TRAIT
+	}
+}
 defined_text = {
 	name = GetPrimeMinister
 	text = {

@@ -1,4 +1,16 @@
 ideas = {
+	hidden_ideas = {
+		JAP_great_council_of_state_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_great_council_of_state_idea"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				political_power_gain = 0.07
+			}
+		}
+	}
 	country = {	
 		JAP_shinjidai_idea_0 = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_shinjidai_idea_0"}
