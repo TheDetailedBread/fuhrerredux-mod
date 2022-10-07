@@ -1649,6 +1649,9 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+		}
 	}
 
 	# Establish the Belarusian Air Force
@@ -1662,6 +1665,9 @@ focus_tree = {
 		relative_position_id = BLR_formalize_the_belarusian_armed_forces
 		completion_reward = {
 			air_experience = 25
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
 		}
 	}
 
@@ -1682,6 +1688,10 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Bomber Acquisition
@@ -1700,6 +1710,10 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -1720,6 +1734,10 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Pilot Training
@@ -1734,6 +1752,9 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 15000
 			add_ideas = BLR_pilot_training_idea
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
 		}
 	}
 
@@ -1760,6 +1781,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
 		}
 	}
 
@@ -1792,6 +1816,9 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
 	}
 
 	# Rocketry Technology
@@ -1811,6 +1838,9 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Status of the Home Guard
@@ -1825,6 +1855,9 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = belarus.15 days = 1 }
 		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 	}
 
 	# The High Command
@@ -1838,6 +1871,9 @@ focus_tree = {
 		relative_position_id = BLR_status_of_the_home_guard
 		completion_reward = {
 			add_ideas = BLR_general_staff
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 
@@ -1857,6 +1893,10 @@ focus_tree = {
         uses = 1
       }
 		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Increase Conscription
@@ -1871,6 +1911,9 @@ focus_tree = {
 		completion_reward = {
 			increase_conscription = yes
 		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
 	}
 
 	# Fortify Defensive Positions
@@ -1884,6 +1927,9 @@ focus_tree = {
 		relative_position_id = BLR_increase_conscription
 		completion_reward = {
 			custom_effect_tooltip = BLR_fortify_defensive_positions_tt
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 
@@ -1904,6 +1950,9 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Equipment Production
@@ -1917,6 +1966,9 @@ focus_tree = {
 		relative_position_id = BLR_support_companies
 		completion_reward = {
 			add_ideas = BLR_streamlined_production
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
 		}
 	}
 
@@ -1952,6 +2004,9 @@ focus_tree = {
         }
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Equipment Standardization
@@ -1970,6 +2025,9 @@ focus_tree = {
 				uses = 2
 				category = infantry_weapons
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -1990,6 +2048,9 @@ focus_tree = {
 				category = artillery
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Cavalry Motorization
@@ -2008,6 +2069,9 @@ focus_tree = {
 				uses = 2
 				category = motorized_equipment
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -2028,6 +2092,9 @@ focus_tree = {
 				category = armor
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Experimental Tank Corps
@@ -2045,6 +2112,9 @@ focus_tree = {
 				load_oob = BLR_armor
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+		}
 	}
 
 	# Automobile Repair Facilities
@@ -2058,6 +2128,10 @@ focus_tree = {
 		relative_position_id = BLR_cavalry_motorization
 		completion_reward = {
 			add_ideas = BLR_repair_facilities
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_EQUIPMENT
 		}
 	}
 
@@ -2075,6 +2149,9 @@ focus_tree = {
 		relative_position_id = BLR_fortify_defensive_positions
 		completion_reward = {
 			add_ideas = BLR_defensive_maneuvers
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 }
