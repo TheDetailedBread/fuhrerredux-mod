@@ -471,3 +471,41 @@ country_event = { # Status of the Home Guard
 		increase_ruling_party_popularity_by_10 = yes
 	}
 }
+
+country_event = { # The Belarusian Home Guard
+	id = belarus.15
+	title = belarus.15.t
+	desc = {
+		text = belarus.15.d
+		trigger = {
+			NOT = { has_government = valkist }
+		}
+	}
+	desc = {
+		text = belarus.15.d.1
+		trigger = {
+			has_government = valkist
+		}
+	}
+	picture = GFX_report_event_BLR_officers
+	is_triggered_only = yes
+
+	option = { # Formalize them as the army
+		name = belarus.15.a
+		army_experience = 15
+	}
+	option = { # Maintain them as a reservist force
+		name = belarus.15.b
+		add_manpower = 15000
+	}
+	option = { # Disband them!
+		name = belarus.15.c
+		trigger = { 
+			has_government = valkist
+		}
+
+		increase_ruling_party_popularity_by_10 = yes
+		add_political_power = 100
+		add_stability = 0.15
+	}
+}

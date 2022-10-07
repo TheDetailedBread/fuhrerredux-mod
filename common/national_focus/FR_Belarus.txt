@@ -36,6 +36,9 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BLR_half_mast_tt
 		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+		}
 	}
 
 	# Remember His Legacy
@@ -65,6 +68,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = BLR_home_guard_branch_tt
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
 		}
 	}
 
@@ -96,6 +102,9 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BLR_nat_soc_branch_tt
 		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+		}
 	}
 
 	# Ensure Unit Loyalty
@@ -112,6 +121,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_command_power = 100
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
@@ -130,6 +143,10 @@ focus_tree = {
 			add_political_power = 25
 			custom_effect_tooltip = BLR_increase_home_guard_tt
 			BLR_increase_home_guard = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
@@ -152,6 +169,10 @@ focus_tree = {
 				ideology = paternal_autocrat
 				popularity = 0.05
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_STABILITY
 		}
 	}
 
@@ -178,6 +199,10 @@ focus_tree = {
 				producer = ITA
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_EQUIPMENT
+		}
 	}
 
 	# Entente Economic Advisors
@@ -193,6 +218,10 @@ focus_tree = {
 		relative_position_id = BLR_meet_with_the_moderates
 		completion_reward = {
 			add_ideas = BLR_economic_advisors
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_PRODUCTION
 		}
 	}
 
@@ -210,6 +239,10 @@ focus_tree = {
 				remove_idea = BLR_economic_advisors
 				add_idea = BLR_entente_economic_alignment
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_PRODUCTION
 		}
 	}
 
@@ -229,6 +262,10 @@ focus_tree = {
 				ideology = paternal_autocrat
 				popularity = 0.05
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
@@ -255,6 +292,10 @@ focus_tree = {
 				producer = GER
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_EQUIPMENT
+		}
 	}
 
 	# Invite German Industrialists
@@ -272,6 +313,10 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 
@@ -291,6 +336,10 @@ focus_tree = {
 			BLR_increase_home_guard = yes
 			add_stability = -0.05
 		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_STABILITY
+		}
 	}
 
 	# Pass Populist Policies
@@ -307,6 +356,9 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 50
+		}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
 		}
 	}
 
@@ -351,6 +403,9 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+		}
 	}
 
 	# Consolidate State Assets
@@ -381,6 +436,10 @@ focus_tree = {
         }
       }
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_PRODUCTION
+		}
 	}
 
 	# Study the Home Guard
@@ -400,6 +459,10 @@ focus_tree = {
 				ideology = valkist
 				popularity = 0.05
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POWER_STRUGGLE
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
@@ -434,6 +497,9 @@ focus_tree = {
 				uses = 2
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Start Land Reform
@@ -448,6 +514,9 @@ focus_tree = {
 		completion_reward = {
 			BLR_improve_economy = yes
 			add_political_power = 100
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 
@@ -473,6 +542,9 @@ focus_tree = {
 			206 = { add_extra_state_shared_building_slots = 2 }
 			207 = { add_extra_state_shared_building_slots = 1 }
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Seize Large Estates
@@ -494,6 +566,9 @@ focus_tree = {
 			206 = { add_extra_state_shared_building_slots = 2 }
 			207 = { add_extra_state_shared_building_slots = 1 }
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Resolve Land Disputes
@@ -510,6 +585,9 @@ focus_tree = {
 		relative_position_id = BLR_concessions_to_the_land_owners
 		completion_reward = {
 			add_stability = 0.1
+		}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
 		}
 	}
 
@@ -542,6 +620,9 @@ focus_tree = {
         }
       }
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# The Maladziecna Machine Tool Plant
@@ -573,6 +654,9 @@ focus_tree = {
         }
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# The Mahilou Metallurgical Plant
@@ -594,6 +678,9 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESOURCES
+		}
 	}
 
 	# Zodzina Power Station
@@ -612,6 +699,9 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Expand the Belarusian Railways
@@ -626,6 +716,9 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_designer
       show_ideas_tooltip = BLR_belarusian_railway
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 
@@ -661,6 +754,10 @@ focus_tree = {
           }
         }
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESOURCES
 		}
 	}
 
@@ -709,6 +806,10 @@ focus_tree = {
         }
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_PRODUCTION
+		}
 	}
 
 	# Haradzieja Sugar Plant
@@ -739,6 +840,9 @@ focus_tree = {
         }
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Open New Universities
@@ -754,6 +858,9 @@ focus_tree = {
 			add_research_slot = 1
 			custom_effect_tooltip = available_designer
       show_ideas_tooltip = BLR_belarus_state_university
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -791,6 +898,10 @@ focus_tree = {
 		completion_reward = {
 			BLR_recover_from_black_wednesday = yes
 		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# New Industrial Tools
@@ -812,6 +923,10 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 
@@ -861,6 +976,9 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Subsidize the Agricultural Sector
@@ -874,6 +992,10 @@ focus_tree = {
 		relative_position_id = BLR_black_wednesday_woes
 		completion_reward = {
 			BLR_recover_from_black_wednesday = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 
@@ -905,6 +1027,11 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_STABILITY
+		}
 	}
 
 	# Modernize Agricultural Tools
@@ -925,6 +1052,9 @@ focus_tree = {
 				uses = 2
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Increase Food Exports
@@ -940,6 +1070,10 @@ focus_tree = {
 		completion_reward = {
 			BLR_recover_from_black_wednesday = yes
 		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# End of the Economic Catastrophe
@@ -954,6 +1088,10 @@ focus_tree = {
 		relative_position_id = BLR_invest_in_hydroelectricity
 		completion_reward = {
 			add_ideas = BLR_thriving_economy
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 
@@ -981,6 +1119,9 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+		}
 	}
 
 	# Establish the Belarusian Air Force
@@ -994,6 +1135,9 @@ focus_tree = {
 		relative_position_id = BLR_formalize_the_belarusian_armed_forces
 		completion_reward = {
 			air_experience = 25
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
 		}
 	}
 
@@ -1014,6 +1158,10 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Bomber Acquisition
@@ -1032,6 +1180,10 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -1052,6 +1204,10 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Pilot Training
@@ -1066,6 +1222,9 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 15000
 			add_ideas = BLR_pilot_training_idea
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
 		}
 	}
 
@@ -1092,6 +1251,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
 		}
 	}
 
@@ -1124,6 +1286,9 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+		}
 	}
 
 	# Rocketry Technology
@@ -1143,6 +1308,9 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Status of the Home Guard
@@ -1157,6 +1325,9 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = belarus.15 days = 1 }
 		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 	}
 
 	# The High Command
@@ -1170,6 +1341,9 @@ focus_tree = {
 		relative_position_id = BLR_status_of_the_home_guard
 		completion_reward = {
 			add_ideas = BLR_general_staff
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 
@@ -1189,6 +1363,10 @@ focus_tree = {
         uses = 1
       }
 		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Increase Conscription
@@ -1203,6 +1381,9 @@ focus_tree = {
 		completion_reward = {
 			increase_conscription = yes
 		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
 	}
 
 	# Fortify Defensive Positions
@@ -1216,6 +1397,9 @@ focus_tree = {
 		relative_position_id = BLR_increase_conscription
 		completion_reward = {
 			custom_effect_tooltip = BLR_fortify_defensive_positions_tt
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 
@@ -1236,6 +1420,9 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Equipment Production
@@ -1249,6 +1436,9 @@ focus_tree = {
 		relative_position_id = BLR_support_companies
 		completion_reward = {
 			add_ideas = BLR_streamlined_production
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
 		}
 	}
 
@@ -1284,6 +1474,9 @@ focus_tree = {
         }
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 	}
 
 	# Equipment Standardization
@@ -1302,6 +1495,9 @@ focus_tree = {
 				uses = 2
 				category = infantry_weapons
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -1322,6 +1518,9 @@ focus_tree = {
 				category = artillery
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Cavalry Motorization
@@ -1340,6 +1539,9 @@ focus_tree = {
 				uses = 2
 				category = motorized_equipment
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
@@ -1360,6 +1562,9 @@ focus_tree = {
 				category = armor
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 
 	# Experimental Tank Corps
@@ -1377,6 +1582,9 @@ focus_tree = {
 				load_oob = BLR_armor
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+		}
 	}
 
 	# Automobile Repair Facilities
@@ -1390,6 +1598,10 @@ focus_tree = {
 		relative_position_id = BLR_cavalry_motorization
 		completion_reward = {
 			add_ideas = BLR_repair_facilities
+		}
+		search_filters = {
+			FOCUS_FILTER_PRODUCTION
+			FOCUS_FILTER_EQUIPMENT
 		}
 	}
 
@@ -1407,6 +1619,9 @@ focus_tree = {
 		relative_position_id = BLR_fortify_defensive_positions
 		completion_reward = {
 			add_ideas = BLR_defensive_maneuvers
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 }
