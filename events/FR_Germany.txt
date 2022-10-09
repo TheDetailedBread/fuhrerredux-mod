@@ -3458,209 +3458,6 @@ country_event = { # Hungary is on it's own - Germany
 	}
 }
 
-country_event = { # fate of Hungary
-	id = ger.1098
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.1098"}
-	title = "The fate of occupied Hungary"
-	desc = ger.1098.d
-	picture = GFX_report_event_communists_cheer
-
-	trigger = {
-		original_tag = GER
-		GER = {
-			owns_state = 43
-			NOT = {
-				has_war_with = HUN
-			}
-		}
-	}
-
-	fire_only_once = yes
-
-	option = {
-	name = "We will puppet all of greater Hungary"
-		HUN = {
-		load_focus_tree = generic_focus
-		set_cosmetic_tag = GER_HUN_rk
-		copy_government_idea_of_ROOT = yes
-			set_politics = {
-				ruling_party = valkist elections_allowed = no
-			}
-				create_country_leader = {
-			name = "Ferenc Szalasi"
-			desc = "POLITICS_FERENC_SZALASI_DESC"
-			picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.png"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = { }
-			}
-		}
-
-		if = {
-			limit = {
-				AUS = {
-					owns_state = 4
-				}
-			}
-			AUS = {
-				transfer_state = 767
-				transfer_state = 772
-			}
-		}
-
-		if = {
-			limit = {
-				GER = {
-					owns_state = 4
-				}
-			}
-			GER = {
-				transfer_state = 767
-				transfer_state = 772
-			}
-		}
-	}
-
-	option = {
-	name = "We shall divide Hungary"
-		HUN = {
-		load_focus_tree = generic_focus
-		set_cosmetic_tag = GER_HUN_rk
-		copy_government_idea_of_ROOT = yes
-			set_politics = {
-				ruling_party = valkist elections_allowed = no
-			}
-				create_country_leader = {
-			name = "Ferenc Szalasi"
-			desc = "POLITICS_FERENC_SZALASI_DESC"
-			picture = "gfx/leaders/HUN/Portrait_HUN_Ferenc_Szalasi.png"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = { }
-			}
-		}
-
-		if = {
-			limit = {
-				TRA = {
-					owns_state = 76
-				}
-			}
-			TRA = {
-				transfer_state = 762
-				transfer_state = 83
-			}
-		}
-
-		if = {
-			limit = {
-				ROM = {
-					owns_state = 76
-				}
-			}
-			ROM = {
-				transfer_state = 762
-				transfer_state = 83
-			}
-		}
-
-		if = {
-			limit = {
-				CZE ={
-					owns_state = 797
-				}
-			}
-			CZE ={
-				transfer_state = 664
-			}
-		}
-
-		if = {
-			limit = {
-				SER = {
-					owns_state = 750
-				}
-			}
-			SER = {
-				transfer_state = 45
-			}
-		}
-
-		if = {
-			limit = {
-				CRO = {
-					owns_state = 788
-				}
-			}
-			CRO = {
-				transfer_state = 109
-			}
-		}
-
-		if = {
-			limit = {
-				SER = {
-					owns_state = 788
-				}
-			}
-			SER = {
-				transfer_state = 109
-			}
-		}
-
-		if = {
-			limit = {
-				AUS = {
-					owns_state = 4
-				}
-			}
-			AUS = {
-				transfer_state = 767
-				transfer_state = 772
-			}
-		}
-
-		if = {
-			limit = {
-				GER = {
-					owns_state = 4
-				}
-			}
-			GER = {
-				transfer_state = 767
-				transfer_state = 772
-			}
-		}
-	}
-
-	option = {
-	trigger = {
-		GER = {
-			is_ai = no
-		}
-	}
-	name = "Germany shall conquer all"
-		add_political_power = -200
-	}
-}
-
-country_event = { # fate of Hungary
-	id = ger.1099
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.1099"}
-	title = "Germany has offers us a piece of Hungarian territory"
-	desc = ger.1099.d
-	picture = GFX_report_event_communists_cheer
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-	name = "We must accept"
-		add_political_power = 50
-	}
-}
-
 country_event = { # Military exercise with the British
 	id = ger.1100
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.1100"}
@@ -6418,7 +6215,7 @@ country_event = { # select economic minister
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ger.148"}
 	title = ger.148.t
 	desc = ger.148.d
-	picture = GFX_report_event_communists_cheer
+	picture = GFX_report_event_GER_dressler_and_hitler
 
 	is_triggered_only = yes
 
@@ -6431,7 +6228,6 @@ country_event = { # select economic minister
 	name = ger.148.a
 		add_political_power = 25
 		set_country_flag = GER_hitlers_right
-		set_country_flag = Otto_Strasser_eco_fired
 	}
 
 	option = { # Choose Strasser
@@ -6439,10 +6235,11 @@ country_event = { # select economic minister
 		base = 40
 	}
 	name = ger.148.b
-		remove_ideas = GER_Adolf_Hitler_eco_val
-		add_ideas = GER_Otto_Strasser_eco_val
+		swap_ideas = {
+			remove_idea = GER_Adolf_Hitler_eco_val
+			add_idea = GER_Otto_Strasser_eco_val
+		}
 		set_country_flag = GER_strasser_right
-		set_country_flag = Adolf_Hitler_eco_fired
 	}
 }
 
