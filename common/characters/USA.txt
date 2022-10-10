@@ -583,7 +583,7 @@ characters = {
 			slot = chief_of_staff
 			idea_token = USA_Douglas_MacArthur_cos_sco
 			traits = {
-				cos_school_of_fire_support
+				cos_school_of_psychology
 			}
 		}
 	}
@@ -797,6 +797,23 @@ characters = {
 			civilian = {
 				small = "gfx/interface/ministers/USA/USA_George_Catlett_Marshall_Jr.png"
 			}
+			army = {
+				large = "gfx/leaders/USA/Portrait_USA_George_Catlett_Marshall_Jr.png"
+				small = "gfx/interface/ministers/USA/USA_George_Catlett_Marshall_Jr.png"
+			}
+		}
+		field_marshal = {
+			traits = {
+				career_officer
+				politically_connected
+				offensive_doctrine
+				organizer
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
 		}
 		advisor = {
 			cost = 150
@@ -810,6 +827,14 @@ characters = {
 			traits = {
 				social_democrat
 				for_foreign_sympathizer
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = chief_of_staff
+			idea_token = USA_George_Catlett_Marshall_Jr_cos
+			traits = {
+				cos_school_of_mass_combat
 			}
 		}
 	}
