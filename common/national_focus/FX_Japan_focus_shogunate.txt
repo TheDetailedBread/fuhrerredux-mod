@@ -376,6 +376,56 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_report_to_the_emperor"
 		country_event = jap_shogun.7
+		mark_focus_tree_layout_dirty = yes 
+	}
+}
+#######Pre Iesato Death Tree
+shared_focus = {
+	id = JAP_iesato_government
+	icon = GFX_ 
+	relative_position_id = JAP_alliance_triumphant
+	x = 13
+	y = 0
+	allow_branch = {
+		has_completed_focus = JAP_long_live_the_shogunate
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = "The Shogunate Has Decided The Fate of Nation"
+			has_completed_focus = JAP_long_live_the_shogunate
+		}
+	}
+	cost = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_iesato_government"
+	}
+}
+shared_focus = {
+	id = JAP_reformist_secures 
+	icon = GFX_ 
+	relative_position_id = JAP_iesato_government
+	x = 4
+	y = 1
+	available = {
+		has_idea = JAP_shinjidai_3 
+	}
+	cost = 6
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = JAP_ancienism_secures 
+	icon = GFX_ 
+	relative_position_id = JAP_iesato_government
+	x = -4
+	y = 1
+	available = {
+		has_idea = JAP_kyujidai_3 
+	}
+	cost = 6
+	completion_reward = {
+		
 	}
 }
 #######Post Iesato Death Tree
@@ -386,14 +436,11 @@ shared_focus = {
 	x = 3
 	y = 9
 	allow_branch = {
-		custom_trigger_tooltip = {
-			tooltip = "Shogun Iesato passed away and no pretender appointed"
-			has_country_flag = JAP_Iesato_Death
-		}
+		has_country_flag = JAP_Iesato_Death
 	}
 	available = {
 		custom_trigger_tooltip = {
-			tooltip = "Shogun Iesato passed away and no pretender appointed"
+			tooltip = "Shogun Iesato has passed away and no pretender appointed"
 			has_country_flag = JAP_Iesato_Death
 		}
 	}
