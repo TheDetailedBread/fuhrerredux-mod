@@ -2016,7 +2016,10 @@ focus_tree = {
     available = {
       OR = {
         has_country_flag = PHI_has_1937_elections
-        has_country_flag = PHI_junta_in_control
+        custom_trigger_tooltip = {
+          tooltip = PHI_junta_in_control_tt
+          has_country_flag = PHI_junta_in_control
+        }
       }
       threat > 0.2
     }

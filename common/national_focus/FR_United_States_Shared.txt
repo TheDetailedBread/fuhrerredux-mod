@@ -1067,6 +1067,14 @@ shared_focus = {
 	available = {
 		USA_1936_elections_happened = yes
 	}
+	bypass = {
+		hidden_trigger = {
+			has_country_flag = USA_had_1936_elections
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = USA_elections_of_1936_tt
+	}
 }
 
 # President Long
@@ -1079,13 +1087,20 @@ shared_focus = {
 	ai_will_do = { factor = 2000 }
 	available = {
 		custom_trigger_tooltip = {
-			tooltip = USA_president_long_tt
-			has_country_flag = USA_had_1936_elections
-			has_government = social_democrat
+			tooltip = USA_president_long_victory_tt
+			has_country_flag = USA_1936_huey_long
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			has_country_flag = USA_1936_huey_long
 		}
 	}
 	prerequisite = { focus = USA_elections_of_1936 }
 	relative_position_id = USA_elections_of_1936
+	completion_reward = {
+		custom_effect_tooltip = USA_president_long_tt
+	}
 }
 
 # President Roosevelt
@@ -1098,13 +1113,20 @@ shared_focus = {
 	ai_will_do = { factor = 2000 }
 	available = {
 		custom_trigger_tooltip = {
-			tooltip = USA_president_roosevelt_tt
-			has_country_flag = USA_had_1936_elections
-			has_government = social_liberal
+			tooltip = USA_president_roosevelt_victory_tt
+			has_country_flag = USA_1936_quentin_roosevelt
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			has_country_flag = USA_1936_quentin_roosevelt
 		}
 	}
 	prerequisite = { focus = USA_elections_of_1936 }
 	relative_position_id = USA_elections_of_1936
+	completion_reward = {
+		custom_effect_tooltip = USA_president_roosevelt_tt
+	}
 }
 
 # President Landon
@@ -1117,13 +1139,20 @@ shared_focus = {
 	ai_will_do = { factor = 2000 }
 	available = {
 		custom_trigger_tooltip = {
-			tooltip = USA_president_landon_tt
-			has_country_flag = USA_had_1936_elections
-			has_government = market_liberal
+			tooltip = USA_president_landon_victory_tt
+			has_country_flag = USA_1936_alf_landon
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			has_country_flag = USA_1936_alf_landon
 		}
 	}
 	prerequisite = { focus = USA_elections_of_1936 }
 	relative_position_id = USA_elections_of_1936
+	completion_reward = {
+		custom_effect_tooltip = USA_president_landon_tt
+	}
 }
 
 # President Garner
@@ -1136,13 +1165,20 @@ shared_focus = {
 	ai_will_do = { factor = 2000 }
 	available = {
 		custom_trigger_tooltip = {
-			tooltip = USA_president_garner_tt
-			has_country_flag = USA_had_1936_elections
-			has_government = social_conservative
+			tooltip = USA_president_garner_victory_tt
+			has_country_flag = USA_1936_john_nance_garner
+		}
+	}
+	bypass = {
+		hidden_trigger = {
+			has_country_flag = USA_1936_john_nance_garner
 		}
 	}
 	prerequisite = { focus = USA_elections_of_1936 }
 	relative_position_id = USA_elections_of_1936
+	completion_reward = {
+		custom_effect_tooltip = USA_president_garner_tt
+	}
 }
 
 # Start Welfare for the Poor
