@@ -15,7 +15,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 5 #5 is default value
+			add = 25 #5 is default value
 			tag = JAP
 		}
 	}
@@ -384,11 +384,8 @@ shared_focus = {
 	id = JAP_iesato_government
 	icon = GFX_ 
 	relative_position_id = JAP_alliance_triumphant
-	x = 13
+	x = 14
 	y = 0
-	allow_branch = {
-		has_completed_focus = JAP_long_live_the_shogunate
-	}
 	available = {
 		custom_trigger_tooltip = {
 			tooltip = "The Shogunate Has Decided The Fate of Nation"
@@ -401,13 +398,16 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_mikawahan_secures 
+	id = JAP_mikawahan_faction
 	icon = GFX_ 
 	relative_position_id = JAP_iesato_government
 	x = 4
 	y = 1
 	available = {
-		has_idea = JAP_shinjidai_3 
+		has_idea = JAP_shinjidai_idea_3 
+	}
+	prerequisite = {
+		focus = JAP_iesato_government
 	}
 	cost = 6
 	completion_reward = {
@@ -415,18 +415,336 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_oniwahan_secures 
+	id = JAP_left_learning_doctrine
+	icon = GFX_ 
+	relative_position_id = JAP_mikawahan_faction
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_mikawahan_faction
+	}
+	cost = 6
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_rural_urbanization
+	icon = GFX_ 
+	relative_position_id = JAP_left_learning_doctrine
+	x = 0
+	y = 1 
+	prerequisite = {
+		focus = JAP_left_learning_doctrine
+	}
+	cost = 6
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_municipality_promotion_act
+	icon = GFX_ 
+	relative_position_id = JAP_left_learning_doctrine 
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_rural_urbanization
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_local_election_act
+	icon = GFX_ 
+	relative_position_id = JAP_left_learning_doctrine
+	x = 0
+	y = 3 
+	prerequisite = {
+		focus = JAP_municipality_promotion_act
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_prusso_americanism_abolishment
+	icon = GFX_ 
+	relative_position_id = JAP_mikawahan_faction
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_mikawahan_faction
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_peoples_power_strengthen
+	icon = GFX_ 
+	relative_position_id = JAP_prusso_americanism_abolishment
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_prusso_americanism_abolishment
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_deconfuciusization
+	icon = GFX_ 
+	relative_position_id = JAP_prusso_americanism_abolishment
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_peoples_power_strengthen
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_seigaku_education_reform
+	icon = GFX_ 
+	relative_position_id = JAP_prusso_americanism_abolishment
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = JAP_deconfuciusization
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_electoral_reform
+	icon = GFX_ 
+	relative_position_id = JAP_mikawahan_faction
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_left_learning_doctrine
+	}
+	prerequisite = {
+		focus = JAP_prusso_americanism_abolishment
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_universal_suffrage_act 
+	icon = GFX_ 
+	relative_position_id = JAP_electoral_reform 
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_electoral_reform
+	}
+	prerequisite = {
+		focus = JAP_peoples_power_strengthen
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_to_the_new_golden_age
+	icon = GFX_ 
+	relative_position_id = JAP_electoral_reform 
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = JAP_universal_suffrage_act
+	}
+	prerequisite = {
+		focus = JAP_seigaku_education_reform
+	}
+	prerequisite = {
+		focus = JAP_local_election_act
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_oniwahan_faction 
 	icon = GFX_ 
 	relative_position_id = JAP_iesato_government
 	x = -4
 	y = 1
 	available = {
-		has_idea = JAP_kyujidai_3 
+		has_idea = JAP_kyujidai_idea_3 
+	}
+	prerequisite = {
+		focus = JAP_iesato_government
 	}
 	cost = 6
 	completion_reward = {
 		
 	}
+}
+shared_focus = {
+	id = JAP_believe_the_kingsmaker
+	icon = GFX_ 
+	relative_position_id = JAP_oniwahan_faction
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_oniwahan_faction
+	}
+	cost = 6
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_reinstall_dismissals
+	icon = GFX_ 
+	relative_position_id = JAP_believe_the_kingsmaker
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_believe_the_kingsmaker
+	}
+	cost = 6
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_military_disintegration
+	icon = GFX_ 
+	relative_position_id = JAP_believe_the_kingsmaker
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_reinstall_dismissals
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_uphold_prefecturare_imperium
+	icon = GFX_ 
+	relative_position_id = JAP_believe_the_kingsmaker 
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = JAP_military_disintegration
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_and_constitution
+	icon = GFX_ 
+	relative_position_id = JAP_oniwahan_faction
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_oniwahan_faction
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_kuniyuki_blueprint
+	icon = GFX_ 
+	relative_position_id = JAP_and_constitution
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_and_constitution
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_bureaucrat_reform
+	icon = GFX_ 
+	relative_position_id = JAP_and_constitution
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_kuniyuki_blueprint
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_fudai_toza_restoration
+	icon = GFX_ 
+	relative_position_id = JAP_and_constitution
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = JAP_bureaucrat_reform
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_progressive_advancement_backsliding
+	icon = GFX_ 
+	relative_position_id = JAP_oniwahan_faction
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_oniwahan_faction
+	}
+	prerequisite = {
+		focus = JAP_believe_the_kingsmaker
+	}
+	prerequisite = {
+		focus = JAP_and_constitution
+	}
+	cost = 6 
+}
+shared_focus = {
+	id = JAP_suffrage_of_chosen_one
+	icon = GFX_ 
+	relative_position_id = JAP_progressive_advancement_backsliding
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_progressive_advancement_backsliding
+	}
+	cost = 6 
+}
+shared_focus = {
+	id = JAP_to_our_nostalgic_period
+	icon = GFX_ 
+	relative_position_id = JAP_suffrage_of_chosen_one
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_suffrage_of_chosen_one
+	}
+	prerequisite = {
+		focus = JAP_fudai_toza_restoration
+	}
+	prerequisite = {
+		focus = JAP_uphold_prefecturare_imperium
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_imperial_power_question
+	icon = GFX_ 
+	relative_position_id = JAP_iesato_government 
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = JAP_prusso_americanism_abolishment
+		focus = JAP_and_constitution
+	}
+	prerequisite = {
+		focus = JAP_iesato_government
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_learning_from_taisho_era
+	icon = GFX_ 
+	relative_position_id = JAP_imperial_power_question
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_imperial_power_question
+	}
+	cost = 6
+}
+shared_focus = {
+	id = JAP_kokutai_minshu_unity
+	icon = GFX_ 
+	relative_position_id = JAP_imperial_power_question
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = JAP_learning_from_taisho_era
+	}
+	cost = 6
 }
 #######Post Iesato Death Tree
 shared_focus = {
@@ -1333,7 +1651,7 @@ shared_focus = {
 	id = JAP_northern_court
 	icon = GFX_ 
 	x = 30
-	y = 0 
+	y = 10
 	available = {
 		custom_trigger_tooltip = {
 			tooltip = "The Claimant has intervened the Shogunal conference"
