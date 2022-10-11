@@ -1511,6 +1511,9 @@ country_event = { # Fate of Netherlands
 
   option = { # Puppet a Batavian Republic
     name = annex.122.a
+    trigger = {
+      NOT = { is_in_faction_with = KNE }
+    }
     ai_chance = {
       base = 100
     }
@@ -1529,6 +1532,7 @@ country_event = { # Fate of Netherlands
       }
       HOL = {
         restore_previous_government_type = yes
+        HOL_reset_path = yes
         set_country_flag = HOL_junta_path
         set_country_flag = political_branch_ready
         mark_focus_tree_layout_dirty = yes
@@ -1583,6 +1587,39 @@ country_event = { # Fate of Netherlands
       }
       set_temp_variable = { tag_to_release = KNE }
       release_targeted_tag = yes
+    }
+  }
+
+  option = { # Transfer to the Suriname Faction
+    name = annex.122.c
+    trigger = {
+      country_exists = KNE
+      ROOT = { is_in_faction_with = KNE }
+    }
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 200
+        is_ally_with = KNE
+      }
+    }
+
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = HOL }
+      remove_all_cores_and_claims_of_tags = yes
+      KNE = {
+        add_state_core = 7
+        add_state_core = 35
+        add_state_core = 36
+        add_state_core = 754
+        add_state_core = 938
+        
+        transfer_state = 7
+        transfer_state = 35
+        transfer_state = 36
+        transfer_state = 754
+        transfer_state = 938
+      }
     }
   }
 
