@@ -3,13 +3,6 @@ capital = 107
 
 oob = "SER"
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SER_naval_mtg"
-	else = {
-		set_naval_oob = "SER_naval_legacy"
-	}
-}
 
 set_research_slots = 3
 
@@ -17,8 +10,6 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
-	early_fighter = 1
-	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	interwar_antitank = 1
@@ -26,30 +17,38 @@ set_technology = {
 	fuel_silos = 1
 	basic_train = 1
 }
+
 if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-  }
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
 }
+
 if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
   }
-}
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_submarine = 1
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "SER_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -62,6 +61,14 @@ if = {
 		basic_torpedo = 1
 		basic_depth_charges = 1
 		coastal_defense_ships = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_submarine = 1
+		}
+		set_naval_oob = "SER_naval_legacy"
 	}
 }
 
