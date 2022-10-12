@@ -1,13 +1,6 @@
 capital = 563
 
 oob = "RUS"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "RUS_naval_mtg"
-	else = {
-		set_naval_oob = "RUS_naval_legacy"
-	}
-}
 
 add_ideas = {
 	party_pop_0_30
@@ -23,9 +16,7 @@ add_ideas = {
 set_technology = {
 	
 	fuel_silos = 1
-	#### Tanks ####
-	
-	
+
 	#### 00_default_template ####
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -63,10 +54,7 @@ if = {
   limit = {
     NOT = { has_dlc = "No Step Back" }
   }
-  set_technology = {
-    gwtank = 1
-    basic_light_tank = 1
-  }
+  
 }
 if = {
   limit = { has_dlc = "No Step Back" }
@@ -74,23 +62,17 @@ if = {
     gwtank_chassis = 1
     basic_light_tank_chassis = 1
   }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
 }
 
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
-	}
-}
-if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "RUS_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -106,6 +88,19 @@ if = {
 		basic_depth_charges = 1
 		basic_secondary_battery = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_naval_oob = "RUS_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
 	}
 }
 

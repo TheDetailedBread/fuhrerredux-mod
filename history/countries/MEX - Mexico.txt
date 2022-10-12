@@ -18,7 +18,7 @@ if = {
 		aa_lmg = 1
 		engines_1 = 1
 		early_bombs = 1
-		aircraft_construction
+		aircraft_construction = 1
 	}
 	else = {
 		set_technology = {
@@ -28,10 +28,6 @@ if = {
 	}
 }
 
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	
-}
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_naval_oob = "MEX_1936_naval_mtg"

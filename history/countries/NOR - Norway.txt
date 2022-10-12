@@ -10,19 +10,19 @@ add_manpower = 45000
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "NOR_naval_mtg"
-		set_technology = {
-			basic_naval_mines = 1
-			submarine_mine_laying = 1
-			early_ship_hull_light = 1
-			basic_ship_hull_light = 1
-			early_ship_hull_submarine = 1
-			early_ship_hull_cruiser = 1
-			basic_battery = 1
-			basic_secondary_battery = 1
-			basic_torpedo = 1
-			coastal_defense_ships = 1
-		}
+	set_naval_oob = "NOR_naval_mtg"
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
 	else = {
 		set_naval_oob = "NOR_naval_legacy"
 		set_technology = {
