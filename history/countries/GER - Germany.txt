@@ -30,15 +30,16 @@ if = {
 	set_air_oob = "GER_air_bba"
 	set_technology = {
 		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
 		aa_lmg = 1
 		aa_cannon_1 = 1
 		engines_1 = 1
 		engines_2 = 1
 		early_bombs = 1
 		aircraft_construction = 1
+		basic_small_airframe = 1
 		basic_medium_airframe  = 1
-		iw_medium_airframe = 1
-		iw_large_airframe = 1
 	}
 	else = {
 		set_air_oob = "GER_air_legacy"
@@ -152,17 +153,158 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 8
-    libertarian_socialist = 1
-    social_democrat = 1
-    social_liberal = 1
-    market_liberal = 6
-    social_conservative = 15
-    authoritarian_democrat = 14
-    paternal_autocrat = 1
-    national_populist = 13
-    valkist = 40
+	vanguardist = 0
+	collectivist = 8
+	libertarian_socialist = 1
+	social_democrat = 1
+	social_liberal = 1
+	market_liberal = 6
+	social_conservative = 15
+	authoritarian_democrat = 14
+	paternal_autocrat = 1
+	national_populist = 13
+	valkist = 40
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 5
+			plane_engine_upgrade = 5
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Do 17"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 1
+			plane_engine_upgrade = 1
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "Do 23"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "He 111"
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = lmg_defense_turret_2x
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Do 17"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
+
+	create_equipment_variant = {
+		name = "He 51" #also covers Ar 68
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Hs 123"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Bf 109 D"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Ju 87"
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = dive_brakes_small
+		}
+	}
+	create_equipment_variant = {
+		name = "Do 22"
+		type = small_plane_naval_bomber_airframe_1
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = floats
+		}
+	}
 }
 
 if = {

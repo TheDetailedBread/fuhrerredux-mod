@@ -117,6 +117,19 @@ country_event = { id = romania.18 days = 80 } # North Railway Station Fire
 country_event = { id = romania.19 days = 280 } # Troops Deployment
 country_event = { id = romania.2 days = 663 } # Coronation of King Michael
 
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "IAR 14" 
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}
+
 ### VARIANTS ###
 # 1936 Start #
 if = {

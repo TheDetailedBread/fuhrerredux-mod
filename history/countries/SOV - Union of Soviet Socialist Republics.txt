@@ -25,7 +25,9 @@ if = {
 	set_technology = {
 		iw_small_airframe = 1
 		iw_medium_airframe = 1
+		iw_large_airframe = 1
 		basic_small_airframe = 1
+		basic_medium_airframe = 1
 		aircraft_construction = 1
 		aa_lmg = 1
 		aa_cannon_1 = 1
@@ -47,10 +49,16 @@ if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
+	  basic_heavy_tank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
   }
 	else = {
 		set_technology = {
 			gwtank = 1
+			basic_heavy_tank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
 		}
 	}
 }
@@ -137,18 +145,76 @@ add_ideas = {
 	workers_republic
 }
 
-create_equipment_variant = {
-	name = "Il-4"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "I-15" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
 	}
-	obsolete = yes
+	create_equipment_variant = {
+		name = "I-16" #
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "DB-3" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "TB-3" #
+		type = large_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_4x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
+	create_equipment_variant = {
+		name = "ANT-40" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
 }
 
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+
+	create_equipment_variant = {
+		name = "Il-4"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 1
+			plane_engine_upgrade = 1
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
+}
 
 ### Ship Variants ###
 
