@@ -1,110 +1,329 @@
 ### Ruling Party Popularity Effects
-### Credit to the Spartakus team, Written by Natspi
-### Modified to accept Fuhrerreich ideologies by fbruchmueller
+### Written by ~mw~
+### Retooled by Alpinia
+#
+# How to use:
+#
+#	set_temp_variable = { ideology_change_var = X } - increases ruling party popularity by X amount
+#	change_ruling_party_popularity = yes
+#
+#	default_party_popularity_PP_gain = yes -- sets the PP gain to the default behaviour (i.e., tied to the ruling party)
+#
+#	set_variable = { political_power_ideology = token:ideology } -- maps PP gain to the ideology in the variable
+#	map_party_popularity_PP_gain_to_ideology = yes
+#
+#	set_temp_variable = { coalition_partner_var = token:ideology } -- adds/removes a coalition partner
+#	add_to_coalition = yes
+#	remove_from_coalition = yes
+#
+#	end_coalition = yes  -- disables any active coalitions
+#
+#	disable_party_popularity_PP_gain = yes -- disables popularity PP gain altogether
+#
 
-SP_NS_coalition_pop_eval = {
-    set_variable = { NS_ruling_party_pop = party_popularity@ruling_party }
-    if = {
-        limit = {
-            NOT = { has_government = vanguardist }
-            has_country_flag = coalition_vanguardist
-        }
-        set_temp_variable = { NS_vanguardist_pop = party_popularity@vanguardist }
-        add_to_variable = { NS_ruling_party_pop = NS_vanguardist_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = collectivist }
-            has_country_flag = coalition_collectivist
-        }
-        set_temp_variable = { NS_collectivist_pop = party_popularity@collectivist }
-        add_to_variable = { NS_ruling_party_pop = NS_collectivist_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = libertarian_socialist }
-            has_country_flag = coalition_libertarian_socialist
-        }
-        set_temp_variable = { NS_libertarian_socialist_pop = party_popularity@libertarian_socialist }
-        add_to_variable = { NS_ruling_party_pop = NS_libertarian_socialist_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = social_democrat }
-            has_country_flag = coalition_social_democrat
-        }
-        set_temp_variable = { NS_social_democrat_pop = party_popularity@social_democrat }
-        add_to_variable = { NS_ruling_party_pop = NS_social_democrat_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = social_liberal }
-            has_country_flag = coalition_social_liberal
-        }
-        set_temp_variable = { NS_social_liberal_pop = party_popularity@social_liberal }
-        add_to_variable = { NS_ruling_party_pop = NS_social_liberal_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = market_liberal }
-            has_country_flag = coalition_market_liberal
-        }
-        set_temp_variable = { NS_market_liberal_pop = party_popularity@market_liberal }
-        add_to_variable = { NS_ruling_party_pop = NS_market_liberal_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = social_conservative }
-            has_country_flag = coalition_social_conservative
-        }
-        set_temp_variable = { NS_social_conservative_pop = party_popularity@social_conservative }
-        add_to_variable = { NS_ruling_party_pop = NS_social_conservative_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = authoritarian_democrat }
-            has_country_flag = coalition_authoritarian_democrat
-        }
-        set_temp_variable = { NS_authoritarian_democrat_pop = party_popularity@authoritarian_democrat }
-        add_to_variable = { NS_ruling_party_pop = NS_authoritarian_democrat_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = paternal_autocrat }
-            has_country_flag = coalition_paternal_autocrat
-        }
-        set_temp_variable = { NS_paternal_autocrat_pop = party_popularity@paternal_autocrat }
-        add_to_variable = { NS_ruling_party_pop = NS_paternal_autocrat_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = national_populist }
-            has_country_flag = coalition_national_populist
-        }
-        set_temp_variable = { NS_national_populist_pop = party_popularity@national_populist }
-        add_to_variable = { NS_ruling_party_pop = NS_national_populist_pop }
-    }
-    if = {
-        limit = {
-            NOT = { has_government = valkist }
-            has_country_flag = coalition_valkist
-        }
-        set_temp_variable = { NS_valkist_pop = party_popularity@valkist }
-        add_to_variable = { NS_ruling_party_pop = NS_valkist_pop }
-    }
-    multiply_variable = { NS_ruling_party_pop = 100 }
+default_party_popularity_PP_gain = {
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			}
+		}
+		clear_variable = political_power_ideology
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+				}
+				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+			}
+			add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+		}
+	}
 }
- 
-SP_NS_clear_coalition_effect = {
-    clr_country_flag = coalition_vanguardist
-    clr_country_flag = coalition_collectivist
-    clr_country_flag = coalition_libertarian_socialist
-    clr_country_flag = coalition_social_democrat
-    clr_country_flag = coalition_social_liberal
-    clr_country_flag = coalition_market_liberal
-    clr_country_flag = coalition_social_conservative
-    clr_country_flag = coalition_authoritarian_democrat
-    clr_country_flag = coalition_paternal_autocrat
-    clr_country_flag = coalition_national_populist
-    clr_country_flag = coalition_valkist
+
+map_party_popularity_PP_gain_to_ideology = {
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+				}
+				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			}
+			add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+		}
+	}
+	set_temp_variable = { coalition_partner_var = political_power_ideology }
+	remove_from_coalition = yes
 }
+
+disable_party_popularity_PP_gain = {
+	if = {
+		limit = {
+			OR = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+			}
+		}
+		clear_variable = political_power_ideology
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+				}
+				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			}
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+				}
+				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+			}
+		}
+	}
+}
+
+add_to_coalition = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = { political_power_ideology = coalition_partner_var }
+				is_in_array = { coalition_partners = coalition_partner_var }
+			}
+		}
+		custom_effect_tooltip = add_to_coalition
+		#set_coalition_government_popularity = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = { political_power_ideology = coalition_partner_var }
+				is_in_array = { coalition_partners = coalition_partner_var }
+				AND = {
+					has_government = var:coalition_partner_var
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+				}
+			}
+		}
+		add_to_array = { coalition_partners = coalition_partner_var }
+		#set_coalition_government_popularity = yes 
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+					}
+				}
+				add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+			}
+		}
+		add_to_variable = { coalition_pp_gain = party_popularity@var:coalition_partner_var }
+	}
+}
+
+remove_from_coalition = {
+	if = {
+		limit = {
+			is_in_array = { coalition_partners = coalition_partner_var }
+		}
+		custom_effect_tooltip = remove_from_coalition
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+					check_variable = { coalition_partners^num = 1 }
+				}
+				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+				clear_variable = coalition_pp_gain
+				clear_array = coalition_partners
+				##set_coalition_government_popularity = yes 
+			}
+			else = {
+				remove_from_array = { coalition_partners = coalition_partner_var }
+				subtract_from_variable = { coalition_pp_gain = party_popularity@var:coalition_partner_var }
+				##set_coalition_government_popularity = yes 
+			}
+		}
+	}
+}
+
+end_coalition = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+			}
+			remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+		}
+	}
+	clear_variable = coalition_pp_gain
+	clear_array = coalition_partners
+	##set_coalition_government_popularity = yes 
+}
+
+change_ruling_party_popularity = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { ideology_change_var > 1 }
+				check_variable = { ideology_change_var < -1 }
+			}
+		}
+		multiply_temp_variable = { ideology_change_var = 0.01 }
+	}
+	add_popularity = {
+		ideology = var:current_party_ideology_group
+		popularity = ideology_change_var
+	}
+}
+
+save_current_party_popularities = {
+	clear_temp_array = saved_popularities
+	add_to_temp_array = { saved_popularities = party_popularity_100@vanguardist }
+	add_to_temp_array = { saved_popularities = party_popularity_100@collectivist }
+	add_to_temp_array = { saved_popularities = party_popularity_100@libertarian_socialist }
+	add_to_temp_array = { saved_popularities = party_popularity_100@social_democrat }
+	add_to_temp_array = { saved_popularities = party_popularity_100@social_liberal }
+	add_to_temp_array = { saved_popularities = party_popularity_100@market_liberal }
+	add_to_temp_array = { saved_popularities = party_popularity_100@social_conservative }
+	add_to_temp_array = { saved_popularities = party_popularity_100@authoritarian_democrat }
+	add_to_temp_array = { saved_popularities = party_popularity_100@paternal_autocrat }
+	add_to_temp_array = { saved_popularities = party_popularity_100@national_populist }
+
+	set_temp_variable = { sum = 100 }
+	for_each_loop = {
+		array = saved_popularities
+		subtract_from_temp_variable = { sum = v }
+	}
+	add_to_temp_array = { saved_popularities = sum } #last value (valkist), calculated directly to avoid rounding errors
+}
+# set_coalition_government_popularity = {
+# 	set_variable = { coalition_ruling_combined_pop = party_popularity@ruling_party }
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = vanguardist
+# 				check_variable = { political_power_ideology = token:vanguardist }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:vanguardist }
+# 		}
+# 		set_temp_variable = { coali_van = party_popularity@vanguardist }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_van }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = collectivist
+# 				check_variable = { political_power_ideology = token:collectivist }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:collectivist }
+# 		}
+# 		set_temp_variable = { coali_col = party_popularity@collectivist }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_col }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = libertarian_socialist
+# 				check_variable = { political_power_ideology = token:libertarian_socialist }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:libertarian_socialist }
+# 		}
+# 		set_temp_variable = { coali_lis = party_popularity@libertarian_socialist }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_lis }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = social_democrat
+# 				check_variable = { political_power_ideology = token:social_democrat }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:social_democrat }
+# 		}
+# 		set_temp_variable = { coali_sod = party_popularity@social_democrat }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_sod }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = social_liberal
+# 				check_variable = { political_power_ideology = token:social_liberal }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:social_liberal }
+# 		}
+# 		set_temp_variable = { coali_sol = party_popularity@social_liberal }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_sol  }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = market_liberal
+# 				check_variable = { political_power_ideology = token:market_liberal }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:market_liberal }
+# 		}
+# 		set_temp_variable = { coali_mar = party_popularity@market_liberal }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_mar  }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = social_conservative
+# 				check_variable = { political_power_ideology = token:social_conservative }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:social_conservative }
+# 		}
+# 		set_temp_variable = { coali_soc = party_popularity@social_conservative }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_soc }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = authoritarian_democrat
+# 				check_variable = { political_power_ideology = token:authoritarian_democrat }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:authoritarian_democrat }
+# 		}
+# 		set_temp_variable = { coali_aud = party_popularity@authoritarian_democrat }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_aud  }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = paternal_autocrat
+# 				check_variable = { political_power_ideology = token:paternal_autocrat }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:paternal_autocrat }
+# 		}
+# 		set_temp_variable = { coali_pat = party_popularity@paternal_autocrat }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_pat  }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = national_populist
+# 				check_variable = { political_power_ideology = token:national_populist }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:national_populist }
+# 		}
+# 		set_temp_variable = { coali_nat = party_popularity@national_populist }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_nat  }
+# 	}
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_government = valkist
+# 				check_variable = { political_power_ideology = token:valkist }
+# 			}
+# 			is_in_array = { ROOT.coalition_partners = token:valkist }
+# 		}
+# 		set_temp_variable = { coali_val = party_popularity@valkist }
+# 		add_to_variable = { coalition_ruling_combined_pop = coali_val  }
+# 	}
+# }
+

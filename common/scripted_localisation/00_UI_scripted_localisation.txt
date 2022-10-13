@@ -79,7 +79,7 @@ defined_text = {
 		trigger = {
 			has_global_flag = is_mp
 		}
-		localization_key = ""
+		localization_key = empty
 	}
 	text = {
 		trigger = {
@@ -150,19 +150,19 @@ defined_text = {
 		trigger = {
 			check_variable = { political_power_ideology = token:vanguardist }
 		}
-		localization_key = "GFX_totalist_small"
+		localization_key = "GFX_vanguardist_small"
 	}
 	text = {
 		trigger = {
 			check_variable = { political_power_ideology = token:collectivist }
 		}
-		localization_key = "GFX_syndicalist_small"
+		localization_key = "GFX_collectivist_small"
 	}
 	text = {
 		trigger = {
 			check_variable = { political_power_ideology = token:libertarian_socialist }
 		}
-		localization_key = "GFX_radical_socialist_small"
+		localization_key = "GFX_libertarian_socialist_small"
 	}
 	text = {
 		trigger = {
@@ -206,6 +206,12 @@ defined_text = {
 		}
 		localization_key = "GFX_national_populist_small"
 	}
+	text = {
+		trigger = {
+			check_variable = { political_power_ideology = token:valkist }
+		}
+		localization_key = "GFX_valkist_small"
+	}
 }
 defined_text = {
 	name = GetPopIconFrame_RulingParty
@@ -213,19 +219,19 @@ defined_text = {
 		trigger = {
 			has_government = vanguardist
 		}
-		localization_key = "GFX_totalist_small"
+		localization_key = "GFX_vanguardist_small"
 	}
 	text = {
 		trigger = {
 			has_government = collectivist
 		}
-		localization_key = "GFX_syndicalist_small"
+		localization_key = "GFX_collectivist_small"
 	}
 	text = {
 		trigger = {
 			has_government = libertarian_socialist
 		}
-		localization_key = "GFX_radical_socialist_small"
+		localization_key = "GFX_libertarian_socialist_small"
 	}
 	text = {
 		trigger = {
@@ -269,6 +275,12 @@ defined_text = {
 		}
 		localization_key = "GFX_national_populist_small"
 	}
+	text = {
+		trigger = {
+			has_government = valkist
+		}
+		localization_key = "GFX_valkist_small"
+	}
 }
 defined_text = {
 	name = GetPopularityTooltip
@@ -276,19 +288,19 @@ defined_text = {
 		trigger = {
 			has_government = vanguardist
 		}
-		localization_key = totalist_topbar_tooltip
+		localization_key = vanguardist_topbar_tooltip
 	}
 	text = {
 		trigger = {
 			has_government = collectivist
 		}
-		localization_key = syndicalist_topbar_tooltip
+		localization_key = collectivist_topbar_tooltip
 	}
 	text = {
 		trigger = {
 			has_government = libertarian_socialist
 		}
-		localization_key = radical_socialist_topbar_tooltip
+		localization_key = libertarian_socialist_topbar_tooltip
 	}
 	text = {
 		trigger = {
@@ -332,6 +344,12 @@ defined_text = {
 		}
 		localization_key = national_populist_topbar_tooltip
 	}
+	text = {
+		trigger = {
+			has_government = valkist
+		}
+		localization_key = valkist_topbar_tooltip
+	}
 }
 defined_text = {
 	name = GetPopularityTooltipDesc
@@ -339,19 +357,19 @@ defined_text = {
 		trigger = {
 			has_government = vanguardist
 		}
-		localization_key = totalist_subtype_desc
+		localization_key = vanguardist_subtype_desc
 	}
 	text = {
 		trigger = {
 			has_government = collectivist
 		}
-		localization_key = syndicalist_subtype_desc
+		localization_key = collectivist_subtype_desc
 	}
 	text = {
 		trigger = {
 			has_government = libertarian_socialist
 		}
-		localization_key = radical_socialist_subtype_desc
+		localization_key = libertarian_socialist_subtype_desc
 	}
 	text = {
 		trigger = {
@@ -395,6 +413,63 @@ defined_text = {
 		}
 		localization_key = national_populist_subtype_desc
 	}
+	text = {
+		trigger = {
+			has_government = valkist
+		}
+		localization_key = valkist_subtype_desc
+	}
+}
+defined_text = {
+	name = GetPopularityPercent
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+		}
+		localization_key = "[?party_popularity@var:political_power_ideology|%0]"
+	}
+	# text = {
+	# 	trigger = {
+	# 		check_variable = { coalition_partners^num > 0 }
+	# 	}
+	# 	localization_key = "[?coalition_ruling_combined_pop|%0]"
+	# }
+	text = {
+		localization_key = "[?party_popularity@ruling_party|%0]"
+	}
+}
+defined_text = {
+	name = GetPopularityPPGain
+	text = {
+		trigger = {
+			OR = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+			}
+		}
+		localization_key = party_popularity_tooltip_long
+	}
+	text = {
+		localization_key = empty
+	}
+}
+defined_text = {
+	name = GetPopularityPPGainValue
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+		}
+		localization_key = "[?party_popularity@var:political_power_ideology|2=+]"
+	}
+	text = {
+		trigger = {
+			has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+		}
+		localization_key = "[?party_popularity@ruling_party|2=+]"
+	}
+	text = {
+		localization_key = empty
+	}
 }
 defined_text = {
 	name = GetHasCoalition
@@ -403,11 +478,11 @@ defined_text = {
 		localization_key = party_pop_coalition
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
-	name = GetCoalitionTotalist
+	name = GetCoalitionVanguardist
 	text = {
 		trigger = {
 			NOT = {
@@ -416,14 +491,14 @@ defined_text = {
 			}
 			is_in_array = { ROOT.coalition_partners = token:vanguardist }
 		}
-		localization_key = party_pop_coalition_totalist
+		localization_key = party_pop_coalition_vanguardist
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
-	name = GetCoalitionSyndicalist
+	name = GetCoalitionCollectivist
 	text = {
 		trigger = {
 			NOT = {
@@ -432,14 +507,14 @@ defined_text = {
 			}
 			is_in_array = { ROOT.coalition_partners = token:collectivist }
 		}
-		localization_key = party_pop_coalition_syndicalist
+		localization_key = party_pop_coalition_collectivist
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
-	name = GetCoalitionRadicalSocialist
+	name = GetCoalitionLibertarianSocialist
 	text = {
 		trigger = {
 			NOT = {
@@ -448,10 +523,10 @@ defined_text = {
 			}
 			is_in_array = { ROOT.coalition_partners = token:libertarian_socialist }
 		}
-		localization_key = party_pop_coalition_radical_socialist
+		localization_key = party_pop_coalition_libertarian_socialist
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -467,7 +542,7 @@ defined_text = {
 		localization_key = party_pop_coalition_social_democrat
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -483,7 +558,7 @@ defined_text = {
 		localization_key = party_pop_coalition_social_liberal
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -499,7 +574,7 @@ defined_text = {
 		localization_key = party_pop_coalition_market_liberal
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -515,7 +590,7 @@ defined_text = {
 		localization_key = party_pop_coalition_social_conservative
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -531,7 +606,7 @@ defined_text = {
 		localization_key = party_pop_coalition_authoritarian_democrat
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -547,7 +622,7 @@ defined_text = {
 		localization_key = party_pop_coalition_paternal_autocrat
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 defined_text = {
@@ -560,10 +635,158 @@ defined_text = {
 		localization_key = party_pop_coalition_national_populist
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
+	}
+	name = GetCoalitionNationalPopulist
+	text = {
+		trigger = {
+			NOT = { has_government = valkist }
+			is_in_array = { ROOT.coalition_partners = token:valkist }
+		}
+		localization_key = party_pop_coalition_valkist
+	}
+	text = {
+		localization_key = empty
 	}
 }
-
+defined_text = {
+	name = GetCoalitionAddTooltip
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:vanguardist }
+		}
+		localization_key = add_to_coalition_vanguardist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:collectivist }
+		}
+		localization_key = add_to_coalition_collectivist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:libertarian_socialist }
+		}
+		localization_key = add_to_coalition_libertarian_socialist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_democrat }
+		}
+		localization_key = add_to_coalition_social_democrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_liberal }
+		}
+		localization_key = add_to_coalition_social_liberal
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:market_liberal }
+		}
+		localization_key = add_to_coalition_market_liberal
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_conservative }
+		}
+		localization_key = add_to_coalition_social_conservative
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:authoritarian_democrat }
+		}
+		localization_key = add_to_coalition_authoritarian_democrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:paternal_autocrat }
+		}
+		localization_key = add_to_coalition_paternal_autocrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:national_populist }
+		}
+		localization_key = add_to_coalition_national_populist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:valkist }
+		}
+		localization_key = add_to_coalition_valkist
+	}
+}
+defined_text = {
+	name = GetCoalitionRemoveTooltip
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:vanguardist }
+		}
+		localization_key = remove_from_coalition_vanguardist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:collectivist }
+		}
+		localization_key = remove_from_coalition_collectivist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:libertarian_socialist }
+		}
+		localization_key = remove_from_coalition_libertarian_socialist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_democrat }
+		}
+		localization_key = remove_from_coalition_social_democrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_liberal }
+		}
+		localization_key = remove_from_coalition_social_liberal
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:market_liberal }
+		}
+		localization_key = remove_from_coalition_market_liberal
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:social_conservative }
+		}
+		localization_key = remove_from_coalition_social_conservative
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:authoritarian_democrat }
+		}
+		localization_key = remove_from_coalition_authoritarian_democrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:paternal_autocrat }
+		}
+		localization_key = remove_from_coalition_paternal_autocrat
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:national_populist }
+		}
+		localization_key = remove_from_coalition_national_populist
+	}
+	text = {
+		trigger = {
+			check_variable = { coalition_partner_var = token:valkist }
+		}
+		localization_key = remove_from_coalition_valkist
+	}
+}
 ### Division Limits ###
 defined_text = {
 	name = unit_limit_count_loc
@@ -593,7 +816,7 @@ defined_text = {
 		localization_key = unit_limit_desc_above_limit
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -604,7 +827,7 @@ defined_text = {
 		localization_key = unit_limit_major_power_desc
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -615,7 +838,7 @@ defined_text = {
 		localization_key = unit_limit_world_tension_desc
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -650,7 +873,7 @@ defined_text = {
 		localization_key = unit_limit_tot_economic_mobilisation
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -676,7 +899,7 @@ defined_text = {
 		localization_key = unit_limit_was_capped_desc
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -692,7 +915,7 @@ defined_text = {
 		localization_key = unit_limit_cap_used_desc
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -721,7 +944,7 @@ defined_text = {
 		localization_key = unit_limit_default_used_desc
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 
@@ -734,7 +957,7 @@ defined_text = {
 		localization_key = unit_limit_bonus_used_desc
 	}
 	text = {
-		localization_key = ""
+		localization_key = empty
 	}
 }
 

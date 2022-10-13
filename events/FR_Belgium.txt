@@ -478,7 +478,8 @@ country_event = { #BWP-KP Coalition
 	option = { #BWP provides PM
 		name = bel.10.a
 		ai_chance = { factor = 40 }
-		set_country_flag = coalition_social_conservative
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes 
 		set_politics = {
 			ruling_party = social_democrat
 			elections_allowed = no
@@ -526,7 +527,8 @@ country_event = { #BWP-KP Coalition
 	option = { #KP provides PM
 		name = bel.10.b
 		ai_chance = { factor = 60 }
-		set_country_flag = coalition_social_democrat
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes 
 		set_politics = {
 			ruling_party = social_conservative
 			elections_allowed = no
@@ -583,8 +585,10 @@ country_event = { #KP-LP-PP Coalition
 	option = { #LP provides PM
 		name = bel.11.a
 		ai_chance = { factor = 70 }
-		set_country_flag = coalition_social_conservative
-		set_country_flag = coalition_social_liberal
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes 
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes 
 		set_politics = {
 			ruling_party = market_liberal
 			elections_allowed = no
@@ -634,8 +638,10 @@ country_event = { #KP-LP-PP Coalition
 	option = { #PP provides PM
 		name = bel.11.b
 		ai_chance = { factor = 30 }
-		set_country_flag = coalition_social_conservative
-		set_country_flag = coalition_market_liberal
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes 
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes 
 		set_politics = {
 			ruling_party = social_liberal
 			elections_allowed = no
@@ -693,8 +699,10 @@ country_event = { #Far-right Coalition
 	option = { #VNV provides PM
 		name = bel.12.a
 		ai_chance = { factor = 15 }
-		set_country_flag = coalition_paternal_autocrat
-		set_country_flag = coalition_valkist
+		set_temp_variable = { coalition_partner_var = token:paternal_aucrat }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:valkist }
+		add_to_coalition = yes  
 		set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
@@ -718,8 +726,10 @@ country_event = { #Far-right Coalition
 	option = { #Verdinaso provides PM
 		name = bel.12.b
 		ai_chance = { factor = 15 }
-		set_country_flag = coalition_national_populist
-		set_country_flag = coalition_valkist
+		set_temp_variable = { coalition_partner_var = token:national_populist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:valkist }
+		add_to_coalition = yes 
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -743,8 +753,10 @@ country_event = { #Far-right Coalition
 	option = { #PB provides PM
 		name = bel.12.c
 		ai_chance = { factor = 70 }
-		set_country_flag = coalition_paternal_autocrat
-		set_country_flag = coalition_national_populist
+		set_temp_variable = { coalition_partner_var = token:paternal_aucrat }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:national_populist }
+		add_to_coalition = yes 
 		set_politics = {
 			ruling_party = valkist
 			elections_allowed = no
