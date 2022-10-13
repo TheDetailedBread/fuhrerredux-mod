@@ -4,6 +4,7 @@ oob = "FRA"
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "FRA_air_bba"
 	set_technology = {
 		iw_small_airframe = 1
 		iw_medium_airframe = 1
@@ -15,6 +16,7 @@ if = {
 		early_bombs = 1
 	}
 	else = {
+		set_air_oob = "FRA_air_legacy"
 		set_technology = {
 			early_fighter = 1
 			tactical_bomber1 = 1

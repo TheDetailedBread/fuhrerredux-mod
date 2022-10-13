@@ -1,0 +1,130 @@
+create_equipment_variant = {
+	name = "I-15" #
+	type = small_plane_airframe_0
+	modules = {
+		fixed_main_weapon_slot = light_mg_4x
+		engine_type_slot = engine_1_1x
+		special_type_slot_1 = empty
+	}
+	obsolete = yes
+}
+create_equipment_variant = {
+	name = "I-16" #
+	type = small_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = light_mg_2x
+		engine_type_slot = engine_1_1x
+		special_type_slot_1 = empty
+	}
+}
+create_equipment_variant = {
+	name = "DB-3" #
+	type = medium_plane_airframe_0
+	modules = {
+		fixed_main_weapon_slot = medium_bomb_bay
+		fixed_auxiliary_weapon_slot_1 = bomb_locks
+		engine_type_slot = engine_2_2x
+		special_type_slot_1 = lmg_defense_turret
+	}
+}
+create_equipment_variant = {
+	name = "TB-3" #
+	type = large_plane_airframe_0
+	modules = {
+		fixed_main_weapon_slot = large_bomb_bay
+		fixed_auxiliary_weapon_slot_1 = empty
+		engine_type_slot = engine_1_4x
+		special_type_slot_1 = lmg_defense_turret_2x
+	}
+}
+create_equipment_variant = {
+	name = "ANT-40" #
+	type = medium_plane_airframe_1
+	modules = {
+		fixed_main_weapon_slot = medium_bomb_bay
+		fixed_auxiliary_weapon_slot_1 = bomb_locks
+		engine_type_slot = engine_2_2x
+		special_type_slot_1 = lmg_defense_turret_2x
+	}
+}
+
+### Air Wings
+air_wings = {
+	# LVO Aviatsya Komandovaniya -- Leningrad
+	195 = { 
+		# 15ya Istrebitel'nye Aviabrigada
+		small_plane_airframe_0 = {
+			owner = "SOV" 
+			amount = 94
+			version_name = "I-15"
+		}
+		# 18ya Bombardirovochnye Aviabrigada
+		medium_plane_airframe_0 =  {
+			owner = "SOV" 
+			amount = 60
+			version_name = "DB-3"
+		}
+	}
+
+	# MVO Aviatsya Komandovaniya
+	219 = {
+		# 2ya Istrebitel'nye Aviabrigada
+		small_plane_airframe_0 = {
+			owner = "SOV" 
+			amount = 94
+			version_name = "I-15"
+		}
+		# 3ya Dal'nyaya Bombardirovochnye Aviabrigada
+		# 13ya Dal'nyaya Bombardirovochnye Aviabrigada
+		# TODO -- 46ya Transporta Aviabrigada -- transport planes
+	}
+
+	# BOVO Aviatsya Komandovaniya -- Minsk
+	224 = {
+		# 8ya Istrebitel'nye Aviabrigada
+		small_plane_airframe_0 = {
+			owner = "SOV" 
+			amount = 94
+			version_name = "I-15"
+		}
+		# 14ya Istrebitel'nye Aviabrigada
+		small_plane_airframe_0 = {
+			owner = "SOV" 
+			amount = 94
+			version_name = "I-15"
+		}
+		# 16ya Bombardirovochnye Aviabrigada
+		medium_plane_airframe_0 =  {
+			owner = "SOV" 
+			amount = 60
+			version_name = "DB-3"
+		}
+	}
+
+	# KOVO Aviatsya Komandovaniya -- Kiev
+	217 = {
+		# 17ya Istrebitel'nye Aviabrigada
+		# 1ya Bombardirovochnye Aviabrigada
+		# 10ya Bombardirovochnye Aviabrigada
+		medium_plane_airframe_0 =  {
+			owner = "SOV" 
+			amount = 120
+			version_name = "DB-3"
+		}
+	}
+
+	# Dal'nevostochniy Aviatsya Komandovaniya -- Vladivostock	
+	209 = {
+		# 12ya Istrebitel'nye Aviabrigada
+		# 20ya Istrebitel'nye Aviabrigada
+		small_plane_airframe_0 = {
+			owner = "SOV" 
+			amount = 188
+			version_name = "I-15"
+		}
+		# 5ya Dal'nyaya Bombardirovochnye Aviabrigada
+	}
+
+	# VVS - KBF Aviatsya Komandovaniya -- Leningrad
+		# VVS - BSF Aviatsya Komandovaniya -- Sevastopol
+}

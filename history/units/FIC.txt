@@ -12,7 +12,7 @@
 		infantry = { x = 1 y = 3 }
 	}
 	support = {
-  	      engineer = { x = 0 y = 0 }
+  	engineer = { x = 0 y = 0 }
  	}
 }
 
@@ -25,7 +25,7 @@ division_template = {
 		militia = { x = 0 y = 2 }
 		militia = { x = 0 y = 3 }
 		militia = { x = 0 y = 4 }
-        militia = { x = 1 y = 0 }
+    militia = { x = 1 y = 0 }
 		militia = { x = 1 y = 1 }
 		militia = { x = 1 y = 2 }
 		militia = { x = 1 y = 3 }
@@ -64,35 +64,5 @@ units = {
 		location = 4401 # Saigon
 		division_template = "Milice Coloniale"
 		start_experience_factor = 0.1
-	}
-
-	##### Naval OOB #####
-	navy = {				
-		name = "5eme Division des Croiseurs"			
-		base = 4401 
-		location = 4401 # Saigon
-		ship = { name = "Lamotte Picquett" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FIC } } }
-		ship = { name = "Suffren" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FIC } } }
-	}
-	navy = {				
-		name = "Flotte Indochinoise"			
-		base = 4401 
-		location = 4401 # Saigon
-		ship = { name = "Cambodge" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FIC } } }
-		ship = { name = "Tonkin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FIC } } }
-		ship = { name = "Laos" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FIC } } }
-		ship = { name = "Cochinchine" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = FIC } } }
-		ship = { name = "Saigon" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = FIC } } }
-	}
-}
-
-
-air_wings = {
-	### French Garrison Aircrafts --
-	958 = {
-		fighter_equipment_0 =  {
-			owner = "VIN" 
-			amount = 75
-		}
 	}
 }

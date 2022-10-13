@@ -105,25 +105,6 @@ units = {
 		division_template = "Brigada Montaña"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
-
-	}
-
-			
-}
-
-air_wings = {
-	### Dirección General de Aeronáutica -- Buenos Aires
-	278 = {
-		# Fighter Air Group -- Dewotine D.21s
-		fighter_equipment_0 =  {
-			owner = "ARG" 
-			amount = 18
-		}
-		# CAS Air Group -- Breguet 19s
-		CAS_equipment_1 =  {
-			owner = "ARG" 
-			amount = 12
-		}
 	}
 }
 
@@ -136,15 +117,6 @@ instant_effect = {
 		}
 		requested_factories = 1
 		progress = 0.19
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0
-			creator = "ARG"
-		}
-		requested_factories = 1
-		progress = 0.44
 		efficiency = 100
 	}
 }
