@@ -108,6 +108,11 @@ technology_categories = {
 	cat_targeting
 	cat_gunnery
 	cat_torpedo
+	air_equipment
+	plane_modules_tech
+	cat_air_guns
+	cat_air_engine
+	cat_air_bombs
 }
 
 technology_folders = {
@@ -135,6 +140,13 @@ technology_folders = {
 		ledger = army
 	}
 	air_techs_folder = {
+		available = { NOT = { has_dlc = "By Blood Alone" } }
+		ledger = air
+	}
+	bba_air_techs_folder = {
+		available = {
+			has_dlc = "By Blood Alone"
+		}
 		ledger = air
 	}
 	naval_folder = {

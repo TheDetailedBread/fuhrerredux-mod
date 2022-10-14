@@ -3753,7 +3753,7 @@ country_event = { # Fate of Wales
 country_event = { # Fate of Wallonia
   id = annex.152
   title = annexation_WLL_CONQ
-  desc = annexation_WLL_CONQ
+  desc = annexation_WLL_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
@@ -4008,14 +4008,14 @@ country_event = { # Fate of Sardinia
 }
 
 country_event = { # Fate of Transylvania
-  id = annex.158
+  id = annex.186
   title = annexation_TRANSYLVANIA_CONQ
   desc = annexation_TRANSYLVANIA_CONQ
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
   option = { # Give it to Hungary
-    name = annex.158.a
+    name = annex.186.a
     trigger = {
       HUN = { ROOT_can_grant_land = yes }
     }
@@ -4032,7 +4032,7 @@ country_event = { # Fate of Transylvania
   }
 
   option = { # Give in to Romania
-    name = annex.158.b
+    name = annex.186.b
     trigger = {
       ROM = { ROOT_can_grant_land = yes }
     }
