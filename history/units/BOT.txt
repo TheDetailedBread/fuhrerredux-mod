@@ -1,6 +1,4 @@
-﻿
-
-division_template = {
+﻿division_template = {
 	name = "Infantry Division"		
 	# Note: Represents both regular infantry and militia units
 	regiments = {
@@ -15,31 +13,14 @@ division_template = {
 	}
 }
 
-
-
-units = {
-	
-}
-
-
-### No air forces (small handful of various aircraft in 1935) ###
-
-#########################
-## STARTING PRODUCTION ##
-#########################
-
 instant_effect = {
-
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
-			creator = "ANG"
+			creator = "BOT"
 		}
 		requested_factories = 2
 		progress = 0.1
 		efficiency = 50
 	}
-
 }
-
-#################################
