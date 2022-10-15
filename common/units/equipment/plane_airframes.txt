@@ -3,6 +3,10 @@ equipments = {
 	small_plane_airframe = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = { has_country_flag = cannot_produce_aircraft }
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -22,7 +26,7 @@ equipments = {
 		air_map_icon_frame = 1
 		interface_category = interface_category_air
 		substitute = cv_small_plane_airframe
-		
+
 		interface_overview_category_index = 1
 		air_superiority = 1
 		reliability = 0.8
@@ -48,7 +52,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -229,7 +233,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -305,7 +309,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -316,7 +320,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -408,7 +412,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -419,7 +423,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -431,7 +435,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -518,7 +522,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -529,7 +533,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -540,7 +544,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -603,6 +607,10 @@ equipments = {
 	cv_small_plane_airframe = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = { has_country_flag = cannot_produce_aircraft }
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		carrier_capable = yes
@@ -624,7 +632,7 @@ equipments = {
 		sprite = light_plane
 		air_map_icon_frame = 16
 		interface_category = interface_category_air
-		
+
 		interface_overview_category_index = 1
 		air_superiority = 1
 		reliability = 0.8
@@ -650,7 +658,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -831,7 +839,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -906,7 +914,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -917,7 +925,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1008,7 +1016,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1019,7 +1027,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1031,7 +1039,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1117,7 +1125,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1128,7 +1136,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1139,7 +1147,7 @@ equipments = {
 					kamikaze_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1201,6 +1209,10 @@ equipments = {
 	medium_plane_airframe = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = { has_country_flag = cannot_produce_aircraft }
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment
@@ -1217,7 +1229,7 @@ equipments = {
 		sprite = medium_plane
 		air_map_icon_frame = 6
 		interface_category = interface_category_air
-		
+
 		interface_overview_category_index = 4
 		air_superiority = 1
 		reliability = 0.8
@@ -1242,7 +1254,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					mine_warfare_offense
@@ -1253,7 +1265,7 @@ equipments = {
 					nav_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					mine_warfare_offense
@@ -1264,7 +1276,7 @@ equipments = {
 					nav_bomber_weapon
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					mine_warfare_offense
@@ -1474,7 +1486,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1485,7 +1497,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1496,7 +1508,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1600,7 +1612,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1611,7 +1623,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1622,7 +1634,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1742,7 +1754,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1753,7 +1765,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1764,7 +1776,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1776,7 +1788,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_4 = { 
+			fixed_auxiliary_weapon_slot_4 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1896,7 +1908,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1907,7 +1919,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1918,7 +1930,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -1930,7 +1942,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_4 = { 
+			fixed_auxiliary_weapon_slot_4 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -2023,6 +2035,10 @@ equipments = {
 	large_plane_airframe = {
 		year = 1933
 
+		can_be_produced = {
+			NOT = { has_country_flag = cannot_produce_aircraft }
+		}
+
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment
@@ -2038,7 +2054,7 @@ equipments = {
 		sprite = heavy_plane
 		air_map_icon_frame = 11
 		interface_category = interface_category_air
-		
+
 		interface_overview_category_index = 5
 		air_superiority = 0.01
 		reliability = 0.8
@@ -2062,7 +2078,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -2071,7 +2087,7 @@ equipments = {
 					mine_warfare_offense
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -2081,7 +2097,7 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
@@ -2284,34 +2300,34 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
 
@@ -2418,44 +2434,44 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					nav_bomber_weapon
 					recon_camera
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					nav_bomber_weapon
 					recon_camera
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					nav_bomber_weapon
 					recon_camera
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_4 = { 
+			fixed_auxiliary_weapon_slot_4 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					nav_bomber_weapon
 					recon_camera
 					mine_warfare_offense
-					
+
 				}
 			}
 
@@ -2577,44 +2593,44 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_4 = { 
+			fixed_auxiliary_weapon_slot_4 = {
 				required = no
 				allowed_module_categories = {
 					recon_camera
 					strat_weapon
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
 
@@ -2736,44 +2752,44 @@ equipments = {
 				}
 			}
 
-			fixed_auxiliary_weapon_slot_1 = { 
+			fixed_auxiliary_weapon_slot_1 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					recon_camera
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_2 = { 
+			fixed_auxiliary_weapon_slot_2 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					recon_camera
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_3 = { 
+			fixed_auxiliary_weapon_slot_3 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					recon_camera
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
-			fixed_auxiliary_weapon_slot_4 = { 
+			fixed_auxiliary_weapon_slot_4 = {
 				required = no
 				allowed_module_categories = {
 					strat_weapon
 					recon_camera
 					nav_bomber_weapon
 					mine_warfare_offense
-					
+
 				}
 			}
 

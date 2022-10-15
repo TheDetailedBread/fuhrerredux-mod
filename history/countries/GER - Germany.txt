@@ -177,11 +177,10 @@ if = {
 			plane_tac_bomb_upgrade = 5
 			plane_range_upgrade = 5
 			plane_engine_upgrade = 5
-			plane_reliability_upgrade = 5
+			plane_reliability_upgrade = 10
 		}
 		obsolete = yes
 	}
-
 	create_equipment_variant = {
 		name = "Do 17"
 		type = tac_bomber_equipment_0
@@ -229,7 +228,6 @@ if = {
 		}
 		obsolete = yes
 	}
-
 	create_equipment_variant = {
 		name = "He 111"
 		type = medium_plane_airframe_1
@@ -245,7 +243,6 @@ if = {
 			special_type_slot_4 = empty
 		}
 	}
-
 	create_equipment_variant = {
 		name = "Do 17"
 		type = small_plane_cas_airframe_0
@@ -255,7 +252,6 @@ if = {
 			special_type_slot_1 = lmg_defense_turret_2x
 		}
 	}
-
 	create_equipment_variant = {
 		name = "He 51" #also covers Ar 68
 		type = small_plane_airframe_0
@@ -557,57 +553,6 @@ if = {
 		obsolete = yes
 	}
 }
-
-create_equipment_variant = {
-	name = "Ju 86"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 5
-		plane_engine_upgrade = 5
-		plane_reliability_upgrade = 10
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "Do 17"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
-	}
-	obsolete = yes
-}
-
-
-
-create_equipment_variant = {
-	name = "Ju 86"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 5
-		plane_engine_upgrade = 5
-		plane_reliability_upgrade = 10
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "Do 17"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
-	}
-	obsolete = yes
-}
-
 
 recruit_character = GER_Wilhelm_Pieck
 recruit_character = GER_Ernst_Thalmann

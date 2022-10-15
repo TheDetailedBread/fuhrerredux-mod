@@ -12,7 +12,7 @@ air_wings = {
 		}
 		# Groupement de Bombardment 6
 		# Groupement de Bombardment 9
-		medium_plane_airframe_1 =  {
+		medium_plane_airframe_0 =  {
 			owner = "FRA" 
 			amount = 80
 			version_name = "Amiot 143"
@@ -78,14 +78,39 @@ air_wings = {
 			version_name = "Latécoère 296"
 		}
 	}
+
+	"Béarn" = {
+		cv_small_plane_airframe_0 =  { 
+			owner = "FRA" 
+			amount = 25 
+			version_name = "D.371"
+		}
+		cv_small_plane_naval_bomber_airframe_0 =  { 
+			owner = "FRA" 
+			amount = 20 
+			version_name = "PL.7"
+		}
+	}
+	"Terrifier" = {
+		cv_small_plane_airframe_0 =  {
+			owner = "FRA" 
+			amount = 25 
+			version_name = "D.371"
+		}
+		cv_small_plane_naval_bomber_airframe_0 =  { 
+			owner = "FRA"
+			amount = 20 
+			version_name = "PL.7"
+		}
+	}
 }
 
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_airframe_1 
+			type = small_plane_airframe_0
 			creator = "FRA" 
-			version_name = "NiD 62"
+			version_name = "D.510"
 		}
 		requested_factories = 2
 		progress = 0.15
@@ -93,7 +118,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_cas_airframe_1 
+			type = small_plane_cas_airframe_0
 			creator = "FRA" 
 			version_name = "Br. 19"
 		}
@@ -103,7 +128,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_naval_bomber_airframe_1 
+			type = small_plane_naval_bomber_airframe_0 
 			creator = "FRA" 
 			version_name = "Latécoère 296"
 		}

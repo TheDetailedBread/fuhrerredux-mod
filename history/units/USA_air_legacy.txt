@@ -1,25 +1,4 @@
 
-create_equipment_variant = {
-	name = "F2A Buffalo"
-	type = cv_fighter_equipment_1
-	upgrades = {
-		cv_plane_gun_upgrade = 5
-		cv_plane_range_upgrade = 0
-		plane_engine_upgrade = 2
-		plane_reliability_upgrade = 5
-	}
-}
-create_equipment_variant = {
-	name = "Martin M166"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 2
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 2
-		plane_reliability_upgrade = 3
-	}
-}
-
 air_wings = {
 	### 19th Composite Wing -- Panama Canal
 	685 = { 
@@ -51,5 +30,48 @@ air_wings = {
 			owner = "USA" 
 			amount = 72
 		}
+	}
+
+	"USS Ranger" = {
+		cv_fighter_equipment_0 = { 
+			owner = "USA" 
+			amount = 8 
+		} # historical: 36
+		cv_CAS_equipment_1 =  { 
+			owner = "USA" 
+			amount = 14 
+		} # historical: 15
+		cv_nav_bomber_equipment_1 = { 
+			owner = "USA" 
+			amount = 8
+		} # historical: 12
+	}
+	"USS Lexington" = {
+		cv_fighter_equipment_0 = { 
+			owner = "USA" 
+			amount = 8 
+		} # historical: 16
+		cv_CAS_equipment_1 = { 
+			owner = "USA" 
+			amount = 14 
+		} # historical: 30
+		cv_nav_bomber_equipment_1 = { 
+			owner = "USA" 
+			amount = 8 
+		} # historical: 12
+	}
+	"USS Saratoga" = {
+		cv_fighter_equipment_0 = { 
+			owner = "USA" 
+			amount = 8 
+		} # historical: 16
+		cv_CAS_equipment_1 =  { 
+			owner = "USA" 
+			amount = 14 
+		} # historical: 30
+		cv_nav_bomber_equipment_1 = { 
+			owner = "USA" 
+			amount = 8 
+		} # historical: 12
 	}
 }

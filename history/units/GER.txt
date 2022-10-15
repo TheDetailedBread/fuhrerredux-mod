@@ -464,7 +464,6 @@ instant_effect = {
       icon = "GFX_GER_improved_light_tank_medium"
     }
   }
-
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
@@ -474,7 +473,6 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 100
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
@@ -484,7 +482,6 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 100
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = artillery_equipment_1
@@ -494,17 +491,6 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 100
 	}
-
-	add_equipment_production = {
-		equipment = {
-			type = light_tank_equipment_2
-			creator = "GER" 
-		}
-		requested_factories = 3
-		progress = 0.15
-		efficiency = 100
-	}
-
 	add_equipment_production = {
 		equipment = {
 			type = motorized_equipment_1
@@ -513,5 +499,29 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.15
 		efficiency = 100
+	}
+
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		add_equipment_production = {
+			equipment = {
+				type = light_tank_chassis_2
+				creator = "GER" 
+			}
+			requested_factories = 3
+			progress = 0.15
+			efficiency = 100
+		}
+		else = {
+			add_equipment_production = {
+				equipment = {
+					type = light_tank_equipment_2
+					creator = "GER" 
+				}
+				requested_factories = 3
+				progress = 0.15
+				efficiency = 100
+			}
+		}
 	}
 }

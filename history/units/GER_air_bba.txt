@@ -7,6 +7,7 @@ air_wings = {
 		small_plane_airframe_1 =  {		# He 51
 			owner = "GER" 
 			amount = 120
+			version_name = "Bf 109 D"
 		}
 		name = "Jagdgeschwader 232"
 	}
@@ -17,6 +18,7 @@ air_wings = {
 		small_plane_airframe_1 =  {		# Ar 68
 			owner = "GER" 
 			amount = 200
+			version_name = "Bf 109 D"
 		}
 		name = "Jagdgeschwader 132"
 		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
@@ -30,12 +32,13 @@ air_wings = {
 		medium_plane_airframe_1 = {		# Do 23
 			owner = "GER" 
 			amount = 80
+			version_name = "He 111"
 		}
 		name = "Kampfgeschwader 153"
 		medium_plane_airframe_1 = {		# Ju 86
 			owner = "GER" 
 			amount = 40
-			#version_name = "Ju 86" #No such version here - Arser
+			version_name = "He 111"
 		}
 		name = "Kampfgeschwader 153"
 	}
@@ -46,12 +49,14 @@ air_wings = {
 		medium_plane_airframe_1 = {		# He 45 or Do 23 ?
 			owner = "GER" 
 			amount = 80
+			version_name = "He 111"
 		}
 		name = "Kampfgeschwader 253"
 		# Sturzkampfgeschwader 162		
 		small_plane_cas_airframe_1 =  {			# Hs 123
 			owner = "GER" 
 			amount = 120
+			version_name = "Ju 87"
 		}
 		#name = "Sturzkampfgeschwader 162"	
 	}
@@ -62,18 +67,21 @@ air_wings = {
 		small_plane_airframe_1 =  {		# He 51 # Ar 68
 			owner = "GER" 
 			amount = 200
+			version_name = "Bf 109 D"
 		}
 		name = "Jagdgeschwader 134"
 		# Kampfgeschwader 152 'Hindenburg'	
 		medium_plane_airframe_1 = {		# Do 23
 			owner = "GER" 
 			amount = 80
+			version_name = "He 111"
 		}
 		name = "Kampfgeschwader 152"
 		# Kampfgeschwader 155	
 		medium_plane_airframe_1 = {		# He 45 or Do 23 ? (light bomber)
 			owner = "GER" 
 			amount = 80
+			version_name = "He 111"
 		}
 		#name = "Kampfgeschwader 155"
 	}
@@ -84,12 +92,14 @@ air_wings = {
 		small_plane_airframe_1 =  {		# He 51
 			owner = "GER" 
 			amount = 120
+			version_name = "Bf 109 D"
 		}
 		name = "Jagdgeschwader 136"
 		# Kampfgeschwader 154	
 		medium_plane_airframe_1 = {		# Do 23
 			owner = "GER" 
 			amount = 80
+			version_name = "He 111"
 		}
 		name = "Kampfgeschwader 154"
 	}
@@ -100,6 +110,7 @@ air_wings = {
 		small_plane_naval_bomber_airframe_1 =  {		# He 59, Do 18
 			owner = "GER" 
 			amount = 100
+			version_name = "Do 22"
 		}
 		name = "Küstenfliegergruppe 106"
 	}
@@ -120,7 +131,7 @@ instant_effect = {
 		equipment = {
 			type = small_plane_cas_airframe_1 
 			creator = "GER" 
-			version_name = "Do 17"
+			version_name = "Ju 87"
 		}
 		requested_factories = 2
 		progress = 0.15
@@ -140,7 +151,7 @@ instant_effect = {
 		equipment = {
 			type = medium_plane_airframe_1 
 			creator = "GER" 
-			version_name = "Do 23"
+			version_name = "He 111"
 		}
 		requested_factories = 2
 		progress = 0.15

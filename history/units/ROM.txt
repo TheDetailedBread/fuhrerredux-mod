@@ -220,22 +220,54 @@ instant_effect = {
 		progress = 0.24
 		efficiency = 95
 	}
-	add_equipment_production = {
-		equipment = {
-			type = light_tank_equipment_1
-			creator = "ROM" 
+	
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		add_equipment_production = {
+			equipment = {
+				type = light_tank_chassis_0
+				creator = "ROM" 
+				version_name = "R1"
+			}
+			requested_factories = 1
+			progress = 0.15
+			efficiency = 100
 		}
-		requested_factories = 1
-		progress = 0.4
-		efficiency = 80
-	}	
-	add_equipment_production = {
-    equipment = {
-      type = fighter_equipment_0
-      creator = "ROM"
-    }
-    requested_factories = 1
-    progress = 0.6
-    efficiency = 70
+		else = {
+			add_equipment_production = {
+				equipment = {
+					type = light_tank_equipment_1
+					creator = "ROM" 
+				}
+				requested_factories = 1
+				progress = 0.15
+				efficiency = 100
+			}
+		}
+	}
+	
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		add_equipment_production = {
+			equipment = {
+				type = small_plane_airframe_0
+				creator = "ROM"
+				version_name = "IAR 14"
+			}
+			requested_factories = 1
+			progress = 0.6
+			efficiency = 70
+		}
+		else = {
+			add_equipment_production = {
+				equipment = {
+					type = fighter_equipment_0
+					creator = "ROM"
+				}
+				requested_factories = 1
+				progress = 0.6
+				efficiency = 70
+			}
+		}
 	}
 }
