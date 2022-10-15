@@ -1671,10 +1671,10 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				carrier_size = 0.25 armor_value = -0.15 naval_range = 0.25
 			}
-			capital_ship = {
+			battleship = {
 				naval_range = 0.25
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				naval_range = 0.25
 			}
 			submarine = {
@@ -1693,17 +1693,11 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				armor_value = 0.5 
 			}
-			capital_ship = {
+			battleship = {
 				armor_value = 0.1 				
 				hg_attack = 0.1
 				lg_attack = 0.1
 			}
-			#screen_ship = {
-			#	
-			#}
-			#submarine = {
-			#	
-			#}
 		}
 		
 		ai_will_do = {
@@ -1714,12 +1708,12 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 	battlefleet_designer = { #armored carriers, slightly buffed cap ships
 		random = no
 		equipment_bonus = {
-			capital_ship = {
+			battleship = {
 				armor_value = 0.15 
 				hg_attack = 0.15
 				lg_attack = 0.15
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				torpedo_attack = 0.25
 				sub_detection = -0.25
 			}
@@ -1736,12 +1730,12 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				surface_visibility = -0.1 naval_speed = 0.1 carrier_size = -0.1
 			}
-			capital_ship = {
+			battleship = {
 				surface_visibility = -0.1 naval_speed = 0.1 				
 				hg_attack = -0.1
 				lg_attack = -0.1
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				surface_visibility = -0.1 naval_speed = 0.1
 			}
 			submarine = {
@@ -1757,7 +1751,7 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 	convoy_escort_naval_manufacturer = {
 		random = no
 		equipment_bonus = {
-			screen_ship = {
+			heavy_cruiser = {
 				naval_range = 0.3 sub_detection = 0.1 naval_speed = 0.1 build_cost_ic = 0.1
 			}
 		}
@@ -1773,13 +1767,13 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				build_cost_ic = -0.25 carrier_size = -0.2 naval_range = -0.5
 			}
-			capital_ship = {
+			battleship = {
 				build_cost_ic = -0.25 armor_value = -0.2 				
 				hg_attack = -0.2
 				lg_attack = -0.2 
 				naval_range = -0.5
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				build_cost_ic = -0.25 naval_range = -0.5
 			}
 			submarine = {

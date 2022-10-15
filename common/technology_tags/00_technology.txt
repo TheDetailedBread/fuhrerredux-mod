@@ -107,7 +107,10 @@ technology_categories = {
 	cat_special_units
 	cat_targeting
 	cat_gunnery
-	cat_torpedo
+	cat_torpedoes
+	cat_ship_light_battery
+	cat_ship_medium_battery
+	cat_ship_heavy_battery
 	air_equipment
 	plane_modules_tech
 	cat_air_guns
@@ -156,6 +159,12 @@ technology_folders = {
 		ledger = navy
 	}
 	mtgnavalfolder = {
+		available = {
+			has_dlc = "Man the Guns"
+		}
+		ledger = navy
+	}
+	mtgnavalsupportfolder = {
 		available = {
 			has_dlc = "Man the Guns"
 		}
