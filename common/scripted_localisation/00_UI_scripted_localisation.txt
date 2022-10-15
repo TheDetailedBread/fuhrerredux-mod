@@ -428,12 +428,13 @@ defined_text = {
 		}
 		localization_key = "[?party_popularity@var:political_power_ideology|%0]"
 	}
-	# text = {
-	# 	trigger = {
-	# 		check_variable = { coalition_partners^num > 0 }
-	# 	}
-	# 	localization_key = "[?coalition_ruling_combined_pop|%0]"
-	# }
+	text = {
+		trigger = {
+			has_variable = coalition_partners^num
+			check_variable = { coalition_partners^num > 0 }
+		}
+		localization_key = "[?coalition_ruling_combined_pop|%0]"
+	}
 	text = {
 		localization_key = "[?party_popularity@ruling_party|%0]"
 	}
@@ -637,7 +638,9 @@ defined_text = {
 	text = {
 		localization_key = empty
 	}
-	name = GetCoalitionNationalPopulist
+}
+defined_text = {
+	name = GetCoalitionValkist
 	text = {
 		trigger = {
 			NOT = { has_government = valkist }

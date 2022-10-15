@@ -22,6 +22,14 @@ on_actions = {
       }
     }
   }
+  on_daily = {
+    effect = {
+      if = {
+        limit = { has_variable = coalition_partners^num }
+        set_coalition_government_popularity = yes
+      }
+    }
+  }
   on_startup = {
     effect = {
       every_possible_country = {
