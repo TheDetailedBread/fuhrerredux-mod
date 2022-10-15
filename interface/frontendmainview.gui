@@ -186,10 +186,10 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=0 y =0}
-		size = { width = 320 height = 395}
-		Orientation = CENTER
-		Origo = center		
+		position = { x=90 y =-55}
+		size = { width = 320 height = 395 }
+		Orientation = LOWER_LEFT
+		Origo = lower_left		
 
     positionType = {
 			name = "subscription_size"
@@ -254,27 +254,35 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-		
 
-		ButtonType = {
-			name = "credits_button"
-			position = {  x = 16 y = 138 }
-			quadTextureSprite ="GFX_main_lobby_button"	
-			buttonText = "Fuhrerreich Credits"
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 10000 y = 10000 } #from KR: disabled, doesn't work with mods (originally 16,138)
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-		
+
+		ButtonType = {
+			name = "credits_button"
+			position = { x = 16 y = 138 } #from KR: adjusted for career profile removal  (originally 16,178)
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "FE_CREDITS"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 178 }
-			quadTextureSprite ="GFX_main_lobby_button"	
+			position = { x = 16 y = 178 } #from KR: adjusted for career profile removal  (originally 16,218)
+			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "Nudge!"
 			buttonFont = "hoi_24header"
 		}
 		
-
 		ButtonType = {
 			name = "exit_button"
 			position = { x = 16 y = 260 }
@@ -283,31 +291,66 @@ guiTypes = {
 			text = "FE_EXIT"			
 			clicksound = click_default
 			oversound = ui_menu_over
-			
 		}
 		
+		iconType = {
+			name = "subscription_divider"
+			position = { x = 4 y = 336 }
+			spriteType = "GFX_main_lobby_divider"
+		}
+
+		containerWindowType = {
+			name = "subscription_widget"
+			position = { x = 10000 y = 10000 } #from KR: disabled (originally 16,312)
+			size = { width = 288 height = 108 }
+
+			ButtonType = {
+				name = "show_subscription"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="GFX_subscription_widget"
+				buttonText = "SUBSCRIPTION_WIDGET"
+				buttonFont = "hoi_24header"
+				multiline = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "subscription_widget_subscribed"
+			position = { x = 10000 y = 10000 } #from KR: disabled (originally 16,312)
+			size = { width = 288 height = 108 }
+
+			ButtonType = {
+				name = "show_subscription"
+				position = { x = 0 y = 0 }
+				quadTextureSprite ="GFX_subscription_widget_active"
+				frame = 1
+				buttonText = "SUBSCRIPTION_WIDGET_SUBSCRIBED"
+				buttonFont = "hoi_24header"
+				multiline = yes
+			}
+		}
 	}
 
 	containerWindowType = {
 		name = "mainmenu_social_buttons"
 		position = { x=-50 y=25 }	
 		size = { width = 240 height = 90 }
-		Orientation = center	
-		origo = center
+		Orientation = LOWER_LEFT	
+		origo = lower_left
 		
 		positionType = {
 			name = "position_without_social_gui"
-			position = { x = 0 y = 155 }
+			position = { x = 129 y = -45 }
 		}
 
     positionType = {
 			name = "subscription_position"
-			position = { x = 79 y = -176 } #(originally -50,89)
+			position = { x = 129 y = -45 } #(originally -50,89)
 		}
 
 		positionType = {
 			name = "subscription_position_without_social_gui"
-			position = { x = 129 y = -46 } #(originally 0,219)
+			position = { x = 129 y = -45 } #(originally 0,219)
 		}
 		
 		containerWindowType = {
@@ -366,7 +409,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "forum_button"
-			position = { x = 50 y = 0 }
+			position = { x = 200 y = 0 }
 			quadTextureSprite ="forum"
 			clicksound = click_default
 			pdx_tooltip = "FX_MENU_FORUM"
@@ -374,7 +417,7 @@ guiTypes = {
 		}
 		ButtonType = {
 			name = "facebook_button"
-			position = { x = 100 y = 0 }
+			position = { x = 150 y = 0 }
 			quadTextureSprite ="facebook"
 			clicksound = click_default
 			pdx_tooltip = "FX_MENU_FACEBOOK"
@@ -383,7 +426,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "twitter_button"
-			position = { x = 150 y = 0 }
+			position = { x = 50 y = 0 }
 			quadTextureSprite ="twitter"
 			#clicksound = click_default
 			pdx_tooltip = "FX_MENU_TWITTER"
@@ -392,7 +435,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "privacy_policy_button"
-			position = { x = 200 y = 0 }
+			position = { x = 100 y = 0 }
 			quadTextureSprite ="privacy"
 			#clicksound = click_default
 			pdx_tooltip = "FX_MENU_PRIVACY_POLICY"

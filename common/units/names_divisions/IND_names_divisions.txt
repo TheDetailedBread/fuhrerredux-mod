@@ -31,10 +31,10 @@
 #			3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
 #									the current game version.
 
-PRF_INF_01 = {
+IND_INF_01 = {
 	name = "Infantry Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "infantry" }
 
@@ -150,10 +150,10 @@ PRF_INF_01 = {
 	}
 }
 
-PRF_CAV_01 = {
+IND_CAV_01 = {
 	name = "Cavalry Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "cavalry" }
 
@@ -223,15 +223,15 @@ PRF_CAV_01 = {
 	}
 }
 
-PRF_MOT_01 = {
+IND_MOT_01 = {
 	name = "Motorised Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "motorized" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { PRF_INF_01 }
+	link_numbering_with = { IND_INF_01 }
 
 	fallback_name = "%d. Motor Division"
 
@@ -274,15 +274,15 @@ PRF_MOT_01 = {
 	}
 }
 
-PRF_ARM_01 = {
+IND_ARM_01 = {
 	name = "Armoured Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { PRF_CAV_01 }
+	link_numbering_with = { IND_CAV_01 }
 
 	fallback_name = "%d. Armoured Division"
 
@@ -327,15 +327,15 @@ PRF_ARM_01 = {
 	}
 }
 
-PRF_MEC_01 = {
+IND_MEC_01 = {
 	name = "Mechanised Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "mechanized" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { PRF_CAV_01 }
+	link_numbering_with = { IND_CAV_01 }
 
 	fallback_name = "%d. Mechanised Division"
 
@@ -380,15 +380,15 @@ PRF_MEC_01 = {
 	}
 }
 
-PRF_GAR_01 = {
+IND_GAR_01 = {
 	name = "Garrison Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { PRF_INF_01 }
+	#link_numbering_with = { IND_INF_01 }
 
 	fallback_name = "%d. Defense Force"
 
@@ -450,15 +450,15 @@ PRF_GAR_01 = {
 	}
 }
 
-PRF_MIL_01 = {
+IND_MIL_01 = {
 	name = "Militia Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { PRF_INF_01 }
+	#link_numbering_with = { IND_INF_01 }
 
 	fallback_name = "%d. Police Division"
 
@@ -522,15 +522,15 @@ PRF_MIL_01 = {
 	}
 }
 
-PRF_MAR_01 = {
+IND_MAR_01 = {
 	name = "Marine Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "marine" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { PRF_GAR_01 }
+	#link_numbering_with = { IND_GAR_01 }
 
 	fallback_name = "%d. Marine Commando Div."
 
@@ -572,15 +572,15 @@ PRF_MAR_01 = {
 	}
 }
 
-PRF_MTN_01 = {
+IND_MTN_01 = {
 	name = "Mountain Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "mountaineers" }
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { PRF_INF_01 }
+	link_numbering_with = { IND_INF_01 }
 
 	fallback_name = "%d. Special Forces Div."
 
@@ -645,10 +645,10 @@ PRF_MTN_01 = {
 	}
 }
 
-PRF_PAR_01 = {
+IND_PAR_01 = {
 	name = "Airborne Divisions"
 
-	for_countries = { IND INC BIH PUN BAL BOM HYD KAS KHA MDR MYS ORI TRV }
+	for_countries = { IND INC BIH PUN BAL BOM HYD KAS MDR MYS ORI TRV }
 
 	division_types = { "paratrooper" }
 

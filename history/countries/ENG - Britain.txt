@@ -288,7 +288,15 @@ ENG_add_aircraft_variants = yes
 ENG_add_armour_variants = yes
 ENG_add_ships_variants = yes
 
-ELP = {
+# East-Indies has a navy
+# so we'll just give them ENG's variants
+BEA = {
+	inherit_technology = ENG
+	ENG_add_aircraft_variants = yes
+	ENG_add_armour_variants = yes
+	ENG_add_ships_variants = yes
+}
+ENP = {
 	inherit_technology = ENG
 	ENG_add_aircraft_variants = yes
 	ENG_add_armour_variants = yes
