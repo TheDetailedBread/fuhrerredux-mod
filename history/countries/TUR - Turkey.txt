@@ -1,13 +1,6 @@
 capital = 341
 
 oob = "TUR"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "TUR_naval_mtg"
-	else = {
-		set_naval_oob = "TUR_naval_legacy"
-	}
-}
 
 set_research_slots = 3
 
@@ -28,26 +21,33 @@ set_technology = {
 	infantry_weapons1 = 1
 	tech_support = 1
 	tech_mountaineers = 1
-	early_fighter = 1
-	CAS1 = 1
 	tech_recon = 1
 	gw_artillery = 1
 	basic_train = 1
 	fuel_silos = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "TUR_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "TUR_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "TUR_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -62,6 +62,17 @@ if = {
 		basic_torpedo = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_naval_oob = "TUR_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
 	}
 }
 
@@ -245,7 +256,6 @@ if = {
 recruit_character = TUR_Şefik_Husnu_Bey
 recruit_character = TUR_Hikmet_Bey
 recruit_character = TUR_Reşad_Fuad_Bey
-recruit_character = TUR_Hasan_Ali_Bey
 recruit_character = TUR_Abdulmecid_II
 recruit_character = TUR_Ali_Adnan_Bey
 recruit_character = TUR_Mehmed_Cavid_Bey

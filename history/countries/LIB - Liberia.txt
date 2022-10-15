@@ -8,6 +8,18 @@ set_technology = {
   basic_train = 1
 }
 
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
 set_convoys = 10
 set_stability = 0.49
 set_war_support = 0.33

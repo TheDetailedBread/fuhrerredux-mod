@@ -1,11 +1,57 @@
 capital = 96
 
 oob = "LIT"
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_naval_oob = "LIT_naval_mtg"
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		early_ship_hull_cruiser = 1
+		basic_cruiser_armor_scheme = 1
+	}
 	else = {
 		set_naval_oob = "LIT_naval_legacy"
+		set_technology = {
+			early_destroyer = 1
+			early_submarine = 1
+			early_heavy_cruiser = 1
+			transport = 1
+		}
 	}
 }
 
@@ -28,57 +74,9 @@ set_technology = {
 	tech_recon = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	
-	early_fighter = 1
-	early_bomber = 1
-	CAS1 = 1
-	early_submarine = 1
-	early_destroyer = 1
-	basic_destroyer = 1
-	early_light_cruiser = 1
-	early_heavy_cruiser = 1
-	early_battlecruiser = 1
 	transport = 1
 	fuel_silos = 1
   basic_train = 1
-}
-if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-  }
-}
-if = {
-  limit = { has_dlc = "No Step Back" }
-  set_technology = {
-    gwtank_chassis = 1
-  }
-}
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_submarine = 1
-		early_heavy_cruiser = 1
-		transport = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		early_ship_hull_cruiser = 1
-		basic_cruiser_armor_scheme = 1
-	}
 }
 
 set_convoys = 20
@@ -117,7 +115,7 @@ if = {
 	# Submarines #
 	create_equipment_variant = {
 		name = "Vytis Class"
-		type = ship_hull_submarine_2
+		type = ship_hull_submarine_1
 		name_group = POL_SS_HISTORICAL
 		parent_version = 0
 		modules = {

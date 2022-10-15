@@ -17,9 +17,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Jose_Cazorla_Maure_hog_van_hired }
 			}			
-			idea_token = SPA_Jose_Cazorla_Maure_hog_van
-			on_add = { set_country_flag = SPA_Jose_Cazorla_Maure_hog_van_hired }
-			on_remove = { clr_country_flag = SPA_Jose_Cazorla_Maure_hog_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Jose_Cazorla_Maure_hog_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Jose_Cazorla_Maure_hog_van_hired }
+			}
 			traits = {
 				vanguardist
 				hog_red_chairmen
@@ -44,9 +47,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Jose_Diaz_Ramos_hog_col_hired }
 			}			
-			idea_token = SPA_Jose_Diaz_Ramos_hog_col
-			on_add = { set_country_flag = SPA_Jose_Diaz_Ramos_hog_col_hired }
-			on_remove = { clr_country_flag = SPA_Jose_Diaz_Ramos_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Jose_Diaz_Ramos_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Jose_Diaz_Ramos_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_ambitious_union_boss
@@ -58,9 +64,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Jose_Diaz_Ramos_sec_col_hired }
 			}			
-			idea_token = SPA_Jose_Diaz_Ramos_sec_col
-			on_add = { set_country_flag = SPA_Jose_Diaz_Ramos_sec_col_hired }
-			on_remove = { clr_country_flag = SPA_Jose_Diaz_Ramos_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Jose_Diaz_Ramos_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Jose_Diaz_Ramos_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_prince_of_terror
@@ -85,9 +94,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Francisco_Largo_Caballero_hog_lib_hired }
 			}			
-			idea_token = SPA_Francisco_Largo_Caballero_hog_lib
-			on_add = { set_country_flag = SPA_Francisco_Largo_Caballero_hog_lib_hired }
-			on_remove = { clr_country_flag = SPA_Francisco_Largo_Caballero_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Francisco_Largo_Caballero_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Francisco_Largo_Caballero_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_backroom_backstabber
@@ -112,9 +124,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Juan_Negrin_hog_sde_hired }
 			}			
-			idea_token = SPA_Juan_Negrin_hog_sde
-			on_add = { set_country_flag = SPA_Juan_Negrin_hog_sde_hired }
-			on_remove = { clr_country_flag = SPA_Juan_Negrin_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Juan_Negrin_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Juan_Negrin_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_silent_workhorse
@@ -167,9 +182,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Buenaventura_Durruti_sec_col_hired }
 			}			
-			idea_token = SPA_Buenaventura_Durruti_sec_col
-			on_add = { set_country_flag = SPA_Buenaventura_Durruti_sec_col_hired }
-			on_remove = { clr_country_flag = SPA_Buenaventura_Durruti_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Buenaventura_Durruti_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Buenaventura_Durruti_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_crime_fighter
@@ -178,7 +196,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			idea_token = SPA_Buenaventura_Durruti_cos_col
 			traits = {
 				cos_school_of_mass_combat
 			}
@@ -186,7 +203,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			idea_token = SPA_Buenaventura_Durruti_carm_col
 			traits = {
 				carm_armoured_spearhead_doctrine
 			}
@@ -233,7 +249,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			idea_token = SPA_Enrique_Lister_Forjan_cos_van
 			traits = {
 				cos_school_of_fire_support
 			}
@@ -241,7 +256,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			idea_token = SPA_Enrique_Lister_Forjan_carm_van
 			traits = {
 				carm_elastic_defence_doctrine
 			}
@@ -269,9 +283,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Dolores_Ibarruri_hog_col_hired }
 			}			
-			idea_token = SPA_Dolores_Ibarruri_hog_col
-			on_add = { set_country_flag = SPA_Dolores_Ibarruri_hog_col_hired }
-			on_remove = { clr_country_flag = SPA_Dolores_Ibarruri_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Dolores_Ibarruri_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Dolores_Ibarruri_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_pragmatic_statesman
@@ -283,9 +300,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Dolores_Ibaurri_for_van_hired }
 			}			
-			idea_token = SPA_Dolores_Ibaurri_for_van
-			on_add = { set_country_flag = SPA_Dolores_Ibaurri_for_van_hired }
-			on_remove = { clr_country_flag = SPA_Dolores_Ibaurri_for_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Dolores_Ibaurri_for_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Dolores_Ibaurri_for_van_hired }
+			}
 			traits = {
 				vanguardist
 				for_ideological_crusader
@@ -297,9 +317,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Dolores_Ibaurri_sec_van_hired }
 			}			
-			idea_token = SPA_Dolores_Ibaurri_sec_van
-			on_add = { set_country_flag = SPA_Dolores_Ibaurri_sec_van_hired }
-			on_remove = { clr_country_flag = SPA_Dolores_Ibaurri_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Dolores_Ibaurri_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Dolores_Ibaurri_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_silent_lawyer
@@ -320,9 +343,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Andres_Nin_Perez_hog_col_hired }
 			}			
-			idea_token = SPA_Andres_Nin_Perez_hog_col
-			on_add = { set_country_flag = SPA_Andres_Nin_Perez_hog_col_hired }
-			on_remove = { clr_country_flag = SPA_Andres_Nin_Perez_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Andres_Nin_Perez_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Andres_Nin_Perez_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_happy_amateur
@@ -334,9 +360,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Andres_Nin_Perez_for_col_hired }
 			}			
-			idea_token = SPA_Andres_Nin_Perez_for_col
-			on_add = { set_country_flag = SPA_Andres_Nin_Perez_for_col_hired }
-			on_remove = { clr_country_flag = SPA_Andres_Nin_Perez_for_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Andres_Nin_Perez_for_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Andres_Nin_Perez_for_col_hired }
+			}
 			traits = {
 				collectivist
 				for_biased_intellectual
@@ -348,9 +377,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Andres_Nin_Perez_sec_col_hired }
 			}			
-			idea_token = SPA_Andres_Nin_Perez_sec_col
-			on_add = { set_country_flag = SPA_Andres_Nin_Perez_sec_col_hired }
-			on_remove = { clr_country_flag = SPA_Andres_Nin_Perez_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Andres_Nin_Perez_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Andres_Nin_Perez_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_efficient_sociopath
@@ -370,9 +402,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Santiago_Carrillo_Solares_hog_van_hired }
 			}			
-			idea_token = SPA_Santiago_Carrillo_Solares_hog_van
-			on_add = { set_country_flag = SPA_Santiago_Carrillo_Solares_hog_van_hired }
-			on_remove = { clr_country_flag = SPA_Santiago_Carrillo_Solares_hog_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Santiago_Carrillo_Solares_hog_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Santiago_Carrillo_Solares_hog_van_hired }
+			}
 			traits = {
 				vanguardist
 				hog_backroom_backstabber
@@ -392,9 +427,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Vicente_Uribe_Galdeano_hog_col_hired }
 			}			
-			idea_token = SPA_Vicente_Uribe_Galdeano_hog_col
-			on_add = { set_country_flag = SPA_Vicente_Uribe_Galdeano_hog_col_hired }
-			on_remove = { clr_country_flag = SPA_Vicente_Uribe_Galdeano_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Vicente_Uribe_Galdeano_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Vicente_Uribe_Galdeano_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_flamboyant_tough_guy
@@ -406,9 +444,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Vicente_Uribe_Galdeano_eco_col_hired }
 			}			
-			idea_token = SPA_Vicente_Uribe_Galdeano_eco_col
-			on_add = { set_country_flag = SPA_Vicente_Uribe_Galdeano_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Vicente_Uribe_Galdeano_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Vicente_Uribe_Galdeano_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Vicente_Uribe_Galdeano_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_balanced_budget_economy
@@ -429,9 +470,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Joaquin_Maurin_hog_lib_hired }
 			}			
-			idea_token = SPA_Joaquin_Maurin_hog_lib
-			on_add = { set_country_flag = SPA_Joaquin_Maurin_hog_lib_hired }
-			on_remove = { clr_country_flag = SPA_Joaquin_Maurin_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Joaquin_Maurin_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Joaquin_Maurin_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_charismatic_charmer
@@ -451,9 +495,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Juan_Garcia_Oliver_hog_lib_hired }
 			}			
-			idea_token = SPA_Juan_Garcia_Oliver_hog_lib
-			on_add = { set_country_flag = SPA_Juan_Garcia_Oliver_hog_lib_hired }
-			on_remove = { clr_country_flag = SPA_Juan_Garcia_Oliver_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Juan_Garcia_Oliver_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Juan_Garcia_Oliver_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_political_protege
@@ -465,9 +512,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Juan_Garcia_Oliver_sec_lib_hired }
 			}			
-			idea_token = SPA_Juan_Garcia_Oliver_sec_lib
-			on_add = { set_country_flag = SPA_Juan_Garcia_Oliver_sec_lib_hired }
-			on_remove = { clr_country_flag = SPA_Juan_Garcia_Oliver_sec_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Juan_Garcia_Oliver_sec_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Juan_Garcia_Oliver_sec_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				sec_health_and_safety
@@ -487,9 +537,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Angel_Pestana_Nunez_hog_lib_hired }
 			}			
-			idea_token = SPA_Angel_Pestana_Nunez_hog_lib
-			on_add = { set_country_flag = SPA_Angel_Pestana_Nunez_hog_lib_hired }
-			on_remove = { clr_country_flag = SPA_Angel_Pestana_Nunez_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Angel_Pestana_Nunez_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Angel_Pestana_Nunez_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_ambitious_union_boss
@@ -509,9 +562,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Anastasio_de_Gracia_Villarrubia_hog_sde_hired }
 			}			
-			idea_token = SPA_Anastasio_de_Gracia_Villarrubia_hog_sde
-			on_add = { set_country_flag = SPA_Anastasio_de_Gracia_Villarrubia_hog_sde_hired }
-			on_remove = { clr_country_flag = SPA_Anastasio_de_Gracia_Villarrubia_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Anastasio_de_Gracia_Villarrubia_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Anastasio_de_Gracia_Villarrubia_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_happy_amateur
@@ -523,9 +579,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Anastasio_de_Garcia_Villarrubia_eco_sde_hired }
 			}			
-			idea_token = SPA_Anastasio_de_Garcia_Villarrubia_eco_sde
-			on_add = { set_country_flag = SPA_Anastasio_de_Garcia_Villarrubia_eco_sde_hired }
-			on_remove = { clr_country_flag = SPA_Anastasio_de_Garcia_Villarrubia_eco_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Anastasio_de_Garcia_Villarrubia_eco_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Anastasio_de_Garcia_Villarrubia_eco_sde_hired }
+			}
 			traits = {
 				social_democrat
 				eco_devoted_monopoly_buster
@@ -545,9 +604,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Jesus_Hernandez_y_Tomas_for_van_hired }
 			}			
-			idea_token = SPA_Jesus_Hernandez_y_Tomas_for_van
-			on_add = { set_country_flag = SPA_Jesus_Hernandez_y_Tomas_for_van_hired }
-			on_remove = { clr_country_flag = SPA_Jesus_Hernandez_y_Tomas_for_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Jesus_Hernandez_y_Tomas_for_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Jesus_Hernandez_y_Tomas_for_van_hired }
+			}
 			traits = {
 				vanguardist
 				for_radical_among_moderates
@@ -559,9 +621,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Jesus_Hernandez_y_Tomas_eco_van_hired }
 			}			
-			idea_token = SPA_Jesus_Hernandez_y_Tomas_eco_van
-			on_add = { set_country_flag = SPA_Jesus_Hernandez_y_Tomas_eco_van_hired }
-			on_remove = { clr_country_flag = SPA_Jesus_Hernandez_y_Tomas_eco_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Jesus_Hernandez_y_Tomas_eco_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Jesus_Hernandez_y_Tomas_eco_van_hired }
+			}
 			traits = {
 				vanguardist
 				eco_resource_industrialist
@@ -585,9 +650,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Jordi_Arquer_for_lib_hired }
 			}			
-			idea_token = SPA_Jordi_Arquer_for_lib
-			on_add = { set_country_flag = SPA_Jordi_Arquer_for_lib_hired }
-			on_remove = { clr_country_flag = SPA_Jordi_Arquer_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Jordi_Arquer_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Jordi_Arquer_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_apologetic_clerk
@@ -607,9 +675,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Eduardo_de_Guzman_for_col_hired }
 			}			
-			idea_token = SPA_Eduardo_de_Guzman_for_col
-			on_add = { set_country_flag = SPA_Eduardo_de_Guzman_for_col_hired }
-			on_remove = { clr_country_flag = SPA_Eduardo_de_Guzman_for_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Eduardo_de_Guzman_for_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Eduardo_de_Guzman_for_col_hired }
+			}
 			traits = {
 				collectivist
 				for_moderate_among_radicals
@@ -629,9 +700,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Julian_Besteiro_Fernandez_for_lib_hired }
 			}			
-			idea_token = SPA_Julian_Besteiro_Fernandez_for_lib
-			on_add = { set_country_flag = SPA_Julian_Besteiro_Fernandez_for_lib_hired }
-			on_remove = { clr_country_flag = SPA_Julian_Besteiro_Fernandez_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Julian_Besteiro_Fernandez_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Julian_Besteiro_Fernandez_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_iron_fisted_brute
@@ -651,9 +725,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Julio_Alvarez_del_Vayo_for_lib_hired }
 			}			
-			idea_token = SPA_Julio_Alvarez_del_Vayo_for_lib
-			on_add = { set_country_flag = SPA_Julio_Alvarez_del_Vayo_for_lib_hired }
-			on_remove = { clr_country_flag = SPA_Julio_Alvarez_del_Vayo_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Julio_Alvarez_del_Vayo_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Julio_Alvarez_del_Vayo_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_relations_expert
@@ -673,9 +750,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Fernando_de_los_Rios_Urruti_for_lib_hired }
 			}			
-			idea_token = SPA_Fernando_de_los_Rios_Urruti_for_lib
-			on_add = { set_country_flag = SPA_Fernando_de_los_Rios_Urruti_for_lib_hired }
-			on_remove = { clr_country_flag = SPA_Fernando_de_los_Rios_Urruti_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Fernando_de_los_Rios_Urruti_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Fernando_de_los_Rios_Urruti_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_relations_expert
@@ -687,9 +767,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Fernando_de_los_Rios_Urruti_eco_lib_hired }
 			}			
-			idea_token = SPA_Fernando_de_los_Rios_Urruti_eco_lib
-			on_add = { set_country_flag = SPA_Fernando_de_los_Rios_Urruti_eco_lib_hired }
-			on_remove = { clr_country_flag = SPA_Fernando_de_los_Rios_Urruti_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Fernando_de_los_Rios_Urruti_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Fernando_de_los_Rios_Urruti_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_tank_proponent
@@ -709,9 +792,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Enrique_Castro_Delgado_eco_van_hired }
 			}			
-			idea_token = SPA_Enrique_Castro_Delgado_eco_van
-			on_add = { set_country_flag = SPA_Enrique_Castro_Delgado_eco_van_hired }
-			on_remove = { clr_country_flag = SPA_Enrique_Castro_Delgado_eco_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Enrique_Castro_Delgado_eco_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Enrique_Castro_Delgado_eco_van_hired }
+			}
 			traits = {
 				vanguardist
 				eco_planned_economy_proponent
@@ -731,9 +817,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Rafael_Vidiella_Franch_eco_col_hired }
 			}			
-			idea_token = SPA_Rafael_Vidiella_Franch_eco_col
-			on_add = { set_country_flag = SPA_Rafael_Vidiella_Franch_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Rafael_Vidiella_Franch_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Rafael_Vidiella_Franch_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Rafael_Vidiella_Franch_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_industrialiser
@@ -753,9 +842,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Miquel_Valdes_i_Valdes_eco_col_hired }
 			}			
-			idea_token = SPA_Miquel_Valdes_i_Valdes_eco_col
-			on_add = { set_country_flag = SPA_Miquel_Valdes_i_Valdes_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Miquel_Valdes_i_Valdes_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Miquel_Valdes_i_Valdes_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Miquel_Valdes_i_Valdes_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_administrative_genius
@@ -775,9 +867,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Federica_Monsteny_Mane_eco_col_hired }
 			}			
-			idea_token = SPA_Federica_Monsteny_Mane_eco_col
-			on_add = { set_country_flag = SPA_Federica_Monsteny_Mane_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Federica_Monsteny_Mane_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Federica_Monsteny_Mane_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Federica_Monsteny_Mane_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_infantry_proponent
@@ -797,9 +892,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Joaquin_Ascaso_Budria_eco_col_hired }
 			}			
-			idea_token = SPA_Joaquin_Ascaso_Budria_eco_col
-			on_add = { set_country_flag = SPA_Joaquin_Ascaso_Budria_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Joaquin_Ascaso_Budria_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Joaquin_Ascaso_Budria_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Joaquin_Ascaso_Budria_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_battlefield_support_proponent
@@ -825,9 +923,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Juan_Lopez_Sanchez_eco_col_hired }
 			}			
-			idea_token = SPA_Juan_Lopez_Sanchez_eco_col
-			on_add = { set_country_flag = SPA_Juan_Lopez_Sanchez_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Juan_Lopez_Sanchez_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Juan_Lopez_Sanchez_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Juan_Lopez_Sanchez_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_the_minister_for_everything
@@ -836,7 +937,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			idea_token = SPA_Juan_Lopez_Sanchez_cnav_col
 			traits = {
 				cnav_open_seas_doctrine
 			}
@@ -844,7 +944,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			idea_token = SPA_Juan_Lopez_Sanchez_cair_col
 			traits = {
 				cair_air_superiority_doctrine
 			}
@@ -869,9 +968,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Juan_Peiro_Belis_eco_col_hired }
 			}			
-			idea_token = SPA_Juan_Peiro_Belis_eco_col
-			on_add = { set_country_flag = SPA_Juan_Peiro_Belis_eco_col_hired }
-			on_remove = { clr_country_flag = SPA_Juan_Peiro_Belis_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Juan_Peiro_Belis_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Juan_Peiro_Belis_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_trade_proponent
@@ -880,7 +982,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_navy
-			idea_token = SPA_Juan_Peiro_Belis_cnav_col
 			traits = {
 				cnav_decisive_battle_doctrine
 			}
@@ -888,7 +989,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_air_force
-			idea_token = SPA_Juan_Peiro_Belis_cair_col
 			traits = {
 				cair_naval_aviation_doctrine
 			}
@@ -907,9 +1007,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Belamino_Tomas_Alvarez_eco_lib_hired }
 			}			
-			idea_token = SPA_Belamino_Tomas_Alvarez_eco_lib
-			on_add = { set_country_flag = SPA_Belamino_Tomas_Alvarez_eco_lib_hired }
-			on_remove = { clr_country_flag = SPA_Belamino_Tomas_Alvarez_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Belamino_Tomas_Alvarez_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Belamino_Tomas_Alvarez_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_industrial_chemist
@@ -929,9 +1032,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Felix_Gordon_Ordas_eco_lib_hired }
 			}			
-			idea_token = SPA_Felix_Gordon_Ordas_eco_lib
-			on_add = { set_country_flag = SPA_Felix_Gordon_Ordas_eco_lib_hired }
-			on_remove = { clr_country_flag = SPA_Felix_Gordon_Ordas_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Felix_Gordon_Ordas_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Felix_Gordon_Ordas_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_reformer
@@ -951,9 +1057,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Antonio_Mije_sec_van_hired }
 			}			
-			idea_token = SPA_Antonio_Mije_sec_van
-			on_add = { set_country_flag = SPA_Antonio_Mije_sec_van_hired }
-			on_remove = { clr_country_flag = SPA_Antonio_Mije_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Antonio_Mije_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Antonio_Mije_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_back_stabber
@@ -973,9 +1082,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Joaquin_Grimau_Garcia_sec_van_hired }
 			}			
-			idea_token = SPA_Joaquin_Grimau_Garcia_sec_van
-			on_add = { set_country_flag = SPA_Joaquin_Grimau_Garcia_sec_van_hired }
-			on_remove = { clr_country_flag = SPA_Joaquin_Grimau_Garcia_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Joaquin_Grimau_Garcia_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Joaquin_Grimau_Garcia_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_secret_police_chief
@@ -995,9 +1107,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Valentin_Gonzalez_Gonzalez_sec_van_hired }
 			}			
-			idea_token = SPA_Valentin_Gonzalez_Gonzalez_sec_van
-			on_add = { set_country_flag = SPA_Valentin_Gonzalez_Gonzalez_sec_van_hired }
-			on_remove = { clr_country_flag = SPA_Valentin_Gonzalez_Gonzalez_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Valentin_Gonzalez_Gonzalez_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Valentin_Gonzalez_Gonzalez_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_man_of_the_people
@@ -1017,9 +1132,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Angel_Galarza_y_Gago_sec_lib_hired }
 			}			
-			idea_token = SPA_Angel_Galarza_y_Gago_sec_lib
-			on_add = { set_country_flag = SPA_Angel_Galarza_y_Gago_sec_lib_hired }
-			on_remove = { clr_country_flag = SPA_Angel_Galarza_y_Gago_sec_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Angel_Galarza_y_Gago_sec_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Angel_Galarza_y_Gago_sec_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				sec_media_magnate
@@ -1039,9 +1157,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Antonio_Ortega_Gutierrez_sec_lib_hired }
 			}			
-			idea_token = SPA_Antonio_Ortega_Gutierrez_sec_lib
-			on_add = { set_country_flag = SPA_Antonio_Ortega_Gutierrez_sec_lib_hired }
-			on_remove = { clr_country_flag = SPA_Antonio_Ortega_Gutierrez_sec_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Antonio_Ortega_Gutierrez_sec_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Antonio_Ortega_Gutierrez_sec_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				sec_compassionate_gentleman
@@ -1061,9 +1182,12 @@ characters = {
 			available = {
 				hidden_trigger = { has_country_flag = SPA_Indalecio_Prieto_sec_sde_hired }
 			}			
-			idea_token = SPA_Indalecio_Prieto_sec_sde
-			on_add = { set_country_flag = SPA_Indalecio_Prieto_sec_sde_hired }
-			on_remove = { clr_country_flag = SPA_Indalecio_Prieto_sec_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = SPA_Indalecio_Prieto_sec_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SPA_Indalecio_Prieto_sec_sde_hired }
+			}
 			traits = {
 				social_democrat
 				sec_silent_lawyer
@@ -1080,7 +1204,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			idea_token = SPA_Emilio_Kleber_cos_van
 			traits = {
 				cos_school_of_manoeuvre
 			}
@@ -1096,7 +1219,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_staff
-			idea_token = SPA_Francisco_Ascaso_Budria_cos_col
 			traits = {
 				cos_school_of_psychology
 			}
@@ -1104,7 +1226,6 @@ characters = {
 		advisor = {
 			cost = 150
 			slot = chief_of_army
-			idea_token = SPA_Francisco_Ascaso_Budria_carm_col
 			traits = {
 				carm_guns_and_butter_doctrine
 			}

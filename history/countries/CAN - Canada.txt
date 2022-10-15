@@ -1,13 +1,74 @@
 capital = 276
 
 oob = "CAN"
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "CAN_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_air_oob = "CAN_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+    basic_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+  }
+	else  = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_naval_oob = "CAN_naval_mtg"
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_cruiser_armor_scheme = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
 	else = {
 		set_naval_oob = "CAN_naval_legacy"
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			early_carrier = 1
+			transport = 1
+		}
 	}
 }
+
 
 set_research_slots = 3
 set_convoys = 100
@@ -28,72 +89,14 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	tech_military_police = 1
- 	
 	gw_artillery = 1
-	
 	motorised_infantry = 1
-
-	early_fighter = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-
 	electronic_mechanical_engineering = 1
 	fuel_silos = 1
   basic_train = 1
 }
-if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-    basic_light_tank = 1
-  }
-}
-if = {
-  limit = { has_dlc = "No Step Back" }
-  set_technology = {
-    gwtank_chassis = 1
-    basic_light_tank_chassis = 1
-  }
-}
-
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		early_carrier = 1
-		transport = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		sonar = 1
-		smoke_generator = 1
-		basic_depth_charges = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		basic_cruiser_armor_scheme = 1
-		early_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		mtg_transport = 1
-	}
-}
 
 add_political_power = -52
-set_comsetic_tag = CAN_ENG
 
 add_ideas = {
 	party_pop_0_60

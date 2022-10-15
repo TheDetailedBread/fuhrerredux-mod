@@ -3,43 +3,49 @@ capital = 284
 oob = "NZL"
 
 # Starting tech
-
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	
 	gw_artillery = 1
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
-	early_fighter = 1
-	naval_bomber1 = 1
 	fuel_silos = 1
 	basic_train = 1
 }
+
 if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-  }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "NZL_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "NZL_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
 }
+
 if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
   }
-}
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -50,6 +56,13 @@ if = {
 		basic_torpedo = 1
 		basic_depth_charges = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			transport = 1
+		}
 	}
 }
 
@@ -84,16 +97,40 @@ set_popularities = {
   valkist = 2
 }
 
-### Ship Variants ###
-
-create_equipment_variant = {
-	name = "Leander Class"
-	type = light_cruiser_1
-	upgrades = {
-		ship_reliability_upgrade = 2
-		ship_engine_upgrade = 2
-		ship_gun_upgrade = 2
-		ship_anti_air_upgrade = 2
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Leander Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Danae Class"
+		type = ship_hull_cruiser_1
+		name_group = NZL_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
 	}
 }
 

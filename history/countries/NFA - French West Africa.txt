@@ -20,30 +20,19 @@ set_technology = {
 	electronic_mechanical_engineering = 1
 	fuel_silos = 1
 }
-if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-  }
-}
+
 if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
   }
-}
-
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		transport = 1
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -57,8 +46,14 @@ if = {
 		coastal_defense_ships = 1
 		mtg_transport = 1
 	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			transport = 1
+		}
+	}
 }
-
 add_ideas = {
 	NFA_pacification_of_africa
 	colonial_government

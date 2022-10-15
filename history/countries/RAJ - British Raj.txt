@@ -1,16 +1,5 @@
 capital = 439
 
-# Set province controls for units
-#set_province_controller = 1444
-#set_province_controller = 4953
-#set_province_controller = 10843
-#set_province_controller = 11955
-#set_province_controller = 11993
-#set_province_controller = 12480
-#set_province_controller = 7205
-#set_province_controller = 4245
-#set_province_controller = 2086
-
 oob = "RAJ"
 
 # Starting tech
@@ -20,20 +9,28 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-
-	early_fighter = 1
-	CAS1 = 1
 	fuel_silos = 1
 	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "RAJ_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "RAJ_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -46,6 +43,13 @@ if = {
 		basic_torpedo = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			transport = 1
+		}
 	}
 }
 

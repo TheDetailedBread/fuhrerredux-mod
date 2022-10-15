@@ -183,24 +183,10 @@ units = {
 		division_template = "National Militia"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.6
-
-	}
-
-}
-
-air_wings = {
-	### AHQ India
-	427 = {
-		### AHQ India -- Fairey Gordons, Battles
-		CAS_equipment_1 = {
-			owner = "RAJ"
-			amount = 100
-		}
 	}
 }
 
-instant_effect = {
-		
+instant_effect = {	
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
@@ -210,15 +196,4 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 100
 	}
-
-	add_equipment_production = {
-		equipment = {
-			type = CAS_equipment_1
-			creator = "RAJ" 
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 75
-	}
-
 }
