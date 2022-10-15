@@ -143,7 +143,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Ritter_von_Leeb_carm_pau
 			traits = {
 				carm_commando_doctrine
@@ -180,6 +180,14 @@ characters = {
 				hog_old_admiral
 			}
 		}
+		advisor = {
+			cost = 150
+			slot = air_chief
+			idea_token = GER_Hermann_Goring_cair_npo
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
 	}
 	GER_Adam_Dressler = {
 		name = "Adam Dressler"
@@ -199,6 +207,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/Portrait_GER_Gerd_von_Rundstedt_fx.png"
+				small = "gfx/interface/ministers/GER/GER_Gerd_von_Rundstedt.png"
 			}
 		}
 		field_marshal = {
@@ -213,12 +222,21 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 3
 		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = GER_Gerd_von_Rundstedt_cos_ade
+			traits = {
+				cos_school_of_fire_support
+			}
+		}
 	}
 	GER_Gunther_von_Kluge = {
 		name = "Günther von Kluge"
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/Portrait_GER_Gunther_von_Kluge_fx.png"
+				small = "gfx/interface/ministers/GER/GER_Gunther_von_Kluge.png"
 			}
 		}
 		field_marshal = {
@@ -232,6 +250,14 @@ characters = {
 			defense_skill = 4
 			planning_skill = 1
 			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = GER_Gunther_von_Kluge_cos_pau
+			traits = {
+				cos_school_of_mass_combat
+			}
 		}
 	}
 	GER_Walter_Model = {
@@ -261,6 +287,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/Portrait_GER_Friedrich_Paulus_fx.png"
+				small = "gfx/interface/ministers/GER/GER_Friedrich_Paulus.png"
 			}
 		}
 		corps_commander = {
@@ -275,12 +302,21 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 4
 		}
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = GER_Friedrich_Paulus_carm_sco
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
 	}
 	GER_Erwin_Rommel = {
 		name = "Erwin Rommel"
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/Portrait_GER_Erwin_Rommel_fx.png"
+				small = "gfx/interface/ministers/GER/GER_Erwin_Rommel.png"
 			}
 		}
 		corps_commander = {
@@ -296,6 +332,14 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = GER_Erwin_Rommel_carm_sco
+			traits = {
+				carm_elastic_defence_doctrine
+			}
 		}
 	}
 	GER_Erich_von_Manstein = {
@@ -322,7 +366,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = GER_Erich_von_Manstein_cos
 			traits = {
 				cos_school_of_manoeuvre
@@ -371,7 +415,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = GER_Erwin_von_Witzleben_cos
 			traits = {
 				cos_school_of_fire_support
@@ -379,7 +423,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Erwin_von_Witzleben_carm
 			traits = {
 				carm_doctrine_of_autonomy
@@ -543,7 +587,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = GER_Albert_Kesselring_cair
 			traits = {
 				cair_carpet_bombing_doctrine
@@ -699,7 +743,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Erich_Hoepner_carm
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -1306,6 +1350,7 @@ characters = {
 		portraits = {
 			navy = {
 				large = "gfx/leaders/GER/Portrait_GER_Wilhelm_Marschall_fx.png"
+				small = "gfx/interface/ministers/GER/GER_Wilhelm_Marschall.png"
 			}
 		}
 		navy_leader = {
@@ -1317,6 +1362,14 @@ characters = {
 			defense_skill = 1
 			maneuvering_skill = 3
 			coordination_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = navy_chief
+			idea_token = GER_Wilhelm_Marschall_cnav
+			traits = {
+				cnav_open_seas_doctrine
+			}
 		}
 	}
 	GER_Gunther_Lutjens = {
@@ -1936,7 +1989,7 @@ characters = {
 		}
     advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Walther_von_Brauchitsch_carm_pau
 			traits = {
 				carm_elastic_defence_doctrine
@@ -2868,7 +2921,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = GER_Hans_Speidel_cos_sco
 			traits = {
 				cos_school_of_psychology
@@ -2876,7 +2929,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Hans_Speidel_carm_sco
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -2892,7 +2945,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = GER_Adolf_Heusinger_cos_ade
 			traits = {
 				cos_school_of_mass_combat
@@ -2900,7 +2953,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Adolf_Heusinger_carm_ade
 			traits = {
 				carm_decisive_battle_doctrine
@@ -2929,7 +2982,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Werner_von_Blomberg_carm_pau
 			traits = {
 				cos_school_of_psychology
@@ -2946,7 +2999,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Heinz_Guderian_carm_ade
 			traits = {
 				carm_armoured_spearhead_doctrine
@@ -2962,7 +3015,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = GER_Ludwig_Beck_carm_ade
 			traits = {
 				carm_elastic_defence_doctrine
@@ -2979,7 +3032,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = GER_Erich_Kohler_cnav_mli
 			traits = {
 				cnav_open_seas_doctrine
@@ -2996,7 +3049,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = GER_Karl_Donitz_cnav_sco
 			traits = {
 				cnav_indirect_approach_doctrine
@@ -3022,7 +3075,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = GER_Erich_Raeder_cnav_pau
 			traits = {
 				cnav_power_projection_doctrine
@@ -3047,7 +3100,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = GER_Alfred_Bulowius_cair_sco
 			traits = {
 				cair_air_superiority_doctrine
@@ -3063,7 +3116,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = GER_Hermann_Kohl_cair_ade
 			traits = {
 				cair_battlefield_support_doctrine
