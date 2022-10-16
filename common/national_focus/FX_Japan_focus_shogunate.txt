@@ -284,7 +284,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = JAP_centralise_the_armed_forces
+	id = JAP_restore_military_authority
 	icon = GFX_goal_JAP_feudalism_returns
 	relative_position_id = JAP_kyujidai_doctrine
 	x = 2
@@ -292,7 +292,7 @@ shared_focus = {
 	prerequisite = { focus = JAP_restore_han_system }
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_centralise_the_armed_forces"
+		log = "[GetDateText]: [Root.GetName]: Focus JAP_restore_military_authority"
 		JAP_kyujidai_shinjidai_swap = yes
 	}
 }
@@ -302,7 +302,7 @@ shared_focus = {
 	relative_position_id = JAP_kyujidai_doctrine
 	x = 3
 	y = 3
-	prerequisite = { focus = JAP_centralise_the_armed_forces }
+	prerequisite = { focus = JAP_restore_military_authority }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_guilty_of_former_shogun"
