@@ -1132,10 +1132,21 @@ focus_tree = {
 		prerequisite = { focus = CRU_air_warriors }
 		relative_position_id = CRU_air_warriors
 		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
-				amount = 250
-				producer = GER
+			if = {
+				limit = { has_dlc_bba = yes }
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					amount = 250
+					producer = "GER"
+					version_name = "He 51"
+				}
+				else = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+						amount = 250
+						producer = GER
+					}
+				}
 			}
 			add_timed_idea = {
 				idea = CRU_aircraft_purchase
