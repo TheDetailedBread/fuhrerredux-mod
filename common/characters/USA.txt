@@ -675,7 +675,7 @@ characters = {
 			slot = high_command
 			idea_token = USA_Douglas_MacArthur_cos_sco
 			traits = {
-				cos_school_of_fire_support
+				cos_school_of_psychology
 			}
 		}
 	}
@@ -1785,7 +1785,7 @@ characters = {
 			slot = army_chief
 			idea_token = USA_Samuel_D_Sturgis_Jr_carm
 			traits = {
-				carm_armoured_spearhead_doctrine
+				carm_decisive_battle_doctrine
 			}
 		}
 	}
@@ -1981,7 +1981,6 @@ characters = {
 			slot = air_chief
 			idea_token = USA_Ira_Clarence_Eaker_cair
 			traits = {
-				
 				cair_carpet_bombing_doctrine
 			}
 		}
@@ -1998,7 +1997,6 @@ characters = {
 			slot = air_chief
 			idea_token = USA_James_Harold_Doolittle_cair
 			traits = {
-				
 				cair_vertical_envelopment_doctrine
 			}
 		}
@@ -2015,7 +2013,6 @@ characters = {
 			slot = air_chief
 			idea_token = USA_Joseph_Warren_Stilwell_cair
 			traits = {
-				
 				cair_the_red_baron
 			}
 		}
@@ -2032,7 +2029,6 @@ characters = {
 			slot = air_chief
 			idea_token = USA_Nathan_Bedford_Forrest_III_cair
 			traits = {
-				
 				cair_vertical_envelopment_doctrine
 			}
 		}
@@ -2106,6 +2102,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/USA/Portrait_USA_Lesley_McNair_fx.png"
+				small = "gfx/interface/ministers/USA/USA_Leslie_McNair.png"
 			}
 		}
 		field_marshal = {
@@ -2116,12 +2113,21 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 2
 		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = USA_Leslie_McNair_cos
+			traits = {
+				cos_school_of_fire_support
+			}
+		}
 	}
 	USA_George_S_Patton = {
 		name = "George S. Patton"
 		portraits = {
 			army = {
 				large = "gfx/leaders/NAR/Portrait_NAR_George_S_Patton.png"
+				small = "gfx/interface/ministers/NAR/NAR_George_Smith_Patton_Jr.png"
 			}
 		}
 		corps_commander = {
@@ -2132,12 +2138,21 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = USA_George_S_Patton_carm
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
 	}
 	USA_Mark_Clark = {
 		name = "Mark Clark"
 		portraits = {
 			army = {
 				large = "gfx/leaders/NEE/Portrait_NEE_Mark_Clark.png"
+				small = "gfx/interface/ministers/USA/USA_Mark_Clark.png"
 			}
 		}
 		corps_commander = {
@@ -2147,6 +2162,22 @@ characters = {
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 1
+		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = USA_Mark_Clark_cos
+			traits = {
+				cos_school_of_commando_operations
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = army_chief
+			idea_token = USA_Mark_Clark_carm
+			traits = {
+				carm_elastic_defence_doctrine
+			}
 		}
 	}
 	USA_Jonathan_Wainwright = {
@@ -2170,6 +2201,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/USA/Portrait_USA_Edwin_Harding.png"
+				small = "gfx/interface/ministers/USA/USA_Edwin_Harding.png"
 			}
 		}
 		corps_commander = {
@@ -2179,6 +2211,14 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
+		}
+		advisor = {
+			cost = 150
+			slot = high_command
+			idea_token = USA_Edwin_Harding_cos
+			traits = {
+				cos_school_of_mass_combat
+			}
 		}
 	}
 	USA_Leonard_Gerow = {
@@ -2362,6 +2402,7 @@ characters = {
 		portraits = {
 			navy = {
 				large = "gfx/leaders/USA/Portrait_USA_Harold_Rainsford_Stark_fx.png"
+				small = "gfx/interface/ministers/USA/USA_Harold_Rainsford_Stark.png"
 			}
 		}
 		navy_leader = {
@@ -2371,6 +2412,14 @@ characters = {
 			defense_skill = 2
 			maneuvering_skill = 2
 			coordination_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = navy_chief
+			idea_token = USA_Harold_Rainsford_Stark_cnav
+			traits = {
+				cnav_power_projection_doctrine
+			}
 		}
 	}
 	USA_Arleigh_Burke = {
@@ -2382,22 +2431,6 @@ characters = {
 		}
 		navy_leader = {
 			traits = { bold fleet_protector }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			maneuvering_skill = 1
-			coordination_skill = 1
-		}
-	}
-	USA_Charles_M_Cooke_Jr = {
-		name = "Charles M. Cooke Jr."
-		portraits = {
-			navy = {
-				large = "gfx/leaders/USA/Portrait_USA_Charles_M_Cooke_fx.png"
-			}
-		}
-		navy_leader = {
-			traits = { seawolf }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -2480,5 +2513,56 @@ characters = {
       maneuvering_skill = 1
       coordination_skill = 2
     }
+		advisor = {
+			cost = 150
+			slot = navy_chief
+			idea_token = USA_Harold_Rainsford_Stark_cnav
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
   }
+	USA_Alfred_Pride = {
+		name = "Alfred Pride"
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/Portrait_USA_Alfred_Pride.png"
+				small = "gfx/interface/ministers/USA/USA_Alfred_Pride.png"
+			}
+		}
+	}
+	USA_Charles_Maynard_Cooke_Jr = {
+		name = "Charles Maynard Cooke Jr."
+		portraits = {
+			navy = {
+				large = "gfx/leaders/USA/Portrait_USA_Charles_Maynard_Cooke_Jr_fx.png"
+				small = "gfx/interface/ministers/USA/USA_Charles_Maynard_Cooke_Jr.png"
+			}
+		}
+	}
+	USA_Daniel_Edward_Barbey = {
+		portraits = {
+			army = {
+				large = "gfx/leaders/USA/Portrait_USA_Daniel_Edward_Barbey.png"
+				small = "gfx/interface/ministers/USA/USA_Daniel_Edward_Barbey.png"
+			}
+		}
+	}
+	USA_Felix_Budwell_Stump = {
+		name = "Felix Budwell Stump"
+		portraits = {
+			navy = {
+				large = "gfx/leaders/USA/Portrait_USA_Felix_Budwell_Stump.png"
+				small = "gfx/interface/ministers/USA/USA_Felix_Budwell_Stump.png"
+			}
+		}
+	}
+	USA_Harry_Wilbur_Hill = {
+		portraits = {
+			navy = {
+				large = "gfx/leaders/USA/Portrait_USA_Harry_Wilbur_Hill.png"
+				small = "gfx/interface/ministers/USA_Harry_Wilbur_Hill.png"
+			}
+		}
+	}
 }

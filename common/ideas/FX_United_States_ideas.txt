@@ -211,6 +211,35 @@ ideas = {
         max_planning = 0.15
       }
     }
+		USA_liberty_ships_idea = {
+			allowed = { original_tag = USA }
+			picture = liberty_ships_focus
+			equipment_bonus = {	
+				convoy = { 
+					build_cost_ic = -0.25 
+					instant = yes 
+				}	
+			}
+		}
+		USA_maritime_industry_idea = {
+			allowed = { original_tag = USA }
+			picture = generic_coastal_defense_ships2
+			modifier = {
+				production_speed_naval_base_factor = 0.2
+				production_speed_dockyard_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
     USA_the_waves_idea = {
       allowed = { original_tag = USA }
       picture = generic_maritime_industry
@@ -218,6 +247,15 @@ ideas = {
         repair_speed_factor = 0.15
       }
     }
+		USA_america_rules_the_waves = {
+			allowed = { original_tag = USA }
+			picture = USA_ships
+			modifier = {
+				navy_max_range_factor = 0.20
+				naval_coordination = 0.05
+				naval_morale = 0.1
+			}
+		}
     USA_advisors = {
       picture = advisors_USA
       modifier = {
