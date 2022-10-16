@@ -256,8 +256,10 @@ country_event = {
 		add_popularity = { ideology = national_populist popularity = -0.03 }
 		hidden_effect = {
 			country_event = { id = estonia.12 days = 6 }
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_market_liberal
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+			remove_from_coalition = yes 
 			swap_ideas = {
 				remove_idea = EST_ineffective_government_and_unrest_idea
 				add_idea = EST_ineffective_government_and_unrest1_idea
@@ -456,8 +458,10 @@ country_event = {
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.05 }
 		hidden_effect = {
 			country_event = { id = estonia.12 days = 6 }
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_market_liberal
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+			remove_from_coalition = yes 
 			swap_ideas = {
 				remove_idea = EST_ineffective_government_and_unrest_idea
 				add_idea = EST_ineffective_government_and_unrest1_idea

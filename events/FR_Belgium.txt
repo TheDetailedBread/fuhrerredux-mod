@@ -293,7 +293,7 @@ country_event = { #Communist uprising
 	option = { #Crush the rebellion!
 		name = bel.8.a
 		ai_chance = { factor = 10 }
-		SP_NS_clear_coalition_effect = yes
+		end_coalition = yes 
 		hidden_effect = {
 			start_civil_war = {
 				ruling_party = authoritarian_democrat
@@ -320,7 +320,7 @@ country_event = { #Communist uprising
 	option = { #Play as communists
 		name = bel.8.b
 		ai_chance = { factor = 5 }
-		SP_NS_clear_coalition_effect = yes
+		end_coalition = yes
 		hidden_effect = {
 			set_capital = { state = 34 }
 			start_civil_war = {
@@ -434,7 +434,7 @@ country_event = { #What coalition to choose
 	option = { #BWP-KP coalition
 		name = bel.9.a
 		ai_chance = { factor = 60 }
-		SP_NS_clear_coalition_effect = yes
+		end_coalition = yes
 		hidden_effect = {
 			country_event = bel.10
 		}
@@ -444,7 +444,7 @@ country_event = { #What coalition to choose
 	option = { #KP-LP-PP coalition
 		name = bel.9.b
 		ai_chance = { factor = 30 }
-		SP_NS_clear_coalition_effect = yes
+		end_coalition = yes
 		hidden_effect = {
 			country_event = bel.11
 		}
@@ -454,7 +454,7 @@ country_event = { #What coalition to choose
 	option = { #VNV-Verdinaso-PB coalition
 		name = bel.9.c
 		ai_chance = { factor = 10 }
-		SP_NS_clear_coalition_effect = yes
+		end_coalition = yes
 		trigger = {
 			BEL = {
 				has_country_flag = BEL_Degrelle_shouts
