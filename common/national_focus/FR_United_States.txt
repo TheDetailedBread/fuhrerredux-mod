@@ -21,7 +21,7 @@ focus_tree = {
   focus = {
     id = USA_last_minute_reforms
     icon = GFX_goal_USA_new_deal
-    x = 3
+    x = 2
     y = 0
     cost = 2
     ai_will_do = { factor = 4000 }
@@ -30,6 +30,9 @@ focus_tree = {
     }
     completion_reward = {
       add_political_power = 100
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -41,6 +44,23 @@ focus_tree = {
     y = 1
     cost = 6
     ai_will_do = { factor = 1000 }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
+    available = {
+      PHI = {
+        exists = yes
+        is_subject_of = ROOT
+      }
+    }
+    bypass = {
+      PHI = {
+        OR = {
+          exists = no
+          is_subject = no
+        }
+      }
+    }
     prerequisite = { focus = USA_last_minute_reforms }
     relative_position_id = USA_last_minute_reforms
     completion_reward = {
@@ -62,13 +82,17 @@ focus_tree = {
     y = 1
     cost = 6
     ai_will_do = { factor = 800 }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
     prerequisite = { focus = USA_filipino_independence }
     relative_position_id = USA_filipino_independence
     completion_reward = {
       add_stability = 0.05
+      USA_decrease_effects_of_the_depression = yes
       hidden_effect = {
         country_event = { id = usa.29 days = 2 }
-        USA_decrease_effects_of_the_depression = yes
       }
     }
   }
@@ -86,6 +110,10 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Increase Corporate Taxes
@@ -101,6 +129,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Decrease Military Spending
@@ -115,6 +146,9 @@ focus_tree = {
     relative_position_id = USA_filipino_independence
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -132,6 +166,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Liquidate Failing Companies
@@ -147,6 +184,9 @@ focus_tree = {
     relative_position_id = USA_pass_the_economic_stimulus_bill
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -167,6 +207,9 @@ focus_tree = {
         country_event = { id = usa.30 days = 4 }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   ##########################################################
@@ -175,19 +218,25 @@ focus_tree = {
   focus = {
     id = USA_review_the_army
     icon = GFX_goal_USA_army
-    x = 12
+    x = 11
     y = 0
     cost = 6
+    available = {
+      has_capitulated = no
+    }
     completion_reward = {
       army_experience = 25
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
   # Speed of Armor
   focus = {
     id = USA_speed_of_armor
-    icon = GFX_goal_generic_army_tanks
-    x = -3
+    icon = GFX_goal_generic_army_mobile_warfare
+    x = -5
     y = 1
     cost = 6
     mutually_exclusive = {
@@ -204,12 +253,15 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Crushing Blow of Firepower
   focus = {
     id = USA_crushing_blow_of_firepower
-    icon = GFX_goal_panzerwaffe
+    icon = GFX_goal_generic_army_superior_firepower
     x = -1
     y = 1
     cost = 6
@@ -227,12 +279,15 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Importance of Planning
   focus = {
     id = USA_importance_of_planning
-    icon = GFX_goal_generic_position_armies
+    icon = GFX_goal_generic_army_grand_battleplan
     x = 1 
     y = 1
     cost = 6
@@ -250,13 +305,16 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Superiority in Numbers
   focus = {
     id = USA_superiority_in_numbers
-    icon = GFX_goal_conscription
-    x = 3
+    icon = GFX_goal_generic_army_mass_assault
+    x = 4
     y = 1
     cost = 6
     mutually_exclusive = {
@@ -273,23 +331,29 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
   }
 
   # Expanding Motorized Divisions
   focus = {
     id = USA_expanding_motorized_divisions
     icon = GFX_goal_generic_army_motorized
-    x = -2
+    x = -1
     y = 1
     cost = 6
     prerequisite = { focus = USA_speed_of_armor }
     relative_position_id = USA_speed_of_armor
     completion_reward = {
       add_equipment_to_stockpile = {
-        type = motorized_equipment_1
+        type = motorized_equipment
         amount = 1000
         producer = ROOT
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -297,11 +361,11 @@ focus_tree = {
   focus = {
     id = USA_tank_research_prioritization
     icon = GFX_goal_double_research
-    x = 2
+    x = -1
     y = 1
     cost = 6
-    prerequisite = { focus = USA_decrease_military_spending }
-    relative_position_id = USA_decrease_military_spending
+    prerequisite = { focus = USA_expanding_motorized_divisions }
+    relative_position_id = USA_expanding_motorized_divisions
     completion_reward = {
       add_tech_bonus = {
         category = armor
@@ -309,19 +373,28 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Experimental Tank Divisions
   focus = {
     id = USA_experimental_tank_divisions
     icon = GFX_goal_American_Armor
-    x = -1
+    x = 0
     y = 2
     cost = 6
     prerequisite = { focus = USA_speed_of_armor }
     relative_position_id = USA_speed_of_armor
     completion_reward = {
-      load_oob = "USA_tanks"
+      custom_effect_tooltip = USA_experimental_tank_divisions_tt
+      hidden_effect = {
+        load_oob = "USA_tanks"
+      }
+    }
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
     }
   }
 
@@ -329,7 +402,7 @@ focus_tree = {
   focus = {
     id = USA_further_tank_development
     icon = GFX_goal_generic_army_tanks2
-    x = 0
+    x = 1
     y = 1
     cost = 6
     prerequisite = { focus = USA_tank_research_prioritization }
@@ -342,13 +415,16 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Tank Production Initiatives
   focus = {
     id = USA_tank_production_initiatives
     icon = GFX_focus_generic_tank_production
-    x = 0
+    x = 1
     y = 1
     cost = 6
     prerequisite = { focus = USA_experimental_tank_divisions }
@@ -356,6 +432,9 @@ focus_tree = {
     relative_position_id = USA_experimental_tank_divisions
     completion_reward = {
       add_ideas = USA_tank_production
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -375,23 +454,86 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
-  # Expand the Engineer Corps
+  # Defense Contractors
   focus = {
-    id = USA_expand_the_engineer_corps
-    icon = GFX_goal_generic_construction2
-    x = 0
-    y = 2
+    id = USA_defense_contractors
+    icon = GFX_goal_generic_construct_mil_factory
+    x = -3
+    y = 1
     cost = 6
-    prerequisite = { focus = USA_crushing_blow_of_firepower }
+    available = {
+      has_capitulated = no
+    }
+    prerequisite = {
+      focus = USA_crushing_blow_of_firepower
+      focus = USA_speed_of_armor
+    }
     relative_position_id = USA_crushing_blow_of_firepower
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+    }
     completion_reward = {
-      add_tech_bonus = {
-        category = engineers_tech
-        bonus = 1.0
-        uses = 1
+      random_owned_controlled_state = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
       }
+      random_owned_controlled_state = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
+      }
+    }
+  }
+
+  # American Auto Industry
+  focus = {
+    id = USA_american_auto_industry
+    icon = GFX_goal_USA_auto_industry
+    x = 1
+    y = 1
+    available = {
+      has_capitulated = no
+    }
+    prerequisite = {
+      focus = USA_artillery_modernization
+      focus = USA_defense_contractors
+    }
+    relative_position_id = USA_defense_contractors
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+    }
+    completion_reward = {
+      add_ideas = USA_american_auto_industry_idea
     }
   }
 
@@ -403,17 +545,19 @@ focus_tree = {
     y = 2
     cost = 6
     prerequisite = { focus = USA_artillery_modernization }
-    prerequisite = { focus = USA_expand_the_engineer_corps }
     relative_position_id = USA_artillery_modernization
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+    }
     completion_reward = {
       add_ideas = USA_weapons_manufacturing
     }
   }
 
-  # Reconaissance Improvements
+  # Rifle Improvements
   focus = {
-    id = USA_recon_improvements
-    icon = GFX_goal_radio
+    id = USA_rifle_improvements
+    icon = GFX_goal_generic_military_equipment
     x = -1
     y = 1
     cost = 6
@@ -422,6 +566,51 @@ focus_tree = {
       focus = USA_importance_of_planning
     }
     relative_position_id = USA_importance_of_planning
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
+    completion_reward = {
+      add_tech_bonus = {
+        category = infantry_weapons
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Expand the Engineer Corps
+  focus = {
+    id = USA_expand_the_engineer_corps
+    icon = GFX_goal_generic_construction2
+    x = -1
+    y = 1
+    cost = 6
+    prerequisite = { focus = USA_rifle_improvements }
+    relative_position_id = USA_rifle_improvements
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
+    completion_reward = {
+      add_tech_bonus = {
+        category = engineers_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+  }
+
+  # Reconaissance Improvements
+  focus = {
+    id = USA_recon_improvements
+    icon = GFX_goal_radio
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = USA_rifle_improvements }
+    relative_position_id = USA_rifle_improvements
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
     completion_reward = {
       add_tech_bonus = {
         category = recon_tech
@@ -439,8 +628,11 @@ focus_tree = {
     y = 2
     cost = 6
     prerequisite = { focus = USA_importance_of_planning }
-    prerequisite = { focus = USA_recon_improvements }
+    prerequisite = { focus = USA_rifle_improvements }
     relative_position_id = USA_importance_of_planning
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
     completion_reward = {
       add_ideas = USA_army_training
     }
@@ -458,8 +650,49 @@ focus_tree = {
       focus = USA_superiority_in_numbers
     }
     relative_position_id = USA_importance_of_planning
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
     completion_reward = {
       add_ideas = USA_efficient_command_structure
+    }
+  }
+
+  # Expand West Point
+  focus = {
+    id = USA_expand_west_point
+    icon = GFX_goal_USA_army_cap
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = USA_reform_the_command_structure }
+    relative_position_id = USA_reform_the_command_structure
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
+    completion_reward = {
+      add_ideas = USA_expanded_officer_schools
+    }
+  }
+
+  # Army Rangers
+  focus = {
+    id = USA_army_rangers
+    icon = GFX_goal_generic_special_forces
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = USA_reform_the_command_structure }
+    relative_position_id = USA_reform_the_command_structure
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
+    completion_reward = {
+      add_tech_bonus = {
+        category = cat_special_units
+        bonus = 1.0
+        uses = 2
+      }
     }
   }
 
@@ -468,12 +701,33 @@ focus_tree = {
     id = USA_recruitment_campaigns
     icon = GFX_goal_army_guy_2
     x = 0
-    y = 2
+    y = 1
     cost = 6
     prerequisite = { focus = USA_superiority_in_numbers }
     relative_position_id = USA_superiority_in_numbers
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+      FOCUS_FILTER_MANPOWER
+    }
     completion_reward = {
       add_manpower = 10000
+      random_owned_controlled_state = {
+        if = {
+          limit = {
+            free_building_slots = {
+              building = arms_factory
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            type = arms_factory
+            level = 2
+            instant_build = yes
+          }
+        }
+      }
     }
   }
 
@@ -482,16 +736,58 @@ focus_tree = {
     id = USA_logistics_improvements
     icon = GFX_goal_generic_support_equipment
     x = 0
-    y = 1
+    y = 2
     cost = 6
     prerequisite = { focus = USA_recruitment_campaigns }
     relative_position_id = USA_recruitment_campaigns
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
     completion_reward = {
       add_tech_bonus = {
         category = logistics_tech
         bonus = 1.0
         uses = 1
       }
+    }
+  }
+
+  # Refine our Tactics
+  focus = {
+    id = USA_refine_our_tactics
+    icon = GFX_goal_generic_position_armies
+    x = 2
+    y = 1
+    cost = 6
+    prerequisite = { focus = USA_superiority_in_numbers }
+    relative_position_id = USA_superiority_in_numbers
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = land_doctrine
+        cost_reduction = 0.75
+        uses = 2
+      }
+    }
+  }
+
+  # Women's Army Corps
+  focus = {
+    id = USA_womens_army_corps
+    icon = GFX_IRE_women_pilots
+    x = 1
+    y = 2
+    cost = 6
+    prerequisite = { focus = USA_superiority_in_numbers }
+    relative_position_id = USA_superiority_in_numbers
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+      FOCUS_FILTER_MANPOWER
+    }
+    completion_reward = {
+      add_ideas = USA_womens_army_corps_idea
     }
   }
 
@@ -509,6 +805,9 @@ focus_tree = {
       focus = USA_logistics_improvements
     }
     relative_position_id = USA_modernize_training
+    search_filters = {
+      FOCUS_FILTER_ARMY_BONUS
+    }
     completion_reward = {
       remove_ideas = USA_failed_offensive
     }
@@ -520,11 +819,17 @@ focus_tree = {
   focus = {
     id = USA_air_force_debate
     icon = GFX_goal_generic_air_command
-    x = 19
+    x = 21
     y = 0
     cost = 6
+    available = {
+      has_capitulated = no
+    }
     completion_reward = {
       country_event = usa.3
+    }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
     }
   }
 
@@ -532,13 +837,18 @@ focus_tree = {
   focus = {
     id = USA_create_the_usaf
     icon = GFX_goal_USA_airforce
-    x = -1
+    x = 1
     y = 1
     cost = 6
     available = {
       custom_trigger_tooltip = {
-        tooltip = unlocked_later
+        tooltip = USA_created_the_usaf_tt
         always = no
+      }
+    }
+    bypass = {
+      hidden_trigger = {
+        has_country_flag = USA_created_the_usaf
       }
     }
     mutually_exclusive = { focus = USA_expand_the_usaac }
@@ -553,13 +863,18 @@ focus_tree = {
   focus = {
     id = USA_expand_the_usaac
     icon = GFX_goal_USA_usaac
-    x = 1
+    x = -1
     y = 1
     cost = 6
     available = {
       custom_trigger_tooltip = {
-        tooltip = unlocked_later
+        tooltip = USA_expanded_the_usaac_tt
         always = no
+      }
+    }
+    bypass = {
+      hidden_trigger = {
+        has_country_flag = USA_expanded_the_usaac
       }
     }
     mutually_exclusive = { focus = USA_create_the_usaf }
@@ -570,39 +885,27 @@ focus_tree = {
     }
   }
 
-  # Carpet Bombing Doctrine
+  # Fighter Modernization
   focus = {
-    id = USA_carpet_bombing_doctrine
-    icon = GFX_goal_bombs_away
-    x = -1 
-    y = 1 
-    cost = 6
-    prerequisite = { focus = USA_create_the_usaf }
-    relative_position_id = USA_create_the_usaf
-    completion_reward = {
-      add_doctrine_cost_reduction = {
-        category = cat_strategic_destruction
-        cost_reduction = 1.0
-        uses = 1
-      }
-    }
-  }
-
-  # New Bombers
-  focus = {
-    id = USA_new_bombers
-    icon = GFX_goal_generic_air_bomber
+    id = USA_fighter_modernization
+    icon = GFX_goal_generic_air_fighter2_new
     x = 0
-    y = 1
+    y = 2
     cost = 6
-    prerequisite = { focus = USA_carpet_bombing_doctrine }
-    relative_position_id = USA_carpet_bombing_doctrine
+    prerequisite = { 
+      focus = USA_create_the_usaf
+      focus = USA_expand_the_usaac 
+    }
+    relative_position_id = USA_air_force_debate
     completion_reward = {
       add_tech_bonus = {
-        category = tactical_bomber
+        category = light_fighter
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -610,7 +913,7 @@ focus_tree = {
   focus = {
     id = USA_army_support_doctrine
     icon = GFX_goal_generic_air_doctrine
-    x = 1
+    x = -1
     y = 1
     cost = 6
     prerequisite = { focus = USA_expand_the_usaac }
@@ -622,13 +925,16 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
   }
 
   # New CAS
   focus = {
     id = USA_new_cas
     icon = GFX_goal_generic_CAS
-    x = 0
+    x = -1
     y = 1
     cost = 6
     prerequisite = { focus = USA_army_support_doctrine }
@@ -640,56 +946,64 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
-  # The Screaming Eagles
+  # New Bombers
   focus = {
-    id = USA_the_screaming_eagles
-    icon = GFX_goal_USA_screaming_eagles
+    id = USA_new_bombers
+    icon = GFX_goal_generic_air_bomber
     x = 1
-    y = 2
-    cost = 6
-    prerequisite = {
-      focus = USA_create_the_usaf
-      focus = USA_expand_the_usaac
-    }
-    relative_position_id = USA_create_the_usaf
-    completion_reward = {
-      add_tech_bonus = {
-        category = para_tech
-        bonus = 1.0
-        uses = 1
-      }
-    }
-  }
-
-  # Fighter Modernization
-  focus = {
-    id = USA_fighter_modernization
-    icon = GFX_goal_generic_air_fighter
-    x = 0
     y = 1
     cost = 6
-    prerequisite = { focus = USA_the_screaming_eagles }
-    relative_position_id = USA_the_screaming_eagles
+    prerequisite = { focus = USA_army_support_doctrine }
+    relative_position_id = USA_army_support_doctrine
     completion_reward = {
       add_tech_bonus = {
-        category = light_fighter
+        category = tactical_bomber
         bonus = 1.0
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
+
+  # Carpet Bombing Doctrine
+  focus = {
+    id = USA_carpet_bombing_doctrine
+    icon = GFX_goal_bombs_away
+    x = 1
+    y = 1 
+    cost = 6
+    prerequisite = { focus = USA_create_the_usaf }
+    relative_position_id = USA_create_the_usaf
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        category = cat_strategic_destruction
+        cost_reduction = 1.0
+        uses = 1
+      }
+    }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
+  }
+
+  
   # Strategic Bombers
   focus = {
     id = USA_strategic_bombers
     icon = GFX_goal_generic_occupy_start_war
-    x = 1
-    y = 2
+    x = -1
+    y = 1
     cost = 6
-    prerequisite = { focus = USA_the_screaming_eagles }
-    relative_position_id = USA_the_screaming_eagles
+    prerequisite = { focus = USA_carpet_bombing_doctrine }
+    relative_position_id = USA_carpet_bombing_doctrine
     completion_reward = {
       add_tech_bonus = {
         category = cat_strategic_bomber
@@ -697,17 +1011,41 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
+  }
+
+  # Heavy Escorts
+  focus = {
+    id = USA_heavy_escorts
+    icon = GFX_focus_usa_escort_fighters
+    x = 1
+    y = 1
+    cost = 6
+    prerequisite = { focus = USA_carpet_bombing_doctrine }
+    relative_position_id = USA_carpet_bombing_doctrine
+    completion_reward = {
+      add_tech_bonus = {
+        category = cat_heavy_fighter
+        bonus = 1.0
+        uses = 1
+      }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Air Bases
   focus = {
     id = USA_air_bases
-    icon = GFX_goal_generic_air_production
+    icon = GFX_goal_generic_airports
     x = -2
-    y = 1
+    y = 2
     cost = 6
-    prerequisite = { focus = USA_the_screaming_eagles }
-    relative_position_id = USA_the_screaming_eagles
+    prerequisite = { focus = USA_fighter_modernization }
+    relative_position_id = USA_fighter_modernization
     completion_reward = {
       random_owned_controlled_state = {
         if = {
@@ -725,6 +1063,9 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+    }
   }
 
   # Air Defenses
@@ -732,26 +1073,109 @@ focus_tree = {
     id = USA_air_defenses
     icon = GFX_focus_generic_air_defense
     x = 2
+    y = 2
+    cost = 6
+    prerequisite = { focus = USA_fighter_modernization }
+    relative_position_id = USA_fighter_modernization
+    completion_reward = {
+      if = {
+        limit = {
+          NOT = { has_tech = interwar_antiair }
+        }
+        set_technology = {
+          interwar_antiair = 1
+        }
+      }
+
+      if = {
+        limit = { has_tech = interwar_antiair }
+        random_owned_controlled_state = {
+          if = {
+            limit = {
+              free_building_slots = {
+                building = anti_air_building
+                size > 1
+              }
+            }
+            add_building_construction = {
+              type = anti_air_building
+              level = 2
+              instant_build = yes
+            }
+          }
+        }
+      }
+    }
+    search_filters = {
+      FOCUS_FILTER_AIRFORCE_BONUS
+      FOCUS_FILTER_RESEARCH
+    }
+  }
+
+  # The Screaming Eagles
+  focus = {
+    id = USA_the_screaming_eagles
+    icon = GFX_goal_USA_screaming_eagles
+    x = 0
+    y = 2
+    cost = 6
+    prerequisite = { focus = USA_fighter_modernization }
+    relative_position_id = USA_fighter_modernization
+    completion_reward = {
+      add_tech_bonus = {
+        category = para_tech
+        bonus = 1.0
+        uses = 1
+      }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
+  }
+
+  # RADAR Programs
+  focus = {
+    id = USA_radar_programs
+    icon = GFX_goal_generic_radar
+    x = -1
     y = 1
     cost = 6
     prerequisite = { focus = USA_the_screaming_eagles }
     relative_position_id = USA_the_screaming_eagles
     completion_reward = {
-      random_owned_controlled_state = {
-        if = {
-          limit = {
-            free_building_slots = {
-              building = anti_air_building
-              size > 1
-            }
-          }
-          add_building_construction = {
-            type = anti_air_building
-            level = 2
-            instant_build = yes
-          }
-        }
+      add_tech_bonus = {
+        category = radar_tech
+        bonus = 0.75
+        uses = 2
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
+  }
+
+  # Fund Oppenheimer's Research
+  focus = {
+    id = USA_fund_oppenheimers_research
+    icon = GFX_goal_nuclear
+    x = 1
+    y = 1
+    cost = 6
+    available = {
+      has_capitulated = no
+      is_subject = no
+    }
+    prerequisite = { focus = USA_the_screaming_eagles }
+    relative_position_id = USA_the_screaming_eagles
+    completion_reward = {
+      add_tech_bonus = {
+        category = nuclear
+        bonus = 1.0
+        uses = 1
+      }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -1353,7 +1777,7 @@ focus_tree = {
   focus = {
     id = USA_elections_of_1936
     icon = GFX_goal_USA_elections
-    x = 28
+    x = 31
     y = 0
     cost = 0
     ai_will_do = { factor = 2000 }
@@ -1367,6 +1791,9 @@ focus_tree = {
     }
     completion_reward = {
       custom_effect_tooltip = USA_elections_of_1936_tt
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1394,6 +1821,9 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = USA_president_long_tt
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # President Roosevelt
@@ -1419,6 +1849,9 @@ focus_tree = {
     relative_position_id = USA_elections_of_1936
     completion_reward = {
       custom_effect_tooltip = USA_president_roosevelt_tt
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1446,6 +1879,9 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = USA_president_landon_tt
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # President Garner
@@ -1472,6 +1908,9 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = USA_president_garner_tt
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Start Welfare for the Poor
@@ -1486,6 +1925,9 @@ focus_tree = {
     relative_position_id = USA_president_long
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1502,6 +1944,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Secure Workers' Rights
@@ -1515,6 +1960,10 @@ focus_tree = {
     relative_position_id = USA_president_long
     completion_reward = {
       add_ideas = USA_workers_rights
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -1535,6 +1984,9 @@ focus_tree = {
       hidden_effect = {
         country_event = { id = usa.47 days = 14 }
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -1570,6 +2022,9 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Free Basic Education
@@ -1583,6 +2038,9 @@ focus_tree = {
     relative_position_id = USA_share_our_wealth
     completion_reward = {
       add_research_slot = 1
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -1600,6 +2058,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # New Industries
@@ -1615,6 +2076,9 @@ focus_tree = {
     relative_position_id = USA_share_our_wealth 
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -1634,6 +2098,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Agricultural Adjustment Act
@@ -1648,6 +2115,9 @@ focus_tree = {
     relative_position_id = USA_tax_reforms
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1666,6 +2136,9 @@ focus_tree = {
         bonus = 1.0
         uses = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
     }
   }
 
@@ -1690,6 +2163,9 @@ focus_tree = {
         add_extra_state_building_slots = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Federal Pensions Reform
@@ -1705,6 +2181,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Increase Tariffs
@@ -1719,6 +2198,9 @@ focus_tree = {
     relative_position_id = USA_president_roosevelt
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -1738,6 +2220,9 @@ focus_tree = {
         country_event = { id = usa.46 months = 3 }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Compact with the Workers
@@ -1751,6 +2236,9 @@ focus_tree = {
     relative_position_id = USA_president_roosevelt
     completion_reward = {
       add_ideas = USA_worker_agreements
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -1769,6 +2257,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Education for All
@@ -1786,6 +2277,9 @@ focus_tree = {
     completion_reward = {
       add_research_slot = 1
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Bridge the Racial Gap
@@ -1800,6 +2294,9 @@ focus_tree = {
     relative_position_id = USA_education_for_all
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -1844,6 +2341,9 @@ focus_tree = {
         add_extra_state_building_slots = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Public Works Administration
@@ -1857,6 +2357,10 @@ focus_tree = {
     relative_position_id = USA_develop_the_rural_regions
     completion_reward = {
       add_ideas = USA_public_works
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -1875,6 +2379,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Hydroelectric Conquest
@@ -1888,6 +2395,10 @@ focus_tree = {
     relative_position_id = USA_develop_the_rural_regions
     completion_reward = {
       unlock_decision_category_tooltip = USA_hydroelectric
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -1905,6 +2416,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Increase Public Salaries
@@ -1919,6 +2433,9 @@ focus_tree = {
     relative_position_id = USA_president_landon
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -1938,6 +2455,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Lower the Income Tax
@@ -1954,6 +2474,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Private Partnerships
@@ -1969,6 +2492,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Ensure Press Freedoms
@@ -1983,6 +2509,9 @@ focus_tree = {
     completion_reward = {
       add_stability = 0.05
       add_war_support = 0.05
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -2001,6 +2530,9 @@ focus_tree = {
     completion_reward = {
       add_political_power = 150
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Privatization of Services
@@ -2015,6 +2547,9 @@ focus_tree = {
     relative_position_id = USA_bureaucratic_reforms
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -2037,6 +2572,9 @@ focus_tree = {
         uses = 1
       }
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Review the Anti-Trust Laws
@@ -2052,6 +2590,9 @@ focus_tree = {
     relative_position_id = USA_president_garner
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -2071,6 +2612,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
     }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
+    }
   }
 
   # Medical Emergency Fund
@@ -2086,6 +2630,9 @@ focus_tree = {
     completion_reward = {
       USA_decrease_effects_of_malnourishment = yes
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Morality and Values
@@ -2100,6 +2647,9 @@ focus_tree = {
     completion_reward = {
       add_stability = 0.05
       add_war_support = 0.05
+    }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
     }
   }
 
@@ -2118,6 +2668,9 @@ focus_tree = {
         country_event = { id = usa.36 days = 6 }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
+    }
   }
 
   # Centers for Higher Learning
@@ -2132,6 +2685,9 @@ focus_tree = {
     completion_reward = {
       add_research_slot = 1
     }
+    search_filters = {
+      FOCUS_FILTER_RESEARCH
+    }
   }
 
   # Construction Subsidies
@@ -2145,6 +2701,9 @@ focus_tree = {
     relative_position_id = USA_morality_and_values
     completion_reward = {
       add_ideas = USA_construction_subsidies
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -2168,6 +2727,9 @@ focus_tree = {
         }
         add_extra_state_building_slots = 1
       }
+    }
+    search_filters = {
+      FOCUS_FILTER_PRODUCTION
     }
   }
 
@@ -2196,6 +2758,9 @@ focus_tree = {
         }
       }
     }
+    search_filters = {
+      FOCUS_FILTER_POLITICAL
+    }
   }
 
   # Fight Inflation Struggles
@@ -2210,6 +2775,9 @@ focus_tree = {
     relative_position_id = USA_construction_subsidies
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -2227,6 +2795,9 @@ focus_tree = {
     relative_position_id = USA_limit_union_activities
     completion_reward = {
       USA_decrease_effects_of_the_depression = yes
+    }
+    search_filters = {
+      FOCUS_FILTER_ECONOMIC_RECOVERY
     }
   }
 
@@ -2639,7 +3210,7 @@ focus_tree = {
 	# Federal Bureau of Investigation
 	focus = {
 		id = USA_use_the_fbi
-		icon = GFX_goal_secret_agents
+		icon = GFX_goal_USA_directors_boys
 		x = 0
 		y = 1
 		cost = 6
