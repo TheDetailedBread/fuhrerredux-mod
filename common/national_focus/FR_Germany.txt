@@ -9060,11 +9060,21 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = GER_air_bases }
-		mutually_exclusive = {	focus = GER_goring_plan }
+		mutually_exclusive = { focus = GER_goring_plan }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_richtofen_plan"
 			set_country_flag = GER_picked_richthofen
-			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 300 }
+			if = {
+				limit = { has_dlc_bba = yes }
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_1
+					variant_name = "Bf 109 D"
+					amount = 300
+				}
+				else = {
+					add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 300 }
+				}
+			}
 		}
 	}
 	focus = {
@@ -9095,7 +9105,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_goring_plan"
 			set_country_flag = GER_picked_goring
-			add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = 300 }
+			if = {
+				limit = { has_dlc_bba = yes }
+				add_equipment_to_stockpile = {
+					type = medium_plane_airframe_1
+					variant_name = "He 111"
+					amount = 300
+				}
+				else = {
+					add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = 300 }
+				}
+			}
 		}
 	}
 
