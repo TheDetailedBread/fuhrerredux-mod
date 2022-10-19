@@ -430,7 +430,8 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas_with_trait = foreign_minister
 				add_ideas = NOR_Nordahl_Grieg_for_van
-				set_country_flag = coalition_vanguardist
+				set_temp_variable = { coalition_partner_var = token:vanguardist }
+				add_to_coalition = yes 
 			}
 		}
 

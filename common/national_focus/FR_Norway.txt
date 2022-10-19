@@ -249,7 +249,8 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas_with_trait = economy_minister
 				add_ideas = NOR_Johan_Nygaardsvold_eco_sde
-				set_country_flag = coalition_social_democrat
+				set_temp_variable = { coalition_partner_var = token:social_democrat }
+				add_to_coalition = yes 
 			}
 		}
 
@@ -673,20 +674,24 @@ focus_tree = {
 			add_popularity = { ideology = social_conservative popularity = 0.03 }
 			custom_effect_tooltip  = NOR_right_wing_cooperation_tooltip
 			hidden_effect = {
-				clr_country_flag = coalition_social_democrat
-				set_country_flag = coalition_social_conservative
+				set_temp_variable = { coalition_partner_var = token:social_democrat }
+				remove_from_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes 
 				if = {
 					limit = {
 						has_government = social_liberal
 					}
-					set_country_flag = coalition_market_liberal
+					set_temp_variable = { coalition_partner_var = token:market_liberal }
+					add_to_coalition = yes 
 					remove_ideas_with_trait = foreign_minister
 					remove_ideas_with_trait = economy_minister
 					add_ideas = NOR_Ivar_Lykke_for_mli
 					add_ideas = NOR_Jon_Sundby_eco_sco
 				}
 				else = {
-					set_country_flag = coalition_social_liberal
+					set_temp_variable = { coalition_partner_var = token:social_liberal }
+					add_to_coalition = yes 
 					remove_ideas_with_trait = foreign_minister
 					add_ideas = NOR_Johan_Ludwig_Mowinckel_for_sli
 				}

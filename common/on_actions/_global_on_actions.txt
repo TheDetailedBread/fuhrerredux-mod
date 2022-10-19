@@ -22,4 +22,39 @@ on_actions = {
       }
     }
   }
+  on_daily = {
+    effect = {
+      if = {
+        limit = { has_variable = coalition_partners^num }
+        set_coalition_government_popularity = yes
+      }
+    }
+  }
+  on_startup = {
+    effect = {
+      every_possible_country = {
+				#Party Popularity Setup
+				if = {
+					limit = { has_variable = political_power_ideology }
+					map_party_popularity_PP_gain_to_ideology = yes
+				}
+				else = {
+					default_party_popularity_PP_gain = yes
+				}
+        #Remove Party Pop
+        remove_ideas = {
+          party_pop_0_00
+          party_pop_0_10
+          party_pop_0_20
+          party_pop_0_30
+          party_pop_0_40
+          party_pop_0_50
+          party_pop_0_60
+          party_pop_0_70
+          party_pop_0_80
+          party_pop_0_90
+        }
+      }
+    }
+  }
 }

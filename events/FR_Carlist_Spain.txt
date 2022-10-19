@@ -603,8 +603,10 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = SPF_internal_struggle_over_flag
 			set_country_flag = SPF_phalanx_secures_power_flag
-			clr_country_flag = coalition_paternal_autocrat
-			clr_country_flag = coalition_valkist
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:valkist }
+			remove_from_coalition = yes 
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 		}
 	}
@@ -710,8 +712,10 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = SPF_internal_struggle_over_flag
 			set_country_flag = SPF_spanish_nationalist_rule_flag
-			clr_country_flag = coalition_paternal_autocrat
-			clr_country_flag = coalition_valkist
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			remove_from_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:valkist }
+			remove_from_coalition = yes  
 			add_popularity = { ideology = national_populist popularity = -0.05 }
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		}
@@ -808,8 +812,10 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = SPF_internal_struggle_over_flag
 			set_country_flag = SPF_phalanx_secures_power_flag
-			clr_country_flag = coalition_paternal_autocrat
-			clr_country_flag = coalition_valkist
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			remove_from_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:valkist }
+			remove_from_coalition = yes 
 			add_popularity = { ideology = national_populist popularity = -0.05 }
 			add_popularity = { ideology = valkist popularity = 0.05 }
 		}

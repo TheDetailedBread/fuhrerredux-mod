@@ -1,0 +1,438 @@
+# Japanese Shogunate Events
+# Contributed by Kaiczer
+
+add_namespace = jap_shogun
+add_namespace = jap_shogundom
+
+country_event = { #Response the Japanese Martial Law
+	id = jap_shogun.1
+	title = jap_shogun.1.t
+	desc = jap_shogun.1.d 
+	
+	trigger = {
+		tag = JAP 
+		has_completed_focus = jap_allow_marshall_law
+	}
+	mean_time_to_happen = { days = 7 }
+	fire_only_once = yes 
+	
+	option = {
+		name = jap_shogun.1.a 
+		add_stability = -0.02
+		country_event = {
+			id = jap_shogun.2
+			days = 30 
+		}
+	}
+}
+country_event = { #Resignation of Prince Fumimaro
+	id = jap_shogun.2
+	title = jap_shogun.2.t
+	desc = jap_shogun.2.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.2.a 
+		custom_effect_tooltip = "Prince Iesato's been reappointed the president"
+		add_popularity = {
+			ideology = authoritarian_democrat 
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.3
+				days = 20
+			}
+		}
+	}
+	option = {
+		name = jap_shogun.2.b
+		custom_effect_tooltip = "Prince Kuniyuki's been appointed the president"
+		add_popularity = {
+			ideology = paternal_autocrat 
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.3
+				days = 20
+			}
+		}
+	}
+}
+country_event = { #Preparation of Anti-Militarist 
+	id = jap_shogun.3
+	title = jap_shogun.3.t 
+	desc = jap_shogun.3.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = jap_shogun.3.a 
+		add_popularity = {
+			ideology = authoritarian_democrat 
+			popularity = 0.03 
+		}
+		add_stability = -0.05
+	}
+}
+#####################
+#Constitution Crisis#
+#####################
+country_event = { #Lord President / Tairo vs. Prime Minister 
+	id = jap_shogun.4
+	title = jap_shogun.4.t 
+	desc = jap_shogun.4.d 
+	
+	trigger = {
+		tag = JAP 
+		OR = {
+			has_completed_focus = jap_the_admiral_plot
+			has_completed_focus = jap_the_army_coup
+		}
+	}
+	mean_time_to_happen = { days = 3 }
+	fire_only_once = yes 
+	
+	option = {
+		name = jap_shogun.4.a 
+		add_popularity = {
+			ideology = authoritarian_democrat 
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.5
+				days = 70 
+			}
+		}
+	}
+}
+#######Army Coup / Navy Coup#######
+country_event = { #Korean Righteous Army / Taiwanese Anarchy / Recalling Governor-Generals
+#Army - Jap.11 > Jap.13 > Jappol.6
+#Navy - Jap.12 > Jappol.1 > Jappol.2/3 
+	id = jap_shogun.5
+	title = jap_shogun.5.t 
+	desc = jap_shogun.5.d 
+	
+	is_triggered_only = yes 
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.6
+				days = 5
+			}
+		}
+	}
+	
+	option = {
+		name = jap_shogun.5.a 
+		add_political_power = -300
+		add_stability = -0.3
+		custom_effect_tooltip = "The empire will no longer be the empire we'd ever known"
+		hidden_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						NOT = { is_core_of = JAP }
+						is_core_of = KOR 
+						is_core_of = CHI 
+						is_core_of = INS  
+					}
+				}
+				set_demilitarized_zone = yes 
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = JAP 
+					NOT = {
+						state = 282
+					}
+				}
+				set_demilitarized_zone = yes 
+			}
+		}
+	}
+}
+country_event = { #March of Three Raven
+	id = jap_shogun.6
+	title = jap_shogun.6.t 
+	desc = jap_shogun.6.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "How do we stop them?"
+		add_political_power = -100
+		hidden_effect = {
+			news_event = fxnews.jap36
+		}
+	}
+
+}
+country_event = { #Political Turmoil 
+	id = jap_shogun.7
+	title = jap_shogun.7.t 
+	desc = jap_shogun.7.d 
+	
+	trigger = {
+		tag = JAP 
+		AND = {
+			or = {
+				has_completed_focus = jap_the_army_coup
+				has_completed_focus = jap_the_admiral_plot
+			}
+			has_completed_focus = jap_ally_the_military
+		} 
+	}
+	mean_time_to_happen = { days = 7 }
+	fire_only_once = yes 
+
+	option = {
+		name = "For the new regime"
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = JAP_authoritarian_democrat_party_shogun_long
+			name = JAP_authoritarian_democrat_party_shogun
+		}
+		remove_every_minister = yes 
+		add_ideas = {
+			JAP_Tokugawa_Kuniyuki_hog_pau
+			JAP_Inoue_Nissho_sec_val
+			JAP_Nakano_Seigo_eco_npo
+			JAP_Naotake_Sato_for_sco
+		}
+		hidden_effect = {
+			every_controlled_state = {
+				limit = {
+					is_controlled_by = JAP 
+				}
+				set_demilitarized_zone = no 
+			}
+			release = KOR 
+			CHI = { transfer_state = 524 }
+			ZHI = { transfer_state = 869 }
+			FNG = { transfer_state = 793 }
+			BEA = { transfer_state = 673 }
+			AST = { transfer_state = 668 }
+			set_country_flag = JAP_shogunate_focus_unlock
+			set_country_flag = JAP_counter_coup_win
+			set_country_flag = JAP_Tokugawa_Iesato_Not_Dead
+			set_country_flag = JAP_Shogun_Regime
+			set_country_flag = HOG_veiw
+			set_country_flag = LEADER_GUI_VISIBLE
+	 		set_cosmetic_tag = JAP_Shogunate
+			load_focus_tree = FX_Japan_Shogunate
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			# add_country_leader_role = {
+			# 	character = JAP_Tokugawa_Iesato
+			# 	promote_leader = yes
+			# 	country_leader = {
+			# 	  ideology = authoritarian_democrat_subtype
+			# 	  expire = "1965.1.1.1"
+			# 	  traits = {  }
+			# 	}
+			# }
+			# promote_character = {
+			# 	character = JAP_Tokugawa_Iesato
+			# 	ideology = social_democrat_subtype
+			# }
+			# promote_character = {
+			# 	character = JAP_Tokugawa_Iesato
+			# 	ideology = social_liberal_subtype
+			# }
+			# promote_character = {
+			# 	character = JAP_Tokugawa_Iesato
+			# 	ideology = social_conservative_subtype
+			# }
+			# promote_character = {
+			# 	character = JAP_Tokugawa_Iesato
+			# 	ideology = market_liberal_subtype
+			# }
+			# promote_character = {
+			# 	character = JAP_Tokugawa_Iesato
+			# 	ideology = paternal_autocrat_subtype
+			# }
+			promote_character = {
+				character = JAP_Nakano_Seigo
+				ideology = national_populist_subtype
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = JAP_national_populist_party_shogun_long
+				name = JAP_national_populist_party_shogun
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = JAP_paternal_autocrat_party_shogun_long
+				name = JAP_paternal_autocrat_party_shogun
+			}
+		}
+	}
+	option = {
+		name = "Secure the our regime"
+		add_political_power = 100
+		every_controlled_state = {
+			limit = {
+				is_controlled_by = JAP 
+			}
+			set_demilitarized_zone = no 
+		}
+	}
+}
+country_event = {
+	id = jap_shogundom.1
+	title = "Shogun addresses the Nagasaki Supreme Tribunal"
+	desc = jap_shogundom.1.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "Let decide the matters immediately"
+		custom_effect_tooltip = "This event will launch the chain event about Nagasaki supreme tribunal"
+		hidden_effect = {
+			country_event = {
+				id = jap_shogundom.2
+				days = 30 
+			}
+		}
+	}
+}
+country_event = {
+	id = jap_shogundom.2
+	title = "Case: The Ultraroyalists"
+	desc = jap_shogundom.3.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "Thee the plague to destroy the emperor, we must execute in no time"
+		set_country_flag = JAP_ultraroy_1
+		country_event = {
+			id = jap_shogundom.3
+			days = 1 
+		}
+	}
+	option = {
+		name = "No need to kill, show some mercy"
+		set_country_flag = JAP_ultraroy_2
+		country_event = {
+			id = jap_shogundom.3
+			days = 1 
+		}
+	}
+}
+country_event = {
+	id = jap_shogundom.3
+	title = "Case: The Ultranationalists"
+	desc = jap_shogundom.3.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "Thee the root of bringing nation on disadvantage, we must execute in no time"
+		set_country_flag = JAP_ultranat_1
+		country_event = {
+			id = jap_shogundom.4
+			days = 1 
+		}
+	}
+	option = {
+		name = "No need to kill, show some mercy"
+		set_country_flag = JAP_ultranat_2
+		country_event = {
+			id = jap_shogundom.4
+			days = 1 
+		}
+	}
+}
+country_event = {
+	id = jap_shogundom.4
+	title = "Motion: The Admiralty"
+	desc = jap_shogundom.4.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "Shogun will command them directly"
+		set_country_flag = JAP_admiralty_1
+	}
+	option = {
+		name = "Daimyo of Mikawa shall command them in the name of Shogun"
+		set_country_flag = JAP_admiralty_2
+	}
+}
+country_event = {
+	id = jap_shogundom.5
+	title = "The Last Answer"
+	desc = jap_shogundom.5.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "The court is adjourned"
+		JAP_nagasaki_tribunal_court_idea = yes 
+	}
+}
+country_event = {
+	id = jap_shogundom.6
+	title = "Visits the Imperial Palace"
+	desc = jap_shogundom.6.d 
+
+	is_triggered_only = yes 
+
+	option = {
+		name = "Your reign is secure from the ultramilitarists, your majesty"
+		add_political_power = 150
+		add_stability = 0.25
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.2
+		}
+	}
+}
+country_event = {
+	id = jap_shogundom.7
+	title = "City Renaming - Tokyo"
+	desc = jap_shogundom.7.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Edo"
+		set_province_name = { id = 1182 name = "Edo" }
+		add_political_power = 25
+		add_stability = 0.05
+	}
+	option = {
+		name = "Tokyo"
+		set_province_name = { id = 1182 name = "Tokyo" }
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = jap_shogundom.8
+	title = "City Renaming - Nagoya"
+	desc = jap_shogundom.8.d 
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = "Mikawa"
+		set_province_name = { id = 10125 name = "Mikawa" }
+		add_political_power = 25
+		add_stability = 0.05
+	}
+	option = {
+		name = "Nagoya"
+		set_province_name = { id = 10125 name = "Nagoya" }
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}

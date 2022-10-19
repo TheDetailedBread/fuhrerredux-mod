@@ -1,5 +1,247 @@
 ideas = {
+	hidden_ideas = {
+		JAP_great_council_of_state_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_great_council_of_state_idea"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				political_power_gain = 0.07
+			}
+		}
+	}
 	country = {	
+		JAP_shinjidai_idea_0 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_shinjidai_idea_0"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.04
+			}
+		}
+		JAP_shinjidai_idea_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_shinjidai_idea_1"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				research_speed_factor = 0.06
+				political_power_factor = 0.07
+				stability_weekly = 0.03
+			}
+		}
+		JAP_shinjidai_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_shinjidai_idea_2"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = 0.1
+				stability_weekly = 0.05
+				army_core_defence_factor = 0.15
+				opinion_gain_monthly_factor = 0.1
+			}
+		}
+		JAP_shinjidai_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_shinjidai_idea_3"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_factor = 0.15
+				stability_weekly = 0.1
+				political_power_factor = 0.05
+				army_core_defence_factor = 0.2
+				opinion_gain_monthly_factor = 0.1
+				resistance_damage_to_garrison = -0.05
+			}
+		}
+		JAP_kyujidai_idea_0 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_kyujidai_idea_0"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				non_core_manpower = 0.1
+				political_power_factor = -0.04
+			}
+		}
+		JAP_kyujidai_idea_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_kyujidai_idea_1"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				army_core_defence_factor = 0.1
+				non_core_manpower = 0.1
+				political_power_factor = -0.06
+			}
+		}
+		JAP_kyujidai_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_kyujidai_idea_2"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				army_core_defence_factor = 0.13
+				army_core_attack_factor = 0.13
+				non_core_manpower = 0.1
+				political_power_factor = -0.07
+				army_attack_factor = 0.15
+				surrender_limit = 0.1
+			}
+		}
+		JAP_kyujidai_idea_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_kyujidai_idea_3"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				army_core_defence_factor = 0.20
+				army_core_attack_factor = 0.20
+				non_core_manpower = 0.15
+				political_power_factor = -0.1
+				army_attack_factor = 0.30
+				surrender_limit = 0.2
+				starting_compliance = 0.15
+			}
+		}
+		JAP_nagasaki_tribunal_a1b1c1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a1b1c1"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 1
+				drift_defence_factor = -0.05
+				consumer_goods_factor = -0.03
+				#Ultranat 1
+				political_power_factor = -0.04
+				stability_factor = 0.05
+				#Admiralty 1
+				command_power_gain = 0.1
+				chief_of_navy_cost_factor = 0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a1b1c2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a1b1c2"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 1
+				drift_defence_factor = -0.05
+				consumer_goods_factor = -0.03
+				#Ultranat 1
+				political_power_factor = -0.04
+				stability_factor = 0.05
+				#Admiralty 2
+				experience_gain_navy = 0.1
+				chief_of_navy_cost_factor = -0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a1b2c1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a1b2c1"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 1
+				drift_defence_factor = -0.05
+				consumer_goods_factor = -0.03
+				#Ultranat 2
+				war_support_factor = 0.05
+				stability_factor = -0.05
+				#Admiralty 1
+				command_power_gain = 0.1
+				chief_of_navy_cost_factor = 0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a1b2c2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a1b2c2"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 1
+				drift_defence_factor = -0.05
+				consumer_goods_factor = -0.03
+				#Ultranat 2
+				war_support_factor = 0.05
+				stability_factor = -0.05
+				#Admiralty 2
+				experience_gain_navy = 0.02
+				chief_of_navy_cost_factor = -0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a2b1c1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a2b1c1"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 2
+				drift_defence_factor = 0.05
+				army_core_attack_factor = 0.03
+				#Ultranat 1
+				political_power_factor = -0.04
+				stability_factor = 0.05
+				#Admiralty 1
+				command_power_gain = 0.1
+				chief_of_navy_cost_factor = 0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a2b1c2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a2b1c2"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 2
+				drift_defence_factor = 0.05
+				army_core_attack_factor = 0.03
+				#Ultranat 1
+				political_power_factor = -0.04
+				stability_factor = 0.05
+				#Admiralty 2
+				experience_gain_navy = 0.02
+				chief_of_navy_cost_factor = -0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a2b2c1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a2b2c1"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 1
+				drift_defence_factor = -0.05
+				consumer_goods_factor = -0.03
+				#Ultranat 2
+				war_support_factor = 0.05
+				stability_factor = -0.05
+				#Admiralty 2
+				experience_gain_navy = 0.02
+				chief_of_navy_cost_factor = -0.05
+			}
+		}
+		JAP_nagasaki_tribunal_a2b2c2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_nagasaki_tribunal_a2b2c2"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				#Ultraroy 2
+				drift_defence_factor = 0.05
+				army_core_attack_factor = 0.03
+				#Ultranat 2
+				war_support_factor = 0.05
+				stability_factor = -0.05
+				#Admiralty 2
+				experience_gain_navy = 0.02
+				chief_of_navy_cost_factor = -0.05
+			}
+		}
+		JAP_first_amongs_equal = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_first_amongs_equal"}
+			#picture = generic_manpower_bonus
+			allowed = { original_tag = JAP }
+			modifier = {
+				political_power_cost = -0.2
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		#####Original
 		jap_war_propaganda = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea jap_war_propaganda"}
 			picture = generic_manpower_bonus

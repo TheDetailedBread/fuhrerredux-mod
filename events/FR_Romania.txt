@@ -721,8 +721,10 @@ country_event = { # 1937 General Elections
 				has_country_flag = ROM_conservative_coalition
 				has_country_flag = ROM_progressive_coalition
 			}
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 			add_ideas = {
 				ROM_Constantin_Bratianu_hog_mli
 				ROM_Grigore_Gafencu_for_sli
@@ -740,7 +742,8 @@ country_event = { # 1937 General Elections
 		}
 		else_if = {
 			limit = { has_country_flag = ROM_conservative_coalition }
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 			add_ideas = {
 				ROM_Constantin_Bratianu_hog_mli
 				ROM_Viorel_Tilea_for_sco
@@ -754,7 +757,8 @@ country_event = { # 1937 General Elections
 		}
 		else_if = {
 			limit = { has_country_flag = ROM_progressive_coalition }
-			set_country_flag = coalition_social_liberal
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
 			add_ideas = {
 				ROM_Constantin_Bratianu_hog_mli
 				ROM_Grigore_Gafencu_for_sli
@@ -807,7 +811,8 @@ country_event = { # 1937 General Elections
 		remove_every_minister = yes
 		if = {
 			limit = { has_country_flag = ROM_leftist_coalition }
-			set_country_flag = coalition_libertarian_socialist
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			add_to_coalition = yes 
 			add_ideas = {
 				ROM_Virgil_Madgearu_hog_sde
 				ROM_Ana_Pauker_for_col
@@ -1185,9 +1190,12 @@ country_event = { # The King's and Romania's Safety
 				has_country_flag = ROM_autocrat_behavior
 			}
 		}
-		clr_country_flag = coalition_social_conservative
-		clr_country_flag = coalition_social_liberal
-		clr_country_flag = coalition_libertarian_socialist
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		remove_from_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		remove_from_coalition = yes  
+		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+		remove_from_coalition = yes 
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -1282,8 +1290,9 @@ country_event = { # Prime Minister Assassinated!
 		hidden_effect = {
 			set_country_flag = ROM_socialist_romania
 			clr_country_flag = ROM_democratic_romania
-			clr_country_flag = coalition_libertarian_socialist
-      mark_focus_tree_layout_dirty = yes
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			remove_from_coalition = yes 
+      		mark_focus_tree_layout_dirty = yes
 			country_event = { id = romania.30 days = 2 }
 		}
 	}
@@ -1309,8 +1318,8 @@ country_event = { # Prime Minister Assassinated!
 			ROM_Ion_Belgea_sec_val
 		}
 		hidden_effect = {
-      set_country_flag = ROM_valkist_romania
-      clr_country_flag = ROM_democratic_romania
+     	 	set_country_flag = ROM_valkist_romania
+			clr_country_flag = ROM_democratic_romania
 			mark_focus_tree_layout_dirty = yes
 			add_ideas = one_party_dictatorship
 			random_other_country = {
@@ -1373,7 +1382,8 @@ country_event = { # Iron Guard Coups the Government!
 				has_country_flag = ROM_progressive_coalition
 				check_variable = { rom_conservative_strength > rom_progressive_strength }
 			}
-			clr_country_flag = coalition_social_liberal
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			remove_from_coalition = yes 
 			set_politics = {
 				ruling_party = social_conservative
 				elections_allowed = yes
@@ -1398,7 +1408,8 @@ country_event = { # Iron Guard Coups the Government!
 				has_country_flag = ROM_progressive_coalition
 				check_variable = { rom_progressive_strength > rom_conservative_strength }
 			}
-			clr_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes 
 			set_politics = {
 				ruling_party = social_liberal
 				elections_allowed = yes
@@ -1435,8 +1446,10 @@ country_event = { # Iron Guard Coups the Government!
 				has_country_flag = ROM_valkist_behavior
 			}
 		}
-		clr_country_flag = coalition_social_conservative
-		clr_country_flag = coalition_social_liberal
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		remove_from_coalition = yes 
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		remove_from_coalition = yes 
 		set_politics = {
 			ruling_party = valkist
 			elections_allowed = no
@@ -2090,9 +2103,12 @@ country_event = { # 1941 Elections
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = ROM_leftist_coalition
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_social_liberal
-			clr_country_flag = coalition_libertarian_socialist
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			remove_from_coalition = yes 
 		}
 	}
 
@@ -2163,8 +2179,10 @@ country_event = { # 1941 Elections
 				ROM_Mihail_Ghelmegeanu_sec_sco
 			}
 			set_country_flag = ROM_had_1941_elections
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 		}
 		hidden_effect = {
 			country_event = { id = romania.49 days = 5 }
@@ -2208,9 +2226,12 @@ country_event = { # 1945 Elections
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = ROM_leftist_coalition
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_social_liberal
-			clr_country_flag = coalition_libertarian_socialist
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			remove_from_coalition = yes 
 		}
 	}
 
@@ -2278,8 +2299,10 @@ country_event = { # 1945 Elections
 				ROM_Mihail_Ghelmegeanu_sec_sco
 			}
 			set_country_flag = ROM_had_1945_elections
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 		}
 		
 	}
@@ -2318,9 +2341,12 @@ country_event = { # 1949 Elections
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = ROM_leftist_coalition
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_social_liberal
-			clr_country_flag = coalition_libertarian_socialist
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			remove_from_coalition = yes 
 		}
 	}
 
@@ -2388,8 +2414,10 @@ country_event = { # 1949 Elections
 				ROM_Mihail_Ghelmegeanu_sec_sco
 			}
 			set_country_flag = ROM_had_1949_elections
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 		}
 		
 	}
@@ -2429,9 +2457,12 @@ country_event = { # 1953 Elections
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = ROM_leftist_coalition
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_social_liberal
-			clr_country_flag = coalition_libertarian_socialist
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			remove_from_coalition = yes 
 		}
 	}
 
@@ -2499,8 +2530,10 @@ country_event = { # 1953 Elections
 				ROM_Mihail_Ghelmegeanu_sec_sco
 			}
 			set_country_flag = ROM_had_1953_elections
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 		}
 		
 	}
@@ -2540,9 +2573,12 @@ country_event = { # 1957 Elections
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = ROM_leftist_coalition
-			clr_country_flag = coalition_social_conservative
-			clr_country_flag = coalition_social_liberal
-			clr_country_flag = coalition_libertarian_socialist
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			remove_from_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+			remove_from_coalition = yes 
 		}
 	}
 
@@ -2610,8 +2646,10 @@ country_event = { # 1957 Elections
 				ROM_Mihail_Ghelmegeanu_sec_sco
 			}
 			set_country_flag = ROM_had_1957_elections
-			set_country_flag = coalition_social_liberal
-			set_country_flag = coalition_social_conservative
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes 
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes 
 		}
 		
 	}
