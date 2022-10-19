@@ -1,0 +1,104 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#Europe
+			BEL = {
+				set_temp_variable = { coalition_partner_var = token:social_democrat }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes 
+			}
+			DEN = {
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+			}
+			EST = {
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes
+			}
+			FIN = {
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes
+			}
+			FRA = {
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+			}
+			HOL = {
+				set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+				add_to_coalition = yes
+			}
+			GEO = {
+				set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+				add_to_coalition = yes 
+			}
+			NOR = {
+				set_temp_variable = { coalition_partner_var = token:collectivist }
+				add_to_coalition = yes 
+			}
+			ISR = {
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+			}
+			ITA = {
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes
+			}
+			SPA = {
+				set_temp_variable = { coalition_partner_var = token:social_democrat }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:vanguardist }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
+				add_to_coalition = yes
+			}
+			SPF = {
+				set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:valkist }
+				add_to_coalition = yes
+			}
+			SPM = {
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+				add_to_coalition = yes
+			}
+			SPR = {
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes 
+			}
+			SWE = {
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes
+			}
+			#Asia
+			PHI = {
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes 
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes
+			}
+			AFG = {
+				set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+				add_to_coalition = yes 
+			}
+			SIA = {
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes
+			}
+		}
+	}
+}
