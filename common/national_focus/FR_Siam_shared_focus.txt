@@ -95,11 +95,11 @@ shared_focus = {
 		focus = SIA_ground_force_review
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 2
-			category = land_doctrine
-		}
+		add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 	}
 }
 shared_focus = {
@@ -220,8 +220,8 @@ shared_focus = {
 		focus = SIA_defensive_supremacy
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 0.85
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.85
 			uses = 1
 			category = cat_mobile_warfare
 		}
@@ -258,8 +258,8 @@ shared_focus = {
 		focus = SIA_medium_tank_model
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
+		add_doctrine_cost_reduction = {
+			cost_reduction = 1
 			uses = 1
 			category = cat_mobile_warfare
 		}
@@ -348,8 +348,8 @@ shared_focus = {
 		focus = SIA_defensive_supremacy
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 0.85
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.85
 			uses = 1
 			category = cat_superior_firepower
 		}
@@ -502,8 +502,8 @@ shared_focus = {
 		focus = SIA_defensive_supremacy
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 0.85
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.85
 			uses = 1
 			category = cat_grand_battle_plan
 		}
@@ -659,8 +659,8 @@ shared_focus = {
 		focus = SIA_establish_central_command
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 0.75
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
 			uses = 1
 			category = air_doctrine
 		}
@@ -885,8 +885,8 @@ shared_focus = {
 	prerequisite = { focus = SIA_establish_central_command }
 	completion_reward = {
 		navy_experience = 20
-		add_tech_bonus = {
-			bonus = 1
+		add_doctrine_cost_reduction = {
+			cost_reduction = 1
 			uses = 1
 			category = naval_doctrine
 		}
@@ -1022,8 +1022,8 @@ shared_focus = {
 			limit = { has_completed_focus = SIA_combination_fleet }
 			add_ideas = combine_highcommand
 		}
-		add_tech_bonus = {
-			bonus = 1
+		add_doctrine_cost_reduction = {
+			cost_reduction = 1
 			uses = 2
 			category = naval_doctrine
 		}

@@ -77,6 +77,14 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			factor = 1
 		}
 	}
+	CLB_american_dressler = {
+		random = no
+		army_armor_attack_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	SOV_the_theorist = {
 		random = no
 				research_speed_factor = 0.03
@@ -92,6 +100,11 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	PHI_the_surgeon = {
+		random = no
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
 	}
 	charismatic = {
 		random = no
@@ -1477,274 +1490,6 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 		}
 	}
 
-	########################################
-	## MILITARY HIGH COMMAND
-	########################################
-
-	mhc_school_of_manoeuvre = {
-		army_speed_factor = 0.1
-		equipment_bonus = {
-			motorized = {
-				soft_attack = 0.1
-			}
-			mechanized = {
-				soft_attack = 0.1
-			}
-		}
-		army_armor_attack_factor = 0.1
-		army_armor_defence_factor = 0.1
-
-		random = no
-	}
-
-	mhc_school_of_fire_support = {
-		army_artillery_attack_factor = 0.15
-		army_artillery_defence_factor = 0.15
-		equipment_bonus = {
-			category_artillery = {
-				build_cost_ic = -0.05 instant = yes
-			}
-		}
-
-		random = no
-	}
-
-	mhc_school_of_mass_combat = {
-		conscription = 0.005
-		army_infantry_attack_factor = 0.05
-		army_infantry_defence_factor = 0.05
-
-		random = no
-	}
-
-	mhc_school_of_psychology = {
-		army_org_factor = 0.1
-		army_morale_factor = 0.1
-
-		random = no
-	}
-
-	mhc_school_of_defence = {
-		production_speed_bunker_factor = 0.15
-		production_speed_coastal_bunker_factor = 0.15
-		production_speed_anti_air_building_factor = 0.15
-		max_dig_in = 15
-		dig_in_speed_factor = 0.25
-		army_org_factor = 0.05
-
-		random = no
-	}
-
-	mhc_school_of_commando_operations = {
-		special_forces_attack_factor = 0.15
-		special_forces_defence_factor = 0.15
-		equipment_bonus = {
-			marine = {
-				max_organisation = 0.2
-			}
-			mountaineers = {
-				max_organisation = 0.2
-			}
-			paratrooper = {
-				max_organisation = 0.2
-			}
-		}
-
-		random = no
-	}
-
-	########################################
-	## CHIEF of ARMY
-	########################################
-
-	carm_elastic_defence_doctrine = {
-		army_defence_factor = 0.1
-		supply_consumption_factor = -0.1
-
-		random = no
-	}
-
-	carm_static_defence_doctrine = {
-		army_defence_factor = 0.1
-		attrition = -0.1
-		dig_in_speed_factor = 0.2
-
-		random = no
-	}
-
-	carm_decisive_battle_doctrine = {
-		army_attack_factor = 0.1
-
-		random = no
-	}
-
-	carm_armoured_spearhead_doctrine = {
-		army_attack_factor = 0.05
-		equipment_bonus = {
-			motorized = {
-				maximum_speed = 0.1
-			}
-			mechanized = {
-				maximum_speed = 0.1
-			}
-			category_all_armor = {
-				maximum_speed = 0.1
-				breakthrough = 0.10
-			}
-		}
-
-		random = no
-	}
-
-	carm_guns_and_butter_doctrine = {
-		supply_consumption_factor = -0.1
-		army_org_factor = 0.1
-
-		random = no
-	}
-
-	carm_commando_doctrine = {
-		no_supply_grace = 48
-		out_of_supply_factor = -0.15
-		land_night_attack = 0.15
-		equipment_bonus = {
-			recon = {
-				recon = 1
-			}
-		}
-
-		random = no
-	}
-
-	carm_doctrine_of_autonomy = {
-
-		random = no
-		experience_gain_army = 0.1
-		planning_speed = 0.1
-		org_loss_when_moving = -0.1
-	}
-
-	########################################
-	## CHIEF of NAVY
-	########################################
-
-	cnav_open_seas_doctrine = {
-		navy_screen_attack_factor = 0.1
-		navy_screen_defence_factor = 0.1
-		naval_speed_factor = 0.05
-
-		random = no
-	}
-
-	cnav_decisive_battle_doctrine = {
-		navy_capital_ship_attack_factor = 0.1
-		navy_capital_ship_defence_factor = 0.1
-		navy_anti_air_attack_factor = 0.15
-
-		random = no
-	}
-
-	cnav_power_projection_doctrine = {
-		navy_max_range_factor = 0.10
-		sortie_efficiency = 0.1
-		navy_carrier_air_attack_factor = 0.06
-		navy_carrier_air_targetting_factor = 0.07
-		navy_carrier_air_agility_factor = 0.08
-
-		random = no
-	}
-
-	cnav_indirect_approach_doctrine = {
-		convoy_raiding_efficiency_factor = 0.15
-		navy_submarine_attack_factor = 0.15
-		navy_submarine_defence_factor = 0.15
-
-		random = no
-	}
-
-	cnav_base_control_doctrine = {
-		amphibious_invasion = 0.1
-
-		equipment_bonus = {
-			convoy = {
-				build_cost_ic = -0.1
-			}
-			marine = {
-				max_organisation = 0.1
-				soft_attack = 0.1
-				hard_attack = 0.10
-			}
-		}
-
-		random = no
-	}
-
-	########################################
-	## CHIEF of AIR
-	########################################
-
-	cair_air_superiority_doctrine = {
-
-		random = no
-		air_air_superiority_attack_factor = 0.03
-		air_air_superiority_defence_factor = 0.03
-		air_air_superiority_agility_factor = 0.03
-		air_interception_attack_factor = 0.03
-		air_interception_defence_factor = 0.03
-		air_interception_agility_factor = 0.03
-		#apparently no anti air modifier klol
-		production_speed_radar_station_factor = 0.1
-	}
-
-	cair_naval_aviation_doctrine = {
-
-		random = no
-		naval_strike_attack_factor = 0.03
-		naval_strike_targetting_factor = 0.03
-		naval_strike_agility_factor = 0.03
-		air_weather_penalty = -0.1
-	}
-
-	cair_battlefield_support_doctrine = {
-
-		random = no
-		army_bonus_air_superiority_factor = 0.1
-		air_cas_present_factor = 0.15
-		air_close_air_support_attack_factor = 0.03
-		air_close_air_support_defence_factor = 0.03
-		air_close_air_support_agility_factor = 0.03
-	}
-
-	cair_carpet_bombing_doctrine = {
-
-		random = no
-		air_strategic_bomber_attack_factor = 0.02
-		air_strategic_bomber_defence_factor = 0.02
-		air_strategic_bomber_agility_factor = 0.02
-		air_strategic_bomber_bombing_factor = 0.05
-		air_night_penalty = -0.1
-	}
-
-	cair_vertical_envelopment_doctrine = {
-
-		random = no
-		air_ace_generation_chance_factor = 0.1
-		air_paradrop_attack_factor = 0.02
-		air_paradrop_defence_factor = 0.05
-		air_paradrop_agility_factor = 0.05
-	}
-
-	cair_the_red_baron = {
-		air_air_superiority_attack_factor = 0.06
-		air_air_superiority_defence_factor = 0.06
-		air_air_superiority_agility_factor = 0.03
-		air_interception_attack_factor = 0.06
-		air_interception_defence_factor = 0.06
-		air_interception_agility_factor = 0.03
-		#research air doctrines
-
-		random = no
-	}
 
 	###############################################################
 	### Manufacturer Traits, Ported from vanilla, Japan uses these
@@ -1926,10 +1671,10 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				carrier_size = 0.25 armor_value = -0.15 naval_range = 0.25
 			}
-			capital_ship = {
+			battleship = {
 				naval_range = 0.25
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				naval_range = 0.25
 			}
 			submarine = {
@@ -1948,17 +1693,11 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				armor_value = 0.5 
 			}
-			capital_ship = {
+			battleship = {
 				armor_value = 0.1 				
 				hg_attack = 0.1
 				lg_attack = 0.1
 			}
-			#screen_ship = {
-			#	
-			#}
-			#submarine = {
-			#	
-			#}
 		}
 		
 		ai_will_do = {
@@ -1969,12 +1708,12 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 	battlefleet_designer = { #armored carriers, slightly buffed cap ships
 		random = no
 		equipment_bonus = {
-			capital_ship = {
+			battleship = {
 				armor_value = 0.15 
 				hg_attack = 0.15
 				lg_attack = 0.15
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				torpedo_attack = 0.25
 				sub_detection = -0.25
 			}
@@ -1991,12 +1730,12 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				surface_visibility = -0.1 naval_speed = 0.1 carrier_size = -0.1
 			}
-			capital_ship = {
+			battleship = {
 				surface_visibility = -0.1 naval_speed = 0.1 				
 				hg_attack = -0.1
 				lg_attack = -0.1
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				surface_visibility = -0.1 naval_speed = 0.1
 			}
 			submarine = {
@@ -2012,7 +1751,7 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 	convoy_escort_naval_manufacturer = {
 		random = no
 		equipment_bonus = {
-			screen_ship = {
+			heavy_cruiser = {
 				naval_range = 0.3 sub_detection = 0.1 naval_speed = 0.1 build_cost_ic = 0.1
 			}
 		}
@@ -2028,13 +1767,13 @@ leader_traits = {		###PUTTING THIS HERE PLS NO UPSET####
 			carrier = {
 				build_cost_ic = -0.25 carrier_size = -0.2 naval_range = -0.5
 			}
-			capital_ship = {
+			battleship = {
 				build_cost_ic = -0.25 armor_value = -0.2 				
 				hg_attack = -0.2
 				lg_attack = -0.2 
 				naval_range = -0.5
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				build_cost_ic = -0.25 naval_range = -0.5
 			}
 			submarine = {

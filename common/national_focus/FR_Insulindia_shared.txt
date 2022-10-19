@@ -66,7 +66,7 @@
 	}
 	shared_focus = {
 		id = INS_establish_an_air_force
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_INS_airforce
 		cost = 5.00
 		prerequisite = {
 			focus = INS_organize_armed_forces
@@ -195,9 +195,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus INS_study_air_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.4
+				cost_reduction = 0.4
 				uses = 2
 				category = air_doctrine
 			}
@@ -268,7 +268,7 @@
 	}
 	shared_focus = {
 		id = INS_build_an_army
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_INS_army
 		cost = 5.00
 		prerequisite = {
 			focus = INS_organize_armed_forces
@@ -306,9 +306,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus INS_our_own_tactics"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.4
+				cost_reduction = 0.4
 				uses = 2
 				category = cat_mass_assault
 			}
@@ -377,9 +377,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus INS_adopt_foreign_tactics"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction  = {
 				name = land_doc_bonus
-				bonus = 0.4
+				cost_reduction = 0.4
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -566,7 +566,7 @@
 	}
 	shared_focus = {
 		id = INS_establish_an_navy
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_INS_navy
 		cost = 5.00
 		prerequisite = {
 			focus = INS_organize_armed_forces
@@ -782,10 +782,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus INS_study_naval_doctrines"
-			add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.4
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = naval_doctrine
 			}
 		}
@@ -1834,7 +1833,7 @@
 				add_political_power = -30
 				add_stability = -0.02
 			}
-			VIN = {
+			FIC = {
 				add_political_power = -30
 				add_stability = -0.02
 			}
@@ -1870,7 +1869,9 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus INS_anti_colonialist_alliance"
 			add_political_power = 30
-			create_faction = INS_insulindian_faction
+			#create_faction = INS_insulindian_faction
+			unlock_decision_tooltip = INS_join_co_prosperity_sphere
+			unlock_decision_tooltip = INS_create_new_alliance
 		}
 
 	}

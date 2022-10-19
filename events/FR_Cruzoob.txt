@@ -7,7 +7,7 @@ country_event = { # Intro
     id = cruzoob.0
     title = cruzoob.0.t
     desc = cruzoob.0.d
-    
+    picture = GFX_report_event_tanks_mexico_city
     is_triggered_only = yes
 
     option = { 
@@ -90,16 +90,6 @@ country_event = { # Cristero Exiles
         name = cruzoob.3.a
         set_country_flag = CRU_has_cristero_exiles
         add_manpower = 5000
-        create_corps_commander = {
-            name = "Enrique Gorostieta"
-            picture = "Portrait_Cruzoob_Enrique_Gorostieta.tga"
-            traits = { }
-            skill = 2
-            attack_skill = 3
-            defense_skill = 2
-            planning_skill = 3
-            logistics_skill = 4
-        }
     }
 }
 
@@ -142,7 +132,7 @@ country_event = { # Siphon State Funds
     is_triggered_only = yes
 
     option = {
-        name = cruzoob.6
+        name = cruzoob.6.a
         add_timed_idea = {
             idea = CRU_siphoned_funds
             days = 30
@@ -171,7 +161,7 @@ country_event = { # Promote Anti-Government Propaganda
     is_triggered_only = yes
 
     option = {
-        name = cruzoob.8
+        name = cruzoob.8.a
         MEX = {
             add_timed_idea = {
                 idea = CRU_anti_government_propaganda
@@ -224,6 +214,111 @@ country_event = { # Steal Stockpiled Equipment - Failed
     }
 }
 
+country_event = { # Stealing Chiapas
+    id = cruzoob.12
+    title = cruzoob.12.t
+    desc = cruzoob.12.d
+    picture = GFX_report_event_czech_soldiers_02
+    fire_only_once = yes
+
+    trigger = {
+        tag = CRU
+        MEX = { 
+            has_war_with = USA
+            owns_state = 475
+            NOT = { has_war_with = CRU }
+        }
+    }
+
+    option = {
+        name = cruzoob.12.a
+        hidden_effect = {
+            country_event = { id = cruzoob.13 days = 2 }
+        }
+    }
+    option = {
+        name = cruzoob.12.b
+        decrease_ruling_party_popularity_by_5 = yes
+    }
+}
+
+country_event = { # Chiapas Captured
+    id = cruzoob.13
+    title = cruzoob.13.t
+    desc = cruzoob.13.d
+    picture = GFX_report_event_british_artillery
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            MEX = { country_event = { id = cruzoob.15 hours = 12 } }
+        }
+    }
+
+    option = {
+        name = cruzoob.13.a
+        transfer_state = 475
+        add_manpower = -500
+        increase_ruling_party_popularity_by_5 = yes
+    }
+}
+
+country_event = { # Mexico: Cruzoob Snatched Chiapas!
+    id = cruzoob.14
+    title = cruzoob.14.t
+    desc = cruzoob.14.d
+    picture = GFX_report_event_british_artillery
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.14.a
+        ai_chance = {
+            factor = 60
+        }
+        create_wargoal = {
+            target = FROM
+            type = annex_everything
+        }
+    }
+    option = {
+        name = cruzoob.14.b
+        ai_chance = {
+            factor = 40
+        }
+        decrease_ruling_party_popularity_by_5 = yes
+    }
+}
+
+country_event = { # Mexican Declaration of War
+    id = cruzoob.15
+    title = cruzoob.15.t
+    desc = cruzoob.15.d
+    picture = GFX_report_event_french_resistance_01
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.15.a
+        custom_effect_tooltip = CRU_defence_tt
+        hidden_effect = {
+            load_oob = "CRU_defence"
+        }
+    }
+}
+
+country_event = {
+  id = cruzoob.16
+  title = cruzoob.16.t
+  desc = cruzoob.16.d
+  picture = GFX_report_event_british_inspect_troops
+  is_triggered_only = yes
+
+  option = {
+    name = cruzoob.16.a
+    army_experience = 25
+    add_political_power = 50
+  }
+}
+
 country_event = { # Ask for German Advisors
     id = cruzoob.100
     title = cruzoob.100.t
@@ -261,6 +356,7 @@ country_event = { # Germany Agrees
     option = {
         name = cruzoob.101.a
         add_ideas = CRU_german_advisors
+        set_country_flag = CRU_german_advisors_present
     }
 }
 
@@ -313,7 +409,11 @@ country_event = { # Joint Army Exercises
     option = {
         name = cruzoob.104.a
         ai_chance = {
-            base = 80
+            factor = 80
+            modifier = {
+                factor = 20
+                FROM = { has_same_government_as_ROOT = yes }
+            }
         }
         add_tech_bonus = {
             category = land_doctrine
@@ -325,7 +425,16 @@ country_event = { # Joint Army Exercises
     option = {
         name = cruzoob.104.b
         ai_chance = {
-            base = 20
+            factor = 20
+            modifier = {
+                factor = 0.8
+                MEX = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+            }
         }
         FROM = { country_event = cruzoob.106 }
     }
@@ -379,7 +488,13 @@ country_event = { # Intel Sharing
     option = {
         name = cruzoob.107.a
         ai_chance = {
-            base = 60
+            factor = 80
+            modifier = {
+                factor = 20
+                FROM = {
+                    has_same_government_as_ROOT = yes
+                }
+            }
         }
         add_tech_bonus = {
             category = encryption_tech
@@ -392,7 +507,7 @@ country_event = { # Intel Sharing
     option = {
         name = cruzoob.107.b
         ai_chance = {
-            base = 40
+            factor = 20
         }
         FROM = { country_event = cruzoob.109 }
     }
@@ -439,7 +554,11 @@ country_event = { # Faction Joining
     option = {
         name = cruzoob.110.a
         ai_chance = {
-            base = 60
+            factor = 80
+            modifier = {
+                factor = 20
+                tag = GER
+            }
         }
         
         add_to_faction = FROM
@@ -448,7 +567,7 @@ country_event = { # Faction Joining
     option = {
         name = cruzoob.110.b
         ai_chance = {
-            base = 40
+            factor = 40
         }
         FROM = { country_event = cruzoob.112 }
     }
@@ -489,7 +608,11 @@ country_event = { # Create Faction with Bolivia
     option = {
         name = cruzoob.113.a
         ai_chance = {
-            base = 60
+            factor = 80
+            modifier = {
+                factor = 20
+                tag = BOL
+            }
         }
 
         create_faction = CRU_BOL_accord
@@ -499,7 +622,7 @@ country_event = { # Create Faction with Bolivia
     option = {
         name = cruzoob.113.a
         ai_chance = {
-            base = 40
+            factor = 40
         }
         FROM = { country_event = cruzoob.115 }
     }
@@ -586,5 +709,64 @@ country_event = { # Trade Refused
     option = {
         name = cruzoob.118.a
         add_political_power = -15
+    }
+}
+
+country_event = { # Sent Financial Aid
+    id = cruzoob.119
+    title = cruzoob.119.t
+    desc = cruzoon.119.d
+    picture = GFX_report_event_france_tank_production
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.119.a
+        add_offsite_building = {
+            type = industrial_complex
+            level = 1
+        }
+    }
+}
+
+country_event = { # Sent Industrial Aid
+    id = cruzoob.120
+    title = cruzoob.120.t
+    desc = cruzoon.120.d
+    picture = GFX_report_event_france_tank_production
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.120.a
+        add_offsite_building = {
+            type = industrial_complex
+            level = 1
+        }
+    }
+}
+
+country_event = { # Defeat of Mexico
+    id = cruzoob.121
+    title = cruzoob.121.t
+    desc = cruzoob.121.d
+    picture = GFX_report_event_spr_poum_militia
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.121.a
+        add_political_power = 150
+        
+    }
+}
+
+country_event = { # Defeat of Cruzoob
+    id = cruzoob.122
+    title = cruzoob.122.t
+    desc = cruzoon.122.d
+    picture = GFX_report_event_spr_poum_militia
+    is_triggered_only = yes
+
+    option = {
+        name = cruzoob.122.a
+        add_political_power = 150
     }
 }

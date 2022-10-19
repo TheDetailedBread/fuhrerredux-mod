@@ -1,26 +1,21 @@
-﻿capital = 278
+capital = 278
 
-oob = "ARG_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "ARG_1936_naval_mtg"
-	else = {
-		set_naval_oob = "ARG_1936_naval_legacy"
-	}
-}
+oob = "ARG"
+
+set_stability = 0.45
+set_war_support = 0.45
 set_research_slots = 3
+set_convoys = 120
+
 add_ideas = {
 	party_pop_0_10
 	civilian_economy
 	export_focus
 	volunteer_only
+
 	ARG_british_companies
 	ARG_memories_of_the_chaco_war
 	ARG_labour_strikes
-	ARG_Crisologo_Larralde_hog_sli
-	ARG_Miguel_Zavala_Ortiz_for_sli
-	ARG_Elpidio_Gonzalez_eco_sli
-	ARG_Leopoldo_Melo_sec_sli
 	presidential_republic
 }
 
@@ -29,25 +24,44 @@ set_technology = {
 	infantry_weapons = 1
 	tech_mountaineers = 1
 	gw_artillery = 1
-	gwtank = 1
-	early_fighter = 1
-	CAS1 = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	set_air_oob = "ARG_air_bba"
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+		set_air_oob = "ARG_air_legacy"
 	}
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "ARG_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		early_ship_hull_light = 1
@@ -57,18 +71,26 @@ if = {
 		early_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
 	}
+
+	else = {
+		set_naval_oob = "ARG_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			transport = 1
+		}
+	}
 }
 
-set_stability = 0.45
-set_war_support = 0.45
-set_convoys = 120
 set_politics = {
 	ruling_party = social_liberal
 	last_election = "1931.11.8"
@@ -77,186 +99,33 @@ set_politics = {
 }
 
 set_popularities = {
-    social_democrat = 10
-    social_liberal = 17
-    libertarian_socialist = 3
-    vanguardist = 0
-    market_liberal = 15
-    social_conservative = 10
-    national_populist = 23
-    valkist = 0
-    paternal_autocrat = 2
-    collectivist = 15
-    authoritarian_democrat = 5
+	social_democrat = 10
+	social_liberal = 17
+	libertarian_socialist = 3
+	vanguardist = 0
+	market_liberal = 15
+	social_conservative = 10
+	national_populist = 23
+	valkist = 0
+	paternal_autocrat = 2
+	collectivist = 15
+	authoritarian_democrat = 5
 }
 
-create_country_leader = {
-	name = "Liborio Justo"
-	desc = "POLITICS_LIBORIO_JUSTO_DESC"
-	picture = "Portrait_Argentina_Liborio_Justo.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Fanny Edelman"
-	desc = "POLITICS_FANNY_EDELMAN_DESC"
-	picture = "Portrait_Argentina_Fanny_Edelman.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Rodolfo Ghioldi"
-	desc = "POLITICS_RODOLFO_GHIOLDI_DESC"
-	picture = "Portrait_Argentina_Rodolfo_Ghioldi.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "José Grunfeld"
-	desc = "POLITICS_JOSE_GRUNFELD_DESC"
-	picture = "Portrait_Argentina_Jose_Grunfeld.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Alfredo Palacios"
-	desc = "POLITICS_MARCELO_ALVEAR_DESC"
-	picture = "Portrait_Argentina_Alfredo_Palacios.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Enrique Martínez"
-	desc = "POLITICS_ENRIQUE_MARTINEZ_DESC"
-	picture = "Portrait_Argentina_Enrique_Martinez.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Vicente Gallo"
-	desc = "POLITICS_VICENTE_GALLO_DESC"
-	picture = "Portrait_Argentina_Vicente_Gallo.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Carlos Saavedra Lamas"
-	desc = "POLITICS_CARLOS_SAAVEDRA_DESC"
-	picture = "Portrait_Argentina_Carlos_Lamas.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Agustín Pedro Justo"
-	desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
-	picture = "Portrait_Argentina_Agustin_Justo.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Edelmiro Farrell"
-	desc = "POLITICS_EDELMIRO_FARRELL_DESC"
-	picture = "Portrait_Argentina_Edelmiro_Farrell.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Manuel Domecq García"
-	desc = "POLITICS_MANUEL_DOMECQ_GARCIA_DESC"
-	picture = "Portrait_Argentina_Manuel_Domecq_Garcia.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Leopoldo Lugones"
-	desc = "POLITICS_LEOPOLDO_LUGONES_DESC"
-	picture = "Portrait_Argentina_Leopoldo_Lugones.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "FMA D.21" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
 }
 
-
-
-create_field_marshal = {
-	name = "Arturo Rawson"
-	picture = "Portrait_Argentina_Arturo_Rawson.tga"
-	traits = { defensive_doctrine }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Juan Pistarini"
-	picture = "Portrait_Argentina_Juan_Pistarini.tga"
-	traits = { urban_assault_specialist fortress_buster }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Agustín Justo"
-	picture = "Portrait_Argentina_Agustin_Justo.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Manuel A. Rodríguez"
-	picture = "Portrait_Argentina_Manuel_Rodriguez.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Basilio Pertiné"
-	picture = "Portrait_Argentina_Basilio_Pertine.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_navy_leader = {
-	name = "Alberto Teisaire"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
-	traits = { blockade_runner }
-	skill = 3
-}
-create_navy_leader = {
-	name = "Segundo Storni"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
-	traits = { }
-	skill = 4
-}
-create_navy_leader = {
-	name = "León Scasso"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
-	traits = { }
-	skill = 2
-}
 ### Ship Variants ###
 
 if = {
@@ -426,3 +295,95 @@ if = {
 		}
 	}
 }
+
+
+
+recruit_character = ARG_Anibal_Ponce
+recruit_character = ARG_Liborio_Justo
+recruit_character = ARG_Rodolfo_Ghioldi
+recruit_character = ARG_Lopez_Arango
+recruit_character = ARG_Miguel_Arcangel_Roscigna
+recruit_character = ARG_Alfredo_Palacios
+recruit_character = ARG_Domingo_Mercante
+recruit_character = ARG_Lisandro_de_la_Torre
+recruit_character = ARG_Marcelo_T_de_Alvear
+recruit_character = ARG_Robustiniano_Patron_Costas
+recruit_character = ARG_Torcuato_di_Tella
+recruit_character = ARG_Elpidio_Gonzalez
+recruit_character = ARG_Pedro_Pablo_Ramirez
+recruit_character = ARG_Edelmiro_Farrel
+recruit_character = ARG_Juan_Domingo_Peron
+recruit_character = ARG_Manuel_Carles
+recruit_character = ARG_Jose_Fernando_Penelon
+recruit_character = ARG_Leonidas_Barletta
+recruit_character = ARG_Angel_Borlenghi
+recruit_character = ARG_German_Boris_Wladimirovich
+recruit_character = ARG_Rodolfo_Gonzalez_Pacheco
+recruit_character = ARG_Virginia_Bolten
+recruit_character = ARG_Gregorio_Bermann
+recruit_character = ARG_John_William_Cooke
+recruit_character = ARG_Juan_Isaac_Cooke
+recruit_character = ARG_Miguel_Angel_Zabala_Ortiz
+recruit_character = ARG_Segundo_Rosa_Storni
+recruit_character = ARG_Julio_Argentino_P_Roca
+recruit_character = ARG_Cesar_Armeghino
+recruit_character = ARG_Luis_Podesta_Costa
+recruit_character = ARG_Estanislao_Zeballos
+recruit_character = ARG_Geronimo_Arnedo_Alvarez
+recruit_character = ARG_Diego_Abad_de_Santillan
+recruit_character = ARG_Esteban_Lucich
+recruit_character = ARG_Antonio_de_Tomaso
+recruit_character = ARG_Juana_Rouco_Buella
+recruit_character = ARG_Sebastian_Marotta
+recruit_character = ARG_Oscar_Alende
+recruit_character = ARG_Carlos_Sanchez_Viamonte
+recruit_character = ARG_Guillermo_Rothe
+recruit_character = ARG_Alvaro_Alsogaray
+recruit_character = ARG_Carlos_Silvestre_Begnis
+recruit_character = ARG_Vicente_Solano_Lima
+recruit_character = ARG_Enrique_Mosconi
+recruit_character = ARG_Jorge_Alejandro_Santamaria
+recruit_character = ARG_Diego_Isidro_Mason
+recruit_character = ARG_Manuel_Savio
+recruit_character = ARG_Jose_Peter
+recruit_character = ARG_Alvaro_Yunque
+recruit_character = ARG_Micaela_Feldman_de_Etchebehere
+recruit_character = ARG_Candido_Testa
+recruit_character = ARG_Juan_Antonio_Moran
+recruit_character = ARG_Roberto_Noble
+recruit_character = ARG_Enzo_Bordabehere
+recruit_character = ARG_Arturo_Frondizi
+recruit_character = ARG_Enrique_Mosca
+recruit_character = ARG_Jose_P_Tamborini
+recruit_character = ARG_Reynaldo_Pastor
+recruit_character = ARG_Alberto_Teisaire
+recruit_character = ARG_J_Honorio_Silveiro
+recruit_character = ARG_Elbio_Anaya
+recruit_character = ARG_Alberto_Gilbert
+recruit_character = ARG_Alonso_Baldrich
+recruit_character = ARG_Bartolome_de_la_Colina
+recruit_character = ARG_Eleazar_Videla
+recruit_character = ARG_Luis_Dellepiane
+recruit_character = ARG_Manuel_A_Rodriguez
+recruit_character = ARG_Pedro_Castex_Lainfor
+recruit_character = ARG_Agustin_Pedro_Justo
+recruit_character = ARG_Eduardo_Avalos
+recruit_character = ARG_Juan_Pistarini
+recruit_character = ARG_Pedro_Eugenio_Aramburu
+recruit_character = ARG_Benito_Sueyro
+recruit_character = ARG_Carlos_Daireaux
+recruit_character = ARG_Hector_Vernengo_Lima
+recruit_character = ARG_Isaac_Francisco_Rojas
+recruit_character = ARG_Marcos_Zar
+recruit_character = ARG_Mario_Fincati
+recruit_character = ARG_Antonio_Parodi
+recruit_character = ARG_Fanny_Edelman
+recruit_character = ARG_Jose_Grunfeld
+recruit_character = ARG_Vicente_Gallo
+recruit_character = ARG_Carlos_Saavedra_Lamas
+recruit_character = ARG_Manuel_Domecq_Garcia
+recruit_character = ARG_Leopoldo_Lugones
+recruit_character = ARG_Arturo_Rawson
+recruit_character = ARG_Basilio_Pertine
+recruit_character = ARG_Enrique_Martinez
+recruit_character = ARG_Leon_Scasso

@@ -2395,16 +2395,14 @@ focus_tree = {
 		id = TUR_join_stahlpakt
 		icon = GFX_goal_generic_major_alliance
 		available = {
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
+			OR = {
+				has_government = paternal_autocrat
+				has_government = national_populist
 			}
 			is_in_faction = no
+			GER = {
+				is_faction_leader = yes
+			}
 		}
 		prerequisite = { focus = TUR_foreign_policy } 
 		bypass = {
@@ -2627,15 +2625,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		available = {
 			KUR = { exists = yes }
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
-			}
+			has_socialist_government = no
+			has_democratic_government = no
 		}
 		prerequisite = {
 			focus = TUR_erz_pleb
@@ -2680,20 +2671,16 @@ focus_tree = {
 	
 	focus = {
 		id = TUR_conquer_arabia
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_attack_arabia
 		available = {
-			ARB = { exists = yes }
+			OR = {
+				country_exists = ARB
+				country_exists = SAU
+			}
 			has_army_manpower = { size > 299999 }
 			has_government = paternal_autocrat
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
-			}
+			has_socialist_government = no
+			has_democratic_government = no
 		}
 		prerequisite = {
 			focus = TUR_destroy_kurds
@@ -2732,30 +2719,33 @@ focus_tree = {
 		will_lead_to_war_with = ARB
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TUR_conquer_arabia"
-			declare_war_on = {
-				type = annex_everything
-				target = ARB
+			if = {
+				limit = { country_exists = ARB }
+				declare_war_on = {
+					type = annex_everything
+					target = ARB
+				}
 			}
+			else = {
+				declare_war_on = {
+					type = annex_everything
+					target = SAU
+				}
+			}
+			
 			add_named_threat = { threat = 3.5 name = TUR_war_with_arabia_threat }
 		}
 	}
 
 	focus = {
 		id = TUR_put_down_the_mashriqis
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_attack_iraq
 		available = {
-			IRQ = { exists = yes }
+			country_exists = IRQ
 			has_army_manpower = { size > 299999 }
 			has_government = paternal_autocrat
-			NOT = { 
-				has_government = vanguardist
-				has_government = collectivist 
-				has_government = libertarian_socialist 
-				has_government = social_democrat 
-				has_government = social_liberal 
-				has_government = market_liberal 
-				has_government = authoritarian_democrat 
-			}
+			has_socialist_government = no
+			has_democratic_government = no
 		}
 		prerequisite = {
 			focus = TUR_destroy_kurds
@@ -3638,7 +3628,7 @@ focus_tree = {
 
 	focus = { 
 		id = TUR_inspecting_the_military 
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_OTT_army
 		prerequisite = { focus = TUR_emergency_session }  
 		available = {
 			OR = {
@@ -3742,10 +3732,9 @@ focus_tree = {
 		cost = 5  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TUR_field_exercises"
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}  
@@ -4046,7 +4035,7 @@ focus_tree = {
 
 	focus = { 
 		id = TUR_naval_considerations 
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_OTT_navy
 		prerequisite = { focus = TUR_emergency_session }
 		available = {
 			OR = {
@@ -4189,15 +4178,10 @@ focus_tree = {
 		} 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TUR_naval_doctrines"
-			add_tech_bonus = {
-				name = sub_op_bonus
-				bonus = 0.5
-				uses = 2
-				technology = convoy_interdiction_ti
-				technology = unrestricted_submarine_warfare
-				technology = wolfpacks
-				technology = advanced_submarine_warfare
-				technology = combined_operations_raiding
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 		}  
 	}
@@ -4331,7 +4315,7 @@ focus_tree = {
 
 	focus = { 
 		id = TUR_examining_the_air_force 
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_OTT_air_command
 		prerequisite = { focus = TUR_emergency_session }  
 		available = {
 			OR = {
@@ -4501,9 +4485,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TUR_aerial_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

@@ -3,51 +3,94 @@
 #	Credit to the KR team, by Rylock
 #	Changed to fit FR's ideologies and other tweaks by Arser
 
-# removes the country in scope from all wars (separately - it won't end the wars)
-separate_peace_all_wars = {
-	custom_effect_tooltip = "You will be separately peaced from all your wars."
-	hidden_effect = {
-		save_event_target_as = peace_country
-
-		# first peace out with faction leaders
-		every_country = {
-			limit = {
-				is_faction_leader = yes
-				has_war_with = event_target:peace_country
-			}
-			event_target:peace_country = { white_peace = PREV }
-		}
-
-		# then all non-puppets who aren't in factions
-		every_country = {
-			limit = {
-				is_in_faction = no
-				is_subject = no
-				has_war_with = event_target:peace_country
-			}
-			event_target:peace_country = { white_peace = PREV }
+increase_mobilization = {
+	if = {
+		limit = { has_idea = civilian_economy }
+		swap_ideas = {
+			remove_idea = civilian_economy
+			add_idea = low_economic_mobilisation
 		}
 	}
+	else_if = {
+		limit = { has_idea = low_economic_mobilisation }
+		swap_ideas = {
+			remove_idea = low_economic_mobilisation
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = { has_idea = partial_economic_mobilisation }
+		swap_ideas = {
+			remove_idea = partial_economic_mobilisation
+			add_idea = war_economy
+		}
+	}
+}
+
+# removes the country in scope from all wars (separately - it won't end the wars)
+separate_peace_all_wars = {
+  if = {
+    limit = { has_war = yes }
+    custom_effect_tooltip = FX_separate_peace
+		hidden_effect = {
+			save_event_target_as = peace_country
+
+			# first peace out with faction leaders
+			every_enemy_country = {
+				limit = {
+					is_faction_leader = yes
+				}
+				event_target:peace_country = { white_peace = PREV }
+			}
+
+			# then all non-puppets whose faction leaders aren't in the war
+			every_enemy_country = {
+				limit = {
+					is_subject = no
+					is_in_faction = yes
+					faction_leader = { NOT = { has_war_with = ROOT } }
+				}
+				event_target:peace_country = { white_peace = PREV }
+			}
+
+			# then all non-puppets who aren't in factions
+			every_enemy_country = {
+				limit = {
+					is_subject = no
+					is_in_faction = no
+				}
+				event_target:peace_country = { white_peace = PREV }
+			}
+
+			# then all puppets whose overlords aren't in the war
+			every_enemy_country = {
+				limit = {
+					is_subject = yes
+					overlord = { NOT = { has_war_with = ROOT } }
+				}
+				event_target:peace_country = { white_peace = PREV }
+			}
+		}
+  }
 }
 
 # removes all current ministers for the country in scope - no tooltips displayed
 remove_every_minister = {
 	hidden_effect = {
-		remove_ideas_with_trait = head_of_government
-		remove_ideas_with_trait = foreign_minister
-		remove_ideas_with_trait = economy_minister
-		remove_ideas_with_trait = security_minister
-		remove_ideas_with_trait = head_of_intel
+		remove_every_hog_trait = yes
+		remove_every_for_trait = yes
+		remove_every_eco_trait = yes
+		remove_every_sec_trait = yes
 	}
 }
 
 # removes all ministers but the Head of Government 
 remove_every_minister_but_hog = {
-    hidden_effect = {
-        remove_ideas_with_trait = foreign_minister
-        remove_ideas_with_trait = economic_minister
-        remove_ideas_with_trait = security_minister
-    }
+	hidden_effect = {
+		remove_every_for_trait = yes
+		remove_every_eco_trait = yes
+		remove_every_sec_trait = yes
+	}
 }
 
 # changes the government of the country in scope to that of ROOT (the country running the event)
@@ -434,4 +477,126 @@ force_recalculate_factories = {
 	}
 }
 
-give_THIS_
+embargo_ROOT = {
+	add_opinion_modifier = {
+		modifier = embargo
+		target = ROOT
+	}
+	reverse_add_opinion_modifier = {
+		modifier = embargo
+		target = ROOT
+	}
+}
+
+clear_embargo_ROOT = {
+	remove_opinion_modifier = {
+		modifier = embargo
+		target = ROOT
+	}
+	ROOT = {
+		remove_opinion_modifier = {
+			modifier = embargo
+			target = PREV
+		}
+	}
+}
+
+embargo_PREV = {
+	add_opinion_modifier = {
+		modifier = embargo
+		target = PREV
+	}
+	reverse_add_opinion_modifier = {
+		modifier = embargo
+		target = PREV
+	}
+}
+
+clear_embargo_PREV = {
+	remove_opinion_modifier = {
+		modifier = embargo
+		target = PREV
+	}
+	PREV = {
+		remove_opinion_modifier = {
+			modifier = embargo
+			target = PREV
+		}
+	}
+}
+
+embargo_FROM = {
+	add_opinion_modifier = {
+		modifier = embargo
+		target = FROM
+	}
+	reverse_add_opinion_modifier = {
+		modifier = embargo
+		target = FROM
+	}
+}
+
+clear_embargo_FROM = {
+	remove_opinion_modifier = {
+		modifier = embargo
+		target = FROM
+	}
+	FROM = {
+		remove_opinion_modifier = {
+			modifier = embargo
+			target = PREV
+		}
+	}
+}
+
+
+destroy_all_ships = {
+	destroy_ships = {
+		type = ship_hull_light
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser_panzerschiff
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser_coastal_defense_ship
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_pre_dreadnought
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_heavy
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_super_heavy_1
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_submarine
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser_submarine
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_carrier
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_carrier_conversion_bb
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_carrier_conversion_ca
+		count = all
+	}
+}

@@ -111,10 +111,12 @@ country_event = { #Party Merger - March 14 1936
             			long_name = "South Africa Liberal Party"
             			name = "SALP"
         		}
-			add_ideas = SAF_Jbm_Hertzog_hog
-			add_ideas = SAF_Nicolaas_Havenga_eco
-			add_ideas = SAF_FHP_Creswell_sec
-			add_ideas = SAF_Charles_Water_for
+      add_ideas = {
+        SAF_James_Hertzog_hog_ade
+        SAF_Jan_C_Smuts_for_sco
+        SAF_Pieter_van_der_Byl_eco_sco
+        SAF_Deneys_Reitz_sec_sco
+      }
 		}
 	}
 }
@@ -416,122 +418,91 @@ country_event = { #GG Patrick Duncan
 
 	option = {
 		name = southafrica.9.a
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					#
-				}
-			}
+      SAF_Patrick_Duncan = {
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = vanguardist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_conservative_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = national_populist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = valkist_subtype
+            traits = {}
+          }
+        }
+      }
 			add_popularity = {
 				ideology = paternal_autocrat popularity = 0.05
 			}			
 			add_stability = -0.1
 		hidden_effect = {
 			add_to_variable = {	var = saf_pnp value = 1 }
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = vanguardist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "Patrick Duncan"
-				desc = "POLITICS_PATRICK_DUNCAN_DESC"
-				picture = "Portrait_Patrick_Duncan.tga"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = {
-					#
-				}
-			}
 		}
 	}
 }
@@ -548,124 +519,93 @@ country_event = { #GG Hertzog
 
 	option = {
 		name = southafrica.10.a
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-					#
-				}
-			}
 			add_popularity = {
 				ideology = social_conservative popularity = 0.05
 			}			
 			add_stability = 0.1
 		hidden_effect = {
 			add_to_variable = {	var = saf_united value = 1 }
-			add_ideas = SAF_Jan_Smuts_hog
-			remove_ideas = SAF_Jbm_Hertzog_hog
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = vanguardist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = paternal_autocrat_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-					#
-				}
-			}
-			create_country_leader = {
-				name = "J. B. M. Hertzog"
-				desc = "POLITICS_J_B_M_HERTZOG_DESC"
-				picture = "GFX_SAF_james_hertzog"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = {
-					#
-				}
-			}
+			add_ideas = SAF_Jan_C_Smuts_hog_sco
+			remove_ideas = SAF_James_Hertzog_hog_ade
+      SAF_James_Hertzog = {
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = vanguardist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = collectivist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = libertarian_socialist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_liberal_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = market_liberal_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_conservative_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = authoritarian_democrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = paternal_autocrat_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = national_populist_subtype
+            traits = {}
+          }
+        }
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = valkist_subtype
+            traits = {}
+          }
+        }
+      }
 			set_country_flag = SAF_Hertzog_gg
 		}
 	}
@@ -1628,16 +1568,14 @@ country_event = { #Independence from the Empire
 	
 	option = { #Nice
 		name = southafrica.29.a
-		create_country_leader = {
-			name = "D. F. Malan"
-			desc = "POLITICS_DF_MALAN_DESC"
-			picture = "Portrait_DF_Malan.tga"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-				#
-			}
-		}	
+    add_country_leader_role = {
+      character = SAF_D_F_Malan
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
 		add_political_power = 100
 		add_ideas = SAF_Independence_at_Last
 		add_ideas = parliamentary_republic
@@ -2606,6 +2544,8 @@ country_event = { #ANC Boer War
 	
 	option = {
 		name = southafrica.100.a
+    retire_character = SAF_George_Brink
+    retire_character = SAF_Guy_Hallifax
 		ZAF = { 
 			transfer_technology = yes
 			transfer_state = 275
@@ -2615,17 +2555,9 @@ country_event = { #ANC Boer War
 			transfer_state = 865
 				add_state_core = 865
 			load_oob = ZAF_boerwar
-			set_capital = 275
+			set_capital = { state = 275 }
 			set_stability = 0.5
 			set_politics = { ruling_party = valkist elections_allowed = no }
-			create_country_leader = {
-				name = "D. F. Malan"
-				desc = "POLITICS_DF_MALAN_DESC"
-				picture = "gfx/leaders/ZAF/Portrait_DF_Malan.tga"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
-			}
 			add_ideas = ZAF_Disorganized_Rebels
 		}
 		if = {
@@ -2656,7 +2588,9 @@ country_event = { #ANC Boer War
 		}
 	}
 	option = {
-        	name = southafrica.100.b
+    name = southafrica.100.b
+    retire_character = SAF_George_Brink
+    retire_character = SAF_Guy_Hallifax
 		hidden_effect = {
 			ZAF = {
 				transfer_technology = yes
@@ -2667,17 +2601,9 @@ country_event = { #ANC Boer War
 				transfer_state = 865
 					add_state_core = 865
 				load_oob = ZAF_boerwar
-				set_capital = 275
+				set_capital = { state = 275 }
 				set_stability = 0.5
 				set_politics = { ruling_party = valkist elections_allowed = no }
-				create_country_leader = {
-					name = "D. F. Malan"
-					desc = "POLITICS_DF_MALAN_DESC"
-					picture = "Portrait_DF_Malan.tga"
-					expire = "1965.1.1"
-					ideology = valkist_subtype
-					traits = { }
-				}
 				add_ideas = ZAF_Disorganized_Rebels
 				declare_war_on = { target = SAF type = annex_everything }
 				change_tag_from = SAF
@@ -2745,6 +2671,8 @@ country_event = { #Union & Federation Boer War
 	
 	option = {
 		name = southafrica.101.a
+    retire_character = SAF_George_Brink
+    retire_character = SAF_Guy_Hallifax
 		ZAF = { 
 			transfer_technology = yes
 			transfer_state = 275
@@ -2754,17 +2682,9 @@ country_event = { #Union & Federation Boer War
 			transfer_state = 865
 				add_state_core = 865
 			load_oob = ZAF_boerwar
-			set_capital = 275
+			set_capital = { state = 275 }
 			set_stability = 0.5
 			set_politics = { ruling_party = valkist elections_allowed = no }
-			create_country_leader = {
-				name = "D. F. Malan"
-				desc = "POLITICS_DF_MALAN_DESC"
-				picture = "Portrait_DF_Malan.tga"
-				expire = "1965.1.1"
-				ideology = valkist_subtype
-				traits = { }
-			}
 			add_ideas = ZAF_Disorganized_Rebels
 		}
 		if = {
@@ -2794,6 +2714,8 @@ country_event = { #Union & Federation Boer War
 	option = {
         	name = southafrica.101.b
 		hidden_effect = {
+      retire_character = SAF_George_Brink
+      retire_character = SAF_Guy_Hallifax
 			ZAF = {
 				transfer_technology = yes
 				transfer_state = 275
@@ -2803,17 +2725,9 @@ country_event = { #Union & Federation Boer War
 				transfer_state = 865
 					add_state_core = 865
 				load_oob = ZAF_boerwar
-				set_capital = 275
+				set_capital = { state = 275 }
 				set_stability = 0.5
 				set_politics = { ruling_party = valkist elections_allowed = no }
-				create_country_leader = {
-					name = "D. F. Malan"
-					desc = "POLITICS_DF_MALAN_DESC"
-					picture = "Portrait_DF_Malan.tga"
-					expire = "1965.1.1"
-					ideology = valkist_subtype
-					traits = { }
-				}
 				add_ideas = ZAF_Disorganized_Rebels
 				declare_war_on = { target = SAF type = annex_everything }
 				change_tag_from = SAF
@@ -2971,59 +2885,43 @@ country_event = { # Fate of East Africa
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
 			}
-            	}
+    }
 	}
 
 	option = { # South Africa shall conquer all
 		ai_chance = {
 			factor = 0
 		}
-    		name = southafrica.102.c
-        	add_political_power = -150
-    	}
+    name = southafrica.102.c
+    add_political_power = -150
+  }
 }
 
 country_event = { # East Africa - Establish administration
 	id = southafrica.103
 	immediate = {log = "[GetDateText]: [Root.GetName]: event southafrica.103"}
-    title = southafrica.103.t
-    desc = southafrica.103.d
-    picture = GFX_report_event_communists_cheer
+	title = southafrica.103.t
+	desc = southafrica.103.d
+	picture = GFX_report_event_communists_cheer
 
-    trigger = {
-        original_tag = TZN
+	trigger = {
+		original_tag = TZN
 		TZN = {
 			is_puppet_of = SAF
 		}
-        owns_state = 546
-    }
+		owns_state = 546
+	}
 
-    mean_time_to_happen = {
-        days = 1
-    }
-
-    fire_only_once = yes
+	mean_time_to_happen = {
+			days = 1
+	}
+  fire_only_once = yes
 
 	option = {
-	name = southafrica.103.a
-#		TZN = {
-#			set_province_controller = 9904 # Units loading in enemy territory cause errors
-#			set_province_controller = 819
-#			set_province_controller = 10074
-#			set_province_controller = 11837
-#			set_province_controller = 3780
-#			set_province_controller = 11584
-#			set_province_controller = 6788
-#			load_oob = VIT
-#			add_ideas = VIT_illegitimate_government
-#		}
+		name = southafrica.103.a
 	}
 }
 
@@ -3228,23 +3126,19 @@ country_event = { # Fate of Egypt
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
 			}
-            	}
+    }
 	}
 
 	option = { # South Africa shall conquer all
 		ai_chance = {
 			factor = 0
 		}
-    		name = southafrica.104.c
-        	add_political_power = -150
-    	}
+    name = southafrica.104.c
+    add_political_power = -150
+  }
 }
 
 country_event = { # Fate of Abyssinia
@@ -3364,23 +3258,19 @@ country_event = { # Fate of Abyssinia
 					popularity = 60
 				}
 				add_ideas = {
-					GEN_hog_val
-					GEN_for_val
-					GEN_eco_val
-					GEN_sec_val
 					limited_conscription
 				}
 			}
-            	}
+    }
 	}
 
 	option = { # South Africa shall conquer all
 		ai_chance = {
 			factor = 0
 		}
-    		name = southafrica.105.c
-        	add_political_power = -150
-    	}
+    name = southafrica.105.c
+    add_political_power = -150
+  }
 }
 
 
@@ -3445,28 +3335,26 @@ country_event = { #ZAF Victory
 				remove_ideas = SAF_Boer_Revolt
 				add_ideas = one_party_dictatorship
 				set_politics = { ruling_party = valkist elections_allowed = no }
-				create_country_leader = {
-					name = "D. F. Malan"
-					desc = "POLITICS_DF_MALAN_DESC"
-					picture = "Portrait_DF_Malan.tga"
-					expire = "1965.1.1"
-					ideology = valkist_subtype
-					traits = {
-						#
-					}
-				}
+        add_country_leader_role = {
+          character = SAF_D_F_Malan
+          promote_leader = yes
+          country_leader = {
+            ideology = valkist_subtype
+            traits = {}
+          }
+        }
 				set_popularities = {
 					vanguardist = 0
-	    				collectivist = 0
-    					libertarian_socialist = 0
-    					social_democrat = 0
-    					social_liberal = 0
-    					market_liberal = 0
-	    				social_conservative = 0
-    					authoritarian_democrat = 20
-    					paternal_autocrat = 25
-    					national_populist = 25
-    					valkist = 30
+          collectivist = 0
+          libertarian_socialist = 0
+          social_democrat = 0
+          social_liberal = 0
+          market_liberal = 0
+          social_conservative = 0
+          authoritarian_democrat = 20
+          paternal_autocrat = 25
+          national_populist = 25
+          valkist = 30
 				}
 				change_tag_from = ZAF
 				set_country_flag = SAF_Boer_Victory

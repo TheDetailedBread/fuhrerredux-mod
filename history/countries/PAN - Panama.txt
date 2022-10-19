@@ -1,6 +1,6 @@
-﻿capital = 304
+capital = 304
 
-oob = "PAN_1936"
+oob = "PAN"
 
 # Starting tech
 set_technology = {
@@ -14,47 +14,30 @@ set_war_support = 0.50
 
 add_ideas = {
 	party_pop_0_40
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	presidential_republic
 }
 
 set_politics = {
-	ruling_party = social_conservative
+	ruling_party = market_liberal
 	last_election = "1932.6.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-    vanguardist = 3
-    collectivist = 3
-    libertarian_socialist = 3
-    social_democrat = 31
-    social_liberal = 5
-    market_liberal = 0
-    social_conservative = 45
-    authoritarian_democrat = 0
-    paternal_autocrat = 2
-    national_populist = 8
-    valkist = 0
+  vanguardist = 3
+  collectivist = 3
+  libertarian_socialist = 3
+  social_democrat = 31
+  social_liberal = 5
+  market_liberal = 35
+  social_conservative = 10
+  authoritarian_democrat = 0
+  paternal_autocrat = 2
+  national_populist = 8
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Harmodio Arias Madrid"
-	desc = "POLITICS_HARMODIO_ARIAS_MADRID_DESC"
-	picture = "Portrait_Panama_Harmodio_Diaz_Madrid_fx.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Harmodio Arias Madrid"
-	desc = "POLITICS_HARMODIO_ARIAS_MADRID_DESC"
-	picture = "Portrait_Panama_Harmodio_Diaz_Madrid_fx.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
+recruit_character = PAN_Juan_Demostenes_Arosemena
+recruit_character = PAN_Manuel_Pino
+recruit_character = PAN_Harmodio_Arias_Madrid

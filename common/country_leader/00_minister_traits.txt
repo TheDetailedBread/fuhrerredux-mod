@@ -7,7 +7,7 @@ leader_traits = {
 	########################################
 	## HEAD of GOVERNMENT
 	########################################
-	
+
 	hog_red_chairmen = {
 		consumer_goods_factor = 0.05
 		political_power_gain = 0.1
@@ -569,11 +569,11 @@ leader_traits = {
 	eco_battle_fleet_proponent = {
 		ai_focus_naval_factor = 0.5
 		equipment_bonus = {
-			capital_ship = {
+			battleship = {
 				build_cost_ic = -0.1
 				instant = yes
 			}
-			screen_ship = {
+			heavy_cruiser = {
 				build_cost_ic = -0.1
 				instant = yes
 			}
@@ -601,7 +601,7 @@ leader_traits = {
 				build_cost_ic = -0.1
 				instant = yes
 			}
-			support_equipment_1 = {
+			support_equipment = {
 				build_cost_ic = -0.1
 				instant = yes
 			}
@@ -895,8 +895,8 @@ leader_traits = {
 
 	sec_man_of_the_people = {
 		stability_factor = 0.1
-		resistance_tick = -0.2
-
+    resistance_decay_on_our_occupied_states = -0.5
+    
 		random = no
 	}
 
@@ -936,7 +936,7 @@ leader_traits = {
 
 	sec_secret_police_chief = {
 		political_power_gain = 0.1
-		resistance_tick = -0.15
+    compliance_growth_on_our_occupied_states = 0.1
 		encryption_factor = 0.05
 		decryption = 0.5
 
@@ -964,11 +964,11 @@ leader_traits = {
 	cos_school_of_manoeuvre = {
 		army_speed_factor = 0.1
 		equipment_bonus = {
-			motorized = {
+			motorized_equipment = {
 				soft_attack = 0.1
 				instant = yes
 			}
-			mechanized = {
+			mechanized_equipment = {
 				soft_attack = 0.1
 				instant = yes
 			}
@@ -983,7 +983,7 @@ leader_traits = {
 		army_artillery_attack_factor = 0.15
 		army_artillery_defence_factor = 0.15
 		equipment_bonus = {
-			category_artillery = {
+			artillery = {
 				build_cost_ic = -0.05
 				instant = yes
 			}
@@ -1065,7 +1065,7 @@ leader_traits = {
 	carm_armoured_spearhead_doctrine = {
 		army_attack_factor = 0.05
 		equipment_bonus = {
-			motorized = {
+			motorized_equipment = {
 				maximum_speed = 0.1
 				instant = yes
 			}
@@ -1073,7 +1073,7 @@ leader_traits = {
 				maximum_speed = 0.1
 				instant = yes
 			}
-			category_all_armor = {
+			armor = {
 				maximum_speed = 0.1
 				breakthrough = 0.10
 				instant = yes

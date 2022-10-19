@@ -1,0 +1,38 @@
+set_puppet_minister_europe = {
+  if = {
+    limit = { tag = HOL }
+		if = {
+			limit = { has_socialist_government = yes }
+			add_ideas = {
+				HOL_Harm_Kolthek_hog_col
+				HOL_Nicolaas_Beuzemaker_for_col
+				HOL_Jan_Tinbergen_eco_lib
+				HOL_Bernhard_Coltof_sec_van
+			}
+		}
+		else_if = {
+			limit = { has_government = paternal_autocrat }
+			add_ideas = {
+				HOL_Izaak_Reynders_hog_ade
+				HOL_Jan_Baars_for_pau
+				HOL_Henri_Johannes_ter_Hal_eco_pau
+				HOL_Johannes_Linthorst_Homan_sec_pau
+			}
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					has_government = national_populist
+					has_government = valkist
+				}
+			}
+
+			add_ideas = {
+				HOL_Cornelis_van_Geelkerken_hog_npo
+				HOL_Willem_Bernard_Engelbrecht_for_npo
+				HOL_Gerrit_van_Burink_eco_npo
+				HOL_AJ_van_der_Hoeven_sec_npo
+			}
+		}
+  }
+}

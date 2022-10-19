@@ -1,22 +1,22 @@
 ﻿division_template = {
 	name = "Divisi Infanteri"
+	division_names_group = INS_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
+    infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
-	}
-	support = {
 	}
 }
 division_template = {
 	name = "Divisi Milisi"
+	division_names_group = INS_MIL_01
 
 	regiments = {
 		militia = { x = 0 y = 0 }
@@ -32,6 +32,7 @@ division_template = {
 }
 division_template = {
 	name = "Brigade Milisi"
+	division_names_group = INS_INF_01
 
 	regiments = {
 		militia = { x = 0 y = 0 }
@@ -45,24 +46,20 @@ division_template = {
 }
 division_template = {
 	name = "Brigade Kavaleri"
+	division_names_group = INS_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
 		cavalry = { x = 0 y = 2 }
-        cavalry = { x = 1 y = 0 }
+  	cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 		cavalry = { x = 1 y = 2 }
-	}
-	support = {
 	}
 }
 
 
 units = {
-	#Insulindian Armed Forces#
-	#Sumatra
-	
 	division = {
 		name = "1. Divisi Infanteri"
 		location = 1277

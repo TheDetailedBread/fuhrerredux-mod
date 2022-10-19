@@ -206,9 +206,11 @@ country_event = {
 	
 	option = {
 		name = "Mein gott!"
-		add_ideas = RHI_S_rhine_crisis
-		add_ideas = RHI_Paul_Tirard_hog
-		add_ideas = RHI_Andre_Francois_Poncet_for
+    add_ideas = {
+      RHI_S_rhine_crisis
+      RHI_Paul_Tirard_hog_ade
+      RHI_Andre_Francois_Poncet_for_pau
+    }
 		add_stability = -0.03
 		hidden_effect = {
 			FRA = { country_event = rhi.france.1 }
@@ -658,10 +660,12 @@ country_event = {
 			elections_allowed = no
 		}
 		hidden_effect = {
-			add_ideas = RHI_Henri_Mordacq_hog
-			add_ideas = RHI_Andre_Francois_Poncet_for
-			add_ideas = RHI_Adolphe_Guillaumat_eco
-			add_ideas = RHI_Albert_Tanant_sec
+      add_ideas = {
+        RHI_Henri_Mordacq_hog_ade
+        RHI_Andre_Francois_Poncet_for_pau
+        RHI_EF_Schumachher_eco_ade
+        RHI_Karl_von_Starck_sec_ade
+      }
 			set_global_flag = RHI_F_crisis_end
 			set_global_flag = RHI_F_mandate
 			country_event = { id = rhi.political.5 days = 7 }
@@ -673,7 +677,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event rhi.crisis.22"}
 	title = "The German Rhine!"
 	desc = rhi.32.d
-	picture = TST_event
+	picture = GFX_report_event_RHI_tst_troops
 
 	 
 	is_triggered_only = yes
@@ -688,52 +692,48 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = RHI_F_crisis_end
 			set_global_flag = RHI_F_valkist
-			add_ideas = RHI_Albert_Leo_Schlageter_hog
-			add_ideas = RHI_Walter_Stennes_for
-			add_ideas = RHI_Heinrich_Himmler_eco
-			add_ideas = RHI_Franz_Pfeffer_von_Salomon_sec
+      add_ideas = {
+        RHI_Albert_Leo_Schlageter_hog_val
+        RHI_Walter_Stennes_for_val
+        RHI_Heinrich_Himmler_eco_val
+        RHI_Franz_Pfeffer_von_Salomon_sec_val
+      }
 			remove_ideas = RHI_Charles_Mangin_cos
 			country_event = { id = rhi.political.5 days = 7 }
-			remove_unit_leader = 3301
-			remove_unit_leader = 3302
-			remove_unit_leader = 3303
-			remove_unit_leader = 3304
-			remove_unit_leader = 3305
-			remove_unit_leader = 3306
-			}
-		create_field_marshal = {
-			name = "Viktor Lutze"
-			desc = "RHI_Gen_Viktor_Lutze_DESC"
-			picture = "Portrait_RHI_Viktor_Lutze.tga"
-			traits = {politically_connected organizer}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Albert Leo Schlageter"
-			desc = "RHI_Gen_Albert_Leo_Schlageter_DESC"
-			picture = "Portrait_RHI_Albert_Leo_Schlageter.tga"
-			traits = {brilliant_strategist politically_connected trait_reckless}
+		  retire_character = RHI_Charles_Mangin
+      retire_character = RHI_Adolphe_Guillaumat
+      retire_character = RHI_Louis_Theodore_Kleinmann
+      retire_character = RHI_Henri_Mordacq
+      retire_character = RHI_Albert_Tanant
+      retire_character = RHI_Victor_Louis_Goybet
+		}
+    add_field_marshal_role = {
+      character = RHI_Viktor_Lutze
+      traits = { politically_connected organizer }
+      skill = 3
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 3
+      logistics_skill = 3
+    }
+    add_corps_commander_role = {
+      character = RHI_Albert_Leo_Schlageter
+      traits = {brilliant_strategist politically_connected trait_reckless}
 			skill = 4
 			attack_skill = 4
 			defense_skill = 4
 			planning_skill = 2
 			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Franz Pfeffer von Salomon"
-			desc = "RHI_Gen_Franz_Pfeffer_von_Salomon_DESC"
-			picture = "Portrait_RHI_Franz_Pfeffer_von_Salomon.tga"
-			traits = {politically_connected harsh_leader}
+    }
+    add_corps_commander_role = {
+      character = RHI_Franz_Pfeffer_von_Salomon
+      traits = {politically_connected harsh_leader}
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
-		}
+    }
 		#FRA = { remove_ideas = FRA_rhineland_coal }
 		remove_ideas = RHI_S_rhineland_coal
 		delete_unit_template_and_units = { division_template = "French Garrison" }
@@ -759,11 +759,11 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = RHI_F_crisis_end
 			set_global_flag = RHI_F_autonomous
-			add_ideas = RHI_Josef_Friedrich_Matthes_hog
-			add_ideas = RHI_Franz_Blucher_eco
-			add_ideas = RHI_Wilhelm_Rombach_sec
-			remove_ideas = RHI_EF_Schumacher_eco
-			remove_ideas = RHI_Karl_von_Starck_sec
+      add_ideas = {
+        RHI_Josef_Friedrich_Matthes_hog_sde
+        RHI_Franz_Blucher_eco_sco
+        RHI_Wilhelm_Rombach_sec_sco
+      }
 			country_event = { id = rhi.political.5 days = 7 }
 		}
 	}
@@ -791,44 +791,38 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = RHI_F_crisis_end
 			set_global_flag = RHI_F_independent
-			add_ideas = RHI_Hans_Adam_Dorten_hog
-			add_ideas = RHI_Kurt_Tucholsky_for
-			add_ideas = RHI_Walt_Kolb_eco
-			add_ideas = RHI_Georg_Buch_sec
- 	      	remove_ideas = RHI_Paul_Tirard_hog
-			remove_ideas = RHI_William_Seeds_for
-			remove_ideas = RHI_EF_Schumacher_eco
-			remove_ideas = RHI_Karl_von_Starck_sec
+ 	    add_ideas = {
+         RHI_Hans_Adam_Dorten_hog_npo
+         RHI_Kurt_Tucholsky_for_sde
+         RHI_Walter_Kolb_eco_sde
+         RHI_Georg_Buch_sec_sde
+       }
 			remove_ideas = RHI_Charles_Mangin_cos
 			country_event = { id = rhi.36 days = 7 }
-			remove_unit_leader = 3301
-		remove_unit_leader = 3302
-		remove_unit_leader = 3303
-		remove_unit_leader = 3304
-		remove_unit_leader = 3305
-		remove_unit_leader = 3306
-		create_field_marshal = {
-			name = "Hans Adam Dorten"
-			desc = "RHI_Gen_Dorten_DESC"
-			picture = "Portrait_RHI_Hans_Adam_Dorten.tga"
-			traits = {inspirational_leader defensive_doctrine politically_connected media_personality}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-		}	
-		create_corps_commander = {
-			name = "Otto Lichtschlag"
-			desc = "RHI_Gen_Lichtschalg_DESC"
-			picture = "Portrait_RHI_Otto_Lichtschlag.tga"
-			traits = {urban_assault_specialist politically_connected war_hero}
-			skill = 4
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 2
-		}
+      retire_character = RHI_Charles_Mangin
+      retire_character = RHI_Adolphe_Guillaumat
+      retire_character = RHI_Louis_Theodore_Kleinmann
+      retire_character = RHI_Henri_Mordacq
+      retire_character = RHI_Albert_Tanant
+      retire_character = RHI_Victor_Louis_Goybet
+      add_field_marshal_role = {
+        character = RHI_Hans_Adam_Dorten
+        traits = {inspirational_leader defensive_doctrine politically_connected media_personality}
+        skill = 2
+        attack_skill = 1
+        defense_skill = 2
+        planning_skill = 2
+        logistics_skill = 2
+      }
+      add_corps_commander_role = {
+        character = RHI_Otto_Lichtschlag
+        traits = {urban_assault_specialist politically_connected war_hero}
+        skill = 4
+        attack_skill = 4
+        defense_skill = 4
+        planning_skill = 2
+        logistics_skill = 2
+      }
 		}
 	}
 }
@@ -859,10 +853,12 @@ country_event = {
 		}
 		add_popularity = { ideology = national_populist popularity = 0.25 }
 		hidden_effect = {
-		add_ideas = RHI_Otto_Lichtschlag_hog
-		add_ideas = RHI_Theodor_Reismann-Grone_for
-		add_ideas = RHI_Emil_Kirdorf_eco
-		add_ideas = RHI_Walter_Lichtschlag_sec
+      add_ideas = {
+        RHI_Otto_Lichtschlag_hog_npo
+        RHI_Theodor_Reismann_Grone_for_npo
+        RHI_Emil_Kirdorf_eco_npo
+        RHI_Walther_Lichtschlag_sec_npo
+      }
 		}
 	}
 	option = {
@@ -873,10 +869,12 @@ country_event = {
 		}
 		add_popularity = { ideology = social_democrat popularity = 0.25 }
 		hidden_effect = {
-		add_ideas = RHI_Kurt_Tucholsky_hog
-		add_ideas = RHI_Walter_Kreiser_for
-		add_ideas = RHI_Walt_Kolb_eco
-		add_ideas = RHI_Georg_Buch_sec
+      add_ideas = {
+        RHI_Kurt_Tucholsky_hog_sde
+        RHI_Walter_Kreiser_for_sde
+        RHI_Walter_Kolb_eco_sde
+        RHI_Georg_Buch_sec_sde
+      }
 		}
 	}
 }
@@ -892,18 +890,18 @@ country_event = {
 
 	option = {
 		name = "Köln"
-		set_capital = 746
+		set_capital = { state = 746 }
 		ai_chance = {
 			factor = 100
 		}
 	}
 	option = {
 		name = "Essen"
-		set_capital = 51
+		set_capital = { state = 51}
 	}
 	option = {
 		name = "Koblenz"
-		set_capital = 42
+		set_capital = { state = 42 }
 	}
 }
 #########################
@@ -1243,7 +1241,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event rhi.106"}
 	title = "Germany demands Referendum!"
 	desc = rhi.106.d
-	picture = TST_event
+	picture = GFX_report_event_RHI_tst_troops
 	
 	is_triggered_only = yes
 	 
@@ -1366,7 +1364,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event rhi.200"}
 	title = "Referendum Success!"
 	desc = rhi.200.d
-	picture = TST_event
+	picture = GFX_report_event_RHI_tst_troops
 	
 	 
 	is_triggered_only = yes
@@ -1383,7 +1381,7 @@ country_event = {
 				#remove_ideas = FRA_rhineland_coal
 				modify_country_flag = { flag = FRA_german_threat value = 1 }
 			}
-			every_country = { news_event = { id = worldnews.43 days = 1 } }
+			random_other_country = { news_event = { id = worldnews.43 days = 1 } }
 		}
 	}
 }
@@ -1392,7 +1390,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event rhi.201"}
 	title = "Referendum Failure!"
 	desc = rhi.201.d
-	picture = TST_event
+	picture = GFX_report_event_RHI_tst_troops
 	
 	 
 	is_triggered_only = yes
@@ -1441,7 +1439,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event rhi.202"}
 	title = "Referendum Blocked!"
 	desc = rhi.202.d
-	picture = TST_event
+	picture = GFX_report_event_RHI_tst_troops
 	
 	 
 	is_triggered_only = yes

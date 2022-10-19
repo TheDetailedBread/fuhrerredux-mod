@@ -1,0 +1,39 @@
+add_namespace = belarus
+
+country_event = { # Join Stahlpakt
+  id = belarus.100
+  title = belarus.100.t
+  desc = belarus.100.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
+
+  option = {
+    name = belarus.100.a
+    ai_chance = {
+      base = 100
+    }
+    add_to_faction = FROM
+  }
+
+  option = {
+    name = belarus.100.b
+    ai_chance = {
+      base = 0
+    }
+    FROM = {
+      country_event = { id = belarus.101 days = 2 }
+    }
+  }
+}
+
+country_event = { # Germany denies our entry
+  id = belarus.101
+  title = belarus.101.t
+  desc = belarus.101.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
+
+  option = { # Dissapointing
+    name = belarus.101.a
+  }
+}

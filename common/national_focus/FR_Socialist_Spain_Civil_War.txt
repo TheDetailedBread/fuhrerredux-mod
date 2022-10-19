@@ -1,5 +1,5 @@
 focus_tree = {
-	id = FR_Socialist_Spain_Ibarruri
+	id = FR_Socialist_Spain_CivilWar
 	country = {
 		factor = 0
 		modifier = {
@@ -101,7 +101,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SPA_enact_war_socialism
-		icon = GFX_goal_RAJ_The_Army
+		icon = GFX_focus_generic_join_comintern
 		cost = 5.00
 		prerequisite = {
 			focus = SPA_organize_revolutionaries
@@ -775,7 +775,7 @@ focus_tree = {
 			has_political_power > 0
 			SPR = { exists = no }
 			SPM = { exists = no }
-			SPA = { exists = no }
+			SPF = { exists = no }
 		}
 		
 		ai_will_do = {

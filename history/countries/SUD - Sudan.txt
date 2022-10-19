@@ -7,29 +7,26 @@ set_stability = 0
 set_war_support = 0.22
 
 # Starting tech
-	set_technology = {
-		infantry_weapons = 1
+set_technology = {
+  infantry_weapons = 1
 
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
+  #electronics
+  electronic_mechanical_engineering = 1
+  radio = 1
+  radio_detection = 1
+  mechanical_computing = 1
 
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_silos = 1
-	}
+  #industry
+  basic_machine_tools = 1
+  improved_machine_tools = 1
+  advanced_machine_tools = 1
+  synth_oil_experiments = 1
+  fuel_silos = 1
+	basic_train = 1
+}
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	parliamentary_republic
 }
 
@@ -39,30 +36,18 @@ set_politics = {
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
-
 }
 
 set_popularities = {
-    vanguardist = 3
-    collectivist = 4
-    libertarian_socialist = 1
-    social_democrat = 12
-    social_liberal = 6
-    market_liberal = 4
-    social_conservative = 33
-    authoritarian_democrat = 21
-    paternal_autocrat = 11
-    national_populist = 5
-    valkist = 0
-}
-
-create_country_leader = {
-	name = "Ismail al-Azhari"
-	desc = "POLITICS_ISMAIL_AL_AZAHRI_DESC"
-	picture = "gfx/leaders/SUD/Portrait_SUD_Ismail_al-Azhari.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		
-	}
+  vanguardist = 3
+  collectivist = 4
+  libertarian_socialist = 1
+  social_democrat = 12
+  social_liberal = 6
+  market_liberal = 4
+  social_conservative = 33
+  authoritarian_democrat = 21
+  paternal_autocrat = 11
+  national_populist = 5
+  valkist = 0
 }

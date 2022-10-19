@@ -1731,12 +1731,11 @@
 
     add_political_power = -50
 
-		add_tech_bonus = {
-			name = nav_doctrine_bonus
-			bonus = 0.30
-			uses = 2
-			category = naval_doctrine
-		}
+		  add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 
 		}
 
@@ -1766,12 +1765,12 @@
 
     add_political_power = -60
 
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 0.30
-				uses = 2
+			add_doctrine_cost_reduction = {
+				name = MAN_war_ideology
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
-				}
+			}
 		}
 
 	}
@@ -1896,8 +1895,8 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_superior_firepower_doctrine"
 
-		add_tech_bonus = {
-			bonus = 0.35
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.35
 			uses = 1
 			category = cat_superior_firepower
 		}
@@ -1991,8 +1990,8 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_grand_battleplan_doctrine"
 
-		add_tech_bonus = {
-			bonus = 0.35
+		add_doctrine_cost_reduction  = {
+			cost_reduction = 0.35
 			uses = 1
 			category = cat_grand_battle_plan
 		}
@@ -2093,8 +2092,8 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_mass_assault_doctrine"
 
-		add_tech_bonus = {
-			bonus = 0.35
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.35
 			uses = 1
 			category = cat_mass_assault
 		}
@@ -2330,16 +2329,13 @@
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_layered_doctrine"
-
-		add_tech_bonus = {
-			bonus = 0.35
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.35
 			uses = 1
 			category = cat_fleet_in_being
 		}
-
-		}
-
 	}
+}
 
 	shared_focus = {
 		id = MAN_heavy_ships
@@ -2419,15 +2415,13 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_convoy_controllers"
 
-		add_tech_bonus = {
-			bonus = 0.35
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.35
 			uses = 1
 			category = cat_trade_interdiction
 		}
-
-		}
-
 	}
+}
 
 	shared_focus = {
 		id = MAN_fast_fleets
@@ -2506,15 +2500,13 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_high_seas_chokepoints"
 
-		add_tech_bonus = {
-			bonus = 0.35
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.35
 			uses = 1
 			category = cat_base_strike
 		}
-
-		}
-
 	}
+}
 
 	shared_focus = {
 		id = MAN_superheavy_fleets
@@ -2624,15 +2616,13 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_target_cities_and_factories"
 
-		add_tech_bonus = {
-			bonus = 0.50
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.50
 			uses = 1
 			category = cat_strategic_destruction
 		}
-
-		}
-
 	}
+}
 
 	shared_focus = {
 		id = MAN_target_people_on_the_ground
@@ -2655,18 +2645,16 @@
 				}
     }
 
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MAN_target_people_on_the_ground"
+    completion_reward = {
+      log = "[GetDateText]: [Root.GetName]: Focus MAN_target_people_on_the_ground"
 
-		add_tech_bonus = {
-			bonus = 0.50
-			uses = 1
-			category = cat_battlefield_support
-		}
-
-		}
-
-	}
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.50
+        uses = 1
+        category = cat_battlefield_support
+      }
+    }
+  }
 
 	shared_focus = {
 		id = MAN_target_people_in_the_air
@@ -2692,15 +2680,13 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MAN_target_people_in_the_air"
 
-		add_tech_bonus = {
-			bonus = 0.50
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.50
 			uses = 1
 			category = cat_operational_integrity
 		}
-
-		}
-
 	}
+}
 
 	shared_focus = {
 		id = MAN_plane_manufactories

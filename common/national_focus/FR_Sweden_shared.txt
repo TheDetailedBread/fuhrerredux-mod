@@ -47,7 +47,7 @@
 	}
 	shared_focus = {
 		id = SWE_armen
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_SWE_army
 		cost = 6
 		prerequisite = {
 			focus = SWE_forsvarsmakten
@@ -93,9 +93,9 @@
 				remove_idea = SWE_armen_idea
 				add_idea = SWE_folk_arme_doctrine_idea
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -126,9 +126,9 @@
 				remove_idea = SWE_armen_idea
 				add_idea = SWE_eldkraft_doctrine_idea
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -159,9 +159,9 @@
 				remove_idea = SWE_armen_idea
 				add_idea = SWE_stridsvagn_doctrine_idea
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -326,10 +326,9 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SWE_modern_warfare"
 			army_experience = 10
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.4
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -337,7 +336,7 @@
 	}
 	shared_focus = {
 		id = SWE_flygvapnet
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_SWE_airforce
 		cost = 5
 		prerequisite = {
 			focus = SWE_forsvarsmakten
@@ -375,9 +374,9 @@
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SWE_establish_saab"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -523,7 +522,7 @@
 	}
 	shared_focus = {
 		id = SWE_marinen
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_SWE_navy
 		cost = 5
 		prerequisite = {
 			focus = SWE_forsvarsmakten

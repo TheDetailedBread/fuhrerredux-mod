@@ -1,51 +1,26 @@
-﻿capital = 16
+capital = 16
 
-oob = "FRA_1936"
-
-set_research_slots = 4
-
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	tech_support = 1
-	tech_recon = 1
-	tech_mountaineers = 1
-	motorised_infantry = 1
-	gw_artillery = 1
-	interwar_antitank = 1
-	gwtank = 1
-	early_fighter = 1
-	tactical_bomber1 = 1
-	naval_bomber1 = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	early_bomber = 1
-	CAS1 = 1
-	electronic_mechanical_engineering = 1
-	fuel_silos = 1
-}
+oob = "FRA"
 
 if = {
-    limit = { not = { has_dlc = "Man the Guns" } }
-    set_technology = {
-        early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		basic_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
-		basic_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		basic_battlecruiser = 1
-		early_carrier = 1
-		transport = 1
-    }
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
+		}
+	}
 }
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "FRA_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -63,14 +38,74 @@ if = {
 		basic_medium_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
+		cruiser_submarines = 1
+	}
+	else = {
+		set_naval_oob = "FRA_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			early_heavy_cruiser = 1
+			basic_heavy_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			basic_battlecruiser = 1
+			early_carrier = 1
+			transport = 1
+		}
 	}
 }
-set_convoys = 533
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "FRA_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "FRA_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			naval_bomber1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
 set_stability = 0.80
 set_war_support = 0.05
+set_research_slots = 4
+set_convoys = 533
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antitank = 1
+	electronic_mechanical_engineering = 1
+	fuel_silos = 1
+  basic_train = 1
+}
 
 set_country_flag = coalition_social_liberal
 
@@ -224,690 +259,131 @@ if = {
 	}
 }
 
-if = {
-    limit = { has_dlc = "Man the Guns" }
-        set_naval_oob = "FRA_1936_naval_mtg"
-    else = {
-        set_naval_oob = "FRA_1936_naval_legacy"
-    }
-}
-
 add_ideas = {
-	
 	FRA_great_war_legacy
 	FRA_somme
 	FRA_divided_military_staff
 	FRA_colonial_profits
 	GEN_entente_leader
 	
-	FRA_Jean_Ybarnegaray_hog_sco
-	FRA_Georges_Mandel_for_sco
-	FRA_Andre_Tardieu_eco_mli
-	FRA_Jean_Fabry_sec_sli
-	
 	parliamentary_republic
 }
 
-create_country_leader = {
-	name = "Marcel Déat"
-	desc = "POLITICS_MARCEL_DEAT_DESC"
-	picture = "Portrait_France_marcel_deat.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Maurice Thorez"
-	desc = "POLITICS_MAURICE_THOREZ_DESC"
-	picture = "Portrait_France_Maurice_Thorez.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Sébastien Faure"
-	desc = "POLITICS_SEBASTIEN_FAURE_DESC"
-	picture = "Portrait_France_Sebastien_Faure.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Léon Blum"
-	desc = "POLITICS_LEON_BLUM_DESC"
-	picture = "Portrait_France_Blum.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Camille Chautemps"
-	desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
-	picture = "Portrait_France_Camille_Chautemps.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Pierre-Étienne Flandin"
-	desc = "POLITICS_PIERRE_FLANDIN_DESC"
-	picture = "Portrait_France_Pierre_Etienne_Flandin.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Louis Marin"
-	desc = "POLITICS_LOUIS_MARIN_DESC"
-	picture = "Portrait_France_Louis_Marin.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "François de La Rocque"
-	desc = "POLITICS_FRANCOIS_ROCQUE_DESC"
-	picture = "Portrait_France_Francois_de_la_Rocque.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Philippe Pétain"
-	desc = "POLITICS_PHILIPPE_PETAIN_DESC"
-	picture = "Portrait_France_Philippe_Petain_fx.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Philippe Henriot"
-	desc = "POLITICS_PHILIPPE_HENRIOT_DESC"
-	picture = "Portrait_FRA_Philippe_Henriot.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Marcel Bucard"
-	desc = "POLITICS_MARCEL_BUCARD_DESC"
-	picture = "Portrait_FRA_Marcel_Bucard.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
+FRA_add_aircraft_variants = yes
+FRA_add_armour_variants = yes
+FRA_add_ship_variants = yes
+
+FRP = {
+	inherit_technology = FRA
+	FRA_add_aircraft_variants = yes
+	FRA_add_armour_variants = yes
+	FRA_add_ship_variants = yes
 }
 
-create_field_marshal = {
-	name = "Maurice Gamelin"
-	picture = "Portrait_France_Maurice_Gamelin_fx.tga"
-	traits = { defensive_doctrine offensive_doctrine }
-	skill = 2
-	attack_skill = 3
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_field_marshal = {
-	name = "Philippe Pétain"
-	picture = "Portrait_France_Philippe_Petain_fx.tga"
-	traits = { old_guard organisational_leader inspirational_leader }
-	skill = 3
-	attack_skill = 4
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Alphonse Juin"
-	picture = "Portrait_France_Alphonse_Juin_fx.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Maurice Janin"
-	picture = "Portrait_France_Maurice_Janin.tga"
-	traits = { politically_connected harsh_leader }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Charles de Gaulle"
-	picture = "Portrait_France_Charles_deGaulle.tga"
-	traits = { panzer_leader urban_assault_specialist }
-	skill = 3
-	attack_skill = 4
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Jean de Lattre de Tassigny"
-	picture = "Portrait_France_Jean_Tassigny_fx.tga"
-	traits = { trickster naval_invader jungle_rat }
-	skill = 4
-	attack_skill = 4
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Maxime Weygand"
-	picture = "Portrait_France_Maxime_Weygand_fx.tga"
-	traits = { old_guard }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Philippe Leclerc"
-	picture = "Portrait_France_Philippe_Leclerc_fx.tga"
-	traits = { panzer_leader desert_fox }
-	skill = 4
-	attack_skill = 4
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "François Sevez"
-	picture = "Portrait_France_François_Sevez.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Albert d'Amade"
-	picture = "Portrait_France_Albert_Damade.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Antoine Béthouart"
-	picture = "Portrait_France_Generic_land_3.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Jacques Massu"
-	picture = "Portrait_France_Jacques_Massu.tga"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Edgard de Larminat"
-	picture = "Portrait_France_Generic_land_5.dds"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-
-create_navy_leader = {
-	name = "François Darlan"
-		picture = "Portrait_France_Francois_Darlan_fx.tga"
-	traits = { superior_tactician }
-	skill = 5
-}
-
-create_navy_leader = {
-	name = "Jean-Marie Charles Abrial"
-		picture = "Portrait_France_Jean-Marie_Charles_Abrial_fx.tga"
-	traits = { superior_tactician }
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Jean-Pierre Esteva"
-		picture = "Portrait_France_Jean-Pierre_Esteva_fx.tga"
-	traits = { seawolf }
-	skill = 2
-}
-
-create_navy_leader = {
-	name = "René-Émile Godfroy"
-		picture = "Portrait_France_Rene-Emile_Godfroy.dds"
-	traits = { old_guard_navy spotter }
-	skill = 2
-}
-
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "630 Series"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Redoutable Class"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			sub_engine_upgrade = 2
-			sub_stealth_upgrade = 2
-			sub_torpedo_upgrade = 2
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Chacal Class"
-		type = destroyer_1
-		upgrades = {
-			ship_torpedo_upgrade = 1
-			destroyer_engine_upgrade = 1
-			ship_ASW_upgrade = 1
-			ship_anti_air_upgrade = 1
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Aigle & Vauquelin Class"
-		type = destroyer_1
-		upgrades = {
-			ship_torpedo_upgrade = 2
-			destroyer_engine_upgrade = 2
-			ship_ASW_upgrade = 2
-			ship_anti_air_upgrade = 2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Bretagne Class"
-		type = battleship_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_armor_upgrade = 1
-			ship_gun_upgrade = 1
-		}
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Submarines #
-	create_equipment_variant = {				# represents Requin and all 600 series classes
-		name = "600 Series"
-		type = ship_hull_submarine_1
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "630 Series"						# represents all 630 series classes
-		type = ship_hull_submarine_1
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Saphir Class"					# minelayers
-		type = ship_hull_submarine_1
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_mine_layer_sub
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Redoutable Class"						# represents all 630 series classes
-		type = ship_hull_submarine_1
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Redoutable Class"				# represents Surcouf, Roubtable, L'Esoire, and Agosta classes
-		type = ship_hull_submarine_2
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Surcouf Class"				# cruiser submarine
-		type = ship_hull_cruiser_submarine
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			front_1_custom_slot = ship_airplane_launcher_1
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Redoutable Class"				# cruiser submarine
-		type = ship_hull_cruiser_submarine
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			front_1_custom_slot = ship_airplane_launcher_1
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Minerve Class"
-		type = ship_hull_submarine_1
-		name_group = FRA_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-	}
-	# Destroyers #
-	create_equipment_variant = {
-		name = "Bourrasque Class"				# represents Bourrasque and L'Adroit classes
-		type = ship_hull_light_1
-		name_group = FRA_DE_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Chacal Class"				# represents Chacal, Guépard, Agile, and Vauquelin classes
-		type = ship_hull_light_1
-		name_group = FRA_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Le Fantasque Class"
-		type = ship_hull_light_1
-		name_group = FRA_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_3
-			fixed_ship_torpedo_slot = ship_torpedo_2
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
-	create_equipment_variant = {
-		name = "Aigle & Vauquelin Class"
-		type = ship_hull_light_1
-		name_group = FRA_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_3
-			fixed_ship_torpedo_slot = ship_torpedo_2
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
-	create_equipment_variant = {
-		name = "Mogador Class"
-		type = ship_hull_light_2
-		name_group = FRA_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = ship_torpedo_2
-			mid_1_custom_slot = ship_light_battery_2
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
-	# Light Cruisers #
-	create_equipment_variant = {
-		name = "Duguay-Trouin Class"			# represents Duguay-Trouin, Pluton, Jeanne d'Arc classes
-		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_light_medium_battery_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Émile Bertin Class"					# minelaying cruiser
-		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = empty
-			mid_1_custom_slot = ship_anti_air_1
-			mid_2_custom_slot = ship_light_medium_battery_2
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-	}
-	create_equipment_variant = {
-		name = "La Galissonnière Class"
-		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_anti_air_1
-			mid_2_custom_slot = ship_light_medium_battery_2
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-	}
-	# Heavy Cruisers #
-	create_equipment_variant = {
-		name = "Suffren Class"				# Duquesne and Suffren classes
-		type = ship_hull_cruiser_1
-		name_group = FRA_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_medium_battery_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Algérie Class"
-		type = ship_hull_cruiser_1
-		name_group = FRA_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_medium_battery_1
-			mid_2_custom_slot = ship_anti_air_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-	}
-	# Battleships #
-	create_equipment_variant = {
-		name = "Courbet Class"
-		type = ship_hull_heavy_1
-		name_group = FRA_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = ship_heavy_battery_1
-			mid_1_custom_slot = ship_secondaries_1
-			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Bretagne Class"
-		type = ship_hull_heavy_1
-		name_group = FRA_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = ship_heavy_battery_1
-			mid_1_custom_slot = ship_secondaries_1
-			mid_2_custom_slot = ship_anti_air_1
-			rear_1_custom_slot = empty
-		}
-	}
-	# Battlecruisers #
-	create_equipment_variant = {
-		name = "Dunkerque Class"
-		type = ship_hull_heavy_2
-		name_group = FRA_BC_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_2
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bc_2
-			front_1_custom_slot = ship_heavy_battery_1
-			mid_1_custom_slot = ship_secondaries_1
-			mid_2_custom_slot = ship_anti_air_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-	}
-	# Carriers #
-	create_equipment_variant = {
-		name = "Béarn Class"
-		type = ship_hull_carrier_conversion_bb
-		name_group = FRA_CV_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_deck_slot_1 = ship_deck_space
-			fixed_ship_deck_slot_2 = ship_deck_space
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_1_custom_slot = empty
-		}
-	}
-}
+recruit_character = FRA_Lionel_Groulx
+recruit_character = FRA_Joseph_Laniel
+recruit_character = FRA_Felix_Gouin
+recruit_character = FRA_Jean_III
+recruit_character = FRA_Marcel_Deat
+recruit_character = FRA_Maurice_Thorez
+recruit_character = FRA_Sebastien_Faure
+recruit_character = FRA_Leon_Blum
+recruit_character = FRA_Camille_Chautemps
+recruit_character = FRA_Pierre_Etienne_Flandin
+recruit_character = FRA_Louis_Marin
+recruit_character = FRA_Francois_de_La_Rocque
+recruit_character = FRA_Philippe_Petain
+recruit_character = FRA_Philippe_Henriot
+recruit_character = FRA_Marcel_Bucard
+recruit_character = FRA_Maurice_Gamelin
+recruit_character = FRA_Alphonse_Juin
+recruit_character = FRA_Maurice_Janin
+recruit_character = FRA_Charles_de_Gaulle
+recruit_character = FRA_Jean_de_Lattre_de_Tassigny
+recruit_character = FRA_Maxime_Weygand
+recruit_character = FRA_Philippe_Leclerc
+recruit_character = FRA_Francois_Sevez
+recruit_character = FRA_Albert_d_Amade
+recruit_character = FRA_Antoine_Bethouart
+recruit_character = FRA_Jacques_Massu
+recruit_character = FRA_Edgard_de_Larminat
+recruit_character = FRA_Francois_Darlan
+recruit_character = FRA_Jean_Marie_Charles_Abrial
+recruit_character = FRA_Jean_Pierre_Esteva
+recruit_character = FRA_Rene_Emile_Godfroy
+recruit_character = FRA_Georges_Valois
+recruit_character = FRA_Benoit_Frachon
+recruit_character = FRA_Marceau_Pivert
+recruit_character = FRA_Benoit_Broutchoux
+recruit_character = FRA_Daniel_Guerin
+recruit_character = FRA_Paul_Ramadier
+recruit_character = FRA_Edouard_Daladier
+recruit_character = FRA_Paul_Reynaud
+recruit_character = FRA_Jean_Ybarnegaray
+recruit_character = FRA_Jean_Mermoz
+recruit_character = FRA_Ernest_Mercier
+recruit_character = FRA_Louis_Franchet_d_Esperey
+recruit_character = FRA_Louis_Alexandre_Audibert
+recruit_character = FRA_Charles_Maurras
+recruit_character = FRA_Jacques_Doriot
+recruit_character = FRA_Jacques_Duclos
+recruit_character = FRA_Charles_Rappoport
+recruit_character = FRA_Nestor_Makhno
+recruit_character = FRA_Pierre_Laval
+recruit_character = FRA_George_Bonnet
+recruit_character = FRA_Camille_Barrere
+recruit_character = FRA_Georges_Mandel
+recruit_character = FRA_Paul_Baudouin
+recruit_character = FRA_Joseph_Darnand
+recruit_character = FRA_Maurice_Pujo
+recruit_character = FRA_Daniel_Renoult
+recruit_character = FRA_Leon_Jouhaux
+recruit_character = FRA_Henri_Tanguy
+recruit_character = FRA_Jean_Zay
+recruit_character = FRA_Andre_Tardieu
+recruit_character = FRA_Charles_Vallin
+recruit_character = FRA_Marie_Eugene_Debeney
+recruit_character = FRA_Eugene_Schueller
+recruit_character = FRA_Francois_Coty
+recruit_character = FRA_Eugene_Deloncle
+recruit_character = FRA_Claudine_Chomat
+recruit_character = FRA_Henri_Bonnet
+recruit_character = FRA_Henri_Gourdeaux
+recruit_character = FRA_May_Picqueray
+recruit_character = FRA_Albert_Sarraut
+recruit_character = FRA_Jean_Fabry
+recruit_character = FRA_George_Lamirand
+recruit_character = FRA_Louis_Renault
+recruit_character = FRA_Henri_Massis
+recruit_character = FRA_Henri_Amiel
+recruit_character = FRA_Bernard_Serrigny
+recruit_character = FRA_Charles_Huntzinger
+recruit_character = FRA_Eugene_Bridoux
+recruit_character = FRA_Henri_Albert_Niessel
+recruit_character = FRA_Henri_Dentz
+recruit_character = FRA_Philippe_de_Hauteclocque
+recruit_character = FRA_Gabriel_Puaux
+recruit_character = FRA_Jean_Touzet_du_Vigier
+recruit_character = FRA_Joseph_de_Goislard_de_Monsabert
+recruit_character = FRA_Francois_Carre_de_Lusancay
+recruit_character = FRA_Louis_Finet
+recruit_character = FRA_Georges_Thierry_d_Argenlieu
+recruit_character = FRA_Jean_Esteva
+recruit_character = FRA_Jean_Marie_Abrial
+recruit_character = FRA_Marie_Jean_Lucien_Lacaze
+recruit_character = FRA_Henri_Soulat
+recruit_character = FRA_Antonin_Brocard
+recruit_character = FRA_Marie_Charles_Duval
+recruit_character = FRA_Jean_Bergeret
+recruit_character = FRA_Rene_Paul_Fonck
+recruit_character = FRA_Georges_Catroux
+recruit_character = FRA_Marie_Pierre_Koenig
+recruit_character = FRA_Diego_Brosset
+recruit_character = FRA_Charles_Delestraint
+recruit_character = FRA_Georges_Blanchard
+recruit_character = FRA_Raoul_Magrin_Vernerey
+recruit_character = FRA_Paul_Legentilhomme
+recruit_character = FRA_Aubert_Frere
+recruit_character = FRA_Alphonse_Georges
+recruit_character = FRA_Henri_Roger_Marie_Meric_de_Bellefon
+recruit_character = FRA_Henri_Lebocq

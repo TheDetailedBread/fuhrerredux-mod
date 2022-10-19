@@ -1,9 +1,8 @@
 autonomy_state = {
 	id = autonomy_protectorate
-	
 	is_puppet = yes
-	
 	min_freedom_level = 0.50
+	manpower_influence = 0.5
 	
 	rule = {
 		can_not_declare_war = yes
@@ -37,14 +36,21 @@ autonomy_state = {
 			tag = ISR
 			tag = IRQ
 			tag = PHN
+			tag = EGY
 		}
 	}
 	
 	can_take_level = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = can_raise_autonomy_level
+			has_country_flag = FX_can_raise_autonomy_level
+		}
 	}
 
 	can_lose_level = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = can_lower_autonomy_level
+			always = no
+		}
 	}
 }

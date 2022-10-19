@@ -1,13 +1,6 @@
-﻿capital = 331
+capital = 331
 
 oob = "NFL"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_naval_oob = "NFL_1936_naval_mtg"
-	else = {
-		set_naval_oob = "NFL_1936_naval_legacy"
-	}
-}
 
 set_research_slots = 3
 set_cosmetic_tag = NFL_DOM
@@ -20,43 +13,84 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
-	gwtank = 1
+	
 
 	early_fighter = 1
 	early_bomber = 1
 	
 	fuel_silos = 1
+	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "NFL_air_bba"
 	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_air_oob = "NFL_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+    basic_light_tank_chassis = 1
+  }
+	else  = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "NFL_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
 		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_cruiser_armor_scheme = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
 		mtg_transport = 1
 	}
+	else = {
+		set_naval_oob = "NFL_naval_legacy"
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			early_carrier = 1
+			transport = 1
+		}
+	}
 }
 
 add_ideas = {
 	party_pop_0_30
 	ENG_statute_autonomy
-	GEN_hog_sco
-	GEN_for_sco
-	GEN_eco_sco
-	GEN_sec_sco
 	constitutional_monarchy
 }
 
@@ -65,7 +99,6 @@ set_stability = 0.54
 set_war_support = 0.36
 
 set_politics = {
-
 	ruling_party = social_conservative
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -73,182 +106,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 3
-    collectivist = 5
-    libertarian_socialist = 11
-    social_democrat = 14
-    social_liberal = 8
-    market_liberal = 24
-    social_conservative = 32
-    authoritarian_democrat = 0
-    paternal_autocrat = 0
-    national_populist = 3
-    valkist = 0
-}
-
-#create_country_leader = {
-#	name = "Frederick C. Alderdice"
-#	desc = "POLITICS_ALDERDICE_DESC"
-#	picture = "Portrait_Alderdice.tga"
-#	expire = "1965.1.1"
-#	ideology = social_conservative_subtype
-#	traits = {
-#		#
-#	}
-#}
-
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "William Coaker"
-	desc = "POLITICS_COAKER_DESC"
-	picture = "Portrait_William_Coaker.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "William Coaker"
-	desc = "POLITICS_COAKER_DESC"
-	picture = "Portrait_William_Coaker.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "David V. Currie"
-	desc = "POLITICS_DAVID_CURRIE_DESC"
-	picture = "Portrait_David_Currie.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Roy Urquhart"
-	desc = "POLITICS_ROY_URQUHART_DESC"
-	picture = "Portrait_Roy_Urquhart.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Lord Anderson"
-	desc = "POLITICS_LORD_ANDERSON_DESC"
-	picture = "Portrait_David_Murray_Anderson.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Arthur Lovell Hadow"
-	desc = ""
-	picture = "Portrait_Arthur_Lovell_Hadow.tga"
-	traits = {
-		war_hero
-		infantry_officer
-	}
-	skill = 3
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Joseph O'Driscoll"
-	desc = ""
-	picture = ""
-	traits = {
-		trait_cautious
-	}
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "James Forbes-Robertson"
-	desc = ""
-	picture = ""
-	traits = { 
-		inflexible_strategist
-	}
-	skill = 2
-	attack_skill = 3
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 1
+  vanguardist = 3
+  collectivist = 5
+  libertarian_socialist = 11
+  social_democrat = 14
+  social_liberal = 8
+  market_liberal = 24
+  social_conservative = 32
+  authoritarian_democrat = 0
+  paternal_autocrat = 0
+  national_populist = 3
+  valkist = 0
 }
 
 ### Ship Variants ###
@@ -326,4 +194,8 @@ if = {
 	}	
 }
 
-
+recruit_character = NFL_Lord_Anderson
+recruit_character = NFL_William_Coaker
+recruit_character = NFL_Arthur_Lovell_Hadow
+recruit_character = NFL_Joseph_O_Driscoll
+recruit_character = NFL_James_Forbes_Robertson

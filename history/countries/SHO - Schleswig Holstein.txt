@@ -1,4 +1,4 @@
-﻿capital = 58
+capital = 58
 
 oob = "SHO"
 
@@ -6,33 +6,26 @@ oob = "SHO"
 set_technology = {
 	infantry_weapons = 1
 	support_weapons = 1
-	
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-	
 	gw_artillery = 1
-	
-	gwtank = 1
-	
-	early_fighter = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-	CAS1 = 1
-	
 	fuel_silos = 1
+	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_heavy_cruiser = 1
-		transport = 1
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -42,11 +35,18 @@ if = {
 		early_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_torpedo = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_heavy_cruiser = 1
+			transport = 1
+		}
 	}
 }
 
@@ -81,82 +81,14 @@ set_popularities = {
     valkist = 0
 }
 
-
-
 add_ideas = {
 	party_pop_0_30
 	SHO_hamburg_legacy
 	SHO_nazbol_gang
 	SHO_political_repression
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	republican_dictatorship
 }
 
-create_country_leader = {
-	name = "Christian Kryssing"
-	desc = "POLITICS_KRYSSING_DESC"
-	picture = "Portrait_Kiel_Christian_Peder_Kryssing.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Heinrich Laufenberg"
-	desc = "POLITICS_LAUFENBERG_DESC"
-	picture = "Portrait_Kiel_Heinrich_Laufenberg.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nationalrat"
-	desc = "POLITICS_NATIONALRAT_DESC"
-	picture = "Portrait_Regency_Council.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nationalrat"
-	desc = "POLITICS_NATIONALRAT_DESC"
-	picture = "Portrait_Regency_Council.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nationalrat"
-	desc = "POLITICS_NATIONALRAT_DESC"
-	picture = "Portrait_Regency_Council.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nationalrat"
-	desc = "POLITICS_NATIONALRAT_DESC"
-	picture = "Portrait_Regency_Council.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = SHO_Christian_Kryssing
+recruit_character = SHO_Heinrich_Laufenberg
+recruit_character = SHO_Nationalrat

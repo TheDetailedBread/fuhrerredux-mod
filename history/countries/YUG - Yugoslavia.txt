@@ -2,40 +2,37 @@
 
 oob = "YUG_1936"
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "YUG_1936_naval_mtg"
-	else = {
-		set_naval_oob = "YUG_1936_naval_legacy"
-	}
-}
-
 set_research_slots = 3
-
-
 
 set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
 	early_fighter = 1
-	gwtank = 1
+	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	interwar_antitank = 1
 	gw_artillery = 1
 	fuel_silos = 1
+	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_submarine = 1
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "YUG_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -49,14 +46,18 @@ if = {
 		basic_depth_charges = 1
 		coastal_defense_ships = 1
 	}
+	else = {
+		set_naval_oob = "YUG_naval_legacy"
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_submarine = 1
+		}
+	}
 }
 
 add_ideas = {
 	party_pop_0_60
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	constitutional_monarchy
 }
 
@@ -69,32 +70,21 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 15
-    libertarian_socialist = 0
-    social_democrat = 0
-    social_liberal = 0
-    market_liberal = 15
-    social_conservative = 0
-    authoritarian_democrat = 0
-    paternal_autocrat = 60
-    national_populist = 0
-    valkist = 10
+  vanguardist = 0
+  collectivist = 15
+  libertarian_socialist = 0
+  social_democrat = 0
+  social_liberal = 0
+  market_liberal = 15
+  social_conservative = 0
+  authoritarian_democrat = 0
+  paternal_autocrat = 60
+  national_populist = 0
+  valkist = 10
 }
 
 set_stability = 0.55
 set_war_support = 0.55
-
-create_country_leader = {
-	name = "Rodoljub Čolaković"
-	desc = "POLITICS_RODOLJUB_COLAKOVIC_DESC"
-	picture = "Portrait_Bosnia_Rodoljub_Colakovic.dds"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		
-	}
-}
 
 ### VARIANTS ###
 # 1936 Start #

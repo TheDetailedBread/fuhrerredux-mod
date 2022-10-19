@@ -1,6 +1,5 @@
 #set_capital = 
 set_technology = {
-
 	### Infantry ###
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -11,11 +10,25 @@ set_technology = {
 	marines = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-
-	### Air ###
-	early_fighter = 1 
-	early_bomber = 1 
+  basic_train = 1
 }
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
 set_convoys = 150
 set_stability = 0.5
 set_war_support = 0.31
@@ -27,130 +40,32 @@ set_politics = {
 }
 add_ideas = {
 	presidential_republic
-	GEN_hog_npo
-	GEN_for_npo
-	GEN_eco_npo
-	GEN_INT_Npo
 }
 set_popularities = {
 	vanguardist = 10
 	collectivist = 20
 	libertarian_socialist = 7
-	social_democrat = 1
+	social_democrat = 35
 	social_liberal = 1
 	market_liberal = 1
 	social_conservative = 10
 	authoritarian_democrat = 12
 	paternal_autocrat = 2
-	national_populist = 35
+	national_populist = 1
 	valkist = 1
 }
-create_country_leader = {
-	name = "Ho Chi Minh"
-	desc = "POLITICS_HO_CHI_MINH_DESC"
-	picture = "Portrait_VIN_Nguyen_Ai_Quoc.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bui Bang Doan"
-	desc = "POLITICS_BUI_BANG_DOAN_DESC"
-	picture = "Portrait_VIN_Bui_Bang_Doan.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Nguyen Xien"
-	desc = "POLITICS_NGUYEN_XIEN_DESC"
-	picture = "Portrait_Indochina_Nguyen_Xien.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Prince Boun Oum"
-	desc = "POLITICS_PRINCE_BOUN_OUM_DESC"
-	picture = "Portrait_Indochina_Boun_Oum.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Prince Boun Oum"
-	desc = "POLITICS_PRINCE_BOUN_OUM_DESC"
-	picture = "Portrait_Indochina_Boun_Oum.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Ngo Din Diem"
-	desc = "POLITICS_NGO_DIN_DIEM_DESC"
-	picture = "Portrait_VIN_Ngo_Dinh_Diem.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Norodom Sihanouk"
-	desc = "POLITICS_NORODOM_SIHANOUK_DESC"
-	picture = "Portrait_Indochina_Norodom_Sihanouk.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Cuong De"
-	desc = "POLITICS_COUNG_DE_DESC"
-	picture = "Portrait_VIN_Cuong_De.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Cuong De"
-	desc = "POLITICS_COUNG_DE_DESC"
-	picture = "Portrait_VIN_Cuong_De.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Nguyen Thai Hoc"
-	desc = "POLITICS_NGUYEN_THAI_HOC_DESC"
-	picture = "Portrait_VIN_Nguyen_Thai_Hoc.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Nguyen Phan Long"
-	desc = "POLITICS_NGUYEN_PHAN_LONG"
-	picture = "Portrait_VIN_Nguyen_Phan_Long.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-##Commander of Indochinese Liberation Armed Forces
-create_corps_commander = {
-	name = "Vo Nguyen Giap"
-	traits = { organizer logistics_wizard }
-	picture = "Portrait_INC_Vo_Nguyen_Giap.tga"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_field_marshal = {
-	name = "Van Tien Dung"
-	traits = { brilliant_strategist }
-	picture = "Portrait_Vietnam_Van_Tien_Dung.dds"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
+
+recruit_character = ICR_Ho_Chi_Minh
+recruit_character = ICR_Bui_Bang_Doan
+recruit_character = ICR_Nguyen_Xien
+recruit_character = ICR_Prince_Boun_Oum
+recruit_character = ICR_Ngo_Din_Diem
+recruit_character = ICR_Norodom_Sihanouk
+recruit_character = ICR_Cuong_De
+recruit_character = ICR_Nguyen_Thai_Hoc
+recruit_character = ICR_Nguyen_Phan_Long
+recruit_character = ICR_Vo_Nguyen_Giap
+recruit_character = ICR_Van_Tien_Dung
+recruit_character = ICR_Chu_Van_Tan
+recruit_character = ICR_Hoang_Van_Thai
+recruit_character = ICR_Nguyen_Binh

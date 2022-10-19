@@ -206,7 +206,7 @@ shared_focus = {
 #Ask for funds from the Japanese
 shared_focus = {
 		id = ZHI_MAIN_jap_funds
-		icon = GFX_focus_jap_pacific_guardian
+		icon = GFX_goal_ZHI_request_japanese_funding
 		cost = 8
 		prerequisite = {
 			focus = ZHI_MAIN_industry
@@ -1242,23 +1242,21 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_but_in_rising_every_time_we_fall"
-			remove_ideas = ZHI_planning_of_government
-			swap_ideas = {
-				remove_idea = ZHI_no_marshal
-				add_idea = ZHI_president_of_beiyang
-			}
-			set_cosmetic_tag = ZHI_BEY
-			country_event = zhi.17
-		create_country_leader = {
-			name = "Cao Kun"
-			desc = ""
-			picture = "Portrait_ZHI_Cao_Kun.tga"
-			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-				#
-			}
-		}
+    remove_ideas = ZHI_planning_of_government
+    swap_ideas = {
+      remove_idea = ZHI_no_marshal
+      add_idea = ZHI_president_of_beiyang
+    }
+    set_cosmetic_tag = ZHI_BEY
+    country_event = zhi.17
+    add_country_leader_role = {
+      character = ZHI_Cao_Kun
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			every_state = {
             	limit = {
@@ -2115,8 +2113,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_MIL_sun_jap_help"
-			add_tech_bonus = {
-				bonus = 0.3
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.3
 				uses = 3
 				category = cat_superior_firepower
 			}
@@ -2202,8 +2200,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_MIL_sun_no_help"
-			add_tech_bonus = {
-				bonus = 0.3
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.3
 				uses = 3
 				category = cat_superior_firepower
 			}
@@ -2334,8 +2332,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_MIL_grand_with_jap"
-			add_tech_bonus = {
-				bonus = 0.3
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.3
 				uses = 3
 				category = cat_grand_battle_plan
 			}
@@ -2422,8 +2420,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_MIL_grand_without_jap"
-			add_tech_bonus = {
-				bonus = 0.3
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.3
 				uses = 3
 				category = cat_grand_battle_plan
 			}
@@ -2477,8 +2475,8 @@ shared_focus = {
 			add_ideas = {
 				ZHI_war_scenarios
 			}
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -2584,8 +2582,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_use_our_vast_manpower"
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mass_assault
 			}
@@ -2715,9 +2713,9 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_jade_emperor_domain"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.25
+				cost_reduction = 0.25
 				uses = 2
 				category = air_doctrine
 			}
@@ -2914,10 +2912,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ZHI_dragon_of_eastern_sea"
-			add_tech_bonus = { 
-			bonus = 0.4
-			uses = 2 
-			category = naval_doctrine 
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 		}
 	}

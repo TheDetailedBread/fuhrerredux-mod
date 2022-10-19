@@ -1,15 +1,6 @@
-﻿capital = 112
+capital = 112
 
-oob = "POR_1936"
-
-# if = {
-	# limit = { has_dlc = "Man the Guns" }
-		# set_naval_oob = "POR_1936_naval_mtg"
-	# else = {
-		# set_naval_oob = "POR_1936_naval_legacy"
-	# }
-# }
-
+oob = "POR"
 set_research_slots = 3
 
 set_technology = {
@@ -18,20 +9,27 @@ set_technology = {
 	gw_artillery = 1
 	tech_support = 1
 	tech_engineers = 1
-	early_fighter = 1
-	early_bomber = 1
-	CAS1 = 1
 	fuel_silos = 1
+	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone"}
 	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		transport = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -46,13 +44,17 @@ if = {
 		basic_depth_charges = 1
 		mtg_transport = 1
 	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			early_destroyer = 1
+			transport = 1
+		}
+	}
 }
 
 add_ideas = {
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	constitutional_monarchy
 }
 
@@ -64,17 +66,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 0
-    social_liberal = 0
-    market_liberal = 6
-    social_conservative = 18
-    authoritarian_democrat = 10
-    paternal_autocrat = 56
-    national_populist = 10
-    valkist = 0
+	vanguardist = 0
+	collectivist = 0
+	libertarian_socialist = 0
+	social_democrat = 0
+	social_liberal = 0
+	market_liberal = 6
+	social_conservative = 18
+	authoritarian_democrat = 10
+	paternal_autocrat = 56
+	national_populist = 10
+	valkist = 0
 }
 
 add_ideas = {
@@ -85,49 +87,6 @@ add_ideas = {
 set_convoys = 100
 set_stability = 0.29
 set_war_support = 0.88
-
-
-create_country_leader = {
-	name = "Manuel II"
-	desc = "POLITICS_MANUEL_II_DESC"
-	picture = "Portrait_Manuel_II.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Bento Gonçalves"
-	desc = "POLITICS_BENTO_GONCALVES_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Francisco de Barcelos Rolão Preto"
-	desc = "POLITICS_FRANSISCO_BARCELOS_ROLAO_PRETO_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-
-create_corps_commander = {
-	name = "Manuel II"
-	picture = "Portrait_Manuel_II_general.tga"
-	traits = {  }
-	skill = 3
-
-}
 
 ### VARIANTS ###
 # 1936 Start #
@@ -215,3 +174,8 @@ if = {
 		}
 	}
 }
+
+
+recruit_character = POR_Manuel_II
+recruit_character = POR_Bento_Goncalves
+recruit_character = POR_Francisco_de_Barcelos_Rolao_Preto

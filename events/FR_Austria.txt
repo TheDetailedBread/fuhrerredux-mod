@@ -274,12 +274,13 @@ country_event = { #Leftie Civil War
 		add_popularity = { ideology = collectivist popularity = -0.2 }
 		GER = { country_event = { days = 2 id = austria.10 } }
 		ai_chance = { factor = 100 }
+    retire_character = AUS_Otto_Bauer
 		ASR = {
 			add_ideas = revolutionary_movement
 			transfer_state = 153
 			transfer_state = 803
 			transfer_state = 913
-			load_OOB = AUS_REVOLT
+			load_oob = AUS_revolt
 			declare_war_on = {
 				type = annex_everything
 				target = AUS
@@ -296,10 +297,11 @@ country_event = { #Leftie Civil War
 		name = "We'll put these Socialists down ourselves!"
 		add_named_threat = { threat = 5 name = AUS_acw_threat }
 		add_popularity = { ideology = collectivist popularity = -0.2 }
+    retire_character = AUS_Otto_Bauer
 		ASR = { 
 			add_ideas = revolutionary_movement
 			transfer_state = 153
-			load_OOB = AUS_REVOLT
+			load_oob = AUS_revolt
 			declare_war_on = {
 				type = annex_everything
 				target = AUS

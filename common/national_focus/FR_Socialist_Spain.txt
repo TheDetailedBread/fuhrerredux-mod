@@ -596,7 +596,7 @@ focus_tree = {
 		y = 5
 		
 		available = {
-			has_idea = SPA_Juan_Garcia_Oliver_hog_lso
+			has_idea = SPA_Juan_Garcia_Oliver_hog_lib
 		}
 		
 		ai_will_do = {
@@ -607,16 +607,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPA_cnt_fai_dominates"
 			add_political_power = 25
 			hidden_effect = {
-				create_country_leader = {
-					name = "The CNT-FAI Congress"
-					desc = "POLITICS_CNT_FAI_CONGRESS_DESC"
-					picture = "Portrait_SPA_CNT_FAI_Congress_Anarchist.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+        SPA_The_CNT_FAI_Congress = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = libertarian_socialist_subtype
+              traits = {}
+            }
+          }
+        }
 			}
 		}
 
@@ -635,7 +634,7 @@ focus_tree = {
 		y = 5
 		
 		available = {
-			has_idea = SPA_Angel_Pestana_Nunez_hog_lso
+			has_idea = SPA_Angel_Pestana_Nunez_hog_lib
 		}
 		
 		ai_will_do = {
@@ -646,16 +645,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SPA_cnt_fai_dominates"
 			add_political_power = 25
 			hidden_effect = {
-				create_country_leader = {
-					name = "The CNT-FAI Congress"
-					desc = "POLITICS_CNT_FAI_CONGRESS_DESC"
-					picture = "Portrait_SPA_CNT_FAI_Congress_Syndicalist.tga"
-					expire = "1965.1.1"
-					ideology = libertarian_socialist_subtype
-					traits = {
-						#
-					}
-				}
+				SPA_The_CNT_FAI_Congress = {
+          add_country_leader_role = {
+            promote_leader = yes
+            country_leader = {
+              ideology = libertarian_socialist_subtype
+              traits = {}
+            }
+          }
+        }
 			}
 		}
 
@@ -913,7 +911,7 @@ focus_tree = {
 		y = 5
 		
 		available = {
-			has_idea = SPA_Juan_Negrin_Lopez_hog_sde
+			has_idea = SPA_Juan_Negrin_hog_sde
 		}
 		
 		ai_will_do = {
@@ -941,7 +939,7 @@ focus_tree = {
 		y = 5
 		
 		available = {
-			has_idea = SPA_Francisco_Largo_Caballero_hog_lso
+			has_idea = SPA_Francisco_Largo_Caballero_hog_lib
 		}
 		
 		ai_will_do = {

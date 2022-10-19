@@ -1,42 +1,39 @@
-﻿capital = 500
+capital = 500
 
-add_ideas = {
-	party_pop_0_30
-	limited_conscription
-	BRA_political_instability
-	GEN_hog_mli
-	GEN_for_mli
-	GEN_eco_mli
-	GEN_sec_mli
-	presidential_republic
-}
-oob = "BRA_1936"
+oob = "BRA"
 set_research_slots = 3
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	tech_support = 1		
-	tech_engineers = 1
-	gw_artillery = 1
-	gwtank = 1
-	early_fighter = 1
-	CAS1 = 1
-	fuel_silos = 1
-}
+
 if = {
-	limit = {
-		not = { has_dlc = "Man the Guns"}
-	}
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "BRA_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
 	}
-	set_naval_oob = "BRA_1936_naval_legacy"
+	else = {
+		set_air_oob = "BRA_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
@@ -48,12 +45,33 @@ if = {
 		early_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_torpedo = 1
 		mtg_transport = 1
 	}
-	set_naval_oob = "BRA_1936_naval_mtg"	
+	set_naval_oob = "BRA_naval_mtg"	
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			transport = 1
+		}
+		set_naval_oob = "BRA_naval_legacy"
+	}
 }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	fuel_silos = 1
+  basic_train = 1
+}
+
 set_politics = {	
 	ruling_party = market_liberal
 	last_election = "1934.7.17"
@@ -71,130 +89,17 @@ set_popularities = {
     authoritarian_democrat = 5
 }
 
-
-create_country_leader = {
-	name = "Luís Carlos Prestes"
-	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
-	picture = "Portrait_Brazil_Luis_Prestes.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "João Mangabeira"
-	desc = "POLITICS_JOAO_MANGABEIRA_DESC"
-	picture = "Portrait_Brazil_Joao_Mangabeira.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Júlio Prestes"
-	desc = "POLITICS_JULIO_PRESTES_DESC"
-	picture = "Portrait_Brazil_Julio_Prestes.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Armando Salles"
-	desc = "POLITICS_ARMANDO_SALES_DESC"
-	picture = "Portrait_Brazil_Armando_Salles.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Otávio Mangabeira"
-	desc = "POLITICS_OTAVIO_MANGABEIRA_DESC"
-	picture = "Portrait_BRA_Otavio_Mangabeira.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Getulio Vargas"
-	desc = "POLITICS_GETULIO_VARGAS_DESC"
-	picture = "Portrait_Brazil_Getulio_Vargas.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Plinio Correa"
-	desc = "POLITICS_PLINIO_CORREA_DESC"
-	picture = "Portrait_Brazil_Plinio_Correa.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Gustavo Dodt Barroso"
-	desc = "POLITICS_GUSTAVO_DODT_BARROSO_DESC"
-	picture = "Portrait_Brazil_Gustavo_Dodt_Barroso.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
+add_ideas = {
+	party_pop_0_30
+	limited_conscription
+	BRA_political_instability
+	presidential_republic
 }
 
 set_convoys = 40
 set_stability = 0.30
 set_war_support = 0.76
 
-create_corps_commander = {
-	name = "Eurico Gaspar Dutra"
-	portrait_path = "gfx/leaders/BRA/BRA_Erico_Gaspar_Dutra.tga"
-	traits = { 	
-	infantry_officer
-	harsh_leader
-	offensive_doctrine  
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Euclides Figueiredo"
-	portrait_path = "gfx/leaders/BRA/EuclidesFigueiredo.tga"
-	traits = {  politically_connected
-		media_personality
-		hill_fighter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Palimércio de Rezende"
-	portrait_path = "gfx/leaders/BRA/BRA_Palimerico_Rezende.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-create_field_marshal = {
-	name = "Mascarenhas de Morais"
-	picture = "Portrait_Brazil_Mascarenhas_Morais.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_navy_leader = {
-	name = "Isaías de Noronha"
-	picture = "Portrait_Brazil_Isaias_de_Noronha.tga"
-	traits = {  }
-	skill = 3
-}
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -264,6 +169,14 @@ if = {
 	}
 }
 
-
-
-
+recruit_character = BRA_Joao_Mangabeira
+recruit_character = BRA_Julio_Prestes
+recruit_character = BRA_Armando_Salles
+recruit_character = BRA_Otavio_Mangabeira
+recruit_character = BRA_Getulio_Vargas
+recruit_character = BRA_Gustavo_Dodt_Barroso
+recruit_character = BRA_Eurico_Gaspar_Dutra
+recruit_character = BRA_Euclides_Figueiredo
+recruit_character = BRA_Palimercio_de_Rezende
+recruit_character = BRA_Mascarenhas_de_Morais
+recruit_character = BRA_Isaias_de_Noronha

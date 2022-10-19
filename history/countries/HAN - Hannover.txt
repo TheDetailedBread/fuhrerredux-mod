@@ -1,44 +1,6 @@
-﻿capital = 59
+capital = 59
 
 oob = "HAN"
-
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	support_weapons = 1
-	
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
-	
-	gw_artillery = 1
-	
-	gwtank = 1
-	
-	early_fighter = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-	CAS1 = 1
-	
-	early_submarine = 1
-	early_destroyer = 1
-	basic_destroyer = 1
-	early_light_cruiser = 1
-	basic_light_cruiser = 1
-	early_heavy_cruiser = 1
-	early_battleship = 1
-	basic_battleship = 1
-	early_battlecruiser = 1
-	early_carrier = 1
-	transport = 1
-	
-	electronic_mechanical_engineering = 1
-	radio = 1
-	fuel_silos = 1
-}
-
 
 set_research_slots = 3
 set_convoys = 50
@@ -53,35 +15,22 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 5
-    libertarian_socialist = 8
-    social_democrat = 30
-    social_liberal = 3
-    market_liberal = 10
-    social_conservative = 40
-    authoritarian_democrat = 0
-    paternal_autocrat = 2
-    national_populist = 0
-    valkist = 0
+  vanguardist = 2
+  collectivist = 5
+  libertarian_socialist = 8
+  social_democrat = 30
+  social_liberal = 3
+  market_liberal = 10
+  social_conservative = 40
+  authoritarian_democrat = 0
+  paternal_autocrat = 2
+  national_populist = 0
+  valkist = 0
 }
 
 add_ideas = {
 	party_pop_0_00
 	parliamentary_republic
-	GEN_hog_sli
-	GEN_for_sli
-	GEN_eco_sli
-	GEN_sec_sli
 }
 
-create_country_leader = {
-	name = "Erich Maria Remarque"
-	desc = "POLITICS_REMARQUE_DESC"
-	picture = "Erich_Maria_Remarque.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		marysue
-	}
-}
+recruit_character = HAN_Erich_Maria_Remarque

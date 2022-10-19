@@ -30,27 +30,19 @@
 #									where you choose the historical division name.
 #			3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
 #									the current game version.
-INS_INF_01 =
-{
+INS_INF_01 ={
 	name = "Infantry Division"
-
 	for_countries = { INS }
-
-	can_use = {
-		always = yes
-	}
-
+	can_use = { always = yes }
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { HOL_INF_01 }
-
 	fallback_name = "K%d. Satpur Infanteri"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "K%d. Satpur Infanteri 'Iskandar Muda'" }
 		2 = { "K%d. Satpur Infanteri 'Malahayati'" }
 		3 = { "K%d. Satpur Infanteri 'Sultan Agung'" }
@@ -106,16 +98,10 @@ INS_INF_01 =
 }
 
 
-INS_CAV_01 =
-{
+INS_CAV_01 = {
 	name = "Cavalry Division"
-
 	for_countries = { INS }
-
-	can_use = {
-		always = yes
-	}
-
+	can_use = { always = yes }
 	division_types = { "cavalry" }
 
 	# Number reservation system will tie to another group.
@@ -140,25 +126,19 @@ INS_CAV_01 =
 	}
 }
 
-INS_MOT_01 =
-{
+INS_MOT_01 = {
 	name = "Motorized Division"
-
 	for_countries = { INS }
-
 	can_use = { always = yes }
-
 	division_types = { "motorized" }
 
 	# Number reservation system will tie to another group.
 	link_numbering_with = { HOL_INF_01 }
-
 	fallback_name = "K%d. Satpur Mobil"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "K%d. Satpur Mobil" }
 		2 = { "K%d. Satpur Mobil" }
 		3 = { "K%d. Satpur Mobil" }
@@ -172,21 +152,14 @@ INS_MOT_01 =
 	}
 }
 
-INS_ARM_01 =
-{
+INS_ARM_01 = {
 	name = "Armored Division"
-
 	for_countries = { INS }
-
-	can_use = {
-		always = yes
-	}
-
+	can_use = { always = yes }
 	division_types = { "mechanized" "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { HOL_INF_01 }
-
 	fallback_name = "K%d. Divisi Panser"
 
 	# Names with numbers (only one number per entry).
@@ -206,14 +179,10 @@ INS_ARM_01 =
 	}
 }
 
-INS_PAR_01 =
-{
+INS_PAR_01 = {
 	name = "Paratrooper Division"
-
 	for_countries = { INS }
-
 	can_use = { always = yes }
-
 	division_types = { "paratrooper" }
 
 	# Number reservation system will tie to another group.
@@ -223,8 +192,7 @@ INS_PAR_01 =
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "Para Kommando %d" }
 		2 = { "Para Kommando %d" }
 		3 = { "Para Kommando %d" }
@@ -238,14 +206,10 @@ INS_PAR_01 =
 	}
 }
 
-INS_MAR_01 =
-{
+INS_MAR_01 = {
 	name = "Marine Division"
-
 	for_countries = { INS }
-
 	can_use = { always = yes }
-
 	division_types = { "marine" }
 
 	# Number reservation system will tie to another group.
@@ -255,8 +219,7 @@ INS_MAR_01 =
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "K%d. Satpur Marinir" }
 		2 = { "K%d. Satpur Marinir" }
 		3 = { "K%d. Satpur Marinir" }
@@ -270,14 +233,10 @@ INS_MAR_01 =
 	}
 }
 
-INS_MTN_01 =
-{
+INS_MTN_01 = {
 	name = "Mountain Division"
-
 	for_countries = { INS }
-
 	can_use = { always = yes }
-
 	division_types = { "mountaineers" }
 
 	# Number reservation system will tie to another group.
@@ -287,8 +246,7 @@ INS_MTN_01 =
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
-	ordered =
-	{
+	ordered = {
 		1 = { "K%d. Satpur Gerilya" }
 		2 = { "K%d. Satpur Gerilya" }
 		3 = { "K%d. Satpur Gerilya" }
@@ -302,57 +260,15 @@ INS_MTN_01 =
 	}
 }
 
-# INS_GAR_01 =
-# {
-	# name = "Garrison Division"
-
-	# for_countries = { INS }
-
-	# can_use = { always = yes }
-
-	# division_types = { "garrison" }
-
-	# # Number reservation system will tie to another group.
-	# link_numbering_with = { HOL_INF_01 }
-
-	# fallback_name = "K%d. Kostrad"
-
-	# # Names with numbers (only one number per entry).
-	# # It's okay to have gaps in numbering.
-	# ordered =
-	# {
-		# 102 = { "K%d. Kostrad" }
-		# 103 = { "K%d. Kostrad" }
-		# 104 = { "'K%d. Kostrad" }
-		# 105 = { "K%d. Kostrad" }
-		# 106 = { "K%d. Kostrad" }
-		# 107 = { "K%d. Kostrad" }
-		# 108 = { "K%d. Kostrad" }
-		# 109 = { "K%d. Kostrad" }
-		# 110 = { "K%d. Kostrad" }
-		# 111 = { "K%d. Kostrad" }
-		# 112 = { "K%d. Kostrad" }
-		# 113 = { "K%d. Kostrad" }
-		# 114 = { "K%d. Kostrad" }
-		# 115 = { "K%d. Kostrad" }
-	# }
-# }
-
-INS_MILINF_01 =
-{
+INS_MILINF_01 = {
 	name = "Militia Divisions"
-
 	for_countries = { INS }
-
 	can_use = { always = yes }
-
 	division_types = { "militia" }
-
 	fallback_name = "%s. Milisi"
 
 	# Names with numbers (only one number per entry)
-	ordered =
-	{
+	ordered = {
 		1 = { "%s. Milisi Banten" }
 		2 = { "%s. Milisi Djakarta" }
 		3 = { "%s. Milisi Bogor" }
@@ -408,6 +324,5 @@ INS_MILINF_01 =
 		53 = { "%s. Milisi Bogor" }
 		54 = { "%s. Milisi Priangan" }
 		55 = { "%s. Milisi Priangan" }
-
 	}
 }

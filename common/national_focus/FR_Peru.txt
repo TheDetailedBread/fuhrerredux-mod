@@ -18,7 +18,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_peru_in_1936
-		icon = GFX_goal_peru_coa
+		icon = GFX_goal_peru
 
  		ai_will_do = { factor = 10 } 
 
@@ -1217,7 +1217,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_army_direction
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_PRU_army
 		prerequisite = { focus = PRU_peru_in_1936 }
  		ai_will_do = { factor = 10 } 
 
@@ -1245,9 +1245,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_the_tried_and_tested"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
@@ -1268,9 +1268,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_a_new_structure"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 				category = cat_mobile_warfare
@@ -1388,7 +1388,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_reinforce_our_men
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_goal_generic_support_equipment
 		prerequisite = { focus = PRU_mechanized_masses focus = PRU_bring_in_the_tanks }
  		ai_will_do = { factor = 10 } 
  		x =16
@@ -1409,7 +1409,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_what_we_will_sacrifice
-		icon = GFX_goal_conscription
+		icon = GFX_goal_generic_drafted_army
 		prerequisite = { focus = PRU_mechanized_masses focus = PRU_bring_in_the_tanks }
  		ai_will_do = { factor = 10 } 
  		x =18
@@ -1459,9 +1459,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_keeping_up_to_date"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
@@ -1471,7 +1471,7 @@ focus_tree = {
 
 		focus = { 
 		id = PRU_further_renovations
-		icon = GFX_goal_RUS_Markov_plan
+		icon = GFX_goal_generic_army_tanks3
 		prerequisite = { focus = PRU_a_new_structure }
 		prerequisite = { focus = PRU_extend_our_reach focus = PRU_reinforce_our_men }
  		ai_will_do = { factor = 10 } 
@@ -1482,9 +1482,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_further_renovations"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 				category = cat_mobile_warfare
@@ -1494,7 +1494,7 @@ focus_tree = {
 	focus = {
 		id = PRU_building_up_bases
 		prerequisite = { focus = PRU_marine_strategy }
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_generic_naval_base
 		x = 35
 		y = 2
 		cost = 10
@@ -1538,7 +1538,7 @@ focus_tree = {
 
 focus = {
 		id = PRU_marine_strategy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_PRU_navy
 		x = 35
 		y = 1
 		cost = 10
@@ -1547,9 +1547,8 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_marine_strategy"
-		add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1675,10 +1674,9 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_sea_control"
-		navy_experience = 25
-		add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+		  navy_experience = 25
+      add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1687,7 +1685,7 @@ focus = {
 
 focus = {
 		id = PRU_lessons_from_our_war_with_colombia
-		icon = GFX_goal_civil_war_lessons
+		icon = GFX_goal_PRU_airforce
 		x = 41
 		y = 1
 		cost = 10
@@ -1709,9 +1707,9 @@ focus = {
 		prerequisite = { focus = PRU_lessons_from_our_war_with_colombia }	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_our_airborne_strategy"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1802,7 +1800,7 @@ focus = {
 
 focus = {
 		id = PRU_seashore_strike
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_goal_generic_air_naval_bomber2_new
 		x = 43
 		y = 5
 		cost = 10
@@ -1822,7 +1820,7 @@ focus = {
 
 focus = {
 		id = PRU_fighter_squadrons
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_goal_generic_air_fighter2_new
 		x = 39
 		y = 5
 		cost = 10
@@ -1852,9 +1850,9 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PRU_continual_improvement"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -1863,7 +1861,7 @@ focus = {
 
 focus = {
 		id = PRU_dominating_the_winds
-		icon = GFX_goal_continuous_air_production
+		icon = GFX_goal_generic_airports
 		x = 41
 		y = 7
 		cost = 10
@@ -1939,7 +1937,7 @@ focus = {
 
 focus = {
 		id = PRU_stop_the_extremists
-		icon = GFX_goal_colombia_shackle
+		icon = GFX_goal_generic_attack_colombia
 		x = 45
 		y = 4
 		cost = 10
@@ -1982,7 +1980,7 @@ focus = {
 
 focus = {
 		id = PRU_push_the_claims
-		icon = GFX_goal_flag_ecuador_war
+		icon = GFX_goal_generic_attack_ecuador
 		x = 47
 		y = 3
 		cost = 10
@@ -2024,7 +2022,7 @@ focus = {
 
 focus = {
 		id = PRU_go_for_ecuador
-		icon = GFX_goal_flag_ecuador_war
+		icon = GFX_goal_generic_attack_ecuador
 		x = 51
 		y = 2
 		cost = 10
@@ -2070,7 +2068,7 @@ focus = {
 
 focus = {
 		id = PRU_push_for_arica
-		icon = GFX_goal_chile_war
+		icon = GFX_goal_generic_attack_chile
 		x = 53
 		y = 3
 		cost = 10
@@ -2092,7 +2090,7 @@ focus = {
 
 focus = {
 		id = PRU_renew_friendship_treaty
-		icon = GFX_goal_chile_alliance
+		icon = GFX_goal_PRU_chile_deal
 		x = 55
 		y = 2
 		cost = 10
@@ -2110,7 +2108,7 @@ focus = {
 
 focus = {
 		id = PRU_strike_for_arica
-		icon = GFX_goal_chile_war
+		icon = GFX_goal_generic_attack_chile
 		x = 57
 		y = 2
 		cost = 10
@@ -2162,7 +2160,7 @@ focus = {
 
 focus = {
 		id = PRU_save_the_bolivians
-		icon = GFX_goal_flag_bolivia_war
+		icon = GFX_goal_generic_attack_bolivia
 		x = 59
 		y = 3
 		cost = 10

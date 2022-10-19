@@ -1,0 +1,28 @@
+foreign_politics = {
+  SRA_unification_with_nee = {
+    icon = GFX_decision_eng_trade_unions_support
+    cost = 50
+    days_remove = 14
+    fire_only_once = yes
+    allowed = { original_tag = SRA }
+    target_trigger = {
+      FROM = { tag = NEE }
+    }
+    available = {
+      NEE = {
+        exists = yes
+        NOT = { has_war_with = ROOT }
+        NOT = { is_subject_of = ROOT }
+      }
+      is_subject = no
+    }
+    visible = {
+      has_country_flag = SRA_victory
+    }
+    remove_effect = {
+      FROM = {
+        country_event = { id = sra.100 days = 1 }
+      }
+    }
+  }
+}

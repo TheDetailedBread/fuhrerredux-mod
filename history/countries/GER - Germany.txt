@@ -1,14 +1,6 @@
-﻿capital = 64
+capital = 64
 
-oob = "GER_1936"
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "GER_1936_naval_mtg"
-	else = {
-		set_naval_oob = "GER_1936_naval_legacy"
-	}
-}
+oob = "GER"
 
 # Starting tech
 set_technology = {
@@ -20,17 +12,8 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
-	tactical_bomber1 = 1
-	strategic_bomber1 = 1
-	CAS1 = 1
-	naval_bomber1 = 1
+	
+	
 	synth_oil_experiments = 1
 	electronic_mechanical_engineering = 1
 	radio = 1
@@ -39,56 +22,99 @@ set_technology = {
 	electronic_mechanical_engineering = 1
 	radio = 1
 	tech_signal_company = 1
+  basic_train = 1
 }
 
 if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "GER_air_bba"
 	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		basic_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
-		basic_heavy_cruiser = 1
-		early_battleship = 1
-		basic_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		basic_small_airframe = 1
+		basic_medium_airframe  = 1
+	}
+	else = {
+		set_air_oob = "GER_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+		}
 	}
 }
+
 if = {
-	limit = {
-		has_dlc = "Man the Guns"
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "GER_naval_mtg"
+		set_technology = {
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			early_ship_hull_light = 1
+			basic_ship_hull_light = 1
+			early_ship_hull_cruiser = 1
+			basic_ship_hull_cruiser = 1
+			early_ship_hull_heavy = 1
+			basic_ship_hull_heavy = 1
+			panzerschiffe = 1
+			pre_dreadnoughts = 1
+			early_ship_hull_submarine = 1
+			basic_ship_hull_submarine = 1
+			mtg_transport = 1
+			basic_torpedo = 1
+			improved_ship_torpedo_launcher = 1
+			basic_battery = 1
+			basic_light_battery = 1
+			basic_medium_battery = 1
+			basic_heavy_battery = 1
+			basic_depth_charges = 1
+			sonar = 1
+			basic_cruiser_armor_scheme = 1
+		}
+	else = {
+		set_naval_oob = "GER_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			early_destroyer = 1
+			basic_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			early_heavy_cruiser = 1
+			basic_heavy_cruiser = 1
+			early_battleship = 1
+			basic_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
 	}
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		panzerschiffe = 1
-		pre_dreadnoughts = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		mtg_transport = 1
-		basic_torpedo = 1
-		improved_ship_torpedo_launcher = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_heavy_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
-		basic_depth_charges = 1
-		sonar = 1
-		basic_cruiser_armor_scheme = 1
+}
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+    basic_light_tank_chassis = 1
+    improved_light_tank_chassis = 1
+	  basic_heavy_tank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
+			basic_heavy_tank = 1
+		}
 	}
 }
 
@@ -96,15 +122,12 @@ add_ideas = {
 	party_pop_0_40
 	GER_divided_govt
 	GER_naval_treaty
+	HOL_dutch_german_economic_cooperation
 	#GER_army_treaty
 	#GER_versialles_no_good
 	low_economic_mobilisation 
 	limited_exports
-	GER_Anton_Arco_Valley_val
-	GER_Alfred_Rosenberg_for_val
-	GER_Adolf_Hitler_eco_val
-	GER_Hermann_Ehrhardt_sec_val
-	GER_Werner_von_Blomberg_mhc_pau
+	
 	one_party_dictatorship
 }
 
@@ -127,1117 +150,228 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 8
-    libertarian_socialist = 1
-    social_democrat = 1
-    social_liberal = 1
-    market_liberal = 6
-    social_conservative = 15
-    authoritarian_democrat = 14
-    paternal_autocrat = 1
-    national_populist = 13
-    valkist = 40
+	vanguardist = 0
+	collectivist = 8
+	libertarian_socialist = 1
+	social_democrat = 1
+	social_liberal = 1
+	market_liberal = 6
+	social_conservative = 15
+	authoritarian_democrat = 14
+	paternal_autocrat = 1
+	national_populist = 13
+	valkist = 40
 }
 
-create_country_leader = {
-	name = "Wilhelm Pieck"
-	desc = "POLITICS_WILHELM_PIECK_DESC"
-	picture = "Portrait_Germany_Wilhelm_Pieck_fx.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
+GER_add_armour_variants = yes
+GER_add_aircraft_variants = yes
+GER_add_ship_variants = yes
+
+GRP = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Ernst Thälmann"
-	desc = "POLITICS_ERNST_THALMANN_DESC"
-	picture = "Portrait_Germany_Ernst_Thalmann.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
+ERM = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Walter Ulbricht"
-	desc = "POLITICS_WLATER_ULBRICHT_DESC"
-	picture = "Portrait_Germany_Walter_Ulbricht.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
+POM = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Otto Wels"
-	desc = "POLITICS_OTTO_WELS_DESC"
-	picture = "Portrait_Germany_Otto_Wels.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
+SIL = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Theodor Heuss"
-	desc = "POLITICS_THEODOR_HEUSS_DESC"
-	picture = "Portrait_Germany_Heuss_Theodor.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
+BAY = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Gustav Stresemann"
-	desc = "POLITICS_GUSTAV_STRESEMANN_DESC"
-	picture = "Portrait_Germany_Gustav_Stresemann.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
+SAX = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Heinrich Brüning"
-	desc = "POLITICS_HEINRICH_BRUNING_DESC"
-	picture = "Portrait_Germany_Heinrich_Bruning.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
+HES = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Wilhelm III"
-	desc = "POLITICS_WILHELM_III_DESC"
-	picture = "Portrait_Germany_William_III.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
+HAN = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Ritter von Leeb"
-	desc = "POLITICS_RITTER_VON_LEEB_DESC"
-	picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb_fx.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
+BAW = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
-create_country_leader = {
-	name = "Hermann Göring"
-	desc = "POLITICS_HERMANN_GORING_DESC"
-	picture = "Portrait_Germany_Hermann_Goring_fx.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Adam Dressler"
-	desc = "POLITICS_ADAM_DRESSLER_DESC"
-	picture = "Portrait_Germany_Adam_Dressler_old.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
+BRW = {
+	inherit_technology = GER
+	GER_add_armour_variants = yes
+	GER_add_aircraft_variants = yes
+	GER_add_ship_variants = yes
 }
 
-
-add_namespace = {
-	name = "ger_unit_leader"
-	type = unit_leader
-}
-
-create_field_marshal = {
-	name = "Gerd von Rundstedt"
-	picture = "Portrait_Germany_Gerd_von_Rundstedt_fx.tga"
-	traits = { defensive_doctrine offensive_doctrine old_guard }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 1
-}
-create_field_marshal = {
-	name = "Günther von Kluge"
-	picture = "Portrait_Germany_Gunther_Kluge_fx.tga"
-	traits = { offensive_doctrine armor_officer }
-	skill = 3
-	id = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_field_marshal = {
-	name = "Walter Model"
-	picture = "Portrait_Germany_Walter_Model_fx.tga"
-	traits = { defensive_doctrine brilliant_strategist trait_cautious politically_connected }
-	skill = 3
-	id = 10
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Friedrich Paulus"
-	picture = "Portrait_Germany_Friedrich_Paulus_fx.tga"
-	traits = { trait_cautious armor_officer }
-	skill = 1
-	id = 3
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Erwin Rommel"
-	picture = "Portrait_Germany_Erwin_Rommel_fx.tga"
-	traits = { trait_reckless war_hero armor_officer media_personality }
-	skill = 4
-	id = 4
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Erich von Manstein"
-	picture = "Portrait_Germany_Erich_von_Manstein_fx.tga"
-	traits = { trickster armor_officer brilliant_strategist trait_engineer }
-	skill = 4
-	id = 5
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Wilhelm List"
-	picture = "Portrait_Germany_Wilhelm_List.dds"
-	traits = { career_officer inflexible_strategist }
-	skill = 2
-	id = 7
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Ewald von Kleist"
-	picture = "Portrait_Germany_Ewald_von_Kleist_fx.tga"
-	traits = { armor_officer trait_cautious }
-	skill = 2
-	id = 8
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Maximilian von Weichs"
-	desc = "GER_Mazimilian_von_Weichs"
-	picture = "Portrait_Germany_Maximilian_von_Weichs.dds"
-	traits = { cavalry_officer }
-	skill = 4
-	id = 11
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Wilhelm Ritter von Leeb"
-	picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb_fx.tga"
-	traits = { old_guard infantry_officer }
-	skill = 3
-	id = 13
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Georg-Hans Reinhardt"
-	picture = "Portrait_Germany_Georg_von_Reinhardt.dds"
-	traits = { trait_cautious armor_officer }
-	skill = 3
-	id = 14
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Walter Krüger"
-	picture = "Portrait_Germany_Walter_Kruger.dds"
-	traits = { armor_officer trait_reckless politically_connected}
-	skill = 3
-	id = 15
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Kurt Student"
-	picture = "Portrait_Germany_Kurt_Student.dds"
-	traits = { commando trait_reckless }
-	skill = 4
-	id = 16
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Erwin von Witzleben"
-	picture = "Portrait_Germany_Erwin_von_Witzleben_fx.tga"
-	traits = { infantry_officer career_officer }
-	skill = 4
-	id = 17
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Hermann Hoth"
-	picture = "Portrait_Germany_Hermann_Hoth_fx.tga"
-	traits = { trait_reckless armor_officer }
-	skill = 3
-	id = 18
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Johannes Blaskowitz"
-	picture = "Portrait_Germany_Johannes_Blaskowitz.dds"
-	traits = { infantry_officer }
-	skill = 3
-	id = 19
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Paul Hausser"
-	picture = "Portrait_Germany_Paul_Hausser.dds"
-	traits = {  armor_officer politically_connected }
-	skill = 4
-	id = 20
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Friedrich Schulz"
-	picture = "Portrait_Germany_Friedrich_Schulz.dds"
-	traits = { infantry_officer }
-	skill = 3
-	id = 21
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Georg von Küchler"
-	picture = "Portrait_Germany_Georg_Kuchler_fx.tga"
-	traits = {  }
-	skill = 4
-	id = 22
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Alfred Jodl"
-	picture = "Portrait_Germany_Alfred_Ferdinand_Jodl.tga"
-	traits = { politically_connected career_officer }
-	skill = 3
-	id = 23
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Sepp Dietrich"
-	desc = "GER_Sepp_Dietrich_desc"
-	picture = "Portrait_Germany_Josef_Dietrich.dds"
-	traits = { armor_officer politically_connected brilliant_strategist trait_reckless }
-	skill = 4
-	id = 24
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Hasso von Manteuffel"
-	picture = "Portrait_Germany_Hasso_von_Manteuffel.tga"
-	traits = { armor_officer career_officer trait_cautious }
-	skill = 4
-	id = 25
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Albert Kesselring"
-	picture = "Portrait_Germany_Albert_Kesselring_fx.tga"
-	traits = { brilliant_strategist trait_cautious war_hero }
-	skill = 4
-	id = 32
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Gotthard Heinrici"
-	picture = "Portrait_Germany_Gotthard_Heinrici_fx.tga"
-	traits = { trait_engineer infantry_officer }
-	skill = 3
-	id = 33
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Friedrich Dollmann"
-	picture = "Portrait_Germany_Friedrich_Dollmann.tga"
-	traits = { trait_engineer infantry_officer }
-	skill = 3
-	id = 44
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Eduard Deisenhofer"
-	picture = "Portrait_Germany_Eduard_Deisenhofer.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Ernst-Eberhard Hell"
-	picture = "Portrait_Germany_Ernst-Eberhard_Hell.dds"
-	traits = { winter_specialist trait_engineer war_hero }
-	skill = 3
-	id = 34
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Felix Steiner"
-	desc = "GER_Felix_Steiner_desc"
-	gfx = "GFX_portrait_ger_felix_steiner"
-	traits = {  }
-	skill = 3
-	id = 35
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Otto Kumm"
-	picture = "Portrait_Germany_Otto_Kumm.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Adolf Strauss"
-	picture = "Portrait_Germany_Adolf_Strauss.tga"
-	traits = {  }
-	skill = 2
-	id = 36
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Carl Heinrich von Stuelpnagel"
-	picture = "Portrait_Germany_Carl_Heinrich_von_Stuelpnagel.tga"
-	traits = { infantry_officer  }
-	skill = 3
-	id = 37
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Erich Hoepner"
-	picture = "Portrait_Germany_Erich_Hoepner.tga"
-	traits = { armor_officer  cavalry_officer  }
-	skill = 4
-	id = 38
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Eugen Ritter von Schobert"
-	picture = "Portrait_Eugen_Ritter_von_Schobert.tga"
-	traits = { politically_connected harsh_leader }
-	skill = 3
-	id = 39
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Ferdinand Schoerner"
-	desc = "GER_Ferdinand_Schoerner_desc"
-	picture = "Portrait_Germany_Ferdinand_Schorner_fx.tga"
-	traits = { politically_connected	trait_reckless harsh_leader infantry_officer }
-	skill = 3
-	id = 40
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Rüdiger von der Goltz"
-	picture = "Portrait_Germany_Rudiger_von_der_Goltz.tga"
-	traits = { trait_reckless harsh_leader }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Willy Rohr"
-	picture = "Portrait_Germany_Willy_Rohr.tga"
-	traits = { infantry_officer }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Gottlob Berger"
-	picture = "Portrait_Germany_Gottlob_Berger.tga"
-	traits = { trait_reckless harsh_leader }
-	skill = 1
-	id = 41
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Helmuth Weidling"
-	picture = "Portrait_Germany_Helmuth_Weidling.tga"
-	traits = { bearer_of_artillery fortress_buster  }
-	skill = 3
-	id = 42
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Josias zu Waldeck-Pyrmont"
-	picture = "Portrait_Germany_Josias_Waldeck_Pyrmont.tga"
-	traits = {  }
-	skill = 1
-	id = 43
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Wilhelm Bittrich"
-	picture = "Portrait_Germany_Wilhelm_Bittrich.tga"
-	traits = { armor_officer  cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Walther Wenck"
-	picture = "Portrait_Germany_Walther_Wenck.tga"
-	traits = {  armor_officer  infantry_officer}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Walther von Reichenau"
-	desc = "GER_von_Reichenau_desc"
-	picture = "Portrait_Germany_Walter_von_Reichenau.tga"
-	traits = { career_officer skilled_staffer expert_delegator }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Albert Ritter von Beckh"
-	picture = "Portrait_Germany_Albert_Ritter_von_Beckh.tga"
-	traits = {  }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Alfred von Randow"
-	picture = "Portrait_Germany_Alfred_von_Randow.tga"
-	traits = { skilled_staffer infantry_officer }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Eugen Meindl"
-	picture = "Portrait_Germany_Eugen_Meindl.tga"
-	traits = { career_officer commando  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Franz von Stephani"
-	picture = "Portrait_Germany_Franz_von_Stephani.tga"
-	traits = { politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Heinrich von Bayern"
-	picture = "Portrait_Germany_Heinrich_von_Bayern.tga"
-	traits = { politically_connected commando trait_mountaineer  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Franz Ritter von Epp"
-	picture = "Portrait_Germany_Franz_Ritter_von_Epp.tga"
-	traits = { politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Max Otto von Stierlitz"
-	picture = "Portrait_Germany_Max_Otto_von_Stierlitz.tga"
-	traits = { politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Walter Caspari"
-	picture = "Portrait_Germany_Walter_Caspari.tga"
-	traits = { infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Gerhard Rossbach"
-	picture = "Portrait_Germany_Gerhard_Rossbach.tga"
-	traits = { politically_connected  }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Walter Weiss"
-	picture = "Portrait_Germany_Walter_Weiss.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Albert Wodrig"
-	picture = "Portrait_Germany_Albert_Wodrig.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Erwin Jaenecke"
-	picture = "Portrait_Germany_Erwin_Jaenecke.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Heinrich Schulz"
-	picture = "Portrait_Germany_Heinrich_Schulz.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Friedrich Fromm"
-	picture = "Portrait_Germany_Friedrich_Fromm.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Karl Adolf Hollidt"
-	picture = "Portrait_Germany_Karl_Adolf_Hollidt.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Georg Lindemann"
-	picture = "Portrait_Germany_Georg_Lindemann.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Artur Mahraun"
-	picture = "Portrait_Germany_Artur_Mahraun.tga"
-	traits = { politically_connected infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Horst Sabac el Cher"
-	picture = "Portrait_Germany_Horst_Sabac_el_Cher.tga"
-	traits = { politically_connected }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Theodor Busse"
-	picture = "Portrait_Germany_Theodor_Busse.tga"
-	traits = { armor_officer  cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Hermann Balck"
-	picture = "Portrait_Germany_Hermann_Balck.tga"
-	traits = { armor_officer  cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Karl Strecker"
-	picture = "Portrait_Germany_Karl_Strecker.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Rudolf Schmidt"
-	picture = "Portrait_Germany_Rudolf_Schmidt.tga"
-	traits = { infantry_officer skilled_staffer expert_delegator }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-
-create_navy_leader = {
-	name = "Hermann Boehm"
-	picture = "Portrait_Germany_Hermann_Boehm_fx.tga"
-	traits = { superior_tactician }
-	skill = 4
-	id = 29
-}
-create_navy_leader = {
-	name = "Wilhelm Marschall"
-	picture = "Portrait_Germany_Wilhelm_Marschall_fx.tga"
-	traits = { old_guard_navy }
-	skill = 4
-	id = 30
-}
-create_navy_leader = {
-	name = "Günther Lütjens"
-	picture = "Portrait_Germany_Gunther_Lutjens_fx.tga"
-	traits = { superior_tactician }
-	skill = 3
-	id = 31
-}
-
+recruit_character = GER_Wilhelm_Pieck
+recruit_character = GER_Ernst_Thalmann
+recruit_character = GER_Walter_Ulbricht
+recruit_character = GER_Otto_Wels
+recruit_character = GER_Theodor_Heuss
+recruit_character = GER_Gustav_Stresemann
+recruit_character = GER_Heinrich_Bruning
+recruit_character = GER_Wilhelm_III
+recruit_character = GER_Ritter_von_Leeb
+recruit_character = GER_Hermann_Goring
+recruit_character = GER_Adam_Dressler
+recruit_character = GER_Gerd_von_Rundstedt
+recruit_character = GER_Gunther_von_Kluge
+recruit_character = GER_Walter_Model
+recruit_character = GER_Friedrich_Paulus
+recruit_character = GER_Erwin_Rommel
+recruit_character = GER_Erich_von_Manstein
+recruit_character = GER_Ewald_von_Kleist
+recruit_character = GER_Erwin_von_Witzleben
+recruit_character = GER_Hermann_Hoth
+recruit_character = GER_Paul_Hausser
+recruit_character = GER_Georg_von_Kuchler
+recruit_character = GER_Alfred_Jodl
+recruit_character = GER_Sepp_Dietrich
+recruit_character = GER_Hasso_von_Manteuffel
+recruit_character = GER_Albert_Kesselring
+recruit_character = GER_Gotthard_Heinrici
+recruit_character = GER_Friedrich_Dollmann
+recruit_character = GER_Eduard_Deisenhofer
+recruit_character = GER_Felix_Steiner
+recruit_character = GER_Otto_Kumm
+recruit_character = GER_Adolf_Strauss
+recruit_character = GER_Carl_Heinrich_von_Stuelpnagel
+recruit_character = GER_Erich_Hoepner
+recruit_character = GER_Eugen_Ritter_von_Schobert
+recruit_character = GER_Ferdinand_Schoerner
+recruit_character = GER_Rudiger_von_der_Goltz
+recruit_character = GER_Willy_Rohr
+recruit_character = GER_Gottlob_Berger
+recruit_character = GER_Helmuth_Weidling
+recruit_character = GER_Josias_zu_Waldeck_Pyrmont
+recruit_character = GER_Wilhelm_Bittrich
+recruit_character = GER_Walther_Wenck
+recruit_character = GER_Walther_von_Reichenau
+recruit_character = GER_Maximilian_von_Weichs
+recruit_character = GER_Albert_Ritter_von_Beckh
+recruit_character = GER_Alfred_von_Randow
+recruit_character = GER_Eugen_Meindl
+recruit_character = GER_Franz_von_Stephani
+recruit_character = GER_Heinrich_von_Bayern
+recruit_character = GER_Franz_Ritter_von_Epp
+recruit_character = GER_Max_Otto_von_Stierlitz
+recruit_character = GER_Walter_Caspari
+recruit_character = GER_Gerhard_Rossbach
+recruit_character = GER_Walter_Weiss
+recruit_character = GER_Albert_Wodrig
+recruit_character = GER_Erwin_Jaenecke
+recruit_character = GER_Heinrich_Schulz
+recruit_character = GER_Friedrich_Fromm
+recruit_character = GER_Karl_Adolf_Hollidt
+recruit_character = GER_Georg_Lindemann
+recruit_character = GER_Artur_Mahraun
+recruit_character = GER_Horst_Sabac_el_Cher
+recruit_character = GER_Theodor_Busse
+recruit_character = GER_Hermann_Balck
+recruit_character = GER_Karl_Strecker
+recruit_character = GER_Rudolf_Schmidt
+recruit_character = GER_Hermann_Boehm
+recruit_character = GER_Wilhelm_Marschall
+recruit_character = GER_Gunther_Lutjens
+recruit_character = GER_Otto_Grotewohl
+recruit_character = GER_Otto_Braun
+recruit_character = GER_Erich_Koch_Weser
+recruit_character = GER_Hans_von_Raumer
+recruit_character = GER_Wilhelm_Marx
+recruit_character = GER_Max_von_Baden
+recruit_character = GER_Oskar_von_Hindenburg
+recruit_character = GER_Hans_Juergen_Graf_von_Blumenthal
+recruit_character = GER_Wilhelm_Frick
+recruit_character = GER_Heinrich_Behrmann
+recruit_character = GER_Rudolf_Sebottendorf
+recruit_character = GER_Julius_Schrek
+recruit_character = GER_Erich_Schmidt
+recruit_character = GER_Anton_Arco_auf_Valley
+recruit_character = GER_Ernst_Toller
+recruit_character = GER_Paul_Levi
+recruit_character = GER_Heinirch_Mann
+recruit_character = GER_Hans_Vogel
+recruit_character = GER_Albert_Dufour_Feronce
+recruit_character = GER_Wilhelm_Roepke
+recruit_character = GER_Heinrich_von_Brentano
+recruit_character = GER_Friedrich_Werner_von_der_Schulenberg
+recruit_character = GER_Franz_von_Papen
+recruit_character = GER_Konstantin_von_Neurath
+recruit_character = GER_Max_Amann
+recruit_character = GER_Alfred_Rosenburg
+recruit_character = GER_Ernst_Rohm
+recruit_character = GER_Willi_Munzenburg
+recruit_character = GER_WIlli_Stoph
+recruit_character = GER_Lujo_Brentano
+recruit_character = GER_Kurt_Schumacher
+recruit_character = GER_Rudolf_Wissel
+recruit_character = GER_Hermann_Dietrich
+recruit_character = GER_Julius_Curtis
+recruit_character = GER_Adam_Stregerwald
+recruit_character = GER_Hjalmar_Schacht
+recruit_character = GER_Paul_Lejune_Jung
+recruit_character = GER_Alfred_Hugenberg
+recruit_character = GER_Gregor_Strasser
+recruit_character = GER_Gernhard_Rossbach
+recruit_character = GER_Otto_Strasser
+recruit_character = GER_Adolf_Hitler
+recruit_character = GER_Ludwig_Renn
+recruit_character = GER_Eugen_Levine
+recruit_character = GER_Hilde_Benjamin
+recruit_character = GER_Gustav_Noske
+recruit_character = GER_Otto_Gessler
+recruit_character = GER_Wilhelm_Abegg
+recruit_character = GER_Wilhelm_Goerner
+recruit_character = GER_Arthur_Nebe
+recruit_character = GER_Fritz_Dietlog_Schulenburg
+recruit_character = GER_Roland_Freisler
+recruit_character = GER_Wilhelm_von_Gayl
+recruit_character = GER_Rudolf_Hess
+recruit_character = GER_Kurt_Deluge
+recruit_character = GER_Rudolf_Diels
+recruit_character = GER_Hermann_Ehrhardt
+recruit_character = GER_Hans_Speidel
+recruit_character = GER_Adolf_Heusinger
+recruit_character = GER_Heinz_Guderian
+recruit_character = GER_Ludwig_Beck
+recruit_character = GER_Erich_Kohler
+recruit_character = GER_Karl_Donitz
+recruit_character = GER_Erich_Raeder
+recruit_character = GER_Alfred_Bulowius
+recruit_character = GER_Hermann_Kohl
+recruit_character = GER_Willy_Brandt
+recruit_character = GER_Hans_von_Seeckt
+recruit_character = GER_Valkist_Council
+recruit_character = GER_Fedor_von_Bock
+recruit_character = GER_Alfred_Saalwachter
+recruit_character = GER_Werner_von_Blomberg
 
 if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	### Ship Variants ###
-	## 1936 Start ##
-	# Light Cruisers #
-	create_equipment_variant = {
-		name = "Königsberg Class"
-		type = light_cruiser_1
-		parent_version = 0
-		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_gun_upgrade = 2
-			ship_anti_air_upgrade = 2
-		}
-		obsolete = yes
-	}
-	# Heavy Cruisers #
-	create_equipment_variant = {
-		name = "Deutschland Class"
-		type = heavy_cruiser_1
-		parent_version = 0
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_armor_upgrade = 1
-			ship_gun_upgrade = 2
-		}
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	create_equipment_variant = {
-		name = "Deutschland Class"
-		type = ship_hull_cruiser_panzerschiff
-		name_group = GER_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-        	fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_battery_slot = ship_heavy_battery_2
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_airplane_launcher_1
-    	}
-	}
-	create_equipment_variant = {
-		name = "Type 24 Class"
-		type = ship_hull_light_1
-		name_group = GER_TB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Zerstörer 1934 Class"
-		type = ship_hull_light_2
-		name_group = GER_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Zerstörer 1934A Class"
-		type = ship_hull_light_2
-		name_group = GER_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
-	create_equipment_variant = {
-		name = "Type II Class"
-		type = ship_hull_submarine_1
-		name_group = GER_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Type VII Class"
-		type = ship_hull_submarine_2
-		name_group = GER_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-	}
-	create_equipment_variant = {
-		name = "Königsberg Class"
-		type = ship_hull_cruiser_1
-		name_group = GER_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_light_medium_battery_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Emden Class"
-		type = ship_hull_cruiser_1
-		name_group = GER_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_light_medium_battery_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Bremse Class"
-		type = ship_hull_cruiser_1
-		name_group = GER_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_anti_air_1
-			mid_2_custom_slot = ship_mine_layer_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Leipzig Class"
-		type = ship_hull_cruiser_2
-		name_group = GER_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = ship_anti_air_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_light_medium_battery_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-	}
-	create_equipment_variant = {
-		name = "Admiral Hipper Class"
-		type = ship_hull_cruiser_2
-		name_group = GER_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			front_1_custom_slot = ship_anti_air_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_airplane_launcher_1
-			rear_1_custom_slot = ship_medium_battery_2
-		}
-	}
-	create_equipment_variant = {
-		name = "Scharnhorst Class"
-		type = ship_hull_heavy_2
-		name_group = GER_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_2
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = ship_anti_air_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = ship_heavy_battery_2
-		}
-	}
-	create_equipment_variant = {
-		name = "Deutschland Class"
-		type = ship_hull_pre_dreadnought
-		name_group = GER_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = ship_anti_air_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-}
-
-create_equipment_variant = {
-	name = "Ju 86"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 5
-		plane_engine_upgrade = 5
-		plane_reliability_upgrade = 10
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "Do 17"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
-	}
-	obsolete = yes
-}
-
-
-
-create_equipment_variant = {
-	name = "Ju 86"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 5
-		plane_engine_upgrade = 5
-		plane_reliability_upgrade = 10
-	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "Do 17"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
-	}
-	obsolete = yes
+  limit = { has_dlc = "La Resistance" }
+  create_intelligence_agency = yes
 }

@@ -49,13 +49,166 @@ is_ally_of_PREV = {
 	}
 }
 
-is_controlled_by_ROOT_or_ally = {
-	controller = {
-		OR = {
-			tag = ROOT
-			is_subject_of = ROOT
-			is_in_faction_with = ROOT
+# Checks if the country is in a faction or a puppet
+is_ally_of_ROOT = {
+	custom_trigger_tooltip = {
+		tooltip = FX_is_an_ally
+		NOT = { tag = ROOT }
+		is_ally_with = ROOT
+	}
+}
+
+is_ally_of_PREV = {
+	custom_trigger_tooltip = {
+		tooltip = FX_is_an_ally
+		NOT = { tag = PREV }
+		is_ally_with = PREV
+	}
+}
+
+# Can be used in state scope, to check if the owner is ROOT or a subject of ROOT
+is_owned_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = FX_owned_by_ROOT_or_subject
+		owner = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
 		}
+	}
+}
+
+# Can be used in state scope, to check if the owner is ROOT or an ally/subject of ROOT
+is_owned_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = FX_owned_by_ROOT_or_ally
+		owner = {
+			is_ally_with = ROOT
+		}
+	}
+}
+
+is_owned_by_ROOT_or_war_ally = {
+	owner = {
+		OR = {
+			is_ally_with = ROOT
+			has_war_together_with = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the controller (not owner) is ROOT or a subject of ROOT
+is_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = FX_controlled_by_ROOT_or_subject
+		controller = {
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+# Can be used in state scope, to check if the controller (not owner) is ROOT or ally/subject of ROOT
+is_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = FX_controlled_by_ROOT_or_ally
+		controller = {
+			is_ally_with = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the owner and controller is ROOT or a subject of ROOT
+is_owned_and_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = FX_owned_and_controlled_by_ROOT_or_subject
+		owner = {
+			controls_state = PREV
+			OR = {
+				tag = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+# Can be used in state scope, to check if the owner and controller is ROOT or a subject of ROOT
+is_owned_and_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = FX_owned_and_controlled_by_ROOT_or_ally
+		owner = {
+			controls_state = PREV
+			is_ally_with = ROOT
+		}
+	}
+}
+
+is_actual_neighbor_of_ROOT_or_ally = {
+	any_neighbor_country = {
+		is_owner_neighbor_of = PREV
+		is_ally_with = ROOT
+	}
+}
+
+# Used to check whether a country is eligible for peace deal events
+is_valid_peace_target = {
+	is_subject = no
+	OR = {
+		is_in_faction = no
+		is_faction_leader = yes
+	}
+}
+
+# in state scope
+is_claim_or_core_of_ROOT = {
+	OR = {
+		is_claimed_by = ROOT
+		is_core_of = ROOT
+	}
+}
+
+is_claim_or_core_of_FROM = {
+	OR = {
+		is_claimed_by = FROM
+		is_core_of = FROM
+	}
+}
+
+is_not_claim_or_core_of_ROOT = {
+	NOT = {
+		is_claimed_by = ROOT
+		is_core_of = ROOT
+	}
+}
+
+is_not_claim_or_core_of_FROM = {
+	NOT = {
+		is_claimed_by = FROM
+		is_core_of = FROM
+	}
+}
+
+is_claim_or_core_of_PREV = {
+	OR = {
+		is_claimed_by = PREV
+		is_core_of = PREV
+	}
+}
+
+is_claim_or_core_of_owner = {
+	OR = {
+		is_claimed_by = owner
+		is_core_of = owner
+	}
+}
+
+is_not_claim_or_core_of_PREV = {
+	NOT = {
+		is_claimed_by = PREV
+		is_core_of = PREV
 	}
 }
 
@@ -111,50 +264,85 @@ has_same_government_as_ROOT = {
 
 # checks for these three government types for the country in scope
 has_socialist_government = {
-	OR = {
-		has_government = vanguardist
-		has_government = collectivist
-		has_government = libertarian_socialist
+	custom_trigger_tooltip = {
+		tooltip = FX_is_socialist_tt
+		OR = {
+			has_government = vanguardist
+			has_government = collectivist
+			has_government = libertarian_socialist
+		}
 	}
 }
 
 # checks for these four government types for the country in scope
 has_elected_government = {
-	OR = {
-		has_government = social_democrat
-		has_government = social_liberal
-		has_government = market_liberal
-		has_government = social_conservative
+	custom_trigger_tooltip = {
+		tooltip = FX_is_elected_tt
+		OR = {
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+		}
 	}
 }
 
 # checks for these five government types for the country in scope
 has_democratic_government = {
-	OR = {
-		has_government = social_democrat
-		has_government = social_liberal
-		has_government = market_liberal
-		has_government = social_conservative
-		has_government = authoritarian_democrat
+	custom_trigger_tooltip = {
+		tooltip = FX_is_democratic_tt
+		OR = {
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+		}
+	}
+}
+
+has_democratic_left_government = {
+	custom_trigger_tooltip = {
+		tooltip = FX_is_democratic_left_tt
+		OR = {
+			has_government = social_democrat
+			has_government = social_liberal
+		}
+	}
+}
+
+has_democratic_right_government = {
+	custom_trigger_tooltip = {
+		tooltip = FX_is_democratic_right_tt
+		OR = {
+			has_government = market_liberal
+			has_government = social_conservative
+		}
 	}
 }
 
 # checks for these two government types for the country in scope
 has_authoritarian_government = {
-	OR = {
-		has_government = authoritarian_democrat
-		has_government = paternal_autocrat
-		has_government = national_populist
-		has_government = valkist
+	custom_trigger_tooltip = {
+		tooltip = FX_is_authoritarian_tt
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+			has_government = valkist
+		}
 	}
 }
 
 # checks for these three government types for the country in scope
 has_dictatorship_government = {
-	OR = {
-		has_government = paternal_autocrat
-		has_government = national_populist
-		has_government = valkist
+	custom_trigger_tooltip = {
+		tooltip = FX_is_dictatorship_tt
+		OR = {
+			has_government = paternal_autocrat
+			has_government = national_populist
+			has_government = valkist
+		}
 	}
 }
 
@@ -362,7 +550,12 @@ regional_middle_east_news = {
 is_american_tag = {
 	OR = {
 		tag = USA
-		tag = CSA
+		tag = CLB
+		tag = NEE
+		tag = SRA
+		tag = SNE
+		tag = ORE
+		tag = NAR
 	}
 }
 is_arab_tag = {

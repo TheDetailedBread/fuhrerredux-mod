@@ -197,9 +197,10 @@ country_event = { # Fate of the PPI
 			long_name = "Partito Socialista Democratico Italiano"
 			name = "PSDI"
 		}
+		remove_every_minister = yes
 		add_ideas = {
 			ITA_Alcide_De_Gasperi_hog_sco
-			ITA_Giuseppe_Micheli_for_sco
+			ITA_Giuseppe_Pella_for_sco
 			ITA_Giovanni_Gronchi_eco_sco
 			ITA_Giovanni_Uberti_sec_sco
 		}
@@ -1141,60 +1142,33 @@ country_event = { # Commies win
 		clr_country_flag = coalition_valkist
 		clr_country_flag = coalition_social_conservative
 		clr_country_flag = coalition_market_liberal
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = {
-				}
-			}
 		hidden_effect = {
-			create_corps_commander = { # Commie
-				name = "Pompeo Colajanni"
-				picture = "Portrait_Italy_Pompeo_Colajanni.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Ettore Troilo"
-				picture = "Portrait_Italy_Ettore_Troilo.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Mario Musolesi"
-				picture = "Portrait_Italy_Mario_Musolesi.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Pier Luigi Bellini delle Stelle"
-				picture = "Portrait_Italy_Pier_Luigi_Bellini_delle_Stelle.dds"
-				traits = { }
-				skill = 2
-			}
+      add_corps_commander_role = {
+        character = ITA_Pompeo_Colajanni
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Ettore_Troilo
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Mario_Musolesi
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Pier_Luigi_Bellini_della_Stelle
+        skill = 1
+      }
 			
-			#remove_unit_leader = 310
-			#remove_unit_leader = 311
-			#remove_unit_leader = 312
-			#remove_unit_leader = 313
-			
-			every_country = {
-				limit = {
-					is_ai = no
-				}
-				news_event = { id = itanews.20 } 
-			}
+      random_other_country = {
+        news_event = { id = itanews.20 }
+      }
+			remove_every_minister = yes
 			add_ideas = {
-				ITA_Antonio_Gramsci_hog_int
-				ITA_Angelo_Tasca_for_int
-				ITA_Antonio_Graziadei_eco_int
-				ITA_Umberto_Terracini_sec_col
+				ITA_Antonio_Gramsci_hog_col
+				ITA_Vincenzo_Vacirca_for_col
+				ITA_Alceste_De_Ambris_eco_col
+				ITA_Vittorio_Vidali_sec_col
 			}	
 		}
 	}
@@ -1218,60 +1192,38 @@ country_event = { # Commies win
 		clr_country_flag = coalition_valkist
 		clr_country_flag = coalition_social_conservative
 		clr_country_flag = coalition_market_liberal
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = {
-				}
-			}		
 		hidden_effect = {
-			create_corps_commander = { # Commie
-				name = "Pompeo Colajanni"
-				picture = "Portrait_Italy_Pompeo_Colajanni.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Ettore Troilo"
-				picture = "Portrait_Italy_Ettore_Troilo.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Mario Musolesi"
-				picture = "Portrait_Italy_Mario_Musolesi.dds"
-				traits = { }
-				skill = 1
-			}
-
-			create_corps_commander = { # Commie
-				name = "Pier Luigi Bellini delle Stelle"
-				picture = "Portrait_Italy_Pier_Luigi_Bellini_delle_Stelle.dds"
-				traits = { }
-				skill = 2
-			}
+			add_corps_commander_role = {
+        character = ITA_Pompeo_Colajanni
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Ettore_Troilo
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Mario_Musolesi
+        skill = 1
+      }
+      add_corps_commander_role = {
+        character = ITA_Pier_Luigi_Bellini_della_Stelle
+        skill = 1
+      }
 			
 			#remove_unit_leader = 310
 			#remove_unit_leader = 311
 			#remove_unit_leader = 312
 			#remove_unit_leader = 313
 			
-			every_country = {
-				limit = {
-					is_ai = no
-				}
-				news_event = { id = itanews.20 } 
-			}
+			random_other_country = {
+        news_event = { id = itanews.20 }
+      }
+			remove_every_minister = yes
 			add_ideas = {
-				SRI_Pietro_Nenni_for_syn
-				ITA_Umberto_Marzocchi_for_lis
-				ITA_Carlo_Tresca_eco_lis
-				ITA_Armando_Borghi_sec_lis
+				ITA_Pietro_Nenni_hog_lib
+				ITA_Altiero_Spinelli_for_lib
+				ITA_Achille_Grandi_eco_lib
+				ITA_Francesco_De_Martino_sec_lib
 			}
 		}
 	}
@@ -1325,17 +1277,6 @@ country_event = { # Soc Dem win
 		clr_country_flag = coalition_social_democrat
 		clr_country_flag = coalition_national_populist
 		clr_country_flag = coalition_valkist
-		hidden_effect = {
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-				traits = {
-				}
-			}
-		}
 		every_country = {
 			limit = {
 				is_ai = no
@@ -1346,11 +1287,12 @@ country_event = { # Soc Dem win
 			limit = {
 				has_completed_focus = ITA_conservative_ppi
 			}
+			remove_every_minister = yes
 			add_ideas = {
-				ITA_Giuseppe_Saragat_for_hog
-				ITA_Ivan_Matteo_Lombardo_for_sde
+				ITA_Giuseppe_Saragat_hog_sde
+				ITA_Paolo_Treves_for_sde
 				ITA_Giuseppe_Romita_eco_sde
-				ITA_Carlo_Rossell_sec_sde
+				ITA_Enrico_Mole_sec_sde
 			}
 		}
 	}
@@ -1410,16 +1352,6 @@ country_event = { # liberal win
 			}
 			set_country_flag = coalition_social_conservative
 		}
-		hidden_effect = {
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-				traits = {		
-				}
-			}
 			every_country = {
 				limit = {
 					is_ai = no
@@ -1428,12 +1360,11 @@ country_event = { # liberal win
 			}
 			add_ideas = {
 				ITA_Luigi_Einaudi_hog_mli
-				ITA_Nicolo_Carandini_for_mli
+				ITA_Manlio_Brosio_for_mli
 				ITA_Marcello_Soleri_eco_mli
 				ITA_Manlio_Brosio_sec_mli
-			}
-		}
-	}
+    }
+  }
 }
 
 country_event = { # conservative win
@@ -1498,24 +1429,16 @@ country_event = { # conservative win
 		}
 		add_political_power = 50
 		hidden_effect = {
-			create_country_leader = {
-				name = "Victor Emmanuel III"
-				desc = "EMMANUEL_III_DESC"
-				picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-				traits = {
-				}
-			}
 			every_country = {
 				limit = {
 					is_ai = no
 				}
 				news_event = { id = itanews.20 } 
 			}
+			remove_every_minister = yes
 			add_ideas = {
 				ITA_Alcide_De_Gasperi_hog_sco
-				ITA_Giuseppe_Micheli_for_sco
+				ITA_Giuseppe_Pella_for_sco
 				ITA_Giovanni_Gronchi_eco_sco
 				ITA_Giovanni_Uberti_sec_sco
 			}
@@ -1587,15 +1510,6 @@ country_event = { # nationalist win
 		}
 		
 		add_political_power = 50
-		create_country_leader = {
-			name = "Victor Emmanuel III"
-			desc = "EMMANUEL_III_DESC"
-			picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-			}
-		}
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -1604,11 +1518,10 @@ country_event = { # nationalist win
 				news_event = { id = itanews.20 } 
 			}
 			add_ideas = {
-				#ITA_Giovanni_Giuriati_hog_npo
-				ITA_Gabriele_Annunzio_hog_val
-				SRI_Sergio_Panunzio_for_tot
-				SRI_Edmondo_Rossoni_eco_tot
-				SRI_Luigi_Razza_sec_tot
+				ITA_Gabriele_D_Annunzio_hog_val
+				ITA_Giacomo_Acerbo_for_val
+				ITA_Edmondo_Rossoni_eco_val
+				ITA_Luigi_Razza_sec_val
 			}
 		}
 	}
@@ -1637,15 +1550,6 @@ country_event = { # nationalist win
 			}
 			set_country_flag = coalition_social_conservative
 		}
-		create_country_leader = {
-			name = "Victor Emmanuel III"
-			desc = "EMMANUEL_III_DESC"
-			picture = "Portrait_Italy_Victor_Emmanuel_III.dds"
-			expire = "1965.1.1"
-			ideology = national_populist_subtype
-			traits = {
-			}
-		}
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -1653,8 +1557,9 @@ country_event = { # nationalist win
 				}
 				news_event = { id = itanews.20 } 
 			}
+			remove_every_minister = yes
 			add_ideas = {
-				ITA_Italo_Balbo_hog_val
+				ITA_Italo_Balbo_hog_npo
 				ITA_Dino_Alfieri_for_npo
 				ITA_Giuseppe_Volpi_eco_npo
 				ITA_Alessandro_Pavolini_sec_npo
@@ -1790,21 +1695,9 @@ country_event = { # Italian Civil War - Commies
 				add_war_support = -0.1
 				set_cosmetic_tag = PIE_socialist
 				add_ideas = {
-					ITA_Palmiro_Togliatti_hog_int
-					ITA_Bruno_Fortichiari_for_int
-					ITA_Mario_Montagnana_eco_int
-					ITA_Ruggero_Grieco_sec_int
 					revolutionary_movement
 				}
-				set_capital = 159
-				every_state = {
-					limit = {
-						is_core_of = ITA
-					}
-					THIS = {
-						
-					}
-				}
+				set_capital = { state = 159 }
 				add_popularity = {
 					ideology = vanguardist
 					popularity = 0.4
@@ -1813,28 +1706,20 @@ country_event = { # Italian Civil War - Commies
 					ruling_party = vanguardist
 					elections_allowed = no
 				}
-				create_country_leader = {
-					name = "Palmiro Togliatti"
-					desc = "PALMIRO_TOGLIATTI_DESC"
-					picture = "gfx/leaders/ITA/Portrait_Italy_Palmiro_Togliatti.dds"
-					expire = "1965.1.1"
-					ideology = vanguardist_subtype
-					traits = {
-					}
-				}
+        load_oob = PIE_socialist
 			}
 			transfer_state = 158
 			transfer_state = 159
 			transfer_state = 161
 			transfer_state = 162
 			transfer_state = 851
-			load_oob = PIE_socialist
 			declare_war_on ={
 				target = ITA
 				type = annex_everything
 			}			
 		}
 		ITA = {
+      retire_character = ITA_Palmiro_Togliatti
 			add_popularity = {
 				ideology = vanguardist
 				popularity = -0.05
@@ -1869,13 +1754,9 @@ country_event = { # Italian Civil War - Nationalists
 			hidden_effect = {
 				set_cosmetic_tag = SCI_nationalist
 				add_ideas = {
-					ITA_Giovanni_Giuriati_hog_npo
-					SRI_Sergio_Panunzio_for_tot
-					SRI_Edmondo_Rossoni_eco_tot
-					SRI_Luigi_Razza_sec_tot
 					revolutionary_movement
 				}
-				set_capital = 117
+				set_capital = { state = 117 }
 				every_state = {
 					limit = {
 						is_core_of = ITA
@@ -1892,15 +1773,6 @@ country_event = { # Italian Civil War - Nationalists
 					ruling_party = valkist
 					elections_allowed = no
 				}
-				create_country_leader = {
-					name = "Gabriele D'Annunzio"
-					desc = "Gabriele_Annunzio_DESC"
-					picture = "gfx/leaders/ITA/Portrait_ITA_Gabriele_Anunnzio.tga"
-					expire = "1965.1.1"
-					ideology = valkist_subtype
-					traits = {
-					}
-				}
 			}
 			transfer_state = 850
 			transfer_state = 117
@@ -1914,6 +1786,7 @@ country_event = { # Italian Civil War - Nationalists
 			}			
 		}
 		ITA = {
+      retire_character = ITA_Gabrielle_D_Annunzio
 			add_popularity = {
 				ideology = valkist
 				popularity = -0.05
@@ -2488,15 +2361,14 @@ country_event = { # Nat Italy - France ultimatum
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
-		create_country_leader = {
-			name = "Amadeo Aosta"
-			desc = "AMADEO_AOSTA_DESC"
-			picture = "gfx/leaders/ITA/Portrait_Italy_Amadeo_Aosta.dds"
-			expire = "1965.1.1"
-			ideology = paternal_autocrat_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Amadeo_di_Savoia_Aosta
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
 		FRA = {
 			country_event = ita.40
 		}
@@ -2845,7 +2717,7 @@ country_event = { # Forming government - foreign minister
 		}	
 		name = ita.50.a
 		add_ideas = {
-			ITA_Angelo_Tasca_for_int
+			ITA_Sergio_Panunzio_for_van
 		}	
 		add_stability = 0.05
 	}
@@ -2862,7 +2734,7 @@ country_event = { # Forming government - foreign minister
 		}	
 		name = ita.50.b
 		add_ideas = {
-			ITA_Umberto_Marzocchi_for_lis
+			ITA_Altiero_Spinelli_for_lib
 		}
 		add_stability = 0.05
 	}
@@ -2879,10 +2751,10 @@ country_event = { # Forming government - foreign minister
 			limit = {
 				has_completed_focus = ITA_conservative_ppi
 			}
-			add_ideas = ITA_Ivan_Matteo_Lombardo_for_sde
+			add_ideas = ITA_Nicolo_Carandini_for_sde
 		}
 		else = {
-			add_ideas = SIC_Gaetano_Martino_for_sde
+			add_ideas = ITA_Gaetano_Martino_for_sde
 		}
 		add_stability = 0.05
 	}
@@ -2896,7 +2768,7 @@ country_event = { # Forming government - foreign minister
 		}	
 		name = ita.50.e
 		add_ideas = {
-			ITA_Nicolo_Carandini_for_mli
+			ITA_Manlio_Brosio_for_mli
 		}
 		add_stability = 0.05
 	}
@@ -2909,7 +2781,7 @@ country_event = { # Forming government - foreign minister
 			}
 		}	
 		name = ita.50.f
-		add_ideas = ITA_Giuseppe_Micheli_for_sco
+		add_ideas = ITA_Giuseppe_Pella_for_sco
 		add_stability = 0.05
 	}
 	
@@ -2942,7 +2814,7 @@ country_event = { # Forming government - foreign minister
 		}	
 		name = ita.50.h
 		add_ideas = {
-			SRI_Sergio_Panunzio_for_tot
+			ITA_Giacomo_Acerbo_for_val
 		}
 		add_stability = 0.05
 	}
@@ -3035,7 +2907,7 @@ country_event = { # Forming government - economic minister
 		}	
 		name = ita.51.a
 		add_ideas = {
-			ITA_Antonio_Graziadei_eco_int
+			ITA_Alceste_De_Ambris_eco_col
 		}	
 		add_stability = 0.05
 	}
@@ -3052,7 +2924,7 @@ country_event = { # Forming government - economic minister
 		}	
 		name = ita.51.b
 		add_ideas = {
-			ITA_Carlo_Tresca_eco_lis
+			ITA_Achille_Grandi_eco_lib
 		}
 		add_stability = 0.05
 	}
@@ -3072,7 +2944,7 @@ country_event = { # Forming government - economic minister
 			add_ideas = ITA_Giuseppe_Romita_eco_sde
 		}
 		else = {
-			add_ideas = SIC_Rocco_Gullo_eco_sde
+			add_ideas = ITA_Rocco_Gullo_eco_sde
 		}
 		add_stability = 0.05
 	}
@@ -3132,7 +3004,7 @@ country_event = { # Forming government - economic minister
 		}	
 		name = ita.51.h
 		add_ideas = {
-			SRI_Edmondo_Rossoni_eco_tot
+			ITA_Edmondo_Rossoni_eco_val
 		}
 		add_stability = 0.05
 	}
@@ -3225,7 +3097,7 @@ country_event = { # Forming government - economic minister
 		}	
 		name = ita.52.a
 		add_ideas = {
-			ITA_Umberto_Terracini_sec_col
+			ITA_Vittorio_Vidali_sec_col
 		}	
 		add_stability = 0.05
 	}
@@ -3242,7 +3114,7 @@ country_event = { # Forming government - economic minister
 		}	
 		name = ita.52.b
 		add_ideas = {
-			ITA_Armando_Borghi_sec_lis
+			ITA_Francesco_De_Martino_sec_lib
 		}
 		add_stability = 0.05
 	}
@@ -3255,15 +3127,8 @@ country_event = { # Forming government - economic minister
 			}
 		}	
 		name = ita.52.c
-		if = {
-			limit = {
-				has_completed_focus = ITA_conservative_ppi
-			}
-			add_ideas = ITA_Carlo_Rossell_sec_sde
-		}
-		else = {
-			add_ideas = SIC_Enrico_Mole_sec_sde
-		}
+		
+		add_ideas = ITA_Enrico_Mole_sec_sde
 		add_stability = 0.05
 	}
 	
@@ -3322,7 +3187,7 @@ country_event = { # Forming government - economic minister
 		}	
 		name = ita.52.h
 		add_ideas = {
-			SRI_Luigi_Razza_sec_tot
+			ITA_Luigi_Razza_sec_val
 		}
 		add_stability = 0.05
 	}
@@ -5327,15 +5192,6 @@ country_event = { # France/Italy - Corsican declares independence
 				ideology = national_populist
 				popularity = 0.2
 			}			
-			create_country_leader = {
-				name = "Petru Giovacchini"
-				desc = "Petru_Giovacchini_DESC"
-				picture = "Portrait_COR_Petru_Giovacchini.tga"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-				traits = {
-				}
-			}
 			hidden_effect = {
 				load_oob = ITA_corsican_rebels
 			}
@@ -7022,39 +6878,39 @@ country_event = { # Bulgaria - Italy seeks an alliance
 		ai_chance = {
 			factor = 80
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 24
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 49
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.25
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.5
 			}
 		}
@@ -7120,28 +6976,28 @@ country_event = { # Bulgaria - Italy seeks an alliance
 		ai_chance = {
 			factor = 40
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value < -25
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > -50
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value > 50
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value > 50
@@ -7230,39 +7086,39 @@ country_event = { # Hungary - Italy seeks an alliance
 		ai_chance = {
 			factor = 80
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 24
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > 49
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value < 0
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.25
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				threat > 0.5
 			}
 		}
@@ -7325,28 +7181,28 @@ country_event = { # Hungary - Italy seeks an alliance
 		ai_chance = {
 			factor = 40
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value < -25
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ITA
 					value > -50
 				}
 			}	
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = SER
 					value > 50
 				}
 			}
 			modifier = {
-				factor 2
+				factor = 2
 				has_opinion = {
 					target = ROM
 					value > 50
@@ -14754,7 +14610,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ita.222"}
 	title = "The Fate of Omar Mukhtar"
 	desc = ita.222.d
-	picture = omar_trial
+	picture = GFX_report_event_ITA_omar_trial
 
 	is_triggered_only = yes
 
@@ -15080,14 +14936,14 @@ country_event = { # Fate of the Left
 		name = itasoc.2.a
 		set_country_flag = ITA_commies_picked
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Palmiro Togliatti"
-			picture = "Portrait_Italy_Palmiro_Togliatti.dds"
-			expire = "1965.1.1"
-			ideology = vanguardist_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Palmiro_Togliatti
+      promote_leader = yes
+      country_leader = {
+        ideology = vanguardist_subtype
+        traits = {}
+      }
+    }
 		clr_country_flag = coalition_social_democrat
 		clr_country_flag = coalition_libertarian_socialist
 		add_popularity = {
@@ -15103,10 +14959,10 @@ country_event = { # Fate of the Left
 		}
 		
 		add_ideas = {
-			ITA_Palmiro_Togliatti_hog_int
-			ITA_Bruno_Fortichiari_for_int
-			ITA_Mario_Montagnana_eco_int
-			ITA_Ruggero_Grieco_sec_int
+			ITA_Palmiro_Togliatti_hog_van
+			ITA_Sergio_Panunzio_for_van
+			ITA_Nicola_Bombacci_eco_van
+			ITA_Ruggiero_Grieco_sec_van
 			one_party_dictatorship
 		}		
 			
@@ -15132,14 +14988,14 @@ country_event = { # Fate of the Left
 		name = itasoc.2.b
 		set_country_flag = ITA_commies_picked
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Amedeo Bordiga"
-			picture = "Portrait_Italy_Amedeo_Bordiga.dds"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = {
-			}
-		}
+    add_country_leader_role = {
+      character = ITA_Amadeo_Bordiga
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
 		clr_country_flag = coalition_social_democrat
 		clr_country_flag = coalition_libertarian_socialist
 		add_popularity = {
@@ -15155,10 +15011,10 @@ country_event = { # Fate of the Left
 		}
 
 		add_ideas = {
-			ITA_Antonio_Gramsci_hog_int
-			ITA_Angelo_Tasca_for_int
-			ITA_Antonio_Graziadei_eco_int
-			ITA_Umberto_Terracini_sec_col
+			ITA_Antonio_Gramsci_hog_col
+			ITA_Vincenzo_Vacirca_for_col
+			ITA_Alceste_De_Ambris_eco_col
+			ITA_Vittorio_Vidali_sec_col
 			workers_republic
 		}		
 			
@@ -15184,14 +15040,14 @@ country_event = { # Fate of the Left
 		name = itasoc.2.c
 		set_country_flag = ITA_commies_picked
 		drop_cosmetic_tag = yes
-		create_country_leader = {
-			name = "Antonio Gramsci"
-			picture = "Portrait_Italy_Vittorio_Antonio_Gramsci.dds"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Antonio_Gramsci
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
 		clr_country_flag = coalition_social_democrat
 		add_popularity = {
 			ideology = collectivist
@@ -15206,10 +15062,10 @@ country_event = { # Fate of the Left
 		}
 		
 		add_ideas = {
-			ITA_Antonio_Gramsci_hog_int
-			ITA_Angelo_Tasca_for_int
-			ITA_Antonio_Graziadei_eco_int
-			ITA_Umberto_Terracini_sec_col
+			ITA_Antonio_Gramsci_hog_col
+			ITA_Vincenzo_Vacirca_for_col
+			ITA_Alceste_De_Ambris_eco_col
+			ITA_Vittorio_Vidali_sec_col
 			workers_republic
 		}	
 			
@@ -15245,10 +15101,10 @@ country_event = { # Fate of the Left
 		}
 		
 		add_ideas = {
-			SRI_Pietro_Nenni_for_syn
-			ITA_Umberto_Marzocchi_for_lis
-			ITA_Carlo_Tresca_eco_lis
-			ITA_Armando_Borghi_sec_lis
+			ITA_Giacomo_Matteotti_hog_lib
+			ITA_Altiero_Spinelli_for_lib
+			ITA_Achille_Grandi_eco_lib
+			ITA_Francesco_De_Martino_sec_lib
 		}
 	}
 	
@@ -15265,10 +15121,10 @@ country_event = { # Fate of the Left
 		}
 		
 		add_ideas = {
-			SRI_Pietro_Nenni_for_syn
-			ITA_Umberto_Marzocchi_for_lis
-			ITA_Carlo_Tresca_eco_lis
-			ITA_Armando_Borghi_sec_lis
+			ITA_Pietro_Nenni_hog_lib
+			ITA_Altiero_Spinelli_for_lib
+			ITA_Achille_Grandi_eco_lib
+			ITA_Francesco_De_Martino_sec_lib
 		}
 	}
 }
@@ -15495,14 +15351,14 @@ country_event = { # Libya - Balbo returns to Libya
 
 	option = { # 
 		name = itasoc.9.a
-		create_country_leader = {
-			name = "Italo Balbo"
-			desc = "ITALO_BALBO_DESC"
-			picture = "gfx/leaders/ITA/Portrait_ITA_Italo_Balbo.tga"
-			ideology = authoritarian_democrat_subtype
-			traits = {
-			}
-		}
+		add_country_leader_role = {
+      character = LBA_Italo_Balbo
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+        traits = {}
+      }
+    }	
 	}	
 }
 
@@ -15783,7 +15639,7 @@ country_event = { #Italy - Pick Nat Pops or Valkists
 		}
 		hidden_effect = {
 			add_ideas = {
-				ITA_Italo_Balbo_hog_val
+				ITA_Italo_Balbo_hog_npo
 				ITA_Dino_Alfieri_for_npo
 				ITA_Giuseppe_Volpi_eco_npo
 				ITA_Alessandro_Pavolini_sec_npo
@@ -15813,9 +15669,9 @@ country_event = { #Italy - Pick Nat Pops or Valkists
 		hidden_effect = {
 			add_ideas = {
 				ITA_Gabriele_Annunzio_hog_val
-				SRI_Sergio_Panunzio_for_tot
-				SRI_Edmondo_Rossoni_eco_tot
-				SRI_Luigi_Razza_sec_tot
+				ITA_Giacomo_Acerbo_for_val
+				ITA_Edmondo_Rossoni_eco_val
+				ITA_Luigi_Razza_sec_val
 			}
 		}
 	}	
@@ -15875,15 +15731,14 @@ country_event = { #Italy - D'Annunzio fuckin dies
 		add_political_power = -100
 		add_stability = -0.1
 		#kill_country_leader = yes
-		create_country_leader = {
-			name = "Arengo del Italia"
-			picture = "gfx/leaders/ALB/Portrait_Regency_Council.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}
+    add_country_leader_role = {
+      character = ITA_Arengo_del_Italia
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			ITA = {
 				country_event = { 
@@ -15908,15 +15763,14 @@ country_event = { #Italy - D'Annunzio's successor
 		name = itasyn.4.a
 		add_political_power = 50
 		add_stability = 0.1
-		create_country_leader = {
-			name = "Alceste de Ambris"
-			picture = "Portrait_SRI_Alceste_de_Ambris.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}
+    add_country_leader_role = {
+      character = ITA_Alceste_De_Ambris
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			ITA = {
 				country_event = { 
@@ -15931,30 +15785,28 @@ country_event = { #Italy - D'Annunzio's successor
 		name = itasyn.4.b
 		add_political_power = 50
 		add_stability = 0.1
-		create_country_leader = {
-			name = "Edmondo Rossoni"
-			picture = "Portrait_SRI_Edmondo_Rossoni.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}	
+		add_country_leader_role = {
+      character = ITA_Edmondo_Rossoni
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 	}
 
 	option = { # Cianetti
 		name = itasyn.4.c
 		add_political_power = 50
 		add_stability = 0.1
-		create_country_leader = {
-			name = "Tullio Cianetti"
-			picture = "Portrait_ITA_Tullio_Cianetti.tga"
-			expire = "1965.1.1"
-			ideology = valkist_subtype
-			traits = {
-				#
-			}
-		}
+		add_country_leader_role = {
+      character = ITA_Tullio_Cianetti
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
 		hidden_effect = {
 			ITA = {
 				country_event = {

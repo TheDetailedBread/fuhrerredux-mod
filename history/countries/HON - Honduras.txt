@@ -1,24 +1,17 @@
-﻿capital = 312
+capital = 312
 
-oob = "HON_1936"
-
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-}
-set_country_flag = monroe_doctrine
+oob = "HON"
 
 set_convoys = 10
 set_stability = 0.41
 set_war_support = 0.52
 
-add_ideas = {
-	party_pop_0_40
-	GEN_hog_sli
-	GEN_for_sli
-	GEN_eco_sli
-	GEN_sec_sli
-	presidential_republic
+set_country_flag = monroe_doctrine
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+  basic_train = 1
 }
 
 set_politics = {
@@ -29,89 +22,27 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 2
-    social_democrat = 16
-    social_liberal = 48
-    market_liberal = 12
-    social_conservative = 20
-    authoritarian_democrat = 2
-    paternal_autocrat = 0
-    national_populist = 0
-    valkist = 0
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 2
+  social_democrat = 16
+  social_liberal = 48
+  market_liberal = 12
+  social_conservative = 20
+  authoritarian_democrat = 2
+  paternal_autocrat = 0
+  national_populist = 0
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Froylán Turcios"
-	desc = "POLITICS_FROYLAN_TURCIOS_DESC"
-	picture = "Portrait_Honduras_Froylan_Turcios.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Froylán Turcios"
-	desc = "POLITICS_FROYLAN_TURCIOS_DESC"
-	picture = "Portrait_Honduras_Froylan_Turcios.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Vicente Mejía Colindres"
-	desc = "POLITICS_VICENTE_MEJIA_COLINDRES_DESC"
-	picture = "Portrait_Honduras_Vicente_Mejia_Colindres.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
+add_ideas = {
+	party_pop_0_40
+	presidential_republic
 }
 
-
-### Field Marshals ###
-create_field_marshal = {
-	name = "José León Castro"
-	portrait_path = "gfx/leaders/HON/Portrait_Honduras_Jose_Leon_Castro.tga"
-	traits = { jungle_rat adaptable }
-	skill = 2
-	id = 1603
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-### Corps Commanders
-create_corps_commander = {
-	name = "José María Moncada"
-	portrait_path = "gfx/leaders/HON/Portrait_Honduras_Jose_Maria_Moncada.tga"
-	traits = { guerilla_fighter }
-	id = 16060
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Federico Davidson Blanco"
-	portrait_path = "gfx/leaders/HON/Portrait_Honduras_Federico_Davidson_Blanco.tga"
-	traits = { }
-	id = 1606
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Juan Manuel Galvez"
-	portrait_path = "gfx/leaders/HON/Portrait_Honduras_Juan_Manuel_Galvez.tga"
-	traits = { }
-	id = 16200
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-}
+recruit_character = HON_Froylan_Turcios
+recruit_character = HON_Vicente_Mejia_Colindres
+recruit_character = HON_Jose_Leon_Castro
+recruit_character = HON_Jose_Maria_Moncada
+recruit_character = HON_Federico_Davidson_Blanco
+recruit_character = HON_Juan_Manuel_Galvez

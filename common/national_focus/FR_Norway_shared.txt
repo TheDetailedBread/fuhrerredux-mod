@@ -1,7 +1,7 @@
 ## Norway Shared Focuses ##
 	shared_focus = {
 		id = NOR_new_army_plan
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_NOR_army
 		cost = 5
 		x = 21
 		y = 0
@@ -31,7 +31,7 @@
 	}
 	shared_focus = {
 		id = NOR_norwegian_navy
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_NOR_navy
 		cost = 5
 		x = 28
 		y = 0
@@ -66,7 +66,7 @@
 	}
 	shared_focus = {
 		id = NOR_update_army_air_force
-		icon = GFX_goal_NOR_army_airforce
+		icon = GFX_goal_NOR_airforce
 		cost = 5
 		x = 32
 		y = 0
@@ -737,7 +737,7 @@
 	}
 	shared_focus = {
 		id = NOR_establish_labour_welfare_administration
-		icon = GFX_goal_continuous_increase_nu
+		icon = GFX_goal_generic_enforce_labor_regulation
 		cost = 8
 		prerequisite = {
 			focus = NOR_new_farmer_quotas
@@ -1194,9 +1194,9 @@
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_specialized_army"
 			add_ideas = NOR_specialized_army_idea
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -1359,9 +1359,9 @@
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_strong_in_numbers"
 			add_ideas = NOR_strong_in_numbers_idea
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1456,9 +1456,9 @@
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_milita_doctrines"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
@@ -1468,7 +1468,7 @@
 	}
 	shared_focus = {
 		id = NOR_experienced_general_staff
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_army_high_command
 		cost = 10
 		prerequisite = {
 			focus = NOR_new_production_quotas
@@ -1510,9 +1510,8 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_general_doctrines"
 			army_experience = 10
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1739,9 +1738,9 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_combined_air_force"
 			air_experience = 5
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

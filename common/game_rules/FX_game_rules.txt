@@ -295,27 +295,95 @@ PHI_ai_behavior = {
 	name = "PHI_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
 	default = {
-		name = PHI_DEFAULT
-		text = PHI_RULE_DEFAULT
-		desc = PHI_RULE_DEFAULT_DESC
+		name = PHI_RANDOM
+		text = "RULE_OPTION_PHI_RANDOM"
+		desc = "RULE_OPTION_PHI_RANDOM_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = PHI_PRUSSIA_OF_THE_EAST
-		text = PHI_RULE_PRUSSIA_OF_THE_EAST
-		desc = PHI_RULE_PRUSSIA_OF_THE_EAST_DESC
+		name = PHI_GO_WEST
+		text = "RULE_OPTION_PHI_GO_WEST"
+		desc = "RULE_OPTION_PHI_GO_WEST_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = PHI_TESTING_IMPERIALISM
-		text = PHI_RULE_TESTING_IMPERIALISM
-		desc = PHI_RULE_TESTING_IMPERIALISM_DESC
+		name = PHI_MAINTAIN_USA
+		text = "RULE_OPTION_PHI_PHI_MAINTAIN_USA"
+		desc = "RULE_OPTION_PHI_PHI_MAINTAIN_USA_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = PHI_BACK_TO_THE_PAST
-		text = PHI_RULE_BACK_TO_THE_PAST
-		desc = PHI_RULE_BACK_TO_THE_PAST_DESC
+		name = PHI_GO_JAPAN
+		text = "RULE_OPTION_PHI_GO_JAPAN"
+		desc = "RULE_OPTION_PHI_GO_JAPAN_DESC"
+		allow_achievements = yes
+	}
+}
+HOL_ai_behavior = {
+	name = "HOL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = HOL_RANDOM
+		text = "RULE_OPTION_HOL_RANDOM"
+		desc = "RULE_OPTION_HOL_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HOL_STATUS_QUO
+		text = "RULE_OPTION_HOL_STATUS_QUO"
+		desc = "RULE_OPTION_HOL_STATUS_QUO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HOL_BERNHARD_RULES_ALONE
+		text = "RULE_OPTION_HOL_BERNHARD_RULES_ALONE_QUO"
+		desc = "RULE_OPTION_HOL_BERNHARD_RULES_ALONE_QUO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HOL_GEELKERKEN_SECURES_HIS_POSITION
+		text = "RULE_OPTION_HOL_GEELKERKEN_SECURES_HIS_POSITION"
+		desc = "RULE_OPTION_HOL_GEELKERKEN_SECURES_HIS_POSITION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HOL_REYNDERS_PUTSCH
+		text = "RULE_OPTION_HOL_REYNDERS_PUTSCH"
+		desc = "RULE_OPTION_HOL_REYNDERS_PUTSCH_DESC"
+		allow_achievements = yes
+	}
+}
+ROM_ai_behavior = {
+	name = "ROM_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = ROM_RANDOM
+		text = "RULE_OPTION_ROM_RANDOM"
+		desc = "RULE_OPTION_ROM_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROM_STATUS_QUO
+		text = "RULE_OPTION_ROM_STATUS_QUO"
+		desc = "RULE_OPTION_ROM_STATUS_QUO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROM_THE_NEW_ERA
+		text = "RULE_OPTION_ROM_THE_NEW_ERA"
+		desc = "RULE_OPTION_ROM_THE_NEW_ERA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROM_GREEN_DAWN
+		text = "RULE_OPTION_ROM_GREEN_DAWN"
+		desc = "RULE_OPTION_ROM_GREEN_DAWN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROM_DIRECT_RULE
+		text = "RULE_OPTION_ROM_DIRECT_RULE"
+		desc = "RULE_OPTION_ROM_DIRECT_RULE_DESC"
 		allow_achievements = yes
 	}
 }

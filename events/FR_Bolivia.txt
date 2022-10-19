@@ -55,33 +55,31 @@ country_event = { #coup succeeds
 		name = bol.2.a 
 
 		if = {
-				limit = { has_idea = BOL_shameful_defeat }
-				remove_ideas = BOL_shameful_defeat
-			}
+      limit = { has_idea = BOL_shameful_defeat }
+      remove_ideas = BOL_shameful_defeat
+    }
 		set_country_flag = BOL_revolutionary
 		set_global_flag = BOL_left
 		set_cosmetic_tag = BOL_communism
 		add_ideas = workers_republic
 		set_politics = {
 			ruling_party = collectivist
+      elections_allowed = no
 		}
-			add_popularity = {
+		add_popularity = {
 				ideology = collectivist 
 				popularity = 0.15
 		}
 		hidden_effect = {
 			set_politics = { ruling_party = collectivist }
 		}
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-			}
-		add_ideas = BOL_Juan_Lechin_Oquendo_hog_bol
-		add_ideas = BOL_Alberto_Diez_de_Medina_for_lso
-		add_ideas = BOL_Werner_Guttenberg_eco_int
-		add_ideas = BOL_Gunnar_Mendoza_Loza_sec_lso
+		remove_every_minister = yes
+		add_ideas = {
+			BOL_Orlando_Capriles_hog_col
+			BOL_Carlos_Salinas_Aramayo_for_sde
+			BOL_Edwin_Moeller_eco_col
+			BOL_Mariano_Basptista_sec_lib
+		}
 	}
 }
 
@@ -111,82 +109,65 @@ country_event = { #coup fails
 			popularity = 0.3
 		}
 		hidden_effect = {
-				create_field_marshal = {
-			name = "Santos Marka T'ula"
-			picture = "Portrait_BOL_Santos_Marka.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-
-			id= 943
-		}	
-		create_field_marshal = {
-			name = "Francisco Imaña"
-			picture = "Portrait_BOL_Francisco_Imana.tga"
-			traits = {}
-			skill = 2
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Dionisio Choque"
-			picture = "Portrait_BOL_Dionisio_Choque.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Joaquin Quispe"
-			picture = "Portrait_BOL_Joaquin_Quispe.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 2
-		}	
-		create_corps_commander = {
-			name = "Mariano Poma"
-			picture = "Portrait_BOL_Mariano_Poma.tga"
-			traits = {}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 3
-		}	
-		create_corps_commander = {
-			name = "Francisco Saire"
-			picture = "Portrait_BOL_Francisco_Saire.tga"
-			traits = {panzer_leader}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			}			
-		}
-		add_ideas = one_party_dictatorship
-		set_politics = { ruling_party = valkist elections_allowed = no }
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-			}
-		add_ideas = BOL_Mariano_Ramos_hog_val
-		add_ideas = BOL_Manuel_Quispe_for_val
-		add_ideas = BOL_Fernando_Ramos_eco_val
-		add_ideas = BOL_Pedro_Rojas_sec_val
-	}
+      add_field_marshal_role = {
+        character = BOL_Santos_Marka_T_ula
+        skill = 3
+        attack_skill = 3
+        defense_skill = 2
+        planning_skill = 3
+        logistics_skill = 3
+      }
+      add_field_marshal_role = {
+        character = BOL_Francisco_Imana
+        skill = 2
+        attack_skill = 3
+        defense_skill = 3
+        planning_skill = 2
+        logistics_skill = 3
+      }
+      add_corps_commander_role = {
+        character = BOL_Dionisio_Choque
+        skill = 3
+        attack_skill = 2
+        defense_skill = 2
+        planning_skill = 4
+        logistics_skill = 3
+      }
+      add_corps_commander_role = {
+        character = BOL_Joaquin_Quispe
+        skill = 3
+        attack_skill = 2
+        defense_skill = 3
+        planning_skill = 4
+        logistics_skill = 2
+      }
+      add_corps_commander_role = {
+        character = BOL_Mariano_Poma
+        skill = 3
+        attack_skill = 2
+        defense_skill = 3
+        planning_skill = 4
+        logistics_skill = 3
+      }
+      add_corps_commander_role = {
+        character = BOL_Francisco_Saire
+        skill = 3
+        attack_skill = 3
+        defense_skill = 2
+        planning_skill = 3
+        logistics_skill = 3
+      }
+      add_ideas = one_party_dictatorship
+      set_politics = { ruling_party = valkist elections_allowed = no }
+      remove_every_minister = yes
+      add_ideas = {
+        BOL_Gualberto_Villarroel_Lopez_hog_val
+        BOL_Gonzalo_Romero_Alvarez_Garcia_for_npo
+        BOL_Juan_Sanjines_eco_npo
+        BOL_Julian_V_Montellano_Carrasco_sec_npo
+      }
+	  }
+  }
 }
 
 country_event = { #Intro
@@ -375,7 +356,7 @@ country_event = { #death of general
 			create_country_leader = {
 				name = "Eduardo Nina Quispe"
 				desc = "POLITICS_EDUARDO_NINA_QUISPE_DESC"
-				picture = "Portrait_Bolivia_Eduardo_Nina_Quispe.tga"
+				picture = "Portrait_Bolivia_Eduardo_Nina_Quispe.png"
 				expire = "1965.1.1"
 				ideology = valkist_subtype
 				traits = { }
@@ -453,16 +434,13 @@ country_event = { #workers congress 40 part 2
 			set_country_flag = BOL_intbois
 			set_politics = { ruling_party = vanguardist }
 		}
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-			}
-		add_ideas = BOL_Gustavo_Navarro_Marof_hog_int
-		add_ideas = BOL_Guillermo_Lora_for_int
-		add_ideas = BOL_Werner_Guttenberg_eco_int
-		add_ideas = BOL_Juan_Lechin_Oquendo_sec_bol
+		remove_every_minister = yes
+		add_ideas = {
+			BOL_Guillermo_Lora_hog_van
+			BOL_Carlos_Salinas_Aramayo_for_sde
+			BOL_Edwin_Moeller_eco_col
+			BOL_Mariano_Basptista_sec_lib
+		}
 	}
 
 	option = {
@@ -481,16 +459,13 @@ country_event = { #workers congress 40 part 2
 				limit = { NOT = { TAG = BOL } }
 			}
 		}
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
+		remove_every_minister = yes
+		add_ideas = {
+			BOL_Orlando_Capriles_hog_col
+			BOL_Carlos_Salinas_Aramayo_for_sde
+			BOL_Edwin_Moeller_eco_col
+			BOL_Mariano_Basptista_sec_lib
 		}
-		add_ideas = BOL_Jose_Antonio_Arze_y_Arze_hog_bol
-		add_ideas = BOL_Guillermo_Lora_for_int
-		add_ideas = BOL_Werner_Guttenberg_eco_int
-		add_ideas = BOL_Juan_Lechin_Oquendo_sec_bol
 	}
 
 	option = {
@@ -509,16 +484,13 @@ country_event = { #workers congress 40 part 2
 				limit = { NOT = { TAG = BOL } }
 			}
 		}
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = foreign_minister
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
+		remove_every_minister = yes
+		add_ideas = {
+			BOL_Gustavo_Adolfo_Navarro_hog_lib
+			BOL_Carlos_Salinas_Aramayo_for_sde
+			BOL_Edwin_Moeller_eco_col
+			BOL_Mariano_Basptista_sec_lib
 		}
-		add_ideas = BOL_Carlos_Salazar_Mostajo_hog_lso
-		add_ideas = BOL_Enrique_Hertzog_Garaizabal_for_lso
-		add_ideas = BOL_Werner_Guttenberg_eco_int
-		add_ideas = BOL_Gunnar_Mendoza_Loza_sec_lso
 	}
 }
 

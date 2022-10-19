@@ -1,24 +1,12 @@
-﻿capital = 282
+capital = 282
 
-oob = "JAP_1936"
+oob = "JAP"
 
 set_convoys = 400
 set_stability = 0.45
 set_war_support = 0.45
 set_research_slots = 4
 set_fuel_ratio = 1.0
-
-add_ideas = {
-	JAP_gunbatsu
-	JAP_interservice_rivalry_balanced
-	jap_wnt
-	JAP_duplicate_research_efforts
-	JAP_Inukai_Tsuyoshi_hog_sco
-	JAP_Yoshizawa_Kenkichi_for_sco
-	JAP_Tsushima_Juichi_eco_sco
-	JAP_Suzuki_Kisaburo_sec_sco
-	constitutional_monarchy
-}
 
 set_technology = {
 	infantry_weapons = 1
@@ -29,21 +17,28 @@ set_technology = {
 	motorised_infantry = 1
 	marines  = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
-	cv_early_fighter = 1
-	cv_CAS1 = 1
-	cv_naval_bomber1 = 1
-	early_fighter = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-	CAS1 = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
+  basic_train = 1
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+    basic_light_tank_chassis = 1
+	  basic_heavy_tank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+			basic_heavy_tank = 1
+		}
+	}
+}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -68,13 +63,12 @@ if = {
 		basic_ship_hull_carrier = 1
 		mtg_transport = 1
 		coastal_defense_ships = 1
-		basic_secondary_battery = 1
 		basic_depth_charges = 1
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		basic_fire_control_system = 1
 	}
-	set_naval_oob = "JAP_1936_naval"
+	set_naval_oob = "JAP_naval_mtg"
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -96,543 +90,139 @@ if = {
 	set_naval_oob = "JAP_1936_naval_legacy"
 }
 
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "JAP_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_air_oob = "JAP_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			cv_CAS1 = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+			CAS1 = 1
+		}
+	}
+}
+
 set_politics = {
 	ruling_party = social_conservative
 }
 
 set_popularities = {
-    vanguardist = 1
-    collectivist = 2
-    libertarian_socialist = 2
-    social_democrat = 13
-    social_liberal = 5
-    market_liberal = 25
-    social_conservative = 28
-    authoritarian_democrat = 5
-    paternal_autocrat = 9
-    national_populist = 7
-    valkist = 3
+  vanguardist = 1
+  collectivist = 2
+  libertarian_socialist = 2
+  social_democrat = 13
+  social_liberal = 5
+  market_liberal = 25
+  social_conservative = 28
+  authoritarian_democrat = 5
+  paternal_autocrat = 9
+  national_populist = 7
+  valkist = 3
 }
+
+add_ideas = {
+	JAP_gunbatsu
+	JAP_interservice_rivalry_balanced
+	jap_wnt
+	JAP_duplicate_research_efforts
+	constitutional_monarchy
+}
+
+country_event = { id = jap.0 days = 2 } # Intro Event
 
 give_guarantee = RUS
 
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = market_liberal_subtype
-	traits = {
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	
+	create_equipment_variant = {
+		name = "Ki-10"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
 	}
-}
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = social_democrat_subtype
-	traits = {
+	create_equipment_variant = {
+		name = "Ki-2"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
 	}
-}
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = valkist_subtype
-	traits = {
+	create_equipment_variant = {
+		name = "Ki-1"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
 	}
-}
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = social_conservative_subtype
-	traits = {
+	create_equipment_variant = {
+		name = "Ki-3"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
 	}
-}
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = social_liberal_subtype
-	traits = {
+	create_equipment_variant = {
+		name = "Aichi D1A2"
+		type = cv_small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = dive_brakes_small
+		}
 	}
-}
-
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = authoritarian_democrat_subtype
-}
-
-create_country_leader = {
-	name = "Hirohito"
-	desc = "POLITICS_HIROHITO_DESC"
-	picture = "Portrait_JAP_Hirohito.tga"
-	expire = "1989.1.1"
-	ideology = national_populist_subtype
-	traits = {
+	create_equipment_variant = {
+		name = "A4N"
+		type = cv_small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
 	}
-}
-
-create_country_leader = {
-	name = "Kyuichi Tokuda"
-	desc = "POLITICS_Hirohito_DESC"
-	picture = "GFX_Portrait_kyuichi_tokuda"
-	expire = "1989.1.1"
-	ideology = collectivist_subtype
-	traits = {
+	create_equipment_variant = {
+		name = "B2M"
+		type = cv_small_plane_naval_bomber_airframe_0
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
 	}
-}
-
-create_corps_commander = {
-	name = "Tomoyuki Yamashita"
-		picture = "Portrait_JAP_Tomoyuki_Yamashita.tga"
-	traits = {
-		trickster trait_engineer brilliant_strategist politically_connected
+	create_equipment_variant = {
+		name = "B4Y"
+		type = cv_small_plane_naval_bomber_airframe_1
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
 	}
-	skill = 5
-	attack_skill = 4
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_field_marshal = {
-	name = "Hisaichi Terauchi"
-	picture = "Portrait_JAP_Hisaichi_Terauchi.tga"
-	traits = {
-		offensive_doctrine
-		JAP_samurai_lineage   # hakushaku
-		politically_connected
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Shunroku Hata"
-		picture = "Portrait_JAP_Shunroku_Hata.tga"
-	traits = { offensive_doctrine JAP_samurai_lineage }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Akira Muto"
-		picture = "Portrait_JAP_Akira_Muto.tga"
-	traits = { career_officer  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Kanji Ishiwara"
-		picture = "Portrait_JAP_Kanji_Ishiwara.tga"
-	traits = { JAP_samurai_lineage }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Shizuichi Tanaka"
-		picture = "Portrait_JAP_Shizuichi_Tanaka.tga"
-	traits = { trickster career_officer infantry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Yasuji Okamura"
-		picture = "Portrait_JAP_Yasuji_Okamura.tga"
-	traits = { trait_reckless }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Toshizo Nishio" #Toshizo
-		picture = "Portrait_JAP_Toshizo_Nishio.tga"
-	traits = { brilliant_strategist infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Rikichi Ando" #Ando
-		picture = "Portrait_JAP_Rikichi_Ando.tga"
-	traits = { career_officer }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Naruhiko Higashikuni"
-	picture = "Portrait_JAP_Naruhiko_Higashikuni.tga"
-	traits = { JAP_samurai_lineage politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Seishiro Itagaki"
-		picture = "Portrait_JAP_Seishiro_Itagaki.tga"
-	traits = { JAP_samurai_lineage inflexible_strategist trait_reckless }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Takashi Sakai"
-		picture = "Portrait_JAP_Takashi_Sakai.tga"
-	traits = { infantry_officer trait_reckless }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Kenji Doihara"
-		picture = "Portrait_JAP_Kenji_Doihara.tga"
-	traits = { career_officer substance_abuser }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Kenkichi Ueda"
-		picture = "Portrait_JAP_Kenkichi_Ueda.tga"
-	traits = { old_guard cavalry_officer trait_reckless }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Shigeru Honjo"
-		picture = "Portrait_JAP_Shigeru_Honjo.tga"
-	traits = { old_guard war_hero }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Yoshijiro Umezu"
-		picture = "Portrait_JAP_Yoshijiro_Umezu.tga"
-	traits = { trait_cautious politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Otozo Yamada"
-		picture = "Portrait_JAP_Otozo_Yamada.tga"
-	traits = { cavalry_officer career_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Hatazo Adachi"
-		picture = "Portrait_JAP_Hatazo_Adachi.tga"
-	traits = { trickster JAP_samurai_lineage trait_reckless infantry_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Iwane Matsui"
-		picture = "Portrait_JAP_Iwane_Matsui.tga"
-	traits = { old_guard trait_reckless }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Sadao Araki"
-		picture = "Portrait_JAP_Sadao_Araki.tga"
-	traits = { JAP_samurai_lineage }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Keisuke Fujie"
-		picture = "Portrait_JAP_Keisuke_Fujie.tga"
-	traits = { fortress_buster career_officer politically_connected }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Kiichiro Higuchi"
-		picture = "Portrait_JAP_Kiichiro_Higuchi.tga"
-	traits = { career_officer trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Masaharu Homma"
-		picture = "Portrait_JAP_Masaharu_Homma.tga"
-	traits = { media_personality trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Harukichi Hyakutake"
-		picture = "Portrait_JAP_Harukichi_Hyakutake.tga"
-	traits = { infantry_officer  }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Jo Iimura"
-		picture = "Portrait_JAP_Jo_Iimura.tga"
-	traits = { career_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Hitoshi Imamura"
-		picture = "Portrait_JAP_Hitoshi_Imamura.tga"
-	traits = {  commando career_officer infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Masatane Kanda"
-		picture = "Portrait_Japan_Masatane_Kanda.dds"
-	traits = { trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Kuniaki Koiso"
-		picture = "Portrait_JAP_Kuniaki_Koiso.tga"
-	traits = { JAP_samurai_lineage old_guard politically_connected }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "Isoroku Yamamoto"
-		picture = "Portrait_JAP_Isoroku_Yamamoto.tga"
-	traits = { aviation_enthusiast bold air_controller flight_deck_manager superior_tactician spotter }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 6
-}
-
-create_navy_leader = {
-	name = "Mineichi Koga"
-		picture = "Portrait_Japan_Mineichi_Koga.dds"
-	traits = { bold battleship_adherent superior_tactician spotter }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Kiyoshi Hasegawa"
-		picture = "Portrait_JAP_Hasegawa_Kiyoshi.tga"
-	traits = { gentlemanly }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
-
-# Keen on planes
-create_navy_leader = {
-	name = "Shigeyoshi Inoue"
-		picture = "Portrait_Japan_Shigeyoshi_Inoue.dds"
-	traits = { aviation_enthusiast navy_career_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Nobutake Kondō"
-		picture = "Portrait_JAP_Nobutake_Kondo.tga"
-	traits = { battleship_adherent naval_lineage fly_swatter }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Takeo Takagi"
-		picture = "Portrait_JAP_Takeo_Takagi.tga"
-	traits = { spotter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Soemu Toyoda"
-		picture = "Portrait_JAP_Soemu_Toyoda.tga"
-	traits = { bold ironside old_guard_navy }
-	skill = 3
-	attack_skill = 5
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Jisaburo Ozawa"
-		picture = "Portrait_JAP_Jisaburo_Ozawa.tga"
-	traits = { bold aviation_enthusiast navy_career_officer blockade_runner superior_tactician }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Zengo Yoshida"
-		picture = "Portrait_JAP_Zengo_Yoshida.tga"
-	traits = { old_guard_navy }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Hiroaki Abe"
-		picture = "Portrait_Japan_Hiroaki_Abe.dds"
-	traits = { battleship_adherent }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 1
-}
-
-create_navy_leader = {
-	name = "Tadashige Daigo"
-		picture = "Portrait_JAP_Tadashige_Daigo.tga"
-	traits = { navy_career_officer seawolf }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
-
-create_navy_leader = {
-	name = "Gengo Hyakutake"
-		picture = "Portrait_JAP_Gengo_Hyakutake.tga"
-	traits = { gentlemanly }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
 }
 
 if = {
@@ -1239,3 +829,121 @@ if = {
 			}
 		}
 	}
+
+recruit_character = JAP_Hirohito
+recruit_character = JAP_Kyuichi_Tokuda
+recruit_character = JAP_Tomoyuki_Yamashita
+recruit_character = JAP_Hisaichi_Terauchi
+recruit_character = JAP_Shunroku_Hata
+recruit_character = JAP_Akira_Muto
+recruit_character = JAP_Kanji_Ishiwara
+recruit_character = JAP_Shizuichi_Tanaka
+recruit_character = JAP_Yasuji_Okamura
+recruit_character = JAP_Toshizo_Nishio
+recruit_character = JAP_Rikichi_Ando
+recruit_character = JAP_Naruhiko_Higashikuni
+recruit_character = JAP_Seishiro_Itagaki
+recruit_character = JAP_Takashi_Sakai
+recruit_character = JAP_Kenji_Doihara
+recruit_character = JAP_Kenkichi_Ueda
+recruit_character = JAP_Shigeru_Honjo
+recruit_character = JAP_Yoshijiro_Umezu
+recruit_character = JAP_Otozo_Yamada
+recruit_character = JAP_Hatazo_Adachi
+recruit_character = JAP_Iwane_Matsui
+recruit_character = JAP_Sadao_Araki
+recruit_character = JAP_Keisuke_Fujie
+recruit_character = JAP_Kiichiro_Higuchi
+recruit_character = JAP_Masaharu_Homma
+recruit_character = JAP_Harukichi_Hyakutake
+recruit_character = JAP_Jo_Iimura
+recruit_character = JAP_Hitoshi_Imamura
+recruit_character = JAP_Masatane_Kanda
+recruit_character = JAP_Kuniaki_Koiso
+recruit_character = JAP_Isoroku_Yamamoto
+recruit_character = JAP_Mineichi_Koga
+recruit_character = JAP_Kiyoshi_Hasegawa
+recruit_character = JAP_Shigeyoshi_Inoue
+recruit_character = JAP_Nobutake_Kondō
+recruit_character = JAP_Takeo_Takagi
+recruit_character = JAP_Soemu_Toyoda
+recruit_character = JAP_Jisaburo_Ozawa
+recruit_character = JAP_Zengo_Yoshida
+recruit_character = JAP_Hiroaki_Abe
+recruit_character = JAP_Tadashige_Daigo
+recruit_character = JAP_Gengo_Hyakutake
+recruit_character = JAP_Oyama_Ikuo
+recruit_character = JAP_Suzuki_Mosaburo
+recruit_character = JAP_Abe_Iso
+recruit_character = JAP_Katayama_Tetsu
+recruit_character = JAP_Hamaguchi_Osachi
+recruit_character = JAP_Machida_Chuji
+recruit_character = JAP_Miki_Bukichi
+recruit_character = JAP_Ugaki_Kazushige
+recruit_character = JAP_Hatoyama_Ichiro
+recruit_character = JAP_Inukai_Tsuyoshi
+recruit_character = JAP_Mitsuchi_Chuzo
+recruit_character = JAP_Mizuno_Rentaro
+recruit_character = JAP_Suzuki_Kisaburo
+recruit_character = JAP_Yoshizawa_Kenkichi
+recruit_character = JAP_Adachi_Kenzo
+recruit_character = JAP_Maeda_Yonezo
+recruit_character = JAP_Nakajima_Chikuhei
+recruit_character = JAP_Hayashi_Senjuro
+recruit_character = JAP_Hiranuma_Kiichiro
+recruit_character = JAP_Nagata_Tetsuzan
+recruit_character = JAP_Tojo_Hideki
+recruit_character = JAP_Araki_Sadao
+recruit_character = JAP_Konoe_Fumimaro
+recruit_character = JAP_Kuhara_Fusanosuke
+recruit_character = JAP_Fukumoto_Kazuo
+recruit_character = JAP_Yamamoto_Kenzo
+recruit_character = JAP_Shidehara_Kijuro
+recruit_character = JAP_Ashida_Hitoshi
+recruit_character = JAP_Yoshida_Shigeru
+recruit_character = JAP_Arita_Hachiro
+recruit_character = JAP_Hirota_Koki
+recruit_character = JAP_Ogawa_Gotaro
+recruit_character = JAP_Honda_Kumataro
+recruit_character = JAP_Tatekawa_Yoshitsugu
+recruit_character = JAP_Okawa_Shumei
+recruit_character = JAP_Asanuma_Inejiro
+recruit_character = JAP_Yamada_Moritaro
+recruit_character = JAP_Eda_Saburo
+recruit_character = JAP_Mizutani_Chozaburo
+recruit_character = JAP_Inoue_Junnosuke
+recruit_character = JAP_Matsumura_Kenzo
+recruit_character = JAP_Ikeda_Shigeaki
+recruit_character = JAP_Matsuno_Tsuruhei
+recruit_character = JAP_Oguchi_Kiroku
+recruit_character = JAP_Tsushima_Juichi
+recruit_character = JAP_Horikiri_Zenbee
+recruit_character = JAP_Godo_Takuo
+recruit_character = JAP_Shoda_Kazue
+recruit_character = JAP_Suzuki_Teiichi
+recruit_character = JAP_Sakisaka_Itsuro
+recruit_character = JAP_Matsuoka_Komakichi
+recruit_character = JAP_Kawasaki_Katsu
+recruit_character = JAP_Kawasaki_Takukichi
+recruit_character = JAP_Kimura_Kozaemon
+recruit_character = JAP_Saito_Takao
+recruit_character = JAP_Kawamura_Takeji
+recruit_character = JAP_Ohara_Naoshi
+recruit_character = JAP_Akita_Kiyoshi
+recruit_character = JAP_Mochizuki_Keisuke
+recruit_character = JAP_Nagai_Ryutaro
+recruit_character = JAP_Oasa_Tadao
+recruit_character = JAP_Fujie_Keisuke
+recruit_character = JAP_Shiono_Suehiko
+recruit_character = JAP_Suetsugu_Nobumasa
+recruit_character = JAP_Anami_Korechika
+recruit_character = JAP_Kanin_Kotohito
+recruit_character = JAP_Sugiyama_Hajime
+recruit_character = JAP_Masaki_Jinzaburo
+recruit_character = JAP_Nagano_Osami
+recruit_character = JAP_Oikawa_Koshiro
+recruit_character = JAP_Fushimi_Hiroyasu
+recruit_character = JAP_Shimada_Shigetaro
+recruit_character = JAP_Teramoto_Kumaichi
+recruit_character = JAP_Sugawara_Michio
+recruit_character = JAP_Arahata_Kanson

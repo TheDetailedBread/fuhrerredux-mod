@@ -61,7 +61,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_doctrine_of_war
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_goal_generic_army_high_command
 
  		ai_will_do = { factor = 50 } 
  		prerequisite = { focus = COL_granadine_manifesto }
@@ -72,9 +72,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COL_doctrine_of_war"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 				category = cat_mass_assault
@@ -125,7 +125,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_quito_ultimatum
-		icon = GFX_goal_flag_ecuador_war
+		icon = GFX_goal_generic_attack_ecuador
  		ai_will_do = { factor = 10 } 
  		prerequisite = { focus = COL_andean_claims }
  		x =5
@@ -240,7 +240,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_revancha_en_peru
-		icon = GFX_goal_flag_peru_wargoal
+		icon = GFX_goal_generic_attack_peru
 
  		ai_will_do = { factor = 100 } 
  		prerequisite = { focus = COL_preparing_for_liberation }
@@ -314,7 +314,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_brazilian_intervention
-		icon = GFX_goal_bra_collie_kill
+		icon = GFX_goal_generic_attack_socialist_brazil
 
  		ai_will_do = { factor = 10 } 
  		prerequisite = { focus = COL_the_marxist_enemy }
@@ -607,7 +607,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_create_institute_of_development
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_financial_markets
 
  		ai_will_do = { factor = 10 } 
  		x =18
@@ -925,7 +925,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_learning_from_our_mistakes
-		icon = GFX_goal_civil_war_lessons
+		icon = GFX_goal_COL_army
 
  		ai_will_do = { factor = 10 } 
  		x =36
@@ -940,7 +940,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_vasquez_legacy
-		icon = GFX_goal_planning_bonus
+		icon = GFX_goal_generic_army_grand_battleplan
 		prerequisite = { focus = COL_learning_from_our_mistakes }
  		ai_will_do = { factor = 10 } 
  		x =32
@@ -951,9 +951,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COL_vasquez_legacy"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction  = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -961,7 +961,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_reliable_infantry
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_goal_conscription
 		prerequisite = { focus = COL_vasquez_legacy }
  		ai_will_do = { factor = 10 } 
  		x =31
@@ -1002,7 +1002,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_berrio_relampago
-		icon = GFX_goal_RUS_Markov_plan
+		icon = GFX_goal_generic_army_mobile_warfare
 		prerequisite = { focus = COL_learning_from_our_mistakes }
  		x =36
  		y =1
@@ -1012,9 +1012,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COL_berrio_relampago"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -1063,7 +1063,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_cortes_massive_warfare
-		icon = GFX_goal_conscription
+		icon = GFX_goal_generic_army_mass_assault
 		prerequisite = { focus = COL_learning_from_our_mistakes }
  		ai_will_do = { factor = 10 } 
  		x =40
@@ -1074,9 +1074,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COL_cortes_massive_warfare"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mass_assault
 			}
@@ -1084,7 +1084,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_sustaining_our_soldiers
-		icon = GFX_goal_hospital
+		icon = GFX_goal_generic_medical
 		prerequisite = { focus = COL_cortes_massive_warfare }
  		ai_will_do = { factor = 10 } 
  		x =39
@@ -1124,7 +1124,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_weapons_update
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_military_equipment
 		prerequisite = { focus = COL_reliable_infantry focus = COL_lightning_landships focus = COL_sustaining_our_soldiers }
 		prerequisite = { focus = COL_proper_support focus = COL_war_on_wheels focus = COL_fire_support }
  		ai_will_do = { factor = 10 } 
@@ -1145,7 +1145,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_motorized_lessons
-		icon = GFX_goal_army_truck
+		icon = GFX_goal_generic_armored_cars
 		prerequisite = { focus = COL_reliable_infantry focus = COL_lightning_landships focus = COL_sustaining_our_soldiers }
 		prerequisite = { focus = COL_proper_support focus = COL_war_on_wheels focus = COL_fire_support }
  		ai_will_do = { factor = 10 } 
@@ -1231,7 +1231,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_armored_attack
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_goal_generic_army_tanks2
 		prerequisite = { focus = COL_mechanizated_improvements }
 		prerequisite = { focus = COL_artillery_focus }
  		ai_will_do = { factor = 10 } 
@@ -1252,7 +1252,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_medical_assistance
-		icon = GFX_goal_hospital
+		icon = GFX_goal_generic_medical
 		prerequisite = { focus = COL_mechanizated_improvements }
 		prerequisite = { focus = COL_artillery_focus }
  		ai_will_do = { factor = 10 } 
@@ -1273,7 +1273,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_andean_troops
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_mountain_warfare
 		prerequisite = { focus = COL_mechanizated_improvements }
 		prerequisite = { focus = COL_artillery_focus }
  		ai_will_do = { factor = 10 } 
@@ -1791,7 +1791,7 @@ focus_tree = {
 
 		focus = { 
 		id = COL_la_armada_colombiana
-		icon = GFX_goal_colombia_navy
+		icon = GFX_goal_COL_navy
 		available = { has_country_flag = COL_othertree }
  		ai_will_do = { factor = 5 } 
  		x =64
@@ -1868,9 +1868,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COL_reorganize_naval_strategy"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = navdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_base_strike
 				category = cat_fleet_in_being
@@ -1880,7 +1880,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_escort_buildup
-		icon = GFX_goal_generic_coastal_navy
+		icon = GFX_goal_generic_naval_cruiser2
 		prerequisite = { focus = COL_reorganize_naval_strategy }
 		prerequisite = { focus = COL_create_national_dockyards }
  		ai_will_do = { factor = 5 } 
@@ -2069,9 +2069,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COL_mastering_the_waves"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = navdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_base_strike
 				category = cat_fleet_in_being
@@ -2081,7 +2081,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = COL_we_own_our_skies
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_goal_COL_airforce
 		available = { has_country_flag = COL_othertree }
  		ai_will_do = { factor = 5 } 
  		x =74

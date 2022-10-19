@@ -1,6 +1,6 @@
-﻿capital = 275
+capital = 275
 
-oob = "SAF_1936"
+oob = "SAF"
 
 # Starting tech
 set_technology = {
@@ -11,38 +11,66 @@ set_technology = {
 	tech_recon = 1
 	tech_signal_company = 1
 	gw_artillery = 1
-
 	motorised_infantry = 1
-	gwtank = 1
-	basic_light_tank = 1
-	
-	early_fighter = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-	CAS1 = 1
-	
-	early_destroyer = 1
-	transport = 1
 	fuel_silos = 1
+	basic_train = 1
 }
+
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "SAF_air_bba"
 	set_technology = {
-		early_destroyer = 1
-		transport = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
+		basic_small_airframe = 1
+		aircraft_construction = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "SAF_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
 	}
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
 		basic_naval_mines = 1
 		early_ship_hull_light = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_torpedo = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			transport = 1
+		}
 	}
 }
 
@@ -53,10 +81,6 @@ add_ideas = {
 	SAF_Integration_Resist
 	SAF_Boer_Legacy
 	SAF_Anti_British_Sentiment
-	SAF_Jbm_Hertzog_hog
-	SAF_Charles_Water_for
-	SAF_Nicolaas_Havenga_eco
-	SAF_FHP_Creswell_sec
 	constitutional_monarchy
 }
 
@@ -66,7 +90,6 @@ set_stability = 0.62
 set_war_support = 0.33
 
 set_politics = {
-	
 	ruling_party = authoritarian_democrat
 	last_election = "1933.5.17"
 	election_frequency = 60
@@ -74,325 +97,68 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 1
-    collectivist = 8
-    libertarian_socialist = 0
-    social_democrat = 4
-    social_liberal = 0
-    market_liberal = 29
-    social_conservative = 0
-    authoritarian_democrat = 42
-    paternal_autocrat = 12
-    national_populist = 0
-    valkist = 4
+  vanguardist = 1
+  collectivist = 8
+  libertarian_socialist = 0
+  social_democrat = 4
+  social_liberal = 0
+  market_liberal = 29
+  social_conservative = 0
+  authoritarian_democrat = 42
+  paternal_autocrat = 12
+  national_populist = 0
+  valkist = 4
 }
 
-create_country_leader = {
-	name = "Moses Kotane"
-	desc = "POLITICS_MOSES_KOTANE_DESC"
-	picture = "Portrait_South_Africa_Moses_Kotane.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Clement Kadalie"
-	desc = "POLITICS_CLEMENT_KADALIE_DESC"
-	picture = "Portrait_South_Africa_Clement_Kadalie.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "David Ivon Jones"
-	desc = "POLITICS_DAVID_IVON_JONES_DESC"
-	picture = "Portrait_South_Africa_David_Ivon_Jones.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Nicolaas Jacobus de Wet"
-	desc = "POLITICS_NICOLAAS_JACOBUS_DE_WET_DESC"
-	picture = "Portrait_South_Africa_Nicolaas_Jacobus_de_Wet.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Jan Hendrik Hofmeyr"
-	desc = "POLITICS_JAN_HENDRIK_HOFMEYR_DESC"
-	picture = "Portrait_South_Africa_Jan_Hendrik_Hofmeyr.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Nicolaas Havenga"
-	desc = "POLITICS_NICOLAAS_HAVENGA_DESC"
-	picture = "Portrait_South_Africa_Nicolaas_Havenga.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Patrick Duncan"
-	desc = "POLITICS_PATRICK_DUNCAN_DESC"
-	picture = "Portrait_South_Africa_Patrick_Duncan.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "J. B. M. Hertzog"
-	desc = "POLITICS_J_B_M_HERTZOG_DESC"
-	picture = "Portrait_South_Africa_JBM_Hertzog.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "D. F. Malan"
-	desc = "POLITICS_DF_MALAN_DESC"
-	picture = "Portrait_South_Africa_DF_Malan.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-
-
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lord Hyde"
-	desc = "POLITICS_LORD_HYDE_DESC"
-	picture = "Portrait_South_Africa_Lord_Hyde.tga"
-	expire = "1965.1.1"
-	ideology = valkist_subtype
-	traits = { }
-}
-
-
-create_field_marshal = {
-	name = "Jan Smuts"
-	picture = "Portrait_South_Africa_Jan_Smuts.tga"
-	traits = { offensive_doctrine old_guard politically_connected }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 970
-}
-
-create_corps_commander = {
-	name = "Leonard Beyers"
-	picture = "Portrait_South_Africa_Leonard_Beyers.tga"
-	traits = { career_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 971
-}
-create_corps_commander = {
-	name = "George Brink"
-	picture = "Portrait_South_Africa_George_Brink.tga"
-	traits = { old_guard commando }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	id = 972
-}
-create_corps_commander = {
-	name = "Dan Pienaar"
-	picture = "Portrait_South_Africa_Dan_Pienaar.tga"
-	traits = { old_guard artillery_officer desert_fox }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 973
-}
-create_corps_commander = {
-	name = "Hendrik Klopper"
-	picture = "Portrait_South_Africa_Hendrik_Klopper.tga"
-	traits = { infantry_officer trait_engineer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 974
-}
-create_corps_commander = {
-	name = "Isaac Pierre de Villiers"
-	picture = "Portrait_South_Africa_Isaac_de_Villiers.tga"
-	traits = { old_guard }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 975
-}
-create_corps_commander = {
-	name = "Nick Bierman"
-	picture = "Portrait_South_Africa_Nick_Bierman.tga"
-	traits = { armor_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 976
-}
-create_corps_commander = {
-	name = "Evered Poole"
-	picture = "Portrait_South_Africa_Evered_Poole.tga"
-	traits = { politically_connected trickster }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 977
-}
-create_corps_commander = {
-	name = "Christiaan du Toit"
-	picture = "Portrait_South_Africa_Christiaan_du_Toit.tga"
-	traits = { artillery_officer infantry_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 978
-}
-create_corps_commander = {
-	name = "Christoffel Venter"
-	picture = "Portrait_South_Africa_Christoffel_Venter.tga"
-	traits = { trait_engineer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 979
-}
-create_corps_commander = {
-	name = "Adolph Malan"
-	picture = "Portrait_South_Africa_Adolph_Malan.tga"
-	traits = { politically_connected trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 98001
-}
-
-create_navy_leader = {
-	name = "Guy Hallifax"
-	picture = "Portrait_South_Africa_Guy_Hallifax.tga"
-	traits = { blockade_runner }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	maneuvering_skill = 3
-	coordination_skill = 2
-	id = 9802
-}
-create_navy_leader = {
-	name = "Pieter de Waal"
-	picture = "Portrait_South_Africa_Pieter_de_Waal.tga"
-	traits = { spotter }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 1
-}
-
+recruit_character = SAF_James_La_Guma
+recruit_character = SAF_Solomon_Sachs
+recruit_character = SAF_Sidney_Bunting
+recruit_character = SAF_Alex_Hepple
+recruit_character = SAF_J_G_N_Strauss
+recruit_character = SAF_Jan_C_Smuts
+recruit_character = SAF_James_Hertzog
+recruit_character = SAF_Nicolaas_Havenga
+recruit_character = SAF_D_F_Malan
+recruit_character = SAF_J_F_van_Rensburg
+recruit_character = SAF_Goolam_Gool
+recruit_character = SAF_Bram_Fischer
+recruit_character = SAF_Yusuf_Dadoo
+recruit_character = SAF_Thabo_Mofutsanyana
+recruit_character = SAF_Lazar_Bach
+recruit_character = SAF_Frederic_Creswell
+recruit_character = SAF_Jimmy_Green
+recruit_character = SAF_Walter_Madeley
+recruit_character = SAF_Alan_Paton
+recruit_character = SAF_Jan_Hendrik_Hofmeyr
+recruit_character = SAF_Pieter_van_der_Byl
+recruit_character = SAF_J_G_Strijdom
+recruit_character = SAF_Moses_Kotane
+recruit_character = SAF_Douglas_Wolton
+recruit_character = SAF_W_H_Andrews
+recruit_character = SAF_Thomas_Boydell
+recruit_character = SAF_Deneys_Reitz
+recruit_character = SAF_Ben_Schoeman
+recruit_character = SAF_C_F_Stallard
+recruit_character = SAF_F_C_Erasmus
+recruit_character = SAF_James_Mitchell_Baker
+recruit_character = SAF_Leonard_Beyers
+recruit_character = SAF_Pierre_van_Ryneveld
+recruit_character = SAF_Christian_du_Toit
+recruit_character = SAF_Francois_Theron
+recruit_character = SAF_JF_Naude
+recruit_character = SAF_Pieter_de_Waal
+recruit_character = SAF_Adolph_Malan
+recruit_character = SAF_Christoffel_Venter
+recruit_character = SAF_Stephen_Melville
+recruit_character = SAF_Lord_Hyde
+recruit_character = SAF_Clement_Kadalie
+recruit_character = SAF_David_Ivon_Jones
+recruit_character = SAF_Nicolaas_Jacobus_de_Wet
+recruit_character = SAF_Patrick_Duncan
+recruit_character = SAF_George_Brink
+recruit_character = SAF_Dan_Pienaar
+recruit_character = SAF_Hendrik_Klopper
+recruit_character = SAF_Isaac_Pierre_de_Villiers
+recruit_character = SAF_Nick_Bierman
+recruit_character = SAF_Evered_Poole
+recruit_character = SAF_Guy_Hallifax

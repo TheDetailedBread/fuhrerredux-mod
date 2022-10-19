@@ -1,17 +1,5 @@
-﻿capital = 327
-
-oob = "PHI_1936"
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "PHI_1936_naval_mtg"
-	else = { 
-		set_naval_oob = "PHI_1936_naval_legacy"
-	}
-}
-
-country_event = { id = phi.29 days = 366 }
-
+capital = 327
+oob = "PHI"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -20,47 +8,81 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
-	gwtank = 1
-	early_fighter = 1
-	early_bomber = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 if = {
-	limit = { NOT = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "PHI_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "PHI_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
 	}
 }
 
 if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		basic_battery = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		basic_torpedo = 1
-		mtg_transport = 1
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
 	}
 }
+
+USA = {
+	if = {
+		limit = { has_dlc = "Together for Victory" }
+		set_autonomy = {
+			target = PHI
+			autonomous_state = autonomy_colony
+			freedom_level = 0.50
+		}
+	} 
+	else = {
+		puppet = PHI
+	}
+}
+set_cosmetic_tag = PHI_USA
+country_event = { id = philippines.0 days = 1 } # Intro Event
+country_event = { id = philippines.9 days = 120 } # The Envelope
+country_event = { id = philippines.32 days = 335 } # Bonifacio Day
+country_event = { id = philippines.28 days = 350 } # Pampanga Lantern Festival
+country_event = { id = philippines.27 days = 374 } # Feast of the Black Nazarene
+country_event = { id = philippines.46 days = 448 } # Crucifixion in the Philippines
+country_event = { id = philippines.33 days = 508 } # Opening of the Election Campaign
+country_event = { id = philippines.42 days = 580 } # Aftermath of Typhoon Seling
+country_event = { id = philippines.88 days = 630 } # Bountiful Harvest this Year
+country_event = { id = philippines.31 days = 715 } # Misa de Gallo
+country_event = { id = philippines.43 days = 867 } # Quezon Flies to US
+country_event = { id = philippines.90 days = 1028 } # Socialist Sympathies
+country_event = { id = philippines.91 days = 1705 } # Gregorio Aglipay Dies
 
 add_ideas = {
-	PHI_promise_of_elections
-	PHI_agriculture_economy
-	PHI_marxist_professors
-
-	PHI_Jose_P_Laurel_hog_ade
-	PHI_Ferdinand_Marcos_for_ade
-	PHI_Serafin_Fausto_eco_ade
-	PHI_Benigno_Aquino_Sr_sec_ade
+	party_pop_0_20
 	presidential_republic
+
+	PHI_catholic_nation
+	PHI_lingering_sakdalistas
+	PHI_agricultural_society
+	PHI_hacienda_questions
 }
 
 set_convoys = 25
@@ -68,338 +90,154 @@ set_stability = 0.72
 set_war_support = 0.38
 
 set_politics = {	
-	ruling_party = authoritarian_democrat
-	last_election = "1932.11.15"
+	ruling_party = social_conservative
+	last_election = "1933.7.10"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-    collectivist = 8
-    libertarian_socialist = 3
-    social_democrat = 10
-    social_liberal = 4
-    market_liberal = 20
-    social_conservative = 25
-    authoritarian_democrat = 22
+	libertarian_socialist = 0
+	social_democrat = 10
+	social_liberal = 4
+	market_liberal = 20
+	social_conservative = 40
+	authoritarian_democrat = 10
 	national_populist = 4
-	valkist = 4
-}
-create_country_leader = {
-	name = "Luis Taruc"
-	desc = "POLITICS_LUIS_TARUC_DESC"
-	picture = "Portrait_Philippines_Luis_Taruc.tga"
-	expire = "1943.6.2"
-	ideology = vanguardist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Pedro Abad Santos"
-	desc = "POLITICS_PEDRO_ABAD_SANTOS_DESC"
-	picture = "Portrait_Philippines_Pedro_Abad_Santos.tga"
-	expire = "1950.3.10"
-	ideology = collectivist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Crisanto Evangelista"
-	desc = "POLITICS_CRISANTO_EVANGELISTA_DESC"
-	picture = "Portrait_Philippines_Crisanto_Evangelista.tga"
-	expire = "1950.3.10"
-	ideology = libertarian_socialist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Lope K. Santos"
-	desc = "POLITICS_LOPE_K_SANTOS_DESC"
-	picture = "Portrait_Philippines_Lope_K_Santos.tga"
-	expire = "1946.6.2"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Elpidio Quirino"
-	desc = "POLITICS_ELPIDIO_QUIRINO_DESC"
-	picture = "Portrait_Philippines_Elpidio_Quirino.tga"
-	expire = "1955.2.1"
-	ideology = social_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Manuel Roxas"
-	desc = "POLITICS_MANUEL_ROXAS_DESC"
-	picture = "Portrait_Philippines_Manuel_Roxas.tga"
-	expire = "1955.2.1"
-	ideology = market_liberal_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Manuel Luis Quezón"
-	desc = "POLITICS_MANUEL_LUIS_QUEZON_DESC"
-	picture = "Portrait_Philippines_Manuel_Luis_Quezon_KR.tga"
-	expire = "1964.2.6"
-	ideology = social_conservative_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Jose P. Laurel"
-	desc = "POLITICS_JOSE_P_LAUREL_DESC"
-	picture = "Portrait_Philippines_Jose_P_Laurel.tga"
-	expire = "1970.1.26"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Basilio J. Valdez"
-	desc = "POLITICS_BASILIO_J_VALDEZ_DESC"
-	picture = "Portrait_Philippines_Basilio_J_Valdez.tga"
-	expire = "1970.1.26"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Emilio Aguinaldo"
-	desc = "POLITICS_EMILIO_AGUINALDO_DESC"
-	picture = "Portrait_Philippines_Emilio_Aguinaldo.tga"
-	expire = "1964.2.6"
-	ideology = national_populist_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Benigno Ramos"
-	desc = "POLITICS_BENIGNO_RAMOS_DESC"
-	picture = "Portrait_Philippines_Benigno_Ramos.tga"
-	expire = "1946.6.2"
-	ideology = valkist_subtype
-	traits = { }
+	valkist = 12
 }
 
-### Field Marshal
+set_country_flag = coalition_market_liberal
+set_country_flag = coalition_social_liberal
 
-create_field_marshal = {
-	name = "Vicente P. Lim"
-	picture = "Portrait_Philippines_Vicente_P_Lim.tga"
-	traits = { career_officer brilliant_strategist infantry_officer trickster }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-} 
-create_field_marshal = {
-	name = "Basilio J. Valdez"
-	picture = "Portrait_Philippines_Basilio_J_Valdez.tga"
-	traits = { career_officer media_personality organisational_leader }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 2
-	planning_skill = 3
-    logistics_skill = 2
-}
-
-
-# Corps Commander
-create_corps_commander = {
-	name = "Alfredo M. Santos"
-	picture = "Portrait_Philippines_Alfredo_M_Santos.tga"
-	traits = { trickster trait_engineer hill_fighter skilled_staffer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Paulino Santos"
-	picture = "Portrait_Philippines_Paulino_Santos.tga"
-	traits = { brilliant_strategist infantry_leader jungle_rat skilled_staffer }
-	skill = 3
-	attack_skill = 3
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 3
-}
-create_corps_commander = { 
-	name = "Mateo Capinpin"
-	picture = "Portrait_Philippines_Mateo_Capinpin.tga"
-	traits = { trait_engineer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 4
-}
-create_corps_commander = {
-	name = "Rafael Jalandoni"
-	picture = "Portrait_Philippines_Rafael_Jalandoni.tga"
-	traits = { war_hero career_officer trait_mountaineer }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Manuel F. Cabal"
-	picture = "Portrait_Philippines_Manuel_F_Cabal.tga"
-	traits = { brilliant_strategist trickster }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 5
-    logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Carlos P. Romulo"
-	picture = "Portrait_Philippines_Carlos_P_Romulo.tga"
-	traits = { media_personality infantry_officer war_hero skilled_staffer }
-	skill = 1
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Salipada Pendatun"
-	picture = "Portrait_Philippines_Salipada_Pendatun.tga"
-	traits = { armor_officer commando }
-	skill = 2
-	attack_skill = 2
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Ruperto Kangleon"
-	picture = "Portrait_Philippines_Ruperto_Kangleon.tga"
-	traits = { infantry_officer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-
-create_navy_leader = {
-	name = "Santiago Nuval"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
-	traits = { bold aviation_enthusiast spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-create_navy_leader = {
-	name = "Eustacio Orobia"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
-	traits = { blue_water_expert }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-create_navy_leader = {
-	name = "Jose V. Andrada"
-	portrait_path = "gfx/leaders/JAP/Portrait_Japan_Generic_navy_3.dds"
-	traits = { superior_tactician navy_career_officer gunnery_expert }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 5
-	coordination_skill = 3
-}
+recruit_character = PHI_Luis_Taruc
+recruit_character = PHI_Pedro_Abad_Santos
+recruit_character = PHI_Crisanto_Evangelista
+recruit_character = PHI_Lope_K_Santos
+recruit_character = PHI_Elpidio_Quirino
+recruit_character = PHI_Manuel_Roxas
+recruit_character = PHI_Manuel_Luis_Quezon
+recruit_character = PHI_Jose_P_Laurel
+recruit_character = PHI_Basilio_J_Valdez
+recruit_character = PHI_Emilio_Aguinaldo
+recruit_character = PHI_Benigno_Ramos
+recruit_character = PHI_Vicente_P_Lim
+recruit_character = PHI_Alfredo_M_Santos
+recruit_character = PHI_Paulino_Santos
+recruit_character = PHI_Mateo_Capinpin
+recruit_character = PHI_Rafael_Jalandoni
+recruit_character = PHI_Manuel_F_Cabal
+recruit_character = PHI_Carlos_P_Romulo
+recruit_character = PHI_Salipada_Pendatun
+recruit_character = PHI_Ruperto_Kangleon
+recruit_character = PHI_Leopoldo_Salcedo
+recruit_character = PHI_Santiago_Nuval
+recruit_character = PHI_Eustacio_Orobia
+recruit_character = PHI_Jose_V_Andrada
+recruit_character = PHI_Juan_Sumulong
+recruit_character = PHI_Juan_Feleo
+recruit_character = PHI_J_Antonio_Araneta
+recruit_character = PHI_Sergio_P_Osmena
+recruit_character = PHI_Eulogio_Rodriguez_Sr
+recruit_character = PHI_Gregorio_Aglipay
+recruit_character = PHI_Benigno_Aquino_Sr
+recruit_character = PHI_Casto_Alejandrino
+recruit_character = PHI_Rafael_Liwanag
+recruit_character = PHI_Joaquin_Elizalde
+recruit_character = PHI_Quentin_Paredes
+recruit_character = PHI_Manuel_Quadrino
+recruit_character = PHI_Ferdinand_E_Marcos
+recruit_character = PHI_Herminegildo_Cruz
+recruit_character = PHI_Carlos_P_Garcia
+recruit_character = PHI_Diosdado_P_Macapagal
+recruit_character = PHI_Antonio_de_las_Alas
+recruit_character = PHI_Ramon_Quisumbing
+recruit_character = PHI_Ramon_Magsaysay
+recruit_character = PHI_Jose_G_David
+recruit_character = PHI_Serafin_Fausto
+recruit_character = PHI_Ramon_A_Alcaraz
+recruit_character = PHI_Guillermo_Capadocia
+recruit_character = PHI_Mariano_Balgos
+recruit_character = PHI_Jose_M_Crisol
+recruit_character = PHI_Pardo_de_Tavera
+recruit_character = PHI_Alberto_Ramos
+recruit_character = PHI_Leoncio_S_Tan
+recruit_character = PHI_Roman_Apolinario
+recruit_character = PHI_Teofisto_Sison
+recruit_character = PHI_Tirano_Craveza
+recruit_character = PHI_Jose_Yulo
+recruit_character = PHI_Jose_G_Lukban
+recruit_character = PHI_Augusto_Jurado
+recruit_character = PHI_Quirinto_P_Evangelista
+recruit_character = PHI_Benito_N_Ebuen
+recruit_character = PHI_Heraclio_Alano
+recruit_character = PHI_Mateo_M_Capinpin
+recruit_character = PHI_Joe_Rogers
+recruit_character = PHI_Basilio_Fernando
+recruit_character = PHI_Edwin_Andrews
+recruit_character = PHI_Pelagio_Cruz
+recruit_character = PHI_Victor_H_Dizon
+recruit_character = PHI_Felix_Pestana
+recruit_character = PHI_Jesus_Lava
+recruit_character = PHI_Jose_Zulueta
+recruit_character = PHI_Mariano_Garchitorena
+recruit_character = PHI_Andres_Soriano
+recruit_character = PHI_Claro_M_Recto
+recruit_character = PHI_Jorge_Vargas
+recruit_character = PHI_Rafael_Alunan
+recruit_character = PHI_Camilio_Osias
 
 if = {
-	limit = { has_dlc = "Man the Guns" }
-
+	limit = { has_dlc = "By Blood Alone" }
 	create_equipment_variant = {
-		name = "Clemson Class"
-		type = ship_hull_light_1
-		name_group = PHI_DD_HISTORICAL
-		parent_version = 0
+		name = "A-17" #
+		type = small_plane_cas_airframe_1
 		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
+			fixed_main_weapon_slot = small_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
 		}
 	}
-
 	create_equipment_variant = {
-		name = "Omaha Class"
-		type = ship_hull_cruiser_1
-		name_group = PHI_CL_HISTORICAL
-		parent_version = 0
+		name = "P-35A" #
+		type = small_plane_airframe_1
 		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_light_medium_battery_1
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
 		}
 	}
-
 	create_equipment_variant = {
-		name = "S Class"
-		type = ship_hull_submarine_1
-		name_group = PHI_SS_HISTORICAL
-		parent_version = 0
+		name = "A-12" #
+		type = small_plane_cas_airframe_0
 		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = empty
+			fixed_main_weapon_slot = small_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
 		}
 		obsolete = yes
 	}
-
 	create_equipment_variant = {
-		name = "Barracuda Class"
-		type = ship_hull_submarine_2
-		name_group = PHI_SS_HISTORICAL
-		parent_version = 0
+		name = "P-6" #export models only
+		type = small_plane_airframe_0
 		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
 		}
+		obsolete = yes
 	}
-}
-
-if = {
-	limit = { NOT = { has_dlc = "Man the Guns" } }
-	
 	create_equipment_variant = {
-		name = "Barracuda Class"
-		type = submarine_1
-		parent_version = 1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			sub_engine_upgrade = 2
-			sub_stealth_upgrade = 2
-			sub_torpedo_upgrade = 2
+		name = "P-26A" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
 		}
-	}
-
-	create_equipment_variant = {
-		name = "Clemson Class"
-		type = destroyer_1
-		parent_version = 0
-		upgrades = {
-			ship_torpedo_upgrade = 1
-			destroyer_engine_upgrade = 3
-			ship_ASW_upgrade = 2
-			ship_anti_air_upgrade = 1
-		}
+		obsolete = yes
 	}
 }

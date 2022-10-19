@@ -747,7 +747,7 @@ focus_tree = {
     # The Chinese Air Force
     focus = {
         id = CHI_the_chinese_air_force
-        icon = GFX_goal_generic_build_airforce
+        icon = GFX_goal_CHI_airforce
         x = 19
         y = 0
         cost = 3
@@ -820,9 +820,9 @@ focus_tree = {
             focus = CHI_cas_modernization
         }
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = air_doctrine
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -837,7 +837,7 @@ focus_tree = {
     # The Chinese Navy
     focus = {
         id = CHI_the_chinese_navy
-        icon = GFX_goal_generic_build_navy
+        icon = GFX_goal_CHI_navy
         x = 19
         y = 3
         cost = 3
@@ -961,10 +961,10 @@ focus_tree = {
         cost = 10
         prerequisite = { focus = CHI_flexible_navy }
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = cat_fleet_in_being
                 category = cat_base_strike
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 2
             }
         }
@@ -1002,9 +1002,9 @@ focus_tree = {
         cost = 10
         prerequisite = { focus = CHI_large_navy }
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = cat_trade_interdiction
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 2
             }
         }
@@ -1019,7 +1019,7 @@ focus_tree = {
     # The Chinese Army
     focus = {
         id = CHI_the_chinese_army
-        icon = GFX_goal_generic_allies_build_infantry
+        icon = GFX_goal_CHI_army
         x = 26
         y = 0
         cost = 3
@@ -1038,9 +1038,9 @@ focus_tree = {
         mutually_exclusive = { focus = CHI_planning_focus }
         prerequisite = { focus = CHI_the_chinese_army }
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
                 category = cat_mobile_warfare
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -1049,7 +1049,7 @@ focus_tree = {
     # Modern Logistics
     focus = {
         id = CHI_modern_logistics
-        icon = GFX_goal_RUS_Markov_plan
+        icon = GFX_goal_generic_support_equipment
         x = 22
         y = 2
         cost = 10
@@ -1159,9 +1159,9 @@ focus_tree = {
         mutually_exclusive = { focus = CHI_speed_focus }
         prerequisite = { focus = CHI_the_chinese_army }
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction  = {
                 category = cat_grand_battle_plan
-                bonus = 1.0
+                cost_reduction = 1.0
                 uses = 1
             }
         }
@@ -1254,11 +1254,11 @@ focus_tree = {
         cost = 10
         prerequisite = { focus = CHI_army_engineers }
         completion_reward = {
-            add_tech_bonus = {
-                category = land_doctrine
-                bonus = 1.0
-                uses = 1
-            }
+            add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
         }
     }
 
@@ -1350,17 +1350,6 @@ focus_tree = {
         available = { YUN = { exists = no } }
         prerequisite = { focus = CHI_subjugate_the_warlords }
         completion_reward = {
-            create_corps_commander = {
-                name = "Long Yun"
-                portrait_path = "gfx/leaders/YUN/Portrait_Yunnan_Long_Yun.tga"
-                traits = { }
-                skill = 2
-                attack_skill = 2
-                defense_skill = 3
-                planning_skill = 3
-                logistics_skill = 1
-            }
-
             every_state = {
                 limit = { is_core_of = YUN }
                 remove_core_of = YUN
@@ -1378,16 +1367,6 @@ focus_tree = {
         available = { SCH = { exists = no } }
         prerequisite = { focus = CHI_subjugate_the_warlords }
         completion_reward = {
-            create_corps_commander = {
-                name = "Deng Xihou"
-                portrait_path = "gfx/leaders/SCH/Portrait_Sichuan_Deng_Xihou.tga"
-                traits = { }
-                skill = 2
-                attack_skill = 2
-                defense_skill = 3
-                planning_skill = 3
-                logistics_skill = 1
-            }
 
             every_state = {
                 limit = { is_core_of = SCH }
@@ -1406,16 +1385,6 @@ focus_tree = {
         available = { XSM = { exists = no } }
         prerequisite = { focus = CHI_subjugate_the_warlords }
         completion_reward = {
-            create_corps_commander = {
-                name = "Ma Bufang"
-                portrait_path = "gfx/leaders/XSM/Portrait_Ma_Ma_Bufang.tga"
-                traits = { }
-                skill = 2
-                attack_skill = 2
-                defense_skill = 3
-                planning_skill = 3
-                logistics_skill = 1
-            }
 
             every_state = {
                 limit = { is_core_of = XSM }
@@ -1434,17 +1403,6 @@ focus_tree = {
         available = { SHX = { exists = no } }
         prerequisite = { focus = CHI_subjugate_the_warlords }
         completion_reward = {
-            create_corps_commander = {
-                name = "Yan Xishan"
-                portrait_path = "gfx/leaders/SHX/Portrait_Shanxi_Yan_Xishan.tga"
-                traits = { }
-                skill = 2
-                attack_skill = 2
-                defense_skill = 3
-                planning_skill = 3
-                logistics_skill = 1
-            }
-
             every_state = {
                 limit = { is_core_of = SHX }
                 remove_core_of = SHX
@@ -1502,7 +1460,7 @@ focus_tree = {
         prerequisite = { focus = CHI_attack_fengtian }
         prerequisite = { focus = CHI_attack_the_beijing_government }
         completion_reward = {
-            remove_cosmetic_tag = CHI_fragmented
+            drop_cosmetic_tag = yes
             every_state = {
                 limit = { is_core_of = MAL }
                 remove_core_of = MAL

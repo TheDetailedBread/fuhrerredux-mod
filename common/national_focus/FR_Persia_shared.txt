@@ -899,7 +899,7 @@
 	}
 	shared_focus = {
 		id = PER_reform_army
-		icon = GFX_goal_national_arsenal
+		icon = GFX_goal_PER_army
 		cost = 5
 		x = 15
 		y = 0
@@ -1186,9 +1186,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PER_learn_from_great_war"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -1273,9 +1273,9 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PER_artillary_powers"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -1360,9 +1360,8 @@
 			army_experience = 5
 			add_political_power = 15
 			add_manpower = 15000
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1371,7 +1370,7 @@
 	}
 	shared_focus = {
 		id = PER_update_navy
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_PER_navy
 		cost = 5
 		x = 21
 		y = 0
@@ -1794,7 +1793,7 @@
 	}
 	shared_focus = {
 		id = PER_a_persian_airforce
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_PER_airforce
 		cost = 5
 		x = 26
 		y = 0
@@ -1996,9 +1995,9 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PER_lions_can_fly"
 			air_experience = 5
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 0.4
+				cost_reduction = 0.4
 				uses = 2
 				category = air_doctrine
 			}
@@ -2314,7 +2313,7 @@
 	}
 	shared_focus = {
 		id = PER_claim_mesopotamia
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_generic_attack_iraq
 		cost = 10
 		prerequisite = {
 			focus = PER_persian_irridentism
@@ -2336,7 +2335,7 @@
 	}
 	shared_focus = {
 		id = PER_contest_arabian_influence
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_attack_arabia
 		cost = 10
 		prerequisite = {
 			focus = PER_claim_mesopotamia
@@ -2469,7 +2468,7 @@
 	}
 	shared_focus = {
 		id = PER_reclaim_northern_azerbaijan
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_Cutdown_Azerbaijan
 		cost = 10
 		prerequisite = {
 			focus = PER_persian_irridentism
@@ -2491,7 +2490,7 @@
 	}
 	shared_focus = {
 		id = PER_war_with_armenia
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_goal_Cutdown_Armenia
 		cost = 10
 		prerequisite = {
 			focus = PER_reclaim_northern_azerbaijan

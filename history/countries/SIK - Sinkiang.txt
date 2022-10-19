@@ -1,6 +1,6 @@
-﻿capital = 617
+capital = 617
 
-oob = "SIK_1936"
+oob = "SIK"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -8,15 +8,10 @@ add_ideas = {
 	party_pop_0_60
 	backwards_economy
 	iliterate_population
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	military_junta
 }
 set_technology = {
 	infantry_weapons = 1
-	
 }
 
 set_politics = {
@@ -27,26 +22,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 4
-    social_liberal = 6
-    market_liberal = 10
-    social_conservative = 8
-    authoritarian_democrat = 4
-    paternal_autocrat = 60
-    national_populist = 8
-    valkist = 0
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 4
+  social_liberal = 6
+  market_liberal = 10
+  social_conservative = 8
+  authoritarian_democrat = 4
+  paternal_autocrat = 60
+  national_populist = 8
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Ma Zhongying"
-	desc = "POLITICS_MA_ZHONGYING_DESC"
-	picture = "Portrait_Xinjiang_Ma_Zhongying.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = SIK_Ma_Zhongying

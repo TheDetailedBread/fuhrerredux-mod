@@ -379,41 +379,6 @@ country_event = {
 		add_political_power = -50
 		add_ideas = ENG_bw
 		hidden_effect = {
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG
-					is_on_continent = europe
-				}
-				remove_building = { type = industrial_complex level = 1 }
-			}
 			set_country_flag = ENG_stock_crash
 			#complete_national_focus = ENG_black_wed 	##### THIS CRASHES THE GAME UNLESS PLAYER CURRENTLY RESEARCHING ANOTHER FOCUS
 		}
@@ -429,6 +394,7 @@ country_event = {
 				}
 			}
 			IRQ = { country_event = { id = irq.10 } }
+      EGY = { country_event = { id = egypt.1 } }
 			RAJ = { 
 				add_timed_idea = {
 					idea = IMP_bw
@@ -458,6 +424,12 @@ country_event = {
 			}
 			SIA = {
 				country_event = { id = siambw.1 }
+			}
+      ARB = {
+        country_event = { id = arabia.11 days = 1 }
+      }
+			PHI = {
+				country_event = { id = philippines.19 days = 2 }
 			}
 		}
 	}
@@ -746,71 +718,106 @@ country_event = {
 		name = "More than a King, a father of a great family."
 		hidden_effect = {
 			set_country_flag = kgv_dead
-			retire_country_leader = yes
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = valkist_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = national_populist_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = social_conservative_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = social_democrat_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = social_liberal_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = market_liberal_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = authoritarian_democrat_subtype
-				traits = { meddler charismatic } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-				traits = { meddler charismatic } 
-			}
+			retire_character = ENG_George_V
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = vanguardist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = collectivist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = libertarian_socialist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = social_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = social_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = market_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = social_conservative_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = authoritarian_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = paternal_autocrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = national_populist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          desc = "POLITICS_ENG_EDWARD_VIII_DESC"
+          ideology = valkist_subtype
+          traits = { meddler charismatic }
+        }
+      }
 		}
 		hidden_effect = {
 			IF = {
@@ -909,71 +916,95 @@ country_event = {
 		add_political_power = -100
 		add_stability = -0.1
 		hidden_effect = {
-			retire_country_leader = yes
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = valkist_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = national_populist_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1"  
-				ideology = social_conservative_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = social_democrat_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1"  
-				ideology = social_liberal_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = market_liberal_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = authoritarian_democrat_subtype
-				traits = { } 
-			}
-			create_country_leader = { 
-				name = "King George VI" 
-				desc = "POLITICS_GEORGE_VI_DESC" 
-				picture = "Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-				traits = {  } 
-			}
+			retire_character = ENG_King_Edward_VIII
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = national_populist_subtype
+          traits = { meddler charismatic }
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_King_George_VI
+        promote_leader = yes
+        country_leader = {
+          ideology = valkist_subtype
+          traits = { meddler charismatic }
+        }
+      }
 		}
 		hidden_effect = {
 			FRA = { news_event = { id = uknews.14 } }
@@ -2156,9 +2187,16 @@ country_event = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
+		set_portraits = {
+			character = ENG_King_Edward_VIII
+			civilian = { 
+				large = "gfx/leaders/ENG/Portrait_ENG_Edward_VIII_autocrat.png" 
+				small = "gfx/interface/ministers/ENG/ENG_King_Edward_VIII.png"
+			}
+		} 
 		remove_every_minister = yes
 		add_ideas = {
-			ENG_Edward_VIII_hog_pau
+			ENG_King_Edward_VIII_hog_pau
 			ENG_John_Hugo_Russell_for_pau
 			ENG_Noel_Pemberton_Billing_eco_pau
 			ENG_Jeffrey_Hamm_sec_pau
@@ -2462,7 +2500,7 @@ country_event = {							##### - TO DO: ADD MORE EVENTS FOR BREAK-UP OF THE EMPIR
 			}
 			remove_every_minister = yes
 			add_ideas = {
-				ENG_Anthony_Eden_hog_sco
+				ENG_Samuel_Hoare_hog_sco
 				ENG_Robert_Boothby_for_sco
 				ENG_John_Siddeley_eco_sco
 				ENG_Philip_Lloyd_Greame_eco_sco
@@ -2650,7 +2688,7 @@ country_event = {
 			}
 			remove_every_minister = yes
 			add_ideas = {
-				ENG_Anthony_Eden_hog_sco
+				ENG_Robert_Cecil_hog_sco
 				ENG_Robert_Boothby_for_sco
 				ENG_John_Siddeley_eco_sco
 				ENG_Philip_Lloyd_Greame_eco_sco
@@ -2706,7 +2744,7 @@ country_event = {
 			add_ideas = {
 				ENG_Arthur_Greenwood_hog_sde
 				ENG_Herbert_Morrison_for_sde
-				ENG_Oswald_Mosley_eco_sde
+				ENG_Oswald_Mosley_eco_lib
 				ENG_James_Chuter_Ede_sec_sde
 			}
 
@@ -3162,7 +3200,7 @@ country_event = {
 			transfer_state = 815
 			transfer_state = 816
 			load_oob = IRE_rising1
-			set_capital = 135
+			set_capital = { state = 135 }
 			set_stability = 0.5
 			set_cosmetic_tag = IRE_FREE
 		}
@@ -3272,55 +3310,63 @@ country_event = {
 		}
 		IRE = { 
 			set_cosmetic_tag = IRE_ENG 
-			set_capital = 815
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = social_conservative_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = social_democrat_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = social_liberal_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = market_liberal_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = authoritarian_democrat_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-				traits = {  } 
-			}
+			set_capital = { state = 815 }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+			add_country_leader_role = {
+        character = IRE_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 		remove_ideas = ENG_irb2
 	}
@@ -3367,55 +3413,63 @@ country_event = {
 		}
 		remove_ideas = ENG_irb2
 		IRE = { 
-			set_capital = 815 
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = social_conservative_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = social_democrat_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = social_liberal_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = market_liberal_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "James Matthew Dillon" 
-				desc = "POLITICS_JAMES_DILLON_DESC" 
-				picture = "Portrait_Ireland_James_Dillon.tga" 
-				expire = "1965.1.1" 
-				ideology = authoritarian_democrat_subtype
-				traits = {  } 
-			}
-			create_country_leader = { 
-				name = "King Edward VIII" 
-				desc = "POLITICS_EDWARD_VIII_DESC" 
-				picture = "Portrait_Britain_Edward_VIII_fx.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-				traits = {  } 
-			}
+			set_capital = { state = 815 }
+			add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = social_conservative_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = market_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = social_liberal_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = authoritarian_democrat_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = IRE_James_Matthew_Dillon
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
+			add_country_leader_role = {
+        character = IRE_Edward_VIII
+        promote_leader = yes
+        country_leader = {
+          ideology = paternal_autocrat_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -3552,7 +3606,7 @@ country_event = {
 			white_peace = ITA
 		}
 		drop_cosmetic_tag = yes
-		set_capital = 815
+		set_capital = { state = 815 }
 	}
 	
 	option = {
@@ -3938,16 +3992,17 @@ country_event = {
 	title = "Order Restored"
 	desc = uk.85.d
 	picture = report_event_europe_funeral
+  is_triggered_only = yes
 	
 	hidden = yes
 	
-	trigger = {
-		original_tag = RAJ
-		NOT = { has_war_with = IND }
-		NOT = { ENG = { has_country_flag = indian_armistice2 } }
-		IND = { exists = no }
-		RAJ = { has_country_flag = RAJ_the_revolt } 
-	}
+	# trigger = {
+	# 	original_tag = RAJ
+	# 	NOT = { has_war_with = IND }
+	# 	NOT = { ENG = { has_country_flag = indian_armistice2 } }
+	# 	IND = { exists = no }
+	# 	RAJ = { has_country_flag = RAJ_the_revolt } 
+	# }
 	
 	fire_only_once = yes
 	
@@ -4012,6 +4067,12 @@ country_event = {
 				}
 			}
 			puppet = RAJ
+			RAJ = {
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				} 
+			}
 		}
 	}
 }
@@ -4878,7 +4939,7 @@ country_event = {
 			transfer_state = 815
 			transfer_state = 816
 			load_oob = IRE_rising1
-			set_capital = 135
+			set_capital = { state = 135 }
 			set_stability = 0.5
 			set_cosmetic_tag = IRE_FREE
 		}
@@ -5317,7 +5378,10 @@ country_event = {
 		add_political_power = -100
 		hidden_effect = {
 			country_event = { id = uk.146 days = 14 }
-			swap_ideas = { remove_idea = ENG_Arthur_Greenwood_hog add_idea = ENG_Oswald_Mosley_hog }
+			remove_ideas_with_trait = head_of_government
+      add_ideas = {
+        ENG_Oswald_Mosley_hog_lib
+      }
 		}
 	}
 }
@@ -5406,15 +5470,30 @@ country_event = {
 				}
 				add_popularity = { ideology = libertarian_socialist popularity = 0.10 }
 			}
-			retire_country_leader = yes
-			create_country_leader = { 
-				name = "Oswald Mosley" 
-				desc = "POLITICS_MOSLEY_DESC" 
-				picture = "Portrait_Britain_Oswald_Mosley.tga" 
-				expire = "1965.1.1" 
-				ideology = libertarian_socialist_subtype
-				traits = {  } 
-			}
+			add_country_leader_role = {
+        character = ENG_Jock_Haston
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_Arthur_MacManus
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = {}
+        }
+      }
+      add_country_leader_role = {
+        character = ENG_Oswald_Mosley
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -5665,9 +5744,26 @@ country_event = {
 		trigger = {
 			has_country_flag = ENG_c_imperial
 		}
-		create_wargoal = {
-			target = ARB
-			type = annex_everything
+		if = {
+			limit = { country_exists = RAS }
+			create_wargoal = {
+				target = RAS
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = ARB }
+			create_wargoal = {
+				target = ARB
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SAU }
+			create_wargoal = {
+				target = SAU
+				type = annex_everything
+			}
 		}
     }
 	
@@ -5676,12 +5772,29 @@ country_event = {
 			has_country_flag = ENG_c_imperial
 		}
         name = "Forget diplomacy, crush them!"
+		if = {
+			limit = { country_exists = RAS }
+			declare_war_on = {
+				target = RAS
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = ARB }
+			declare_war_on = {
+				target = ARB
+				type = annex_everything
+			}
+		}
+		if = {
+			limit = { country_exists = SAU }
+			declare_war_on = {
+				target = ARB
+				type = annex_everything
+			}
+		}
 		ai_chance = {
 			base = 100
-		}
-		declare_war_on = {
-			target = ARB
-			type = annex_everything
 		}
     }
 }
@@ -14910,13 +15023,13 @@ country_event = {
 #			transfer_state = 864
 #				add_state_core = 864
 #			load_oob = ZAF_boerwar
-#			set_capital = 275
+#			set_capital = { state = 275 }
 #			set_stability = 0.5
 #			set_politics = { ruling_party = national_populist elections_allowed = no }
 #			create_country_leader = {
 #				name = "Manie Maritz"
 #				desc = ""
-#				picture = "gfx/leaders/SAF/Portrait_ZAF_Maritz.tga"
+#				picture = "gfx/leaders/SAF/Portrait_ZAF_Maritz.png"
 #				expire = "1965.1.1"
 #				ideology = national_populist_subtype
 #				traits = { }
@@ -15590,7 +15703,7 @@ country_event = {
 			ai_chance = {
 				base = 0
 				modifier = {
-					add = +25
+					add = 25
 					HUN = { has_army_size = { size < 5 } }
 				}
 			}
@@ -15637,380 +15750,6 @@ country_event = {
 	}
 }
 
-##### Fate of X Events (replaces Liberate Nations generic decisions) #####
-
-add_namespace = ukfate
-
-country_event = {
-	id = ukfate.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ukfate.1"}
-	title = "The Fate of France"
-	desc = ukfate.1.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-		}
-		name = "Annex Normandy & Aquitaine, liberate Britanny and France."
-		BRI = {
-			add_state_core = 14
-			add_state_core = 30
-		}
-		release_puppet = BRI
-		every_state = {
-			limit = {
-				is_core_of = FRA
-				is_owned_by = ROOT
-				NOT = {
-					is_core_of = ROOT
-				}
-			}
-			FRP = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
-			ROOT = { puppet = FRP }
-		}
-		hidden_effect = {
-			transfer_state = 15
-			transfer_state = 23
-			transfer_state = 19
-			transfer_state = 25
-		}
-		FRP = {
-			copy_government_idea_of_ROOT = yes
-			set_cosmetic_tag = ENG_FRP
-			IF = {
-				limit = {
-					has_government = paternal_autocrat
-				}
-				create_country_leader = { 
-					name = "H.R.H. George I" 
-					desc = "POLITICS_GEORGE_I_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.tga" 
-					expire = "1965.1.1" 
-					ideology = paternal_autocrat_subtype
-				}
-			}
-			IF = {
-				limit = { 
-					NOT = { has_government = paternal_autocrat }
-				}
-				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
-				add_popularity = { ideology = authoritarian_democrat popularity = 0.2 }
-				create_country_leader = { 
-					name = "Military Administration" 
-					desc = "POLITICS_GEORGE_I_DESC" 
-					picture = "gfx/leaders/USA/Portrait_USA_Council_of_Patriots.tga" 
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
-			}
-		}
-	}
-	
-	#option = {
-		#trigger = {
-			#has_government = paternal_autocrat
-		#}
-		#name = "Re-create the French Kingdom and place a Windsor on the throne."
-		#every_state = {
-			#limit = {
-				#is_core_of = FRA
-				#is_owned_by = ROOT
-				#NOT = {
-					#is_core_of = ROOT
-				#}
-			#}
-			#FRP = {
-				#transfer_state = PREV
-				#add_state_core = PREV
-			#}
-			#ROOT = { puppet = FRP }
-		#}
-		#FRP = {
-			#set_cosmetic_tag = ENG_FRP
-			#create_country_leader = { 
-				#name = "H.R.H. George I" 
-				#desc = "POLITICS_GEORGE_I_DESC" 
-				#picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.tga" 
-				#expire = "1965.1.1" 
-				#ideology = paternal_autocrat_subtype
-			#}
-		#}
-	#}
-	
-	option = {
-		name = "Maintain occupation"
-	}
-}
-
-country_event = {
-	id = ukfate.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ukfate.2"}
-	title = "The Fate of Germany"
-	desc = ukfate.2.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-		}
-		name = "Annex Hannover and puppet Germany."
-		every_state = {
-			limit = {
-				is_core_of = GER
-				is_owned_by = ROOT
-				NOT = {
-					is_core_of = ROOT
-				}
-			}
-			GRP = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
-			ROOT = { puppet = GRP }
-		}
-		hidden_effect = {
-			transfer_state = 59
-			transfer_state = 56
-		}
-		GRP = {
-			copy_government_idea_of_ROOT = yes
-			set_cosmetic_tag = ENG_GRP
-			IF = {
-				limit = {
-					has_government = paternal_autocrat
-				}
-				create_country_leader = { 
-					name = "H.R.H. Henry I" 
-					desc = "POLITICS_HENRY_I_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_Henry.tga" 
-					expire = "1965.1.1" 
-					ideology = paternal_autocrat_subtype
-				}
-			}
-			IF = {
-				limit = { 
-					NOT = { has_government = paternal_autocrat }
-				}
-				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
-				add_popularity = { ideology = authoritarian_democrat popularity = 0.2 }
-				create_country_leader = { 
-					name = "Military Administration" 
-					desc = "POLITICS_GEORGE_I_DESC" 
-					picture = "gfx/leaders/USA/Portrait_USA_Council_of_Patriots.tga"
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
-			}
-		}
-	}
-	
-	option = {
-		trigger = {
-			has_government = paternal_autocrat
-		}
-		name = "Create the German Kingdom and place a Windsor on the throne."
-		every_state = {
-			limit = {
-				is_core_of = GER
-				is_owned_by = ROOT
-				NOT = {
-					is_core_of = ROOT
-				}
-			}
-			GRP = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
-			ROOT = { puppet = GRP }
-		}
-		GRP = {
-			set_cosmetic_tag = ENG_GRP
-			create_country_leader = { 
-				name = "H.R.H. Henry I" 
-				desc = "POLITICS_HENRY_I_DESCC" 
-				picture = "gfx/leaders/ENG/Portrait_Britain_Henry.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-			}
-		}
-	}
-	
-	option = {
-		name = "Maintain occupation"
-	}
-}
-
-country_event = {
-	id = ukfate.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ukfate.3"}
-	title = "The Fate of Italy"
-	desc = ukfate.3.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-		}
-		name = "Annex Sardinia and Sicily, and puppet the Italian Government."
-		every_state = {
-			limit = {
-				is_core_of = ITA
-				is_owned_by = ROOT
-				NOT = {
-					is_core_of = ROOT
-				}
-			}
-			ITP = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
-			ROOT = { puppet = ITP }
-		}
-		hidden_effect = {
-			transfer_state = 114
-			transfer_state = 768
-			transfer_state = 115
-		}
-		ITP = {
-			copy_government_idea_of_ROOT = yes
-			set_cosmetic_tag = ENG_ITP
-			IF = {
-				limit = {
-					has_government = paternal_autocrat
-				}
-				create_country_leader = { 
-					name = "George I" 
-					desc = "POLITICS_GEORGE_I_DESC" 
-					picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.tga" 
-					expire = "1965.1.1" 
-					ideology = paternal_autocrat_subtype
-				}
-			}
-			IF = {
-				limit = { 
-					NOT = { has_government = paternal_autocrat }
-				}
-				set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
-				add_popularity = { ideology = authoritarian_democrat popularity = 0.2 }
-				create_country_leader = { 
-					name = "Military Administration" 
-					desc = "POLITICS_MILITARY_ADMINISTRATION_DESC" 
-					picture = "gfx/leaders/USA/Portrait_USA_Council_of_Patriots.tga" 
-					expire = "1965.1.1" 
-					ideology = authoritarian_democrat_subtype
-				}
-			}
-		}
-	}
-	
-	option = {
-		trigger = {
-			has_government = paternal_autocrat
-		}
-		name = "Place a Windsor on the Italian throne to ensure our close ties."
-		every_state = {
-			limit = {
-				is_core_of = ITA
-				is_owned_by = ROOT
-				NOT = {
-					is_core_of = ROOT
-				}
-			}
-			ITP = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
-			ROOT = { puppet = ITP }
-		}
-		ITP = {
-			set_cosmetic_tag = ENG_ITP
-			create_country_leader = { 
-				name = "George I" 
-				desc = "POLITICS_GEORGE_I_DESC" 
-				picture = "gfx/leaders/ENG/Portrait_Britain_George_VI.tga" 
-				expire = "1965.1.1" 
-				ideology = paternal_autocrat_subtype
-			}
-		}
-	}
-	
-	option = {
-		name = "Maintain occupation"
-	}
-}
-
-country_event = {
-	id = ukfate.4
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ukfate.4"}
-	title = "The Fate of the United States"
-	desc = ukfate.4.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Give New England to Canada, annex the Eastern sea-board and establish a puppet Government."
-		every_state = {
-			limit = {
-				is_controlled_by = ROOT
-				region = 197
-			}
-			CAN = {
-				transfer_state = PREV
-			}
-		}
-		release_puppet = USA
-		USA = { set_cosmetic_tag = ENG_USA }
-		hidden_effect = {
-			every_state = {
-				limit = {
-					region = 117
-				}
-				ENG = { transfer_state = PREV }
-			}
-			IF = {
-				limit = {
-					NOT = { MEX = { controls_state = 743 } }
-				}
-				USA = { transfer_state = 743 }
-			}
-			IF = {
-				limit = {
-					NOT = { MEX = { controls_state = 484 } }
-				}
-				USA = { transfer_state = 484 }
-			}
-		}
-	}
-	
-	option = {
-		name = "Create a Dominion of North America"
-		release_puppet = USA
-		USA = { set_cosmetic_tag = ENG_USA }
-		hidden_effect = {
-			IF = {
-				limit = {
-					NOT = { MEX = { controls_state = 743 } }
-				}
-				USA = { transfer_state = 743 }
-			}
-			IF = {
-				limit = {
-					NOT = { MEX = { controls_state = 484 } }
-				}
-				USA = { transfer_state = 484 }
-			}
-		}
-	}
-	
-	option = {
-		name = "Maintain occupation"
-	}
-}
-
 #############
 # 0.2 Stuff #
 #############
@@ -16038,8 +15777,8 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}
-		add_ideas = winston_churchill
 		hidden_effect = { set_country_flag = ENG_chose_churchill }
+		add_ideas = ENG_Winston_Churchill_cnav
 	}
 	
 	option = {
@@ -16051,8 +15790,8 @@ country_event = {
 				add = 50
 			}
 		}
-		add_ideas = leo_amery
 		hidden_effect = { set_country_flag = ENG_chose_amery }
+		add_ideas = ENG_Leo_Amery_cnav
 	}
 	
 	option = {
@@ -16064,8 +15803,8 @@ country_event = {
 				add = -50
 			}
 		}
-		add_ideas = viscount_cooper
 		hidden_effect = { set_country_flag = ENG_chose_cooper }
+		add_ideas = ENG_Duff_Cooper_cnav
 	}
 }
 
@@ -16084,7 +15823,7 @@ country_event = {
 		original_tag = ENG
 		has_government = social_conservative
 		has_country_flag = tory_maj
-		has_idea = viscount_cooper
+		has_idea = ENG_Duff_Cooper_cnav
 		date > 1938.1.1
 		date < 1938.12.30
 		has_completed_focus = ENG_reorg_admiralty
@@ -16202,7 +15941,7 @@ country_event = {
 	option = {
 		name = "Fire that idiot Cooper at once!"
 		add_political_power = -150
-		remove_ideas = viscount_cooper
+		remove_ideas = ENG_Duff_Cooper_cnav
 		hidden_effect = { country_event = { id = ukadm.12 days = 30 } }
 	}
 }
@@ -16242,7 +15981,10 @@ country_event = {
 		hidden_effect = { country_event = { id = ukadm.10 days = 30 } }
 		hidden_effect = { 
 			load_focus_tree = british_focus_adm 
-			swap_ideas = { remove_idea = ENG_Samuel_Hoare_hog add_idea = ENG_Eden_hog }
+      remove_ideas_with_trait = head_of_government
+      add_ideas = {
+        ENG_Anthony_Eden_hog_sco
+      }
 		}
 	}
 }

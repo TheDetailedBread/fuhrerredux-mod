@@ -1,6 +1,6 @@
-﻿capital = 439
+﻿capital = 441
 
-oob = "INF"
+oob = "00_default_template"
 
 # Starting tech
 set_technology = {
@@ -9,9 +9,8 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
-	transport = 1
-	CAS1 = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 set_convoys = 50
@@ -19,10 +18,6 @@ set_stability = 0.3
 set_war_support = 0.2
 
 add_ideas = {
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	absolute_monarchy
 }
 
@@ -34,41 +29,19 @@ set_politics = {
 }
 
 set_popularities = {
-vanguardist = 0
-collectivist = 17
-libertarian_socialist = 0
-social_democrat = 6
-social_liberal = 7
-market_liberal = 7
-social_conservative = 7
-authoritarian_democrat = 0
-paternal_autocrat = 41
-national_populist = 15
-valkist = 0
+  vanguardist = 0
+  collectivist = 17
+  libertarian_socialist = 0
+  social_democrat = 6
+  social_liberal = 7
+  market_liberal = 7
+  social_conservative = 7
+  authoritarian_democrat = 0
+  paternal_autocrat = 41
+  national_populist = 15
+  valkist = 0
 }
 
 add_ideas = {
 	party_pop_0_40
-}
-
-create_country_leader = {
-	name = "Mirza Basheer-Ud-Din Mahmood Ahmad"
-	desc = "POLITICS_MIRZA_AHMAD_DESC"
-	picture = "mirza_basheer-ud-din_mahmood_ahmad.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Hari Singh"
-	desc = "POLITICS_HARI_SINGH_DESC"
-	picture = "Hari_Singh.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		
-	}
 }

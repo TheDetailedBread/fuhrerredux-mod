@@ -10,13 +10,9 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.1"}
 	title = worldnews.1.t
 	desc = worldnews.1.d
-	picture = GFX_news_event_assassination_of_alexander_kerensky
-
+	picture = GFX_news_event_assassination
 	major = yes
-
 	is_triggered_only = yes
-
-	
 
 	show_major = {
 		NOT = { tag = TUR }
@@ -31,14 +27,10 @@ news_event = {
 news_event = {
 	id = worldnews.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.2"}
-	title = "The London Stock Market Crash"
+	title = worldnews.2.t
 	desc = uknews.2.d
-	picture = UK_news_parliament
-
+	picture = GFX_news_event_ENG_parliament
 	major = yes
-
-	
-
 	is_triggered_only = yes
 
 	trigger = {
@@ -54,10 +46,6 @@ news_event = {
 		NOT = { tag = ENG }
 	}
 
-	#mean_time_to_happen = {
-	#	days = 2
-	#}
-
 	immediate = { set_global_flag = black_wednesday }
 
 	option = {
@@ -72,16 +60,12 @@ news_event = {
 	title = worldnews.3.t
 	desc = worldnews.3.d
 	picture = GFX_news_event_soldiers_marching
-
 	major = yes
+  is_triggered_only = yes
 
 	mean_time_to_happen = {
 		days = 1
 	}
-
-	is_triggered_only = yes
-
-	
 
 	show_major = {
 		NOT = { tag = TUR }
@@ -96,11 +80,11 @@ news_event = {
 news_event = {
 	id = worldnews.4
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.4"}
-	title = "The Paris Colonial Exposition"
+	title = worldnews.4.t
 	desc = worldnews.4.d
 	picture = GFX_news_event_FRA_colonial_exhibition #GFX_news_event_057
-
 	major = yes
+  immediate = { set_global_flag = paris_colonial_exposition }
 
 	trigger = {
 		NOT = { has_global_flag = paris_colonial_exposition }
@@ -111,23 +95,15 @@ news_event = {
 		}
 	}
 
-	
-
 	mean_time_to_happen = {
 		days = 2
-	}
-
-	immediate = { set_global_flag = paris_colonial_exposition }
-
-	show_major = {
-		#NOT = { tag = FRA }
 	}
 
 	option = {
 		trigger = {
 			has_country_flag = FRA_Attending_Paris_Colonial_Exposition
 		}
-		name = "Quite the experience!"
+		name = worldnews.4.a
 		add_political_power = 50
 	}
 
@@ -138,14 +114,14 @@ news_event = {
 				tag = FRA
 			}
 		}
-		name = "Seems like they're trying to justify their Imperialism."
+		name = worldnews.4.b
 	}
 
 	option = {
 		trigger = {
 			tag = FRA
 		}
-		name = "Vive l'Republique!"
+		name = worldnews.4.c
 		add_political_power = 50
 	}
 }
@@ -153,11 +129,11 @@ news_event = {
 news_event = {
 	id = worldnews.5
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.5"}
-	title = "French Military Coup d'état"
+	title = worldnews.5.t
 	desc = worldnews.5.d
 	picture = GFX_news_event_german_volunteers
-
 	major = yes
+  immediate = { set_global_flag = france_falls_to_junta }
 
 	trigger = {
 		NOT = { has_global_flag = france_falls_to_junta }
@@ -168,16 +144,8 @@ news_event = {
 		}
 	}
 
-	
-
 	mean_time_to_happen = {
 		days = 2
-	}
-
-	immediate = { set_global_flag = france_falls_to_junta }
-
-	show_major = {
-		#NOT = { tag = FRA }
 	}
 
 	option = {
@@ -190,7 +158,7 @@ news_event = {
 				has_government = vanguardist
 			}
 		}
-		name = "A Decadent Democracy turned into a Decadent Dictatorship."
+		name = worldnews.5.a
 	}
 
 	option = {
@@ -203,7 +171,7 @@ news_event = {
 				has_government = social_conservative
 			}
 		}
-		name = "Yet another flame of European Democracy has been snuffed out."
+		name = worldnews.5.b
 	}
 
 	option = {
@@ -219,7 +187,7 @@ news_event = {
 				has_government = national_populist
 			}
 		}
-		name = "Death is nothing, but to live defeated and inglorious is to die daily."
+		name = worldnews.5.c
 	}
 
 	option = {
@@ -231,7 +199,7 @@ news_event = {
 				has_government = valkist
 			}
 		}
-		name = "The French people knew their place, their Military has yet to learn."
+		name = worldnews.5.d
 	}
 }
 
@@ -239,10 +207,9 @@ news_event = {
 news_event = {
 	id = worldnews.6
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.6"}
-	title = "German Occupation of Austria"
+	title = worldnews.6.t
 	desc = worldnews.6.d
 	picture = GFX_news_event_GER_alsace
-
 	major = yes
 
 	trigger = {
@@ -258,19 +225,13 @@ news_event = {
 		days = 10
 	}
 
-	
-
 	immediate = { set_global_flag = ger_occ_aus }
-
-	show_major = {
-		#NOT = { tag = GER }
-	}
 
 	option = {
 		trigger = {
 			is_in_faction_with = FRA
 		}
-		name = "We cannot allow Germany to annex nations left-and-right!"
+		name = worldnews.6.a
 		add_war_support = 0.05
 	}
 
@@ -281,14 +242,14 @@ news_event = {
 				is_in_faction_with = FRA
 			}
 		}
-		name = "It seems Austria has finally faded into the depths of history books."
+		name = worldnews.6.b
 	}
 
 	option = {
 		trigger = {
 			tag = GER
 		}
-		name = "Germans everywhere must stand united!"
+		name = worldnews.6.c
 	}
 }
 
@@ -296,10 +257,9 @@ news_event = {
 news_event = {
 	id = worldnews.7
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.7"}
-	title = "Chaos in Kiel"
+	title = worldnews.7.t
 	desc = worldnews.7.d
 	picture = GFX_news_event_063
-
 	major = yes
 
 	trigger = {
@@ -310,8 +270,6 @@ news_event = {
 			has_global_flag = Important_News_Events
 		}
 	}
-
-	
 
 	mean_time_to_happen = {
 		days = 2
@@ -326,7 +284,7 @@ news_event = {
 				tag = DEN
 			}
 		}
-		name = "We will be victorious!"
+		name = worldnews.7.a
 	}
 
 	option = {
@@ -338,73 +296,10 @@ news_event = {
 				}
 			}
 		}
-		name = "Yet another leftist revolution in Europe... Wait, they're leftists, right?"
+		name = worldnews.7.b
 	}
 }
 
-news_event = { # Removed event
-	id = worldnews.8
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.8"}
-	title = worldnews.8.t
-	desc = worldnews.8.d
-	#picture
-
-	major = yes
-
-	is_triggered_only = yes
-
-	
-
-	trigger = {
-		has_global_flag = All_News_Events
-		has_global_flag = Important_News_Events
-	}
-
-	show_major = {
-        NOT = { tag = SOV }
-    }
-  	option = {
-  			trigger = {
-  				NOT = {
-  					tag = ENG
-  					tag = FRA
-  					tag = USA
-  					tag = GER
-  					has_government = collectivist
-  					has_government = vanguardist
-  					has_government = libertarian_socialist
-  			}
-  		}
-  		name = "The leader of socialism worldwide has finally fallen."
-  	}
-
-    option = {
-    		trigger = {
-    			OR = {
-    			tag = ENG
-    			tag = FRA
-    			tag = USA
-    			}
-    		}
-    	name = "Russia's communist dictator has finally died."
-    	}
-    option = {
-    		trigger = {
-    			tag = GER
-    	}
-    	name = "One step closer to the destruction of the Bolshevik menace."
-   	}
-   	option = {
-   			trigger = {
-   				OR = {
-   				has_government = collectivist
-   				has_government = vanguardist
-   				has_government = libertarian_socialist
-   				}
-   			}
-   		name = "The international proletariat mourn for you tonight, Comrade Lenin!"
-   	}
-}
 
 ###Alternate History###
 
@@ -414,6 +309,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.13"}
 	title = worldnews.13.t
 	desc = worldnews.13.d
+  picture = GFX_report_event_ernest_raymond
 
 	trigger = {
 		is_ai = no
@@ -424,8 +320,6 @@ country_event = {
 			has_global_flag = Important_News_Events
 		}
 	}
-
-	
 
 	mean_time_to_happen = {
 		months = 6
@@ -444,6 +338,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.14"}
 	title = worldnews.14.t
 	desc = worldnews.14.d
+  picture = GFX_report_event_eric_blair
 
 	trigger = {
 		is_ai = no
@@ -454,8 +349,6 @@ country_event = {
 			has_global_flag = Important_News_Events
 		}
 	}
-
-	
 
 	mean_time_to_happen = {
 		months = 6
@@ -467,12 +360,13 @@ country_event = {
 		name = worldnews.14.a
 	}
 }
-# Tides of Revolution
+# Knife of the Letter
 country_event = {
 	id = worldnews.15
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.15"}
 	title = worldnews.15.t
 	desc = worldnews.15.d
+  picture = GFX_report_event_andre_malraux
 
 	trigger = {
 		is_ai = no
@@ -483,8 +377,6 @@ country_event = {
 			has_global_flag = Important_News_Events
 		}
 	}
-
-	
 
 	mean_time_to_happen = {
 		months = 6
@@ -543,7 +435,7 @@ add_namespace = uknews
 news_event = {
 	id = uknews.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event uknews.1"}
-	title = "A Peaceful Ending at Midnight"
+	title = uknews.1.t
 	desc = uknews.1.d
 	picture = GFX_news_event_generic_funeral
 
@@ -559,8 +451,6 @@ news_event = {
 			has_global_flag = Important_News_Events
 		}
 	}
-
-	
 
 	show_major = {
 		NOT = { tag = ENG }
@@ -582,7 +472,7 @@ news_event = {
 				tag = RAJ
 			}
 		}
-		name = "More than a King, a father of a great family"
+		name = uknews.1.a
 		add_political_power = -50
 	}
 
@@ -595,7 +485,7 @@ news_event = {
 			NOT = { original_tag = RAJ }
 			NOT = { original_tag = NFL }
 		}
-		name = "A new King. A new Empire?"
+		name = uknews.1.b
 	}
 
 }
@@ -609,13 +499,9 @@ news_event = { # Olympicss event
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.39"}
 	title = worldnews.39.t
 	desc = worldnews.39.d
-	picture = GFX_news_event_assassination_of_alexander_kerensky
-
+	picture = GFX_news_event_assassination
 	major = yes
-
 	is_triggered_only = yes
-
-	
 
 	option = {
 		name = worldnews.39.a
@@ -630,12 +516,8 @@ news_event = {
 	title = worldnews.40.t
 	desc = worldnews.40.d
 	picture = GFX_news_event_german_speech
-
 	is_triggered_only = yes
-
 	major = yes
-
-	
 
 	show_major = {
 		NOT = { tag = GER }
@@ -653,12 +535,8 @@ news_event = {
 	title = worldnews.41.t
 	desc = worldnews.41.d
 	picture = Ausgleich_start
-
 	is_triggered_only = yes
-	
 	fire_only_once = yes
-
-	
 
 	major = yes
 
@@ -678,11 +556,7 @@ news_event = {
 	title = worldnews.42.t
 	desc = worldnews.42.d
 	picture = Ausgleich_start
-
 	is_triggered_only = yes
-
-	
-
 	major = yes
 
 	show_major = {
@@ -701,13 +575,9 @@ news_event = {
 	title = worldnews.43.t
 	desc = worldnews.43.d
 	picture = GFX_news_event_germany_victory
-
 	is_triggered_only = yes
-
 	major = yes
 	
-	
-
 	show_major = {
 		NOT = { tag = GER }
 	}
@@ -724,11 +594,7 @@ news_event = {
 	title = worldnews.44.t
 	desc = worldnews.44.d
 	picture = Ausgleich_start
-
 	is_triggered_only = yes
-
-	
-
 	major = yes
 
 	show_major = {
@@ -747,11 +613,7 @@ news_event = {
 	title = worldnews.45.t
 	desc = worldnews.45.d
 	picture = Ausgleich_start
-
 	is_triggered_only = yes
-
-	
-
 	major = yes
 
 	show_major = {
@@ -770,7 +632,7 @@ news_event = {
 news_event = {
 	id = worldnews.50
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.50"}
-	title = "The Bolivian Revolution"
+	title = worldnews.50.t
 	desc = worldnews.50.d
 	picture = GFX_news_event_BOL_syndicalists
 	trigger = {
@@ -812,7 +674,7 @@ news_event = {
 				has_government = vanguardist
 			}
 		}
-		name = "The World Revolution continues"
+		name = worldnews.50.a
 	}
 
 	option = {
@@ -823,7 +685,7 @@ news_event = {
 				NOT = { has_government = vanguardist }
 			}
 		}
-		name = "Who cares about Bolivia?"
+		name = worldnews.50.b
 	}
 }
 
@@ -909,9 +771,10 @@ news_event = {
 news_event = {
 	id = worldnews.100
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.100"}
-	title = "The Second Great War"
+	title = worldnews.100.t
 	desc = worldnews.100.d
 	picture = GFX_news_event_second_weltkrieg
+  fire_only_once = yes
 
 	trigger = {
 		FRA = { has_war_with = GER }
@@ -922,12 +785,10 @@ news_event = {
 		}
 	}
 
-	
-
 	major = yes
 
 	mean_time_to_happen = {
-		days = 7
+		days = 1
 	}
 
 	immediate = { set_global_flag = gw2 }
@@ -939,7 +800,7 @@ news_event = {
 				NOT = { has_war_with = FRA }
 			}
 		}
-		name = "The fate of Europe hangs in the balance"
+		name = worldnews.100.a
 	}
 
 	option = {
@@ -949,7 +810,7 @@ news_event = {
 				has_war_with = GER
 			}
 		}
-		name = "We will be victorious!"
+		name = worldnews.100.b
 		hidden_effect = {
 			IF = {
 				limit = {
@@ -980,11 +841,7 @@ news_event = {
 	title = worldnews.101.t
 	desc = worldnews.101.d
 	picture = GFX_news_event_004
-
 	major = yes
-
-	
-
 	is_triggered_only = yes
 
 	show_major = {
@@ -994,42 +851,18 @@ news_event = {
 		}
 	}
 
-	
-
 	option = {
 		name = worldnews.101.a
 	}
 }
 
-##################
-# ROMANIAN EVENTS #
-##################
-news_event = { #Transylvanian revolt
-	id = worldnews.102
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.102"}
-	title = worldnews.102.t
-	desc = worldnews.102.d
-	picture = GFX_news_event_004
-
-	major = yes
-
-	is_triggered_only = yes
-
-	
-
-	option = {
-		name = worldnews.102.a
-	}
-}
-news_event = {
+news_event = { # Revolution in the Turkish Republic
 	id = worldnews.103
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.103"}
 	title = worldnews.103.t
 	desc = worldnews.103.d
 	picture = GFX_news_event_004
-
 	major = yes
-
 	is_triggered_only = yes
 
 	trigger = {
@@ -1042,128 +875,37 @@ news_event = {
 		}
 	}
 
-	
-
 	option = {
 		name = worldnews.103.a
 	}
 }
 
-news_event = {
+news_event = { # Third Mexican-American War
 	id = worldnews.104
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.104"}
-	title = "The Third Mexican-American War"
+	title = worldnews.104.t
 	desc = worldnews.104.d
 	picture = GFX_news_event_004
-
 	major = yes
-
 	is_triggered_only = yes
 
-	
-
 	option = {
-		name = "So it goes."
+		name = worldnews.104.a
 	}
-
 }
 
-news_event = {
-	id = worldnews.105
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.105"}
-	title = "Long Wins The Presidency of the United States"
-	desc = worldnews.105.d
-	picture = GFX_news_event_long
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	
-
-	option = {
-		name = "Let's see how dictatorial he actually is..."
-	}
-
-}
-
-news_event = {
-	id = worldnews.106
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.106"}
-	title = "Roosevelt Wins the Presidency of the United States"
-	desc = worldnews.106.d
-	picture = GFX_Roosevelt_Wins_the_Presidency
-
-	major = yes
-
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-
-	option = {
-		name = "Will he follow his father's legacy?"
-	}
-
-}
-
-news_event = {
-	id = worldnews.107
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.107"}
-	title = "Landon Wins the Presidency of the United States"
-	desc = worldnews.107.d
-	picture = GFX_Landon_Wins_the_Presidency
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	
-
-	option = {
-		name = "Will he just be more of the same?"
-	}
-
-}
-
-news_event = {
-	id = worldnews.108
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.108"}
-	title = "Garner Wins the Presidency of the United States"
-	desc = worldnews.108.d
-	picture = GFX_news_event_garner
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = "Hopefully he can measure corruption, too."
-	}
-
-}
-
-news_event = {
+news_event = { # A Strange Interregnum
 	id = worldnews.109
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.109"}
-	title = "A Strange Interregnum"
+	title = worldnews.109.t
 	desc = worldnews.109.d
-	picture = GFX_zhang_zuolin_assassination
-
+	picture = GFX_news_event_MAN_beijing
 	major = yes
-
 	is_triggered_only = yes
 
-	
 
 	option = {
-		name = "China descends towards a deeper chaos."
+		name = worldnews.109.a
 	}
 }
 
@@ -1171,12 +913,11 @@ news_event = {
 news_event = {
 	id = worldnews.110
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.110"}
-	title = "[RUS.GetNameDef] retakes Russia"
+	title = worldnews.110.t
 	desc = worldnews.110.d
-	picture = GFX_news_event_RUS_soviet_victory
-
+	picture = GFX_news_event_RUS_victory
 	major = yes
-
+  is_triggered_only = yes
 
 	trigger = {
 		wants_world_news = yes
@@ -1186,17 +927,13 @@ news_event = {
 		NOT = { tag = RUS }
 	}
 
-	
-
-	is_triggered_only = yes
-
 	option = {
-		name = "The loss of the homeland of the revolution will be severe"
+		name = worldnews.110.a
 		trigger = { has_socialist_government = yes }
 	}
 
 	option = {
-		name = "Good riddance"
+		name = worldnews.110.b
 		trigger = { NOT = { has_socialist_government = yes } }
 	}
 
@@ -1205,16 +942,15 @@ news_event = {
 news_event = {
 	id = worldnews.111
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.111"}
-	title = "Soviet Union beats the [RUS.GetNameDef]"
+	title = worldnews.111.t
 	desc = worldnews.111.d
-	picture = GFX_news_event_RUS_soviet_victory
-
+	picture = GFX_news_event_RUS_victory
 	major = yes
+  fire_only_once = yes
 
 	immediate = {
 		set_global_flag = SOV_RUS_WAR_NEWS_DONE
 	}
-
 
 	trigger = {
 		NOT = {
@@ -1230,15 +966,13 @@ news_event = {
 		NOT = { tag = SOV }
 	}
 
-	fire_only_once = yes
-
 	option = {
-		name = "This has severly strengthened the Soviet Union"
+		name = worldnews.111.a
 		trigger = { NOT = { has_socialist_government = yes } }
 	}
 
 	option = {
-		name = "Another victory for the people!"
+		name = worldnews.111.b
 		trigger = { has_socialist_government = yes }
 
 	}
@@ -1247,91 +981,79 @@ news_event = {
 news_event = {
 	id = worldnews.112
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.112"}
-	title = "The USM wins the Russian Election"
+	title = worldnews.112.t
 	desc = worldnews.112.d
-	picture = GFX_POL_election_event
-
+	picture = GFX_news_event_RUS_election
 	major = yes
+  is_triggered_only = yes
 
 	trigger = {
 		wants_world_news = yes
-}
+  }
 
 	show_major = {
 		NOT = { tag = RUS }
 		regional_asia_news = yes
-		}
-
-	is_triggered_only = yes
-
-	
+	}
 
 	option = {
-		name = "An interesting development"
+		name = worldnews.112.a
 	}
 }
 
 news_event = {
 	id = worldnews.113
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.113"}
-	title = "Union Of Regeneration wins Russian Election"
+	title = worldnews.113.t
 	desc = worldnews.113.d
-	picture = GFX_POL_election_event
-
+	picture = GFX_news_event_RUS_election
 	major = yes
+  is_triggered_only = yes
 
 	trigger = {
 		wants_world_news = yes
-}
+  }
 
 	show_major = {
 		NOT = { tag = RUS }
 		regional_asia_news = yes
-		}
-
-	is_triggered_only = yes
-
-	
+	}
 
 	option = {
-		name = "An interesting development"
+		name = worldnews.113.a
 	}
 }
 
 news_event = {
 	id = worldnews.114
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.114"}
-	title = "The National Center wins the Russian Election"
+	title = worldnews.114.t
 	desc = worldnews.114.d
-	picture = GFX_POL_election_event
-
+	picture = GFX_news_event_RUS_election
 	major = yes
+  is_triggered_only = yes
 
 	trigger = {
 		wants_world_news = yes
-    }
+  }
 
 	show_major = {
 		NOT = { tag = RUS }
 		regional_asia_news = yes
-		}
-
-	is_triggered_only = yes
-
-	
+	}
 
 	option = {
-		name = "An interesting development"
+		name = worldnews.114.a
 	}
 }
 
 news_event = {
 	id = worldnews.115
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.115"}
-	title = "The Kornilov coups the Russian Government"
+	title = worldnews.115.t
 	desc = worldnews.115.d
-	picture = GFX_news_event_RUS_coup
-
+	picture = GFX_news_event_RUS_kornilov
+  is_triggered_only = yes
 	major = yes
 
 	trigger = {
@@ -1341,91 +1063,36 @@ news_event = {
 	show_major = {
 		NOT = { tag = RUS }
 		regional_asia_news = yes
-		}
-
-	is_triggered_only = yes
-
-	
+	}
 
 	option = {
-		name = "An interesting development"
+		name = worldnews.115.a
 	}
 }
 
-news_event = {
-	id = worldnews.116
-	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.116"}
-	title = "US declares war on Japan!"
-	desc = worldnews.116.d
-	picture = GFX_news_event_RUS_coup
-
-	major = yes
-
-	show_major = {
-	    OR = {
-      	    regional_asia_news = yes
-	  	    regional_north_america_news = yes
-	  	}
-    }
-
-	trigger = {
-		wants_world_news = yes
-    }
-
-	
-
-	is_triggered_only = yes
-
-	option = {
-		name = "They shouldn't had taken over the islands."
-		trigger = {
-		    NOT = {
-		        TAG = USA
-		        TAG = PHI
-		        TAG = JAP
-		    }
-		}
-	}
-	option = {
-		name = "We shall crush them!"
-		trigger = { TAG = USA }
-	}
-	option = {
-		name = "Hirohito is on our side."
-		trigger = { TAG = JAP }
-	}
-	option = {
-		name = "Thank God."
-		trigger = { TAG = PHI }
-	}
-}
 
 news_event = {
 	id = worldnews.117
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.117"}
-	title = "Mass Arrests of Japanese navy personel!"
+	title = worldnews.117.t
 	desc = worldnews.117.d
-	picture = GFX_news_event_RUS_coup
-
+	picture = GFX_news_event_JAP_admirals
+  is_triggered_only = yes	
 	major = yes
 
 	show_major = {
 		OR = {
 			regional_asia_news = yes
-	  	    regional_north_america_news = yes
+	  	regional_north_america_news = yes
 		}
 	}
 
 	trigger = {
 		wants_world_news = yes
-    }
-
-	
-
-	is_triggered_only = yes	
+  }
 
 	option = {
-		name = "Their Navy suffered greatly."
+		name = worldnews.117.a
 		trigger = {
 			NOT = {
 				TAG = USA
@@ -1436,17 +1103,17 @@ news_event = {
 	}
 
 	option = {
-		name = "In dishonor we found survival."
+		name = worldnews.117.b
 		trigger = { TAG = JAP }
 	}
 
 	option = {
-		name = "They just destroyed their own shield."
+		name = worldnews.117.c
 		trigger = { TAG = USA }
 	}
 
 	option = {
-		name = "Our old ally has fallen rather quickly."
+		name = worldnews.117.e
 		trigger = { TAG = ENG }
 	}
 }
@@ -1454,10 +1121,10 @@ news_event = {
 news_event = {
 	id = worldnews.118
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.118"}
-	title = "The Great Pacific Alliance"
+	title = worldnews.118.t
 	desc = worldnews.118.d
 	picture = GFX_news_event_005
-
+  is_triggered_only = yes
 	major = yes
 
 	show_major = {
@@ -1469,14 +1136,10 @@ news_event = {
 
 	trigger = {
 		wants_world_news = yes
-    }
-
-    is_triggered_only = yes
-
-	
+  }
 
 	option = {
-		name = "The two Pacific Bulwarks will defend democracy now."
+		name = worldnews.118.a
 		trigger = {
 			NOT = {
 				TAG = USA
@@ -1487,17 +1150,17 @@ news_event = {
 	}
 
 	option = {
-		name = "Together we will safeguard Democracy."
+		name = worldnews.118.b
 		trigger = { TAG = JAP }
 	}
 
 	option = {
-		name = "We will prevail no matter."
+		name = worldnews.118.c
 		trigger = { TAG = USA }
 	}
 
 	option = {
-		name = "Banding Together like Cornered Rats."
+		name = worldnews.118.e
 		trigger = { TAG = ENG }
 	}
 }
@@ -1506,16 +1169,14 @@ news_event = {
 news_event = {
 	id = worldnews.119
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.119"}
-	title = "'Il Matire di Roma'"
+	title = worldnews.119.t
 	desc = worldnews.119.d
-	picture = GFX_SWI_il_matire_di_roma
-
-	
+	picture = GFX_news_event_SWI_il_matire_di_roma
 
 	is_triggered_only = yes
 
 	option = {
-		name = "This kind of laissez-faire treatment is expected."
+		name = worldnews.119.a
 	}
 }
 
@@ -1523,50 +1184,42 @@ news_event = {
 news_event = {
 	id = worldnews.120
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.120"}
-	title = "'Il Matire di Roma'"
+	title = worldnews.120.t
 	desc = worldnews.120.d
-	picture = GFX_SWI_il_matire_di_roma
+	picture = GFX_news_event_SWI_il_matire_di_roma
 
 	is_triggered_only = yes
 
-	
-
 	option = {
-		name = "What about Swiss freedoms?"
+		name = worldnews.120.a
 	}
 }
 
 news_event = {
 	id = worldnews.121
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.121"}
-	title = "Marriage of the Deposed"
+	title = worldnews.121.t
 	desc = worldnews.121.d
-	picture = GFX_marraige_of_the_deposed
+	picture = GFX_news_event_SWI_marraige_of_the_deposed
 
 	is_triggered_only = yes
 
-	
-
 	option = {
-		name = "What will this mean for the past and future crowns of Europe?"
+		name = worldnews.121.a
 	}
 }
 
 news_event = {
 	id = worldnews.122
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.122"}
-	title = "Japanese Spy Arrested by British Admiralty!"
+	title = worldnews.122.t
 	desc = worldnews.122.d
-	picture = GFX_news_event_JAP_arrest
-
+	picture = GFX_news_event_ENG_arrest
 	major = yes
-
 	is_triggered_only = yes
 
-	
-
 	option = {
-		name = "How times have changed since the great war..."
+		name = worldnews.122.a
 		trigger = {
 			NOT = {
 				tag = ENG
@@ -1576,12 +1229,12 @@ news_event = {
 	}
 
 	option = {
-		name = "Their actions will have consequences!"
+		name = worldnews.122.b
 		trigger = { tag = ENG }
 	}
 
 	option = {
-		name = "I said he wasn't our man already! Shut up!"
+		name = worldnews.122.c
 		trigger = { tag = JAP }
 	}
 }
@@ -1591,13 +1244,9 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.130"}
 	title = worldnews.130.t
 	desc = worldnews.130.d
-	picture = GFX_news_event_INC_rebel
-
+	picture = GFX_news_event_INS_revolt
 	major = yes
-
 	is_triggered_only = yes
-
-	
 
 	show_major = {
 		NOT = { tag = BEA }
@@ -1623,14 +1272,10 @@ news_event = {
 news_event = {
 	id = worldnews.132
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.132"}
-	title = "Military Coup in the Soviet Union"
+	title = worldnews.132.t
 	desc = worldnews.132.d
 	picture = soviet_military_coup_news_event
-
 	is_triggered_only = yes
-
-	
-
 	major = yes
 
 	trigger = {
@@ -1643,24 +1288,23 @@ news_event = {
 		regional_europe_news = yes
 	}
 
-
 	option = {
-		name = "Quite an extreme step"
-		}
+		name = worldnews.132.a
 	}
+}
+
 news_event = {
 	id = worldnews.133
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.133"}
-	title = "A Troika is founded in the Soviet Union"
+	title = worldnews.133.t
 	desc = worldnews.133.d
 	picture = soviet_troika_news_event
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
 
 	show_major = {
 		NOT = {
@@ -1670,22 +1314,22 @@ news_event = {
 	}
 
 	option = {
-		name = "Let's see who'll win"
-		}
-	}
+		name = worldnews.133.a
+  }
+}
+
 news_event = {
 	id = worldnews.134
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.134"}
-	title = "Power Struggle in the Soviet Union"
+	title = worldnews.134.t
 	desc = worldnews.134.d
 	picture = soviet_power_struggle_news_event
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
 
 	show_major = {
 		NOT = {
@@ -1695,22 +1339,22 @@ news_event = {
 	}
 
 	option = {
-		name = "Let's see who'll win"
+		name = worldnews.134.a
 	}
 }
+
 news_event = {
 	id = worldnews.135
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.135"}
-	title = "Bukharin is the new Premier"
+	title = worldnews.135.t
 	desc = worldnews.135.d
 	picture = soviet_bukharin_news_event
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
 
 	show_major = {
 		NOT = {
@@ -1720,22 +1364,22 @@ news_event = {
 	}
 
 	option = {
-		name = "Let's see if the golden boy is capable"
+		name = worldnews.135.a
 	}
 }
+
 news_event = {
 	id = worldnews.136
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.136"}
-	title = "Molotov is the new Premier"
+	title = worldnews.136.t
 	desc = worldnews.136.d
 	picture = soviet_troika_news_event
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
 
 	show_major = {
 		NOT = {
@@ -1745,93 +1389,88 @@ news_event = {
 	}
 
 	option = {
-		name = "Let's see if he is capable"
+		name = worldnews.136.a
 	}
 }
+
 news_event = {
 	id = worldnews.137
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.137"}
-	title = "Diplomatic tensions between France and Britain"
+	title = worldnews.137.t
 	desc = worldnews.137.d
 	picture = GFX_news_event_ast_navy
 	is_triggered_only = yes
 	major = yes
+  
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
-
 
 	show_major = {
 		regional_europe_news = yes
 	}
 
 	option = {
-		name = "Two titans butting heads cannot end well..."
+		name = worldnews.137.a
 		add_named_threat = { threat = 5 name = WORLD_FRA_ENG_tensions }
 	}
 }
+
 news_event = {
 	id = worldnews.138
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.138"}
-	title = "French occupation of the Canary Islands"
+	title = worldnews.138.t
 	desc = worldnews.138.d
 	picture = GFX_news_event_NFA_fall_algiers
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
-
 
 	show_major = {
 		regional_europe_news = yes
 	}
 
 	option = {
-		name = "Imperialism truly knows no bounds..."
+		name = worldnews.138.a
 	}
 }
 news_event = {
 	id = worldnews.139
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.139"}
-	title = "French occupation of the Pyrenees mountain passes"
+	title = worldnews.139.t
 	desc = worldnews.139.d
 	picture = GFX_news_event_057
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
-
 
 	show_major = {
 		regional_europe_news = yes
 	}
 
 	option = {
-		name = "Are the French going to conquer all of Spain?"
+		name = worldnews.139.a
 	}
 }
+
 news_event = {
 	id = worldnews.140
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.140"}
-	title = "French annexation of Wallonia!"
+	title = worldnews.140.t
 	desc = worldnews.140.d
 	picture = GFX_news_event_BEL_arlon
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
-
-	
-
 
 	show_major = {
 		regional_europe_news = yes
@@ -1841,21 +1480,20 @@ news_event = {
 		name = worldnews.140.a
 	}
 }
+
 news_event = {
 	id = worldnews.141
 	immediate = {log = "[GetDateText]: [Root.GetName]: event worldnews.141"}
-	title = "The Walloon Crisis"
+	title = worldnews.141.t
 	desc = worldnews.141.d
 	picture = GFX_news_event_BEL_arlon
 	is_triggered_only = yes
 	major = yes
+
 	trigger = {
 		wants_world_news = yes
 	}
 
-	
-
-	
 	show_major = {
 		regional_europe_news = yes
 	}

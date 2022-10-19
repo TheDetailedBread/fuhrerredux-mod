@@ -348,3 +348,24 @@ USA_naval_role_ratios_historical = {
 		value = 1		 #1 to 2
 	}
 }
+
+USA_filipino_relations = {
+	allowed = { original_tag = USA }
+	enable = {
+		PHI = { is_subject = no }
+	}
+	abort = {
+		PHI = {
+			OR = {
+				has_completed_focus = PHI_look_to_the_west
+				has_completed_focus = PHI_pivot_to_japan
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "PHI"
+		value = 200
+	}
+}

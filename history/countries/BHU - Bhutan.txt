@@ -1,6 +1,6 @@
 ﻿capital = 324
 
-oob = "BHU_1936"
+oob = "BHU"
 
 # Starting tech
 set_technology = {
@@ -10,10 +10,6 @@ set_technology = {
 
 add_ideas = {
 	party_pop_0_60
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	absolute_monarchy
 }
 
@@ -25,30 +21,20 @@ set_politics = {
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 2
-    libertarian_socialist = 2
-    social_democrat = 4
-    social_liberal = 4
-    market_liberal = 4
-    social_conservative = 10
-    authoritarian_democrat = 64
-    paternal_autocrat = 4
-    national_populist = 4
-    valkist = 0
+	vanguardist = 2
+	collectivist = 2
+	libertarian_socialist = 2
+	social_democrat = 4
+	social_liberal = 4
+	market_liberal = 4
+	social_conservative = 10
+	authoritarian_democrat = 64
+	paternal_autocrat = 4
+	national_populist = 4
+	valkist = 0
 }
 
-create_country_leader = {
-	name = "Jigme Wangchuck"
-	desc = "POLITICS_JIGME_WANGCHUCK_DESC"
-	picture = "Portrait_BHU_Jigme_Wangchuck.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = BHU_Jigme_Wangchuck

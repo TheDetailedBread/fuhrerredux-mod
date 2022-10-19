@@ -129,7 +129,7 @@ focus_tree = {
 
 		focus = { 
 		id = BOL_dispose_of_the_traitors
-		icon = GFX_goal_continuous_suppression
+		icon = GFX_goal_generic_police_state
 		prerequisite = { focus = BOL_socialist_infrastructural_revamp }
 
  		ai_will_do = { factor = 25 } 
@@ -230,9 +230,9 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = BOL_defending_the_revolution
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -359,7 +359,7 @@ focus_tree = {
 }
 		focus = {
 		id = BOL_support_the_workers_of_chile
-		icon = GFX_goal_flag_chile_collie
+		icon = GFX_goal_generic_revolution_chile
 		prerequisite = { focus = BOL_from_bolivia_to_the_world }
  		ai_will_do = { factor = 15 } 
 
@@ -379,7 +379,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_spread_the_revolution_to_chile
-		icon = GFX_goal_chile_war
+		icon = GFX_goal_generic_attack_chile
 		prerequisite = { focus = BOL_support_the_workers_of_chile }
 		available = { 
 			AND = {
@@ -419,7 +419,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_support_the_workers_of_peru
-		icon = GFX_goal_flag_peru_collie
+		icon = GFX_goal_generic_revolution_peru
 		prerequisite = { focus = BOL_from_bolivia_to_the_world }
  		ai_will_do = { factor = 15 } 
 
@@ -447,7 +447,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_spread_the_revolution_to_peru
-		icon = GFX_goal_flag_peru_wargoal
+		icon = GFX_goal_generic_attack_peru
 		prerequisite = { focus = BOL_support_the_workers_of_peru }
 		available = { 
 			AND = {
@@ -480,7 +480,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_bring_chaco_back_to_the_workers
-		icon = GFX_goal_paraguay_war
+		icon = GFX_goal_generic_attack_paraguay
 		prerequisite = { focus = BOL_from_bolivia_to_the_world }
  		ai_will_do = { factor = 45 } 
 		available = { 
@@ -519,7 +519,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_compromise_with_argentina
-		icon = GFX_goal_argie_collie_deal
+		icon = GFX_goal_generic_revolution_argentina
 		prerequisite = { focus = BOL_from_bolivia_to_the_world }
  		ai_will_do = { factor = 50 } 
 		mutually_exclusive = { focus = BOL_recover_tarija_for_the_workers } 
@@ -541,7 +541,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_pact_with_argentina
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_ARG_bolivia_deal
 		prerequisite = { focus = BOL_compromise_with_argentina }
  		ai_will_do = { factor = 50 } 
 		available = {
@@ -568,7 +568,7 @@ focus_tree = {
 
 		focus = {
 		id = BOL_recover_tarija_for_the_workers
-		icon = GFX_goal_argie_wargoal
+		icon = GFX_goal_generic_attack_argentina
 		prerequisite = { focus = BOL_from_bolivia_to_the_world }
  		mutually_exclusive = { focus = BOL_compromise_with_argentina }
 		will_lead_to_war_with = ARG
@@ -1075,7 +1075,7 @@ focus_tree = {
 
 		focus = { 
 		id = BOL_lessons_of_the_chaco_war
-		icon = GFX_goal_civil_war_lessons
+		icon = GFX_goal_BOL_army
 		prerequisite = { focus = BOL_status_of_bolivia }
 
  		ai_will_do = { factor = 10 } 
@@ -1109,11 +1109,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_army_of_bolivia"
 		
-		add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+      add_doctrine_cost_reduction = {
+				name = BOL_army_of_bolivia
+				cost_reduction = 0.5
 				uses = 1
-				category = land_doctrine	
+				category = land_doctrine
 			}
 		} 
 	}
@@ -1219,7 +1219,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = BOL_war_medicine
-		icon = GFX_goal_hospital
+		icon = GFX_goal_generic_medical
 		prerequisite = { focus = BOL_motorized_divisions }
 		prerequisite = { focus = BOL_rebuilding_our_infantry }
 		prerequisite = { focus = BOL_armored_squadrons }
@@ -1366,7 +1366,7 @@ focus_tree = {
 	}
 }
 
-		focus = { 
+	focus = { 
 		id = BOL_mastering_warfare
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = BOL_elite_forces }
@@ -1381,18 +1381,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_mastering_warfare"
-		army_experience = 100 
-		add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
+		  army_experience = 100 
+		  add_doctrine_cost_reduction = {
+				name = BOL_mastering_warfare
+				cost_reduction = 0.5
 				uses = 1
-				category = land_doctrine	
+				category = land_doctrine
 			}
 	}
 }
 focus = {
 		id = BOL_sea_redeemed
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_goal_BOL_navy
 		x = 26
 		y = 1
 		cost = 10
@@ -1461,8 +1461,8 @@ focus = {
  		cost = 10  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_the_way_of_the_sea"
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1624,9 +1624,8 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_destined_to_rule_the_seas"
 			navy_experience = 100
-			add_tech_bonus = {
-				name = naval_doctrine_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -1919,7 +1918,7 @@ focus = {
 
 		focus = { 
 		id = BOL_recovering_our_continent
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_goal_BOL_indigenous
 		prerequisite = { focus = BOL_authocthonous_economy }
 		available = {
 			date > 1937.6.1
@@ -1978,7 +1977,7 @@ focus = {
 
 focus = {
 		id = BOL_recover_the_coast
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_generic_attack_chile
 		prerequisite = { focus = BOL_the_endemic_coast }
 		x = 30
 		y = 9
@@ -2029,7 +2028,7 @@ focus = {
 	}
 focus = {
 		id = BOL_second_war_for_chaco
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_generic_attack_paraguay
 		prerequisite = { focus = BOL_recovering_our_continent }
 		x = 32
 		y = 8
@@ -2061,7 +2060,7 @@ focus = {
 	
 focus = {
 		id = BOL_the_imperial_territories
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_goal_generic_attack_bolivia
 		prerequisite = { focus = BOL_recovering_our_continent }
 		x = 34
 		y = 8
@@ -2085,7 +2084,7 @@ focus = {
 
 focus = {
 		id = BOL_unite_the_quechua
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_generic_attack_peru
 		prerequisite = { focus = BOL_the_imperial_territories }
 		x = 34
 		y = 9
@@ -2141,7 +2140,7 @@ focus = {
 	}
 		focus = {
 		id = BOL_retake_tarija
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_goal_generic_attack_argentina
 		prerequisite = { focus = BOL_second_war_for_chaco }
  		ai_will_do = { factor = 10 }
 		available = {
@@ -2179,7 +2178,7 @@ focus = {
 
 focus = {
 		id = BOL_andean_airways
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_goal_BOL_airforce
 		x = 16
 		y = 1
 		cost = 10
@@ -2187,9 +2186,9 @@ focus = {
 		prerequisite = { focus = BOL_status_of_bolivia }		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_andean_airways"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -2364,9 +2363,9 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOL_further_winds"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = airdoctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

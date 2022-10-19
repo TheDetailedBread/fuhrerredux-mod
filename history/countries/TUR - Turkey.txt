@@ -1,13 +1,6 @@
-﻿capital = 341
+capital = 341
 
-oob = "TUR_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "TUR_1936_naval_mtg"
-	else = {
-		set_naval_oob = "TUR_1936_naval_legacy"
-	}
-}
+oob = "TUR"
 
 set_research_slots = 3
 
@@ -20,11 +13,6 @@ add_ideas = {
 	civilian_economy
 	export_focus
 	volunteer_only
-	
-	TUR_Prens_Sabahaddin_Efendi_hog_sli
-	TUR_Haqqi_al_Azm_for_sli
-	TUR_Berc_Keresteciyan_Bey_eco_sli
-	TUR_Feridun_Fikri_Pasa_sec_sli
 	constitutional_monarchy
 }
 
@@ -33,25 +21,33 @@ set_technology = {
 	infantry_weapons1 = 1
 	tech_support = 1
 	tech_mountaineers = 1
-	early_fighter = 1
-	CAS1 = 1
 	tech_recon = 1
 	gw_artillery = 1
+	basic_train = 1
 	fuel_silos = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "TUR_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "TUR_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "TUR_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -62,10 +58,20 @@ if = {
 		early_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_torpedo = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_naval_oob = "TUR_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
 	}
 }
 
@@ -77,17 +83,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 3
-    libertarian_socialist = 0
-    social_democrat = 3
-    social_liberal = 42
-    market_liberal = 1
-    social_conservative = 12
-    authoritarian_democrat = 22
-    paternal_autocrat = 5
-    national_populist = 10
-    valkist = 2
+  vanguardist = 0
+  collectivist = 3
+  libertarian_socialist = 0
+  social_democrat = 3
+  social_liberal = 42
+  market_liberal = 1
+  social_conservative = 12
+  authoritarian_democrat = 22
+  paternal_autocrat = 5
+  national_populist = 10
+  valkist = 2
 }
 
 set_convoys = 20
@@ -96,254 +102,6 @@ set_stability = 0.45
 set_war_support = 0.30
 
 country_event = { id = tur.1 days = 1 } #intro event
-
-create_country_leader = {
-	name = "Şefik Hüsnü Bey"
-	desc = "POLITICS_ŞEFİK_HÜSNÜ_DESC"
-	picture = "Portrait_TUR_Sefik_Husnu.tga"
-	expire = "1965.1.1"
-	ideology = vanguardist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Hikmet Bey"
-	desc = "POLITICS_HİKMET_KIVILCIMLI_DESC"
-	picture = "Portrait_TUR_Hikmet_Kivilcimli.tga"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Reşad Fuad Bey"
-	desc = "POLITICS_REŞAD_FUAD_DESC"
-	picture = "Portrait_TUR_Resat_Fuat.tga"
-	expire = "1965.1.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Hasan Ali Bey"
-	desc = "POLITICS_HASAN_ALI_YUCEL_DESC"
-	picture = "Portrait_TUR_Hasan_Ali_Yucel.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Abdülmecid II"
-	desc = "POLITICS_ABDULMECID_DESC"
-	picture = "Portrait_TUR_Abdulmecid.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Ali Adnan Bey"
-	desc = "POLITICS_ADNAN_MENDERES_DESC"
-	picture = "Portrait_TUR_Adnan_Menderes.tga"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mehmed Cavid Bey"
-	desc = "POLITICS_MEHMET_CAVID_DESC"
-	picture = "Portrait_TUR_Mehmed_Cavid.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mustafa İsmet Paşa"
-	desc = "POLITICS_ISMET_INONU_DESC"
-	picture = "Portrait_TUR_Ismet_Pasa.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Abdülmecid II"
-	desc = "POLITICS_ABDULMECID_DESC"
-	picture = "Portrait_TUR_Abdulmecid.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Hüseyin Nihâl Bey"
-	desc = "POLITICS_NIHAL_ATSIZ_DESC"
-	picture = "Portrait_TUR_Nihal_Atsiz.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		
-	}
-}
-
-## Field Marshals
-create_field_marshal = {
-	name = "Osman Fuad Efendi"
-	picture = "Portrait_TUR_Osman_Fuad.tga"
-	id = 680
-	traits = {
-		politically_connected
-		war_hero
-		offensive_doctrine
-		inspirational_leader
-		cavalry_leader
-	}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_field_marshal = {
-	name = "Mustafa Fevzi Paşa"
-	picture = "Portrait_TUR_Fevzi_Cakmak.tga"
-	id = 5893
-	traits = {
-		career_officer
-		skilled_staffer
-	}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-### Corps Commanders ###
-create_corps_commander = {
-	name = "İsmail Hakkı Paşa"
-	picture = "Portrait_TUR_Ismail_Hakki_Berkok.tga"
-	id = 679
-	traits = {
-		career_officer
-		commando
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Ömer Fahreddin Paşa"
-	picture = "Portrait_TUR_Omer_Fahrettin_Turkkan.tga"
-	id = 90172
-	traits = {
-		old_guard
-		war_hero
-		desert_fox
-		commando
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Mehmet Kâzım Paşa"
-	picture = "Portrait_TUR_Kazim_Orbay.tga"
-	id = 8490
-	traits = { 
-		career_officer
-		skilled_staffer
-		expert_delegator
-		winter_specialist
-	}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Cemil Cahid Paşa"
-	picture = "Portrait_TUR_Cemil_Cahit_Toydemir.tga"
-	id = 1284
-	traits = { 
-		career_officer
-		infantry_leader
-		trait_engineer 
-	}
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Mustafa Paşa"
-	picture = "Portrait_TUR_Mustafa_Muglali.tga"
-	id = 674
-	traits = { 
-		career_officer
-		commando
-		skirmisher
-		infantry_leader
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-### Navy Leaders ###
-create_navy_leader = {
-	name = "Hüseyin Rauf Paşa"
-	picture = "Portrait_TUR_Rauf_Orbay.tga"
-	id = 9841
-	traits = {
-		old_guard_navy
-	}
-	skill = 2
-}
-
-create_navy_leader = {
-	name = "Necdet Paşa"
-	picture = "Portrait_TUR_Necdet_Uran.tga"
-	id = 4791
-	traits = {
-		superior_tactician
-	}
-	skill = 2
-}
 
 ### VARIANTS ###
 # 1936 Start #
@@ -493,3 +251,106 @@ if = {
 		}
 	}
 }
+
+recruit_character = TUR_Şefik_Husnu_Bey
+recruit_character = TUR_Hikmet_Bey
+recruit_character = TUR_Reşad_Fuad_Bey
+recruit_character = TUR_Abdulmecid_II
+recruit_character = TUR_Ali_Adnan_Bey
+recruit_character = TUR_Mehmed_Cavid_Bey
+recruit_character = TUR_Mustafa_İsmet_Paşa
+recruit_character = TUR_Huseyin_Nihal_Bey
+recruit_character = TUR_Mustafa_Fevzi_Paşa
+recruit_character = TUR_İsmail_Hakkı_Paşa
+recruit_character = TUR_Omer_Fahreddin_Paşa
+recruit_character = TUR_Mehmet_Kazım_Paşa
+recruit_character = TUR_Cemil_Cahid_Paşa
+recruit_character = TUR_Mustafa_Paşa
+recruit_character = TUR_Huseyin_Rauf_Paşa
+recruit_character = TUR_Necdet_Paşa
+recruit_character = TUR_Hasan_Ali_Paşa
+recruit_character = TUR_Ali_Fethi_Paşa
+recruit_character = TUR_Ali_Kemal_Bey
+recruit_character = TUR_Prens_Sabahaddin_Efendi
+recruit_character = TUR_Musa_Kazım_Karabekir_Paşa
+recruit_character = TUR_Ali_Şukru_Paşa
+recruit_character = TUR_Shakib_Arslan
+recruit_character = TUR_Mehmed_Vehip_Paşa
+recruit_character = TUR_Mustafa_Kemal_Paşa
+recruit_character = TUR_Huseyin_Selahattin_Paşa
+recruit_character = TUR_Huseyin_Nihal_Paşa
+recruit_character = TUR_Ali_Fuad_Paşa
+recruit_character = TUR_Haqqi_al_Azm
+recruit_character = TUR_Kopruluzade_Mehmed_Fuad_Paşa
+recruit_character = TUR_Rıza_Nur_Paşa
+recruit_character = TUR_Hashim_al_Atassi
+recruit_character = TUR_Muhammed_Hamdi_Yazır
+recruit_character = TUR_Filibeli_Hilmi_Bey
+recruit_character = TUR_Huseyin_Numan_Paşa
+recruit_character = TUR_Mehmed_Şukru_Paşa
+recruit_character = TUR_Selahattin_Paşa
+recruit_character = TUR_Tevfik_Ruştu_Bey
+recruit_character = TUR_Fahrettin_Paşa
+recruit_character = TUR_Suleyman_Şefik_Paşa
+recruit_character = TUR_Ahmed_Necdet_Paşa
+recruit_character = TUR_Zeki_Velidi_Paşa
+recruit_character = TUR_Berc_Keresteciyan_Bey
+recruit_character = TUR_Hacı_Omer_Bey
+recruit_character = TUR_Huseyin_Husnu_Paşa
+recruit_character = TUR_Mahmud_Celal_Paşa
+recruit_character = TUR_Mehmet_Fahrettin_Paşa
+recruit_character = TUR_Mustafa_Abdulhalik_Paşa
+recruit_character = TUR_Zuhtu_Hilmi_Paşa
+recruit_character = TUR_Abdulmuhsin_el_Sadun_Paşa
+recruit_character = TUR_Hasan_Husnu_Paşa
+recruit_character = TUR_Kara_Kemal_Bey
+recruit_character = TUR_Mehmed_Şakir_Paşa
+recruit_character = TUR_Mustafa_Şeref_Paşa
+recruit_character = TUR_Reşad_Muhlis_Bey
+recruit_character = TUR_Şevket_Raşid_Bey
+recruit_character = TUR_Sırrı_Bey
+recruit_character = TUR_Mehmed_Nuri_Bey
+recruit_character = TUR_Mehmed_Şefik_Paşa
+recruit_character = TUR_Ağaoglu_Ahmed_Paşa
+recruit_character = TUR_Feridun_Fikri_Paşa
+recruit_character = TUR_İbrahim_Refik_Paşa
+recruit_character = TUR_Bekir_Refik_Paşa
+recruit_character = TUR_Refik_Şevket_Paşa
+recruit_character = TUR_Mustafa_Sabri_Effendi
+recruit_character = TUR_Ahmed_Naci_Paşa
+recruit_character = TUR_Ali_Rıza_Paşa
+recruit_character = TUR_Kazım_Fikri_Paşa
+recruit_character = TUR_Mehmed_Şemsettin_Paşa
+recruit_character = TUR_Mustafa_Necati_Paşa
+recruit_character = TUR_Yunus_Nadi_Bey
+recruit_character = TUR_Mehmed_Recep_Paşa
+recruit_character = TUR_Sadri_Maksudi_Bey
+recruit_character = TUR_Yusuf_Kemal_Paşa
+recruit_character = TUR_Mehmed_Cemal_Paşa
+recruit_character = TUR_Kazim_Paşa
+recruit_character = TUR_Salih_Paşa
+recruit_character = TUR_Asım_Paşa
+recruit_character = TUR_Cemil_Cahit_Paşa
+recruit_character = TUR_Fakhri_Paşa
+recruit_character = TUR_Mahmud_Muhtar_Paşa
+recruit_character = TUR_Şukru_Paşa
+recruit_character = TUR_İrfan_Bey
+recruit_character = TUR_Vecihi_Paşa
+recruit_character = TUR_Ahmet_Ali_Paşa
+recruit_character = TUR_Şakir_Fevzi_Paşa
+recruit_character = TUR_İsmail_Şefik_Bey
+recruit_character = TUR_The_General_Assembly
+recruit_character = TUR_Ahmed_IV
+recruit_character = TUR_Osman_IV
+recruit_character = TUR_Yusuf_Hikmet_Bey
+recruit_character = TUR_Kadir_Bey
+recruit_character = TUR_Hasan_Bey
+recruit_character = TUR_Aslan_Bey
+recruit_character = TUR_Adnan_Menderes
+recruit_character = TUR_Hasan_Ali_Yucel
+recruit_character = TUR_Kazım_Orbay
+recruit_character = TUR_Cemil_Cahit_Toydemir
+recruit_character = TUR_Mustafa_Muğlalı
+recruit_character = TUR_Necdet_Uran
+recruit_character = TUR_Omer_Faruk_Efendi
+recruit_character = TUR_Osman_Bey

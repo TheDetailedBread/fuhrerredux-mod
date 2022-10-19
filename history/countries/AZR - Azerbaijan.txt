@@ -1,6 +1,6 @@
-﻿capital = 229 #Baku
+capital = 229 #Baku
 
-oob = "AZR_1936"
+oob = "AZR"
 
 set_research_slots = 3
 set_stability = 0.50
@@ -18,23 +18,45 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
-	transport = 1
 	fuel_silos = 1
+  basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "AZR_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "AZR_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+    basic_light_tank_chassis = 1
+  }
+
+	else = {
+		 set_technology = {
+			gwtank = 1
+			basic_light_tank = 1
+		}
+	}
 }
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_sli
-	GEN_for_sli
-	GEN_eco_sli
-	GEN_sec_sli
 	semi_presidential_republic
 }
 
@@ -59,46 +81,5 @@ set_popularities = {
     valkist = 0
 }
 
-create_country_leader = {
-	name = "Mirza Guseynov"
-	desc = ""
-	picture = "Portrait_AZR_Mirza_Guseynov.tga"
-	expire = "1953.3.1"
-	ideology = libertarian_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mammad Amin Rasulzade"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = social_conservative_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Javad Malik-Yeganov"
-	desc = ""
-	picture = "Portrait_AZR_Javad_Malik_Yeganov.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Gara Garabeyov"
-	desc = ""
-	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		
-	}
-}
+recruit_character = AZR_Mirza_Guseynov
+recruit_character = AZR_Javad_Malik_Yeganov

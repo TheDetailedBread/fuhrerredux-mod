@@ -1,65 +1,45 @@
-﻿capital = 319
+capital = 319
 
-oob = "DOM_1936"
-
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	gw_artillery = 1
-}
-set_country_flag = monroe_doctrine
+oob = "DOM"
 
 set_convoys = 5
 set_stability = 0.77
 set_war_support = 0.23
 
-add_ideas = {
-	party_pop_0_00
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
-	one_party_dictatorship
+set_country_flag = monroe_doctrine
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+  basic_train = 1
 }
 
 set_politics = {
-	ruling_party = authoritarian_democrat
+	ruling_party = paternal_autocrat
 	last_election = "1934.5.16"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 2
-    social_democrat = 0
-    social_liberal = 0
-    market_liberal = 10
-    social_conservative = 22
-    authoritarian_democrat = 0
-    paternal_autocrat = 56
-    national_populist = 0
-    valkist = 10
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 2
+  social_democrat = 0
+  social_liberal = 0
+  market_liberal = 10
+  social_conservative = 22
+  authoritarian_democrat = 0
+  paternal_autocrat = 56
+  national_populist = 0
+  valkist = 10
 }
 
-create_country_leader = {
-	name = "Rafael Trujillo"
-	desc = "POLITICS_RAFAEL_TRUJILLO_DESC"
-	picture = "Portrait_Dominican_Rafael_Trujillo.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
+add_ideas = {
+	party_pop_0_00
+	one_party_dictatorship
 }
 
-create_corps_commander = {
-	name = "Ramón Vásquez Rivera"
-	picture = "Portrait_Ramon_Vasquez_Rivera.tga"
-	id = 1471
-	traits = { organizer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+recruit_character = DOM_Rafael_Trujillo
+recruit_character = DOM_Ramon_Vasquez_Rivera

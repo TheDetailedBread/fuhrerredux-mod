@@ -1282,9 +1282,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CZE_planning_strategy"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction  = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1308,9 +1308,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CZE_mobile_warfare"
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -1334,9 +1334,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CZE_bullet_rain"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -1360,9 +1360,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CZE_everyone_on_board"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mass_assault
 			}
@@ -1370,7 +1370,7 @@ focus_tree = {
 	}
 		focus = { 
 		id = CZE_medical_support
-		icon = GFX_goal_hospital
+		icon = GFX_goal_generic_medical
 
  		ai_will_do = { factor = 50 } 
 
@@ -1428,9 +1428,9 @@ focus_tree = {
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CZE_the_latest_tactics"
-		add_tech_bonus = {
+		  add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
 				category = cat_superior_firepower
@@ -3874,17 +3874,11 @@ focus_tree = {
 		focus = { 
 		id = CZE_unite_western_slavs
 		icon = GFX_focus_unite_west_slavs
-
  		ai_will_do = { factor = 0 } 
-
  		x =8
  		y =13
  		cost = 6
  		prerequisite = { focus = CZE_zapadoslavia_rises }
- 		available = {
-			OR = {
-			}
-		}
 		available_if_capitulated = yes  
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus cze_unite_western_slavs"

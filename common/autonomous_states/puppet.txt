@@ -1,9 +1,8 @@
 autonomy_state = {
 	id = autonomy_puppet
-	
 	default = yes
 	is_puppet = yes
-	
+	manpower_influence = 0.5
 	min_freedom_level = 0.25
 	
 	rule = {
@@ -39,10 +38,16 @@ autonomy_state = {
 	}
 
 	can_take_level = {
-		#trigger here
+		custom_trigger_tooltip = {
+			tooltip = can_raise_autonomy_level
+			has_country_flag = FX_can_raise_autonomy_level
+		}
 	}
 
 	can_lose_level = {
-		#trigger here
+		custom_trigger_tooltip = {
+			tooltip = can_lower_autonomy_level
+			always = no
+		}
 	}
 }

@@ -16,7 +16,7 @@ focus_tree = {
 
 	focus = { #Military rearmament start
 		id = hun_mil_start
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_HUN_rearm
 		cost = 5
 		x = 6
 		y = 0
@@ -36,7 +36,7 @@ focus_tree = {
 
 	focus = { #Internal Politics Start
 		id = hun_poli_stab
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_goal_HUN_political_stabilization
 		cost = 5
 		x = 14
 		y = 0
@@ -449,8 +449,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus hun_navy_doctrine"
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -689,8 +689,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus hun_doctrine_evaluate"
-			add_tech_bonus = {
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -779,9 +779,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus hun_more_doctrine"
-			add_tech_bonus = {
-				bonus = 0.25
-				uses = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -971,7 +971,7 @@ focus_tree = {
 
 	focus = { #demand Transylvania
 		id = hun_demand_transylvania
-		icon = GFX_goal_royalist_romania
+		icon = GFX_goal_generic_attack_romania
 		cost = 10
 		x = 10
 		y = 6
@@ -1107,7 +1107,7 @@ focus_tree = {
 	
 	focus = { #demand Burgenland
 		id = hun_demand_austria
-		icon = GFX_goal_austria
+		icon = GFX_goal_generic_attack_austria
 		cost = 10
 		x = 12
 		y = 6

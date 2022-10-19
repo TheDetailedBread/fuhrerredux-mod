@@ -1,29 +1,51 @@
-﻿capital = 284
+capital = 284
 
-oob = "NZL_1936"
+oob = "NZL"
 
 # Starting tech
-
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	gwtank = 1
 	gw_artillery = 1
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
-	early_fighter = 1
-	naval_bomber1 = 1
 	fuel_silos = 1
+	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "NZL_air_bba"
 	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "NZL_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
 	}
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -35,30 +57,26 @@ if = {
 		basic_depth_charges = 1
 		mtg_transport = 1
 	}
+	else = {
+		set_technology = {
+			early_destroyer = 1
+			early_light_cruiser = 1
+			transport = 1
+		}
+	}
 }
 
 add_ideas = {
 	party_pop_0_50
 	ENG_statute_autonomy
-	GEN_hog_sde
-	GEN_FOR_Sde
-	GEN_eco_sde
-	GEN_sec_sde
 	constitutional_monarchy
 }
 
 set_stability = 0.50
 set_war_support = 0.50
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_cosmetic_tag = NZL_ENG
-	else = {
-	set_cosmetic_tag = NZL_ENG
-    }
-}
+set_cosmetic_tag = NZL_ENG
 set_politics = {
-
 	ruling_party = social_democrat
 	last_election = "1935.10.14"
 	election_frequency = 60
@@ -66,109 +84,67 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 2
-    social_democrat = 54
-    social_liberal = 2
-    market_liberal = 34
-    social_conservative = 0
-    authoritarian_democrat = 2
-    paternal_autocrat = 2
-    national_populist = 2
-    valkist = 2
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 2
+  social_democrat = 54
+  social_liberal = 2
+  market_liberal = 34
+  social_conservative = 0
+  authoritarian_democrat = 2
+  paternal_autocrat = 2
+  national_populist = 2
+  valkist = 2
 }
 
-create_country_leader = {
-	name = "Lord Monckton-Arundell"
-	desc = "POLITICS_MONCKTON_ARUNDELL_DESC"
-	picture = "Lord_Monckton_Arundell.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-		#
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Leander Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Danae Class"
+		type = ship_hull_cruiser_1
+		name_group = NZL_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
 	}
 }
 
-create_country_leader = {
-	name = "Lord Monckton-Arundell"
-	desc = "POLITICS_MONCKTON_ARUNDELL_DESC"
-	picture = "Lord_Monckton_Arundell.tga"
-	expire = "1965.1.1"
-	ideology = social_conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "John Ormond"
-	desc = "POLITICS_JOHN_ORMOND_DESC"
-	picture = "GFX_NZL_john_ormond"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Elsie Farrelly"
-	desc = "POLITICS_JOHN_ORMOND_DESC"
-	picture = "GFX_NZL_elsie_farrelly"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-		#
-	}
-}
-
-set_convoys = 70
-
-create_corps_commander = {
-	name = "Bernard Freyberg"
-	gfx = "GFX_NZL_bernard_freyberg"
-	traits = {  }
-	skill = 4
-}
-
-create_corps_commander = {
-	name = "Robert Row"
-	gfx = "GFX_NZL_robert_row"
-	traits = { naval_invader }
-	skill = 3
-}
-
-create_corps_commander = {
-	name = "William Stevens"
-	gfx = "GFX_NZL_william_stevens"
-	traits = {  }
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Edmund Rupert Drummond"
-	gfx = "GFX_NZL_edmund_drummond"
-	traits = { }
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Peter Phipps"
-	gfx = "GFX_NZL_peter_phipps"
-	traits = { }
-	skill = 3
-}
-
-### Ship Variants ###
-
-create_equipment_variant = {
-	name = "Leander Class"
-	type = light_cruiser_1
-	upgrades = {
-		ship_reliability_upgrade = 2
-		ship_engine_upgrade = 2
-		ship_gun_upgrade = 2
-		ship_anti_air_upgrade = 2
-	}
-}
+recruit_character = NZL_Lord_Monckton_Arundell
+recruit_character = NZL_Alexander_Galbraith
+recruit_character = NZL_Michael_Joseph_Savage
+recruit_character = NZL_Eruera_Tirikatene
+recruit_character = NZL_Albert_Ernest_Davy
+recruit_character = NZL_Adam_Hamilton
+recruit_character = NZL_Sidney_Holland
+recruit_character = NZL_Robert_Begg
+recruit_character = NZL_John_Ormond
+recruit_character = NZL_Bernard_Freyberg
+recruit_character = NZL_Robert_Row
+recruit_character = NZL_William_Stevens
+recruit_character = NZL_Edmund_Rupert_Drummond
+recruit_character = NZL_Peter_Phipps

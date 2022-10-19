@@ -40,6 +40,9 @@ country_event = { #Lenin Death
 				id = sovietpol.1304
 				days = 2
 			}
+			random_other_country = {
+				news_event = { id = fxnews.36 days = 1 }
+			}
 		}
 	}
 	option = {
@@ -48,14 +51,15 @@ country_event = { #Lenin Death
 			remove_idea = SOV_political_divide
 			add_idea = SOV_political_chaos
 		}
-		create_country_leader = {
-			name = "Congress of Soviets"
-			desc = "POLITICS_CONGRESS_OF_SOVIETS_DESC"
-			picture = "Portrait_Soviet_Congress_of_Soviets.tga"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = {}
-		}
+    retire_character = SOV_Vladimir_Lenin
+    add_country_leader_role = {
+      character = SOV_Congress_of_Soviets
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = {}
+      }
+    }
 		set_country_flag = SOV_LENIN_DEATH	
 	}	
 }
@@ -297,15 +301,14 @@ country_event = {
 			long_name = SOV_bukharin_opposition_long
 			name = SOV_bukharin_opposition
 			}
-			create_country_leader = {
-				name = "Nikolai Bukharin"
-				desc = "NIKOLAI_BUKHARIN_DESC"
-				picture = "Portrait_Soviet_Nikolai_Bukharin.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = { SOV_the_theorist
-				}
-			}
+      add_country_leader_role = {
+        character = SOV_Nikolay_Bukharin
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = { SOV_the_theorist }
+        }
+      }
 
 		hidden_effect = {
 			country_event = {
@@ -331,7 +334,7 @@ country_event = {
 country_event = {
 	id = soviet.10
 	immediate = {log = "[GetDateText]: [Root.GetName]: event soviet.10"}
-	title = "Trotsky and Zinoniev form a United Front"
+	title = "Trotsky and Zinoviev form a United Front"
 	desc = soviet.10.d
 	picture = soviet_zinoviev_trotsky
 
@@ -1293,15 +1296,14 @@ country_event = {
 			ideology = libertarian_socialist
 			popularity = 0.15
 		}
-		create_country_leader = {
-			name = "Nikolai Bukharin"
-			desc = "NIKOLAI_BUKHARIN_DESC"
-			picture = "Portrait_Soviet_Nikolai_Bukharin.tga"
-			expire = "1965.1.1"
-			ideology = libertarian_socialist_subtype
-			traits = { SOV_the_theorist
-			}
-		}
+    add_country_leader_role = {
+      character = SOV_Nikolay_Bukharin
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = { SOV_the_theorist }
+      }
+    }
 		set_politics = {
 			ruling_party = libertarian_socialist
 			elections_allowed = no
@@ -1337,15 +1339,14 @@ country_event = {
 		set_variable = {
 			soviet_corruption = 0
 		}
-		create_country_leader = {
-			name = "Leon Trotsky"
-			desc = "LEON_TROTSKY_DESC"
-			picture = "Portrait_Soviet_Leon_Thotsky.tga"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = { SOV_the_revolutionary
-			}
-		}
+    add_country_leader_role = {
+      character = SOV_Leon_Trotsky
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = { SOV_the_revolutionary }
+      }
+    }
 		add_political_power = 100
 		add_stability = 0.1
 	}
@@ -1494,15 +1495,22 @@ country_event = {
 		}
 		set_country_flag = SOV_Tukhachevsky_in_charge
 		load_focus_tree = sov_focus_tukhachevsky
-		create_country_leader = {
-			name = "Mikhail Tukhachevsky"
-			desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-			picture = "Portrait_Soviet_Mikhail_Tukhachevsky.tga"
-			expire = "1965.1.1"
-			ideology = collectivist_subtype
-			traits = { SOV_the_soldier
+    add_country_leader_role = {
+      character = SOV_Mikhail_Tukhachevsky
+      promote_leader = yes
+      country_leader = {
+        ideology = collectivist_subtype
+        traits = { SOV_the_soldier }
+      }
+    }
+	hidden_effect = {
+		random_other_country = {
+			news_event = {
+				id = fxnews.38
+				days = 1
 			}
 		}
+	}
 		SP_NS_clear_coalition_effect = yes
 	}
 }
@@ -2474,14 +2482,14 @@ country_event = {
 				ideology = libertarian_socialist
 				popularity = 0.15
 			}
-			create_country_leader = {
-				name = "Alexander Shliapnikov"
-				desc = "POLITICS_ALEXANDER_SHLIAPNIKOV_DESC"
-				picture = "Portrait_Soviet_Alexander_Shliapnikov.tga"
-				expire = "1965.1.1"
-				ideology = libertarian_socialist_subtype
-				traits = { SOV_the_metallworker }
-			}
+      add_country_leader_role = {
+      character = SOV_Alexander_Shliapnikov
+      promote_leader = yes
+      country_leader = {
+        ideology = libertarian_socialist_subtype
+        traits = { SOV_the_metallworker }
+      }
+    }
 			remove_every_minister = yes
 			add_ideas = {
 				SOV_Nikolay_Bukharin_hog_lib
@@ -2955,8 +2963,11 @@ country_event = {
 				id = sovietpol.1112
 				days = 3
 				}
-			}		
-	    }
+			}
+			random_other_country = {
+				news_event = { id = fxnews.39 days = 1 }
+			}	
+	  }
 		option = {	
 			ai_chance = {
 				factor = 40
@@ -3025,31 +3036,32 @@ country_event = {
 	    }
     }
 
-	country_event = {	
+country_event = {	
 	id = sovietpol.1110
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sovietpol.1110"}
-		title = "Assasination of Tukhachevsky"
-		desc = sovietpol.1110.d
-		picture = soviet_soviet_massacre
+  title = "Assasination of Tukhachevsky"
+  desc = sovietpol.1110.d
+  picture = soviet_soviet_massacre
 
-		fire_only_once = yes
-		is_triggered_only = yes
+  fire_only_once = yes
+  is_triggered_only = yes
 
-		option = {	
-			ai_chance = {
-				factor = 100
-			}
-		name = "Who is responsible?!"	
-		custom_effect_tooltip = SOV_government_min_5
-	    subtract_from_variable = { var = sov_stability_factor value = 5 }
-		hidden_effect = {
-			country_event = {
-				id = sovietpol.1111
-				days = 1
-				}
-	        }
-        }
+  option = {	
+    ai_chance = {
+      factor = 100
     }
+    name = "Who is responsible?!"	
+    retire_character = SOV_Mikhail_Tukhachevsky
+    custom_effect_tooltip = SOV_government_min_5
+    subtract_from_variable = { var = sov_stability_factor value = 5 }
+    hidden_effect = {
+      country_event = {
+        id = sovietpol.1111
+        days = 1
+      }
+    }
+  }
+}
 	country_event = {	
 	id = sovietpol.1111
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sovietpol.1111"}
@@ -3078,19 +3090,19 @@ country_event = {
 			}
 			remove_every_minister = yes
 			add_ideas = {
-				SOV_Vyacheslav_Molotov_for
+				SOV_Vyacheslav_Molotov_hog_van
 				SOV_Karl_Radek_for_van
 				SOV_Mikhail_Tomskiy_eco_van
 				SOV_Genrikh_Yagoda_sec_van
 			}
-			create_country_leader = {
-				name = "Nikolai Yezhov"
-				desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
-				picture = "Portrait_Soviet_Nikolai_Yezhov.tga"
-				expire = "1965.1.1"
-				ideology = vanguardist_subtype
-				traits = { SOV_the_spymaster }
-			}
+      add_country_leader_role = {
+        character = SOV_Nikolai_Yezhov
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = { SOV_the_spymaster }
+        }
+      }
 			if = {
 				limit = {
 					has_unit_leader = 401
@@ -3186,14 +3198,14 @@ country_event = {
 				SOV_Mikhail_Tomskiy_eco_van
 				SOV_Genrikh_Yagoda_sec_van
 			}
-			create_country_leader = {
-				name = "Kliment Voroshilov"
-				desc = "POLITICS_KLIMENT_VOROSHILOV_DESC"
-				picture = "Portrait_Soviet_Kliment_Voroshilov_fx.tga"
-				expire = "1965.1.1"
-				ideology = vanguardist_subtype
-				traits = { SOV_the_general }
-			}
+      add_country_leader_role = {
+        character = SOV_Kliment_Voroshilov
+        promote_leader = yes
+        country_leader = {
+          ideology = vanguardist_subtype
+          traits = { SOV_the_general }
+        }
+      }
 			if = {
 				limit = {
 					has_unit_leader = 401
@@ -4747,7 +4759,7 @@ country_event = {
 		fire_only_once = yes
 
 		option = {	
-			name = "This will bost the collectivization"
+			name = "This will boost the collectivization"
 			set_country_flag = SOV_party_officials_competing
 			custom_effect_tooltip = SOV_3collectivization
 			hidden_effect = {
@@ -5507,7 +5519,7 @@ country_event = {
     country_event = {	
 	id = sovietpol.1315
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sovietpol.1315"}
-		title = "Alliance between Molotov, Bukharin and Zinoniev"
+		title = "Alliance between Molotov, Bukharin and Zinoviev"
 		desc = sovietpol.1315.d
 		picture = soviet_meeting
 
@@ -5625,25 +5637,25 @@ country_event = {
 
 		option = {	
 			name = "Let's hope he will be successful"
-			create_country_leader = {
-				name = "Sergey Kirov"
-				desc = "POLITICS_SEGEY_KIROV_DESC"
-				picture = "Portrait_Soviet_Sergey_Kirov.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = { SOV_son }
-			}
+      add_country_leader_role = {
+        character = SOV_Sergey_Kirov
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = { SOV_son }
+        }
+      }
 			hidden_effect = {
 				country_event = {
 					id = sovietpol.1000 days = 3
 				}		
 			}
-       	} 
+      } 
     }
     country_event = {	
 	id = sovietpol.1321
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sovietpol.1321"}
-		title = "Tukhachevsky Stroms the Capital"
+		title = "Tukhachevsky Storms the Capital"
 		desc = sovietpol.1321.d
 		picture = soviet_military_coup
 
@@ -5652,14 +5664,14 @@ country_event = {
 
 		option = {	
 			name = "That doesn't sound good"
-			create_country_leader = {
-				name = "Mikhail Tukhachevsky"
-				desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-				picture = "Portrait_Soviet_Mikhail_Tukhachevsky.tga"
-				expire = "1965.1.1"
-				ideology = collectivist_subtype
-				traits = { SOV_the_soldier }
-				}
+      add_country_leader_role = {
+        character = SOV_Mikhail_Tukhachevsky
+        promote_leader = yes
+        country_leader = {
+          ideology = collectivist_subtype
+          traits = { SOV_the_soldier }
+        }
+      }
        		hidden_effect = {
        		    country_event = {
 					id = sovietpol.1100
@@ -7115,7 +7127,7 @@ country_event = {
 				producer = SOV
 			}
 			add_equipment_to_stockpile = {
-				type = light_tank_equipment
+				type = light_tank_equipment_1
 				amount = -30
 				producer = SOV
 			}
@@ -7140,7 +7152,7 @@ country_event = {
 				producer = SOV
 			}
 			add_equipment_to_stockpile = {
-				type = light_tank_equipment
+				type = light_tank_equipment_1
 				amount = -15
 				producer = SOV
 			}

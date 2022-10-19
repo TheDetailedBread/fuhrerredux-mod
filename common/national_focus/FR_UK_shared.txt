@@ -5,15 +5,12 @@
 	
 	shared_focus = {	
 		id = ENG_black_wed
-		icon = GFX_focus_wonderweapons
+		icon = GFX_goal_ENG_london_crash
 		available = {
 			custom_trigger_tooltip = { 
 				tooltip = ENG_has_crash
 				has_country_flag = ENG_stock_crash
 			}
-		}
-		bypass = {
-			has_country_flag = ENG_stock_crash
 		}
 		
 		offset = {
@@ -33,12 +30,13 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_black_wed"
+		add_political_power = 150
 		}
 	}
 	
 	shared_focus = {	
 		id = ENG_austerity
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_austerity_measures
 		available = {
 			custom_trigger_tooltip = { 
 				tooltip = ENG_mobilised_economy
@@ -308,7 +306,7 @@
 	
 	shared_focus = {	
 		id = ENG_stimulus
-		icon = GFX_goal_continuous_non_factory_construct
+		icon = GFX_goal_ENG_economic_stimulus
 		available = {
 			custom_trigger_tooltip = { 
 				tooltip = ENG_mobilised_economy
@@ -466,7 +464,7 @@
 	
 	shared_focus = {	
 		id = ENG_target_tax
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_bag_of_money
 		available = {
 			has_completed_focus = ENG_inflation
 			custom_trigger_tooltip = { 
@@ -758,7 +756,7 @@
 	
 	shared_focus = {
 		id = ENG_infra_projects
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_generic_railway_construction
 		available = {
 			has_completed_focus = ENG_pensions
 		}
@@ -940,7 +938,7 @@
 	
 	shared_focus = {
 		id = ENG_interest
-		icon = GFX_goal_continuous_non_factory_construct
+		icon = GFX_goal_gold_up
 		available = {
 			has_completed_focus = ENG_mil_cuts
 			custom_trigger_tooltip = { 
@@ -1201,7 +1199,7 @@
 	
 	shared_focus = {
 		id = ENG_lfaire
-		icon = GFX_goal_generic_construction2
+		icon = GFX_goal_generic_seize_investments
 		mutually_exclusive = { focus = ENG_infra_projects}
 		available = {
 			#OR = {
@@ -1310,7 +1308,7 @@
 	
 	shared_focus = {
 		id = ENG_lift_caps
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_banking_legislation
 		available = {
 			has_completed_focus = ENG_end_subs
 			custom_trigger_tooltip = { 
@@ -1349,7 +1347,7 @@
 	
 	shared_focus = {
 		id = ENG_liberate_markets
-		icon = GFX_goal_continuous_boost_freedom
+		icon = GFX_goal_ENG_liberate_the_market
 		available = {
 		}
 		
@@ -1403,7 +1401,7 @@
 	
 	shared_focus = {	# - TRIGGERED BY EVENT
 		id = ENG_ire_homerule
-		icon = GFX_goal_tripartite_pact 
+		icon = GFX_goal_IRE_irish_flag 
 		available = {
 			custom_trigger_tooltip = { 
 				tooltip = ENG_has_impconf 
@@ -1614,7 +1612,7 @@
 	
 	shared_focus = {
 		id = ENG_crush_brotherhood
-		icon = GFX_goal_continuous_suppression 
+		icon = GFX_goal_ENG_crush_brotherhood 
 		available = {
 			ENG = { controls_state = 119 }
 			#119 = {
@@ -2421,7 +2419,7 @@
 	
 	shared_focus = {
 		id = ENG_decentralise
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_ENG_freedom_for_the_dominions
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ENG_has_decen
@@ -2693,7 +2691,7 @@
 	
 	shared_focus = {
 		id = ENG_recon_army
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_GBR_royal_army
 		available = {
 		}
 		
@@ -2754,8 +2752,8 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_massingberd"
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = cat_mechanized_equipment }
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mobile_warfare }
+			add_doctrine_cost_reduction = { cost_reduction = 0.25 uses = 1 category = cat_mechanized_equipment }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = cat_mobile_warfare }
 		}
 	}
 	
@@ -2843,7 +2841,7 @@
 	
 	shared_focus = {
 		id = ENG_introcruisers
-		icon = GFX_goal_continuous_armor_production
+		icon = GFX_goal_generic_army_tanks2
 		available = {
 		}
 		
@@ -2876,7 +2874,7 @@
 	
 	shared_focus = {
 		id = ENG_deploy_ra
-		icon = GFX_goal_continuous_armor_production
+		icon = GFX_goal_generic_army_tanks3
 		available = {
 		}
 		
@@ -2956,7 +2954,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_ironside"
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = artillery }
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
@@ -3034,7 +3036,7 @@
 	
 	shared_focus = {
 		id = ENG_art_produ1
-		icon = GFX_goal_continuous_repairments
+		icon = GFX_goal_munitions_factories
 		available = {
 		}
 		
@@ -3127,7 +3129,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_haig"
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = infantry_weapons }
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
@@ -3294,7 +3300,7 @@
 	
 	shared_focus = {
 		id = ENG_renew_mil
-		icon = GFX_imperial_army
+		icon = GFX_goal_generic_drafted_army
 		available = {
 			OR = {
 				has_completed_focus = ENG_national_effort
@@ -3365,7 +3371,7 @@
 	
 	shared_focus = {
 		id = ENG_theraf
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_GBR_royal_air_force
 		available = {
 		}
 		
@@ -3425,7 +3431,7 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_harris"
 			air_experience = 20
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_destruction }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_destruction }
 		}
 	}
 	
@@ -3457,8 +3463,8 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_strat_destruct"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_bomber }
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_destruction }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_bomber }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_destruction }
 		}
 	}
 	
@@ -3496,7 +3502,7 @@
 	
 	shared_focus = {
 		id = ENG_future_invest
-		icon = GFX_goal_continuous_air_production
+		icon = GFX_goal_generic_air_fighter2_new
 		available = {
 		}
 		
@@ -3528,7 +3534,7 @@
 	
 	shared_focus = {
 		id = ENG_ccommand
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_goal_generic_air_command
 		available = {
 		}
 		
@@ -3540,7 +3546,10 @@
 			}
 		}
 		
-		prerequisite = { focus = ENG_theraf }
+		prerequisite = { 
+			focus = ENG_harris
+			focus = ENG_portal 
+		}
 		x = 37
 		y = 3
 		cost = 5
@@ -3587,7 +3596,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_assist_rn"
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_bomber }
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -3678,10 +3691,10 @@
 			}
 		}
 		available_if_capitulated = no  
-	completion_reward = {
+	  completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_portal"
 			air_experience = 20
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_battlefield_support }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_battlefield_support }
 		}
 	}
 	
@@ -3714,7 +3727,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_support_army"
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = cas_bomber }
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	
@@ -3796,7 +3813,10 @@
 			}
 		}
 		
-		prerequisite = { focus = ENG_theraf }
+		prerequisite = { 
+			focus = ENG_harris
+			focus = ENG_portal 
+		}
 		x = 39
 		y = 3
 		cost = 5
@@ -3816,7 +3836,7 @@
 	
 	shared_focus = {
 		id = ENG_controlled_intercept
-		icon = GFX_focus_generic_cryptologic_bomb
+		icon = GFX_goal_generic_airports
 		available = {
 		}
 		
@@ -3919,7 +3939,7 @@
 	
 	shared_focus = {
 		id = ENG_thern
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_GBR_royal_navy
 		available = {
 		}
 		
@@ -3946,7 +3966,11 @@
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_thern"
 			navy_experience = 20
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4011,7 +4035,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_exercises"
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4075,7 +4103,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_gwlessons"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4113,7 +4145,7 @@
 	
 	shared_focus = {
 		id = ENG_exp_shipyards1
-		icon = GFX_goal_continuous_naval_production
+		icon = GFX_goal_generic_naval_industry
 		available = {
 		}
 		
@@ -4224,7 +4256,7 @@
 	
 	shared_focus = {
 		id = ENG_reorg_admiralty
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_goal_generic_naval_academy
 		available = {
 		}
 		
@@ -4317,13 +4349,17 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_grandfleet"
-			add_tech_bonus = { bonus = 0.25 uses = 3 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
 	shared_focus = {
 		id = ENG_learn_jutland
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_generic_naval_fleet_in_being
 		available = {
 		}
 		
@@ -4452,7 +4488,7 @@
 	
 	shared_focus = {
 		id = ENG_convoy_escort
-		icon = GFX_goal_generic_navy_anti_submarine
+		icon = GFX_goal_generic_navy_battleship3alt
 		available = {
 		}
 		
@@ -4484,7 +4520,7 @@
 	
 	shared_focus = {
 		id = ENG_nav_course
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_generic_naval_base
 		available = {
 		}
 		
@@ -4527,7 +4563,7 @@
 	
 	shared_focus = {
 		id = ENG_mod_nav_cons
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_generic_shipyard
 		available = {
 		}
 		
@@ -4597,7 +4633,11 @@
 		available_if_capitulated = no  
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus ENG_mobile_squad"
-			add_tech_bonus = { bonus = 0.25 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 	
@@ -4635,7 +4675,7 @@
 	
 	shared_focus = {
 		id = ENG_bc_refit
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_generic_sea_focused_navy2
 		available = {
 		}
 		
@@ -4667,7 +4707,7 @@
 	
 	shared_focus = {
 		id = ENG_escort_killers
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_generic_coastal_navy2
 		available = {
 		}
 		
@@ -6335,7 +6375,7 @@
 	
 	shared_focus = {
 		id = ENG_dip_usa
-		icon = GFX_focus_generic_strike_at_democracy3
+		icon = GFX_goal_generic_attack_usa
 		available = {
 			USA = { exists = yes }
 			NOT = { has_war_with = USA }
@@ -6600,7 +6640,7 @@
 	
 	shared_focus = {
 		id = ENG_cape_cairo
-		icon = GFX_goal_MAF_Cape_Cairo
+		icon = GFX_goal_ENG_cape_to_cairo
 		available = {
 			has_war = no
 		}
@@ -6620,7 +6660,7 @@
 	
 	shared_focus = {
 		id = ENG_dip_arabia
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_attack_arabia
 		available = {
 			ARB = { 
 				exists = yes 
@@ -6633,6 +6673,10 @@
 			OR = {
 				ARB = { exists = NO }
 				has_war_with = ARB
+			}
+			OR = {
+				SAU = { exists = no }
+				has_war_with = SAU
 			}
 		}
 		x = 48
@@ -6655,7 +6699,7 @@
 	
 	shared_focus = {
 		id = ENG_dip_iraq
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_generic_attack_iraq
 		available = {
 			IRQ = { 
 				exists = yes 
@@ -7038,7 +7082,7 @@
 	
 	shared_focus = {
 		id = ENG_dip_siam
-		icon = GFX_goal_continuous_suppression
+		icon = GFX_goal_generic_attack_siam
 		available = {
 			SIA = { 
 				exists = yes 
@@ -7506,7 +7550,7 @@
 	
 	shared_focus = {
 		id = ENG_final_struggle
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_attack_france
 		available = {
 			FRA = { 
 				NOT = { has_idea = ENG_dovpact } 
@@ -7584,7 +7628,7 @@
 	
 	shared_focus = {
 		id = ENG_attack_germany
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_goal_generic_attack_german_reich
 		available = {
 			GER = { 
 				NOT = { has_idea = ENG_jutpact } 
@@ -8486,7 +8530,7 @@
 	
 	shared_focus = {
 		id = ENG_est_iedc
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_CAN_iedc
 		available = {
 		}
 		
@@ -8698,7 +8742,7 @@
 	
 	shared_focus = {
 		id = ENG_create_isaac
-		icon = GFX_goal_continuous_research
+		icon = GFX_goal_CAN_isac
 		available = {
 		}
 		

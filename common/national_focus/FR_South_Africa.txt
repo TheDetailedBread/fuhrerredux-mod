@@ -21,7 +21,7 @@ focus_tree = {
 #### Army Tree ####
 	focus = { 
 		id = SAF_Union_Army
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_goal_SAF_army
 		x = 0
 		y = 0
 		cost = 5
@@ -62,7 +62,7 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = {	var = saf_united value = 1 }
 			}
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mobile_warfare }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = cat_mobile_warfare }
 		}
 	}	
 
@@ -94,7 +94,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Mobile_Army"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_mobile_warfare }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = cat_mobile_warfare }
 		}
 	}
 
@@ -126,7 +126,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Planning_Initiatives"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -167,7 +171,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Through_the_Hills"
-			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 			hidden_effect = {
 				add_to_variable = {	var = saf_pnp value = 1 }
 			}
@@ -327,14 +335,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Army_for_Nation"
-			add_tech_bonus = { bonus = 1 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
 #### Navy Tree ####
 	focus = { 
 		id = SAF_Union_Navy
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_SAF_navy
 		x = 7
 		y = 0
 		cost = 5
@@ -479,7 +491,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Grand_Battlefleet"
-			add_tech_bonus = { bonus = 0.25 uses = 2 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = bb_tech }
 		}
 	}
@@ -633,8 +649,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Defensive_Fleet"
-			add_tech_bonus = {
-  				bonus = 0.5
+			add_doctrine_cost_reduction = {
+  			cost_reduction = 0.5
  				uses = 2
  				category = cat_fleet_in_being
 			}
@@ -673,14 +689,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Africa_Naval_Superpower"
-			add_tech_bonus = { bonus = 1 uses = 1 category = naval_doctrine }
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 
 #### Air Tree ####
 	focus = { 
 		id = SAF_Union_Air_Force
-		icon = GFX_goal_generic_air_production 
+		icon = GFX_goal_SAF_airforce 
 		x = 13
 		y = 0
 		cost = 5
@@ -705,7 +725,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Air_Ground_Support"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_battlefield_support }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_battlefield_support }
 		}
 	}
 
@@ -775,7 +795,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Total_War"
-			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_strategic_destruction }
+			add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 1 category = cat_strategic_destruction }
 		}
 	}
 
@@ -919,9 +939,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_Our_Own_Air_Force"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = air_doctrine
 			}

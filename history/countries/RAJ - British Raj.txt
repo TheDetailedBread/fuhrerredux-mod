@@ -1,17 +1,6 @@
-﻿capital = 439
+capital = 439
 
-# Set province controls for units
-#set_province_controller = 1444
-#set_province_controller = 4953
-#set_province_controller = 10843
-#set_province_controller = 11955
-#set_province_controller = 11993
-#set_province_controller = 12480
-#set_province_controller = 7205
-#set_province_controller = 4245
-#set_province_controller = 2086
-
-oob = "RAJ_1936"
+oob = "RAJ"
 
 # Starting tech
 set_technology = {
@@ -20,19 +9,28 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-
-	early_fighter = 1
-	CAS1 = 1
 	fuel_silos = 1
+	basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "RAJ_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "RAJ_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -41,18 +39,20 @@ if = {
 		early_ship_hull_light = 1
 		early_ship_hull_submarine = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_torpedo = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
 	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			transport = 1
+		}
+	}
 }
 
 add_ideas = {
-	GEN_hog_ade
-	DEH_Alfred_Knox_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	colonial_government
 }
 
@@ -70,17 +70,17 @@ set_politics = {
 }
 
 set_popularities = {
-vanguardist = 4
-collectivist = 5
-libertarian_socialist = 2
-social_democrat = 10
-social_liberal = 5
-market_liberal = 2
-social_conservative = 7
-authoritarian_democrat = 50
-paternal_autocrat = 7
-national_populist = 5
-valkist = 3
+  vanguardist = 4
+  collectivist = 5
+  libertarian_socialist = 2
+  social_democrat = 10
+  social_liberal = 5
+  market_liberal = 2
+  social_conservative = 7
+  authoritarian_democrat = 50
+  paternal_autocrat = 7
+  national_populist = 5
+  valkist = 3
 }
 
 add_ideas = {
@@ -92,92 +92,8 @@ add_ideas = {
 	RAJ_princely_states
 }
 
-create_country_leader = {
-	name = "Lord Linlithgow"
-	desc = "POLITICS_LORD_LINLITHGOW_DESC"
-	picture = "Portrait_Lord_Linlithgow.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-
-	}
-}
-
-# REVISIT Unclear if appropriate for this ideology
-create_country_leader = {
-	name = "V. D. Savarkar"
-	desc = "POLITICS_VD_SAVARKAR_DESC"
-	picture = "GFX_RAJ_veer_savarkar"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "P. Krishna Pillai"
-	desc = "POLITICS_P_KRISHNA_PILLAI_DESC"
-	picture = "GFX_RAJ_krishna_pillai"
-	expire = "1965.1.1"
-	ideology = collectivist_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "B. P. Sitaramayya"
-	desc = "POLITICS_B_P_SITARAMAYYA_DESC"
-	picture = "GFX_RAJ_pattabhi_sitaramayya"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = {
-
-	}
-}
-
-create_corps_commander = {
-	name = "Noel Beresford-Peirse"
-	desc = "RAJ_noel_beresford_peirse_desc"
-	gfx = "GFX_RAJ_noel_beresford_peirse"
-	traits = { panzer_leader }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Frank Messervy"
-	desc = "RAJ_frank_messervy_desc"
-	gfx = "GFX_RAJ_frank_messervy"
-	traits = { hill_fighter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3	
-}
-create_corps_commander = {
-	name = "Douglas Gracey"
-	desc = "RAJ_douglas_gracey_desc"
-	gfx = "GFX_RAJ_douglas_gracey"
-	traits = { desert_fox }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3	
-}
-create_navy_leader = {
-	name = "Herbert Fitzherbert"
-	desc = "RAJ_herbert_fitzherbert_desc"
-	gfx = "GFX_RAJ_herbert_fitzherbert"
-	traits = { }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2	
-}
+recruit_character = RAJ_Lord_Linlithgow
+recruit_character = RAJ_Noel_Beresford_Peirse
+recruit_character = RAJ_Frank_Messervy
+recruit_character = RAJ_Douglas_Gracey
+recruit_character = RAJ_Herbert_Fitzherbert

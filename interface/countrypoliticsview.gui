@@ -190,10 +190,50 @@ guiTypes = {
 				#buttonText = "DIPLOMACY_DISMANTLE_FACTION_TITLE"
 			}	
 			
-			
+			containerWindowType = {
+				name = "power_balance_button"
+				position = { x = 320 y = -62 }
+				clipping = no
+
+				buttonType = {
+					name = "show_power_balance"
+					position = { x = 0 y = 0 }
+					quadTextureSprite = "GFX_show_power_balance_button"
+				}
+
+				instantTextboxType = {
+					name = "power_balance_percentage"
+					format = center
+					position = { x = 40 y = 10 }
+					font = "hoi_16mbs"
+					text = "90%"
+					fixedsize = yes
+					maxWidth = 100
+					maxHeight = 20
+					alwaystransparent = yes
+				}
+
+				instantTextboxType = {
+					name = "power_balance_levels"
+					format = center
+					position = { x = 40 y = 25 }
+					font = "hoi_16mbs"
+					text = "3/5"
+					fixedsize = yes
+					maxWidth = 100
+					maxHeight = 20
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "power_balance_ICON"
+					position = { x = 12 y = 4 }
+					quadTextureSprite = "GFX_placeholder_bordered"
+					alwaystransparent = yes
+					scale = 0.55
+				}
+			}
 		}
-		
-		
 		
 		containerWindowType = {
 			name = "autonomy_progress_view"
@@ -457,7 +497,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "ideas"
 			position = { x = 0 y = 530 }
-			size = { width=100%% height=101%% }
+			size = { width=100%% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			margin = { top = 14 bottom = 13}
 		
@@ -803,7 +843,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_selectable_idea_entry_grid"
-		size = { width = 231 height = 97 }
+		size = { width = 231 height = 94 }
 		clipping = no
 			
 		background = {
@@ -814,7 +854,7 @@ guiTypes = {
 			
 		iconType = {
 			name = "icon"
-			position = { x = 43 y = 40 }
+			position = { x = 42 y = 38 }
 			spriteType = "GFX_placeholder_bordered"
 			centerposition = yes
 			alwaystransparent = yes
@@ -830,9 +870,9 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
-		    name = "traits_container"
-		    position = { x = 80 y = 0 }	
-		    show_position = { x = 0 y = 0 }
+		  name = "traits_container"
+		  position = { x = 76 y = 0 }	
+		  show_position = { x = 0 y = 0 }
 			size = { width=170 height=100%% }
 			
 			instantTextboxType = {
@@ -842,7 +882,7 @@ guiTypes = {
 				fixedsize = yes			
 				text = ""
 				maxWidth = 150
-				maxHeight = 36
+				maxHeight = 13 #36
 				format = left
 				alwaystransparent = yes			
 			}
@@ -896,7 +936,7 @@ guiTypes = {
 			
 		iconType = {
 			name = "icon"
-			position = { x = 42 y = 38 }
+			position = { x = 18 y = 68 }
 			spriteType = "GFX_placeholder_bordered"
 			centerposition = yes
 			alwaystransparent = yes
@@ -912,9 +952,9 @@ guiTypes = {
 		}
 		
 		containerWindowType = {
-		    name = "traits_container"
-		    position = { x = 84 y = 0 }	
-		    show_position = { x = 0 y = 0 }
+		  name = "traits_container"
+		  position = { x = 84 y = 0 }	
+		  show_position = { x = 0 y = 0 }
 			size = { width=170 height=100%% }
 			
 			instantTextboxType = {

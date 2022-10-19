@@ -1,6 +1,6 @@
-﻿capital = 323
+capital = 323
 
-oob = "NEP_1936"
+oob = "NEP"
 
 # Starting tech
 set_technology = {
@@ -10,10 +10,6 @@ set_technology = {
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_pau
-	GEN_for_pau
-	GEN_eco_pau
-	GEN_sec_pau
 	absolute_monarchy
 }
 
@@ -28,26 +24,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 12
-    collectivist = 2
-    libertarian_socialist = 0
-    social_democrat = 2
-    social_liberal = 0
-    market_liberal = 3
-    social_conservative = 8
-    authoritarian_democrat = 32
-    paternal_autocrat = 35
-    national_populist = 4
-    valkist = 2
+  vanguardist = 12
+  collectivist = 2
+  libertarian_socialist = 0
+  social_democrat = 2
+  social_liberal = 0
+  market_liberal = 3
+  social_conservative = 8
+  authoritarian_democrat = 32
+  paternal_autocrat = 35
+  national_populist = 4
+  valkist = 2
 }
 
-create_country_leader = {
-	name = "Tribhuvana"
-	desc = "POLITICS_WHATEVER_HIS_NAME_IS_DESC"
-	picture = "Portrait_Nepal_Tribhuvana.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = NEP_Tribhuvana

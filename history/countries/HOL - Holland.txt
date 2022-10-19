@@ -1,17 +1,11 @@
-﻿capital = 7
+capital = 7
 
-oob = "HOL_1936"
+oob = "HOL"
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "HOL_1936_naval_mtg"
-	else = {
-		set_naval_oob = "HOL_1936_naval_legacy"
-	}
-}
-
+set_stability = 0.81
+set_war_support = 0.74
 set_research_slots = 3
-
+set_convoys = 500
 
 set_technology = {
 	infantry_weapons = 1
@@ -22,6 +16,7 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 	fuel_silos = 1
+  basic_train = 1
 }
 
 if = {
@@ -32,300 +27,161 @@ if = {
 }
 
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "HOL_air_bba"
 	set_technology = {
-		early_submarine = 1
-		basic_destroyer = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
-		transport = 1
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+	}
+	else = {
+		set_air_oob = "HOL_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
 	}
 }
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		basic_cruiser_armor_scheme = 1
-		coastal_defense_ships = 1
-		mtg_transport = 1
+		set_technology = {
+			basic_naval_mines = 1
+			submarine_mine_laying = 1
+			early_ship_hull_light = 1
+			early_ship_hull_submarine = 1
+			basic_ship_hull_submarine = 1
+			early_ship_hull_cruiser = 1
+			basic_ship_hull_cruiser = 1
+			basic_battery = 1
+			basic_torpedo = 1
+			basic_depth_charges = 1
+			basic_cruiser_armor_scheme = 1
+			coastal_defense_ships = 1
+			mtg_transport = 1
+		}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			basic_destroyer = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			basic_light_cruiser = 1
+			early_heavy_cruiser = 1
+			transport = 1
+		}
 	}
 }
-
-
 
 add_ideas = {
 	party_pop_0_60
 	extensive_conscription
-	GEN_hog_npo
-	GEN_for_npo
-	GEN_eco_npo
-	GEN_sec_npo
+  HOL_leftist_symphatizers
+	HOL_revaunchist_state
+	HOL_dutch_german_economic_cooperation
+	HOL_unrecognized_government
 	one_party_dictatorship
 }
-
 
 set_politics = {	
 	ruling_party = national_populist
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {
-    vanguardist = 2
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 9
-    social_liberal = 0
-    market_liberal = 3
-    social_conservative = 9
-    authoritarian_democrat = 9
-    paternal_autocrat = 7
-    national_populist = 61
-    valkist = 0
+  vanguardist = 2
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 9
+  social_liberal = 0
+  market_liberal = 3
+  social_conservative = 9
+  authoritarian_democrat = 17
+  paternal_autocrat = 15
+  national_populist = 45
+  valkist = 0
+}
+set_country_flag = coalition_authoritarian_democrat
+set_country_flag = coalition_paternal_autocrat
+
+country_event = { id = dutchstate.0 days = 2 }
+country_event = { id = dutchstate.18 days = 167 }
+country_event = { id = dutchstate.21 days = 467 }
+country_event = { id = dutchstate.22 days = 1025 }
+country_event = { id = dutchstate.19 days = 1204 }
+country_event = { id = dutchstate.40 days = 200 }
+country_event = { id = dutchstate.49 days = 230 }
+country_event = { id = dutchstate.100 days = 67 }
+
+HOL_add_aircraft_variants = yes
+HOL_add_armour_variants = yes
+HOL_add_ship_variants = yes
+
+KNE = {
+	inherit_technology = HOL
+	HOL_add_aircraft_variants = yes
+	HOL_add_armour_variants = yes
+	HOL_add_ship_variants = yes
 }
 
-set_convoys = 500
-set_stability = 0.81
-set_war_support = 0.74
-
-create_country_leader = {
-	name = "Willem Drees"
-	desc = "POLITICS_WILLEM_DREES_DESC"
-	picture = "Portrait_Netherlands_Willem_Drees.tga"
-	expire = "1965.1.1"
-	ideology = social_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bernhard of the Netherlands"
-	desc = "POLITICS_PRINCE_BERNHARD_DESC"
-	picture = "Portrait_Netherlands_Bernhard.tga"
-	expire = "1965.1.1"
-	ideology = authoritarian_democrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bernhard of the Netherlands"
-	desc = "POLITICS_PRINCE_BERNHARD_DESC"
-	picture = "Portrait_Netherlands_Bernhard.tga"
-	expire = "1965.1.1"
-	ideology = paternal_autocrat_subtype
-	traits = { }
-}
-create_country_leader = {
-	name = "Bernhard of the Netherlands"
-	desc = "POLITICS_PRINCE_BERNHARD_DESC"
-	picture = "Portrait_Netherlands_Bernhard.tga"
-	expire = "1965.1.1"
-	ideology = national_populist_subtype
-	traits = { }
-}
-
-
-create_field_marshal = {
-	name = "Jan Beelaerts van Blokland"
-	picture = "Portrait_Netherlands_Jan_Beelaerts_van_Blokland.tga"
-	traits = { offensive_doctrine inflexible_strategist career_officer }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Kees van Eendenburg"
-	picture = "Portrait_Netherlands_Kees_van_Eendenburg.tga"
-	traits = { trait_cautious inflexible_strategist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Cornelis van Geelkerken"
-	picture = "Portrait_Netherlands_Cornelis_van_Geelkerken.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "K-XIV Class"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			sub_engine_upgrade = 2
-			sub_stealth_upgrade = 2
-			sub_torpedo_upgrade = 2
-		}
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Submarines #
-	create_equipment_variant = {			# represents K II-X, O8 subs
-		name = "K-III Class"
-		type = ship_hull_submarine_1
-		name_group = HOL_SS_KCLASS
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "O9 Class"					# represents O9-15, K XI-XIII subs
-		type = ship_hull_submarine_1
-		name_group = HOL_SS_OCLASS
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "K-XIV Class"				# represents K XIV-XVIII, O16 subs
-		type = ship_hull_submarine_2
-		name_group = HOL_SS_KCLASS
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = ship_torpedo_sub_2
-		}
-	}
-	# Destroyers #
-	create_equipment_variant = {
-		name = "Van Ghent Class"			
-		type = ship_hull_light_1
-		name_group = HOL_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_mine_layer_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Van Galen Class"				
-		type = ship_hull_light_1
-		name_group = HOL_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
-	# Light Cruisers #
-	create_equipment_variant = {
-		name = "Java Class"
-		type = ship_hull_cruiser_1
-		name_group = HOL_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = ship_light_medium_battery_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "De Ruyter Class"
-		type = ship_hull_cruiser_1
-		name_group = HOL_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_2
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-	}
-	# Heavy Cruisers #
-	create_equipment_variant = {
-		name = "Hertog Hendrik Class"			
-		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = HOL_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = ship_torpedo_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Soerabaja Class"				# represents Soerabaja (De Zeven Provinciën) and Jacob van Heemskerck 
-		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = HOL_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_2
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-	}
-}
-
+recruit_character = HOL_Izaak_Reynders
+recruit_character = HOL_Henri_Nicolas_Alfred_Swart
+recruit_character = HOL_Cornelis_van_Geelkerken
+recruit_character = HOL_Jan_Baars
+recruit_character = HOL_Willem_Bernard_Engelbrecht
+recruit_character = HOL_Henri_Johannes_ter_Hal
+recruit_character = HOL_Alfred_Haighton
+recruit_character = HOL_Gerrit_van_Burink
+recruit_character = HOL_Frederik_Carel_Gerretson
+recruit_character = HOL_Johannes_Linthorst_Homan
+recruit_character = HOL_AJ_van_der_Hoeven
+recruit_character = HOL_Gerhardus_Dieters
+recruit_character = HOL_Hendrik_Seyffardt
+recruit_character = HOL_Godfried_van_Voorst_tot_Voorst
+recruit_character = HOL_Herman_van_Voorst_tot_Voorst
+recruit_character = HOL_Adrianus_Zondervan
+recruit_character = HOL_Johan_Furstner
+recruit_character = HOL_Pieter_Koenraad
+recruit_character = HOL_Julius_Zegers
+recruit_character = HOL_Willem_Drees
+recruit_character = HOL_Bernhard_of_the_Netherlands
+recruit_character = HOL_Jan_Beelaerts_van_Blokland
+recruit_character = HOL_Kees_van_Eendenburg
+recruit_character = HOL_Conrad_Helfrich
+recruit_character = HOL_Alfred_de_Booy
+recruit_character = HOL_Karel_Doorman
+recruit_character = HOL_David_Wijnkoop
+recruit_character = HOL_Anton_Pannekoek
+recruit_character = HOL_Harm_Kolthek
+recruit_character = HOL_Henk_Sneevliet
+recruit_character = HOL_Piet_Johannes_Schmidt
+recruit_character = HOL_Paul_de_Groot
+recruit_character = HOL_Nicolaas_Beuzemaker
+recruit_character = HOL_Benjamin_Boers
+recruit_character = HOL_Louis_de_Visser
+recruit_character = HOL_Abraham_Verduin
+recruit_character = HOL_Jacques_de_Kadt
+recruit_character = HOL_Jan_Tinbergen
+recruit_character = HOL_Bernhard_Coltof
+recruit_character = HOL_Daniel_Goulooze
+recruit_character = HOL_Henriette_Roland_Holst
+recruit_character = HOL_Abraham_Menist
+recruit_character = HOL_Fokke_Bosman

@@ -1,6 +1,6 @@
-﻿capital = 352
+capital = 352
 
-oob = "KUR_1936"
+oob = "KUR"
 
 set_research_slots = 3
 set_stability = 0.66
@@ -10,33 +10,38 @@ set_war_support = 0.50
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_recon = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_military_police = 1
-	tech_mountaineers = 1
-	motorised_infantry = 1
-	paratroopers = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
-	strategic_bomber1 = 1
-	naval_bomber1 = 1
-	transport = 1
-	fuel_silos = 1
+  basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+if = {
+  limit = { has_dlc = "No Step Back" }
+  set_technology = {
+    gwtank_chassis = 1
+  }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
 }
 
 add_ideas = {
 	party_pop_0_30
-	GEN_hog_ade
-	GEN_eco_ade
-	GEN_sec_ade
-	GEN_for_ade
 	parliamentary_republic
 }
 
@@ -48,26 +53,18 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 26
-    social_liberal = 4
-    market_liberal = 1
-    social_conservative = 27
-    authoritarian_democrat = 32
-    paternal_autocrat = 10
-    national_populist = 0
-    valkist = 0
+  vanguardist = 0
+  collectivist = 0
+  libertarian_socialist = 0
+  social_democrat = 26
+  social_liberal = 4
+  market_liberal = 1
+  social_conservative = 27
+  authoritarian_democrat = 32
+  paternal_autocrat = 10
+  national_populist = 0
+  valkist = 0
 }
 
-create_country_leader = {
-	name = "Jeladet Bedir Khan"
-	desc = ""
-	picture = "Portrait_KUR_Jeladet_Bedir_Khan.tga"
-	expire = "1953.3.1"
-	ideology = authoritarian_democrat_subtype
-	traits = {
-		
-	}
-}
+recruit_character = KUR_Jeladet_Bedir_Khan
+recruit_character = KUR_Mistefa_Barzani

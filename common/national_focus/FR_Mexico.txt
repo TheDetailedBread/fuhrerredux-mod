@@ -214,7 +214,7 @@ focus_tree = {
 		id = MEX_never_compromise
 		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = { focus = MEX_the_kings_cabinent }
-		mutually_exclusive = { focus = MEX_constitutional_monarchy }
+		#mutually_exclusive = { focus = MEX_constitutional_monarchy }
 		x = 2
 		y = 5
 		cost = 5
@@ -567,20 +567,13 @@ focus_tree = {
 		x = 4
 		y = 8
 		cost = 5
-
 		available_if_capitulated = no
-
-		available = { always = no }
-
 		available = {
-			NOT = {
-				is_puppet_of = USA
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = unlocked_later
+				has_country_flag = USA_border_city_attacked
 			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MEX_the_san_diego_incident"
-			add_political_power = 5
 		}
 	}
 
@@ -739,7 +732,7 @@ focus_tree = {
 
 	focus = {
 		id = MEX_mobility_priority
-		icon = GFX_goal_RUS_Markov_plan
+		icon = GFX_goal_generic_army_tanks2
 		prerequisite = { focus = MEX_the_question_of_doctrine }
 		mutually_exclusive = { focus = MEX_firepower_priority focus = MEX_planning_priority }
 		x = 10
@@ -747,15 +740,15 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_global_flag = MEX_MOBILE_WARFARE
+			has_country_flag = MEX_mobile_warfare_tt
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MEX_mobility_priority"
-			add_tech_bonus = {
-  				bonus = 0.5
+			add_doctrine_cost_reduction = {
+  			cost_reduction = 0.5
  				uses = 2
  				category = cat_mobile_warfare
 			}
@@ -764,7 +757,7 @@ focus_tree = {
 
 	focus = {
 		id = MEX_firepower_priority
-		icon = GFX_goal_doctrine_fire_superiority
+		icon = GFX_goal_artillery
 		prerequisite = { focus = MEX_the_question_of_doctrine }
 		mutually_exclusive = { focus = MEX_mobility_priority focus = MEX_planning_priority }
 		x = 12
@@ -772,15 +765,15 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_global_flag = MEX_SUPERIOR_FIREPOWER
+			has_country_flag = MEX_superior_firepower_tt
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MEX_firepower_priority"
-			add_tech_bonus = {
-  				bonus = 0.5
+			add_doctrine_cost_reduction = {
+  			cost_reduction = 0.5
  				uses = 2
  				category = cat_superior_firepower
 			}
@@ -797,15 +790,15 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_global_flag = MEX_GRAND_BATTLEPLAN
+			has_country_flag = MEX_grand_battleplan_tt
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MEX_planning_priority"
-			add_tech_bonus = {
-  				bonus = 0.5
+			add_doctrine_cost_reduction  = {
+  			cost_reduction = 0.5
  				uses = 2
  				category = cat_grand_battle_plan
 			}
@@ -824,10 +817,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MEX_wargames"
-			add_tech_bonus = {
-  				bonus = 0.5
- 				uses = 2
- 				category = land_doctrine
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
 			}
 		}
 	}
@@ -1029,10 +1022,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MEX_drilling_the_admirals"
-			add_tech_bonus = {
-  				bonus = 0.5
- 				uses = 2
- 				category = naval_doctrine
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1379,8 +1372,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MEX_reorganized_airforce"
-			add_tech_bonus = {
-  				bonus = 0.5
+			add_doctrine_cost_reduction = {
+  			cost_reduction = 0.5
  				uses = 2
  				category = air_doctrine
 			}

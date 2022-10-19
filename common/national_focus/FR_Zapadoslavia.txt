@@ -351,8 +351,8 @@ focus_tree = {
 	
 		id = CEN_hacha_authority
 		icon = GFX_goal_generic_political_pressure
-		available = { OR { has_country_flag = CEN_ripka_madlad has_country_flag = CEN_benes_failed has_country_flag = CEN_osusky_failed } }
-		available = { NOT { has_country_flag = CEN_ripka_failed  } }
+		available = { OR = { has_country_flag = CEN_ripka_madlad has_country_flag = CEN_benes_failed has_country_flag = CEN_osusky_failed } }
+		available = { NOT = { has_country_flag = CEN_ripka_failed  } }
 		prerequisite = { focus = CEN_free_elections }
 	
 		x = 8
@@ -362,26 +362,27 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-		add_political_power = 50
-		add_popularity = {
-		ideology = social_conservative
-		popularity = 0.2
-			}
-		add_popularity = {
-		ideology = authoritarian_democrat
-		popularity = 0.1
-			}
-		set_politics = { ruling_party = social_conservative elections_allowed = no }
-		retire_country_leader = yes
-			create_country_leader = {
-				name = "Emil Hácha"
-				picture = "Portrait_CEN_Hacha.dds"
-				expire = "1970.1.1"
-				ideology = social_conservative_subtype
-				traits = {}
-			}
+      add_political_power = 50
+      add_popularity = {
+        ideology = social_conservative
+        popularity = 0.2
+      }
+      add_popularity = {
+        ideology = authoritarian_democrat
+        popularity = 0.1
+      }
+      set_politics = { ruling_party = social_conservative elections_allowed = no }
+      retire_country_leader = yes
+			CEN_Emil_Hacha = {
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+            ideology = social_conservative_subtype
+            traits = {}
+          }
+        }
+      }
 		}
-	
 	}
 	focus = {
 	
@@ -570,8 +571,8 @@ focus_tree = {
 		id = CEN_hodza_liberalism
 		icon = GFX_goal_generic_neutrality_focus
 	
-		available = { OR { has_country_flag = CEN_osusky_madlad has_country_flag = CEN_ripka_failed has_country_flag = CEN_benes_failed } }
-		available = { NOT { has_country_flag = CEN_osusky_failed } }
+		available = { OR = { has_country_flag = CEN_osusky_madlad has_country_flag = CEN_ripka_failed has_country_flag = CEN_benes_failed } }
+		available = { NOT = { has_country_flag = CEN_osusky_failed } }
 		prerequisite = { focus = CEN_free_elections }
 		
 		x = 12
@@ -755,8 +756,8 @@ focus_tree = {
 		id = CEN_najda_reform
 		icon = GFX_focus_generic_soviet_politics
 		
-		available = { OR { has_country_flag = CEN_benes_madlad has_country_flag = CEN_osusky_failed has_country_flag = CEN_ripka_failed } }
-		available = { NOT { has_country_flag = CEN_benes_failed } }
+		available = { OR = { has_country_flag = CEN_benes_madlad has_country_flag = CEN_osusky_failed has_country_flag = CEN_ripka_failed } }
+		available = { NOT = { has_country_flag = CEN_benes_failed } }
 		prerequisite = { focus = CEN_free_elections }
 		
 		x = 16
@@ -1137,9 +1138,9 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -1163,9 +1164,9 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -1189,9 +1190,9 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = doctrine_bonus
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}

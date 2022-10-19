@@ -1083,7 +1083,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_spearhead_of_the_empire
-		icon = GFX_imperial_army
+		icon = GFX_goal_CAN_army
 		prerequisite = { focus = CAN_fund_oil_exploitation }
 		x = 24
 		y = 1
@@ -1121,8 +1121,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_mcnaughtons_lightning_warfare"
-			add_tech_bonus = { 
-  				bonus = 0.5  
+			add_doctrine_cost_reduction = { 
+  			cost_reduction = 0.5  
  				uses = 2
  				category = cat_mobile_warfare 
 			}
@@ -1258,8 +1258,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_school_of_movement"
-			add_tech_bonus = { 
-  				bonus = 0.5  
+			add_doctrine_cost_reduction = { 
+  			cost_reduction = 0.5  
  				uses = 2  
  				category = cat_mobile_warfare 
  			}
@@ -1290,8 +1290,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_curries_firepower_primacy"
-			add_tech_bonus = { 
-  				bonus = 0.5  
+			add_doctrine_cost_reduction = { 
+  			cost_reduction = 0.5  
  				uses = 2
  				category = cat_superior_firepower 
 			}
@@ -1430,8 +1430,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_school_of_shock"
-			add_tech_bonus = { 
-  				bonus = 0.5  
+			add_doctrine_cost_reduction = { 
+  			cost_reduction = 0.5  
  				uses = 2  
  				category = cat_superior_firepower 
 			}
@@ -1446,7 +1446,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_improve_maritime_dockyards
-		icon = GFX_imperial_navy
+		icon = GFX_goal_CAN_navy
 		prerequisite = { focus = CAN_fund_oil_exploitation }
 		x = 33
 		y = 1
@@ -1504,10 +1504,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_new_naval_command"
 			navy_experience = 10
-			add_tech_bonus = {
-  				bonus = 0.5  
- 				uses = 2  
- 				category = naval_doctrine  
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1600,7 +1600,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_british_shipbuilders
-		icon = GFX_goal_continuous_naval_production
+		icon = GFX_goal_generic_naval_industry
 		prerequisite = { focus = CAN_heavy_fleet }
 		x = 35
 		y = 5
@@ -1703,7 +1703,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_rcaf_reorganization
-		icon = GFX_imperial_airforce
+		icon = GFX_goal_CAN_airforce
 		prerequisite = { focus = CAN_fund_oil_exploitation }
 		x = 39
 		y = 1
@@ -1839,8 +1839,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_billy_bishop_program"
-			add_tech_bonus = { 
-  				bonus = 0.5  
+			add_doctrine_cost_reduction = { 
+  			cost_reduction = 0.5  
  				uses = 2  
  				category = air_doctrine 
 			}
@@ -2002,8 +2002,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_doctrinal_refinement"
-			add_tech_bonus = { 
-  				bonus = 0.5  
+			add_doctrine_cost_reduction = { 
+  			cost_reduction = 0.5  
  				uses = 2
  				category = air_doctrine 
 			}
@@ -2445,7 +2445,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_elections_1938
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_CAN_parliament
 		x = 26
 		y = 6
 		cost = 10
@@ -2893,7 +2893,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_ccf_universal_healthcare
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_medical
 		prerequisite = { focus = CAN_ccf_universal_pensions }
 		x = 29
 		y = 9
