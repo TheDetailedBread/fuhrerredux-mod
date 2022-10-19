@@ -458,8 +458,7 @@ country_event = {
 		set_politics = {
 			ruling_party = authoritarian_democrat elections_allowed = no
 		}
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes 
+		set_country_flag = coalition_social_liberal
 		hidden_effect = {
 			set_party_name = { 
 				ideology = authoritarian_democrat 
@@ -643,8 +642,7 @@ country_event = {
 		set_politics = {
 			ruling_party = authoritarian_democrat elections_allowed = no
 		}
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes 
+		set_country_flag = coalition_social_liberal
 		hidden_effect = {
 			set_party_name = { 
 				ideology = authoritarian_democrat 
@@ -757,10 +755,8 @@ country_event = {
 		}
 		add_popularity = { ideology = social_liberal popularity = 0.05 }
 		set_country_flag = SPR_election_happened_flag
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_social_liberal
+		clr_country_flag = coalition_market_liberal
 		hidden_effect = {
 			set_party_name = { 
 				ideology = authoritarian_democrat 
@@ -780,10 +776,8 @@ country_event = {
 		}
 		add_popularity = { ideology = market_liberal popularity = 0.05 }
 		set_country_flag = SPR_election_happened_flag
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes  
+		clr_country_flag = coalition_social_liberal
+		clr_country_flag = coalition_market_liberal
 		hidden_effect = {
 			set_party_name = { 
 				ideology = authoritarian_democrat 
@@ -841,8 +835,7 @@ country_event = {
 	
 	option = {
 		name = repspain.106.a
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes 
+		set_country_flag = coalition_social_democrat
 	}
 }
 
@@ -940,8 +933,7 @@ country_event = {
 	
 	option = {
 		name = repspain.111.a
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		add_to_coalition = yes 
+		set_country_flag = coalition_social_conservative
 		hidden_effect = {
 			set_party_name = { 
 				ideology = social_conservative 

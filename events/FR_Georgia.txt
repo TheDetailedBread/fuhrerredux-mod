@@ -173,7 +173,7 @@ country_event = { #STALIN'S COUP
 	
 	option = {
 		name = ge.1100.a #"This is a dark time for our country."
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		hidden_effect = {
 			set_party_name = { ideology = vanguardist long_name = GEO_stalin_party_long name = GEO_stalin_party }
 			set_cosmetic_tag = GEO_STA
@@ -370,7 +370,7 @@ country_event = { #Georgia switches to Soviet Puppet tree, test event
 		name = ge.2000.a
 		load_focus_tree = FR_GEO_Soviet
 		set_cosmetic_tag = GEO_SSR
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		add_ideas = workers_republic
 		set_politics = {
 			ruling_party = collectivist
@@ -450,12 +450,12 @@ country_event = { #LONDON STOCK MARKET CRASH
 	option = {
 		name = ge.1.a
 		country_event = { id = ge.2 days = 16 }
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 	}
 	option = {
 		name = ge.1.b
 		country_event = { id = ge.2 days = 16 }
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 	}
 }
 

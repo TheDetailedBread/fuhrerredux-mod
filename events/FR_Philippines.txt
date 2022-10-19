@@ -271,10 +271,8 @@ country_event = { # Proclamation of the Liberal Party
 
   option = { # Dude... uncool...
     name = philippines.13.a
-    set_temp_variable = { coalition_partner_var = token:market_liberal }
-    remove_from_coalition = yes
-    set_temp_variable = { coalition_partner_var = token:social_liberal }
-    remove_from_coalition = yes  
+    clr_country_flag = coalition_market_liberal
+    clr_country_flag = coalition_social_liberal
     hidden_effect = {
       if = {
         limit = {

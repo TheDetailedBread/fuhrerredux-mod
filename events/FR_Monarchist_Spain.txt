@@ -745,10 +745,8 @@ country_event = {
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
 		set_country_flag = SPM_government_picked_flag
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_paternal_autocrat
 		hidden_effect = {
 			remove_ideas_with_trait = head_of_government
 			add_ideas = SPM_Francesc_Cambo_hog_sco
@@ -779,10 +777,8 @@ country_event = {
 		add_popularity = { ideology = social_conservative popularity = -0.02 }
 		add_popularity = { ideology = paternal_autocrat popularity = -0.02 }
 		set_country_flag = SPM_government_picked_flag
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-		remove_from_coalition = yes 			 
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_paternal_autocrat
 		hidden_effect = {
 			remove_ideas_with_trait = head_of_government
 			add_ideas = SPM_Jose_Maria_Gil_Robles_y_Quinones_hog_ade
@@ -813,10 +809,8 @@ country_event = {
 		add_popularity = { ideology = social_conservative popularity = -0.02 }
 		add_popularity = { ideology = authoritarian_democrat popularity = -0.02 }
 		set_country_flag = SPM_government_picked_flag
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		remove_from_coalition = yes 		
-		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_paternal_autocrat
 		hidden_effect = {
 			remove_ideas_with_trait = head_of_government
 			add_ideas = SPM_Antonio_Goicoechea_hog_pau

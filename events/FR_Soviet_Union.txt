@@ -21,13 +21,6 @@ country_event = {
 
 	option = {
 		name = "Come forth, Revolutionaries!"
-		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			add_to_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			add_to_coalition = yes
-			set_coalition_government_popularity = yes 
-		}
 	}
 }
 
@@ -100,7 +93,7 @@ country_event = {
 		}
 		custom_effect_tooltip = SOV_TROIKA_TAKEOVER
 		set_country_flag = SOV_TROIKA
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		hidden_effect = {
 			country_event = {
 				id = soviet.4
@@ -119,7 +112,7 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = SOV_TUKHACHEVSKY_TAKEOVER
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		hidden_effect = {
 			country_event = {
 				id = sovietpol.1321
@@ -137,7 +130,7 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = SOV_KIROV_TAKEOVER
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		hidden_effect = {
 			country_event = {
 				id = sovietpol.1320
@@ -1518,7 +1511,7 @@ country_event = {
 			}
 		}
 	}
-	end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 	}
 }
 

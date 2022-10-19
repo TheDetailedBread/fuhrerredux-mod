@@ -301,8 +301,7 @@ focus_tree = {
 				}
 				add_popularity = { ideology = libertarian_socialist popularity = 0.15 }
 				add_popularity = { ideology = social_democrat popularity = -0.2 }
-				set_temp_variable = { coalition_partner_var = token:social_democrat }
-				add_to_coalition = yes 
+				set_country_flag = coalition_social_democrat
 				add_ideas = {
 					GEO_irkali_tsereteli_hog
 					GEO_zurab_avalishvili_for
@@ -313,8 +312,7 @@ focus_tree = {
 				else = {
 					add_popularity = { ideology = libertarian_socialist popularity = -0.2 }
 					add_popularity = { ideology = social_democrat popularity = 0.15 }
-					set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-					add_to_coalition = yes 
+					set_country_flag = coalition_libertarian_socialist
 					add_ideas = {
 						GEO_akaki_chkhenkeli_hog
 						GEO_grigol_uratadze_for
@@ -429,12 +427,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEO_wide_coalition"
 			add_stability = 0.1
 			add_political_power = -100
-			set_temp_variable = { coalition_partner_var = token:social_liberal  }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes 
+			set_country_flag = coalition_social_liberal
+			set_country_flag = coalition_market_liberal
+			set_country_flag = coalition_social_conservative
 			add_ideas = {
 				GEO_akaki_chkhenkeli_hog
 				GEO_zurab_avalishvili_for
@@ -635,7 +630,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEO_dead_coalition"
 			add_stability = -0.1
 			add_popularity = { ideology = social_democrat popularity = -0.1 }
-			end_coalition = yes 
+			SP_NS_clear_coalition_effect = yes
 		}
 		ai_will_do = {
 			factor = 160

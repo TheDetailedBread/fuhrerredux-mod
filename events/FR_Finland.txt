@@ -165,10 +165,8 @@ country_event = {
 			}
 			add_popularity = { ideology = social_liberal popularity = -0.02 }
 			add_popularity = { ideology = social_conservative popularity = -0.02 }
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes  
+			clr_country_flag = coalition_market_liberal
+			set_country_flag = coalition_social_liberal
 			create_country_leader = {
 				name = "Pehr Evind Svinhufvud"
 				desc = "POLITICS_PER_EVIND_SVINHUFVUD_DESC"
@@ -204,8 +202,7 @@ country_event = {
 			add_ideas = FIN_Kyoesti_Jaervinen_eco_sco
 			add_popularity = { ideology = social_liberal popularity = 0.02 }
 			add_popularity = { ideology = social_conservative popularity = -0.02 }
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
+			clr_country_flag = coalition_social_liberal
 			country_event = {
 				id = finland.7 days = 12
 			}
@@ -366,8 +363,7 @@ country_event = {
 		}
 		hidden_effect = {
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
+			set_country_flag = coalition_market_liberal
 			create_country_leader = {
 				name = "Pehr Evind Svinhufvud"
 				desc = "POLITICS_PER_EVIND_SVINHUFVUD_DESC"
@@ -439,11 +435,10 @@ country_event = {
 			add_popularity = { ideology = authoritarian_democrat popularity = -0.03 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			add_popularity = { ideology = national_populist popularity = -0.03 }
-			end_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			add_to_coalition = yes
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_vanguardist
+			set_country_flag = coalition_libertarian_socialist
 			add_ideas = workers_republic
 		}
     }
@@ -471,8 +466,8 @@ country_event = {
 			add_popularity = { ideology = market_liberal popularity = 0.02 }
 			add_popularity = { ideology = social_conservative popularity = 0.04 }
 			add_popularity = { ideology = authoritarian_democrat popularity = -0.15 }
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes
+			clr_country_flag = coalition_market_liberal
+			
 			add_popularity = { ideology = vanguardist popularity = -0.03 }
 			add_popularity = { ideology = collectivist popularity = -0.03 }
 			add_popularity = { ideology = libertarian_socialist popularity = -0.03 }
@@ -496,10 +491,8 @@ country_event = {
 			add_popularity = { ideology = social_democrat popularity = -0.05 }
 			add_popularity = { ideology = social_liberal popularity = -0.05 }
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes  
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
       add_country_leader_role = {
         character = FIN_Carl_Gustav_Mannerheim
         promote_leader = yes
@@ -551,12 +544,9 @@ country_event = {
 			add_popularity = { ideology = social_democrat popularity = -0.05 }
 			add_popularity = { ideology = social_liberal popularity = -0.05 }
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:national_populist }
-			add_to_coalition = yes
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_national_populist
 			country_event = {
 				id = finland.16 days = 2
 			}
@@ -622,11 +612,9 @@ country_event = {
 			add_popularity = { ideology = social_conservative popularity = -0.02 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 			add_popularity = { ideology = national_populist popularity = -0.05 }
-			end_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			add_to_coalition = yes
+			clr_country_flag = coalition_national_populist
+			set_country_flag = coalition_vanguardist
+			set_country_flag = coalition_libertarian_socialist
 			add_ideas = workers_republic
 			set_cosmetic_tag = FIN_socialist
 		}
@@ -860,10 +848,8 @@ country_event = {
 				}
 				add_ideas = FIN_Vaeinoe_Voionmaa_for_sde
 			}
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_social_democrat
 		}
 	}
 	
@@ -914,10 +900,8 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_social_liberal
 		}
 	}
 }
@@ -1026,8 +1010,7 @@ country_event = {
 			set_country_flag = FIN_porvaristo_ja_viljelijat_flag
 			set_country_flag = FIN_ready_take_army_focuses_flag
 			add_popularity = { ideology = market_liberal popularity = 0.02 }
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			set_country_flag = coalition_social_liberal
 		}
 	}
 	
@@ -1077,8 +1060,7 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
+			set_country_flag = coalition_market_liberal
 		}
 	}
 	
@@ -1128,12 +1110,9 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_market_liberal
+			set_country_flag = coalition_social_liberal
 		}
 	}
 }
@@ -1435,14 +1414,10 @@ country_event = {
 			add_ideas = FIN_Reinhold_Svento_for_lso
 			add_ideas = FIN_Vaeinoe_Salovaara_eco_sde
 			add_ideas = FIN_Eino_Kilpi_sec_lso
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_social_democrat
 			add_popularity = { ideology = libertarian_socialist popularity = 0.10 }
 			add_popularity = { ideology = social_democrat popularity = -0.10 }
 			create_country_leader = {
@@ -1487,8 +1462,7 @@ country_event = {
 			add_ideas = FIN_Aarne_Sihvo_for_ade
 			add_ideas = FIN_Jarl_Lundqvist_eco_ade
 			add_ideas = FIN_Karl_Lennart_Oesch_sec_ade
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			remove_from_coalition = yes 
+			clr_country_flag = coalition_social_democrat
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.10 }
 			add_popularity = { ideology = libertarian_socialist popularity = -0.20 }
 			add_popularity = { ideology = social_democrat popularity = -0.10 }
@@ -1660,11 +1634,10 @@ country_event = {
 					#
 				}
 			}
-			end_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			add_to_coalition = yes
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
+			set_country_flag = coalition_vanguardist
+			set_country_flag = coalition_libertarian_socialist
 			add_ideas = workers_republic
 			set_cosmetic_tag = FIN_socialist
 		}
@@ -2041,10 +2014,8 @@ country_event = {
 			add_popularity = { ideology = social_liberal popularity = 0.03 }
 			add_popularity = { ideology = market_liberal popularity = 0.03 }
 			add_popularity = { ideology = social_conservative popularity = 0.03 }
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			set_country_flag = coalition_social_liberal
+			set_country_flag = coalition_social_conservative
 			set_country_flag = FIN_president_svinhufvud_flag
 			country_event = {
 				id = finland.110 days = 30
@@ -2083,10 +2054,8 @@ country_event = {
 		add_popularity = { ideology = national_populist popularity = 0.05 }
 		hidden_effect = {
 			add_popularity = { ideology = paternal_autocrat popularity = -0.10 }
-			set_temp_variable = { coalition_partner_var = token:national_populist }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-			add_to_coalition = yes
+			clr_country_flag = coalition_national_populist
+			set_country_flag = coalition_paternal_autocrat
 		}
 	}
 }
@@ -2473,10 +2442,8 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
+			clr_country_flag = coalition_social_liberal
+			set_country_flag = coalition_market_liberal
 		}
 	}
 	
@@ -2566,10 +2533,8 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			clr_country_flag = coalition_market_liberal
+			set_country_flag = coalition_social_liberal
 		}
 	}
 }
@@ -2675,10 +2640,8 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
+			clr_country_flag = coalition_social_democrat
+			set_country_flag = coalition_social_liberal
 		}
 	}
 }
@@ -2784,10 +2747,8 @@ country_event = {
 					}
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			remove_from_coalition = yes
+			clr_country_flag = coalition_social_democrat
+			set_country_flag = coalition_social_liberal
 		}
 	}
 }

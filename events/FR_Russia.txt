@@ -368,16 +368,11 @@ country_event = {   #Creation of Democracy
         elections_allowed = no
       }
     country_event = { id = rus.17 days = 20 }
-	set_temp_variable = { coalition_partner_var = token:social_liberal }
-	add_to_coalition = yes 
-	set_temp_variable = { coalition_partner_var = token:social_democrat }
-	add_to_coalition = yes 
-	set_temp_variable = { coalition_partner_var = token:valkist }
-	add_to_coalition = yes 
-	set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-	add_to_coalition = yes 
-	set_temp_variable = { coalition_partner_var = token:market_liberal }
-	add_to_coalition = yes  
+    set_country_flag = coalition_paternal_autocrat
+    set_country_flag = coalition_valkist
+    set_country_flag = coalition_market_liberal
+    set_country_flag = coalition_social_liberal
+    set_country_flag = coalition_social_democrat
   } 
 }
 
@@ -501,7 +496,7 @@ country_event = { #Elections
 	
 	option = {
 		name = "The Union for the Salvation of the Motherland is victorious"
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		ai_chance = { factor = 43 }
 		hidden_effect = {
 		add_ideas = parliamentary_republic
@@ -521,8 +516,7 @@ country_event = { #Elections
 		complete_national_focus = RUS_control_economy
 		set_country_flag = NUS_Oktoberists_Victorious
 		set_country_flag = RUS_ready_militarise
-		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-		add_to_coalition = yes 
+		set_country_flag = coalition_paternal_autocrat
 		news_event = {
 			id = worldnews.112
 		}
@@ -530,7 +524,7 @@ country_event = { #Elections
 }
 	option = {
 		name = "Union Of Regeneration Coalition is victorious"
-		end_coalition = yes
+		SP_NS_clear_coalition_effect = yes
 		ai_chance = { factor = 27 }	
 		
 		hidden_effect = {
@@ -550,10 +544,8 @@ country_event = { #Elections
 		complete_national_focus = RUS_control_economy
 		set_country_flag = UR_Victorious
 		set_country_flag = RUS_ready_militarise
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		add_to_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes 
+		set_country_flag = coalition_market_liberal
+		set_country_flag = coalition_social_democrat
 		news_event = {
 			id = worldnews.113
 		}
@@ -561,6 +553,7 @@ country_event = { #Elections
 }
 	option = {
 		name = "The National Center is victorious"
+		SP_NS_clear_coalition_effect = yes
 		ai_chance = { factor = 30 }
 				
 		hidden_effect = {
@@ -577,6 +570,7 @@ country_event = { #Elections
       complete_national_focus = RUS_control_economy
       set_country_flag = RUS_ready_militarise
       set_country_flag = National_Center_Victorious
+      clr_country_flag = party_popularity_system_disabled
       news_event = {
         id = worldnews.114
       }

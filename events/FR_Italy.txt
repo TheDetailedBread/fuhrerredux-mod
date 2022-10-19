@@ -205,8 +205,7 @@ country_event = { # Fate of the PPI
 			ITA_Giovanni_Uberti_sec_sco
 		}
 		set_country_flag = ITA_con_ppi
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
+		set_country_flag = coalition_social_democrat
 		remove_ideas = ITA_ppi_stagnation
 	}
 	
@@ -240,8 +239,7 @@ country_event = { # Social democrats leave PPI
 	option = {
 		name = ita.5.a
 		add_political_power = -50
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-			remove_from_coalition = yes 
+		clr_country_flag = coalition_social_democrat
 	}
 }
 
@@ -384,8 +382,7 @@ country_event = { # Market Liberals leave the coalition
 	option = {
 		name = ita.11.a
 		add_political_power = -50
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_market_liberal
 		set_country_flag = ITA_liberals_right
 	}
 }
@@ -402,8 +399,7 @@ country_event = { # Libertarians join the coalition
 	option = {
 		name = ita.12.a
 		add_political_power = 50
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		add_to_coalition = yes 
+		set_country_flag = coalition_libertarian_socialist
 	}
 }
 
@@ -1139,20 +1135,13 @@ country_event = { # Commies win
 			ruling_party = collectivist
 		}
 		add_political_power = 50
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		add_to_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:vanguardist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:collectivist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:valkist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes 
+		set_country_flag = coalition_libertarian_socialist
+		set_country_flag = coalition_vangaurdist
+		clr_country_flag = coalition_collectivist
+		clr_country_flag = coalition_national_populist
+		clr_country_flag = coalition_valkist
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_market_liberal
 		hidden_effect = {
       add_corps_commander_role = {
         character = ITA_Pompeo_Colajanni
@@ -1196,20 +1185,13 @@ country_event = { # Commies win
 			ruling_party = libertarian_socialist
 		}
 		add_political_power = 50
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:vanguardist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:collectivist }
-		add_to_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:valkist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = ye
+		set_country_flag = coalition_collectivist
+		set_country_flag = coalition_vangaurdist
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_national_populist
+		clr_country_flag = coalition_valkist
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_market_liberal
 		hidden_effect = {
 			add_corps_commander_role = {
         character = ITA_Pompeo_Colajanni
@@ -1292,12 +1274,9 @@ country_event = { # Soc Dem win
 			ruling_party = social_democrat
 		}
 		add_political_power = 50
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:valkist }
-		remove_from_coalition = yes
+		clr_country_flag = coalition_social_democrat
+		clr_country_flag = coalition_national_populist
+		clr_country_flag = coalition_valkist
 		every_country = {
 			limit = {
 				is_ai = no
@@ -1364,19 +1343,14 @@ country_event = { # liberal win
 			ruling_party = market_liberal
 		}
 		add_political_power = 50
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_market_liberal
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_social_democrat
 		if = {
 			limit = {
 				has_country_flag = ITA_right_coalition
 			}
-			
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		add_to_coalition = yes 
+			set_country_flag = coalition_social_conservative
 		}
 			every_country = {
 				limit = {
@@ -1437,27 +1411,21 @@ country_event = { # conservative win
 		set_politics = {
 			ruling_party = social_conservative
 		}
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes
+		clr_country_flag = coalition_social_conservative
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_social_democrat
 		if = {
 			limit = {
 				has_country_flag = ITA_right_coalition
 			}
-			set_temp_variable = { coalition_partner_var = token:valkist }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:national_populist }
-			add_to_coalition = yes
+			set_country_flag = coalition_national_populist
+			set_country_flag = coalition_valkist
 		}
 		if = {
 			limit = {
 				has_country_flag = ITA_liberals_right
 			}
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
+			set_country_flag = coalition_market_liberal
 		}
 		add_political_power = 50
 		hidden_effect = {
@@ -1528,24 +1496,17 @@ country_event = { # nationalist win
 		set_politics = {
 			ruling_party = valkist
 		}
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:valkist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_valkist
+		set_country_flag = coalition_national_populist
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_social_democrat
+		clr_country_flag = coalition_social_liberal
+		clr_country_flag = coalition_market_liberal
 		if = {
 			limit = {
 				has_country_flag = ITA_right_coalition
 			}
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes
+			set_country_flag = coalition_social_conservative
 		}
 		
 		add_political_power = 50
@@ -1577,24 +1538,17 @@ country_event = { # nationalist win
 			ruling_party = national_populist
 		}
 		add_political_power = 50
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:valkist }
-		add_to_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_national_populist
+		set_country_flag = coalition_valkist
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_social_democrat
+		clr_country_flag = coalition_social_liberal
+		clr_country_flag = coalition_market_liberal
 		if = {
 			limit = {
 				has_country_flag = ITA_right_coalition
 			}
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes 
+			set_country_flag = coalition_social_conservative
 		}
 		hidden_effect = {
 			every_country = {
@@ -14990,10 +14944,8 @@ country_event = { # Fate of the Left
         traits = {}
       }
     }
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_social_democrat
+		clr_country_flag = coalition_libertarian_socialist
 		add_popularity = {
 			ideology = vanguardist
 			popularity = 0.05
@@ -15044,10 +14996,8 @@ country_event = { # Fate of the Left
         traits = {}
       }
     }
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes  
+		clr_country_flag = coalition_social_democrat
+		clr_country_flag = coalition_libertarian_socialist
 		add_popularity = {
 			ideology = collectivist
 			popularity = 0.05
@@ -15098,8 +15048,7 @@ country_event = { # Fate of the Left
         traits = {}
       }
     }
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_social_democrat
 		add_popularity = {
 			ideology = collectivist
 			popularity = 0.05
@@ -15140,10 +15089,8 @@ country_event = { # Fate of the Left
 	option = { # Matteotti wins
 		name = itasoc.2.e
 		set_country_flag = ITA_socialist_picked	
-		set_temp_variable = { coalition_partner_var = token:vanguardist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:collectivist }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_vangaurdist
+		clr_country_flag = coalition_collectivist
 		add_popularity = {
 			ideology = libertarian_socialist
 			popularity = 0.05
@@ -15677,11 +15624,10 @@ country_event = { #Italy - Pick Nat Pops or Valkists
 		if = {
 			limit = {
 				NOT = {
-					is_in_array = { ROOT.coalition_partner_var = token:valkist }
+					has_country_flag = coalition_valkist
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:valkist }
-			add_to_coalition = yes 
+			set_country_flag = coalition_valkist
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -15707,11 +15653,10 @@ country_event = { #Italy - Pick Nat Pops or Valkists
 		if = {
 			limit = {
 				NOT = {
-					is_in_array = { ROOT.coalition_partner_var = token:national_populist }		
+					has_country_flag = coalition_national_populist
 				}
 			}
-			set_temp_variable = { coalition_partner_var = token:national_populist }
-			add_to_coalition = yes 
+			set_country_flag = coalition_national_populist
 		}		
 		add_popularity = {
 			ideology = valkist

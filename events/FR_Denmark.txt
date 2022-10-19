@@ -577,8 +577,7 @@ country_event = {
 		add_stability = -0.04
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		add_popularity = { ideology = libertarian_socialist popularity = -0.02 }
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		remove_from_coalition = yes
+		clr_country_flag = coalition_social_liberal
 		hidden_effect = {
 			country_event = { id = denmark.22 days = 2 }
 		}
@@ -753,8 +752,7 @@ country_event = {
 		add_stability = -0.02
 		add_popularity = { ideology = libertarian_socialist popularity = 0.01 }
 		add_popularity = { ideology = social_democrat popularity = 0.01 }
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		add_to_coalition = yes
+		set_country_flag = coalition_libertarian_socialist
 		hidden_effect = {
 			country_event = { id = denmark.23 days = 10 }
 			add_ideas = DEN_Albert_Olsen_for_lso
@@ -872,10 +870,8 @@ country_event = {
 		add_popularity = { ideology = market_liberal popularity = 0.01 }
 		hidden_effect = {
 			country_event = { id = denmark.27 days = 3 }
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes
+			clr_country_flag = coalition_social_liberal
+			set_country_flag = coalition_social_conservative
 			add_ideas = DEN_Knud_Kristensen_hog_mli
 			add_ideas = DEN_J_Christmas_Moeller_for_sco
 			add_ideas = DEN_Soeren_Brorsen_eco_mli
@@ -896,10 +892,8 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = denmark.27 days = 3 }
 			country_event = { id = denmark.26 days = 1 }
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes
+			clr_country_flag = coalition_social_liberal
+			set_country_flag = coalition_market_liberal
 			add_ideas = DEN_J_Christmas_Moeller_hog_sco
 			add_ideas = DEN_Henrik_von_Kauffmann_for_sco
 			add_ideas = DEN_Knud_Kristensen_eco_mli
@@ -934,8 +928,7 @@ country_event = {
 			factor = 55
 		}
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
-			add_to_coalition = yes
+			set_country_flag = coalition_authoritarian_democrat
 		}
 	}
 	
@@ -1067,16 +1060,11 @@ country_event = {
 		custom_effect_tooltip = DEN_monarchist_coup_tooltip
 		hidden_effect = {
 			load_focus_tree = FR_Denmark_Monarchist
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
-			remove_from_coalition = yes
+			clr_country_flag = coalition_libertarian_socialist
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
+			clr_country_flag = coalition_authoritarian_democrat
 			country_event = { id = denmark.31 days = 3 }
 			country_event = { id = denmark.32 days = 8 }
 			add_ideas = absolute_monarchy
@@ -1178,10 +1166,8 @@ country_event = {
 		custom_effect_tooltip = DEN_danish_revolution_tooltip
 		hidden_effect = {
 			load_focus_tree = FR_Denmark_Revolution
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			add_to_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:collectivist }
-			add_to_coalition = yes
+			set_country_flag = coalition_collectivist
+			set_country_flag = coalition_vanguardist
 			country_event = { id = denmark.34 days = 3 }
 			remove_ideas = DEN_danish_republicanism_idea
 			remove_ideas = DEN_danish_republicanism1_idea
@@ -1343,12 +1329,9 @@ country_event = {
 		custom_effect_tooltip = DEN_march_on_kobenhavn_tooltip
 		hidden_effect = {
 			load_focus_tree = FR_Denmark_Nationalist
-			set_temp_variable = { coalition_partner_var = token:collectivist }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:valkist  }
-			add_to_coalition = yes
+			clr_country_flag = coalition_collectivist
+			clr_country_flag = coalition_vanguardist
+			set_country_flag = coalition_valkist
 			add_popularity = { ideology = valkist popularity = -0.03 }
 			add_popularity = { ideology = paternal_autocrat popularity = -0.03 }
 			set_party_name = { 
@@ -1637,16 +1620,11 @@ country_event = {
 		}
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			clr_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_social_conservative
+			clr_country_flag = coalition_authoritarian_democrat
+			clr_country_flag = coalition_libertarian_socialist
+			set_country_flag = coalition_social_liberal
 			add_ideas = DEN_Thorvald_Stauning_hog_sde
 			add_ideas = DEN_Peter_Munch_for_sli
 			add_ideas = DEN_Alsing_Andersen_eco_sde
@@ -1685,14 +1663,10 @@ country_event = {
 		}
 		add_popularity = { ideology = market_liberal popularity = 0.02 }
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes
+			clr_country_flag = coalition_libertarian_socialist
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_authoritarian_democrat
+			set_country_flag = coalition_social_conservative
 			add_ideas = DEN_Knud_Kristensen_hog_mli
 			add_ideas = DEN_J_Christmas_Moeller_for_sco
 			add_ideas = DEN_Soeren_Brorsen_eco_mli
@@ -1711,14 +1685,10 @@ country_event = {
 		}
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			remove_from_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes
+			clr_country_flag = coalition_libertarian_socialist
+			clr_country_flag = coalition_social_liberal
+			clr_country_flag = coalition_authoritarian_democrat
+			set_country_flag = coalition_market_liberal
 			add_ideas = DEN_J_Christmas_Moeller_hog_sco
 			add_ideas = DEN_Henrik_von_Kauffmann_for_sco
 			add_ideas = DEN_Knud_Kristensen_eco_mli
@@ -2276,8 +2246,7 @@ country_event = {
 	
 	option = {
 		name = denmark.100.a
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		add_to_coalition = yes 
+		set_country_flag = coalition_libertarian_socialist
 		set_party_name = { 
 			ideology = libertarian_socialist 
 			long_name = DEN_libertarian_socdem_party_long 
@@ -2309,13 +2278,13 @@ country_event = {
 		hidden_effect = {
 			remove_ideas = DEN_danish_republicanism1_idea
 			add_country_leader_role = {
-				character = DEN_Thorvald_Stauning
-				promote_leader = yes
-				country_leader = {
-					ideology = social_democrat_subtype
-					traits = {}
-				}
-      		}
+        character = DEN_Thorvald_Stauning
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
 			set_country_flag = DEN_republic_flag
 		}
 	}
@@ -2342,20 +2311,17 @@ country_event = {
 		add_popularity = { ideology = paternal_autocrat popularity = -0.25 }
 		hidden_effect = {
 			add_ideas = constitutional_monarchy
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-			add_to_coalition = yes 
-		add_country_leader_role = {
-			character = DEN_Christian_X
-			promote_leader = yes
-			country_leader = {
-				ideology = social_democrat_subtype
-				traits = {}
-			}
-     	 }
+			set_country_flag = coalition_market_liberal
+			set_country_flag = coalition_social_conservative
+			set_country_flag = coalition_paternal_autocrat
+			add_country_leader_role = {
+        character = DEN_Christian_X
+        promote_leader = yes
+        country_leader = {
+          ideology = social_democrat_subtype
+          traits = {}
+        }
+      }
       add_country_leader_role = {
         character = DEN_Christian_X
         promote_leader = yes
@@ -2566,12 +2532,9 @@ country_event = {
 		}
 		add_popularity = { ideology = libertarian_socialist popularity = 0.03 }
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:collectivist }
-			remove_from_coalition = yes 
+			set_country_flag = coalition_social_democrat
+			clr_country_flag = coalition_vanguardist
+			clr_country_flag = coalition_collectivist
 			set_country_flag = DEN_republican_revolution_democracy_flag
 			add_ideas = DEN_Mogens_Fog_hog_lso
 			add_ideas = DEN_Hans_Hedtoft_for_sde
@@ -2601,12 +2564,9 @@ country_event = {
         }
       }
 			add_popularity = { ideology = libertarian_socialist popularity = -0.05 }
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:vanguardist }
-			remove_from_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:collectivist }
-			remove_from_coalition = yes 
+			set_country_flag = coalition_market_liberal
+			clr_country_flag = coalition_vanguardist
+			clr_country_flag = coalition_collectivist
 			set_country_flag = DEN_republican_revolution_democracy_flag
 			add_ideas = DEN_Erik_Scavenius_hog_sli
 			add_ideas = DEN_Gustav_Rasmussen_for_mli

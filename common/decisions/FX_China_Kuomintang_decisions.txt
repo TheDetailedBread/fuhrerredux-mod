@@ -1,30 +1,3 @@
-political_actions = {
-	CHI_pan_tang = {
-		visible = {
-			is_ai = no 
-			tag = CHI
-		}
-		available = {
-			ROOT = {
-				tag = CHI 
-			}
-		}
-		complete_effect = {
-			create_faction = "Tang Empire"
-			every_country = {
-				limit = {
-					or = {
-						tag = MAN
-						tag = MON
-					}
-				}
-				CHI = {
-					add_to_faction = PREV
-				}
-			}
-		}
-	}
-}
 CHI_zhili_kmt_political_struggle = {
 	
 	###KMT Decision

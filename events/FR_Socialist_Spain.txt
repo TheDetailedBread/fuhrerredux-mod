@@ -694,10 +694,8 @@ country_event = {
 		add_popularity = { ideology = collectivist popularity = -0.04 }
 		set_country_flag = SPA_PSOE_governs_flag
 		set_country_flag = SPA_socialist_divisions_flag
-		set_temp_variable = { coalition_partner_var = token:vanguardist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_vanguardist
+		clr_country_flag = coalition_libertarian_socialist
 		hidden_effect = {
 			
 			country_event = { id = socspain.109 days = 1 }
@@ -732,12 +730,9 @@ country_event = {
 		add_popularity = { ideology = collectivist popularity = -0.02 }
 		set_country_flag = SPA_CNT_FAI_governs_flag
 		set_country_flag = SPA_socialist_divisions_flag
-		set_temp_variable = { coalition_partner_var = token:vanguardist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_vanguardist
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_social_democrat
 		set_cosmetic_tag = SPA_anarcho
 		hidden_effect = {
 			remove_ideas_with_trait = head_of_government
@@ -748,13 +743,13 @@ country_event = {
 				name = SPA_CNT_FAI_party 
 			}
 			add_country_leader_role = {
-				character = SPA_The_CNT_FAI_Congress
-				promote_leader = yes
-				country_leader = {
-					ideology = libertarian_socialist_subtype
-					traits = {}
-				}
-			}
+        character = SPA_The_CNT_FAI_Congress
+        promote_leader = yes
+        country_leader = {
+          ideology = libertarian_socialist_subtype
+          traits = {}
+        }
+      }
 		}
 	}
 }
@@ -919,10 +914,8 @@ country_event = {
 		add_popularity = { ideology = social_democrat popularity = -0.04 }
 		set_country_flag = SPA_PCE_governs_flag
 		set_country_flag = SPA_socialist_divisions_flag
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		remove_from_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:libertarian_socialist }
-		remove_from_coalition = yes 
+		clr_country_flag = coalition_libertarian_socialist
+		clr_country_flag = coalition_social_democrat
 		set_cosmetic_tag = SPA_commie
 		hidden_effect = {
 		}

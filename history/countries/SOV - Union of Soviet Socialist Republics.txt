@@ -103,6 +103,9 @@ set_war_support = 0.1
 country_event = { id = soviet.1 days = 1 }
 country_event = { id = sovietpol.1303 days = 12 }
 country_event = {  id = sovietpol.1336 days = 300 random = 2400 }
+
+set_country_flag = coalition_vanguardist
+set_country_flag = coalition_libertarian_socialist
 set_country_flag = SOV_lacking_industrialization_flag
 
 # DIPLOMACY
@@ -131,6 +134,7 @@ set_popularities = {
 create_faction = 3rd_international
 add_to_faction = SOV
 add_ideas = {
+	party_pop_0_90
 	limited_exports
 	SOV_lacking_industrialization
 	SOV_political_divide

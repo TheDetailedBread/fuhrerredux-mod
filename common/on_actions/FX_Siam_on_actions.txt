@@ -10,14 +10,14 @@ on_actions = {
 			}
 		}
 	}
-	#on_new_term_election = {
-	#	effect = {
-	#		if = {
-	#			limit = { tag = SIA }
-	#			country_event = siamelection.1
-	#		}
-	#	}
-	#}
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = { tag = SIA }
+				country_event = siamelection.1
+			}
+		}
+	}
 	on_daily = {
 		effect = {
 			if = {
