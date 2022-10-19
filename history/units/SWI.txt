@@ -19,7 +19,7 @@
 }
 division_template = {
 	name = "Gebirgs-Division"  
-	division_names_group = SWI_MNT_01
+	division_names_group = SWI_MTN_01
 	# Note: Mountain Divisions are same as Infantry Divisions above, but with mountain regiments
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
@@ -36,7 +36,7 @@ division_template = {
 }
 division_template = {
 	name = "Gebirgsbrigade" 	
-	division_names_group = SWI_MNT_01
+	division_names_group = SWI_MTN_01
 	# Independent Mountain Brigade, triangle organization
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
@@ -47,6 +47,7 @@ division_template = {
 }
 division_template = {
 	name = "Grenzbrigade"  			# Border divisions are garrison units; lower equipment, experience
+	division_names_group = SWI_INF_01
 	# Independent Border Brigade, binary organization
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -56,7 +57,8 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Leichte-Brigade" 			
+	name = "Leichte-Brigade" 		
+	division_names_group = SWI_CAV_01	
 	# Independent Cavalry Brigade
 	regiments = {
 		cavalry = { x = 0 y = 0 }

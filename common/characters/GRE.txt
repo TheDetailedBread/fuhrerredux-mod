@@ -406,7 +406,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/GRE/Portrait_GRE_Georgios_Kosmidis1.png"
-				small = "gfx/interface/ministers/GRE/GRE_Georgios_Kosmidis1.png"
+				small = "gfx/interface/ministers/GRE/GRE_Georgios_Kosmidis.png"
 			}
 		}
 		country_leader = {
@@ -1795,8 +1795,8 @@ characters = {
 		name = "Theódoros Pángalos"
 		portraits = {
 			army = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Theodoros_Pangalos1.png"
-				small = "gfx/interface/ministers/GRE/GRE_Theodoros_Pangalos1.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Theodoros_Pangalos_fx.png"
+				small = "gfx/interface/ministers/GRE/GRE_Theodoros_Pangalos.png"
 			}
 		}
 		field_marshal = {
@@ -1811,10 +1811,10 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
-		}high_command
+		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff			
+			slot = high_command		
 			idea_token = GRE_Theodoros_Pangalos_cos
 			traits = {
 				cos_school_of_manoeuvre
@@ -1828,10 +1828,10 @@ characters = {
 				large = "gfx/leaders/GRE/Portrait_GRE_Paraschos_Melissinos.png"
 				small = "gfx/interface/ministers/GRE/GRE_Paraschos_Melissinos.png"
 			}
-		}high_command
+		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff			
+			slot = high_command		
 			idea_token = GRE_Paraschos_Melissinos_cos
 			traits = {
 				cos_school_of_mass_combat
@@ -1845,10 +1845,10 @@ characters = {
 				large = "gfx/leaders/GRE/Portrait_GRE_Panagiotis_Dedes.png"
 				small = "gfx/interface/ministers/GRE/GRE_Panagiotis_Dedes.png"
 			}
-		}high_command
+		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff			
+			slot = high_command		
 			idea_token = GRE_Panagiotis_Dedes_cos
 			traits = {
 				cos_school_of_defence
@@ -1862,10 +1862,10 @@ characters = {
 				large = "gfx/leaders/GRE/Portrait_GRE_Achilleas_Protosyggelos.png"
 				small = "gfx/interface/ministers/GRE/GRE_Achilleas_Protosyggelos.png"
 			}
-		}high_command
+		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff			
+			slot = high_command		
 			idea_token = GRE_Achilleas_Protosyggelos_cos
 			traits = {
 				cos_school_of_commando_operations
@@ -1879,10 +1879,10 @@ characters = {
 				large = "gfx/leaders/GRE/Portrait_GRE_Napoleon_Batas.png"
 				small = "gfx/interface/ministers/GRE/GRE_Napoleon_Batas.png"
 			}
-		}high_command
+		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff			
+			slot = high_command		
 			idea_token = GRE_Napoleon_Batas_cos
 			traits = {
 				cos_school_of_mass_combat
@@ -2041,8 +2041,8 @@ characters = {
 		name = "Ioánnis Toúmbas"
 		portraits = {
 			navy = {
-				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Toumbas1.png"
-				small = "gfx/interface/ministers/GRE/GRE_Ioannis_Toumbas1.png"
+				large = "gfx/leaders/GRE/Portrait_GRE_Ioannis_Toumbas_fx.png"
+				small = "gfx/interface/ministers/GRE/GRE_Ioannis_Toumbas.png"
 			}
 		}
 		navy_leader = {
@@ -2262,7 +2262,6 @@ characters = {
 		corps_commander = {
 			traits = {
 				brilliant_strategist
-				reckless
 				skilled_staffer
 				armor_officer
 			}
@@ -2462,7 +2461,6 @@ characters = {
 		}
 		navy_leader = {
 			traits = {
-				crave
 				old_guard_navy
 				superior_tactician
 			}

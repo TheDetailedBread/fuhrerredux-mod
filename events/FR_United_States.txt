@@ -178,13 +178,13 @@ country_event = { # Air Force Debate
 
 	option = {
 		name = usa.3.a
-		air_experience = 25
-		complete_national_focus = USA_create_the_usaf
+		set_country_flag = USA_created_the_usaf
+		custom_effect_tooltip = USA_will_create_usaf_tt
 	}
 	option = {
 		name = usa.3.b
-		air_experience = 25
-		complete_national_focus = USA_expand_the_usaac
+		set_country_flag = USA_expanded_the_usaac
+		custom_effect_tooltip = USA_will_expand_usaac_tt
 	}
 }
 
@@ -254,7 +254,7 @@ country_event = { # Border Skirmish
 	fire_only_once = yes
 
 	trigger = {
-		tag = USA
+		tag = MEX
 		date > 1938.5.1
 		NOT = { has_war_with = MEX }
 		NOT = { has_country_flag = USA_surrendered }

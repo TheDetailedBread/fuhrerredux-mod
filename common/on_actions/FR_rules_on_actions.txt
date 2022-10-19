@@ -429,6 +429,25 @@ on_actions = {
 					set_country_flag = PHI_japan_focus
 				}
 	  	}
+			### Dutch State
+			HOL = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = HOL_ai_behavior
+							option = HOL_RANDOM
+						}
+					}
+					set_country_flag = HOL_ai_chosen
+					random_list = {
+						20 = { set_country_flag = HOL_status_quo_behavior }
+						20 = { set_country_flag = HOL_bernhard_behavior }
+						20 = { set_country_flag = HOL_geelkerken_behavior }
+						20 = { set_country_flag = HOL_junta_behavior }
+						20 = { set_country_flag = HOL_socialist_behavior }
+					}
+				}
+			}
 			### Romania
 			ROM = {
 				if = {

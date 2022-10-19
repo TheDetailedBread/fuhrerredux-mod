@@ -296,6 +296,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/SWE/Portrait_SWE_Carl_Gustaf_Hammarskjold.png"
+				small = "gfx/interface/ministers/SWE/SWE_Carl_Gustaf_Hammarskjold.png"
 			}
 		}
 		corps_commander = {
@@ -305,6 +306,24 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 4
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_country_flag = SWE_Carl_Gustaf_Hammarskjold_hog_ade_hired }
+			}
+			on_add = {
+				ROOT = { set_country_flag = SWE_Carl_Gustaf_Hammarskjold_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = SWE_Carl_Gustaf_Hammarskjold_hog_ade_hired }
+			}
+			idea_token = SWE_Carl_Gustaf_Hammarskjold_hog_ade
+			traits = {
+				authoritarian_democrat
+				hog_reformist_soldier
+			}
 		}
 	}
 	SWE_Helge_Jung = {

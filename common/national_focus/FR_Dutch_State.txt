@@ -498,6 +498,13 @@ focus_tree = {
     x = 3
     y = 0
     cost = 6
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 2000
+        has_country_flag = HOL_geelkerken_behavior
+      }
+    }
     allow_branch = {
       has_country_flag = HOL_natpop_path
       has_country_flag = political_branch_ready
@@ -520,6 +527,13 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 2000
+        has_country_flag = HOL_geelkerken_behavior
+      }
+    }
     available = {
       has_government = national_populist
       HOL_Cornelis_van_Geelkerken = {

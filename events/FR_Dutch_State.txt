@@ -1585,6 +1585,21 @@ country_event = { # Allowing Political Commissars in the Military
 
   option = { # The military should be independent from politics
     name = dutchstate.102.a
+    ai_chance = {
+      base = 0
+      modifier = {
+        has_country_flag = HOL_geelkerken_behavior
+        add = 400
+      }
+      modifier = {
+        has_country_flag = HOL_junta_behavior
+        add = 400
+      }
+      modifier = {
+        has_country_flag = HOL_bernhard_behavior
+        add = 400
+      }
+    }
     hidden_effect = {
       add_to_variable = { nnb_loyalty = -2 }
       country_event = { id = dutchstate.103 days = 14 }
@@ -1593,6 +1608,17 @@ country_event = { # Allowing Political Commissars in the Military
 
   option = { # The soldier's loyalty to us is important
     name = dutchstate.102.b
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_status_quo_behavior
+      }
+      modifier = {
+        add = 400
+        has_country_flag = HOL_socialist_behavior
+      }
+    }
     hidden_effect = {
       add_to_variable = { nnb_loyalty = 2 }
       country_event = { id = dutchstate.103 days = 14 }
@@ -1609,6 +1635,21 @@ country_event = { # Fate of the Nederlandse Landwacht
 
   option = { # They will remain as security personnel
     name = dutchstate.103.a
+    ai_chance = {
+      base = 0
+      modifier = {
+        has_country_flag = HOL_geelkerken_behavior
+        add = 400
+      }
+      modifier = {
+        has_country_flag = HOL_junta_behavior
+        add = 400
+      }
+      modifier = {
+        has_country_flag = HOL_bernhard_behavior
+        add = 400
+      }
+    }
     hidden_effect = {
       add_to_variable = { nnb_loyalty = -2 }
       country_event = { id = dutchstate.104 days = 14 }
@@ -1616,6 +1657,17 @@ country_event = { # Fate of the Nederlandse Landwacht
   }
   option = { # They will be reformed as elite troops
     name = dutchstate.103.b
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_status_quo_behavior
+      }
+      modifier = {
+        add = 400
+        has_country_flag = HOL_socialist_behavior
+      }
+    }
     hidden_effect = {
       add_to_variable = { nnb_loyalty = 2 }
       country_event = { id = dutchstate.104 days = 14 }
@@ -1632,6 +1684,21 @@ country_event = { # Conscription Issue
 
   option = { # Recruits can be transferred to the Landwacht
     name = dutchstate.104.a
+    ai_chance = {
+      base = 0
+      modifier = {
+        has_country_flag = HOL_geelkerken_behavior
+        add = 400
+      }
+      modifier = {
+        has_country_flag = HOL_junta_behavior
+        add = 400
+      }
+      modifier = {
+        has_country_flag = HOL_bernhard_behavior
+        add = 400
+      }
+    }
     hidden_effect = {
       add_to_variable = { nnb_loyalty = 3 }
       country_event = { id = dutchstate.105 days = 2 }
@@ -1639,6 +1706,9 @@ country_event = { # Conscription Issue
   }
   option = { # Limit recruitment for the Landwacht.
     name = dutchstate.104.b
+    ai_chance = {
+      base = 0
+    }
     hidden_effect = {
       add_to_variable = { nnb_loyalty = -3 }
       country_event = { id = dutchstate.105 days = 2 }
@@ -1707,6 +1777,12 @@ country_event = { # Investigation Complete
 
   option = { # Arrest the conspiritors!
     name = dutchstate.108.a
+    ai_chance = {
+      modifier = {
+        add = 400
+        has_country_flag = HOL_bernhard_behavior
+      }
+    }
     add_popularity = {
       ideology = national_populist
       popularity = -0.15
@@ -1718,6 +1794,16 @@ country_event = { # Investigation Complete
 
   option = { # They pose no threat
     name = dutchstate.108.b
+    ai_chance = {
+      modifier = {
+        add = 400
+        has_country_flag = HOL_geelkerken_behavior
+      }
+      modifier = {
+        add = 400
+        has_country_flag = HOL_junta_behavior
+      }
+    }
     add_political_power = 10
     hidden_effect = {
       country_event = { id = dutchstate.110 days = 14 }
@@ -1913,6 +1999,13 @@ country_event = { # Targeting Socialists
 
   option = { # They are no threat
     name = dutchstate.114.a
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_socialist_behavior
+      }
+    }
     add_political_power = 10
     hidden_effect = {
       country_event = { id = dutchstate.116 days = 14 }
@@ -1921,6 +2014,13 @@ country_event = { # Targeting Socialists
 
   option = { # Order a crackdown on Socialists!
     name = dutchstate.114.b
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_status_quo_behavior
+      }
+    }
     add_popularity = {
       ideology = vanguardist
       popularity = -0.15
@@ -1973,6 +2073,13 @@ country_event = { # The Celebration
 
   option = { # Continue the events
     name = dutchstate.116.a
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_socialist_behavior
+      }
+    }
     add_political_power = 10
     hidden_effect = {
       country_event = { id = dutchstate.117 days = 4 }
@@ -1981,6 +2088,13 @@ country_event = { # The Celebration
 
   option = { # Cancel the events
     name = dutchstate.116.b
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_status_quo_behavior
+      }
+    }
     add_political_power = -10
     hidden_effect = {
       country_event = { id = dutchstate.115 days = 4 }
@@ -2021,6 +2135,13 @@ country_event = { # Fall of the Nationalist Government
 
   option = { # A Government of the People has risen!
     name = dutchstate.117.a
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_country_flag = HOL_socialist_behavior
+      }
+    }
     hidden_effect = {
       remove_ideas = {
         HOL_leftist_symphatizers
@@ -2084,6 +2205,9 @@ country_event = { # Fall of the Nationalist Government
 
   option = { # Loyalists launch a coup
     name = dutchstate.117.b
+    ai_chance = {
+      base = 400
+    }
     custom_effect_tooltip = HOL_will_be_annexed_by_kne
     hidden_effect = {
       KNE = {
@@ -2136,6 +2260,13 @@ country_event = { # GER: Socialism in the Netherlands
 
   option = { # We can't afford to lose the Dutch
     name = dutchstate.118.b
+    ai_chance = {
+      base = 0
+      modifier = {
+        add = 400
+        has_government = national_populist
+      }
+    }
     declare_war_on = {
       target = FROM
       type = annex_everything
