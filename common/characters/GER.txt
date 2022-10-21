@@ -774,6 +774,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/Portrait_GER_Ferdinand_Schoerner_fx.png"
+				small = "gfx/interface/ministers/GER/GER_Ferdinand_Schoerner.png"
 			}
 		}
 		corps_commander = {
@@ -787,6 +788,24 @@ characters = {
 			defense_skill = 4
 			planning_skill = 4
 			logistics_skill = 2
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_country_flag = GER_Ferdinand_Schoerner_hog_pau_hired }
+			}
+			idea_token = GER_Ferdinand_Schoerner_hog_pau
+			on_add = {
+				ROOT = { set_country_flag = GER_Ferdinand_Schoerner_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = GER_Ferdinand_Schoerner_hog_pau_hired }
+			}
+			traits = {
+				paternal_autocrat
+				hog_old_general
+			}
 		}
 	}
 	GER_Rudiger_von_der_Goltz = {
@@ -3171,4 +3190,42 @@ characters = {
 			coordination_skill = 2
 		}
   }
+	GER_Wilhelm_Keitel = {
+		name = "Wilhelm Keitel"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_GER_Wilhelm_Keitel.png"
+			}
+		}
+		corps_commander = {
+			traits = { 
+				career_officer 
+				politically_connected
+				trickster 
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	GER_Eduard_Dietl = {
+		name = "Eduard Dietl"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_GER_Eduard_Dietl_fx.png"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trickster 
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
 }

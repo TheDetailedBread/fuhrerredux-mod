@@ -130,7 +130,7 @@ focus_tree = {
 
 	focus = { 
 		id = RAJ_Increase_British_Control
-		icon = GFX_goal_SAF_dominion
+		icon = GFX_goal_united_kingdom
 		mutually_exclusive = { focus = RAJ_Maintain_Indian_Control }
 		prerequisite = { focus = RAJ_British_Indian_Army }
 		x = 2
@@ -175,7 +175,7 @@ focus_tree = {
 
 	focus = { 
 		id = RAJ_British_Officers
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_generic_british_officers
 		prerequisite = { focus = RAJ_Reinforce_Command }
 		x = 2
 		y = 4
@@ -192,7 +192,7 @@ focus_tree = {
 
 	focus = { 
 		id = RAJ_Indian_Military_Academy
-		icon = GFX_goal_military_academy
+		icon = GFX_goal_generic_army_training
 		prerequisite = { focus = RAJ_Promote_Indian_Officers }
 		x = -2
 		y = 5
@@ -210,7 +210,7 @@ focus_tree = {
 
 	focus = { 
 		id = RAJ_English_Superiority
-		icon = GFX_imperial_army
+		icon = GFX_goal_generic_army_high_command
 		prerequisite = { focus = RAJ_British_Officers }
 		x = 2
 		y = 5
@@ -229,7 +229,10 @@ focus_tree = {
 	focus = { 
 		id = RAJ_Training_Reforms
 		icon = GFX_goal_army_guy_2
-		prerequisite = { focus = RAJ_British_Indian_Army }
+		prerequisite = { 
+			focus = RAJ_Increase_British_Control
+			focus = RAJ_Maintain_Indian_Control
+		}
 		x = 0
 		y = 3
 		cost = 5
@@ -248,7 +251,7 @@ focus_tree = {
 
 	focus = { 
 		id = RAJ_Equipment_Upgrades
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_goal_generic_military_equipment
 		prerequisite = { focus = RAJ_Training_Reforms }
 		x = 0
 		y = 4
@@ -264,7 +267,7 @@ focus_tree = {
 
 	focus = { 
 		id = RAJ_Cohesive_Strategy
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_goal_generic_army_grand_battleplan
 		prerequisite = { focus = RAJ_Equipment_Upgrades }
 		x = 0
 		y = 5
@@ -361,7 +364,7 @@ focus_tree = {
 
 	focus = {
 		id = RAJ_Create_Command_Structure
-		icon = GFX_goal_soldiers
+		icon = GFX_goal_generic_air_command
 
 		x = 4
 		y = 4

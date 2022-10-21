@@ -21,9 +21,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		available = {
-			HUN = {
-				has_idea = hun_trianon
-			}
+			has_idea = hun_trianon
 		}
 		ai_will_do = {
 			factor = 4000
@@ -46,12 +44,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus hun_poli_stab"
 			increase_ruling_party_popularity_by_10 = yes
+			add_stability = 0.1
 		}
 	}
 
 	focus = { #Foreign Diplomacy Start
 		id = hun_foreign_dip
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_generic_improve_relations
 		cost = 5
 		x = 20
 		y = 0
@@ -74,12 +73,11 @@ focus_tree = {
 			focus = hun_foreign_dip
 		}
 		available = {
-			HUN = {
-				is_puppet = no
-			}
+			is_puppet = no
 			GER = {
 				exists = yes
 				is_puppet = no
+				has_dictatorship_government = yes
 			}
 		}
 		completion_reward = {
@@ -103,12 +101,11 @@ focus_tree = {
 			focus = hun_german_invest
 		}
 		available = {
-			HUN = {
-				is_puppet = no
-			}
+			is_puppet = no
 			GER = {
 				exists = yes
 				is_puppet = no
+				has_dictatorship_government = yes
 			}
 		}
 		completion_reward = {
@@ -135,12 +132,12 @@ focus_tree = {
 			focus = hun_ger_army
 		}
 		available = {
-			HUN = {
-				is_puppet = no
-			}
+			is_puppet = no
 			GER = {
 				exists = yes
+				is_faction_leader = yes
 				is_puppet = no
+				has_dictatorship_government = yes
 			}
 		}
 		completion_reward = {
@@ -318,7 +315,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_new_airbases
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_goal_generic_airports
 		cost = 10
 		x = 4
 		y = 4
@@ -367,7 +364,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_experimental_air
-		icon = GFX_focus_generic_air_defense
+		icon = GFX_goal_generic_air_fighter2_new
 		cost = 10
 		x = 3
 		y = 5
@@ -606,7 +603,7 @@ focus_tree = {
 
 	focus = { #Pruchase German Guns
 		id = hun_buy_guns
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_generic_military_equipment
 		cost = 5
 		x = 6
 		y = 2
@@ -629,7 +626,7 @@ focus_tree = {
 
 	focus = { #Establish Secret Police
 		id = hun_est_bizt
-		icon = GFX_goal_generic_major_war
+		icon = GFX_goal_secret_agents
 		cost = 5
 		x = 7
 		y = 1
@@ -699,7 +696,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_combined_arms
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_goal_generic_army_superior_firepower
 		cost = 10
 		x = 5
 		y = 5
@@ -724,7 +721,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_independant_army
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_goal_generic_barricades
 		cost = 10
 		x = 7
 		y = 5
@@ -754,7 +751,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_youth_army
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_generic_drafted_army
 		cost = 10
 		x = 6
 		y = 6
@@ -770,7 +767,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_more_doctrine
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_goal_generic_army_cooperation
 		cost = 10
 		x = 6
 		y = 7
@@ -789,7 +786,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_trianon_begone
-		icon = GFX_goal_new_treaty
+		icon = GFX_goal_generic_treaty_fails
 		cost = 5
 		x = 10
 		y = 4
@@ -1115,13 +1112,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 320
 			modifier = {
-				factor = 100
+				factor = 0.2
+				772 = {
+					owner = {
+						tag = GER
+					}
+				}
+			}
+			modifier = {
+				factor = 20
 				HUN = {
 					has_army_manpower = { size > 99999 }
 				}
 			}
 			modifier = {
-				factor = 50
+				factor = 10
 				AUS = {
 					is_in_faction = no
 				}
@@ -1177,7 +1182,7 @@ focus_tree = {
 
 	focus = { #Economic Boost
 		id = hun_economic_boost
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_generic_cash_stimulus_plan
 		cost = 10
 		x = 14
 		y = 1
@@ -1276,7 +1281,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_autarky
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_generic_autarky
 		cost = 15
 		x = 14
 		y = 3
@@ -1312,7 +1317,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_end_republic
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_goal_generic_grim_reaper
 		cost = 5
 		x = 12
 		y = 1
@@ -1350,6 +1355,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus hun_state_as_one"
 			increase_ruling_party_popularity_by_10 = yes
+			add_stability = 0.05
 		}
 	}
 
@@ -1423,7 +1429,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_planned_econ
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_banking_legislation
 		cost = 10
 		x = 13
 		y = 4
@@ -1444,7 +1450,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_devolved_econ
-		icon = GFX_goal_production
+		icon = GFX_goal_generic_foreign_investments
 		cost = 10
 		x = 15
 		y = 4
@@ -1465,7 +1471,7 @@ focus_tree = {
 
 	focus = {
 		id = hun_sub_rails
-		icon = GFX_goal_Fix_Shitty_Rails
+		icon = GFX_goal_generic_railway_construction
 		cost = 10
 		x = 15
 		y = 5
