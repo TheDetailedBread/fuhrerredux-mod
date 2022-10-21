@@ -521,6 +521,7 @@ focus_tree = {
     icon = GFX_goal_USA_auto_industry
     x = 1
     y = 1
+    cost = 6
     available = {
       has_capitulated = no
     }
@@ -2672,6 +2673,7 @@ focus_tree = {
     relative_position_id = USA_morality_and_values
     completion_reward = {
       add_ideas = USA_limited_union_activities
+      USA_decrease_effects_of_the_depression = yes
       hidden_effect = {
         country_event = { id = usa.36 days = 6 }
       }
