@@ -359,124 +359,12 @@ units = {
 	}					
 }
 
-### Air Wings ###
-air_wings = {
-#	### 1a Squadra Aerea -- Milan/Turin
-#	158 = { 
-#		# 2a Divisione Aerea 'Borea'
-#		fighter_equipment_0 = {
-#			owner = "ITA" 
-#			amount = 80
-#		}
-#		# 4a Divisione Aerea 'Drago'
-#		# 6a Divisione Aerea 'Falco'
-#		tac_bomber_equipment_0 =  {
-#			owner = "ITA" 
-#			amount = 128
-#		}
-#	}
-#
-	### 2a Squadra Aerea -- Palermo
-	115 = {
-		# 1a Divisione Aerea 'Aquila'
-		fighter_equipment_0 = {
-			owner = "ITA" 
-			amount = 80
-		}
-		# 3a Divisione Aerea 'Centauro'
-		tac_bomber_equipment_0 =  {
-			owner = "ITA" 
-			amount = 32
-		}
-	}
-
-	### 3a Squadra Aerea -- Rome
-	2 = {
-		# 5a Divisione Aerea 'Eolo'
-		tac_bomber_equipment_0 =  {
-			owner = "ITA" 
-			amount = 64
-		}
-		# 8a Divisione Aerea 'Ibis'
-		fighter_equipment_0 = {
-			owner = "ITA" 
-			amount = 80
-		}
-	}
-
-	### 4a Squadra Aerea -- Bari
-	156 = {
-		# 9a Divisione Aerea 'Leone'
-		nav_bomber_equipment_1 = {
-			owner = "ITA" 
-			amount = 48
-		}
-	}
-
-	### Commando Aeronautica Sardegna -- Caligari
-	114 = {
-		# 10a Divisione Aerea 'Marte'
-		nav_bomber_equipment_1 = {
-			owner = "ITA" 
-			amount = 24
-		}
-	}
-
-	### Commando Aeronautica Libia -- Tripoli
-	448 = {
-		fighter_equipment_0 =  {
-			owner = "ITA" 
-			amount = 20
-		}
-		tac_bomber_equipment_0 =  {
-			owner = "ITA" 
-			amount = 32
-		}
-	}
-
-	### Commando Aeronautica Africa Orientale -- Eritrea
-	550 = {
-		fighter_equipment_0 =  {
-			owner = "ITA" 
-			amount = 40
-		}
-		tac_bomber_equipment_0 =  {
-			owner = "ITA" 
-			amount = 32
-		}
-		CAS_equipment_1 =  {
-			owner = "ITA" 
-			amount = 48
-		}
-	}
-}
 
 #########################
 ## STARTING PRODUCTION ##
 #########################
 
 instant_effect = {
-	if = {
-		limit = { has_dlc = "No Step Back" }
-		create_equipment_variant = {
-			name = "L3/35"
-			type = light_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_heavy_machine_gun
-				turret_type_slot = tank_light_fixed_superstructure_turret
-				suspension_type_slot = tank_bogie_suspension
-				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 1
-				tank_nsb_armor_upgrade = 1
-			}
-			icon = "gfx/interface/technologies/ITA_basic_light_tank.dds"
-		}
-	}
-  
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
@@ -486,7 +374,6 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 100
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
@@ -496,7 +383,6 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 100
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = artillery_equipment_1
@@ -506,17 +392,6 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 100
 	}
-
-	add_equipment_production = {
-		equipment = {
-			type = gw_tank_equipment
-			creator = "ITA" 
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 100
-	}
-
 	add_equipment_production = {
 		equipment = {
 			type = motorized_equipment_1
@@ -526,45 +401,29 @@ instant_effect = {
 		progress = 0.15
 		efficiency = 100
 	}
-	
-		add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0
-			creator = "ITA" 
-		}
-		requested_factories = 2
-		progress = 0.15
-		efficiency = 100
-	}
 
+	if = {
+		limit = { has_dlc = "No Step Back" }
 		add_equipment_production = {
-		equipment = {
-			type = CAS_equipment_1 
-			creator = "ITA" 
+			equipment = {
+				type = light_tank_chassis_1
+				creator = "ITA"
+				version_name = "L3/35"
+			}
+			requested_factories = 1
+			progress = 0.15
+			efficiency = 100
 		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 100
-	}
-
-		add_equipment_production = {
-		equipment = {
-			type = NAV_bomber_equipment_1 
-			creator = "ITA" 
+		else = {
+			add_equipment_production = {
+				equipment = {
+					type = light_tank_equipment_1
+					creator = "ITA" 
+				}
+				requested_factories = 1
+				progress = 0.15
+				efficiency = 100
+			}
 		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 100
-	}
-
-		add_equipment_production = {
-		equipment = {
-			type = TAC_bomber_equipment_0 
-			creator = "ITA" 
-		}
-		requested_factories = 2
-		progress = 0.15
-		efficiency = 100
-		
 	}
 }

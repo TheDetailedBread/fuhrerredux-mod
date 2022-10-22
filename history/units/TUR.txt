@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Piyade Tümeni"
+	division_names_group = TUR_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -16,6 +17,7 @@
 
 division_template = {
 	name = "Süvari Tümeni"
+	division_names_group = TUR_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -96,20 +98,6 @@ units = {
 	}				
 }
 
-### Air Wings ###
-air_wings = {
-	##### Osmanlı Hava Kuvvetleri #####
-	49 = { 
-		fighter_equipment_0 = {
-			owner = "TUR" 
-			amount = 45
-		}
-		CAS_equipment_1 = {
-			owner = "TUR" 
-			amount = 16
-		}
-	}
-}
 ##Starting Production
 
 instant_effect = {
@@ -129,24 +117,6 @@ instant_effect = {
 		}
 		requested_factories = 1
 		progress = 0.74
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0 
-			creator = "TUR" 
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = CAS_equipment_1
-			creator = "TUR" 
-		}
-		requested_factories = 1
-		progress = 0.15
 		efficiency = 100
 	}
 }

@@ -1,5 +1,7 @@
 ﻿division_template = {
 	name = "Kajnieku Divizija"		# Infantry Division
+	division_names_group = LAT_INF_01
+
 	# Note: Divisions were nowhere near full strength until mobilized
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -48,17 +50,5 @@ units = {
 		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.1
 
-	}
-					
-}
-
-air_wings = {
-	### Latvijas Gaisa Speki
-	12 = {
-		# Aviacijas Pulka -- Bristol Bulldogs
-		fighter_equipment_0 =  {
-			owner = "LAT" 
-			amount = 12
-		}
-	}
+	}					
 }

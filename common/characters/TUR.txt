@@ -18,8 +18,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Şefik_Husnu_Bey_hog_van_hired }
 			}
 			idea_token = TUR_Şefik_Husnu_Bey_hog_van
-			on_add = { set_country_flag = TUR_Şefik_Husnu_Bey_hog_van_hired }
-			on_remove = { clr_country_flag = TUR_Şefik_Husnu_Bey_hog_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Şefik_Husnu_Bey_hog_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Şefik_Husnu_Bey_hog_van_hired }
+			}
 			traits = {
 				vanguardist
 				hog_red_chairmen
@@ -101,8 +105,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Adnan_Bey_for_mli_hired }
 			}
 			idea_token = TUR_Ali_Adnan_Bey_for_mli
-			on_add = { set_country_flag = TUR_Ali_Adnan_Bey_for_mli_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Adnan_Bey_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Adnan_Bey_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Adnan_Bey_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_world_patrician
@@ -124,8 +132,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Cavid_Bey_hog_ade_hired }
 			}
 			idea_token = TUR_Mehmed_Cavid_Bey_hog_ade
-			on_add = { set_country_flag = TUR_Mehmed_Cavid_Bey_hog_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Cavid_Bey_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Cavid_Bey_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Cavid_Bey_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_reformist_soldier
@@ -150,8 +162,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_İsmet_Paşa_hog_ade_hired }
 			}
 			idea_token = TUR_Mustafa_İsmet_Paşa_hog_ade
-			on_add = { set_country_flag = TUR_Mustafa_İsmet_Paşa_hog_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_İsmet_Paşa_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_İsmet_Paşa_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_İsmet_Paşa_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_political_protege
@@ -199,15 +215,19 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_Fevzi_Paşa_hog_hired }
 			}
 			idea_token = TUR_Mustafa_Fevzi_Paşa_hog
-			on_add = { set_country_flag = TUR_Mustafa_Fevzi_Paşa_hog_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_Fevzi_Paşa_hog_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_Fevzi_Paşa_hog_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_Fevzi_Paşa_hog_hired }
+			}
 			traits = {
 				hog_old_general
 			}
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = TUR_Mustafa_Fevzi_Paşa_cos
 			traits = {
 				cos_school_of_psychology
@@ -318,7 +338,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = TUR_Mustafa_Paşa_carm
 			traits = {
 				carm_doctrine_of_autonomy
@@ -345,7 +365,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = TUR_Huseyin_Rauf_Paşa_cnav
 			traits = {
 				cnav_open_seas_doctrine
@@ -384,8 +404,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Hasan_Ali_Paşa_hog_sde_hired }
 			}
 			idea_token = TUR_Hasan_Ali_Paşa_hog_sde
-			on_add = { set_country_flag = TUR_Hasan_Ali_Paşa_hog_sde_hired }
-			on_remove = { clr_country_flag = TUR_Hasan_Ali_Paşa_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Hasan_Ali_Paşa_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Hasan_Ali_Paşa_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_ambitious_union_boss
@@ -406,8 +430,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Fethi_Paşa_hog_sli_hired }
 			}
 			idea_token = TUR_Ali_Fethi_Paşa_hog_sli
-			on_add = { set_country_flag = TUR_Ali_Fethi_Paşa_hog_sli_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Fethi_Paşa_hog_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Fethi_Paşa_hog_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Fethi_Paşa_hog_sli_hired }
+			}
 			traits = {
 				social_liberal
 				hog_backroom_backstabber
@@ -428,8 +456,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Kemal_Bey_hog_sli_hired }
 			}
 			idea_token = TUR_Ali_Kemal_Bey_hog_sli
-			on_add = { set_country_flag = TUR_Ali_Kemal_Bey_hog_sli_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Kemal_Bey_hog_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Kemal_Bey_hog_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Kemal_Bey_hog_sli_hired }
+			}
 			traits = {
 				social_liberal
 				hog_charismatic_charmer
@@ -442,8 +474,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Kemal_Bey_for_sli_hired }
 			}
 			idea_token = TUR_Ali_Kemal_Bey_for_sli
-			on_add = { set_country_flag = TUR_Ali_Kemal_Bey_for_sli_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Kemal_Bey_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Kemal_Bey_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Kemal_Bey_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_great_compromiser
@@ -464,8 +500,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Prens_Sabahaddin_Efendi_hog_sli_hired }
 			}
 			idea_token = TUR_Prens_Sabahaddin_Efendi_hog_sli
-			on_add = { set_country_flag = TUR_Prens_Sabahaddin_Efendi_hog_sli_hired }
-			on_remove = { clr_country_flag = TUR_Prens_Sabahaddin_Efendi_hog_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Prens_Sabahaddin_Efendi_hog_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Prens_Sabahaddin_Efendi_hog_sli_hired }
+			}
 			traits = {
 				social_liberal
 				hog_corporate_suit
@@ -478,8 +518,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Prens_Sabahaddin_Efendi_for_sli_hired }
 			}
 			idea_token = TUR_Prens_Sabahaddin_Efendi_for_sli
-			on_add = { set_country_flag = TUR_Prens_Sabahaddin_Efendi_for_sli_hired }
-			on_remove = { clr_country_flag = TUR_Prens_Sabahaddin_Efendi_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Prens_Sabahaddin_Efendi_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Prens_Sabahaddin_Efendi_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_the_cloak_n_dagger_schemer
@@ -500,8 +544,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Musa_Kazım_Karabekir_Paşa_hog_mli_hired }
 			}
 			idea_token = TUR_Musa_Kazım_Karabekir_Paşa_hog_mli
-			on_add = { set_country_flag = TUR_Musa_Kazım_Karabekir_Paşa_hog_mli_hired }
-			on_remove = { clr_country_flag = TUR_Musa_Kazım_Karabekir_Paşa_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Musa_Kazım_Karabekir_Paşa_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Musa_Kazım_Karabekir_Paşa_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_silent_workhorse
@@ -522,8 +570,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Şukru_Paşa_hog_sco_hired }
 			}
 			idea_token = TUR_Ali_Şukru_Paşa_hog_sco
-			on_add = { set_country_flag = TUR_Ali_Şukru_Paşa_hog_sco_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Şukru_Paşa_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Şukru_Paşa_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Şukru_Paşa_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_silent_workhorse
@@ -544,8 +596,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Shakib_Arslan_hog_sco_hired }
 			}
 			idea_token = TUR_Shakib_Arslan_hog_sco
-			on_add = { set_country_flag = TUR_Shakib_Arslan_hog_sco_hired }
-			on_remove = { clr_country_flag = TUR_Shakib_Arslan_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Shakib_Arslan_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Shakib_Arslan_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_corporate_suit
@@ -566,8 +622,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Vehip_Paşa_hog_ade_hired }
 			}
 			idea_token = TUR_Mehmed_Vehip_Paşa_hog_ade
-			on_add = { set_country_flag = TUR_Mehmed_Vehip_Paşa_hog_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Vehip_Paşa_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Vehip_Paşa_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Vehip_Paşa_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_flamboyant_tough_guy
@@ -588,8 +648,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_Kemal_Paşa_hog_ade_hired }
 			}
 			idea_token = TUR_Mustafa_Kemal_Paşa_hog_ade
-			on_add = { set_country_flag = TUR_Mustafa_Kemal_Paşa_hog_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_Kemal_Paşa_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_Kemal_Paşa_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_Kemal_Paşa_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_happy_amateur
@@ -610,8 +674,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Huseyin_Selahattin_Paşa_hog_pau_hired }
 			}
 			idea_token = TUR_Huseyin_Selahattin_Paşa_hog_pau
-			on_add = { set_country_flag = TUR_Huseyin_Selahattin_Paşa_hog_pau_hired }
-			on_remove = { clr_country_flag = TUR_Huseyin_Selahattin_Paşa_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Huseyin_Selahattin_Paşa_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Huseyin_Selahattin_Paşa_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_naive_optimist
@@ -632,8 +700,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Huseyin_Nihal_Paşa_hog_npo_hired }
 			}
 			idea_token = TUR_Huseyin_Nihal_Paşa_hog_npo
-			on_add = { set_country_flag = TUR_Huseyin_Nihal_Paşa_hog_npo_hired }
-			on_remove = { clr_country_flag = TUR_Huseyin_Nihal_Paşa_hog_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Huseyin_Nihal_Paşa_hog_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Huseyin_Nihal_Paşa_hog_npo_hired }
+			}
 			traits = {
 				national_populist
 				hog_determined_populist
@@ -654,8 +726,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Fuad_Paşa_for_sli_hired }
 			}
 			idea_token = TUR_Ali_Fuad_Paşa_for_sli
-			on_add = { set_country_flag = TUR_Ali_Fuad_Paşa_for_sli_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Fuad_Paşa_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Fuad_Paşa_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Fuad_Paşa_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_ideological_crusader
@@ -676,8 +752,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Haqqi_al_Azm_for_sli_hired }
 			}
 			idea_token = TUR_Haqqi_al_Azm_for_sli
-			on_add = { set_country_flag = TUR_Haqqi_al_Azm_for_sli_hired }
-			on_remove = { clr_country_flag = TUR_Haqqi_al_Azm_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Haqqi_al_Azm_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Haqqi_al_Azm_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_radical_among_moderates
@@ -698,8 +778,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Kopruluzade_Mehmed_Fuad_Paşa_for_mli_hired }
 			}
 			idea_token = TUR_Kopruluzade_Mehmed_Fuad_Paşa_for_mli
-			on_add = { set_country_flag = TUR_Kopruluzade_Mehmed_Fuad_Paşa_for_mli_hired }
-			on_remove = { clr_country_flag = TUR_Kopruluzade_Mehmed_Fuad_Paşa_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Kopruluzade_Mehmed_Fuad_Paşa_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Kopruluzade_Mehmed_Fuad_Paşa_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_iron_fisted_brute
@@ -720,8 +804,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Rıza_Nur_Paşa_for_mli_hired }
 			}
 			idea_token = TUR_Rıza_Nur_Paşa_for_mli
-			on_add = { set_country_flag = TUR_Rıza_Nur_Paşa_for_mli_hired }
-			on_remove = { clr_country_flag = TUR_Rıza_Nur_Paşa_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Rıza_Nur_Paşa_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Rıza_Nur_Paşa_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_apologetic_clerk
@@ -742,8 +830,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Hashim_al_Atassi_for_sco_hired }
 			}
 			idea_token = TUR_Hashim_al_Atassi_for_sco
-			on_add = { set_country_flag = TUR_Hashim_al_Atassi_for_sco_hired }
-			on_remove = { clr_country_flag = TUR_Hashim_al_Atassi_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Hashim_al_Atassi_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Hashim_al_Atassi_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_ideological_crusader
@@ -764,8 +856,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Muhammed_Hamdi_Yazır_for_sco_hired }
 			}
 			idea_token = TUR_Muhammed_Hamdi_Yazır_for_sco
-			on_add = { set_country_flag = TUR_Muhammed_Hamdi_Yazır_for_sco_hired }
-			on_remove = { clr_country_flag = TUR_Muhammed_Hamdi_Yazır_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Muhammed_Hamdi_Yazır_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Muhammed_Hamdi_Yazır_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_biased_intellectual
@@ -786,8 +882,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Filibeli_Hilmi_Bey_for_ade_hired }
 			}
 			idea_token = TUR_Filibeli_Hilmi_Bey_for_ade
-			on_add = { set_country_flag = TUR_Filibeli_Hilmi_Bey_for_ade_hired }
-			on_remove = { clr_country_flag = TUR_Filibeli_Hilmi_Bey_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Filibeli_Hilmi_Bey_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Filibeli_Hilmi_Bey_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_relations_expert
@@ -808,8 +908,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Huseyin_Numan_Paşa_for_ade_hired }
 			}
 			idea_token = TUR_Huseyin_Numan_Paşa_for_ade
-			on_add = { set_country_flag = TUR_Huseyin_Numan_Paşa_for_ade_hired }
-			on_remove = { clr_country_flag = TUR_Huseyin_Numan_Paşa_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Huseyin_Numan_Paşa_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Huseyin_Numan_Paşa_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_great_compromiser
@@ -830,8 +934,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Şukru_Paşa_for_ade_hired }
 			}
 			idea_token = TUR_Mehmed_Şukru_Paşa_for_ade
-			on_add = { set_country_flag = TUR_Mehmed_Şukru_Paşa_for_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Şukru_Paşa_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Şukru_Paşa_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Şukru_Paşa_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_world_patrician
@@ -852,8 +960,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Selahattin_Paşa_for_ade_hired }
 			}
 			idea_token = TUR_Selahattin_Paşa_for_ade
-			on_add = { set_country_flag = TUR_Selahattin_Paşa_for_ade_hired }
-			on_remove = { clr_country_flag = TUR_Selahattin_Paşa_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Selahattin_Paşa_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Selahattin_Paşa_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_apologetic_clerk
@@ -874,8 +986,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Tevfik_Ruştu_Bey_for_ade_hired }
 			}
 			idea_token = TUR_Tevfik_Ruştu_Bey_for_ade
-			on_add = { set_country_flag = TUR_Tevfik_Ruştu_Bey_for_ade_hired }
-			on_remove = { clr_country_flag = TUR_Tevfik_Ruştu_Bey_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Tevfik_Ruştu_Bey_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Tevfik_Ruştu_Bey_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_biased_intellectual
@@ -899,8 +1015,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Fahrettin_Paşa_for_pau_hired }
 			}
 			idea_token = TUR_Fahrettin_Paşa_for_pau
-			on_add = { set_country_flag = TUR_Fahrettin_Paşa_for_pau_hired }
-			on_remove = { clr_country_flag = TUR_Fahrettin_Paşa_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Fahrettin_Paşa_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Fahrettin_Paşa_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_moderate_among_radicals
@@ -908,7 +1028,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = TUR_Fahrettin_Paşa_carm_pau
 			traits = {
 				carm_armoured_spearhead_doctrine
@@ -929,8 +1049,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Suleyman_Şefik_Paşa_for_pau_hired }
 			}
 			idea_token = TUR_Suleyman_Şefik_Paşa_for_pau
-			on_add = { set_country_flag = TUR_Suleyman_Şefik_Paşa_for_pau_hired }
-			on_remove = { clr_country_flag = TUR_Suleyman_Şefik_Paşa_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Suleyman_Şefik_Paşa_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Suleyman_Şefik_Paşa_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_apologetic_clerk
@@ -951,8 +1075,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ahmed_Necdet_Paşa_for_npo_hired }
 			}
 			idea_token = TUR_Ahmed_Necdet_Paşa_for_npo
-			on_add = { set_country_flag = TUR_Ahmed_Necdet_Paşa_for_npo_hired }
-			on_remove = { clr_country_flag = TUR_Ahmed_Necdet_Paşa_for_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ahmed_Necdet_Paşa_for_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ahmed_Necdet_Paşa_for_npo_hired }
+			}
 			traits = {
 				national_populist
 				for_iron_fisted_brute
@@ -973,8 +1101,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Zeki_Velidi_Paşa_for_npo_hired }
 			}
 			idea_token = TUR_Zeki_Velidi_Paşa_for_npo
-			on_add = { set_country_flag = TUR_Zeki_Velidi_Paşa_for_npo_hired }
-			on_remove = { clr_country_flag = TUR_Zeki_Velidi_Paşa_for_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Zeki_Velidi_Paşa_for_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Zeki_Velidi_Paşa_for_npo_hired }
+			}
 			traits = {
 				national_populist
 				for_general_staffer
@@ -995,8 +1127,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Berc_Keresteciyan_Bey_eco_sli_hired }
 			}
 			idea_token = TUR_Berc_Keresteciyan_Bey_eco_sli
-			on_add = { set_country_flag = TUR_Berc_Keresteciyan_Bey_eco_sli_hired }
-			on_remove = { clr_country_flag = TUR_Berc_Keresteciyan_Bey_eco_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Berc_Keresteciyan_Bey_eco_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Berc_Keresteciyan_Bey_eco_sli_hired }
+			}
 			traits = {
 				social_liberal
 				eco_administrative_genius
@@ -1017,8 +1153,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Hacı_Omer_Bey_eco_mli_hired }
 			}
 			idea_token = TUR_Hacı_Omer_Bey_eco_mli
-			on_add = { set_country_flag = TUR_Hacı_Omer_Bey_eco_mli_hired }
-			on_remove = { clr_country_flag = TUR_Hacı_Omer_Bey_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Hacı_Omer_Bey_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Hacı_Omer_Bey_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_reformer
@@ -1039,8 +1179,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Huseyin_Husnu_Paşa_eco_mli_hired }
 			}
 			idea_token = TUR_Huseyin_Husnu_Paşa_eco_mli
-			on_add = { set_country_flag = TUR_Huseyin_Husnu_Paşa_eco_mli_hired }
-			on_remove = { clr_country_flag = TUR_Huseyin_Husnu_Paşa_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Huseyin_Husnu_Paşa_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Huseyin_Husnu_Paşa_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_railway_magnate
@@ -1061,8 +1205,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mahmud_Celal_Paşa_eco_mli_hired }
 			}
 			idea_token = TUR_Mahmud_Celal_Paşa_eco_mli
-			on_add = { set_country_flag = TUR_Mahmud_Celal_Paşa_eco_mli_hired }
-			on_remove = { clr_country_flag = TUR_Mahmud_Celal_Paşa_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mahmud_Celal_Paşa_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mahmud_Celal_Paşa_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_bank_president
@@ -1083,8 +1231,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmet_Fahrettin_Paşa_eco_mli_hired }
 			}
 			idea_token = TUR_Mehmet_Fahrettin_Paşa_eco_mli
-			on_add = { set_country_flag = TUR_Mehmet_Fahrettin_Paşa_eco_mli_hired }
-			on_remove = { clr_country_flag = TUR_Mehmet_Fahrettin_Paşa_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmet_Fahrettin_Paşa_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmet_Fahrettin_Paşa_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_infantry_proponent
@@ -1105,8 +1257,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_Abdulhalik_Paşa_eco_mli_hired }
 			}
 			idea_token = TUR_Mustafa_Abdulhalik_Paşa_eco_mli
-			on_add = { set_country_flag = TUR_Mustafa_Abdulhalik_Paşa_eco_mli_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_Abdulhalik_Paşa_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_Abdulhalik_Paşa_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_Abdulhalik_Paşa_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_industrial_chemist
@@ -1127,8 +1283,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Zuhtu_Hilmi_Paşa_eco_mli_hired }
 			}
 			idea_token = TUR_Zuhtu_Hilmi_Paşa_eco_mli
-			on_add = { set_country_flag = TUR_Zuhtu_Hilmi_Paşa_eco_mli_hired }
-			on_remove = { clr_country_flag = TUR_Zuhtu_Hilmi_Paşa_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Zuhtu_Hilmi_Paşa_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Zuhtu_Hilmi_Paşa_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_balanced_budget_economy
@@ -1149,8 +1309,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Abdulmuhsin_el_Sadun_Paşa_eco_sco_hired }
 			}
 			idea_token = TUR_Abdulmuhsin_el_Sadun_Paşa_eco_sco
-			on_add = { set_country_flag = TUR_Abdulmuhsin_el_Sadun_Paşa_eco_sco_hired }
-			on_remove = { clr_country_flag = TUR_Abdulmuhsin_el_Sadun_Paşa_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Abdulmuhsin_el_Sadun_Paşa_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Abdulmuhsin_el_Sadun_Paşa_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_resource_industrialist
@@ -1171,8 +1335,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Hasan_Husnu_Paşa_eco_ade_hired }
 			}
 			idea_token = TUR_Hasan_Husnu_Paşa_eco_ade
-			on_add = { set_country_flag = TUR_Hasan_Husnu_Paşa_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Hasan_Husnu_Paşa_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Hasan_Husnu_Paşa_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Hasan_Husnu_Paşa_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_industrialiser
@@ -1193,8 +1361,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Kara_Kemal_Bey_eco_ade_hired }
 			}
 			idea_token = TUR_Kara_Kemal_Bey_eco_ade
-			on_add = { set_country_flag = TUR_Kara_Kemal_Bey_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Kara_Kemal_Bey_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Kara_Kemal_Bey_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Kara_Kemal_Bey_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_administrative_genius
@@ -1215,8 +1387,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Şakir_Paşa_eco_ade_hired }
 			}
 			idea_token = TUR_Mehmed_Şakir_Paşa_eco_ade
-			on_add = { set_country_flag = TUR_Mehmed_Şakir_Paşa_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Şakir_Paşa_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Şakir_Paşa_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Şakir_Paşa_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_resource_industrialist
@@ -1237,8 +1413,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_Şeref_Paşa_eco_ade_hired }
 			}
 			idea_token = TUR_Mustafa_Şeref_Paşa_eco_ade
-			on_add = { set_country_flag = TUR_Mustafa_Şeref_Paşa_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_Şeref_Paşa_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_Şeref_Paşa_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_Şeref_Paşa_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_steel_magnate
@@ -1259,8 +1439,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Reşad_Muhlis_Bey_eco_ade_hired }
 			}
 			idea_token = TUR_Reşad_Muhlis_Bey_eco_ade
-			on_add = { set_country_flag = TUR_Reşad_Muhlis_Bey_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Reşad_Muhlis_Bey_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Reşad_Muhlis_Bey_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Reşad_Muhlis_Bey_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_balanced_budget_economy
@@ -1281,8 +1465,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Şevket_Raşid_Bey_eco_ade_hired }
 			}
 			idea_token = TUR_Şevket_Raşid_Bey_eco_ade
-			on_add = { set_country_flag = TUR_Şevket_Raşid_Bey_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Şevket_Raşid_Bey_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Şevket_Raşid_Bey_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Şevket_Raşid_Bey_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_construction_magnate
@@ -1303,8 +1491,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Sırrı_Bey_eco_ade_hired }
 			}
 			idea_token = TUR_Sırrı_Bey_eco_ade
-			on_add = { set_country_flag = TUR_Sırrı_Bey_eco_ade_hired }
-			on_remove = { clr_country_flag = TUR_Sırrı_Bey_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Sırrı_Bey_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Sırrı_Bey_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_air_superiority_proponent
@@ -1325,8 +1517,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Nuri_Bey_eco_pau_hired }
 			}
 			idea_token = TUR_Mehmed_Nuri_Bey_eco_pau
-			on_add = { set_country_flag = TUR_Mehmed_Nuri_Bey_eco_pau_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Nuri_Bey_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Nuri_Bey_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Nuri_Bey_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_the_minister_for_everything
@@ -1347,8 +1543,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Şefik_Paşa_eco_pau_hired }
 			}
 			idea_token = TUR_Mehmed_Şefik_Paşa_eco_pau
-			on_add = { set_country_flag = TUR_Mehmed_Şefik_Paşa_eco_pau_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Şefik_Paşa_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Şefik_Paşa_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Şefik_Paşa_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_oil_baron
@@ -1369,8 +1569,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ağaoglu_Ahmed_Paşa_sec_sli_hired }
 			}
 			idea_token = TUR_Ağaoglu_Ahmed_Paşa_sec_sli
-			on_add = { set_country_flag = TUR_Ağaoglu_Ahmed_Paşa_sec_sli_hired }
-			on_remove = { clr_country_flag = TUR_Ağaoglu_Ahmed_Paşa_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ağaoglu_Ahmed_Paşa_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ağaoglu_Ahmed_Paşa_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_back_stabber
@@ -1391,8 +1595,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Feridun_Fikri_Paşa_sec_sli_hired }
 			}
 			idea_token = TUR_Feridun_Fikri_Paşa_sec_sli
-			on_add = { set_country_flag = TUR_Feridun_Fikri_Paşa_sec_sli_hired }
-			on_remove = { clr_country_flag = TUR_Feridun_Fikri_Paşa_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Feridun_Fikri_Paşa_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Feridun_Fikri_Paşa_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_man_of_the_people
@@ -1413,8 +1621,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_İbrahim_Refik_Paşa_sec_sli_hired }
 			}
 			idea_token = TUR_İbrahim_Refik_Paşa_sec_sli
-			on_add = { set_country_flag = TUR_İbrahim_Refik_Paşa_sec_sli_hired }
-			on_remove = { clr_country_flag = TUR_İbrahim_Refik_Paşa_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_İbrahim_Refik_Paşa_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_İbrahim_Refik_Paşa_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_health_and_safety
@@ -1435,8 +1647,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Bekir_Refik_Paşa_sec_mli_hired }
 			}
 			idea_token = TUR_Bekir_Refik_Paşa_sec_mli
-			on_add = { set_country_flag = TUR_Bekir_Refik_Paşa_sec_mli_hired }
-			on_remove = { clr_country_flag = TUR_Bekir_Refik_Paşa_sec_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Bekir_Refik_Paşa_sec_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Bekir_Refik_Paşa_sec_mli_hired }
+			}
 			traits = {
 				market_liberal
 				sec_compassionate_gentleman
@@ -1457,8 +1673,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Refik_Şevket_Paşa_sec_mli_hired }
 			}
 			idea_token = TUR_Refik_Şevket_Paşa_sec_mli
-			on_add = { set_country_flag = TUR_Refik_Şevket_Paşa_sec_mli_hired }
-			on_remove = { clr_country_flag = TUR_Refik_Şevket_Paşa_sec_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Refik_Şevket_Paşa_sec_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Refik_Şevket_Paşa_sec_mli_hired }
+			}
 			traits = {
 				market_liberal
 				sec_silent_lawyer
@@ -1479,8 +1699,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_Sabri_Effendi_sec_sco_hired }
 			}
 			idea_token = TUR_Mustafa_Sabri_Effendi_sec_sco
-			on_add = { set_country_flag = TUR_Mustafa_Sabri_Effendi_sec_sco_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_Sabri_Effendi_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_Sabri_Effendi_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_Sabri_Effendi_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_efficient_sociopath
@@ -1501,8 +1725,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ahmed_Naci_Paşa_sec_ade_hired }
 			}
 			idea_token = TUR_Ahmed_Naci_Paşa_sec_ade
-			on_add = { set_country_flag = TUR_Ahmed_Naci_Paşa_sec_ade_hired }
-			on_remove = { clr_country_flag = TUR_Ahmed_Naci_Paşa_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ahmed_Naci_Paşa_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ahmed_Naci_Paşa_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_compassionate_gentleman
@@ -1523,8 +1751,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Ali_Rıza_Paşa_sec_ade_hired }
 			}
 			idea_token = TUR_Ali_Rıza_Paşa_sec_ade
-			on_add = { set_country_flag = TUR_Ali_Rıza_Paşa_sec_ade_hired }
-			on_remove = { clr_country_flag = TUR_Ali_Rıza_Paşa_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Ali_Rıza_Paşa_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Ali_Rıza_Paşa_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_back_stabber
@@ -1545,8 +1777,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Kazım_Fikri_Paşa_sec_ade_hired }
 			}
 			idea_token = TUR_Kazım_Fikri_Paşa_sec_ade
-			on_add = { set_country_flag = TUR_Kazım_Fikri_Paşa_sec_ade_hired }
-			on_remove = { clr_country_flag = TUR_Kazım_Fikri_Paşa_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Kazım_Fikri_Paşa_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Kazım_Fikri_Paşa_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_prince_of_terror
@@ -1567,8 +1803,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Şemsettin_Paşa_sec_ade_hired }
 			}
 			idea_token = TUR_Mehmed_Şemsettin_Paşa_sec_ade
-			on_add = { set_country_flag = TUR_Mehmed_Şemsettin_Paşa_sec_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Şemsettin_Paşa_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Şemsettin_Paşa_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Şemsettin_Paşa_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_efficient_sociopath
@@ -1589,8 +1829,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mustafa_Necati_Paşa_sec_ade_hired }
 			}
 			idea_token = TUR_Mustafa_Necati_Paşa_sec_ade
-			on_add = { set_country_flag = TUR_Mustafa_Necati_Paşa_sec_ade_hired }
-			on_remove = { clr_country_flag = TUR_Mustafa_Necati_Paşa_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mustafa_Necati_Paşa_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mustafa_Necati_Paşa_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_secret_police_chief
@@ -1611,8 +1855,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Yunus_Nadi_Bey_sec_ade_hired }
 			}
 			idea_token = TUR_Yunus_Nadi_Bey_sec_ade
-			on_add = { set_country_flag = TUR_Yunus_Nadi_Bey_sec_ade_hired }
-			on_remove = { clr_country_flag = TUR_Yunus_Nadi_Bey_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Yunus_Nadi_Bey_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Yunus_Nadi_Bey_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_crooked_kleptocrat
@@ -1633,8 +1881,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Mehmed_Recep_Paşa_sec_pau_hired }
 			}
 			idea_token = TUR_Mehmed_Recep_Paşa_sec_pau
-			on_add = { set_country_flag = TUR_Mehmed_Recep_Paşa_sec_pau_hired }
-			on_remove = { clr_country_flag = TUR_Mehmed_Recep_Paşa_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Mehmed_Recep_Paşa_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Mehmed_Recep_Paşa_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_crime_fighter
@@ -1655,8 +1907,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Sadri_Maksudi_Bey_sec_npo_hired }
 			}
 			idea_token = TUR_Sadri_Maksudi_Bey_sec_npo
-			on_add = { set_country_flag = TUR_Sadri_Maksudi_Bey_sec_npo_hired }
-			on_remove = { clr_country_flag = TUR_Sadri_Maksudi_Bey_sec_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Sadri_Maksudi_Bey_sec_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Sadri_Maksudi_Bey_sec_npo_hired }
+			}
 			traits = {
 				national_populist
 				sec_media_magnate
@@ -1677,8 +1933,12 @@ characters = {
 				hidden_trigger = { has_country_flag = TUR_Yusuf_Kemal_Paşa_sec_npo_hired }
 			}
 			idea_token = TUR_Yusuf_Kemal_Paşa_sec_npo
-			on_add = { set_country_flag = TUR_Yusuf_Kemal_Paşa_sec_npo_hired }
-			on_remove = { clr_country_flag = TUR_Yusuf_Kemal_Paşa_sec_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = TUR_Yusuf_Kemal_Paşa_sec_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = TUR_Yusuf_Kemal_Paşa_sec_npo_hired }
+			}
 			traits = {
 				national_populist
 				sec_man_of_the_people
@@ -1694,7 +1954,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = TUR_Mehmed_Cemal_Paşa_cos
 			traits = {
 				cos_school_of_manoeuvre
@@ -1710,7 +1970,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = TUR_Kazim_Paşa_cos
 			traits = {
 				cos_school_of_fire_support
@@ -1726,7 +1986,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = TUR_Salih_Paşa_cos
 			traits = {
 				cos_school_of_psychology
@@ -1742,7 +2002,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = TUR_Asım_Paşa_carm
 			traits = {
 				carm_elastic_defence_doctrine
@@ -1758,7 +2018,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = TUR_Cemil_Cahit_Paşa_carm
 			traits = {
 				carm_static_defence_doctrine
@@ -1774,7 +2034,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = TUR_Fakhri_Paşa_carm
 			traits = {
 				carm_commando_doctrine
@@ -1790,7 +2050,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = TUR_Mahmud_Muhtar_Paşa_cnav
 			traits = {
 				cnav_open_seas_doctrine
@@ -1806,7 +2066,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = TUR_Şukru_Paşa_cnav
 			traits = {
 				cnav_indirect_approach_doctrine
@@ -1822,7 +2082,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = TUR_İrfan_Bey_cair
 			traits = {
 				cair_air_superiority_doctrine
@@ -1838,7 +2098,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = TUR_Vecihi_Paşa_cair
 			traits = {
 				cair_naval_aviation_doctrine
@@ -1854,7 +2114,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = TUR_Ahmet_Ali_Paşa_cair
 			traits = {
 				cair_battlefield_support_doctrine
@@ -1870,7 +2130,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = TUR_Şakir_Fevzi_Paşa_cair
 			traits = {
 				cair_carpet_bombing_doctrine
@@ -1886,7 +2146,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = TUR_İsmail_Şefik_Bey_cair
 			traits = {
 				cair_vertical_envelopment_doctrine
@@ -1932,7 +2192,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = TUR_Osman_Fuad_Efendi_cos
 			traits = {
 				cos_school_of_defence

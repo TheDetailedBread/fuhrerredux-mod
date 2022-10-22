@@ -4,6 +4,8 @@
 
 division_template = {
 	name = "város milícia"
+	division_names_group = HUN_INF_01
+
 	is_locked = no
 
 	regiments = {
@@ -12,12 +14,11 @@ division_template = {
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
 	}
-	support = {
-	}
 }
 
 division_template = {
 	name = "Duna önkéntesek"
+	division_names_group = HUN_INF_01
 	is_locked = no
 
 	regiments = {
@@ -41,7 +42,6 @@ units = {
 		division_template = "város milícia"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.7
-
 	}
 
 	division= {	
@@ -50,6 +50,5 @@ units = {
 		division_template = "város milícia"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
-
 	}
 }

@@ -18,8 +18,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Marcel_Deat_eco_van_hired }
 			}
 			idea_token = FRA_Marcel_Deat_eco_van
-			on_add = { set_country_flag = FRA_Marcel_Deat_eco_van_hired }
-			on_remove = { clr_country_flag = FRA_Marcel_Deat_eco_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Marcel_Deat_eco_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Marcel_Deat_eco_van_hired }
+			}
 			traits = {
 				vanguardist
 				eco_planned_economy_proponent
@@ -69,8 +73,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Leon_Blum_hog_sde_hired }
 			}
 			idea_token = FRA_Leon_Blum_hog_sde
-			on_add = { set_country_flag = FRA_Leon_Blum_hog_sde_hired }
-			on_remove = { clr_country_flag = FRA_Leon_Blum_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Leon_Blum_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Leon_Blum_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_silent_workhorse
@@ -108,8 +116,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Louis_Marin_sec_sco_hired }
 			}
 			idea_token = FRA_Louis_Marin_sec_sco
-			on_add = { set_country_flag = FRA_Louis_Marin_sec_sco_hired }
-			on_remove = { clr_country_flag = FRA_Louis_Marin_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Louis_Marin_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Louis_Marin_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_compassionate_gentleman
@@ -135,8 +147,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Francois_de_la_Rocque_hog_ade_hired }
 			}
 			idea_token = FRA_Francois_de_la_Rocque_hog_ade
-			on_add = { set_country_flag = FRA_Francois_de_la_Rocque_hog_ade_hired }
-			on_remove = { clr_country_flag = FRA_Francois_de_la_Rocque_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Francois_de_la_Rocque_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Francois_de_la_Rocque_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_silent_workhorse
@@ -149,8 +165,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Francois_de_La_Rocque_sec_ade_hired }
 			}
 			idea_token = FRA_Francois_de_La_Rocque_sec_ade
-			on_add = { set_country_flag = FRA_Francois_de_La_Rocque_sec_ade_hired }
-			on_remove = { clr_country_flag = FRA_Francois_de_La_Rocque_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Francois_de_La_Rocque_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Francois_de_La_Rocque_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_man_of_the_people
@@ -249,7 +269,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Alphonse_Juin_carm
 			traits = {
 				carm_static_defence_doctrine
@@ -277,7 +297,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Maurice_Janin_carm
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -308,7 +328,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Charles_de_Gaulle_cos
 			traits = {
 				cos_school_of_commando_operations
@@ -337,7 +357,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Jean_de_Lattre_de_Tassigny_cos
 			traits = {
 				cos_school_of_fire_support
@@ -345,7 +365,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Jean_de_Lattre_de_Tassigny_carm
 			traits = {
 				carm_armoured_spearhead_doctrine
@@ -375,7 +395,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Maxime_Weygand_carm
 			traits = {
 				carm_commando_doctrine
@@ -427,7 +447,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Antoine_Bethouart_cos
 			traits = {
 				cos_school_of_fire_support
@@ -537,8 +557,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Georges_Valois_hog_van_hired }
 			}
 			idea_token = FRA_Georges_Valois_hog_van
-			on_add = { set_country_flag = FRA_Georges_Valois_hog_van_hired }
-			on_remove = { clr_country_flag = FRA_Georges_Valois_hog_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Georges_Valois_hog_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Georges_Valois_hog_van_hired }
+			}
 			traits = {
 				vanguardist
 				hog_red_chairmen
@@ -559,8 +583,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Benoit_Frachon_hog_col_hired }
 			}
 			idea_token = FRA_Benoit_Frachon_hog_col
-			on_add = { set_country_flag = FRA_Benoit_Frachon_hog_col_hired }
-			on_remove = { clr_country_flag = FRA_Benoit_Frachon_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Benoit_Frachon_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Benoit_Frachon_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_ambitious_union_boss
@@ -581,8 +609,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Marceau_Pivert_hog_col_hired }
 			}
 			idea_token = FRA_Marceau_Pivert_hog_col
-			on_add = { set_country_flag = FRA_Marceau_Pivert_hog_col_hired }
-			on_remove = { clr_country_flag = FRA_Marceau_Pivert_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Marceau_Pivert_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Marceau_Pivert_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_naive_optimist
@@ -603,8 +635,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Benoit_Broutchoux_hog_lib_hired }
 			}
 			idea_token = FRA_Benoit_Broutchoux_hog_lib
-			on_add = { set_country_flag = FRA_Benoit_Broutchoux_hog_lib_hired }
-			on_remove = { clr_country_flag = FRA_Benoit_Broutchoux_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Benoit_Broutchoux_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Benoit_Broutchoux_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_happy_amateur
@@ -625,8 +661,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Daniel_Guerin_hog_lib_hired }
 			}
 			idea_token = FRA_Daniel_Guerin_hog_lib
-			on_add = { set_country_flag = FRA_Daniel_Guerin_hog_lib_hired }
-			on_remove = { clr_country_flag = FRA_Daniel_Guerin_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Daniel_Guerin_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Daniel_Guerin_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_sincere_internationalist
@@ -647,8 +687,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Paul_Ramadier_hog_sde_hired }
 			}
 			idea_token = FRA_Paul_Ramadier_hog_sde
-			on_add = { set_country_flag = FRA_Paul_Ramadier_hog_sde_hired }
-			on_remove = { clr_country_flag = FRA_Paul_Ramadier_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Paul_Ramadier_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Paul_Ramadier_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_pragmatic_statesman
@@ -669,8 +713,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Edouard_Daladier_hog_sli_hired }
 			}
 			idea_token = FRA_Edouard_Daladier_hog_sli
-			on_add = { set_country_flag = FRA_Edouard_Daladier_hog_sli_hired }
-			on_remove = { clr_country_flag = FRA_Edouard_Daladier_hog_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Edouard_Daladier_hog_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Edouard_Daladier_hog_sli_hired }
+			}
 			traits = {
 				social_liberal
 				hog_happy_amateur
@@ -691,8 +739,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Paul_Reynaud_hog_mli_hired }
 			}
 			idea_token = FRA_Paul_Reynaud_hog_mli
-			on_add = { set_country_flag = FRA_Paul_Reynaud_hog_mli_hired }
-			on_remove = { clr_country_flag = FRA_Paul_Reynaud_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Paul_Reynaud_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Paul_Reynaud_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_democratic_tyrant
@@ -713,8 +765,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Jean_Ybarnegaray_hog_sco_hired }
 			}
 			idea_token = FRA_Jean_Ybarnegaray_hog_sco
-			on_add = { set_country_flag = FRA_Jean_Ybarnegaray_hog_sco_hired }
-			on_remove = { clr_country_flag = FRA_Jean_Ybarnegaray_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Jean_Ybarnegaray_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Jean_Ybarnegaray_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_charismatic_charmer
@@ -735,8 +791,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Jean_Mermoz_hog_ade_hired }
 			}
 			idea_token = FRA_Jean_Mermoz_hog_ade
-			on_add = { set_country_flag = FRA_Jean_Mermoz_hog_ade_hired }
-			on_remove = { clr_country_flag = FRA_Jean_Mermoz_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Jean_Mermoz_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Jean_Mermoz_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_naive_optimist
@@ -757,8 +817,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Ernest_Mercier_hog_pau_hired }
 			}
 			idea_token = FRA_Ernest_Mercier_hog_pau
-			on_add = { set_country_flag = FRA_Ernest_Mercier_hog_pau_hired }
-			on_remove = { clr_country_flag = FRA_Ernest_Mercier_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Ernest_Mercier_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Ernest_Mercier_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_accomplished_diplomat
@@ -771,8 +835,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Ernest_Mercier_sec_pau_hired }
 			}
 			idea_token = FRA_Ernest_Mercier_sec_pau
-			on_add = { set_country_flag = FRA_Ernest_Mercier_sec_pau_hired }
-			on_remove = { clr_country_flag = FRA_Ernest_Mercier_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Ernest_Mercier_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Ernest_Mercier_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_silent_lawyer
@@ -797,8 +865,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Louis_Franchet_d_Esperey_hog_pau_hired }
 			}
 			idea_token = FRA_Louis_Franchet_d_Esperey_hog_pau
-			on_add = { set_country_flag = FRA_Louis_Franchet_d_Esperey_hog_pau_hired }
-			on_remove = { clr_country_flag = FRA_Louis_Franchet_d_Esperey_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Louis_Franchet_d_Esperey_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Louis_Franchet_d_Esperey_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_old_general
@@ -806,7 +878,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Louis_Franchet_d_Esperey_cos_pau
 			traits = {
 				cos_school_of_psychology
@@ -834,8 +906,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Louis_Alexandre_Audibert_hog_pau_hired }
 			}
 			idea_token = FRA_Louis_Alexandre_Audibert_hog_pau
-			on_add = { set_country_flag = FRA_Louis_Alexandre_Audibert_hog_pau_hired }
-			on_remove = { clr_country_flag = FRA_Louis_Alexandre_Audibert_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Louis_Alexandre_Audibert_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Louis_Alexandre_Audibert_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_backroom_backstabber
@@ -857,8 +933,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Charles_Maurras_hog_npo_hired }
 			}
 			idea_token = FRA_Charles_Maurras_hog_npo
-			on_add = { set_country_flag = FRA_Charles_Maurras_hog_npo_hired }
-			on_remove = { clr_country_flag = FRA_Charles_Maurras_hog_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Charles_Maurras_hog_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Charles_Maurras_hog_npo_hired }
+			}
 			traits = {
 				national_populist
 				hog_flamboyant_tough_guy
@@ -879,8 +959,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Jacques_Doriot_hog_val_hired }
 			}
 			idea_token = FRA_Jacques_Doriot_hog_val
-			on_add = { set_country_flag = FRA_Jacques_Doriot_hog_val_hired }
-			on_remove = { clr_country_flag = FRA_Jacques_Doriot_hog_val_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Jacques_Doriot_hog_val_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Jacques_Doriot_hog_val_hired }
+			}
 			traits = {
 				valkist
 				hog_underground_figurehead
@@ -901,8 +985,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Jacques_Duclos_for_van_hired }
 			}
 			idea_token = FRA_Jacques_Duclos_for_van
-			on_add = { set_country_flag = FRA_Jacques_Duclos_for_van_hired }
-			on_remove = { clr_country_flag = FRA_Jacques_Duclos_for_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Jacques_Duclos_for_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Jacques_Duclos_for_van_hired }
+			}
 			traits = {
 				vanguardist
 				for_iron_fisted_brute
@@ -923,8 +1011,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Charles_Rappoport_for_col_hired }
 			}
 			idea_token = FRA_Charles_Rappoport_for_col
-			on_add = { set_country_flag = FRA_Charles_Rappoport_for_col_hired }
-			on_remove = { clr_country_flag = FRA_Charles_Rappoport_for_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Charles_Rappoport_for_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Charles_Rappoport_for_col_hired }
+			}
 			traits = {
 				collectivist
 				for_radical_among_moderates
@@ -945,8 +1037,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Nestor_Makhno_for_lib_hired }
 			}
 			idea_token = FRA_Nestor_Makhno_for_lib
-			on_add = { set_country_flag = FRA_Nestor_Makhno_for_lib_hired }
-			on_remove = { clr_country_flag = FRA_Nestor_Makhno_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Nestor_Makhno_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Nestor_Makhno_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_ideological_crusader
@@ -967,8 +1063,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Pierre_Laval_for_sde_hired }
 			}
 			idea_token = FRA_Pierre_Laval_for_sde
-			on_add = { set_country_flag = FRA_Pierre_Laval_for_sde_hired }
-			on_remove = { clr_country_flag = FRA_Pierre_Laval_for_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Pierre_Laval_for_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Pierre_Laval_for_sde_hired }
+			}
 			traits = {
 				social_democrat
 				for_relations_expert
@@ -989,8 +1089,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_George_Bonnet_for_sli_hired }
 			}
 			idea_token = FRA_George_Bonnet_for_sli
-			on_add = { set_country_flag = FRA_George_Bonnet_for_sli_hired }
-			on_remove = { clr_country_flag = FRA_George_Bonnet_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_George_Bonnet_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_George_Bonnet_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_moderate_among_radicals
@@ -1011,8 +1115,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Camille_Barrere_for_sco_hired }
 			}
 			idea_token = FRA_Camille_Barrere_for_sco
-			on_add = { set_country_flag = FRA_Camille_Barrere_for_sco_hired }
-			on_remove = { clr_country_flag = FRA_Camille_Barrere_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Camille_Barrere_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Camille_Barrere_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_iron_fisted_brute
@@ -1033,8 +1141,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Georges_Mandel_for_sco_hired }
 			}
 			idea_token = FRA_Georges_Mandel_for_sco
-			on_add = { set_country_flag = FRA_Georges_Mandel_for_sco_hired }
-			on_remove = { clr_country_flag = FRA_Georges_Mandel_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Georges_Mandel_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Georges_Mandel_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_relations_expert
@@ -1055,8 +1167,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Paul_Baudouin_for_ade_hired }
 			}
 			idea_token = FRA_Paul_Baudouin_for_ade
-			on_add = { set_country_flag = FRA_Paul_Baudouin_for_ade_hired }
-			on_remove = { clr_country_flag = FRA_Paul_Baudouin_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Paul_Baudouin_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Paul_Baudouin_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_the_cloak_n_dagger_schemer
@@ -1077,8 +1193,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Joseph_Darnand_for_pau_hired }
 			}
 			idea_token = FRA_Joseph_Darnand_for_pau
-			on_add = { set_country_flag = FRA_Joseph_Darnand_for_pau_hired }
-			on_remove = { clr_country_flag = FRA_Joseph_Darnand_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Joseph_Darnand_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Joseph_Darnand_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_apologetic_clerk
@@ -1099,8 +1219,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Maurice_Pujo_for_npo_hired }
 			}
 			idea_token = FRA_Maurice_Pujo_for_npo
-			on_add = { set_country_flag = FRA_Maurice_Pujo_for_npo_hired }
-			on_remove = { clr_country_flag = FRA_Maurice_Pujo_for_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Maurice_Pujo_for_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Maurice_Pujo_for_npo_hired }
+			}
 			traits = {
 				national_populist
 				for_general_staffer
@@ -1121,8 +1245,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Daniel_Renoult_eco_col_hired }
 			}
 			idea_token = FRA_Daniel_Renoult_eco_col
-			on_add = { set_country_flag = FRA_Daniel_Renoult_eco_col_hired }
-			on_remove = { clr_country_flag = FRA_Daniel_Renoult_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Daniel_Renoult_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Daniel_Renoult_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_reformer
@@ -1143,8 +1271,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Leon_Jouhaux_eco_col_hired }
 			}
 			idea_token = FRA_Leon_Jouhaux_eco_col
-			on_add = { set_country_flag = FRA_Leon_Jouhaux_eco_col_hired }
-			on_remove = { clr_country_flag = FRA_Leon_Jouhaux_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Leon_Jouhaux_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Leon_Jouhaux_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_planned_economy_proponent
@@ -1165,8 +1297,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Henri_Tanguy_eco_lib_hired }
 			}
 			idea_token = FRA_Henri_Tanguy_eco_lib
-			on_add = { set_country_flag = FRA_Henri_Tanguy_eco_lib_hired }
-			on_remove = { clr_country_flag = FRA_Henri_Tanguy_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Henri_Tanguy_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Henri_Tanguy_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_devoted_monopoly_buster
@@ -1187,8 +1323,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Jean_Zay_eco_sde_hired }
 			}
 			idea_token = FRA_Jean_Zay_eco_sde
-			on_add = { set_country_flag = FRA_Jean_Zay_eco_sde_hired }
-			on_remove = { clr_country_flag = FRA_Jean_Zay_eco_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Jean_Zay_eco_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Jean_Zay_eco_sde_hired }
+			}
 			traits = {
 				social_democrat
 				eco_administrative_genius
@@ -1209,8 +1349,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Andre_Tardieu_eco_mli_hired }
 			}
 			idea_token = FRA_Andre_Tardieu_eco_mli
-			on_add = { set_country_flag = FRA_Andre_Tardieu_eco_mli_hired }
-			on_remove = { clr_country_flag = FRA_Andre_Tardieu_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Andre_Tardieu_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Andre_Tardieu_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_construction_magnate
@@ -1236,8 +1380,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Pierre_Etienne_Flandin_eco_mli_hired }
 			}
 			idea_token = FRA_Pierre_Etienne_Flandin_eco_mli
-			on_add = { set_country_flag = FRA_Pierre_Etienne_Flandin_eco_mli_hired }
-			on_remove = { clr_country_flag = FRA_Pierre_Etienne_Flandin_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Pierre_Etienne_Flandin_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Pierre_Etienne_Flandin_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_national_liberal
@@ -1258,8 +1406,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Charles_Vallin_eco_ade_hired }
 			}
 			idea_token = FRA_Charles_Vallin_eco_ade
-			on_add = { set_country_flag = FRA_Charles_Vallin_eco_ade_hired }
-			on_remove = { clr_country_flag = FRA_Charles_Vallin_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Charles_Vallin_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Charles_Vallin_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_bank_president
@@ -1280,8 +1432,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Marie_Eugene_Debeney_eco_ade_hired }
 			}
 			idea_token = FRA_Marie_Eugene_Debeney_eco_ade
-			on_add = { set_country_flag = FRA_Marie_Eugene_Debeney_eco_ade_hired }
-			on_remove = { clr_country_flag = FRA_Marie_Eugene_Debeney_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Marie_Eugene_Debeney_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Marie_Eugene_Debeney_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_balanced_budget_economy
@@ -1302,8 +1458,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Eugene_Schueller_eco_pau_hired }
 			}
 			idea_token = FRA_Eugene_Schueller_eco_pau
-			on_add = { set_country_flag = FRA_Eugene_Schueller_eco_pau_hired }
-			on_remove = { clr_country_flag = FRA_Eugene_Schueller_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Eugene_Schueller_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Eugene_Schueller_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_resource_industrialist
@@ -1324,8 +1484,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Francois_Coty_eco_pau_hired }
 			}
 			idea_token = FRA_Francois_Coty_eco_pau
-			on_add = { set_country_flag = FRA_Francois_Coty_eco_pau_hired }
-			on_remove = { clr_country_flag = FRA_Francois_Coty_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Francois_Coty_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Francois_Coty_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_industrialiser
@@ -1346,8 +1510,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Eugene_Deloncle_eco_npo_hired }
 			}
 			idea_token = FRA_Eugene_Deloncle_eco_npo
-			on_add = { set_country_flag = FRA_Eugene_Deloncle_eco_npo_hired }
-			on_remove = { clr_country_flag = FRA_Eugene_Deloncle_eco_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Eugene_Deloncle_eco_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Eugene_Deloncle_eco_npo_hired }
+			}
 			traits = {
 				national_populist
 				eco_industrial_chemist
@@ -1368,8 +1536,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Claudine_Chomat_sec_van_hired }
 			}
 			idea_token = FRA_Claudine_Chomat_sec_van
-			on_add = { set_country_flag = FRA_Claudine_Chomat_sec_van_hired }
-			on_remove = { clr_country_flag = FRA_Claudine_Chomat_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Claudine_Chomat_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Claudine_Chomat_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_back_stabber
@@ -1390,8 +1562,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Henri_Bonnet_sec_col_hired }
 			}
 			idea_token = FRA_Henri_Bonnet_sec_col
-			on_add = { set_country_flag = FRA_Henri_Bonnet_sec_col_hired }
-			on_remove = { clr_country_flag = FRA_Henri_Bonnet_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Henri_Bonnet_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Henri_Bonnet_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_silent_lawyer
@@ -1412,8 +1588,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Henri_Gourdeaux_sec_col_hired }
 			}
 			idea_token = FRA_Henri_Gourdeaux_sec_col
-			on_add = { set_country_flag = FRA_Henri_Gourdeaux_sec_col_hired }
-			on_remove = { clr_country_flag = FRA_Henri_Gourdeaux_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Henri_Gourdeaux_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Henri_Gourdeaux_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_health_and_safety
@@ -1434,8 +1614,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_May_Picqueray_sec_lib_hired }
 			}
 			idea_token = FRA_May_Picqueray_sec_lib
-			on_add = { set_country_flag = FRA_May_Picqueray_sec_lib_hired }
-			on_remove = { clr_country_flag = FRA_May_Picqueray_sec_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_May_Picqueray_sec_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_May_Picqueray_sec_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				sec_crime_fighter
@@ -1456,8 +1640,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Albert_Sarraut_sec_sli_hired }
 			}
 			idea_token = FRA_Albert_Sarraut_sec_sli
-			on_add = { set_country_flag = FRA_Albert_Sarraut_sec_sli_hired }
-			on_remove = { clr_country_flag = FRA_Albert_Sarraut_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Albert_Sarraut_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Albert_Sarraut_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_prince_of_terror
@@ -1478,8 +1666,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Jean_Fabry_sec_sli_hired }
 			}
 			idea_token = FRA_Jean_Fabry_sec_sli
-			on_add = { set_country_flag = FRA_Jean_Fabry_sec_sli_hired }
-			on_remove = { clr_country_flag = FRA_Jean_Fabry_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Jean_Fabry_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Jean_Fabry_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_compassionate_gentleman
@@ -1500,8 +1692,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_George_Lamirand_sec_pau_hired }
 			}
 			idea_token = FRA_George_Lamirand_sec_pau
-			on_add = { set_country_flag = FRA_George_Lamirand_sec_pau_hired }
-			on_remove = { clr_country_flag = FRA_George_Lamirand_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_George_Lamirand_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_George_Lamirand_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_driven_recruiter
@@ -1522,8 +1718,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Louis_Renault_sec_pau_hired }
 			}
 			idea_token = FRA_Louis_Renault_sec_pau
-			on_add = { set_country_flag = FRA_Louis_Renault_sec_pau_hired }
-			on_remove = { clr_country_flag = FRA_Louis_Renault_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Louis_Renault_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Louis_Renault_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_prince_of_terror
@@ -1544,8 +1744,12 @@ characters = {
 				hidden_trigger = { has_country_flag = FRA_Henri_Massis_sec_npo_hired }
 			}
 			idea_token = FRA_Henri_Massis_sec_npo
-			on_add = { set_country_flag = FRA_Henri_Massis_sec_npo_hired }
-			on_remove = { clr_country_flag = FRA_Henri_Massis_sec_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = FRA_Henri_Massis_sec_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = FRA_Henri_Massis_sec_npo_hired }
+			}
 			traits = {
 				national_populist
 				sec_efficient_sociopath
@@ -1561,7 +1765,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Henri_Amiel_cos_sli
 			traits = {
 				cos_school_of_manoeuvre
@@ -1577,7 +1781,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Bernard_Serrigny_cos_ade
 			traits = {
 				cos_school_of_mass_combat
@@ -1593,7 +1797,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Charles_Huntzinger_cos_ade
 			traits = {
 				cos_school_of_psychology
@@ -1609,7 +1813,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Eugene_Bridoux_cos_ade
 			traits = {
 				cos_school_of_defence
@@ -1617,7 +1821,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Eugene_Bridoux_carm_ade
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -1633,7 +1837,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Henri_Albert_Niessel_cos_ade
 			traits = {
 				cos_school_of_commando_operations
@@ -1649,7 +1853,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Henri_Dentz_cos_ade
 			traits = {
 				cos_school_of_manoeuvre
@@ -1665,7 +1869,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = FRA_Philippe_de_Hauteclocque_cos_ade
 			traits = {
 				cos_school_of_mass_combat
@@ -1681,7 +1885,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Gabriel_Puaux_carm_sli
 			traits = {
 				carm_elastic_defence_doctrine
@@ -1698,7 +1902,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Jean_Touzet_du_Vigier_carm_sco
 			traits = {
 				carm_decisive_battle_doctrine
@@ -1726,7 +1930,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = FRA_Joseph_de_Goislard_de_Monsabert_carm_sco
 			traits = {
 				carm_armoured_spearhead_doctrine
@@ -1742,7 +1946,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = FRA_Francois_Carre_de_Lusancay_cnav_sli
 			traits = {
 				cnav_open_seas_doctrine
@@ -1758,7 +1962,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = FRA_Louis_Finet_cnav_sli
 			traits = {
 				cnav_decisive_battle_doctrine
@@ -1774,7 +1978,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = FRA_Georges_Thierry_d_Argenlieu_cnav_ade
 			traits = {
 				cnav_power_projection_doctrine
@@ -1790,7 +1994,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = FRA_Jean_Esteva_cnav_ade
 			traits = {
 				cnav_indirect_approach_doctrine
@@ -1806,7 +2010,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = FRA_Jean_Marie_Abrial_cnav_ade
 			traits = {
 				cnav_base_control_doctrine
@@ -1822,7 +2026,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = FRA_Marie_Jean_Lucien_Lacaze_cnav_ade
 			traits = {
 				cnav_open_seas_doctrine
@@ -1838,7 +2042,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = FRA_Henri_Soulat_cair_sli
 			traits = {
 				cair_air_superiority_doctrine
@@ -1854,7 +2058,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = FRA_Antonin_Brocard_cair_mli
 			traits = {
 				cair_naval_aviation_doctrine
@@ -1870,7 +2074,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = FRA_Marie_Charles_Duval_cair_sco
 			traits = {
 				cair_battlefield_support_doctrine
@@ -1886,7 +2090,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = FRA_Jean_Bergeret_cair_ade
 			traits = {
 				cair_battlefield_support_doctrine
@@ -1902,7 +2106,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = FRA_Rene_Paul_Fonck_cair_ade
 			traits = {
 				cair_carpet_bombing_doctrine

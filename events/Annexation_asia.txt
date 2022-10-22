@@ -760,7 +760,6 @@ country_event = { # Fate of Philippines
           promote_leader = yes
           country_leader = {
             ideology = authoritarian_democrat_subtype
-            traits = { }
           }
         }
       }
@@ -1024,7 +1023,7 @@ country_event = { # Fate of Siam
 country_event = { # Fate of Sinkiang
   id = annex.4017
   title = annexation_SIK_CONQ
-  desc = annexation_SHX_CONQ_DESC
+  desc = annexation_SIK_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
@@ -1562,5 +1561,58 @@ country_event = { # The Fate of Sulawesi
     }
     set_country_flag = MOLUCCAS_CONQ
     occupy_small_country = yes
+  }
+}
+
+country_event = { # Fate of Ma Clique
+  id = annex.4025
+  title = annexation_XSM_CONQ
+  desc = annexation_XSM_CONQ_DESC
+  picture = GFX_report_event_czech_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Puppet
+    name = annex.4025.a
+    ai_chance = {
+      base = 100
+    }
+    trigger = {
+      is_chinese_tag = no
+    }
+    set_temp_variable = { tag_to_release = XSM }
+    release_targeted_tag = yes
+  }
+
+  option = { # Integrate
+    name = annex.4025.b
+    ai_chance = {
+      base = 100
+    }
+    trigger = {
+      is_chinese_tag = yes
+    }
+    hidden_effect = {
+      add_to_temp_array = { core_removal_array = XSM }
+      remove_all_cores_and_claims_of_tags = yes
+    }
+    ROOT = {
+      add_state_core = 283
+      add_state_core = 604
+      add_state_core = 616
+      add_state_core = 939
+      add_state_core = 982
+    }
+  }
+
+  option = { # Occupy
+    name = annexation_occupy
+    ai_chance = {
+      base = 0
+    }
+    trigger = {
+      is_chinese_tag = no
+    }
+    occupy_medium_country = yes
+    set_country_flag = XSM_CONQ
   }
 }

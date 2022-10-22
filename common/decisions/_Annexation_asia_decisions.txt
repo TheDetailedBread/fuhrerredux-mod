@@ -379,6 +379,25 @@ annexation_decisions = {
       factor = 100
     }
   }
+  annexation_XSM_CONQ = {
+    icon = generic_form_nation
+    selectable_mission = yes
+    days_mission_timeout = 60
+    is_good = no
+    cancel_trigger = {
+     604 = { is_valid_annexation_state = no }
+    }
+    complete_effect = {
+      country_event = annex.4025
+    }
+    timeout_effect = {
+      occupy_medium_country = yes
+      set_country_flag = XSM_CONQ
+    }
+    ai_will_do = {
+      factor = 100
+    }
+  }
   annexation_YUN_CONQ = {
     icon = generic_form_nation
     selectable_mission = yes

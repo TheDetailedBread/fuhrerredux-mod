@@ -47,12 +47,18 @@ country_event = { # Unification with New England
 
   option = {
     name = sra.100.a
+    ai_chance = {
+      base = 800
+    }
     FROM = {
       country_event = { id = sra.101 days = 1 }
     }
   }
   option = {
     name = sra.100.b
+    ai_chance = {
+      base = 100
+    }
     FROM = {
       country_event = { id = sra.102 days = 1 }
     }
@@ -74,8 +80,8 @@ country_event = { # New England Says YES
     }
     every_owned_state = {
       limit = { is_core_of = FROM }
-      remove_state_core = FROM
-      add_state_core = ROOT
+      remove_core_of = FROM
+      add_core_of = ROOT
     }
   }
 }

@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "District Force"				# For 2-brigade Military Districts
+	division_names_group = SAF_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -12,6 +13,7 @@
 }
 division_template = {
 	name = "District Brigade"			# For 1-brigade Military Districts
+	division_names_group = SAF_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -22,6 +24,7 @@ division_template = {
 
 division_template = {
 	name = "District Cmd."			# For 1-brigade Military Districts
+	division_names_group = SAF_MIL_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -35,6 +38,7 @@ division_template = {
 
 division_template = {
 	name = "Armored-Division"
+	division_names_group = SAF_ARM_01
 
 	regiments = {
 		light_armor = { x = 0 y = 0 }
@@ -105,15 +109,4 @@ units = {
 	}
 
 	##### No Naval OOB #####
-}
-
-air_wings = {
-	###South African Air Brigade (SAAF)
-	275 = {
-		# SAAF Fighter Squadron -- Hawker Furys
-		fighter_equipment_0 =  {
-			owner = "SAF" 
-			amount = 25
-		}
-	}
 }

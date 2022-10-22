@@ -42,8 +42,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
 			}
 			idea_token = NOR_Johan_Nygaardsvold_hog_sde
-			on_add = { set_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
-			on_remove = { clr_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Johan_Nygaardsvold_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_silent_workhorse
@@ -154,7 +158,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = NOR_Kristian_Laake_carm
 			traits = {
 				carm_armoured_spearhead_doctrine
@@ -182,7 +186,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = NOR_Carl_Gustav_Fleischer_carm
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -209,7 +213,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = NOR_Otto_Ruge_carm
 			traits = {
 				carm_commando_doctrine
@@ -236,7 +240,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = NOR_William_Steffens_cos
 			traits = {
 				cos_school_of_defence
@@ -261,7 +265,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = NOR_Wilhelm_von_Tangen_Hansteen_cos
 			traits = {
 				cos_school_of_fire_support
@@ -304,7 +308,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = NOR_Elias_Corneliussen_cnav
 			traits = {
 				cnav_power_projection_doctrine
@@ -331,7 +335,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = NOR_Edvard_Christian_Danielsen_cnav
 			traits = {
 				cnav_indirect_approach_doctrine
@@ -356,7 +360,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = NOR_Henry_Diesen_cnav
 			traits = {
 				cnav_base_control_doctrine
@@ -409,8 +413,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Hakon_Meyer_hog_van_hired }
 			}
 			idea_token = NOR_Hakon_Meyer_hog_van
-			on_add = { set_country_flag = NOR_Hakon_Meyer_hog_van_hired }
-			on_remove = { clr_country_flag = NOR_Hakon_Meyer_hog_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Hakon_Meyer_hog_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Hakon_Meyer_hog_van_hired }
+			}
 			traits = {
 				vanguardist
 				hog_red_chairmen
@@ -432,8 +440,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Halvard_Olsen_hog_van_hired }
 			}
 			idea_token = NOR_Halvard_Olsen_hog_van
-			on_add = { set_country_flag = NOR_Halvard_Olsen_hog_van_hired }
-			on_remove = { clr_country_flag = NOR_Halvard_Olsen_hog_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Halvard_Olsen_hog_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Halvard_Olsen_hog_van_hired }
+			}
 			traits = {
 				vanguardist
 				hog_backroom_backstabber
@@ -454,8 +466,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Haakon_Lie_hog_col_hired }
 			}
 			idea_token = NOR_Haakon_Lie_hog_col
-			on_add = { set_country_flag = NOR_Haakon_Lie_hog_col_hired }
-			on_remove = { clr_country_flag = NOR_Haakon_Lie_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Haakon_Lie_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Haakon_Lie_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_charismatic_charmer
@@ -476,8 +492,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
 			}
 			idea_token = NOR_Konrad_Nordahl_hog_col
-			on_add = { set_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
-			on_remove = { clr_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Konrad_Nordahl_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_ambitious_union_boss
@@ -498,8 +518,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
 			}
 			idea_token = NOR_Sverre_Stostad_hog_lib
-			on_add = { set_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
-			on_remove = { clr_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Sverre_Stostad_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_naive_optimist
@@ -520,8 +544,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
 			}
 			idea_token = NOR_Magnus_Nilssen_hog_sde
-			on_add = { set_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
-			on_remove = { clr_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Magnus_Nilssen_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_silent_workhorse
@@ -542,8 +570,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Hakon_Five_hog_sli_hired }
 			}
 			idea_token = NOR_Hakon_Five_hog_sli
-			on_add = { set_country_flag = NOR_Hakon_Five_hog_sli_hired }
-			on_remove = { clr_country_flag = NOR_Hakon_Five_hog_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Hakon_Five_hog_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Hakon_Five_hog_sli_hired }
+			}
 			traits = {
 				social_liberal
 				hog_charismatic_charmer
@@ -564,8 +596,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
 			}
 			idea_token = NOR_Carl_Joachim_Hambro_hog_mli
-			on_add = { set_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
-			on_remove = { clr_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Carl_Joachim_Hambro_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_corporate_suit
@@ -586,8 +622,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
 			}
 			idea_token = NOR_Johan_Henrik_Andresen_hog_mli
-			on_add = { set_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
-			on_remove = { clr_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Johan_Henrik_Andresen_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_smiling_oilman
@@ -608,8 +648,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Einar_Borch_hog_sco_hired }
 			}
 			idea_token = NOR_Einar_Borch_hog_sco
-			on_add = { set_country_flag = NOR_Einar_Borch_hog_sco_hired }
-			on_remove = { clr_country_flag = NOR_Einar_Borch_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Einar_Borch_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Einar_Borch_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_happy_amateur
@@ -630,8 +674,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
 			}
 			idea_token = NOR_Carl_Gulbranson_hog_ade
-			on_add = { set_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
-			on_remove = { clr_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Carl_Gulbranson_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_silent_workhorse
@@ -652,8 +700,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
 			}
 			idea_token = NOR_Johan_Bernhard_Hjort_hog_ade
-			on_add = { set_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
-			on_remove = { clr_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Johan_Bernhard_Hjort_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_backroom_backstabber
@@ -674,8 +726,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
 			}
 			idea_token = NOR_Gulbrand_Lunde_hog_pau
-			on_add = { set_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
-			on_remove = { clr_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Gulbrand_Lunde_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_charismatic_charmer
@@ -699,8 +755,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Jonas_Lie_hog_npo_hired }
 			}
 			idea_token = NOR_Jonas_Lie_hog_npo
-			on_add = { set_country_flag = NOR_Jonas_Lie_hog_npo_hired }
-			on_remove = { clr_country_flag = NOR_Jonas_Lie_hog_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Jonas_Lie_hog_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Jonas_Lie_hog_npo_hired }
+			}
 			traits = {
 				national_populist
 				hog_corporate_suit
@@ -721,8 +781,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
 			}
 			idea_token = NOR_Karl_Marthinsen_hog_npo
-			on_add = { set_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
-			on_remove = { clr_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Karl_Marthinsen_hog_npo_hired }
+			}
 			traits = {
 				national_populist
 				hog_local_tyrant
@@ -743,8 +807,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Albin_Eines_for_van_hired }
 			}
 			idea_token = NOR_Albin_Eines_for_van
-			on_add = { set_country_flag = NOR_Albin_Eines_for_van_hired }
-			on_remove = { clr_country_flag = NOR_Albin_Eines_for_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Albin_Eines_for_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Albin_Eines_for_van_hired }
+			}
 			traits = {
 				vanguardist
 				for_ideological_crusader
@@ -765,8 +833,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Elias_Volan_for_van_hired }
 			}
 			idea_token = NOR_Elias_Volan_for_van
-			on_add = { set_country_flag = NOR_Elias_Volan_for_van_hired }
-			on_remove = { clr_country_flag = NOR_Elias_Volan_for_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Elias_Volan_for_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Elias_Volan_for_van_hired }
+			}
 			traits = {
 				vanguardist
 				for_radical_among_moderates
@@ -787,8 +859,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Arnulf_Overland_for_col_hired }
 			}
 			idea_token = NOR_Arnulf_Overland_for_col
-			on_add = { set_country_flag = NOR_Arnulf_Overland_for_col_hired }
-			on_remove = { clr_country_flag = NOR_Arnulf_Overland_for_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Arnulf_Overland_for_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Arnulf_Overland_for_col_hired }
+			}
 			traits = {
 				collectivist
 				for_hawkish_intervener
@@ -809,8 +885,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
 			}
 			idea_token = NOR_Arvid_Gilbert_Hansen_for_col
-			on_add = { set_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
-			on_remove = { clr_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Arvid_Gilbert_Hansen_for_col_hired }
+			}
 			traits = {
 				collectivist
 				for_the_cloak_n_dagger_schemer
@@ -831,8 +911,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
 			}
 			idea_token = NOR_Nordahl_Grieg_for_lib
-			on_add = { set_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
-			on_remove = { clr_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Nordahl_Grieg_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_biased_intellectual
@@ -853,8 +937,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
 			}
 			idea_token = NOR_Wilhelm_Morgenstierne_for_lib
-			on_add = { set_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
-			on_remove = { clr_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Wilhelm_Morgenstierne_for_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				for_great_compromiser
@@ -875,8 +963,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Halvdan_Koht_for_sde_hired }
 			}
 			idea_token = NOR_Halvdan_Koht_for_sde
-			on_add = { set_country_flag = NOR_Halvdan_Koht_for_sde_hired }
-			on_remove = { clr_country_flag = NOR_Halvdan_Koht_for_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Halvdan_Koht_for_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Halvdan_Koht_for_sde_hired }
+			}
 			traits = {
 				social_democrat
 				for_great_compromiser
@@ -897,8 +989,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Trygve_Lie_for_sde_hired }
 			}
 			idea_token = NOR_Trygve_Lie_for_sde
-			on_add = { set_country_flag = NOR_Trygve_Lie_for_sde_hired }
-			on_remove = { clr_country_flag = NOR_Trygve_Lie_for_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Trygve_Lie_for_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Trygve_Lie_for_sde_hired }
+			}
 			traits = {
 				social_democrat
 				for_relations_expert
@@ -919,11 +1015,15 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Erik_Colban_for_sli_hired }
 			}
 			idea_token = NOR_Erik_Colban_for_sli
-			on_add = { set_country_flag = NOR_Erik_Colban_for_sli_hired }
-			on_remove = { clr_country_flag = NOR_Erik_Colban_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Erik_Colban_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Erik_Colban_for_sli_hired }
+			}
 			traits = {
 				social_liberal
-				for_iron_fisted_brute
+				for_apologetic_clerk
 			}
 		}
 	}
@@ -941,8 +1041,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
 			}
 			idea_token = NOR_Jacob_Worm_Muller_for_sli
-			on_add = { set_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
-			on_remove = { clr_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Jacob_Worm_Muller_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_ideological_crusader
@@ -963,8 +1067,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Arne_Scheel_for_mli_hired }
 			}
 			idea_token = NOR_Arne_Scheel_for_mli
-			on_add = { set_country_flag = NOR_Arne_Scheel_for_mli_hired }
-			on_remove = { clr_country_flag = NOR_Arne_Scheel_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Arne_Scheel_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Arne_Scheel_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_apologetic_clerk
@@ -985,8 +1093,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Ivar_Lykke_for_mli_hired }
 			}
 			idea_token = NOR_Ivar_Lykke_for_mli
-			on_add = { set_country_flag = NOR_Ivar_Lykke_for_mli_hired }
-			on_remove = { clr_country_flag = NOR_Ivar_Lykke_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Ivar_Lykke_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Ivar_Lykke_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_iron_fisted_brute
@@ -1007,8 +1119,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Birger_Braadland_for_sco_hired }
 			}
 			idea_token = NOR_Birger_Braadland_for_sco
-			on_add = { set_country_flag = NOR_Birger_Braadland_for_sco_hired }
-			on_remove = { clr_country_flag = NOR_Birger_Braadland_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Birger_Braadland_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Birger_Braadland_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_the_cloak_n_dagger_schemer
@@ -1029,8 +1145,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Jon_Leirfall_for_sco_hired }
 			}
 			idea_token = NOR_Jon_Leirfall_for_sco
-			on_add = { set_country_flag = NOR_Jon_Leirfall_for_sco_hired }
-			on_remove = { clr_country_flag = NOR_Jon_Leirfall_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Jon_Leirfall_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Jon_Leirfall_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_relations_expert
@@ -1051,8 +1171,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Adolf_Hoel_for_ade_hired }
 			}
 			idea_token = NOR_Adolf_Hoel_for_ade
-			on_add = { set_country_flag = NOR_Adolf_Hoel_for_ade_hired }
-			on_remove = { clr_country_flag = NOR_Adolf_Hoel_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Adolf_Hoel_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Adolf_Hoel_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_moderate_among_radicals
@@ -1073,8 +1197,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
 			}
 			idea_token = NOR_Albert_Viljam_Hagelin_for_pau
-			on_add = { set_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
-			on_remove = { clr_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Albert_Viljam_Hagelin_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_iron_fisted_brute
@@ -1095,8 +1223,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Finn_Storen_for_pau_hired }
 			}
 			idea_token = NOR_Finn_Storen_for_pau
-			on_add = { set_country_flag = NOR_Finn_Storen_for_pau_hired }
-			on_remove = { clr_country_flag = NOR_Finn_Storen_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Finn_Storen_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Finn_Storen_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_ideological_crusader
@@ -1117,8 +1249,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Axel_Stang_for_npo_hired }
 			}
 			idea_token = NOR_Axel_Stang_for_npo
-			on_add = { set_country_flag = NOR_Axel_Stang_for_npo_hired }
-			on_remove = { clr_country_flag = NOR_Axel_Stang_for_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Axel_Stang_for_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Axel_Stang_for_npo_hired }
+			}
 			traits = {
 				national_populist
 				for_general_staffer
@@ -1139,8 +1275,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Johan_Lippestad_for_npo_hired }
 			}
 			idea_token = NOR_Johan_Lippestad_for_npo
-			on_add = { set_country_flag = NOR_Johan_Lippestad_for_npo_hired }
-			on_remove = { clr_country_flag = NOR_Johan_Lippestad_for_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Johan_Lippestad_for_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Johan_Lippestad_for_npo_hired }
+			}
 			traits = {
 				national_populist
 				for_the_cloak_n_dagger_schemer
@@ -1162,8 +1302,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Haavard_Langseth_eco_van_hired }
 			}
 			idea_token = NOR_Haavard_Langseth_eco_van
-			on_add = { set_country_flag = NOR_Haavard_Langseth_eco_van_hired }
-			on_remove = { clr_country_flag = NOR_Haavard_Langseth_eco_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Haavard_Langseth_eco_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Haavard_Langseth_eco_van_hired }
+			}
 			traits = {
 				vanguardist
 				eco_planned_economy_proponent
@@ -1184,8 +1328,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
 			}
 			idea_token = NOR_Johan_Strand_Johansen_eco_van
-			on_add = { set_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
-			on_remove = { clr_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Johan_Strand_Johansen_eco_van_hired }
+			}
 			traits = {
 				vanguardist
 				eco_balanced_budget_economy
@@ -1206,8 +1354,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
 			}
 			idea_token = NOR_Fredrik_Monsen_eco_col
-			on_add = { set_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
-			on_remove = { clr_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Fredrik_Monsen_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_reformer
@@ -1228,8 +1380,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
 			}
 			idea_token = NOR_Ole_Colbjornsen_eco_col
-			on_add = { set_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
-			on_remove = { clr_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Ole_Colbjornsen_eco_col_hired }
+			}
 			traits = {
 				collectivist
 				eco_industrialiser
@@ -1250,8 +1406,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
 			}
 			idea_token = NOR_Adolf_Indrebo_eco_lib
-			on_add = { set_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
-			on_remove = { clr_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Adolf_Indrebo_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_planned_economy_proponent
@@ -1272,8 +1432,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
 			}
 			idea_token = NOR_Ragnar_Frisch_eco_lib
-			on_add = { set_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
-			on_remove = { clr_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Ragnar_Frisch_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_imbedded_unioneer
@@ -1294,8 +1458,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
 			}
 			idea_token = NOR_Kornelius_Bergsvik_eco_sde
-			on_add = { set_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
-			on_remove = { clr_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Kornelius_Bergsvik_eco_sde_hired }
+			}
 			traits = {
 				social_democrat
 				eco_balanced_budget_economy
@@ -1316,8 +1484,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Oscar_Torp_eco_sde_hired }
 			}
 			idea_token = NOR_Oscar_Torp_eco_sde
-			on_add = { set_country_flag = NOR_Oscar_Torp_eco_sde_hired }
-			on_remove = { clr_country_flag = NOR_Oscar_Torp_eco_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Oscar_Torp_eco_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Oscar_Torp_eco_sde_hired }
+			}
 			traits = {
 				social_democrat
 				eco_administrative_genius
@@ -1338,8 +1510,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
 			}
 			idea_token = NOR_Jens_Isak_Kobro_eco_sli
-			on_add = { set_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
-			on_remove = { clr_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Jens_Isak_Kobro_eco_sli_hired }
+			}
 			traits = {
 				social_liberal
 				eco_infantry_proponent
@@ -1360,8 +1536,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
 			}
 			idea_token = NOR_Per_Berg_Lund_eco_sli
-			on_add = { set_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
-			on_remove = { clr_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Per_Berg_Lund_eco_sli_hired }
+			}
 			traits = {
 				social_liberal
 				eco_the_minister_for_everything
@@ -1382,8 +1562,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
 			}
 			idea_token = NOR_Ole_Bæroe_eco_mli
-			on_add = { set_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
-			on_remove = { clr_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Ole_Bæroe_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_mixed_economy
@@ -1404,8 +1588,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
 			}
 			idea_token = NOR_Sven_Nielsen_eco_mli
-			on_add = { set_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
-			on_remove = { clr_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Sven_Nielsen_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_construction_magnate
@@ -1426,8 +1614,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Jon_Sundby_eco_sco_hired }
 			}
 			idea_token = NOR_Jon_Sundby_eco_sco
-			on_add = { set_country_flag = NOR_Jon_Sundby_eco_sco_hired }
-			on_remove = { clr_country_flag = NOR_Jon_Sundby_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Jon_Sundby_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Jon_Sundby_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_industrial_chemist
@@ -1448,8 +1640,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
 			}
 			idea_token = NOR_Nicolai_Rygg_eco_sco
-			on_add = { set_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
-			on_remove = { clr_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Nicolai_Rygg_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_military_entrepreneur
@@ -1470,8 +1666,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
 			}
 			idea_token = NOR_Alf_Larsen_Whist_eco_ade
-			on_add = { set_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
-			on_remove = { clr_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Alf_Larsen_Whist_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_bank_president
@@ -1492,8 +1692,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Axel_Aubert_eco_ade_hired }
 			}
 			idea_token = NOR_Axel_Aubert_eco_ade
-			on_add = { set_country_flag = NOR_Axel_Aubert_eco_ade_hired }
-			on_remove = { clr_country_flag = NOR_Axel_Aubert_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Axel_Aubert_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Axel_Aubert_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_national_liberal
@@ -1514,8 +1718,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
 			}
 			idea_token = NOR_Eivind_Blehr_eco_pau
-			on_add = { set_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
-			on_remove = { clr_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Eivind_Blehr_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_reformer
@@ -1536,8 +1744,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
 			}
 			idea_token = NOR_Frederik_Prytz_eco_pau
-			on_add = { set_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
-			on_remove = { clr_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Frederik_Prytz_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_resource_industrialist
@@ -1558,8 +1770,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
 			}
 			idea_token = NOR_Carl_Frolich_Hanssen_eco_npo
-			on_add = { set_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
-			on_remove = { clr_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Carl_Frolich_Hanssen_eco_npo_hired }
+			}
 			traits = {
 				national_populist
 				eco_railway_magnate
@@ -1580,8 +1796,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
 			}
 			idea_token = NOR_Tormod_Hustad_eco_npo
-			on_add = { set_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
-			on_remove = { clr_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Tormod_Hustad_eco_npo_hired }
+			}
 			traits = {
 				national_populist
 				eco_the_minister_for_everything
@@ -1602,8 +1822,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
 			}
 			idea_token = NOR_Henry_Wilhelm_Kristiansen_sec_van
-			on_add = { set_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
-			on_remove = { clr_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Henry_Wilhelm_Kristiansen_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_compassionate_gentleman
@@ -1624,8 +1848,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Sverre_Krogh_sec_van_hired }
 			}
 			idea_token = NOR_Sverre_Krogh_sec_van
-			on_add = { set_country_flag = NOR_Sverre_Krogh_sec_van_hired }
-			on_remove = { clr_country_flag = NOR_Sverre_Krogh_sec_van_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Sverre_Krogh_sec_van_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Sverre_Krogh_sec_van_hired }
+			}
 			traits = {
 				vanguardist
 				sec_crime_fighter
@@ -1646,8 +1874,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Emil_Stang_sec_col_hired }
 			}
 			idea_token = NOR_Emil_Stang_sec_col
-			on_add = { set_country_flag = NOR_Emil_Stang_sec_col_hired }
-			on_remove = { clr_country_flag = NOR_Emil_Stang_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Emil_Stang_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Emil_Stang_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_back_stabber
@@ -1668,8 +1900,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Olav_Hindahl_sec_col_hired }
 			}
 			idea_token = NOR_Olav_Hindahl_sec_col
-			on_add = { set_country_flag = NOR_Olav_Hindahl_sec_col_hired }
-			on_remove = { clr_country_flag = NOR_Olav_Hindahl_sec_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Olav_Hindahl_sec_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Olav_Hindahl_sec_col_hired }
+			}
 			traits = {
 				collectivist
 				sec_silent_lawyer
@@ -1690,8 +1926,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
 			}
 			idea_token = NOR_Alfred_Madsen_sec_lib
-			on_add = { set_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
-			on_remove = { clr_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Alfred_Madsen_sec_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				sec_secret_police_chief
@@ -1712,8 +1952,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Jakob_Friis_sec_lib_hired }
 			}
 			idea_token = NOR_Jakob_Friis_sec_lib
-			on_add = { set_country_flag = NOR_Jakob_Friis_sec_lib_hired }
-			on_remove = { clr_country_flag = NOR_Jakob_Friis_sec_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Jakob_Friis_sec_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Jakob_Friis_sec_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				sec_prince_of_terror
@@ -1734,8 +1978,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
 			}
 			idea_token = NOR_Paul_Hartmann_sec_sde
-			on_add = { set_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
-			on_remove = { clr_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Paul_Hartmann_sec_sde_hired }
+			}
 			traits = {
 				social_democrat
 				sec_man_of_the_people
@@ -1756,8 +2004,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Terje_Wold_sec_sde_hired }
 			}
 			idea_token = NOR_Terje_Wold_sec_sde
-			on_add = { set_country_flag = NOR_Terje_Wold_sec_sde_hired }
-			on_remove = { clr_country_flag = NOR_Terje_Wold_sec_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Terje_Wold_sec_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Terje_Wold_sec_sde_hired }
+			}
 			traits = {
 				social_democrat
 				sec_health_and_safety
@@ -1779,8 +2031,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Arne_Sunde_sec_sli_hired }
 			}
 			idea_token = NOR_Arne_Sunde_sec_sli
-			on_add = { set_country_flag = NOR_Arne_Sunde_sec_sli_hired }
-			on_remove = { clr_country_flag = NOR_Arne_Sunde_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Arne_Sunde_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Arne_Sunde_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_great_soul
@@ -1801,8 +2057,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Haakon_Sund_sec_sli_hired }
 			}
 			idea_token = NOR_Haakon_Sund_sec_sli
-			on_add = { set_country_flag = NOR_Haakon_Sund_sec_sli_hired }
-			on_remove = { clr_country_flag = NOR_Haakon_Sund_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Haakon_Sund_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Haakon_Sund_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_crooked_kleptocrat
@@ -1823,8 +2083,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Harald_Gram_sec_mli_hired }
 			}
 			idea_token = NOR_Harald_Gram_sec_mli
-			on_add = { set_country_flag = NOR_Harald_Gram_sec_mli_hired }
-			on_remove = { clr_country_flag = NOR_Harald_Gram_sec_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Harald_Gram_sec_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Harald_Gram_sec_mli_hired }
+			}
 			traits = {
 				market_liberal
 				sec_health_and_safety
@@ -1845,8 +2109,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
 			}
 			idea_token = NOR_Odd_Klingenberg_sec_mli
-			on_add = { set_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
-			on_remove = { clr_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Odd_Klingenberg_sec_mli_hired }
+			}
 			traits = {
 				market_liberal
 				sec_compassionate_gentleman
@@ -1867,8 +2135,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
 			}
 			idea_token = NOR_Ivar_Kirkeby_Garstad_sec_sco
-			on_add = { set_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
-			on_remove = { clr_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Ivar_Kirkeby_Garstad_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_silent_lawyer
@@ -1889,8 +2161,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Nils_Trædal_sec_sco_hired }
 			}
 			idea_token = NOR_Nils_Trædal_sec_sco
-			on_add = { set_country_flag = NOR_Nils_Trædal_sec_sco_hired }
-			on_remove = { clr_country_flag = NOR_Nils_Trædal_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Nils_Trædal_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Nils_Trædal_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_man_of_the_people
@@ -1911,8 +2187,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
 			}
 			idea_token = NOR_Herman_Harris_Aall_sec_ade
-			on_add = { set_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
-			on_remove = { clr_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Herman_Harris_Aall_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_crooked_kleptocrat
@@ -1933,8 +2213,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
 			}
 			idea_token = NOR_Ragnar_Skancke_sec_ade
-			on_add = { set_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
-			on_remove = { clr_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Ragnar_Skancke_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_efficient_sociopath
@@ -1955,8 +2239,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
 			}
 			idea_token = NOR_Per_von_Hirsch_sec_pau
-			on_add = { set_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
-			on_remove = { clr_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Per_von_Hirsch_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_compassionate_gentleman
@@ -1977,8 +2265,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
 			}
 			idea_token = NOR_Rolf_Jorgen_Fuglesang_sec_pau
-			on_add = { set_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
-			on_remove = { clr_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Rolf_Jorgen_Fuglesang_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_back_stabber
@@ -1999,8 +2291,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
 			}
 			idea_token = NOR_Arnvid_Vasbotten_sec_npo
-			on_add = { set_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
-			on_remove = { clr_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Arnvid_Vasbotten_sec_npo_hired }
+			}
 			traits = {
 				national_populist
 				sec_preserver_of_culture
@@ -2021,8 +2317,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
 			}
 			idea_token = NOR_Sverre_Riisnæs_sec_npo
-			on_add = { set_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
-			on_remove = { clr_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Sverre_Riisnæs_sec_npo_hired }
+			}
 			traits = {
 				national_populist
 				sec_efficient_sociopath
@@ -2038,7 +2338,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = NOR_Andreas_Wettre_cos
 			traits = {
 				cos_school_of_manoeuvre
@@ -2054,7 +2354,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = NOR_Carl_Johan_Erichsen_cos
 			traits = {
 				cos_school_of_psychology
@@ -2070,7 +2370,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = NOR_Arne_Gausla_carm
 			traits = {
 				carm_elastic_defence_doctrine
@@ -2087,7 +2387,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = NOR_Oliver_Moystad_carm
 			traits = {
 				carm_doctrine_of_autonomy
@@ -2103,7 +2403,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = NOR_Olaf_Kullmann_cnav_col
 			traits = {
 				cnav_open_seas_doctrine
@@ -2119,7 +2419,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = NOR_Kjeld_Stub_Irgens_cnav
 			traits = {
 				cnav_decisive_battle_doctrine
@@ -2135,7 +2435,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = NOR_Georg_Jacob_Falck_Bull_cair
 			traits = {
 				cair_air_superiority_doctrine
@@ -2151,7 +2451,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = NOR_Bjarne_Oen_cair
 			traits = {
 				cair_naval_aviation_doctrine
@@ -2167,7 +2467,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = NOR_Ole_Reistad_cair
 			traits = {
 				cair_battlefield_support_doctrine
@@ -2183,7 +2483,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = NOR_Birger_Fredrik_Motzfeldt_cair
 			traits = {
 				cair_carpet_bombing_doctrine
@@ -2199,7 +2499,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = NOR_Hjalmar_Riiser_Larsen_cair
 			traits = {
 				cair_vertical_envelopment_doctrine
@@ -2215,7 +2515,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = NOR_Tryggve_Gran_cair
 			traits = {
 				cair_the_red_baron
@@ -2302,8 +2602,12 @@ characters = {
 				hidden_trigger = { has_country_flag = NOR_Peder_Furubotn_hog_col_hired }
 			}
 			idea_token = NOR_Peder_Furubotn_hog_col
-			on_add = { set_country_flag = NOR_Peder_Furubotn_hog_col_hired }
-			on_remove = { clr_country_flag = NOR_Peder_Furubotn_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = NOR_Peder_Furubotn_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = NOR_Peder_Furubotn_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_ambitious_union_boss

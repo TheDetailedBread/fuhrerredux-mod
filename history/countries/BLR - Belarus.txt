@@ -17,30 +17,40 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
-	
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
 	transport = 1
 	fuel_silos = 1
   basic_train = 1
 }
 
 if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-    basic_light_tank = 1
-  }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "BLR_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "BLR_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
 }
+
 if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
-    basic_light_tank_chassis = 1
   }
+
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
 }
 
 add_ideas = {

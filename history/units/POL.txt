@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Dywizja Piechoty"		
+	division_names_group = POL_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -13,11 +14,12 @@
 		infantry = { x = 2 y = 2 }
 	}
 	support = {
-        artillery = { x = 0 y = 0 }
+    artillery = { x = 0 y = 0 }
 	}
 }
 division_template = {
 	name = "Brygada Kawalerii" 
+	division_names_group = POL_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -31,20 +33,21 @@ division_template = {
 }
 division_template = {
 	name = "Brygada Zmotoryzowana" 			#Motorised
+	division_names_group = POL_MOT_01
 	regiments = {
 		motorized = { x = 0 y = 0 }
-	    motorized = { x = 0 y = 1 }
+	  motorized = { x = 0 y = 1 }
 		motorized = { x = 0 y = 2 }
 		
 		motorized = { x = 1 y = 0 }
 		motorized = { x = 1 y = 1 }
 		motorized = { x = 1 y = 2 }
 	}
-	support = {
-	}
 }
 division_template = {
 	name = "Brygada Pancerna"	
+	division_names_group = POL_ARM_01
+
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
@@ -272,31 +275,8 @@ units = {
 		start_experience_factor = 0.3
 
 	}
-
-
-
 }
 
-##### Wojska Lotnicze i Obrony Powietrzne #####
-air_wings = {
-	10 = { 
-		fighter_equipment_0 =  {
-			owner = "POL" 
-			amount = 108
-		}
-		
-	}
-	86 = { 
-		fighter_equipment_0 =  {
-			owner = "POL" 
-			amount = 54
-		}
-		CAS_equipment_1 =  {
-			owner = "POL" 
-			amount = 22
-		}
-	}
-}
 ##Starting production!
 instant_effect = {
 	if = {
@@ -353,7 +333,6 @@ instant_effect = {
 			}
 		}
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
@@ -363,7 +342,6 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 100
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
@@ -373,7 +351,6 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 100
 	}
-
 	add_equipment_production = {
 		equipment = {
 			type = artillery_equipment_1
@@ -383,24 +360,30 @@ instant_effect = {
 		progress = 0.3
 		efficiency = 100
 	}
-
-	add_equipment_production = {
-		equipment = {
-			type = light_tank_equipment_1
-			creator = "POL" 
-		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 100
-	}
 	
+	if = {
+		limit = { has_dlc = "No Step Back" }
 		add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0 
-			creator = "POL" 
+			equipment = {
+				type = light_tank_chassis_1
+				creator = "POL" 
+				version_name = "7TP jw"
+			}
+			requested_factories = 1
+			progress = 0.15
+			efficiency = 100
 		}
-		requested_factories = 1
-		progress = 0.15
-		efficiency = 100
+		else = {
+			add_equipment_production = {
+				equipment = {
+					type = light_tank_equipment_1
+					creator = "POL" 
+				}
+				requested_factories = 1
+				progress = 0.15
+				efficiency = 100
+			}
+		}
 	}
+
 }

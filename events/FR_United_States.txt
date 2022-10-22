@@ -178,13 +178,13 @@ country_event = { # Air Force Debate
 
 	option = {
 		name = usa.3.a
-		air_experience = 25
-		complete_national_focus = USA_create_the_usaf
+		set_country_flag = USA_created_the_usaf
+		custom_effect_tooltip = USA_will_create_usaf_tt
 	}
 	option = {
 		name = usa.3.b
-		air_experience = 25
-		complete_national_focus = USA_expand_the_usaac
+		set_country_flag = USA_expanded_the_usaac
+		custom_effect_tooltip = USA_will_expand_usaac_tt
 	}
 }
 
@@ -254,7 +254,7 @@ country_event = { # Border Skirmish
 	fire_only_once = yes
 
 	trigger = {
-		tag = USA
+		tag = MEX
 		date > 1938.5.1
 		NOT = { has_war_with = MEX }
 		NOT = { has_country_flag = USA_surrendered }
@@ -2064,12 +2064,7 @@ country_event = { # Collapse of the Union
 				}
 			}
 			USA = {
-				destroy_ships = { type = destroyer count = all }
-				destroy_ships = { type = submarine count = all }
-				destroy_ships = { type = heavy_cruiser count = all }
-				destroy_ships = { type = light_cruiser count = all }
-				destroy_ships = { type = battleship count = all }
-				destroy_ships = { type = carrier count = all }
+				destroy_all_ships = yes
 				if = {
 					limit = { has_dlc = "Man the Guns" }
 					load_oob = "USA_collapsed_naval_mtg"
@@ -2124,23 +2119,23 @@ country_event = { # Emergency Congress Session
 					NOT = { has_country_flag = USA_macarthur_retired }
 				}
 				add_country_leader_role = {
-										character = USA_Douglas_MacArthur
-										promote_leader = yes
-										country_leader = {
-												ideology = paternal_autocrat_subtype
-												traits = {}
-										}
-								}
+					character = USA_Douglas_MacArthur
+					promote_leader = yes
+					country_leader = {
+						ideology = paternal_autocrat_subtype
+						traits = {}
+					}
+				}
 			}
 			else = {
 				add_country_leader_role = {
-										character = USA_Dwight_D_Eisenhower
-										promote_leader = yes
-										country_leader = {
-												ideology = paternal_autocrat_subtype
-												traits = {}
-										}
-								}
+					character = USA_Dwight_D_Eisenhower
+					promote_leader = yes
+					country_leader = {
+						ideology = paternal_autocrat_subtype
+						traits = {}
+					}
+				}
 			}
 			
 			set_country_flag = USA_military_junta

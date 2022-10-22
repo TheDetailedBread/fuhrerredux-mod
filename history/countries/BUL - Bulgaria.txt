@@ -6,11 +6,6 @@ set_convoys = 30
 set_stability = 0.60
 set_war_support = 0.5
 
-country_event = { id = bulgaria.1 days = 1}
-country_event = { id = bulgaria.5 days = 5}
-
-set_country_flag = BUL_struggle_ongoing
-
 add_ideas = {
 	party_pop_0_10
 	limited_conscription
@@ -23,18 +18,28 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	motorised_infantry = 1
-	early_fighter = 1
 	fuel_silos = 1
   basic_train = 1
 }
+
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "BUL_air_bba"
 	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		transport = 1
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "BUL_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
 	}
 }
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -43,10 +48,16 @@ if = {
 		early_ship_hull_light = 1
 		early_ship_hull_submarine = 1
 		basic_battery = 1
-		basic_secondary_battery = 1
 		basic_torpedo = 1
 		coastal_defense_ships = 1
 		mtg_transport = 1
+	}
+	else = {
+		set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			transport = 1
+		}
 	}
 }
 
@@ -69,55 +80,6 @@ set_popularities = {
   paternal_autocrat = 9
   national_populist = 32
   valkist = 0
-}
-
-
-
-##Military Control
-set_variable = {
-	var = BUL_natpops_militarycontrol
-	value = 33
-}
-
-set_variable = {
-	var = BUL_democrats_militarycontrol
-	value = 9
-}
-
-set_variable = {
-	var = BUL_monarchists_militarycontrol
-	value = 58
-}
-
-
-##Parliament Control
-set_variable = {
-	var = BUL_natpops_parliamentcontrol
-	value = 49
-}
-
-set_variable = {
-	var = BUL_democrats_parliamentcontrol
-	value = 39
-}
-
-set_variable = {
-	var = BUL_monarchists_parliamentcontrol
-	value = 12
-}
-
-##Elite Control
-set_variable = {
-	var = BUL_natpops_elitecontrol
-	value = 28
-}
-set_variable = {
-	var = BUL_democrats_elitecontrol
-	value = 40
-}
-set_variable = {
-	var = BUL_monarchists_elitecontrol
-	value = 32
 }
 
 recruit_character = BUL_Konstantin_Muraviev

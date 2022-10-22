@@ -1,5 +1,7 @@
 ﻿division_template = {
 	name = "Divisão de Infanteria"		# Infantry Division
+	division_names_group = POR_INF_01
+
 	# Note: each regiment could also mobilize a 3rd battalion if called up
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -16,6 +18,7 @@
 }
 division_template = {
 	name = "Força de Caçadores"		# Elite light infantry, always fully mobilized w best equipment
+	division_names_group = POR_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -25,6 +28,8 @@ division_template = {
 }
 division_template = {
 	name = "Brigada de Cavalaria" 		# Cavalry Brigade
+	division_names_group = POR_CAV_01
+
 	# Note: Cavalry regiments included about 5 squadrons/companies
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -138,25 +143,8 @@ units = {
 		division_template = "Força de Caçadores"
 		start_experience_factor = 0.3
 	}				
-
 }
 
-
-### Aeronáutica Militar ###
-air_wings = {
-	112 = {
-		# Noite Esquadrão de Bombardeiro  -- Ju 52/3m bombers
-		tac_bomber_equipment_0 = {
-			owner = "POR" 
-			amount = 12
-		}
-		# Dia Esquadrão de Bombardeiro  -- Vickers Valparaiso light bombers
-		CAS_equipment_1 = {
-			owner = "POR" 
-			amount = 12
-		}
-	}
-}
 instant_effect = {
 	add_equipment_production = {
 		equipment = {

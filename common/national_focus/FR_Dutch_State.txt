@@ -64,7 +64,7 @@ focus_tree = {
   # Ensure Military Loyalty
   focus = {
     id = HOL_ensure_military_loyalty
-    icon = GFX_goal_army_guy_2
+    icon = GFX_goal_HOL_pataut_success
     x = 0
     y = 1
     cost = 6
@@ -498,6 +498,13 @@ focus_tree = {
     x = 3
     y = 0
     cost = 6
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 2000
+        has_country_flag = HOL_geelkerken_behavior
+      }
+    }
     allow_branch = {
       has_country_flag = HOL_natpop_path
       has_country_flag = political_branch_ready
@@ -520,6 +527,13 @@ focus_tree = {
     x = 0
     y = 1
     cost = 6
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 2000
+        has_country_flag = HOL_geelkerken_behavior
+      }
+    }
     available = {
       has_government = national_populist
       HOL_Cornelis_van_Geelkerken = {
@@ -561,7 +575,7 @@ focus_tree = {
   # Empower the Landwacht
   focus = {
     id = HOL_empower_the_landwacht
-    icon = GFX_goal_generic_army_training
+    icon = GFX_goal_HOL_pataut_success
     x = -1
     y = 1
     cost = 6
@@ -2935,7 +2949,7 @@ focus_tree = {
   # Enhanced Training Programs
   focus = {
     id = HOL_enhanced_training_programs
-    icon = GFX_focus_generic_military_academy
+    icon = GFX_goal_HOL_Koninklijke_Militaire_Academie
     x = 0
     y = 1
     cost = 6

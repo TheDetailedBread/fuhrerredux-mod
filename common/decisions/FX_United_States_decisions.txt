@@ -137,19 +137,23 @@ USA_mexican_american_war = {
     days_mission_timeout = 360
     allowed = { original_tag = USA }
     available = {
-      custom_trigger_tooltip = {
-        tooltip = USA_push_the_mexicans_trigger_tt
-        AND = {
-          378 = { NOT = { is_controlled_by = MEX } }
-          928 = { NOT = { is_controlled_by = MEX } }
-          375 = { NOT = { is_controlled_by = MEX } }
-          919 = { NOT = { is_controlled_by = MEX } }
-          376 = { NOT = { is_controlled_by = MEX } }
-          377 = { NOT = { is_controlled_by = MEX } }
-          484 = { NOT = { is_controlled_by = MEX } }
-          920 = { NOT = { is_controlled_by = MEX } }
-          921 = { NOT = { is_controlled_by = MEX } }
+      OR = {
+        custom_trigger_tooltip = {
+          tooltip = USA_push_the_mexicans_trigger_tt
+          AND = {
+            378 = { NOT = { is_controlled_by = MEX } }
+            928 = { NOT = { is_controlled_by = MEX } }
+            375 = { NOT = { is_controlled_by = MEX } }
+            919 = { NOT = { is_controlled_by = MEX } }
+            376 = { NOT = { is_controlled_by = MEX } }
+            377 = { NOT = { is_controlled_by = MEX } }
+            484 = { NOT = { is_controlled_by = MEX } }
+            920 = { NOT = { is_controlled_by = MEX } }
+            921 = { NOT = { is_controlled_by = MEX } }
+          }
         }
+        MEX = { is_subject_of = ROOT }
+        has_war = no
       }
     }
     activation = { # They crossed the border!
@@ -173,14 +177,18 @@ USA_mexican_american_war = {
     icon = GFX_decision_generic_political_discourse
     cost = 50
     allowed = { original_tag = USA }
+    available = {
+      MEX = {
+        has_war_with = ROOT
+        has_capitulated = no
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     visible = { 
       has_country_flag = ready_to_surrender
     }
     ai_will_do = {
       factor = 1000
-    }
-    available = {
-      MEX = { has_capitulated = no }
     }
     visible = {
       NOT = {
@@ -271,7 +279,23 @@ USA_american_unification = {
       }
     }
     ai_will_do = {
-      factor = 200
+      base = 20
+      modifier = {
+        factor = 10
+        NOT = { has_idea = USA_anarchy_and_chaos }
+      }
+      modifier = {
+        factor = 2
+        NOT = { has_idea = USA_apathetic_citizens }
+      }
+      modifier = {
+        factor = 10
+        NOT = { has_idea = USA_economic_shock }
+      }
+      modifier = {
+        factor = 10
+        NOT = { has_idea = USA_crumbling_army }
+      }
     }
     visible = {
       country_exists = FROM
@@ -281,8 +305,8 @@ USA_american_unification = {
     available = { has_war = no }
     complete_effect = {
       create_wargoal = {
-          target = FROM
-          type = annex_everything
+        target = FROM
+        type = annex_everything
       }
     }
   }
@@ -298,7 +322,19 @@ USA_american_unification = {
       }
     }
     ai_will_do = {
-      factor = 200
+      factor = 40
+      modifier = {
+        factor = 10
+        NOT = { country_exists = NAR }
+      }
+      modifier = {
+        factor = 10
+        NOT = { country_exists = NEE }
+      }
+      modifier = {
+        factor = 10
+        NOT = { country_exists = CLB }
+      }
     }
     visible = { 
       FROM = {

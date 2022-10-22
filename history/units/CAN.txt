@@ -27,18 +27,6 @@ division_template = {
 	}
 }
 
-#division_template = {
-# 	name = "Infantry-Tank Division" #Rest in peace Pleb-Stomper Division, you will be missed by dirty indian rebel scum.
-# 	regiments = {
-# 		heavy_armor = { x = 0 y = 0 }
-# 		heavy_armor = { x = 0 y = 1 }
-# 		heavy_armor = { x = 0 y = 2 }			
-# 		infantry = { x = 1 y = 0 }		
-# 		infantry = { x = 1 y = 1 }	
-# 		infantry = { x = 1 y = 2 }			
-#	}
-#}
-
 division_template = {
  	name = "Motorized Division"
 	division_names_group = CAN_MOT_01
@@ -217,20 +205,6 @@ units = {
 	}				
 }
 
-air_wings = {
-	### Royal Canadian Air Force (RCAF)-- New South Wales
-	276 = {
-		# RCAF Station Trenton (ONT) -- Westland Wapitis
-		nav_bomber_equipment_1 =  {
-			owner = "CAN" 
-			amount = 2
-		}
-		fighter_equipment_0 =  {
-			owner = "CAN" 
-			amount = 3
-		}
-	}
-}
 
 #########################
 ## STARTING PRODUCTION ##
@@ -254,7 +228,7 @@ instant_effect = {
 				tank_nsb_engine_upgrade = 2
 				tank_nsb_armor_upgrade = 1
 			}
-			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/CAN_basic_light_tank.png"
+			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/ENG_basic_light_tank.png"
 			obsolete = yes #used for oob
 		}
 		create_equipment_variant = {
@@ -270,7 +244,7 @@ instant_effect = {
 				special_type_slot_1 = tank_radio_1
 				special_type_slot_2 = smoke_launchers
 			}
-			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/CAN_basic_light_tank.png"
+			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/ENG_basic_light_tank.png"
 			upgrades = {
 				tank_nsb_engine_upgrade = 2
 				tank_nsb_armor_upgrade = 1
@@ -293,7 +267,7 @@ instant_effect = {
 				tank_nsb_armor_upgrade = 1
 				tank_nsb_engine_upgrade = 2
 			}
-			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/CAN_basic_main_tank.png"
+			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/ENG_basic_main_tank.png"
 		}
 
 		create_equipment_variant = {
@@ -347,7 +321,7 @@ instant_effect = {
 				special_type_slot_1 = tank_radio_1
 				special_type_slot_2 = additional_machine_guns
 			}
-			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/CAN_basic_heavy_tank.png"
+			icon = "gfx/interface/equipmentdesigner/tanks/designer/Commonwealth/ENG_basic_heavy_tank.png"
 		}
 	}
 	add_equipment_production = {

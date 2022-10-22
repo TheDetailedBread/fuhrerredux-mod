@@ -9,9 +9,22 @@ set_technology = {
 	gw_artillery = 1
 	tech_support = 1		
 	tech_engineers = 1
-	early_fighter = 1
 	fuel_silos = 1
   basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
 }
 
 set_stability = 0.35
@@ -28,7 +41,6 @@ set_politics = {
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
-
 }
 
 set_popularities = {

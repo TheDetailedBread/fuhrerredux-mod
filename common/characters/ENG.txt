@@ -108,7 +108,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ENG_Alan_Brooke_cos
 			traits = {
 				cos_school_of_psychology
@@ -159,7 +159,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ENG_Claude_Auchinleck_carm
 			traits = {
 				carm_elastic_defence_doctrine
@@ -278,7 +278,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ENG_Harold_Alexander_cos
 			traits = {
 				cos_school_of_defence
@@ -286,7 +286,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ENG_Harold_Alexander_carm
 			traits = {
 				carm_doctrine_of_autonomy
@@ -408,7 +408,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ENG_Miles_Dempsey_carm
 			traits = {
 				carm_armoured_spearhead_doctrine
@@ -644,8 +644,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Oswald_Mosley_hog_lib_hired }
 			}
 			idea_token = ENG_Oswald_Mosley_hog_lib
-			on_add = { set_country_flag = ENG_Oswald_Mosley_hog_lib_hired }
-			on_remove = { clr_country_flag = ENG_Oswald_Mosley_hog_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Oswald_Mosley_hog_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Oswald_Mosley_hog_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				hog_meme_man
@@ -658,8 +662,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Oswald_Mosley_eco_lib_hired }
 			}
 			idea_token = ENG_Oswald_Mosley_eco_lib
-			on_add = { set_country_flag = ENG_Oswald_Mosley_eco_lib_hired }
-			on_remove = { clr_country_flag = ENG_Oswald_Mosley_eco_lib_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Oswald_Mosley_eco_lib_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Oswald_Mosley_eco_lib_hired }
+			}
 			traits = {
 				libertarian_socialist
 				eco_reformer
@@ -680,8 +688,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Arthur_Greenwood_hog_sde_hired }
 			}
 			idea_token = ENG_Arthur_Greenwood_hog_sde
-			on_add = { set_country_flag = ENG_Arthur_Greenwood_hog_sde_hired }
-			on_remove = { clr_country_flag = ENG_Arthur_Greenwood_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Arthur_Greenwood_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Arthur_Greenwood_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_silent_workhorse
@@ -702,8 +714,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Hugh_Gaitskell_hog_sde_hired }
 			}
 			idea_token = ENG_Hugh_Gaitskell_hog_sde
-			on_add = { set_country_flag = ENG_Hugh_Gaitskell_hog_sde_hired }
-			on_remove = { clr_country_flag = ENG_Hugh_Gaitskell_hog_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Hugh_Gaitskell_hog_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Hugh_Gaitskell_hog_sde_hired }
+			}
 			traits = {
 				social_democrat
 				hog_accomplished_diplomat
@@ -716,8 +732,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Hugh_Gaitskell_eco_sde_hired }
 			}
 			idea_token = ENG_Hugh_Gaitskell_eco_sde
-			on_add = { set_country_flag = ENG_Hugh_Gaitskell_eco_sde_hired }
-			on_remove = { clr_country_flag = ENG_Hugh_Gaitskell_eco_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Hugh_Gaitskell_eco_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Hugh_Gaitskell_eco_sde_hired }
+			}
 			traits = {
 				social_democrat
 				eco_mixed_economy
@@ -738,8 +758,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Richard_Acland_hog_sli_hired }
 			}
 			idea_token = ENG_Richard_Acland_hog_sli
-			on_add = { set_country_flag = ENG_Richard_Acland_hog_sli_hired }
-			on_remove = { clr_country_flag = ENG_Richard_Acland_hog_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Richard_Acland_hog_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Richard_Acland_hog_sli_hired }
+			}
 			traits = {
 				social_liberal
 				hog_naive_optimist
@@ -760,8 +784,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Archibald_Sinclair_hog_mli_hired }
 			}
 			idea_token = ENG_Archibald_Sinclair_hog_mli
-			on_add = { set_country_flag = ENG_Archibald_Sinclair_hog_mli_hired }
-			on_remove = { clr_country_flag = ENG_Archibald_Sinclair_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Archibald_Sinclair_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Archibald_Sinclair_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_corporate_suit
@@ -782,8 +810,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Simon_hog_mli_hired }
 			}
 			idea_token = ENG_John_Simon_hog_mli
-			on_add = { set_country_flag = ENG_John_Simon_hog_mli_hired }
-			on_remove = { clr_country_flag = ENG_John_Simon_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Simon_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Simon_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_smiling_oilman
@@ -804,8 +836,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Anthony_Eden_hog_sco_hired }
 			}
 			idea_token = ENG_Anthony_Eden_hog_sco
-			on_add = { set_country_flag = ENG_Anthony_Eden_hog_sco_hired }
-			on_remove = { clr_country_flag = ENG_Anthony_Eden_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Anthony_Eden_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Anthony_Eden_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_happy_amateur
@@ -826,8 +862,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Robert_Cecil_hog_sco_hired }
 			}
 			idea_token = ENG_Robert_Cecil_hog_sco
-			on_add = { set_country_flag = ENG_Robert_Cecil_hog_sco_hired }
-			on_remove = { clr_country_flag = ENG_Robert_Cecil_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Robert_Cecil_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Robert_Cecil_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_political_protege
@@ -848,8 +888,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Samuel_Hoare_hog_sco_hired }
 			}
 			idea_token = ENG_Samuel_Hoare_hog_sco
-			on_add = { set_country_flag = ENG_Samuel_Hoare_hog_sco_hired }
-			on_remove = { clr_country_flag = ENG_Samuel_Hoare_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Samuel_Hoare_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Samuel_Hoare_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_naive_optimist
@@ -870,8 +914,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Jack_Churchill_hog_ade_hired }
 			}
 			idea_token = ENG_Jack_Churchill_hog_ade
-			on_add = { set_country_flag = ENG_Jack_Churchill_hog_ade_hired }
-			on_remove = { clr_country_flag = ENG_Jack_Churchill_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Jack_Churchill_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Jack_Churchill_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_mad_jack
@@ -892,8 +940,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Henry_Page_Croft_hog_ade_hired }
 			}
 			idea_token = ENG_Henry_Page_Croft_hog_ade
-			on_add = { set_country_flag = ENG_Henry_Page_Croft_hog_ade_hired }
-			on_remove = { clr_country_flag = ENG_Henry_Page_Croft_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Henry_Page_Croft_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Henry_Page_Croft_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_backroom_backstabber
@@ -926,8 +978,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Louis_Mountbatten_hog_pau_hired }
 			}
 			idea_token = ENG_Louis_Mountbatten_hog_pau
-			on_add = { set_country_flag = ENG_Louis_Mountbatten_hog_pau_hired }
-			on_remove = { clr_country_flag = ENG_Louis_Mountbatten_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Louis_Mountbatten_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Louis_Mountbatten_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_respected_war_hero
@@ -935,7 +991,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Louis_Mountbatten_cnav_pau
 			traits = {
 				cnav_power_projection_doctrine
@@ -956,8 +1012,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Archibald_Ramsay_hog_npo_hired }
 			}
 			idea_token = ENG_Archibald_Ramsay_hog_npo
-			on_add = { set_country_flag = ENG_Archibald_Ramsay_hog_npo_hired }
-			on_remove = { clr_country_flag = ENG_Archibald_Ramsay_hog_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Archibald_Ramsay_hog_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Archibald_Ramsay_hog_npo_hired }
+			}
 			traits = {
 				national_populist
 				hog_pragmatic_statesman
@@ -978,8 +1038,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Rotha_Beryl_Lintorn_Orman_hog_val_hired }
 			}
 			idea_token = ENG_Rotha_Beryl_Lintorn_Orman_hog_val
-			on_add = { set_country_flag = ENG_Rotha_Beryl_Lintorn_Orman_hog_val_hired }
-			on_remove = { clr_country_flag = ENG_Rotha_Beryl_Lintorn_Orman_hog_val_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Rotha_Beryl_Lintorn_Orman_hog_val_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Rotha_Beryl_Lintorn_Orman_hog_val_hired }
+			}
 			traits = {
 				valkist
 				hog_determined_populist
@@ -1000,8 +1064,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Herbert_Morrison_for_sde_hired }
 			}
 			idea_token = ENG_Herbert_Morrison_for_sde
-			on_add = { set_country_flag = ENG_Herbert_Morrison_for_sde_hired }
-			on_remove = { clr_country_flag = ENG_Herbert_Morrison_for_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Herbert_Morrison_for_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Herbert_Morrison_for_sde_hired }
+			}
 			traits = {
 				social_democrat
 				for_moderate_among_radicals
@@ -1022,8 +1090,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_E_H_Carr_for_sli_hired }
 			}
 			idea_token = ENG_E_H_Carr_for_sli
-			on_add = { set_country_flag = ENG_E_H_Carr_for_sli_hired }
-			on_remove = { clr_country_flag = ENG_E_H_Carr_for_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_E_H_Carr_for_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_E_H_Carr_for_sli_hired }
+			}
 			traits = {
 				social_liberal
 				for_biased_intellectual
@@ -1044,8 +1116,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Violet_Bonham_Carter_for_mli_hired }
 			}
 			idea_token = ENG_Violet_Bonham_Carter_for_mli
-			on_add = { set_country_flag = ENG_Violet_Bonham_Carter_for_mli_hired }
-			on_remove = { clr_country_flag = ENG_Violet_Bonham_Carter_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Violet_Bonham_Carter_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Violet_Bonham_Carter_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_relations_expert
@@ -1066,8 +1142,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Walter_Runciman_for_mli_hired }
 			}
 			idea_token = ENG_Walter_Runciman_for_mli
-			on_add = { set_country_flag = ENG_Walter_Runciman_for_mli_hired }
-			on_remove = { clr_country_flag = ENG_Walter_Runciman_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Walter_Runciman_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Walter_Runciman_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_the_cloak_n_dagger_schemer
@@ -1091,8 +1171,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Adrian_Carton_de_Wiart_for_sco_hired }
 			}
 			idea_token = ENG_Adrian_Carton_de_Wiart_for_sco
-			on_add = { set_country_flag = ENG_Adrian_Carton_de_Wiart_for_sco_hired }
-			on_remove = { clr_country_flag = ENG_Adrian_Carton_de_Wiart_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Adrian_Carton_de_Wiart_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Adrian_Carton_de_Wiart_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_apologetic_clerk
@@ -1124,8 +1208,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Colville_for_sco_hired }
 			}
 			idea_token = ENG_John_Colville_for_sco
-			on_add = { set_country_flag = ENG_John_Colville_for_sco_hired }
-			on_remove = { clr_country_flag = ENG_John_Colville_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Colville_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Colville_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_iron_fisted_brute
@@ -1146,8 +1234,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Robert_Boothby_for_sco_hired }
 			}
 			idea_token = ENG_Robert_Boothby_for_sco
-			on_add = { set_country_flag = ENG_Robert_Boothby_for_sco_hired }
-			on_remove = { clr_country_flag = ENG_Robert_Boothby_for_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Robert_Boothby_for_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Robert_Boothby_for_sco_hired }
+			}
 			traits = {
 				social_conservative
 				for_relations_expert
@@ -1168,8 +1260,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Arthur_Wellesley_for_ade_hired }
 			}
 			idea_token = ENG_Arthur_Wellesley_for_ade
-			on_add = { set_country_flag = ENG_Arthur_Wellesley_for_ade_hired }
-			on_remove = { clr_country_flag = ENG_Arthur_Wellesley_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Arthur_Wellesley_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Arthur_Wellesley_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_relations_expert
@@ -1190,8 +1286,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Vere_Ponsonby_for_ade_hired }
 			}
 			idea_token = ENG_Vere_Ponsonby_for_ade
-			on_add = { set_country_flag = ENG_Vere_Ponsonby_for_ade_hired }
-			on_remove = { clr_country_flag = ENG_Vere_Ponsonby_for_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Vere_Ponsonby_for_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Vere_Ponsonby_for_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				for_biased_intellectual
@@ -1212,8 +1312,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Hugo_Russell_for_pau_hired }
 			}
 			idea_token = ENG_John_Hugo_Russell_for_pau
-			on_add = { set_country_flag = ENG_John_Hugo_Russell_for_pau_hired }
-			on_remove = { clr_country_flag = ENG_John_Hugo_Russell_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Hugo_Russell_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Hugo_Russell_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_biased_intellectual
@@ -1234,8 +1338,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Alexander_Raven_Thomson_for_npo_hired }
 			}
 			idea_token = ENG_Alexander_Raven_Thomson_for_npo
-			on_add = { set_country_flag = ENG_Alexander_Raven_Thomson_for_npo_hired }
-			on_remove = { clr_country_flag = ENG_Alexander_Raven_Thomson_for_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Alexander_Raven_Thomson_for_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Alexander_Raven_Thomson_for_npo_hired }
+			}
 			traits = {
 				national_populist
 				for_radical_among_moderates
@@ -1256,8 +1364,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Hugh_Dalton_eco_sde_hired }
 			}
 			idea_token = ENG_Hugh_Dalton_eco_sde
-			on_add = { set_country_flag = ENG_Hugh_Dalton_eco_sde_hired }
-			on_remove = { clr_country_flag = ENG_Hugh_Dalton_eco_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Hugh_Dalton_eco_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Hugh_Dalton_eco_sde_hired }
+			}
 			traits = {
 				social_democrat
 				eco_administrative_genius
@@ -1278,8 +1390,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_R_H_Tawney_eco_sli_hired }
 			}
 			idea_token = ENG_R_H_Tawney_eco_sli
-			on_add = { set_country_flag = ENG_R_H_Tawney_eco_sli_hired }
-			on_remove = { clr_country_flag = ENG_R_H_Tawney_eco_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_R_H_Tawney_eco_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_R_H_Tawney_eco_sli_hired }
+			}
 			traits = {
 				social_liberal
 				eco_infantry_proponent
@@ -1300,8 +1416,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Ernest_Simon_eco_mli_hired }
 			}
 			idea_token = ENG_Ernest_Simon_eco_mli
-			on_add = { set_country_flag = ENG_Ernest_Simon_eco_mli_hired }
-			on_remove = { clr_country_flag = ENG_Ernest_Simon_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Ernest_Simon_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Ernest_Simon_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_the_minister_for_everything
@@ -1322,8 +1442,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Isaac_Foot_eco_mli_hired }
 			}
 			idea_token = ENG_Isaac_Foot_eco_mli
-			on_add = { set_country_flag = ENG_Isaac_Foot_eco_mli_hired }
-			on_remove = { clr_country_flag = ENG_Isaac_Foot_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Isaac_Foot_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Isaac_Foot_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_trade_proponent
@@ -1344,8 +1468,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Joseph_Kenworthy_eco_mli_hired }
 			}
 			idea_token = ENG_Joseph_Kenworthy_eco_mli
-			on_add = { set_country_flag = ENG_Joseph_Kenworthy_eco_mli_hired }
-			on_remove = { clr_country_flag = ENG_Joseph_Kenworthy_eco_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Joseph_Kenworthy_eco_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Joseph_Kenworthy_eco_mli_hired }
+			}
 			traits = {
 				market_liberal
 				eco_construction_magnate
@@ -1366,8 +1494,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_George_Lane_Fox_eco_sco_hired }
 			}
 			idea_token = ENG_George_Lane_Fox_eco_sco
-			on_add = { set_country_flag = ENG_George_Lane_Fox_eco_sco_hired }
-			on_remove = { clr_country_flag = ENG_George_Lane_Fox_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_George_Lane_Fox_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_George_Lane_Fox_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_balanced_budget_economy
@@ -1388,8 +1520,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Siddeley_eco_sco_hired }
 			}
 			idea_token = ENG_John_Siddeley_eco_sco
-			on_add = { set_country_flag = ENG_John_Siddeley_eco_sco_hired }
-			on_remove = { clr_country_flag = ENG_John_Siddeley_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Siddeley_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Siddeley_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_laissez_faire_capitalist
@@ -1410,8 +1546,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Montagu_Norman_eco_sco_hired }
 			}
 			idea_token = ENG_Montagu_Norman_eco_sco
-			on_add = { set_country_flag = ENG_Montagu_Norman_eco_sco_hired }
-			on_remove = { clr_country_flag = ENG_Montagu_Norman_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Montagu_Norman_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Montagu_Norman_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_socred_economist
@@ -1432,8 +1572,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Philip_Lloyd_Greame_eco_sco_hired }
 			}
 			idea_token = ENG_Philip_Lloyd_Greame_eco_sco
-			on_add = { set_country_flag = ENG_Philip_Lloyd_Greame_eco_sco_hired }
-			on_remove = { clr_country_flag = ENG_Philip_Lloyd_Greame_eco_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Philip_Lloyd_Greame_eco_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Philip_Lloyd_Greame_eco_sco_hired }
+			}
 			traits = {
 				social_conservative
 				eco_mixed_economy
@@ -1454,8 +1598,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Carnegie_eco_ade_hired }
 			}
 			idea_token = ENG_John_Carnegie_eco_ade
-			on_add = { set_country_flag = ENG_John_Carnegie_eco_ade_hired }
-			on_remove = { clr_country_flag = ENG_John_Carnegie_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Carnegie_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Carnegie_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_industrialiser
@@ -1476,8 +1624,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Noel_Pemberton_Billing_eco_pau_hired }
 			}
 			idea_token = ENG_Noel_Pemberton_Billing_eco_pau
-			on_add = { set_country_flag = ENG_Noel_Pemberton_Billing_eco_pau_hired }
-			on_remove = { clr_country_flag = ENG_Noel_Pemberton_Billing_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Noel_Pemberton_Billing_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Noel_Pemberton_Billing_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_naval_aviation_proponent
@@ -1498,8 +1650,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Alliott_Vernon_Roe_eco_npo_hired }
 			}
 			idea_token = ENG_Alliott_Vernon_Roe_eco_npo
-			on_add = { set_country_flag = ENG_Alliott_Vernon_Roe_eco_npo_hired }
-			on_remove = { clr_country_flag = ENG_Alliott_Vernon_Roe_eco_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Alliott_Vernon_Roe_eco_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Alliott_Vernon_Roe_eco_npo_hired }
+			}
 			traits = {
 				national_populist
 				eco_balanced_budget_economy
@@ -1520,8 +1676,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_James_Chuter_Ede_sec_sde_hired }
 			}
 			idea_token = ENG_James_Chuter_Ede_sec_sde
-			on_add = { set_country_flag = ENG_James_Chuter_Ede_sec_sde_hired }
-			on_remove = { clr_country_flag = ENG_James_Chuter_Ede_sec_sde_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_James_Chuter_Ede_sec_sde_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_James_Chuter_Ede_sec_sde_hired }
+			}
 			traits = {
 				social_democrat
 				sec_efficient_sociopath
@@ -1542,8 +1702,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_H_G_Wells_sec_sli_hired }
 			}
 			idea_token = ENG_H_G_Wells_sec_sli
-			on_add = { set_country_flag = ENG_H_G_Wells_sec_sli_hired }
-			on_remove = { clr_country_flag = ENG_H_G_Wells_sec_sli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_H_G_Wells_sec_sli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_H_G_Wells_sec_sli_hired }
+			}
 			traits = {
 				social_liberal
 				sec_compassionate_gentleman
@@ -1564,8 +1728,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Ivor_Brown_sec_mli_hired }
 			}
 			idea_token = ENG_Ivor_Brown_sec_mli
-			on_add = { set_country_flag = ENG_Ivor_Brown_sec_mli_hired }
-			on_remove = { clr_country_flag = ENG_Ivor_Brown_sec_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Ivor_Brown_sec_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Ivor_Brown_sec_mli_hired }
+			}
 			traits = {
 				market_liberal
 				sec_back_stabber
@@ -1586,8 +1754,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Anderson_sec_mli_hired }
 			}
 			idea_token = ENG_John_Anderson_sec_mli
-			on_add = { set_country_flag = ENG_John_Anderson_sec_mli_hired }
-			on_remove = { clr_country_flag = ENG_John_Anderson_sec_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Anderson_sec_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Anderson_sec_mli_hired }
+			}
 			traits = {
 				market_liberal
 				sec_crooked_kleptocrat
@@ -1608,8 +1780,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Desmond_Morton_sec_sco_hired }
 			}
 			idea_token = ENG_Desmond_Morton_sec_sco
-			on_add = { set_country_flag = ENG_Desmond_Morton_sec_sco_hired }
-			on_remove = { clr_country_flag = ENG_Desmond_Morton_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Desmond_Morton_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Desmond_Morton_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_driven_recruiter
@@ -1630,8 +1806,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Edward_Cavendish_sec_sco_hired }
 			}
 			idea_token = ENG_Edward_Cavendish_sec_sco
-			on_add = { set_country_flag = ENG_Edward_Cavendish_sec_sco_hired }
-			on_remove = { clr_country_flag = ENG_Edward_Cavendish_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Edward_Cavendish_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Edward_Cavendish_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_silent_lawyer
@@ -1652,8 +1832,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Randolph_Churchill_sec_sco_hired }
 			}
 			idea_token = ENG_Randolph_Churchill_sec_sco
-			on_add = { set_country_flag = ENG_Randolph_Churchill_sec_sco_hired }
-			on_remove = { clr_country_flag = ENG_Randolph_Churchill_sec_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Randolph_Churchill_sec_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Randolph_Churchill_sec_sco_hired }
+			}
 			traits = {
 				social_conservative
 				sec_secret_police_chief
@@ -1674,8 +1858,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Maxwell_Knight_sec_ade_hired }
 			}
 			idea_token = ENG_Maxwell_Knight_sec_ade
-			on_add = { set_country_flag = ENG_Maxwell_Knight_sec_ade_hired }
-			on_remove = { clr_country_flag = ENG_Maxwell_Knight_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Maxwell_Knight_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Maxwell_Knight_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_media_magnate
@@ -1699,8 +1887,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Trafford_Leigh_Mallory_sec_ade_hired }
 			}
 			idea_token = ENG_Trafford_Leigh_Mallory_sec_ade
-			on_add = { set_country_flag = ENG_Trafford_Leigh_Mallory_sec_ade_hired }
-			on_remove = { clr_country_flag = ENG_Trafford_Leigh_Mallory_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Trafford_Leigh_Mallory_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Trafford_Leigh_Mallory_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_health_and_safety
@@ -1708,7 +1900,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = ENG_Trafford_Leigh_Mallory_cair_ade
 			traits = {
 				cair_carpet_bombing_doctrine
@@ -1729,8 +1921,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_Jeffrey_Hamm_sec_pau_hired }
 			}
 			idea_token = ENG_Jeffrey_Hamm_sec_pau
-			on_add = { set_country_flag = ENG_Jeffrey_Hamm_sec_pau_hired }
-			on_remove = { clr_country_flag = ENG_Jeffrey_Hamm_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_Jeffrey_Hamm_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_Jeffrey_Hamm_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_efficient_sociopath
@@ -1751,8 +1947,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_John_Beckett_sec_npo_hired }
 			}
 			idea_token = ENG_John_Beckett_sec_npo
-			on_add = { set_country_flag = ENG_John_Beckett_sec_npo_hired }
-			on_remove = { clr_country_flag = ENG_John_Beckett_sec_npo_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_John_Beckett_sec_npo_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_John_Beckett_sec_npo_hired }
+			}
 			traits = {
 				national_populist
 				sec_prince_of_terror
@@ -1777,7 +1977,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ENG_John_Dill_cos
 			traits = {
 				cos_school_of_manoeuvre
@@ -1785,7 +1985,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ENG_John_Dill_carm
 			traits = {
 				carm_commando_doctrine
@@ -1813,7 +2013,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ENG_John_Vereker_cos
 			traits = {
 				cos_school_of_defence
@@ -1821,7 +2021,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ENG_John_Vereker_carm
 			traits = {
 				carm_elastic_defence_doctrine
@@ -1852,7 +2052,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ENG_Edmund_Ironside_cos
 			traits = {
 				cos_school_of_fire_support
@@ -1860,7 +2060,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ENG_Edmund_Ironside_carm
 			traits = {
 				carm_decisive_battle_doctrine
@@ -1888,7 +2088,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Dudley_Pound_cnav
 			traits = {
 				cnav_open_seas_doctrine
@@ -1904,7 +2104,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Ernle_Chatfield_cnav
 			traits = {
 				cnav_decisive_battle_doctrine
@@ -1920,7 +2120,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Philip_Vian_cnav
 			traits = {
 				cnav_indirect_approach_doctrine
@@ -1936,7 +2136,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Roger_Keyes_cnav
 			traits = {
 				cnav_base_control_doctrine
@@ -1952,7 +2152,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Tom_Phillips_cnav
 			traits = {
 				cnav_open_seas_doctrine
@@ -1968,7 +2168,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Winston_Churchill_cnav
 			traits = {
 				cnav_decisive_battle_doctrine
@@ -1984,7 +2184,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Leo_Amery_cnav
 			traits = {
 				cnav_power_projection_doctrine
@@ -2000,7 +2200,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ENG_Duff_Cooper_cnav
 			traits = {
 				cnav_indirect_approach_doctrine
@@ -2016,7 +2216,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = ENG_Arthur_Tedder_cair
 			traits = {
 				cair_air_superiority_doctrine
@@ -2032,7 +2232,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = ENG_Charles_Portal_cair
 			traits = {
 				cair_naval_aviation_doctrine
@@ -2048,7 +2248,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = ENG_Hugh_Trenchard_cair
 			traits = {
 				cair_battlefield_support_doctrine
@@ -2064,7 +2264,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_air_force
+			slot = air_chief
 			idea_token = ENG_John_Chamier_cair
 			traits = {
 				cair_carpet_bombing_doctrine
@@ -2086,8 +2286,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ENG_King_Edward_VIII_hog_pau_hired }
 			}
 			idea_token = ENG_King_Edward_VIII_hog_pau
-			on_add = { set_country_flag = ENG_King_Edward_VIII_hog_pau_hired }
-			on_remove = { clr_country_flag = ENG_King_Edward_VIII_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ENG_King_Edward_VIII_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ENG_King_Edward_VIII_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_king_emperor

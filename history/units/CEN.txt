@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Pesi Divize"
+	division_names_group = CZE_INF_01
 	#Keep in mind, this is the FR-ified version of the CZE OOB. Division names are in Czech, this will have to be reworked into a language that fits the theme of Zapadoslavia
 
 	regiments = {
@@ -17,6 +18,7 @@
 
 division_template = {
 	name = "Horská Divize"
+	division_names_group = CZE_MTN_01
 
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
@@ -33,6 +35,8 @@ division_template = {
 
 division_template = {
 	name = "Rychlá Divize"	
+	division_names_group = CZE_ARM_01
+
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
@@ -204,44 +208,6 @@ units = {
 		division_template = "Rychlá Divize"
 		start_experience_factor = 0.2
 
-	}
-}
-
-### Air Wings
-air_wings = {
-	9 = { 
-		fighter_equipment_0 = {		# Avia B.534
-			owner = "CEN" 
-			amount = 36
-		}
-		tac_bomber_equipment_0 =  {	# Bloch MB.200
-			owner = "CEN" 
-			amount = 72
-		}
-		CAS_equipment_1 =  {		# Aero A-101
-			owner = "CEN" 
-			amount = 24
-		}
-	}
-
-	# Letectvo III.Armády -- Bratislava
-	70 = {
-		fighter_equipment_0 = {		# Avia B.534
-			owner = "CEN" 
-			amount = 56
-		}
-	}
-
-	# Letectvo IV.Armády -- Olomouc
-	75 = {
-		fighter_equipment_0 = {		# Avia B.534
-			owner = "CEN" 
-			amount = 92
-		}
-		CAS_equipment_1 =  {		# Aero A-101
-			owner = "CEN" 
-			amount = 53
-		}
 	}
 }
 

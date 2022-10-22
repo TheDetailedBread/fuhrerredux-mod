@@ -32,8 +32,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
 			}
 			idea_token = ZHI_Sun_Chuanfang_hog_pau
-			on_add = { set_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
-			on_remove = { clr_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Sun_Chuanfang_hog_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				hog_ruthless_warlord
@@ -41,7 +45,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ZHI_Sun_Chuanfang_cos_pau
 			traits = {
 				cos_school_of_fire_support
@@ -67,8 +71,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
 			}
 			idea_token = ZHI_Ku_Wei_Chun_hog_mli
-			on_add = { set_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
-			on_remove = { clr_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Ku_Wei_Chun_hog_mli_hired }
+			}
 			traits = {
 				market_liberal
 				hog_sincere_internationalist
@@ -81,8 +89,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
 			}
 			idea_token = ZHI_Ku_Wei_Chun_for_mli
-			on_add = { set_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
-			on_remove = { clr_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Ku_Wei_Chun_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_foreign_sympathizer
@@ -108,8 +120,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Dong_Biwu_hog_col_hired }
 			}
 			idea_token = ZHI_Dong_Biwu_hog_col
-			on_add = { set_country_flag = ZHI_Dong_Biwu_hog_col_hired }
-			on_remove = { clr_country_flag = ZHI_Dong_Biwu_hog_col_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Dong_Biwu_hog_col_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Dong_Biwu_hog_col_hired }
+			}
 			traits = {
 				collectivist
 				hog_privileged_socialist
@@ -135,8 +151,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
 			}
 			idea_token = ZHI_Yan_Huiqing_hog_sco
-			on_add = { set_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
-			on_remove = { clr_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Yan_Huiqing_hog_sco_hired }
+			}
 			traits = {
 				social_conservative
 				hog_accomplished_diplomat
@@ -179,8 +199,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
 			}
 			idea_token = ZHI_Wu_Peifu_hog_ade
-			on_add = { set_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
-			on_remove = { clr_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Wu_Peifu_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_philosopher_general
@@ -188,7 +212,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ZHI_Wu_Peifu_cos_ade
 			traits = {
 				cos_school_of_psychology
@@ -215,7 +239,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_staff
+			slot = high_command
 			idea_token = ZHI_Wang_Chengbing_cos
 			traits = {
 				cos_school_of_defence
@@ -262,7 +286,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ZHI_Zhang_Shaozeng_carm
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -398,7 +422,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_navy
+			slot = navy_chief
 			idea_token = ZHI_Du_Xigui_cnav
 			traits = {
 				cnav_open_seas_doctrine
@@ -427,8 +451,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Cao_Kun_hog_ade_hired }
 			}
 			idea_token = ZHI_Cao_Kun_hog_ade
-			on_add = { set_country_flag = ZHI_Cao_Kun_hog_ade_hired }
-			on_remove = { clr_country_flag = ZHI_Cao_Kun_hog_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Cao_Kun_hog_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Cao_Kun_hog_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				hog_accomplished_diplomat
@@ -449,8 +477,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
 			}
 			idea_token = ZHI_Wang_Kemin_eco_pau
-			on_add = { set_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
-			on_remove = { clr_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Wang_Kemin_eco_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				eco_bank_president
@@ -471,8 +503,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Tang_Erho_eco_ade_hired }
 			}
 			idea_token = ZHI_Tang_Erho_eco_ade
-			on_add = { set_country_flag = ZHI_Tang_Erho_eco_ade_hired }
-			on_remove = { clr_country_flag = ZHI_Tang_Erho_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Tang_Erho_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Tang_Erho_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_mixed_economy
@@ -493,8 +529,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
 			}
 			idea_token = ZHI_Gao_Lingwei_eco_ade
-			on_add = { set_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
-			on_remove = { clr_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Gao_Lingwei_eco_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				eco_industrialiser
@@ -515,8 +555,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
 			}
 			idea_token = ZHI_Wang_Yitang_sec_pau
-			on_add = { set_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
-			on_remove = { clr_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Wang_Yitang_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_driven_recruiter
@@ -537,8 +581,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
 			}
 			idea_token = ZHI_Wen_Shizhen_sec_ade
-			on_add = { set_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
-			on_remove = { clr_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Wen_Shizhen_sec_ade_hired }
+			}
 			traits = {
 				authoritarian_democrat
 				sec_great_soul
@@ -559,8 +607,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Pan_Juying_sec_pau_hired }
 			}
 			idea_token = ZHI_Pan_Juying_sec_pau
-			on_add = { set_country_flag = ZHI_Pan_Juying_sec_pau_hired }
-			on_remove = { clr_country_flag = ZHI_Pan_Juying_sec_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Pan_Juying_sec_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Pan_Juying_sec_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				sec_preserver_of_culture
@@ -576,7 +628,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ZHI_Zhang_Ting_e_carm
 			traits = {
 				carm_decisive_battle_doctrine
@@ -592,7 +644,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ZHI_Xiao_Yaonan_carm
 			traits = {
 				carm_elastic_defence_doctrine
@@ -608,7 +660,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ZHI_Lu_Jin_carm
 			traits = {
 				carm_static_defence_doctrine
@@ -624,7 +676,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ZHI_Cai_Chengxun_carm
 			traits = {
 				carm_doctrine_of_autonomy
@@ -640,7 +692,7 @@ characters = {
 		}
 		advisor = {
 			cost = 150
-			slot = chief_of_army
+			slot = army_chief
 			idea_token = ZHI_Jiang_Yanxing_carm
 			traits = {
 				carm_guns_and_butter_doctrine
@@ -661,8 +713,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Hu_Weide_for_pau_hired }
 			}
 			idea_token = ZHI_Hu_Weide_for_pau
-			on_add = { set_country_flag = ZHI_Hu_Weide_for_pau_hired }
-			on_remove = { clr_country_flag = ZHI_Hu_Weide_for_pau_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Hu_Weide_for_pau_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Hu_Weide_for_pau_hired }
+			}
 			traits = {
 				paternal_autocrat
 				for_relations_expert
@@ -683,8 +739,12 @@ characters = {
 				hidden_trigger = { has_country_flag = ZHI_Hu_Shih_for_mli_hired }
 			}
 			idea_token = ZHI_Hu_Shih_for_mli
-			on_add = { set_country_flag = ZHI_Hu_Shih_for_mli_hired }
-			on_remove = { clr_country_flag = ZHI_Hu_Shih_for_mli_hired }
+			on_add = {
+				ROOT = { set_country_flag = ZHI_Hu_Shih_for_mli_hired }
+			}
+			on_remove = {
+				ROOT = { clr_country_flag = ZHI_Hu_Shih_for_mli_hired }
+			}
 			traits = {
 				market_liberal
 				for_general_staffer

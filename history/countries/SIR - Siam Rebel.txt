@@ -1,43 +1,51 @@
-#capital = 289
-
-#oob = "SIR"
-
-
-# Starting tech
-set_technology = {
-	### Tanks ###
-	 #no tankettes for ya
-
-	### Infantry ###
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_support = 1
-	tech_recon = 1
-	tech_engineers = 1
-	motorised_infantry = 1
-	marines = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-
-	### Air ###
-	early_fighter = 1 #Prajadhipok
-	early_bomber = 1 #Boripatr
-	CAS1 = 1
-	basic_train = 1
-}
 if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-  }
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
 }
+
 if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
   }
+	else = {
+		set_technology = {
+			gwtank = 1
+		}
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "SIA_naval_mtg"
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+	else = {
+		set_naval_oob = "SIA_naval_legacy"
+			set_technology = {
+			early_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+		}
+	}
 }
 	### Royal Siamese Arsernal 1936 Estimate ###
 	# Rifles
@@ -58,36 +66,12 @@ add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 6 producer =
 add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 30 producer = GER } # Replace the Japanese ones OTL
 add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 40 producer = USA } # Some ford trucks (rough estimate)
 
-	# Tanks/Tankettes
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 2 producer = ENG } #Captured
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 52 producer = GER } # Bought (Replace OTL's Modified Carden Loyd tankette, Vickers-6-Ton)
-
 	# Fighter Planes
 add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 1 producer = GER } # 2 - Heinkel HD 43
 add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 42 producer = USA } # 124 - Curtis Hawk II & III, Vought O2U Corsair
 
 	# Bomber Planes
 add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = 13 producer = NFA } # 42 - Breguet 14 & Nieuport-Delage NiD 29
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		coastal_defense_ships = 1
-	}
-}
 
 set_cosmetic_tag = SIR_liberation_gov
 
@@ -127,7 +111,7 @@ if = {
 	create_equipment_variant = {
 		name = "Phra Ruang Class"				
 		type = ship_hull_light_1
-		name_group = UPW_DD_HISTORICAL
+		name_group = SIA_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1

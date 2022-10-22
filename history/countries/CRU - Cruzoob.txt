@@ -6,11 +6,24 @@ oob = "CRU"
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
-	early_fighter = 1
-	early_bomber = 1
-	CAS1 = 1
 	fuel_silos = 1
   basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		iw_small_airframe = 1
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
 }
 
 set_convoys = 5
@@ -25,17 +38,17 @@ set_politics = {
 }
 
 set_popularities = {
-    vanguardist = 0
-    collectivist = 0
-    libertarian_socialist = 0
-    social_democrat = 2
-    social_liberal = 0
-    market_liberal = 2
-    social_conservative = 4
-    authoritarian_democrat = 16
-    paternal_autocrat = 10
-    national_populist = 18
-    valkist = 48
+	vanguardist = 0
+	collectivist = 0
+	libertarian_socialist = 0
+	social_democrat = 2
+	social_liberal = 0
+	market_liberal = 2
+	social_conservative = 4
+	authoritarian_democrat = 16
+	paternal_autocrat = 10
+	national_populist = 18
+	valkist = 48
 }
 
 country_event = { id = cruzoob.0 days = 2 }

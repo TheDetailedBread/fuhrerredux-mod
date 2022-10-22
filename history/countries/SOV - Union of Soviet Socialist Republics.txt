@@ -1,16 +1,7 @@
 # Do not rename this file 
 # to override the vanilla files this exact casing is required.
 capital = 219
-
 oob = "SOV"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SOV_naval_mtg"
-	else = {
-		set_naval_oob = "SOV_naval_legacy"
-	}
-}
-
 set_research_slots = 4
 
 # Starting tech
@@ -24,42 +15,57 @@ set_technology = {
 	tech_mountaineers = 1
 	paratroopers = 1
 	gw_artillery = 1
-	
-	early_fighter = 1
-	early_bomber = 1
 	fuel_silos = 1
 	basic_train = 1
 }
+
 if = {
-  limit = {
-    NOT = { has_dlc = "No Step Back" }
-  }
-  set_technology = {
-    gwtank = 1
-  }
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "SOV_air_bba"
+	set_technology = {
+		iw_small_airframe = 1
+		iw_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_small_airframe = 1
+		basic_medium_airframe = 1
+		aircraft_construction = 1
+		aa_lmg = 1
+		aa_cannon_1 = 1
+		engines_1 = 1
+		early_bombs = 1
+	}
+	else = {
+		set_air_oob = "SOV_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+		}
+	}
 }
+
 if = {
   limit = { has_dlc = "No Step Back" }
   set_technology = {
     gwtank_chassis = 1
+	  basic_heavy_tank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
   }
+	else = {
+		set_technology = {
+			gwtank = 1
+			basic_heavy_tank = 1
+			basic_light_tank = 1
+			improved_light_tank = 1
+		}
+	}
 }
 
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
-	}
-}
-if = {
 	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "SOV_naval_mtg"
 	set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
@@ -73,11 +79,22 @@ if = {
 		basic_light_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
 		mtg_transport = 1
 	}
+	else = {
+		set_naval_oob = "SOV_naval_legacy"
+		set_technology = {
+			early_submarine = 1
+			basic_submarine = 1
+			early_destroyer = 1
+			early_light_cruiser = 1
+			early_heavy_cruiser = 1
+			early_battleship = 1
+			early_battlecruiser = 1
+			transport = 1
+		}
+	}
 }
-
 
 set_convoys = 50
 set_stability = 0.53
@@ -127,18 +144,76 @@ add_ideas = {
 	workers_republic
 }
 
-create_equipment_variant = {
-	name = "Il-4"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "I-15" #
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
 	}
-	obsolete = yes
+	create_equipment_variant = {
+		name = "I-16" #
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "DB-3" #
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+	create_equipment_variant = {
+		name = "TB-3" #
+		type = large_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = engine_1_4x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
+	create_equipment_variant = {
+		name = "ANT-40" #
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+	}
 }
 
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+
+	create_equipment_variant = {
+		name = "Il-4"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 1
+			plane_engine_upgrade = 1
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
+}
 
 ### Ship Variants ###
 
@@ -447,4 +522,3 @@ recruit_character = SOV_YV_Vladimirovich
 recruit_character = SOV_Congress_of_Soviets
 recruit_character = SOV_Leon_Trotsky
 recruit_character = SOV_Nikolai_Yezhov
-recruit_character = SOV_Nikolay_Bukharin

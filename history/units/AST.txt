@@ -106,66 +106,39 @@ units = {
 	}
 }
 
-air_wings = {
-	### Royal Australian Air Force (RAAF)
-	285 = {
-		# RAAF CAS Squadron
-		CAS_equipment_1 =  {
-			owner = "AST" 
-			amount = 24
+#################################
+# Starting Equipment Production #
+#################################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "AST"
 		}
-		name = "No. 1 Squadron RAAF"
-		# RAAF fighter squadron
-		fighter_equipment_0 =  {
-			owner = "AST" 
-			amount = 30
-		}
-		name = "No. 2 Squadron RAAF"
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
 	}
 	
-	519 = {
-	    # RAAF Maritime Patol
-		nav_bomber_equipment_1 = {
-			owner = "AST" 
-			amount = 12
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "AST" 
 		}
-		name = "No. 1 Seaplane Squadron RAAF"
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "AST" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
 	}
 }
-
-    #################################
-	# Starting Equipment Production #
-	#################################
-	
-	instant_effect = {
-	
-		add_equipment_production = {
-			equipment = {
-				type = infantry_equipment_1
-				creator = "AST"
-			}
-			requested_factories = 2
-			progress = 0.1
-			efficiency = 50
-		}
-		
-		add_equipment_production = {
-			equipment = {
-				type = support_equipment_1
-				creator = "AST" 
-			}
-			requested_factories = 1
-			progress = 0.1
-			efficiency = 50
-		}
-		
-		add_equipment_production = {
-			equipment = {
-				type = artillery_equipment_1
-				creator = "AST" 
-			}
-			requested_factories = 1
-			progress = 0.1
-			efficiency = 50
-		}
-    }
