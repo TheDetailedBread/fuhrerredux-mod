@@ -47,12 +47,18 @@ country_event = { # Unification with New England
 
   option = {
     name = sra.100.a
+    ai_chance = {
+      base = 800
+    }
     FROM = {
       country_event = { id = sra.101 days = 1 }
     }
   }
   option = {
     name = sra.100.b
+    ai_chance = {
+      base = 100
+    }
     FROM = {
       country_event = { id = sra.102 days = 1 }
     }

@@ -301,7 +301,7 @@ ideas = {
 			cancel = {
 				has_idea = free_trade
 			}
-			picture = MEX_callistas
+			picture = generic_foreign_capital
 			modifier = {
 				trade_opinion_factor = -0.25
 				local_resources_factor = 0.25
@@ -712,7 +712,7 @@ ideas = {
 		ITA_end_tariffs_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ITA_end_tariffs_idea"}
 			allowed = { original_tag = ITA }
-			picture = generic_constitutional_guarantee
+			picture = generic_foreign_capital
 			modifier = {
 				min_export = 0.1
 				political_power_gain = 0.15
@@ -724,7 +724,7 @@ ideas = {
 			cancel = {
 				has_idea = free_trade
 			}
-			picture = generic_constitutional_guarantee
+			picture = generic_foreign_capital
 			modifier = {
 				political_power_gain = 0.15
 				trade_opinion_factor = -0.25

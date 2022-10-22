@@ -720,7 +720,6 @@ country_event = { # Fate of England
     hidden_effect = {
       add_to_temp_array = { core_removal_array = ENG }
       add_to_temp_array = { core_removal_array = EGL }
-      add_to_temp_array = { core_removal_array = ENP }
       remove_all_cores_and_claims_of_tags = yes
       EGL = {
         add_state_core = 123 # Cornwall
@@ -738,7 +737,7 @@ country_event = { # Fate of England
     }
   }
 
-  option = { # Puppet
+  option = { # Puppet - Republic
     name = annex.111.a
     ai_chance = {
       base = 100
@@ -755,23 +754,47 @@ country_event = { # Fate of England
         }
         set_cosmetic_tag = GER_ENG_rk
       }
+      EGL_create_republican_britain = yes
+    }
+  }
+
+  option = { # Puppet - Monarchy
+    name = annex.111.b
+    ai_chance = {
+      base = 100
+    }
+    set_temp_variable = { tag_to_release = EGL }
+    release_targeted_tag = yes
+    EGL = {
+      if = {
+        limit = {
+          ROOT = {
+            tag = GER
+            has_government = valkist
+          }
+        }
+        set_cosmetic_tag = GER_ENG_rk
+      }
+      EGL_create_monarchist_britain = yes
     }
   }
 
   option = { # Create the United Kingdom
-    name = annex.111.b
+    name = annex.111.c
     ai_chance = {
       base = 20
     }
     trigger = {
-      NOT = {
-        tag = GER
-        tag = FRA
+      OR = {
+        tag = AST
+        tag = CAN
+        tag = SAF
+        tag = NZL
+        tag = NFL
       }
     }
     add_to_temp_array = { core_removal_array = ENG }
     add_to_temp_array = { core_removal_array = EGL }
-    add_to_temp_array = { core_removal_array = ENP }
     remove_all_cores_and_claims_of_tags = yes
     ENG = {
       add_state_core = 123 # Cornwall
@@ -1231,11 +1254,11 @@ country_event = { # Fate of Germany
       base = 60
     }
 
-    set_temp_variable = { tag_to_release = GRP }
-    release_targeted_tag = yes
     hidden_effect = {
       GER_transfer_characters_to_puppet = yes
     }
+    set_temp_variable = { tag_to_release = GRP }
+    release_targeted_tag = yes
   }
 
   option = {
@@ -2964,7 +2987,7 @@ country_event = { # Fate of Scotland
       }
     }
     else = {
-      ENP = {
+      EGL = {
         add_state_core = 120
         add_state_core = 121
         add_state_core = 133
@@ -3734,7 +3757,7 @@ country_event = { # Fate of Wales
       }
     }
     else = {
-      ENP = {
+      EGL = {
         add_state_core = 122
       }
     }
