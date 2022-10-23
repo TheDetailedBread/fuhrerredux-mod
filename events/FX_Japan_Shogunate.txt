@@ -229,6 +229,24 @@ country_event = { #Political Turmoil
 				ruling_party = authoritarian_democrat
 				elections_allowed = no
 			}
+			add_country_leader_role = {
+				character = JAP_Hirohito
+				promote_leader = yes
+				country_leader = {
+					ideology = auth_duumvirism_subtype
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+			add_country_leader_role = {
+				character = JAP_Hirohito
+				promote_leader = yes
+				country_leader = {
+					ideology = pat_duumvirism_subtype
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
 			# add_country_leader_role = {
 			# 	character = JAP_Tokugawa_Iesato
 			# 	promote_leader = yes
@@ -284,6 +302,13 @@ country_event = { #Political Turmoil
 			set_demilitarized_zone = no 
 		}
 	}
+}
+country_event = { #Kuniyuki visits USA 
+	id = jap_shogun.8
+	title = jap_shogun.8.t 
+	desc = jap_shogun.8.d
+	
+	is_triggered_only = yes 
 }
 country_event = {
 	id = jap_shogundom.1
