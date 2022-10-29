@@ -1765,45 +1765,45 @@ country_event = { # New England Seceeds
   }
 
   immediate = {
-	hidden_effect = {
-	  every_owned_state = {
-		limit = {
-		  OR = {
-			state = 357
-			state = 358
-			state = 359
-			state = 837
-			state = 838
-			state = 839
-			state = 840
-			state = 841 
-		  }
+		hidden_effect = {
+			every_owned_state = {
+			limit = {
+				OR = {
+				state = 357
+				state = 358
+				state = 359
+				state = 837
+				state = 838
+				state = 839
+				state = 840
+				state = 841 
+				}
+			}
+			NEE = {
+				add_state_core = PREV
+				transfer_state = PREV
+			}
+			USA = {
+				remove_state_core = PREV
+				add_state_claim = PREV
+				delete_unit = {
+				state = PREV
+				disband = no
+				}
+			}
+			}
+			set_nationality = {
+				character = USA_Mark_Clark
+				target_country = NEE
+			}
+			set_nationality = {
+				character = USA_Thomas_Kinkaid
+				target_country = NEE
+			}
+			NEE = {
+				load_oob = "NEE"
+			}
 		}
-		NEE = {
-		  add_state_core = PREV
-		  transfer_state = PREV
-		}
-		USA = {
-		  remove_state_core = PREV
-		  add_state_claim = PREV
-		  delete_unit = {
-			state = PREV
-			disband = no
-		  }
-		}
-	  }
-	  set_nationality = {
-		character = USA_Mark_Clark
-		target_country = NEE
-	  }
-	  set_nationality = {
-		character = USA_Thomas_Kinkaid
-		target_country = NEE
-	  }
-	  NEE = {
-		load_oob = "NEE"
-	  }
-	}
   }
 
   option = {
@@ -1932,6 +1932,7 @@ country_event = { # Rust Belt
 					}
 				}
 			}
+			NAR = { load_oob = "NAR" }
 			set_nationality = {
 			  character = USA_George_S_Patton
 			  target_country = NAR
@@ -2040,7 +2041,6 @@ country_event = { # Collapse of the Union
 		set_country_flag = USA_union_collapsed
 		hidden_effect = {
 			set_cosmetic_tag = USA_federal
-			load_focus_tree = usa_emergency_focus
 			country_event = { id = usa.107 days = 3 }
 			random_other_country = {
 				news_event = { id = fxnews.9 days = 1 }
