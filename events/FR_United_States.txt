@@ -7,7 +7,7 @@ country_event = { # Intro
 	id = usa.0
 	title = usa.0.t
 	desc = usa.0.d
-	picture = GFX_report_event_generic_riot
+	picture = GFX_report_event_USA_Continental_Map
 	is_triggered_only = yes
 
 	option = {
@@ -2039,11 +2039,15 @@ country_event = { # Collapse of the Union
 			USA_apathetic_citizens
 		}
 		set_country_flag = USA_union_collapsed
+		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
 			set_cosmetic_tag = USA_federal
 			country_event = { id = usa.107 days = 3 }
 			random_other_country = {
 				news_event = { id = fxnews.9 days = 1 }
+			}
+			HAI = {
+				country_event = { id = haiti.1 days = 1 }
 			}
 			NAR = {
 				if = {
