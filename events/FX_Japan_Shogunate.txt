@@ -310,6 +310,117 @@ country_event = { #Kuniyuki visits USA
 	
 	is_triggered_only = yes 
 }
+country_event = { #Shogun Visit Kyoto 
+	id = jap_shogun.9
+	title = jap_shogun.9.t 
+	desc = jap_shogun.9.d
+	
+	trigger = {
+		tag = JAP 
+		AND = {
+			has_country_flag = JAP_Shogun_Regime
+			has_country_flag = JAP_Tokugawa_Iesato_Not_Dead
+			has_completed_focus = JAP_iesato_government
+		}
+		date > 21.5.1940
+		date < 24.5.1940
+	} 
+	mean_time_to_happen = { days = 1 }
+	fire_only_once = yes 
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = jap_shogun.10
+				days = 14 
+			}
+		}
+	}
+
+	option = {
+		name = "That's great"
+		add_political_power = 30
+		add_stability = 0.03
+	}
+}
+country_event = { #Shogun Assassination Attempt 
+	id = jap_shogun.10
+	title = jap_shogun.10.t 
+	desc = jap_shogun.10.d
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = "How is that happened?"
+		hidden_effect = {
+			clr_country_flag = JAP_Tokugawa_Iesato_Not_Dead
+			remove_ideas = JAP_great_council_of_state_idea
+			set_country_flag = JAP_Tri_Edo_Commissioner
+		}
+		add_popularity = {
+			ideology = var:current_party_ideology_group
+			popularity = -0.1
+		}
+		add_political_power = -100
+		add_stability = -0.15
+	}
+}
+country_event = { #Assassination Investigation
+	id = jap_shogun.11
+	title = jap_shogun.11.t 
+	desc = jap_shogun.11.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Rumor of lost claimant  
+	id = jap_shogun.12
+	title = jap_shogun.12.t 
+	desc = jap_shogun.12.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Socialist League culprit question
+	id = jap_shogun.13
+	title = jap_shogun.13.t 
+	desc = jap_shogun.13.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Convene of Grand Triumvirate and Daijo-kan 
+	id = jap_shogun.14
+	title = jap_shogun.14.t 
+	desc = jap_shogun.14.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Unbelievable Situation - Edo Castle Storming 
+	id = jap_shogun.15
+	title = jap_shogun.15.t 
+	desc = jap_shogun.15.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Unbelievable Situation - Fate of Daijo-Kan  
+	id = jap_shogun.16
+	title = jap_shogun.16.t 
+	desc = jap_shogun.16.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Unbelievable Situation - Northern Emperor Proclamation / No Daijo-Daijin Appointed  
+	id = jap_shogun.17
+	title = jap_shogun.17.t 
+	desc = jap_shogun.17.d
+	
+	is_triggered_only = yes 
+}
+country_event = { #Unbelievable Situation - Burakumin - Socialist Revolution / Death of Grand Triumvirate   
+	id = jap_shogun.17
+	title = jap_shogun.17.t 
+	desc = jap_shogun.17.d
+	
+	is_triggered_only = yes 
+}
 country_event = {
 	id = jap_shogundom.1
 	title = "Shogun addresses the Nagasaki Supreme Tribunal"

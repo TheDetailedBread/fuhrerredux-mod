@@ -294,9 +294,23 @@ defined_text = {
 			AND = {
 				tag = JAP
 				has_country_flag = JAP_Shogun_Regime
+				OR = {
+					has_country_flag = JAP_Tokugawa_Iesato_Not_Dead
+					has_country_flag = JAP_kuniyuki_reign
+				}
 			}
 		}
 		localization_key = LEADER_OR_SHG
+	}
+	text = {
+		trigger = {
+			AND = {
+				tag = JAP
+				has_country_flag = JAP_Shogun_Regime
+				has_country_flag = JAP_Tri_Edo_Commissioner
+			}
+		}
+		localization_key = LEADER_OR_CMS
 	}
 }
 
@@ -323,6 +337,12 @@ defined_text = {
 			has_country_flag = JAP_Tokugawa_Iesato_Not_Dead
 		}
 		localization_key = "Tokugawa Iesato"
+	}
+	text = {
+		trigger = {
+			has_country_flag = JAP_Tri_Edo_Commissioner
+		}
+		localization_key = "Edo San-bugyō"
 	}
 
 	#so on and so forth

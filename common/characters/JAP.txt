@@ -154,7 +154,26 @@ characters = {
 			traits = {
 				valkist
 				sec_prince_of_terror
-				#hog_enlightened_one
+			}
+		}
+		advisor = { #Post Iesato Death
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_character_flag = JAP_Inoue_Nissho_hog_val_hired }
+			}
+			allowed = {
+				has_country_flag = JAP_Shogun_Regime 
+				NOT = {
+					has_character_flag = JAP_Tokugawa_Iesato_Not_Dead
+				}
+			}
+			idea_token = JAP_Inoue_Nissho_hog_val
+			on_add = { set_character_flag = JAP_Inoue_Nissho_hog_val_hired }
+			on_remove = { clr_character_flag = JAP_Inoue_Nissho_hog_val_hired }
+			traits = {
+				valkist
+				hog_holy_vice_marshal
 			}
 		}
 		country_leader = {
@@ -193,6 +212,50 @@ characters = {
 			}
 		}
 	}
+	JAP_Tokugawa_Iemasa = { #Pre Iesato Death
+		name = "Tokugawa Iemasa"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/JAP/JAP_Tokugawa_Iemasa.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_character_flag = JAP_Tokugawa_Iemasa_hog_ade_hired }
+			}
+			idea_token = JAP_Tokugawa_Iemasa_hog_ade
+			on_add = { set_character_flag = JAP_Tokugawa_Iemasa_hog_ade_hired }
+			on_remove = { clr_character_flag = JAP_Tokugawa_Iemasa_hog_ade_hired }
+			traits = {
+				authoritarian_democrat
+				hog_silent_workhorse
+			}
+		}
+	}
+	JAP_Matsudaira_Tsuneo = { #Pre Iesato Death
+		name = "Matsudaira Tsuneo"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ministers/JAP/JAP_Matsudaira_Tsuneo.png"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = foreign_minister
+			available = { 
+				hidden_trigger = { has_character_flag = JAP_Matsudaira_Tsuneo_for_ade_hired }
+			}
+			idea_token = JAP_Matsudaira_Tsuneo_for_ade 
+			on_add = { set_character_flag = JAP_Matsudaira_Tsuneo_for_ade_hired }
+			on_remove = { clr_character_flag = JAP_Matsudaira_Tsuneo_for_ade_hired }
+			traits = {
+				authoritarian_democrat
+				for_great_compromiser
+			}
+		}
+	}
 	JAP_Nakano_Seigo = { #Pre Iesato Death
 		name = "Nakano Seigo"
 		portraits = {
@@ -213,7 +276,26 @@ characters = {
 			traits = {
 				national_populist
 				eco_planned_economy_proponent
-				#hog_nationalist_patriot
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = head_of_government
+			available = { 
+				hidden_trigger = { has_character_flag = JAP_Nakano_Seigo_hog_npo_hired }
+			}
+			allowed = {
+				has_country_flag = JAP_Shogun_Regime 
+				NOT = {
+					has_character_flag = JAP_Tokugawa_Iesato_Not_Dead
+				}
+			}
+			idea_token = JAP_Nakano_Seigo_hog_npo
+			on_add = { set_character_flag = JAP_Nakano_Seigo_hog_npo_hired }
+			on_remove = { clr_character_flag = JAP_Nakano_Seigo_hog_npo_hired }
+			traits = {
+				national_populist
+				hog_nationalist_patriot
 			}
 		}
 	}
