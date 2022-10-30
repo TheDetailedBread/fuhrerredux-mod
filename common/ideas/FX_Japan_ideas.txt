@@ -116,7 +116,7 @@ ideas = {
 				stability_factor = 0.05
 				#Admiralty 1
 				command_power_gain = 0.1
-				navy_chief_cost_factor = 0.05
+				chief_of_navy_cost_factor = 0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a1b1c2 = {
@@ -132,7 +132,7 @@ ideas = {
 				stability_factor = 0.05
 				#Admiralty 2
 				experience_gain_navy = 0.1
-				navy_chief_cost_factor = -0.05
+				chief_of_navy_cost_factor = -0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a1b2c1 = {
@@ -148,7 +148,7 @@ ideas = {
 				stability_factor = -0.05
 				#Admiralty 1
 				command_power_gain = 0.1
-				navy_chief_cost_factor = 0.05
+				chief_of_navy_cost_factor = 0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a1b2c2 = {
@@ -164,7 +164,7 @@ ideas = {
 				stability_factor = -0.05
 				#Admiralty 2
 				experience_gain_navy = 0.02
-				navy_chief_cost_factor = -0.05
+				chief_of_navy_cost_factor = -0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a2b1c1 = {
@@ -180,7 +180,7 @@ ideas = {
 				stability_factor = 0.05
 				#Admiralty 1
 				command_power_gain = 0.1
-				navy_chief_cost_factor = 0.05
+				chief_of_navy_cost_factor = 0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a2b1c2 = {
@@ -196,7 +196,7 @@ ideas = {
 				stability_factor = 0.05
 				#Admiralty 2
 				experience_gain_navy = 0.02
-				navy_chief_cost_factor = -0.05
+				chief_of_navy_cost_factor = -0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a2b2c1 = {
@@ -212,7 +212,7 @@ ideas = {
 				stability_factor = -0.05
 				#Admiralty 2
 				experience_gain_navy = 0.02
-				navy_chief_cost_factor = -0.05
+				chief_of_navy_cost_factor = -0.05
 			}
 		}
 		JAP_nagasaki_tribunal_a2b2c2 = {
@@ -228,7 +228,7 @@ ideas = {
 				stability_factor = -0.05
 				#Admiralty 2
 				experience_gain_navy = 0.02
-				navy_chief_cost_factor = -0.05
+				chief_of_navy_cost_factor = -0.05
 			}
 		}
 		JAP_first_amongs_equal = {
@@ -239,62 +239,6 @@ ideas = {
 				political_power_cost = -0.2
 				war_support_factor = 0.05
 				stability_factor = 0.05
-			}
-		}
-		JAP_strong_asian_democracy = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_strong_asian_democracy"}
-			#picture = generic_manpower_bonus
-			allowed = { original_tag = JAP }
-			modifier = {
-				political_power_gain = 0.05
-				authoritarian_democrat_drift = 0.02
-				stability_factor = 0.05
-				compliance_gain = 0.03
-			}
-			targeted_modifier = {
-				tag = USA
-				trade_cost_for_target_factor = 0.1
-			}
-			targeted_modifier = {
-				tag = GER 
-				trade_cost_for_target_factor = 0.1
-			}
-		}
-		JAP_deconfuciused_education_reform_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_deconfuciused_education_reform_idea"}
-			#picture = generic_manpower_bonus
-			allowed = { original_tag = JAP }
-			modifier = {
-				research_speed_factor = 0.05
-				stability_weekly = -0.02
-			}
-		}
-		JAP_seigaku_reform_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_seigaku_reform_idea"}
-			#picture = generic_manpower_bonus
-			allowed = { original_tag = JAP }
-			modifier = {
-				research_speed_factor = 0.1
-			}
-		}
-		JAP_universal_right_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_universal_right_idea"}
-			#picture = generic_manpower_bonus
-			allowed = { original_tag = JAP }
-			modifier = {
-				stability_factor = 0.1
-				political_power_factor = 0.1
-				recruitable_population_factor = 0.1
-			}
-		}
-		JAP_to_the_new_golden_age_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea JAP_to_the_new_golden_age_idea"}
-			#picture = generic_manpower_bonus
-			allowed = { original_tag = JAP }
-			modifier = {
-				stability_factor = 0.2
-				political_power_factor = 0.2
-				consumer_goods_factor = -0.1
 			}
 		}
 		#####Original
