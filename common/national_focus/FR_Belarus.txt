@@ -1626,365 +1626,97 @@ focus_tree = {
 	}
 
 	###############################################
-	# MILITARY
+	# BNSP
 	###############################################
 
-	# Formalize the Belarusian Armed Forces
+	# BNSP Secures Power
 	focus = {
-		id = BLR_formalize_the_belarusian_armed_forces
-		icon = GFX_goal_BLR_army
-		x = 1
-		y = 2
-		cost = 6
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = BLR_power_struggle_resolved_tt
-				OR = {
-					has_country_flag = BLR_nat_soc_win
-					has_country_flag = BLR_home_guard_win
-				}
-			}
-		}
-		relative_position_id = BLR_increase_entente_trade
-		completion_reward = {
-			army_experience = 25
-		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
-		}
-	}
-
-	# Establish the Belarusian Air Force
-	focus = {
-		id = BLR_establish_the_belarusian_air_force
-		icon = GFX_goal_BLR_air_force
-		x = -2
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_formalize_the_belarusian_armed_forces }
-		relative_position_id = BLR_formalize_the_belarusian_armed_forces
-		completion_reward = {
-			air_experience = 25
-		}
-		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
-		}
-	}
-
-	# Fighter Modernization
-	focus = {
-		id = BLR_fighter_modernization
-		icon = GFX_goal_generic_air_fighter2_new
-		x = -1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_establish_the_belarusian_air_force }
-		relative_position_id = BLR_establish_the_belarusian_air_force
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_fighter_modernization
-				category = fighter_techs
-				bonus = 1.0
-				uses = 1
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Bomber Acquisition
-	focus = {
-		id = BLR_bomber_acquisition
-		icon = GFX_goal_generic_air_bomber
-		x = 1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_establish_the_belarusian_air_force }
-		relative_position_id = BLR_establish_the_belarusian_air_force
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_bomber_acquisition
-				category = tactical_bomber
-				bonus = 1.0
-				uses = 1
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# CAS Development
-	focus = {
-		id = BLR_cas_development
-		icon = GFX_goal_generic_CAS
-		x = -1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_fighter_modernization }
-		relative_position_id = BLR_fighter_modernization
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_cas_development
-				category = cas_bomber
-				bonus = 1.0
-				uses = 1
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Pilot Training
-	focus = {
-		id = BLR_pilot_training
-		icon = GFX_goal_conscription
+		id = BLR_bnsp_secures_power
+		icon = GFX_goal_ideology_valkist
 		x = 0
 		y = 2
 		cost = 6
-		prerequisite = { focus = BLR_cas_development }
-		relative_position_id = BLR_cas_development
-		completion_reward = {
-			add_manpower = 15000
-			add_ideas = BLR_pilot_training_idea
-		}
-		search_filters = {
-			FOCUS_FILTER_MANPOWER
-		}
-	}
-
-	# Nowogrodek Airfields
-	focus = {
-		id = BLR_nowogrodek_airfields
-		icon = GFX_goal_generic_airports
-		x = 1
-		y = 1
-		cost = 6
 		available = {
-			has_full_control_of_state = 95
-		}
-		prerequisite = {
-			focus = BLR_fighter_modernization
-			focus = BLR_bomber_acquisition
-		}
-		relative_position_id = BLR_fighter_modernization
-		completion_reward = {
-			95 = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
-		}
-	}
-
-	# Construct Air Defenses
-	focus = {
-		id = BLR_construct_air_defenses
-		icon = GFX_focus_generic_air_defense
-		x = -1
-		y = 1
-		cost = 6
-		available = {
-			has_full_control_of_state = 206
-			has_full_control_of_state = 95
-		}
-		prerequisite = { focus = BLR_nowogrodek_airfields }
-		relative_position_id = BLR_nowogrodek_airfields
-		completion_reward = {
-			206 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-			95 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
-		}
-	}
-
-	# Rocketry Technology
-	focus = {
-		id = BLR_rocketry_technology
-		icon = GFX_focus_rocketry
-		x = 1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_construct_air_defenses }
-		relative_position_id = BLR_construct_air_defenses
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_rocketry_technology
-				category = rocketry
-				bonus = 1.0
-				uses = 1
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Status of the Home Guard
-	focus = {
-		id = BLR_status_of_the_home_guard
-		icon = GFX_goal_BLR_coat_of_arms
-		x = 2
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_formalize_the_belarusian_armed_forces }
-		relative_position_id = BLR_formalize_the_belarusian_armed_forces
-		completion_reward = {
-			country_event = { id = belarus.15 days = 1 }
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-
-	# The High Command
-	focus = {
-		id = BLR_the_high_command
-		icon = GFX_goal_generic_army_high_command
-		x = -1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_status_of_the_home_guard }
-		relative_position_id = BLR_status_of_the_home_guard
-		completion_reward = {
-			add_ideas = BLR_general_staff
-		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
-		}
-	}
-
-	# An Art of War
-	focus = {
-		id = BLR_an_art_of_war
-		icon = GFX_goal_generic_army_grand_battleplan
-		x = -1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_the_high_command }
-		relative_position_id = BLR_the_high_command
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-        category = land_doctrine
-        cost_reduction = 1.0
-        uses = 1
+      hidden_trigger = {
+        always = no
       }
-		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Increase Conscription
-	focus = {
-		id = BLR_increase_conscription
-		icon = GFX_goal_generic_paramilitary
-		x = -1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_an_art_of_war }
-		relative_position_id = BLR_an_art_of_war
+    }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = BLR_nat_soc_win_tt
+        has_country_flag = BLR_nat_soc_win
+      }
+    }
+		relative_position_id = BLR_open_new_universities
 		completion_reward = {
-			increase_conscription = yes
-		}
-		search_filters = {
-			FOCUS_FILTER_MANPOWER
+			custom_effect_tooltip = BLR_bnsp_secures_power_tt
 		}
 	}
 
-	# Fortify Defensive Positions
+	# New Economic Plan
 	focus = {
-		id = BLR_fortify_defensive_positions
-		icon = GFX_goal_nested_fortifications
-		x = 1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_increase_conscription }
-		relative_position_id = BLR_increase_conscription
-		completion_reward = {
-			custom_effect_tooltip = BLR_fortify_defensive_positions_tt
-		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
-		}
-	}
-
-	# Support Companies
-	focus = {
-		id = BLR_support_companies
-		icon = GFX_goal_checkmate
-		x = 1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_the_high_command }
-		relative_position_id = BLR_the_high_command
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_support_companies
-				category = support_tech
-				bonus = 1.0
-				uses = 1
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Equipment Production
-	focus = {
-		id = BLR_equipment_production
-		icon = GFX_goal_generic_military_equipment
-		x = -1
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_support_companies }
-		relative_position_id = BLR_support_companies
-		completion_reward = {
-			add_ideas = BLR_streamlined_production
-		}
-		search_filters = {
-			FOCUS_FILTER_PRODUCTION
-		}
-	}
-
-	# New Arsenals
-	focus = {
-		id = BLR_new_arsenals
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 1
+		id = BLR_new_economic_plan
+		icon = GFX_goal_generic_investments
+		x = -2
 		y = 1
 		cost = 6
 		available = {
 			has_capitulated = no
 		}
-		prerequisite = { focus = BLR_equipment_production }
-		prerequisite = { focus = BLR_cavalry_motorization }
-		relative_position_id = BLR_equipment_production
+		prerequisite = { focus = BLR_bnsp_secures_power }
+		relative_position_id = BLR_bnsp_secures_power
+		completion_reward = {
+			add_ideas = BLR_new_economic_plan_idea
+		}
+	}
+
+	# Contracts with AEG
+	focus = {
+		id = BLR_contracts_with_aeg
+		icon = GFX_goal_generic_lightbulb
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_new_economic_plan }
+		relative_position_id = BLR_new_economic_plan
+		completion_reward = {
+			add_tech_bonus = {
+				category = electronics
+				bonus = 1.0
+				uses = 1
+			}
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = industrial_complex
+            level = 1
+            instant_build = yes
+          }
+        }
+			}
+		}
+	}
+
+	# Arsenals of the State
+	focus = {
+		id = BLR_arsenals_of_the_state
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		cost = 1
+		available = {
+			has_capitulated = no
+		}
+		prerequisite = { focus = BLR_new_economic_plan }
+		relative_position_id = BLR_new_economic_plan
 		completion_reward = {
 			random_owned_controlled_state = {
 				if = {
@@ -1995,163 +1727,270 @@ focus_tree = {
               include_locked = yes
             }
           }
-          add_extra_state_shared_building_slots = 2
+          add_extra_state_shared_building_slots = 1
           add_building_construction = {
             type = arms_factory
-            level = 2
+            level = 1
             instant_build = yes
           }
         }
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
 	}
 
-	# Equipment Standardization
+	# Create Labour Laws
 	focus = {
-		id = BLR_equipment_standardization
-		icon = GFX_goal_generic_design_equipment_standards
-		x = 2
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_status_of_the_home_guard }
-		relative_position_id = BLR_status_of_the_home_guard
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_equipment_standardization
-				bonus = 0.75
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Artillery Modernization
-	focus = {
-		id = BLR_artillery_modernization
-		icon = GFX_goal_generic_army_superior_firepower
-		x = 0
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_equipment_standardization }
-		relative_position_id = BLR_equipment_standardization
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_artillery_modernization
-				bonus = 0.75
-				uses = 2
-				category = artillery
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Cavalry Motorization
-	focus = {
-		id = BLR_cavalry_motorization
-		icon = GFX_goal_generic_armored_cars
-		x = 0
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_artillery_modernization }
-		relative_position_id = BLR_artillery_modernization
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_cavalry_motorization
-				bonus = 0.75
-				uses = 2
-				category = motorized_equipment
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Tank Procurement
-	focus = {
-		id = BLR_tank_procurement
-		icon = GFX_goal_generic_army_tanks2
-		x = 2
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_equipment_standardization }
-		relative_position_id = BLR_equipment_standardization
-		completion_reward = {
-			add_tech_bonus = {
-				name = BLR_tank_procurement
-				bonus = 0.75
-				uses = 2
-				category = armor
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	# Experimental Tank Corps
-	focus = {
-		id = BLR_experimental_tank_corps
-		icon = GFX_focus_generic_tank_destroyer
-		x = 0
-		y = 1
-		cost = 6
-		prerequisite = { focus = BLR_tank_procurement }
-		relative_position_id = BLR_tank_procurement
-		completion_reward = {
-			custom_effect_tooltip = BLR_experimental_tank_corps_tt
-			hidden_effect = {
-				load_oob = BLR_armor
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
-		}
-	}
-
-	# Automobile Repair Facilities
-	focus = {
-		id = BLR_automobile_repair_facilities
-		icon = GFX_goal_generic_production2
+		id = BLR_create_labour_laws
+		icon = GFX_goal_generic_enforce_labor_regulation
 		x = 1
 		y = 1
 		cost = 6
-		prerequisite = { focus = BLR_experimental_tank_corps }
-		relative_position_id = BLR_cavalry_motorization
-		completion_reward = {
-			add_ideas = BLR_repair_facilities
+		available = {
+			has_capitulated = no
 		}
-		search_filters = {
-			FOCUS_FILTER_PRODUCTION
-			FOCUS_FILTER_EQUIPMENT
+		prerequisite = { focus = BLR_contracts_with_aeg }
+		prerequisite = { focus = BLR_arsenals_of_the_state }
+		relative_position_id = BLR_contracts_with_aeg
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BLR_new_economic_plan_idea
+				add_idea = BLR_new_economic_plan_idea_2
+			}
 		}
 	}
 
-	# Defense of Belarus
+	# New Cities
 	focus = {
-		id = BLR_defense_of_belarus
-		icon = GFX_goal_generic_drafted_army
+		id = BLR_new_cities
+		icon = GFX_IRE_Capital
 		x = 0
 		y = 1
 		cost = 6
-		prerequisite = { focus = BLR_rocketry_technology }
-		prerequisite = { focus = BLR_fortify_defensive_positions }
-		prerequisite = { focus = BLR_new_arsenals }
-		prerequisite = { focus = BLR_automobile_repair_facilities }
-		relative_position_id = BLR_fortify_defensive_positions
-		completion_reward = {
-			add_ideas = BLR_defensive_maneuvers
+		available = { 
+			has_capitulated = no
 		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
+		prerequisite = { focus = BLR_create_labour_laws }
+		relative_position_id = BLR_create_labour_laws
+		completion_reward = {
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+        }
+			}
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+        }
+			}
+			random_owned_controlled_state = {
+				if = {
+          limit = {
+            free_building_slots = {
+              building = industrial_complex
+              size > 0
+              include_locked = yes
+            }
+          }
+          add_extra_state_shared_building_slots = 1
+        }
+			}
 		}
 	}
+
+	# Education Desecularization
+	focus = {
+		id = BLR_education_desecularization
+		icon = GFX_goal_orthodox_state
+		x = 0
+		y = 1
+		cost = 6
+		available = {
+			has_capitulated = no
+		}
+		prerequisite = { focus = BLR_bnsp_secures_power }
+		relative_position_id = BLR_bnsp_secures_power
+		completion_reward = {
+			add_ideas = BLR_desecularized_education
+		}
+	}
+
+	# Belarusian Nationalism
+	focus = {
+		id = BLR_belarusian_nationalism
+		icon = GFX_goal_national_mobilization
+		x = 2
+		y = 1
+		cost = 6
+		available = {
+			has_capitulated = no
+		}
+		prerequisite = { focus = BLR_bnsp_secures_power }
+		relative_position_id = BLR_bnsp_secures_power
+		completion_reward = {
+			add_ideas = BLR_nationalism
+		}
+	}
+
+	# Promote Russophobia
+	focus = {
+		id = BLR_promote_russophobia
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			has_capitulated = no
+		}
+		bypass = {
+			NOT = {
+				country_exists = SOV
+			}
+		}
+		prerequisite = { focus = BLR_education_desecularization }
+		prerequisite = { focus = BLR_belarusian_nationalism }
+		relative_position_id = BLR_education_desecularization
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BLR_nationalism
+				add_idea = BLR_rampant_russophobia
+			}
+		}
+	}
+
+	# Empower the Rada
+	focus = {
+		id = BLR_empower_the_rada
+		icon = GFX_goal_generic_parliament
+		x = 0
+		y = 2
+		cost = 6
+		available = {
+			has_capitulated = no
+		}
+		prerequisite = { focus = BLR_promote_russophobia }
+		relative_position_id = BLR_promote_russophobia
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+
+	# The People's Army
+	focus = {
+		id = BLR_the_peoples_army
+		icon = GFX_goal_conscription
+		x = 0
+		y = 2
+		cost = 6
+		available = [
+			has_capitulated = no
+		]
+		prerequisite = { focus = BLR_education_desecularization }
+		prerequisite = { focus = BLR_arsenals_of_the_state }
+		relative_position_id = BLR_education_desecularization
+		completion_reward = {
+			
+		}
+	}
+
+	# Work with the Germans
+	focus = {
+		id = BLR_work_with_the_germans
+		icon = GFX_goal_germany
+		x = 3
+		y = 2
+		cost = 6
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+		prerequisite = { focus = BLR_bnsp_secures_power }
+		relative_position_id = BLR_bnsp_secures_power
+		completion_reward = {
+			custom_effect_tooltip = BLR_work_with_the_germans_tt
+		}
+	}
+
+	# Konigsberg Conference
+	focus = {
+		id = BLR_konigsberg_conference
+		icon = GFX_goal_BLR_conference
+		x = 0
+		y = 2
+		cost = 6
+		available = {
+			is_in_faction_with = GER
+		}
+		prerequisite = { focus = BLR_work_with_the_germans }
+		relative_position_id = BLR_work_with_the_germans
+		completion_reward = {
+			GER = {
+				country_event = { id = belarus.19 days = 1 }
+			}
+		}
+	}
+
+	# German Officer Training
+	focus = {
+		id = BLR_german_officer_training
+		icon = GFX_goal_generic_german_officers
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			has_capitulated = no
+			is_in_faction_with = GER
+		}
+		prerequisite = { focus = BLR_work_with_the_germans }
+		relative_position_id = BLR_work_with_the_germans
+		completion_reward = {
+			add_ideas = BLR_german_officers
+		}
+	}
+
+	# Stahlpakt Trade
+	focus = {
+		id = BLR_stahlpakt_trade
+		icon = GFX_goal_AST_new_markets
+		x = -1
+		y = 1
+		cost = 6
+		available = {
+			has_capitulated = no
+			is_in_faction_with = GER
+		}
+		prerequisite = { focus = BLR_work_with_the_germans }
+		relative_position_id = BLR_work_with_the_germans
+		completion_reward = {
+			add_ideas = BLR_stahlpakt_trade_idea
+		}
+	}
+
+	# The New Belarus
+	focus = {
+		id = BLR_the_new_belarus
+		icon = GFX_goal_liberty
+		x = -1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_new_cities }
+		prerequisite = { focus = BLR_empower_the_rada }
+		prerequisite = { focus = BLR_konigsberg_conference }
+		relative_position_id = BLR_empower_the_rada
+	}
+
 }

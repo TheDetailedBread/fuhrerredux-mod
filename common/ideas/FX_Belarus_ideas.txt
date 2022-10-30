@@ -232,6 +232,69 @@ ideas = {
 				dig_in_speed_factor = 0.15
 			}
 		}
+		# BNSP
+		BLR_new_economic_plan_idea = {
+			allowed = { original_tag = BLR }
+			picture = generic_foreign_capital
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		BLR_new_economic_plan_idea_2 = {
+			allowed = { original_tag = BLR }
+			picture = generic_foreign_capital
+			modifier = {
+				production_factory_max_efficiency_factor = 0.075
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		BLR_desecularized_education = {
+			allowed = { original_tag = BLR }
+			picture = YUG_orthodox_church_support
+			modifier = {
+				research_speed_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		BLR_nationalism = {
+			allowed = { original_tag = BLR }
+			picture = generic_victors_of_ww1
+			modifier = {
+				surrender_limit = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		BLR_rampant_russophobia = {
+			allowed = { original_tag = BLR }
+			picture = officers_purged
+			modifier = {
+				surrender_limit = 0.1
+				army_morale_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		BLR_german_officers = {
+			allowed = { original_tag = BLR }
+			picture = advisors_germany
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.1
+			}
+		}
+		BLR_stahlpakt_trade_idea = {
+			allowed = { original_tag = BLR }
+			picture = vittoria_mutilata
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
 	}
 
 	######################
