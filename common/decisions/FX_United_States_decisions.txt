@@ -32,49 +32,42 @@ foreign_politics = {
     icon = GFX_decision_generic_civil_support
     days_remove = 30
     war_with_on_remove = MEX
+    targets = { MEX }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+      }
+    }
     ai_will_do = {
-      base = 10
+      base = 0
       modifier = {
-        factor = 0.2
-        OR = {
+        add = 20
+        NOT = {
           has_idea = USA_the_greater_depression
           has_idea = USA_the_greater_depression_1
           has_idea = USA_the_greater_depression_2
           has_idea = USA_the_greater_depression_3
           has_idea = USA_the_greater_depression_4
-        }
-      }
-      modifier = {
-        factor = 0.4
-        OR = {
           has_idea = USA_the_greater_depression_5
           has_idea = USA_the_greater_depression_6
           has_idea = USA_the_greater_depression_7
-        }
-      }
-      modifier = {
-        factor = 0.6
-        OR = {
           has_idea = USA_the_greater_depression_8
           has_idea = USA_the_greater_depression_9
           has_idea = USA_the_greater_depression_10
         }
       }
       modifier = {
-        factor = 10
-        num_divisions > 120
-      }
-      modifier = {
-        factor = 2
+        add = 80
         NOT = { has_idea = USA_failed_offensive }
       }
       modifier = {
-        factor = 4
-        MEX = { has_war_with = CRU }
+        add = 200
+        date > 1938.6.1
       }
       modifier = {
-        factor = 10
-        date > 1938.6.1
+        add = 10
+        num_divisions > 80
       }
     }
     fire_only_once = yes
@@ -92,87 +85,6 @@ foreign_politics = {
   }
 }
 USA_mexican_american_war = {
-  USA_hold_the_line = {
-    icon = GFX_decision_border_war
-    selectable_mission = no
-    is_good = yes
-    days_mission_timeout = 360
-    allowed = { original_tag = MEX }
-    available = {
-      custom_trigger_tooltip = {
-        tooltip = USA_hold_the_line_tt
-        AND = {
-          378 = { is_controlled_by = MEX }
-          928 = { is_controlled_by = MEX }
-          375 = { is_controlled_by = MEX }
-          919 = { is_controlled_by = MEX }
-          376 = { is_controlled_by = MEX }
-          377 = { is_controlled_by = MEX }
-          484 = { is_controlled_by = MEX }
-          920 = { is_controlled_by = MEX }
-          921 = { is_controlled_by = MEX }
-        }
-      }
-    }
-    activation = { # They crossed the border!
-      MEX = {
-        controls_state = 375 # Texas
-        controls_state = 919 # East Texas
-        controls_state = 920 # Panhandle
-        controls_state = 921 # Transpecos
-      }
-    }
-    timeout_effect = {
-      add_political_power = -20
-    }
-    complete_effect = {
-      increase_ruling_party_popularity_by_15 = yes
-      add_stability = 0.10
-    }
-  }
-  USA_push_the_mexicans = {
-    icon = GFX_decision_border_war
-    selectable_mission = no
-    is_good = no
-    days_mission_timeout = 360
-    allowed = { original_tag = USA }
-    available = {
-      OR = {
-        custom_trigger_tooltip = {
-          tooltip = USA_push_the_mexicans_trigger_tt
-          AND = {
-            378 = { NOT = { is_controlled_by = MEX } }
-            928 = { NOT = { is_controlled_by = MEX } }
-            375 = { NOT = { is_controlled_by = MEX } }
-            919 = { NOT = { is_controlled_by = MEX } }
-            376 = { NOT = { is_controlled_by = MEX } }
-            377 = { NOT = { is_controlled_by = MEX } }
-            484 = { NOT = { is_controlled_by = MEX } }
-            920 = { NOT = { is_controlled_by = MEX } }
-            921 = { NOT = { is_controlled_by = MEX } }
-          }
-        }
-        MEX = { is_subject_of = ROOT }
-        has_war = no
-      }
-    }
-    activation = { # They crossed the border!
-      MEX = {
-        controls_state = 375 # Texas
-        controls_state = 919 # East Texas
-        controls_state = 920 # Panhandle
-        controls_state = 921 # Transpecos
-      }
-    }
-    timeout_effect = {
-      custom_effect_tooltip = USA_ready_to_surrender_tt
-      set_country_flag = ready_to_surrender
-    }
-    complete_effect = {
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_5 = yes
-    }
-  }
   USA_whitepeace_mexico = {
     icon = GFX_decision_generic_political_discourse
     cost = 50
@@ -250,6 +162,15 @@ USA_american_unification = {
     }
     ai_will_do = {
       factor = 200
+      modifier = {
+        factor = 0.2
+        OR = {
+          country_exists = NEE
+          country_exists = CLB
+          country_exists = NAR
+          country_exists = SRA
+        }
+      }
     }
     visible = {
       ORE = {
@@ -324,16 +245,13 @@ USA_american_unification = {
     ai_will_do = {
       factor = 40
       modifier = {
-        factor = 10
-        NOT = { country_exists = NAR }
-      }
-      modifier = {
-        factor = 10
-        NOT = { country_exists = NEE }
-      }
-      modifier = {
-        factor = 10
-        NOT = { country_exists = CLB }
+        factor = 0.2
+        OR = {
+          country_exists = NEE
+          country_exists = CLB
+          country_exists = NAR
+          country_exists = SRA
+        }
       }
     }
     visible = { 
@@ -402,7 +320,6 @@ USA_state_reintegration = {
   USA_integrate_columbian_states = {
     name = USA_integrate_state
     icon = GFX_decision_oppression
-    cost = 25
     days_remove = 60
     fire_only_once = yes
     ai_will_do = {
@@ -433,7 +350,6 @@ USA_state_reintegration = {
   USA_integrate_new_english_states = {
     name = USA_integrate_state
     icon = GFX_decision_oppression
-    cost = 25
     days_remove = 60
     fire_only_once = yes
     ai_will_do = {
@@ -463,7 +379,6 @@ USA_state_reintegration = {
   USA_integrate_rust_belt_states = {
     name = USA_integrate_state
     icon = GFX_decision_oppression
-    cost = 25
     days_remove = 60
     fire_only_once = yes
     ai_will_do = {
@@ -493,7 +408,6 @@ USA_state_reintegration = {
   USA_integrate_shoshoni_states = {
     name = USA_integrate_state
     icon = GFX_decision_oppression
-    cost = 25
     days_remove = 60
     fire_only_once = yes
     ai_will_do = {
@@ -523,7 +437,6 @@ USA_state_reintegration = {
   USA_integrate_oregon_states = {
     name = USA_integrate_state
     icon = GFX_decision_oppression
-    cost = 25
     days_remove = 60
     fire_only_once = yes
     ai_will_do = {
