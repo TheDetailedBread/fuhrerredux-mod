@@ -1,6 +1,20 @@
 on_actions = {
 	 on_startup = {
 		 effect = {
+			# every_country = {
+				# limit = {
+					# exists = yes
+					# is_ai = no
+				# }
+				# country_event = { hours = 1 id = intro.1 }
+			# }
+			# random_country = {
+				# limit = {
+					# exists = yes
+				# }
+				# set_country_flag = statistics_1
+				# country_event = statistics.1
+		   # }
 			SOV = {
 				set_variable = { var = collectivization value = 2 }
 				clamp_variable = {
@@ -125,6 +139,28 @@ on_actions = {
             }
         }
     }
+    # on_daily = {
+        # effect = {
+            # if = {
+                # limit = {
+                    # any_country = {
+                        # exists = no
+                        # has_country_flag = statistics_1
+                    # }
+                # }
+                # PREV = {
+                    # clr_country_flag = statistics_1
+                # }
+                # random_country = {
+                    # limit = {
+                        # exists = yes
+                    # }
+                    # set_country_flag = statistics_1
+                    # country_event = statistics.1
+                # }
+            # }
+        # }
+    # }
 
 	on_startup = { # Entente Council
 		effect = {
@@ -172,27 +208,29 @@ on_actions = {
 		}
 	}
 
-	on_daily = { # Variable cap for Entente Council. Can only be between 0 - 100
-		effect = {
-			if = {
-				limit = {
-					FRA = {
-						check_variable = { entente_faith > 100 } # Variable can't exceed 100 
+    on_daily = { # Variable cap for Entente Council. Can only be between 0 - 100
+        effect = {
+            if = {
+                limit = {
+                    FRA = {
+						check_variable = {
+							entente_faith > 100 # Variable can't exceed 100
+						}
 					}
 				}
 				set_variable = { entente_faith = 100 }
-			}
-			if = {
-				limit = {
-					FRA = {
+            }
+            if = {
+                limit = {
+                    FRA = {
 						check_variable = {
 							entente_faith < 0  # Variable can't be less than 0
 						}
 					}
 				}
 				set_variable = { entente_faith = 0 }
-			}
-		}
+            }
+        }
 	}
 
 	on_startup = {
@@ -451,43 +489,16 @@ on_actions = {
 		}
 	}
 	
-	on_government_change = { # When Government ideology changes this recalculates legislative support based on party popularity.
-		effect = {
-			if = {
-				limit = {
-					ROOT = {
-						has_variable = senators_support
-					}
-				}
-				set_variable = { senators_support = NS_ruling_party_pop }
-			}
-		}
-	}
-
-	on_war_relation_added = {
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						tag = FRA
-						tag = GER
-					}
-					FROM = {
-						OR = {
-							tag = FRA
-							tag = GER
-						}
-					}
-				}
-
-				add_named_threat = {
-					threat = 80
-					name = threat_2nd_great_war
-				}
-				random_other_country = {
-					news_event = worldnews.100
-				}
-			}
-		}
-	}
+	# on_government_change = { # When Government ideology changes this recalculates legislative support based on party popularity.
+	# 	effect = {
+	# 		if = {
+	# 			limit = {
+	# 				ROOT = {
+	# 					has_variable = senators_support
+	# 				}
+	# 			}
+	# 			set_variable = { senators_support = NS_ruling_party_pop }
+	# 		}
+	# 	}
+	# }
 }

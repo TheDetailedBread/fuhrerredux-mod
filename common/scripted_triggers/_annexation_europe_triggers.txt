@@ -616,7 +616,7 @@ can_release_lombardy = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       country_exists = LOM
       has_country_flag = LOM_CONQ
@@ -642,7 +642,7 @@ can_release_naples = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       country_exists = NAP
       has_country_flag = NAP_CONQ
@@ -731,7 +731,7 @@ can_release_piedmont = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       country_exists = PIE
       has_country_flag = PIE_CONQ
@@ -883,7 +883,7 @@ can_release_sardinia = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       country_exists = SAR
       has_country_flag = SAR_CONQ
@@ -951,7 +951,7 @@ can_release_sicily = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       country_exists = SIC
       has_country_flag = SIC_CONQ
@@ -1171,7 +1171,7 @@ can_release_united_provinces = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       has_country_flag = UPC_CONQ
       country_exists = UPC
@@ -1185,7 +1185,7 @@ can_release_venice = {
   NOT = { is_claimed_by = ROOT }
   ROOT = {
     should_release_italy_first = yes
-    is_italian_or_splinter_tag = no
+    is_italian_tag = no
     NOT = {
       has_country_flag = SRV_CONQ
       country_exists = SRV
@@ -1454,7 +1454,7 @@ should_release_germany_first = {
 
 should_release_italy_first = {
   OR = {
-    is_italian_or_splinter_tag = yes
+    is_italian_tag = yes
     country_exists = ITA
     country_exists = ITP
     has_country_flag = ITA_CONQ

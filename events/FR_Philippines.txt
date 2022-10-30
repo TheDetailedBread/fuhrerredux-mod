@@ -855,10 +855,6 @@ country_event = { # Operation Merdeka - Successfull
       random_other_country = {
         news_event = { id = fxnews.6 days = 1 }
       }
-      add_named_threat = {
-        name = threat_north_borneo_occupation
-        threat = 10
-      }
     }
   }
 
@@ -989,7 +985,6 @@ country_event = { # Quezon Seeks Medical Care in the US
   picture = GFX_report_event_PHI_quezon
 
   trigger = {
-    has_character = PHI_Manuel_Luis_Quezon
     NOT = {
       has_government = social_conservative
     }

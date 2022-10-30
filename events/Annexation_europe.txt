@@ -644,26 +644,8 @@ country_event = { # Fate of Czechoslovakia
     ai_chance = {
       base = 100
     }
-    trigger = {
-      NOT = {
-        tag = GER
-        has_government = valkist
-      }
-    }
     set_temp_variable = { tag_to_release = CZE }
     release_targeted_tag = yes
-  }
-
-  option = { # Integrate to the Reich
-    name = annex.109.b
-    ai_chance = {
-      base = 100
-    }
-    trigger = {
-      tag = GER
-      has_government = valkist
-    }
-    set_country_flag = CZE_CONQ
   }
 
   option = { # Occupy
