@@ -1,5 +1,8 @@
 -- Fuhrerreich Defines
 
+NDefines.NCareerProfile.MOD_STATISTICS_GROUP = "fuhrerredux_career_profile"
+NDefines.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "FUHRERREDUX_CAREER_PROFILE"
+
 NDefines.NGame.END_DATE = "1959.1.1.1"										-- Vanilla 1949.1.1.1
 NDefines.NGame.DECISION_ALERT_TIMEOUT_DAYS = 60								-- Vanilla is 30
 NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 30                                   -- Vanilla is 13
