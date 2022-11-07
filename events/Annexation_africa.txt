@@ -295,44 +295,6 @@ country_event = { # Fate of Central African Republic
   }
 }
 
-country_event = { # Fate of Chad
-  id = annex.2004
-  title = annexation_CHA_CONQ
-  desc = annexation_CHA_CONQ_DESC
-  picture = GFX_report_event_czech_soldiers_01
-  is_triggered_only = yes
-
-  immediate = {
-    hidden_effect = {
-      add_to_temp_array = { core_removal_array = CHA }
-      remove_all_cores_and_claims_of_tags = yes
-      CHA = {
-        add_state_core = 771
-        add_state_core = 918
-        drop_cosmetic_tag = yes
-      }
-    }
-  }
-
-  option = { # Puppet
-    name = annex.2004.a
-    ai_chance = {
-      base = 100
-    }
-    set_temp_variable = { tag_to_release = CHA }
-    release_targeted_tag = yes
-  }
-
-  option = { # Occupy
-    name = annexation_occupy
-    ai_chance = {
-      base = 0
-    }
-    set_country_flag = CHA_CONQ
-    occupy_small_country = yes
-  }
-}
-
 country_event = { # Fate of Cameroon
   id = annex.2005
   title = annexation_CMR_CONQ
