@@ -278,7 +278,7 @@ country_event = { #Political Turmoil
 			# }
 			promote_character = {
 				character = JAP_Nakano_Seigo
-				ideology = national_populist_subtype
+				ideology = organnat_showaist_subtype
 			}
 			set_party_name = {
 				ideology = national_populist
@@ -371,6 +371,9 @@ country_event = { #Assassination Investigation
 	desc = jap_shogun.11.d
 	
 	is_triggered_only = yes 
+	option = {
+		name = "Let's find some clues"
+	}
 }
 country_event = { #Rumor of lost claimant  
 	id = jap_shogun.12
@@ -379,7 +382,7 @@ country_event = { #Rumor of lost claimant
 	
 	is_triggered_only = yes 
 }
-country_event = { #Socialist League culprit question
+country_event = { #Socialist League 
 	id = jap_shogun.13
 	title = jap_shogun.13.t 
 	desc = jap_shogun.13.d
