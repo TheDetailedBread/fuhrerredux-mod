@@ -950,7 +950,7 @@ focus_tree = {
 
 #### Industry Tree ####
 	focus = { #Black Wednesday
-		id = SAF_Black_Wednesday
+		id = SAF_Black_Wednesday_focus
 		icon = GFX_goal_HOL_black_monday
 		x = 20
 		y = 0
@@ -975,7 +975,7 @@ focus_tree = {
 		id = SAF_Govt_Intervention
 		icon = GFX_goal_continuous_def_against_influence
 		mutually_exclusive = { focus = SAF_Austerity }
-		prerequisite = { focus = SAF_Black_Wednesday }
+		prerequisite = { focus = SAF_Black_Wednesday_focus }
 		x = 17
 		y = 1
 		cost = 5
@@ -1134,7 +1134,7 @@ focus_tree = {
 		id = SAF_Prioritize_Cape
 		icon = GFX_goal_generic_construct_civ_factory
 		mutually_exclusive = { focus = SAF_Prioritize_Transvaal }
-		prerequisite = { focus = SAF_Black_Wednesday }
+		prerequisite = { focus = SAF_Black_Wednesday_focus }
 		x = 19
 		y = 2
 		cost = 5
@@ -1200,7 +1200,7 @@ focus_tree = {
 		id = SAF_Prioritize_Transvaal
 		icon = GFX_focus_generic_steel
 		mutually_exclusive = { focus = SAF_Prioritize_Cape }
-		prerequisite = { focus = SAF_Black_Wednesday }
+		prerequisite = { focus = SAF_Black_Wednesday_focus }
 		x = 21
 		y = 2
 		cost = 5
@@ -1337,7 +1337,7 @@ focus_tree = {
 		id = SAF_Austerity
 		icon = GFX_goal_generic_forceful_treaty
 		mutually_exclusive = { focus = SAF_Govt_Intervention }
-		prerequisite = { focus = SAF_Black_Wednesday }
+		prerequisite = { focus = SAF_Black_Wednesday_focus }
 		x = 23
 		y = 1
 		cost = 5

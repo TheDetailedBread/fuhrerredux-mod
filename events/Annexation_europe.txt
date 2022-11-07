@@ -1594,6 +1594,7 @@ country_event = { # Fate of Netherlands
       add_to_temp_array = { core_removal_array = HOL }
       remove_all_cores_and_claims_of_tags = yes
       KNE = {
+        set_capital = { state = 7 }
         add_state_core = 7
         add_state_core = 35
         add_state_core = 36
@@ -2594,7 +2595,7 @@ country_event = { # Fate of Portugal
 country_event = { # Fate of Rhineland
   id = annex.136
   title = annexation_RHI_CONQ
-  desc = annexation_RHI_CONQ
+  desc = annexation_RHI_CONQ_DESC
   picture = GFX_report_event_czech_soldiers_01
   is_triggered_only = yes
 
@@ -2657,14 +2658,14 @@ country_event = { # Fate of Rhineland
       }
       modifier = {
         add = 100
-        is_ally_with = GRU
+        is_ally_with = GRP
       }
     }
     trigger = {
       is_germany_or_splinter_tag = no
       OR = {
         country_exists = GER
-        country_exists = GRU
+        country_exists = GRP
       }
     }
     if = {
