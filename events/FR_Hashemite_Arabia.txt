@@ -1055,6 +1055,12 @@ country_event = { # First General Elections
   picture = GFX_report_event_ARB_ministers
   is_triggered_only = yes
 
+  trigger = {
+    NOT = {
+      has_country_flag = ARB_british_mandate_flag
+    }
+  }
+
   option = { # Nationals
     name = arabia.36.a
     set_party_name = {
