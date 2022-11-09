@@ -131,23 +131,7 @@ news_event = { # Filipino Entry to the Entente
 	}
 
 	option = { # They will be just a prey for the Japanese
-		name = fxnews.6.a
-		trigger = {
-			any_country = {
-				NOT = { is_in_faction_with = FRA }
-			}
-		}
-	}
-	option = { # We will win this war!
-		name = fxnews.6.b
-		trigger = {
-			any_country = {
-				OR = {
-					tag = FRA
-					is_in_faction_with = FRA
-				}
-			}
-		}
+		name = fxnews.7.a
 	}
 }
 
