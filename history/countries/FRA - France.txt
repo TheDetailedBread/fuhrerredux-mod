@@ -83,6 +83,7 @@ if = {
 			cv_early_fighter = 1
 			cv_naval_bomber1 = 1
 			early_bomber = 1
+			tactical_bomber1 = 1
 			CAS1 = 1
 		}
 	}
@@ -274,6 +275,12 @@ FRA_add_armour_variants = yes
 FRA_add_ship_variants = yes
 
 FRP = {
+	inherit_technology = FRA
+	FRA_add_aircraft_variants = yes
+	FRA_add_armour_variants = yes
+	FRA_add_ship_variants = yes
+}
+FIC = {
 	inherit_technology = FRA
 	FRA_add_aircraft_variants = yes
 	FRA_add_armour_variants = yes
