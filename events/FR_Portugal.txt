@@ -53,8 +53,14 @@ country_event = { #some capital ship idk man
 		name = "This is how we will destroy the Republican dogs!"
 		add_political_power = 75
 		hidden_effect = {
-			set_technology = { early_battleship = 1 }
-			load_OOB = POR_RETALIACAO
+			if = {
+				limit = { has_dlc_mtg = yes }
+				load_oob = "POR_RETALIACAO_mtg"
+
+				else = {
+					load_oob = "POR_RETALIACAO_legacy"
+				}
+			}
 		}
 		ai_chance = { factor = 100 }
 	}
