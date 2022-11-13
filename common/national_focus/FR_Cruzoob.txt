@@ -642,16 +642,13 @@ focus_tree = {
 		completion_reward = {
 			set_cosmetic_tag = CRU_empire
 			hidden_effect = {
-				remove_country_leader_role = {
-					character = CRU_Francisco_May_Pech
-					ideology = valkist_subtype
-				}
-				add_country_leader_role = {
-					character = CRU_Pakal_III
-					promote_leader = yes
-					country_leader = {
-						ideology = valkist_subtype
-						traits = { }
+				CRU_Francisco_May_Pech = {
+					set_character_name = "Pakal III"
+					set_portraits = {
+						civilian = {
+							large = "gfx/leaders/CRU/Portrait_CRU_Pakal_III.png"
+							small = "gfx/interface/ministers/CRU/CRU_Francisco_May_Pech.png"
+						}
 					}
 				}
 			}
