@@ -1706,6 +1706,150 @@ country_event = { # Demand Oregon - Refused
 	}
 }
 
+country_event = { # Demand Greenland
+	id = usa.52
+	title = usa.52.t
+	desc = usa.52.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.52.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		FROM = {
+			country_event = { id = usa.53 days = 1 }
+		}
+	}
+
+	option = { # Refused
+		name = usa.52.b
+		FROM = {
+			country_event = { id = usa.54 days = 1 }
+		}
+	}
+}
+
+country_event = { # Denmark Accepted
+	id = usa.53
+	title = usa.53.t
+	desc = usa.53.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = {
+		name = usa.53.a
+		transfer_state = 101
+		transfer_state = 911
+	}
+}
+
+country_event = { # Denmark Refused American Demands
+	id = usa.54
+	title = usa.54.t
+	desc = usa.54.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.54.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.54.b
+		add_political_power = 100
+	}
+}
+
+country_event = { # Demand Atlantic Territories
+	id = usa.55
+	title = usa.55.t
+	desc = usa.55.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.55.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		FROM = {
+			country_event = { id = usa.56 days = 1 }
+		}
+	}
+
+	option = { # Refused
+		name = usa.55.b
+		FROM = {
+			country_event = { id = usa.57 days = 1 }
+		}
+	}
+}
+
+country_event = { # Offer Accepted
+	id = usa.56
+	title = usa.56.t
+	desc = usa.56.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = {
+		name = usa.56.a
+		if = {
+			limit = { 
+				FROM = { owns_state = 100 }
+			}
+			transfer_state = 100
+		}
+		if = {
+			limit = {
+				FROM = { owns_state = 178 }
+			}
+			transfer_state = 178
+		}
+		if = {
+			limit = {
+				FROM = { owns_state = 697 }
+			}
+			transfer_state = 697
+		}
+		if = {
+			limit = {
+				FROM = { owns_state = 698 }
+			}
+			transfer_state = 698
+		}
+	}
+}
+
+country_event = { # Offer Refused
+	id = usa.57
+	title = usa.57.t
+	desc = usa.57.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.57.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.57.b
+		add_political_power = 100
+	}
+}
+
 country_event = { # Nationwide Riots
 	id = usa.100
 	title = usa.100.t
