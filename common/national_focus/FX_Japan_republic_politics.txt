@@ -272,3 +272,117 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
 	}
 }
+shared_focus = {
+	id = JAP_sustainers_secure_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_first_people_congress
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_revolutionary_secure_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_first_people_congress
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_kikue_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_revolutionary_secure_presidency
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_matsumoto_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -4
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_nosaka_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -8
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_kingoro_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -12
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_kanson_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 4
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+		focus = JAP_revolutionary_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_hisashi_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 8
+	y = 2
+	prerequisite = {
+		focus = JAP_revolutionary_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}

@@ -1,55 +1,8 @@
-# United States of America Decisions
-# created by: dax0102
 
 foreign_politics = {
-  USA_purchase_atlantic_territories = {
-    icon = GFX_decision_hol_attract_foreign_investors
-    days_remove = 2
-    fire_only_once = yes
-    allowed = { original_tag = USA }
-    targets = { POR SPM SPR SPA SPF DEN NOR }
-    target_trigger = {
-      FROM = {
-        exists = yes
-        owns_state = 100
-        owns_state = 178
-        owns_state = 697
-        owns_state = 698
-      }
-    }
-    available = {
-      NOT = { has_war_with = FROM }
-    }
-    remove_effect = {
-      FROM = {
-        country_event = usa.55
-      }
-    }
-  }
-  USA_offer_to_purchase_greenland = {
-    icon = GFX_decision_hol_attract_foreign_investors
-    days_remove = 2
-    fire_only_once = yes
-    allowed = { original_tag = USA }
-    targets = { DEN NOR }
-    target_trigger = {
-      FROM = {
-        exists = yes
-        owns_state = 101
-        owns_state = 911
-      }
-    }
-    available = {
-      NOT = { has_war_with = FROM }
-    }
-    remove_effect = {
-      FROM = {
-        country_event = usa.52
-      }
-    }
-  }
   USA_support_brazil = {
     icon = GFX_decision_generic_prepare_civil_war
+    cost = 50
     days_remove = 14
     allowed = { original_tag = USA }
     fire_only_once = yes
