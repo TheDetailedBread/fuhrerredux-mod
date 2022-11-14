@@ -1,0 +1,388 @@
+shared_focus = {
+	id = JAP_republic_proclaim
+	#icon = GFX_goal_JAP_taisho_lesson 
+	x = 19
+	y = 8
+	allow_branch = {
+		#has_country_flag = JAP_republic_was_proclaimed
+		always = yes 
+	}
+	cost = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_people_congress_preparatory_committee
+	#icon = GFX_goal_JAP_taisho_lesson
+	relative_position_id = JAP_republic_proclaim 
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_republic_proclaim
+	}
+	cost = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_popular_front_give_the_address
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_people_congress_preparatory_committee
+	x = -1
+	y = 1
+	prerequisite = {
+		focus = JAP_people_congress_preparatory_committee
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_vanguard_front_give_the_address
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_people_congress_preparatory_committee
+	x = 1
+	y = 1
+	prerequisite = {
+		focus = JAP_people_congress_preparatory_committee
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_family_but_only_in_name
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_people_congress_preparatory_committee
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_vanguard_front_give_the_address
+	}
+	prerequisite = {
+		focus = JAP_popular_front_give_the_address
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_the_sustainer_of_state_principle
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_family_but_only_in_name
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_family_but_only_in_name
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_endeavor_of_burakumin
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_family_but_only_in_name
+	x = -4
+	y = 1
+	prerequisite = {
+		focus = JAP_family_but_only_in_name
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_shining_will_of_the_exiled
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_family_but_only_in_name
+	x = 4
+	y = 1
+	prerequisite = {
+		focus = JAP_family_but_only_in_name
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_maintain_tennoism
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_the_sustainer_of_state_principle
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_the_sustainer_of_state_principle
+		focus = JAP_endeavor_of_burakumin
+	}
+	mutually_exclusive = {
+		focus = JAP_fate_of_monarchy
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_fate_of_monarchy
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_the_sustainer_of_state_principle
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_the_sustainer_of_state_principle
+		focus = JAP_shining_will_of_the_exiled
+	}
+	mutually_exclusive = {
+		focus = JAP_maintain_tennoism
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_dissolve_national_diet
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_the_sustainer_of_state_principle
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_fate_of_monarchy
+		focus = JAP_maintain_tennoism
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_de_sinicization_program
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_endeavor_of_burakumin
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_endeavor_of_burakumin
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_burakumin_manifesto
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_endeavor_of_burakumin
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_de_sinicization_program
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_fate_of_peerage
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_shining_will_of_the_exiled
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_shining_will_of_the_exiled
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_purge_the_corrupted_bureaucracy
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_shining_will_of_the_exiled
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_fate_of_peerage
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_stabilize_socialist_empire
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_dissolve_national_diet
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_dissolve_national_diet
+	}
+	prerequisite = {
+		focus = JAP_burakumin_manifesto
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_secure_the_people_revolution
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_dissolve_national_diet
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_dissolve_national_diet
+	}
+	prerequisite = {
+		focus = JAP_purge_the_corrupted_bureaucracy
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_first_people_congress
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_dissolve_national_diet
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_dissolve_national_diet
+	}
+	prerequisite = {
+		focus = JAP_stabilize_socialist_empire
+		focus = JAP_secure_the_people_revolution
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_sustainers_secure_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_first_people_congress
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_revolutionary_secure_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_first_people_congress
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_kikue_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_revolutionary_secure_presidency
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_matsumoto_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -4
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_nosaka_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -8
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_kingoro_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = -12
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_kanson_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 4
+	y = 2
+	prerequisite = {
+		focus = JAP_sustainers_secure_presidency
+		focus = JAP_revolutionary_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
+shared_focus = {
+	id = JAP_hisashi_presidency
+	#icon = GFX_goal_JAP_taisho_lesson 
+	relative_position_id = JAP_first_people_congress
+	x = 8
+	y = 2
+	prerequisite = {
+		focus = JAP_revolutionary_secure_presidency
+	}
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_republic_proclaim"
+	}
+}
