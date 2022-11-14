@@ -1,0 +1,14 @@
+shared_focus = {
+	id = JAP_sgrp_foreign_policy
+	#icon = GFX_goal_JAP_taisho_lesson 
+	x = 37
+	y = 9
+	allow_branch = {
+		#has_country_flag = JAP_republic_was_proclaimed
+		always = yes 
+	}
+	cost = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: JAP_sgrp_foreign_policy"
+	}
+}
