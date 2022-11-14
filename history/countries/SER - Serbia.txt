@@ -73,37 +73,50 @@ if = {
 }
 
 set_stability = 0.50
-set_war_support = 0.35
-set_convoys = 42
+set_war_support = 0.30
+set_convoys = 25
+
+country_event = { id = serbia.0 days = 1 } # Intro event
+country_event = { id = serbia.8 days = 254 } # London crash event
+country_event = { id = serbia.9 days = 317 } # Alexander assassination
 
 add_ideas = {
-	party_pop_0_50
-	GEN_entente_member
+	party_pop_0_30
+	#GEN_entente_member
 	constitutional_monarchy
+	
+	SER_serbian_yugoslavism_idea
+	SER_macedonian_internal_unrest_idea
+	SER_serbian_constitutionalism_idea
 }
 
+set_country_flag = coalition_authoritarian_democrat
+
 set_politics = {
-  ruling_party = authoritarian_democrat
-  last_election = "1935.9.8"
-  election_frequency = 36
-  elections_allowed = no
+	ruling_party = market_liberal
+	last_election = "1935.9.8"
+	election_frequency = 36
+	elections_allowed = no
 }
 
 set_popularities = {
-  vanguardist = 0
-  collectivist = 0
-  libertarian_socialist = 0
-  social_democrat = 0
-  social_liberal = 16
-  market_liberal = 0
-  social_conservative = 18
-  authoritarian_democrat = 51
-  paternal_autocrat = 13
-  national_populist = 1
-  valkist = 1
+	vanguardist = 0
+	collectivist = 3
+	libertarian_socialist = 2
+	social_democrat = 5
+	social_liberal = 21
+	market_liberal = 34
+	social_conservative = 7
+	authoritarian_democrat = 8
+	paternal_autocrat = 6
+	national_populist = 9
+	valkist = 5
 }
 
-set_stability = 0.70
+#set_power_balance = {
+#	id = SER_centralization_bop
+#	set_default = yes
+#}
 
 ### VARIANTS ###
 # 1936 Start #
@@ -192,7 +205,6 @@ recruit_character = SER_Milan_Grol
 recruit_character = SER_Ljubomir_Davidović
 recruit_character = SER_Anton_Korosec
 recruit_character = SER_Alexander_I
-recruit_character = SER_Prince_Paul
 recruit_character = SER_Milan_Stojadinović
 recruit_character = SER_Petar_Bojović
 recruit_character = SER_Danilo_Kalafatović

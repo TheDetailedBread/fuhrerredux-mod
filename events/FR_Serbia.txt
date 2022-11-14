@@ -13,7 +13,7 @@ country_event = { #Intro
 	desc = serbia.1.d
 	picture = GFX_report_event_soviet_soldiers_tank
 
-	mean_time_to_happen = { days = 0 }
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -230,6 +230,116 @@ country_event = { #Hungary demands Banat
 		}
 		HUN = {
 			country_event = { id = hungary.35 days = 1}
+		}
+	}
+}
+
+## New Events ##
+
+country_event = { #London crash
+	id = serbia.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.8"}
+	title = serbia.8.t
+	desc = serbia.8.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+	}
+
+	option = {
+		name = serbia.8.a
+		add_stability = -0.10
+		add_ideas = SER_london_crash_idea
+		complete_national_focus = SER_london_crash_effects
+	}
+}
+
+country_event = { #Assassination attempt
+	id = serbia.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.9"}
+	title = serbia.9.t
+	desc = serbia.9.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+	}
+
+	option = {
+		name = serbia.9.a
+		add_stability = -0.10
+		complete_national_focus = SER_saving_grace
+		hidden_effect = {
+			country_event = { id = serbia.10 days = 3 }
+		}
+	}
+	
+	option = {
+		name = serbia.9.b
+		add_stability = -0.15
+		complete_national_focus = SER_king_is_dead
+		kill_country_leader = yes
+		recruit_character = SER_Prince_Paul
+		hidden_effect = {
+			country_event = { id = serbia.10 days = 3 }
+		}
+	}
+}
+
+country_event = { #Embolden resistance
+	id = serbia.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.10"}
+	title = serbia.10.t
+	desc = serbia.10.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+	}
+
+	option = {
+		name = serbia.10.a
+		add_stability = -0.05
+		swap_ideas = {
+			remove_idea = SER_macedonian_internal_unrest_idea
+			add_idea = SER_macedonian_internal_unrest_bad_idea
+		}
+		787 = {
+			remove_core_of = SER
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+			add_resistance = 55
+			add_compliance = -50
+			set_demilitarized_zone = yes
+		}
+		931 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+			add_resistance = 50
+			add_compliance = -50
+			set_demilitarized_zone = yes
+		}
+		941 = {
+			remove_core_of = SER
+			add_resistance = 35
+			add_compliance = -40
 		}
 	}
 }
