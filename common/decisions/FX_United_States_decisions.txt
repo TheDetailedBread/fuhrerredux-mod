@@ -2,6 +2,190 @@
 # created by: dax0102
 
 foreign_politics = {
+  USA_protect_central_america = {
+    icon = GFX_decision_generic_civil_support
+    cost = 20
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { CRU GUA ELS NIC COS HON PAN }
+    target_trigger = {
+      country_exists = FROM
+    }
+    available = {
+      FROM = {
+        exists = yes
+        is_in_faction = no
+        has_capitulated = no
+      }
+    }
+    visible = {
+      has_completed_focus = USA_the_banana_republics
+    }
+    complete_effect = {
+      FROM = {
+        country_event = usa.23
+      }
+    }
+  }
+  USA_invite_philippines = {
+    icon = GFX_decision_generic_army_support
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { PHI }
+    target_trigger = {
+      country_exists = FROM
+    }
+    available = {
+      FROM = {
+        exists = yes
+        is_in_faction = no
+        has_capitulated = no
+      }
+    }
+    visible = {
+      has_completed_focus = USA_our_pacific_friend
+    }
+    complete_effect = {
+      FROM = {
+        country_event = usa.17
+      }
+    }
+  }
+  USA_join_entente = {
+    icon = GFX_decision_eng_trade_unions_support
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { FRA }
+    target_trigger = {
+      country_exists = FROM
+    }
+    available = {
+      FROM = {
+        exists = yes
+        is_faction_leader = yes
+        has_capitulated = no
+      }
+    }
+    visible = {
+      has_completed_focus = USA_entente_alliance
+    }
+    complete_effect = {
+      FROM = {
+        country_event = usa.15
+      }
+    }
+  }
+  USA_demand_british_west_indies = {
+    icon = GFX_decision_infiltrate_state
+    days_remove = 2
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { ENG }
+    target_trigger = {
+      country_exists = FROM
+    }
+    available = {
+      NOT = { has_war_with = FROM }
+      FROM = {
+        OR = {
+          owns_state = 689
+          owns_state = 690
+          owns_state = 691
+          owns_state = 692
+          owns_state = 693
+          owns_state = 696
+          owns_state = 308
+          owns_state = 311
+        }
+      }
+    }
+    visible = {
+      has_completed_focus = USA_carribean_lake
+    }
+    remove_effect = {
+      FROM = {
+        country_event = usa.61
+      }
+    }
+  }
+  USA_demand_french_west_indies = {
+    icon = GFX_decision_infiltrate_state
+    days_remove = 2
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { FRA }
+    target_trigger = {
+      FROM = {
+        exists = yes
+      }
+    }
+    available = {
+      NOT = { has_war_with = FROM }
+      FROM = {
+        OR = {
+          owns_state = 694
+          owns_state = 310
+          owns_state = 969
+        }
+      }
+    }
+    visible = {
+      has_completed_focus = USA_carribean_lake
+    }
+    remove_effect = {
+      FROM = {
+        country_event = usa.61
+      }
+    }
+  }
+  USA_demand_haiti = {
+    icon = GFX_decision_infiltrate_state
+    days_remove = 2
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { HAI }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+      }
+    }
+    available = {
+      NOT = { has_war_with = FROM }
+    }
+    visible = {
+      has_completed_focus = USA_carribean_lake
+    }
+    remove_effect = {
+      FROM = {
+        country_event = usa.58
+      }
+    }
+  }
+  USA_demand_domincan_republic = {
+    icon = GFX_decision_infiltrate_state
+    days_remove = 2
+    fire_only_once = yes
+    allowed = { original_tag = USA }
+    targets = { DOM }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        NOT = { is_subject_of = ROOT }
+      }
+    }
+    available = {
+      NOT = { has_war_with = FROM }
+    }
+    visible = {
+      has_completed_focus = USA_carribean_lake
+    }
+    remove_effect = {
+      FROM = {
+        country_event = usa.58
+      }
+    }
+  }
   USA_purchase_atlantic_territories = {
     icon = GFX_decision_hol_attract_foreign_investors
     days_remove = 2
@@ -11,14 +195,21 @@ foreign_politics = {
     target_trigger = {
       FROM = {
         exists = yes
-        owns_state = 100
-        owns_state = 178
-        owns_state = 697
-        owns_state = 698
+        OR = {
+          owns_state = 100
+          owns_state = 178
+          AND = {
+            owns_state = 697
+            owns_state = 698
+          }
+        }
       }
     }
     available = {
       NOT = { has_war_with = FROM }
+    }
+    visible = {
+      has_completed_focus = USA_atlantic_outposts
     }
     remove_effect = {
       FROM = {
@@ -41,6 +232,9 @@ foreign_politics = {
     }
     available = {
       NOT = { has_war_with = FROM }
+    }
+    visible = {
+      has_completed_focus = USA_demand_greenland
     }
     remove_effect = {
       FROM = {
@@ -587,36 +781,63 @@ USA_state_reintegration = {
     }
   }
 }
-USA_monroe_doctrine = {
-  USA_demand_return_of_free_government = {
-    icon = GFX_decision_generic_civil_support
-    cost = 50
-    ai_will_do = {
-      factor = 200
-    }
+USA_rebuilding_europe = {
+  USA_industrial_investments = {
+    icon = GFX_decision_generic_factory
+    cost = 20
+    days_remove = 120
+    fire_only_once = yes
+    target_array = faction_members
     target_trigger = {
-      FROM = {
-        OR = {
-          tag = BOL
-          tag = ARG
-          tag = COL
-          tag = PRU
-          tag = CHL
-          tag = ECU
-          tag = UBR
-          tag = BPS
-        }
-      }
-    }
-
-    visible = { 
-      FROM = { 
-        is_subject_of = ROOT
-        has_elected_government = no
-      }
+			FROM = {
+				has_socialist_government = no
+				is_in_faction_with = ROOT
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+			}
+		}
+    available = {
+			FROM = {
+				has_capitulated = no
+        has_socialist_government = no
+			}
     }
     complete_effect = {
-      FROM = { country_event = { id = usa.41 hours = 12 } }
+      FROM = { country_event = usa.66 }
+    }
+  }
+  USA_military_subsidies = {
+    icon = GFX_decision_generic_army_support
+    cost = 20
+    days_remove = 120
+    fire_only_once = yes
+    target_array = faction_members
+    target_trigger = {
+			FROM = {
+				has_socialist_government = no
+				is_in_faction_with = ROOT
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+				}
+				NOT = {
+					tag = ROOT
+				}
+			}
+		}
+    available = {
+			FROM = {
+				has_capitulated = no
+        has_socialist_government = no
+			}
+    }
+    complete_effect = {
+      FROM = { country_event = usa.65 }
     }
   }
 }

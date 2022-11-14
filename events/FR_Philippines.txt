@@ -1848,7 +1848,16 @@ country_event = { # Philippines Proposes Alliance
         has_democratic_government = yes
       }
     }
-    create_faction = PHI_USA_faction
+
+    if = {
+      limit = { is_faction_leader = yes }
+      add_to_faction = FROM
+
+      else = {
+        create_faction = PHI_USA_faction
+      }
+    }
+
     FROM = {
       country_event = { id = philippines.65 days = 2 }
     }
@@ -1873,8 +1882,15 @@ country_event = { # US Accepts Philippine Alliance
 
   option = { # Great!
     name = philippines.65.a
-    FROM = {
-      add_to_faction = ROOT
+    
+    if = {
+      limit = {
+        NOT = { is_in_faction_with = FROM }
+      }
+
+      FROM = {
+        add_to_faction = ROOT
+      }
     }
   }
 }

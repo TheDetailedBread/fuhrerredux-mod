@@ -3159,6 +3159,9 @@ focus_tree = {
     mutually_exclusive = { focus = USA_new_interventionism }
     prerequisite = { focus = USA_america_on_the_world_stage }
     relative_position_id = USA_america_on_the_world_stage
+    completion_reward = {
+      add_ideas = USA_continued_isolationism
+    }
   }
 
 
@@ -3313,6 +3316,7 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
+      has_war = no
       is_subject = no
     }
     prerequisite = { focus = USA_fortify_hawaii }
@@ -3328,9 +3332,10 @@ focus_tree = {
     id = USA_america_leaps_forward
     icon = GFX_goal_USA_leaps_forward
     x = 0
-    y = 1
+    y = 2
     cost = 6
     available = {
+      has_war = no
       is_subject = no
     }
     prerequisite = { focus = USA_pragmatic_trade }
@@ -3351,7 +3356,7 @@ focus_tree = {
     prerequisite = { focus = USA_america_on_the_world_stage }
     relative_position_id = USA_america_on_the_world_stage
     completion_reward = {
-      add_war_support = 0.15
+      add_ideas = USA_persued_interventionism
     }
   }
 
@@ -3404,6 +3409,27 @@ focus_tree = {
     mutually_exclusive = { focus = USA_revive_old_alliances }
     prerequisite = { focus = USA_new_interventionism }
     relative_position_id = USA_new_interventionism
+    completion_reward = {
+      create_faction = PHI_USA_faction
+      every_other_country = {
+        limit = {
+          OR = {
+            tag = ENG
+            tag = FRA
+            tag = ITA
+          }
+        }
+
+        add_opinion_modifier = {
+          target = ROOT
+          modifier = ROM_cut_off_relations
+        }
+        reverse_add_opinion_modifier = {
+          target = ROOT
+          modifier = ROM_cut_off_relations
+        }
+      }
+    }
   }
 
   # Revive Old Alliances
@@ -3425,6 +3451,10 @@ focus_tree = {
           }
         }
         add_opinion_modifier = {
+          target = ROOT
+          modifier = CRU_improved_relations
+        }
+        reverse_add_opinion_modifier = {
           target = ROOT
           modifier = CRU_improved_relations
         }
@@ -3510,20 +3540,147 @@ focus_tree = {
     prerequisite = { focus = USA_secure_cuba }
     prerequisite = { focus = USA_avenge_1812 }
     relative_position_id = USA_avenge_1812
+    completion_reward = {
+      if = {
+        limit = {
+          HAI = { 
+            NOT = { is_subject_of = ROOT }
+          }
+        }
+        unlock_decision_tooltip = USA_demand_haiti
+      }
+      unlock_decision_tooltip = USA_demand_domincan_republic
+      unlock_decision_tooltip = USA_demand_british_west_indies
+      unlock_decision_tooltip = USA_demand_french_west_indies
+    }
+  }
+
+  # The Banana Republics
+  focus = {
+    id = USA_the_banana_republics
+    icon = GFX_goal_bananas
+    x = -1
+    y = 1
+    cost = 6
+    available = {
+      OR = {
+        country_exists = GUA
+        country_exists = CRU
+        country_exists = ELS
+        country_exists = NIC
+        country_exists = COS
+        country_exists = HON
+        country_exists = PAN
+      }
+    }
+    bypass = {
+      NOT = {
+        OR = {
+          country_exists = GUA
+          country_exists = CRU
+          country_exists = ELS
+          country_exists = NIC
+          country_exists = COS
+          country_exists = HON
+          country_exists = PAN
+        }
+      }
+    }
+    prerequisite = { 
+      focus = USA_carribean_lake 
+      focus = USA_fortify_puerto_rico
+    }
+    relative_position_id = USA_carribean_lake
+    completion_reward = {
+      custom_effect_tooltip = USA_the_banana_republics_tt
+    }
   }
 
   # Stop Radicalism in South America
   focus = {
     id = USA_stop_radicalism_in_south_america
     icon = GFX_goal_USA_spirit_of_monroe
-    x = -1
-    y = 1
+    x = 0
+    y = 2
     cost = 6
-    prerequisite = { 
-      focus = USA_carribean_lake 
-      focus = USA_fortify_puerto_rico
+    available = {
+      OR = {
+        custom_trigger_tooltip = {
+          tooltip = USA_argentina_radical_tt
+          ARG = {
+            exists = yes
+            has_democratic_government = no
+          }
+        }
+        custom_trigger_tooltip = {
+          tooltip = USA_chile_radical_tt
+          CHL = {
+            exists = yes
+            has_democratic_government = no
+          }
+        }
+        custom_trigger_tooltip = {
+          tooltip = USA_colombia_radical_tt
+          COL = {
+            exists = yes
+            has_democratic_government = no
+          }
+        }
+        custom_trigger_tooltip = {
+          tooltip = USA_ecuador_radical_tt
+          ECU = {
+            exists = yes
+            has_democratic_government = no
+          }
+        }
+        custom_trigger_tooltip = {
+          tooltip = USA_peru_radical_tt
+          PRU = {
+            exists = yes
+            has_democratic_government = no
+          }
+        }
+        custom_trigger_tooltip = {
+          tooltip = USA_brazil_radical_tt
+          NOT = { country_exists = BRA }
+          OR = {
+            country_exists = UBR
+            country_exists = BPS
+          }
+        }
+      }
     }
-    relative_position_id = USA_carribean_lake
+    bypass = {
+      ARG = {
+        has_democratic_government = yes
+      }
+      BRA = {
+        exists = yes
+      }
+      BPS = {
+        exists = no
+      }
+      CHL = {
+        has_democratic_government = yes
+      }
+      COL = {
+        has_democratic_government = yes
+      }
+      ECU = {
+        has_democratic_government = yes
+      }
+      PRU = {
+        has_democratic_government = yes
+      }
+      UBR = {
+        exists = no
+      }
+    }
+    prerequisite = { 
+      focus = USA_fortify_puerto_rico 
+      focus = USA_the_banana_republics
+    }
+    relative_position_id = USA_fortify_puerto_rico
   }
 
   # Demand Greenland
@@ -3584,7 +3741,7 @@ focus_tree = {
     }
     relative_position_id = USA_revive_old_alliances
     completion_reward = {
-      unlock_decision_tooltip = USA_purchase_atlantic_territories
+      custom_effect_tooltip = USA_purchase_atlantic_territories_tt
     }
   }
 
@@ -3595,6 +3752,24 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      OR = {
+        country_exists = NFA
+        country_exists = NFQ
+        LBA = {
+          exists = yes
+          is_subject = yes
+        }
+        EGY = {
+          exists = yes
+          is_subject = yes
+        }
+        ETH = {
+          exists = yes
+          is_subject = yes
+        }
+      }
+    }
     prerequisite = { focus = USA_avenge_1812 }
     prerequisite = { focus = USA_demand_greenland }
     relative_position_id = USA_avenge_1812
@@ -3612,13 +3787,16 @@ focus_tree = {
       country_exists = GER
     }
     bypass = {
-      OR = {
-        NOT = { country_exists = GER }
-        GER = { has_war_with = ROOT }
-        GRP = {
-          exists = yes
-          is_subject_of = ROOT
-          is_in_faction_with = ROOT 
+      custom_trigger_tooltip = {
+        tooltip = USA_defeated_valkist_ger_tt
+        OR = {
+          NOT = { country_exists = GER }
+          GER = { has_war_with = ROOT }
+          GRP = {
+            exists = yes
+            is_subject_of = ROOT
+            is_in_faction_with = ROOT 
+          }
         }
       }
     }
@@ -3628,6 +3806,12 @@ focus_tree = {
       focus = USA_entente_alliance
     }
     relative_position_id = USA_demand_greenland
+    completion_reward = {
+      create_wargoal = {
+        target = GER
+        type = annex_everything
+      }
+    }
   }
 
   # The Marshall Plan
@@ -3640,8 +3824,25 @@ focus_tree = {
     available = {
       NOT = { country_exists = GER }
     }
+    bypass = {
+      custom_trigger_tooltip = {
+        tooltip = USA_defeated_valkist_ger_tt
+        OR = {
+          NOT = { country_exists = GER }
+          GER = { has_war_with = ROOT }
+          GRP = {
+            exists = yes
+            is_subject_of = ROOT
+            is_in_faction_with = ROOT 
+          }
+        }
+      }
+    }
     prerequisite = { focus = USA_stop_the_valkist_menace }
     relative_position_id = USA_stop_the_valkist_menace
+    completion_reward = {
+      custom_effect_tooltip = USA_the_marshall_plan_tt
+    }
   }
 
   # Villainify German Valkism
@@ -3652,10 +3853,36 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
-      NOT = { country_exists = GER }
+      custom_trigger_tooltip = {
+        tooltip = USA_defeated_valkist_ger_tt
+        OR = {
+          NOT = { country_exists = GER }
+          GER = { has_war_with = ROOT }
+          GRP = {
+            exists = yes
+            is_subject_of = ROOT
+            is_in_faction_with = ROOT 
+          }
+        }
+      }
+    }
+    bypass = {
+      NOT = { 
+        country_exists = GER
+        country_exists = GRP
+      }
     }
     prerequisite = { focus = USA_stop_the_valkist_menace }
     relative_position_id = USA_stop_the_valkist_menace
+    completion_reward = {
+      add_political_power = 100
+      if = {
+        limit = { country_exists = GRP }
+        GRP = {
+          add_ideas = USA_clamp_down_on_valkism
+        }
+      }
+    }
   }
 
   # Crush the Socialist Threat
@@ -3675,6 +3902,12 @@ focus_tree = {
     prerequisite = { focus = USA_the_marshall_plan }
     prerequisite = { focus = USA_villainify_german_valkism }
     relative_position_id = USA_villainify_german_valkism
+    completion_reward = {
+      create_wargoal = {
+        target = SOV
+        type = annex_everything
+      }
+    }
   }
 
   # Intervene in India
@@ -3684,6 +3917,21 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = USA_british_not_controls_india_tt
+        RAJ = { 
+          exists = yes
+          NOT = { owns_state = 439 }
+          has_country_flag = RAJ_Ceylon
+        }
+        country_exists = IND
+      }
+      IND = {
+        has_war = yes
+        is_subject = no
+      }
+    }
     prerequisite = { focus = USA_villainify_german_valkism }
     relative_position_id = USA_villainify_german_valkism
   }
@@ -3728,6 +3976,27 @@ focus_tree = {
     }
     prerequisite = { focus = USA_avenge_1812 }
     relative_position_id = USA_avenge_1812
+    completion_reward = {
+      638 = {
+        add_building_construction = {
+          type = naval_base
+          level = 4
+          instant_build = yes
+          province = 12140
+        }
+        add_building_construction = {
+          type = air_base
+          level = 4
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 2
+          instant_build = yes
+          province = 12140
+        }
+      }
+    }
   }
 
   # Our Pacific Friend
@@ -3756,6 +4025,9 @@ focus_tree = {
     }
     prerequisite = { focus = USA_guam_forward_base }
     relative_position_id = USA_guam_forward_base
+    completion_reward = {
+      unlock_decision_tooltip = USA_invite_philippines
+    }
   }
 
   # Strike Japan
@@ -3784,6 +4056,12 @@ focus_tree = {
       focus = USA_the_marshall_plan
     }
     relative_position_id = USA_guam_forward_base
+    completion_reward = {
+      create_wargoal = {
+        target = JAP
+        type = annex_everything
+      }
+    }
   }
 
   # Support the KMT
@@ -3812,6 +4090,17 @@ focus_tree = {
     prerequisite = { focus = USA_our_pacific_friend }
     prerequisite = { focus = USA_strike_japan }
     relative_position_id = USA_our_pacific_friend
+    completion_reward = {
+      army_experience = 15
+      send_equipment = { 
+        target = CHI
+        type = infantry_equipment
+        amount = 1000
+      }
+      CHI = {
+        country_event = { id = usa.64 days = 2 }
+      }
+    }
   }
 
   # Entente Alliance
@@ -3829,6 +4118,9 @@ focus_tree = {
     }
     prerequisite = { focus = USA_revive_old_alliances }
     relative_position_id = USA_revive_old_alliances
+    completion_reward = {
+      unlock_decision_tooltip = USA_join_entente
+    }
   }
 
   # The Arsenal of Democracy
@@ -3847,33 +4139,33 @@ focus_tree = {
     }
     prerequisite = { focus = USA_entente_alliance }
     relative_position_id = USA_entente_alliance
+    completion_reward = {
+      add_ideas = USA_arsenal_of_democracy_idea
+    }
   }
 
-  # Guarantee Filipino Independence
+  # Longer Reach
   focus = {
-    id = USA_guarantee_filipino_independence
-    icon = GFX_goal_flag_phillipines
+    id = USA_longer_reach
+    icon = GFX_goal_generic_navy_battleship3alt
     x = 1
     y = 1
     cost = 6
     available = {
-      PHI = {
-        exists = yes
-        NOT = { has_war_with = ROOT }
-        has_elected_government = yes
-      }
+      has_war = yes
+      has_capitulated = no
     }
     bypass = {
-      PHI = {
-        OR = {
-          exists = no
-          is_in_faction_with = ROOT
-          is_subject_of = ROOT
-        }
-      }
+      is_subject = yes
     }
     prerequisite = { focus = USA_entente_alliance }
     relative_position_id = USA_entente_alliance
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = USA_persued_interventionism
+        add_idea = USA_persued_interventionism_1
+      }
+    }
   }
 
   # Entente Lend Lease
@@ -3884,7 +4176,7 @@ focus_tree = {
     y = 1
     cost = 6
     prerequisite = { focus = USA_the_arsenal_of_democracy }
-    prerequisite = { focus = USA_guarantee_filipino_independence }
+    prerequisite = { focus = USA_longer_reach }
     relative_position_id = USA_the_arsenal_of_democracy
   }
 }
