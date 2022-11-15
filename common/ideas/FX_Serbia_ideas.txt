@@ -92,5 +92,20 @@ ideas = {
 			picture = great_depression
 			removal_cost = -1
 		}
+		
+		SER_expand_serbian_officer_corp_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_expand_serbian_officer_corp_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				experience_gain_army = 0.05
+				planning_speed = 0.05
+			}
+			picture = YUG_serbian_general_staff
+			removal_cost = -1
+		}
 	}
 }

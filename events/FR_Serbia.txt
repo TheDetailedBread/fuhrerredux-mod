@@ -279,6 +279,8 @@ country_event = { #Assassination attempt
 		add_stability = -0.10
 		complete_national_focus = SER_saving_grace
 		hidden_effect = {
+			remove_state_core = 787
+			remove_state_core = 941
 			country_event = { id = serbia.10 days = 3 }
 		}
 	}
@@ -288,8 +290,49 @@ country_event = { #Assassination attempt
 		add_stability = -0.15
 		complete_national_focus = SER_king_is_dead
 		kill_country_leader = yes
-		recruit_character = SER_Prince_Paul
+		add_country_leader_role = {
+			character = SER_Prince_Paul
+			promote_leader = yes
+			country_leader = {
+				ideology = social_liberal_subtype
+				traits = { }
+			}
+		}
+		add_country_leader_role = {
+			character = SER_Prince_Paul
+			promote_leader = yes
+			country_leader = {
+				ideology = market_liberal_subtype
+				traits = { }
+			}
+		}
+		add_country_leader_role = {
+			character = SER_Prince_Paul
+			promote_leader = yes
+			country_leader = {
+				ideology = social_conservative_subtype
+				traits = { }
+			}
+		}
+		add_country_leader_role = {
+			character = SER_Prince_Paul
+			promote_leader = yes
+			country_leader = {
+				ideology = authoritarian_democrat_subtype
+				traits = { }
+			}
+		}
+		add_country_leader_role = {
+			character = SER_Prince_Paul
+			promote_leader = yes
+			country_leader = {
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
+		}
 		hidden_effect = {
+			remove_state_core = 787
+			remove_state_core = 941
 			country_event = { id = serbia.10 days = 3 }
 		}
 	}
@@ -318,7 +361,6 @@ country_event = { #Embolden resistance
 			add_idea = SER_macedonian_internal_unrest_bad_idea
 		}
 		787 = {
-			remove_core_of = SER
 			damage_building = {
 				type = infrastructure
 				damage = 1
@@ -337,7 +379,6 @@ country_event = { #Embolden resistance
 			set_demilitarized_zone = yes
 		}
 		941 = {
-			remove_core_of = SER
 			add_resistance = 35
 			add_compliance = -40
 		}

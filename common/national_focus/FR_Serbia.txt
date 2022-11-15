@@ -1217,6 +1217,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_initiate_military_reforms"
+			add_war_support = 0.05
 			army_experience = 15
 			navy_experience = 10
 			air_experience = 10
@@ -1232,6 +1233,16 @@ focus_tree = {
 		}
 		x = 28
 		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_expand_serbian_officer_corp"
+			army_experience = 10
+			add_ideas = SER_expand_serbian_officer_corp_idea
+		}
 
 	}
 	focus = {
@@ -1277,8 +1288,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_begin_motorization"
 			add_tech_bonus = {
 				name = SER_begin_motorization
-				bonus = 0.5
-				uses = 2
+				bonus = 0.75
+				uses = 1
 				category = motorized_equipment
 			}
 		}
@@ -1302,8 +1313,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_new_artillary_pieces"
 			add_tech_bonus = {
 				name = SER_new_artillary_pieces
-				bonus = 0.5
-				uses = 2
+				bonus = 0.75
+				uses = 1
 				category = artillery
 			}
 		}
