@@ -256,6 +256,36 @@ country_event = { #London crash
 		add_stability = -0.10
 		add_ideas = SER_london_crash_idea
 		complete_national_focus = SER_london_crash_effects
+		hidden_effect = {
+			country_event = { id = serbia.11 days = 4 }
+		}
+	}
+}
+
+country_event = {
+	id = serbia.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.11"}
+	title = serbia.11.t
+	desc = serbia.11.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+	}
+
+	option = {
+		name = serbia.11.a
+		add_political_power = -50
+		add_popularity = { ideology = collectivist popularity = 0.02 }
+		add_popularity = { ideology = valkist popularity = 0.01 }
+		hidden_effect = {
+			remove_state_core = 787
+			remove_state_core = 941
+		}
 	}
 }
 
@@ -279,8 +309,6 @@ country_event = { #Assassination attempt
 		add_stability = -0.10
 		complete_national_focus = SER_saving_grace
 		hidden_effect = {
-			remove_state_core = 787
-			remove_state_core = 941
 			country_event = { id = serbia.10 days = 3 }
 		}
 	}
