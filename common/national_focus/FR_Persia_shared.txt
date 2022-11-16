@@ -2006,12 +2006,13 @@
 	}
 	shared_focus = {
 		id = PER_open_foreign_office
-		icon = GFX_goal_FRA_World_Revolution
+		icon = GFX_goal_burning_globe
 		cost = 2
 		x = 18
 		y = 7
 		
 		available = {
+			is_subject = no
 			has_country_flag = PER_foreign_office_open_flag
 		}
 		
@@ -2029,6 +2030,9 @@
 		id = PER_persian_diplomacy
 		icon = GFX_goal_generic_major_alliance
 		cost = 5
+		available = {
+			is_subject = no
+		}
 		prerequisite = {
 			focus = PER_open_foreign_office
 		}
@@ -2049,6 +2053,15 @@
 		id = PER_german_allies
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				is_subject_of = GER
+				is_in_faction_with = GER
+			}
+		}
 		prerequisite = {
 			focus = PER_persian_diplomacy
 		}
@@ -2086,6 +2099,11 @@
 		id = PER_german_arms_trade
 		icon = GFX_focus_ger_oppose_hitler
 		cost = 10
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+		}
 		prerequisite = {
 			focus = PER_german_allies
 		}
@@ -2117,6 +2135,15 @@
 		id = PER_british_allies
 		icon = GFX_focus_chi_british_cooperation
 		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				is_subject_of = ENG
+				is_in_faction_with = ENG
+			}
+		}
 		prerequisite = {
 			focus = PER_persian_diplomacy
 		}
@@ -2154,6 +2181,11 @@
 		id = PER_teheran_delhi_railway
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+		}
 		prerequisite = {
 			focus = PER_british_allies
 		}
@@ -2208,6 +2240,12 @@
 		id = PER_soviet_allies
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		cost = 10
+		bypass = {
+			OR = {
+				is_subject_of = SOV
+				is_in_faction_with = SOV
+			}
+		}
 		prerequisite = {
 			focus = PER_persian_diplomacy
 		}
@@ -2219,6 +2257,7 @@
 		y = 9
 		
 		available = {
+			is_subject = no
 			NOT = {
 				has_war_with = SOV
 			}
@@ -2287,6 +2326,7 @@
 		y = 8
 		
 		available = {
+			is_subject = no
 			date > 1938.6.1
 			OR = {
 				has_government = vanguardist
@@ -2315,6 +2355,13 @@
 		id = PER_claim_mesopotamia
 		icon = GFX_goal_generic_attack_iraq
 		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			owns_state = 291
+			owns_state = 676
+		}
 		prerequisite = {
 			focus = PER_persian_irridentism
 		}
@@ -2340,6 +2387,19 @@
 		prerequisite = {
 			focus = PER_claim_mesopotamia
 		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				owns_state = 744
+				744 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
 		x = 18
 		y = 10
 		
@@ -2349,7 +2409,16 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PER_contest_arabian_influence"
-			create_wargoal = { type = annex_everything target = ARB }
+			744 = {
+				OWNER = {
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = annex_everything
+						}
+					}
+				}
+			}
 			add_state_claim = 744
 		}
 
@@ -2358,6 +2427,19 @@
 		id = PER_claim_turkmenistan
 		icon = GFX_goal_generic_major_war
 		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				owns_state = 584
+				584 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
 		prerequisite = {
 			focus = PER_persian_irridentism
 		}
@@ -2370,7 +2452,13 @@
 		
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PER_claim_turkmenistan"
-			create_wargoal = { type = annex_everything target = TRK }
+			584 = {
+				OWNER = {
+					ROOT = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}
 			add_state_claim = 584
 		}
 
@@ -2403,6 +2491,19 @@
 		id = PER_claim_baluchistan
 		icon = GFX_goal_generic_major_war
 		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				owns_state = 444
+				444 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
 		prerequisite = {
 			focus = PER_contest_british_influence
 		}
@@ -2413,31 +2514,14 @@
 			factor = 10
 		}
 		
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PER_claim_baluchistan"
-			if = {
-				limit = {
-					RAJ = {
-						owns_state = 444
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PER_claim_baluchistan"
+			444 = {
+				OWNER = {
+					ROOT = {
+						create_wargoal = { type = annex_everything target = PREV }
 					}
 				}
-				create_wargoal = { type = annex_everything target = RAJ }
-			}
-			if = {
-				limit = {
-					IND = {
-						owns_state = 444
-					}
-				}
-				create_wargoal = { type = annex_everything target = IND }
-			}
-			if = {
-				limit = {
-					BAL = {
-						owns_state = 444
-					}
-				}
-				create_wargoal = { type = annex_everything target = BAL }
 			}
 			add_state_claim = 444
 			add_state_claim = 443
@@ -2449,6 +2533,12 @@
 		id = PER_reclaim_herat
 		icon = GFX_goal_generic_major_war
 		cost = 10
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			415 = { is_owned_by_ROOT_or_ally = yes }
+		}
 		prerequisite = {
 			focus = PER_contest_british_influence
 		}
@@ -2470,6 +2560,23 @@
 		id = PER_reclaim_northern_azerbaijan
 		icon = GFX_goal_Cutdown_Azerbaijan
 		cost = 10
+		available = {
+			is_subject = no
+			country_exists = AZR
+		}
+		bypass = {
+			OR = {
+				AND = {
+					owns_state = 229
+					owns_state = 904
+				}
+				AZR = {
+					exists = no
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
 		prerequisite = {
 			focus = PER_persian_irridentism
 		}
@@ -2497,7 +2604,22 @@
 		}
 		x = 25
 		y = 10
-		
+		available = {
+			is_subject = no
+			country_exists = ARM
+		}
+		bypass = {
+			OR = {
+				AND = {
+					owns_state = 230
+				}
+				ARM = {
+					exists = no
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 10
 		}
