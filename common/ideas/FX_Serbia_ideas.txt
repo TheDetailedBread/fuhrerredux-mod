@@ -101,10 +101,115 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			
 			modifier = {
-				experience_gain_army = 0.05
+				experience_gain_army = 0.04
 				planning_speed = 0.05
 			}
 			picture = YUG_serbian_general_staff
+			removal_cost = -1
+		}
+		
+		SER_secure_military_loyalty_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_secure_military_loyalty_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				experience_gain_army = 0.08
+				planning_speed = 0.05
+				army_org_factor = 0.10
+			}
+			picture = YUG_serbian_general_staff
+			removal_cost = -1
+		}
+		
+		SER_modernize_great_war_lessons_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_modernize_great_war_lessons_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				experience_gain_army = 0.10
+				planning_speed = 0.10
+				army_org_factor = 0.10
+			}
+			picture = YUG_serbian_general_staff
+			removal_cost = -1
+		}
+		
+		SER_reform_military_academy_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_reform_military_academy_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				experience_gain_army = 0.10
+				planning_speed = 0.10
+				army_org_factor = 0.10
+			}
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			picture = YUG_serbian_general_staff
+			removal_cost = -1
+		}
+		
+		SER_remember_great_war_heroes_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_remember_great_war_heroes_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				experience_gain_army = 0.10
+				planning_speed = 0.10
+				army_org_factor = 0.10
+				army_morale_factor = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			picture = YUG_serbian_general_staff
+			removal_cost = -1
+		}
+		
+		SER_strengthen_serbian_reserve_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_strengthen_serbian_reserve_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				conscription = 0.01
+				training_time_factor = -0.05
+			}
+			picture = chi_army_corruption2
+			removal_cost = -1
+		}
+		
+		SER_professionalize_mountaineers_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_professionalize_mountaineers_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				special_forces_out_of_supply_factor = -0.15
+			}
+			research_bonus = {
+				mountaineers_tech = 0.10
+			}
+			picture = MEX_politicised_army
 			removal_cost = -1
 		}
 	}

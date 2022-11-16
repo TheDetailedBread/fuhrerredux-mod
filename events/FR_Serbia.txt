@@ -298,39 +298,40 @@ country_event = { #Assassination attempt
 				traits = { }
 			}
 		}
-		add_country_leader_role = {
-			character = SER_Prince_Paul
-			promote_leader = yes
-			country_leader = {
-				ideology = market_liberal_subtype
-				traits = { }
-			}
-		}
-		add_country_leader_role = {
-			character = SER_Prince_Paul
-			promote_leader = yes
-			country_leader = {
-				ideology = social_conservative_subtype
-				traits = { }
-			}
-		}
-		add_country_leader_role = {
-			character = SER_Prince_Paul
-			promote_leader = yes
-			country_leader = {
-				ideology = authoritarian_democrat_subtype
-				traits = { }
-			}
-		}
-		add_country_leader_role = {
-			character = SER_Prince_Paul
-			promote_leader = yes
-			country_leader = {
-				ideology = paternal_autocrat_subtype
-				traits = { }
-			}
-		}
+		custom_effect_tooltip  = SER_regent_prince_paul_tooltip
 		hidden_effect = {
+			add_country_leader_role = {
+				character = SER_Prince_Paul
+				promote_leader = yes
+				country_leader = {
+					ideology = market_liberal_subtype
+					traits = { }
+				}
+			}
+			add_country_leader_role = {
+				character = SER_Prince_Paul
+				promote_leader = yes
+				country_leader = {
+					ideology = social_conservative_subtype
+					traits = { }
+				}
+			}
+			add_country_leader_role = {
+				character = SER_Prince_Paul
+				promote_leader = yes
+				country_leader = {
+					ideology = authoritarian_democrat_subtype
+					traits = { }
+				}
+			}
+			add_country_leader_role = {
+				character = SER_Prince_Paul
+				promote_leader = yes
+				country_leader = {
+					ideology = paternal_autocrat_subtype
+					traits = { }
+				}
+			}
 			remove_state_core = 787
 			remove_state_core = 941
 			country_event = { id = serbia.10 days = 3 }

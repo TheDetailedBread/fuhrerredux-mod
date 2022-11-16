@@ -1292,6 +1292,12 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
+			add_doctrine_cost_reduction = {
+				name = SER_new_artillary_pieces
+				cost_reduction = 0.15
+				uses = 1
+				category = cat_mobile_warfare
+			}
 		}
 
 	}
@@ -1316,6 +1322,12 @@ focus_tree = {
 				bonus = 0.75
 				uses = 1
 				category = artillery
+			}
+			add_doctrine_cost_reduction = {
+				name = SER_new_artillary_pieces
+				cost_reduction = 0.15
+				uses = 1
+				category = cat_superior_firepower
 			}
 		}
 
@@ -1411,6 +1423,20 @@ focus_tree = {
 		}
 		x = 28
 		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_secure_military_loyalty"
+			army_experience = 5
+			add_war_support = 0.03
+			swap_ideas = {
+				remove_idea = SER_expand_serbian_officer_corp_idea
+				add_idea = SER_secure_military_loyalty_idea
+			}
+		}
 
 	}
 	focus = {
@@ -1422,6 +1448,24 @@ focus_tree = {
 		}
 		x = 28
 		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_modernize_great_war_lessons"
+			add_doctrine_cost_reduction = {
+				name = SER_modernize_great_war_lessons
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = SER_secure_military_loyalty_idea
+				add_idea = SER_modernize_great_war_lessons_idea
+			}
+		}
 
 	}
 	focus = {
@@ -1433,6 +1477,20 @@ focus_tree = {
 		}
 		x = 30
 		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_mountaineer_training"
+			add_doctrine_cost_reduction = {
+				name = SER_mountaineer_training
+				cost_reduction = 0.75
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
 
 	}
 	focus = {
@@ -1444,6 +1502,15 @@ focus_tree = {
 		}
 		x = 29
 		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_strengthen_serbian_reserve"
+			add_ideas = SER_strengthen_serbian_reserve_idea
+		}
 
 	}
 	focus = {
@@ -1455,6 +1522,21 @@ focus_tree = {
 		}
 		x = 30
 		y = 4
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_professionalize_mountaineers"
+			add_doctrine_cost_reduction = {
+				name = SER_professionalize_mountaineers
+				cost_reduction = 0.5
+				uses = 1
+				category = mountaineers_tech
+			}
+			add_ideas = SER_professionalize_mountaineers_idea
+		}
 
 	}
 	focus = {
@@ -1469,6 +1551,24 @@ focus_tree = {
 		}
 		x = 29
 		y = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_reform_military_academy"
+			add_doctrine_cost_reduction = {
+				name = SER_reform_military_academy
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = SER_modernize_great_war_lessons_idea
+				add_idea = SER_reform_military_academy_idea
+			}
+		}
 
 	}
 	focus = {
@@ -1486,6 +1586,19 @@ focus_tree = {
 		}
 		x = 28
 		y = 6
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_remember_great_war_heroes"
+			add_war_support = 0.05
+			swap_ideas = {
+				remove_idea = SER_reform_military_academy_idea
+				add_idea = SER_remember_great_war_heroes_idea
+			}
+		}
 
 	}
 	focus = {
@@ -1497,6 +1610,27 @@ focus_tree = {
 		}
 		x = 31
 		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_fortify_homeland"
+			if = {
+				limit = {
+					controls_state = 107
+				}
+				107 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 11586
+					}
+				}
+			}
+		}
 
 	}
 	focus = {
