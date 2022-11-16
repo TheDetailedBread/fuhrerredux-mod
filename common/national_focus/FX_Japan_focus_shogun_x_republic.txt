@@ -25,6 +25,7 @@ focus_tree = {
 	shared_focus = JAP_northern_court
 	shared_focus = JAP_iesato_government
 	shared_focus = JAP_republic_proclaim
+	shared_focus = JAP_sgrp_foreign_tree
 }
 shared_focus = { 
 	id = JAP_alliance_triumphant
@@ -3677,8 +3678,8 @@ shared_focus = {
 	x = 19
 	y = 8
 	allow_branch = {
-		#has_country_flag = JAP_republic_was_proclaimed
-		always = yes 
+		has_country_flag = JAP_republic_was_proclaimed
+		#always = yes 
 	}
 	cost = 6
 	completion_reward = {
@@ -4790,6 +4791,366 @@ shared_focus = {
 	}
 	prerequisite = { 
 		focus = JAP_scientific_autarky
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+############Foreign Tree#############
+shared_focus = {
+	id = JAP_sgrp_foreign_tree
+	icon = GFX_ 
+	allow_branch = {
+		always = yes 
+		#has_country_flag = JAP_sgrp_foreign_unlock
+	}
+	x = 37
+	y = 8
+	cost = 4
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = JAP_expansionism
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = -2
+	y = 1
+	prerequisite = {
+		focus = JAP_sgrp_foreign_tree
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_socialist_weltpolitik
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = JAP_sgrp_foreign_tree
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_approach_germany
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = -4
+	y = 2
+	prerequisite = {
+		focus = JAP_expansionism
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_join_our_own_ally
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = -2
+	y = 2
+	prerequisite = {
+		focus = JAP_expansionism
+	}
+	mutually_exclusive = {
+		focus = JAP_our_own_way
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_our_own_way
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = 0
+	y = 2
+	prerequisite = {
+		focus = JAP_expansionism
+		focus = JAP_socialist_weltpolitik
+	}
+	mutually_exclusive = {
+		focus = JAP_join_our_own_ally
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_asian_entente
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = 2
+	y = 2
+	prerequisite = {
+		focus = JAP_socialist_weltpolitik
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_approach_russia
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = 4
+	y = 2
+	prerequisite = {
+		focus = JAP_socialist_weltpolitik
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_east_west_liaison_office
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = -3
+	y = 3
+	prerequisite = {
+		focus = JAP_approach_germany
+		focus = JAP_join_our_own_ally
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_overseas_affairs_office
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = 1
+	y = 3
+	prerequisite = {
+		focus = JAP_our_own_way
+		focus = JAP_asian_entente
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_comintern_cooperative_office
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = 3
+	y = 3
+	prerequisite = {
+		focus = JAP_approach_russia 
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_mobilize_kantogun
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = -3
+	y = 4
+	prerequisite = {
+		focus = JAP_overseas_affairs_office
+		focus = JAP_east_west_liaison_office
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_dismantle_chinese_warlord
+	icon = GFX_ 
+	relative_position_id = JAP_mobilize_kantogun
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_mobilize_kantogun
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_toward_pacific
+	icon = GFX_ 
+	relative_position_id = JAP_mobilize_kantogun
+	x = 1
+	y = 2
+	prerequisite = {
+		focus = JAP_dismantle_chinese_warlord
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_toward_north_america
+	icon = GFX_ 
+	relative_position_id = JAP_mobilize_kantogun
+	x = 2
+	y = 3
+	prerequisite = {
+		focus = JAP_toward_pacific
+		focus = JAP_toward_indochina
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_reclaim_our_colony
+	icon = GFX_ 
+	relative_position_id = JAP_sgrp_foreign_tree
+	x = -1
+	y = 4
+	prerequisite = {
+		focus = JAP_overseas_affairs_office
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_pressure_bangkok_authority
+	icon = GFX_ 
+	relative_position_id = JAP_reclaim_our_colony
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = JAP_reclaim_our_colony
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_toward_indochina
+	icon = GFX_ 
+	relative_position_id = JAP_reclaim_our_colony
+	x = 1
+	y = 2
+	prerequisite = {
+		focus = JAP_pressure_bangkok_authority
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_demand_delhi_subjugation
+	icon = GFX_ 
+	relative_position_id = JAP_reclaim_our_colony
+	x = 2
+	y = 3
+	prerequisite = {
+		focus = JAP_toward_indochina
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_take_over_primorye_commission
+	icon = GFX_ 
+	relative_position_id = JAP_reclaim_our_colony
+	x = 3
+	y = 0
+	prerequisite = {
+		focus = JAP_overseas_affairs_office
+	}
+	mutually_exclusive = {
+		focus = JAP_strike_vladivostok
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_strike_vladivostok
+	icon = GFX_ 
+	relative_position_id = JAP_reclaim_our_colony
+	x = 5
+	y = 0
+	prerequisite = {
+		focus = JAP_overseas_affairs_office
+		focus = JAP_comintern_cooperative_office
+	}
+	mutually_exclusive = {
+		focus = JAP_take_over_primorye_commission
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_toward_mongolia
+	icon = GFX_ 
+	relative_position_id = JAP_strike_vladivostok
+	x = -1
+	y = 1
+	prerequisite = {
+		focus = JAP_strike_vladivostok
+		focus = JAP_take_over_primorye_commission
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_end_red_scare
+	icon = GFX_ 
+	relative_position_id = JAP_strike_vladivostok
+	x = -3
+	y = 1
+	prerequisite = {
+		focus = JAP_reclaim_our_colony
+	}
+	prerequisite = {
+		focus = JAP_take_over_primorye_commission
+	}
+	cost = 4
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = JAP_claim_xinjiang_tibet_hegemony
+	icon = GFX_ 
+	relative_position_id = JAP_end_red_scare
+	x = 1
+	y = 1
+	prerequisite = {
+		focus = JAP_end_red_scare
+		focus = JAP_toward_mongolia
 	}
 	cost = 4
 	completion_reward = {
