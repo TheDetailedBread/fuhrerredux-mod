@@ -395,3 +395,39 @@ recruit_character = FRA_Aubert_Frere
 recruit_character = FRA_Alphonse_Georges
 recruit_character = FRA_Henri_Roger_Marie_Meric_de_Bellefon
 recruit_character = FRA_Henri_Lebocq
+
+if = {
+	limit = { has_dlc_lar = yes }
+	create_intelligence_agency = yes
+	create_operative_leader = {
+		name = "Gilbert Renault"
+		GFX = GFX_portrait_fx_gilbert_renault
+		traits = {
+			operative_commando
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { FRA FRP }
+	}
+	create_operative_leader = {
+		name = "Eugene Deloncle"
+		GFX = GFX_portrait_fx_eugene_deloncle
+		traits = {
+			operative_seducer
+			operative_well_groomed
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG EGL }
+	}
+	create_operative_leader = {
+		name = "George Groussard"
+		GFX = GFX_portrait_fx_george_groussard
+		traits = {
+			operative_infiltrator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG EGL }
+	}
+}

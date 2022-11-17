@@ -413,3 +413,28 @@ recruit_character = ENG_John_Chamier
 recruit_character = ENG_King_Edward_VIII
 recruit_character = ENG_King_George_VI
 recruit_character = ENG_John_Campbell
+
+if = {
+	limit = { has_dlc_lar = yes }
+	create_operative_leader = {
+		name = "Wilfred Dunderdale"
+		GFX = GFX_portrait_fx_wilfred_dunderdale
+		traits = {
+			operative_seducer
+			operative_well_groomed
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG EGL }
+	}
+	create_operative_leader = {
+		name = "T. E. Lawrence"
+		GFX = GFX_portrait_fx_te_lawrence
+		traits = {
+			operative_infiltrator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG EGL }
+	}
+}

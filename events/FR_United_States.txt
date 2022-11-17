@@ -2123,9 +2123,25 @@ country_event = { # Demand African Territories
 			}
 			USA = {
 				puppet = NFA
+				set_nationality = {
+					character = USA_Arthur_Vandenberg
+					target = NFA
+				}
 			}
 			NFA = {
 				set_cosmetic_tag = NFA_USA
+				add_country_leader_role = {
+					character = USA_Arthur_Vandenberg
+					promote_leader = yes
+					country_leader = {
+						ideology = authoritarian_democrat_subtype
+					}
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = NFQ_american
+					long_name = NFQ_american_long
+				}
 			}
 		}
 		if = {
@@ -2134,9 +2150,25 @@ country_event = { # Demand African Territories
 			}
 			USA = {
 				puppet = NFQ
+				set_nationality = {
+					character = USA_Henry_Wilson_Temple
+					target = NFQ
+				}
 			}
 			NFQ = {
 				set_cosmetic_tag = NFQ_USA
+				add_country_leader_role = {
+					character = USA_Henry_Wilson_Temple
+					promote_leader = yes
+					country_leader = {
+						ideology = authoritarian_democrat_subtype
+					}
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = NFQ_american
+					long_name = NFQ_american_long
+				}
 			}
 		}
 		if = {
