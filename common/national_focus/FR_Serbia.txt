@@ -1016,6 +1016,31 @@ focus_tree = {
 		}
 		x = 19
 		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_stabalize_serbian_currency"
+			add_political_power = -50
+			add_stability = 0.03
+			if = {
+				limit = {
+					has_idea = SER_london_crash_idea
+				}
+				swap_ideas = {
+					remove_idea = SER_london_crash_idea
+					add_idea = SER_stabalize_serbian_currency_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SER_fund_rural_development_idea
+					add_idea = SER_london_crash1_idea
+				}
+			}
+		}
 
 	}
 	focus = {

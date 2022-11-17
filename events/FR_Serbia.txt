@@ -258,6 +258,7 @@ country_event = { #London crash
 		complete_national_focus = SER_london_crash_effects
 		hidden_effect = {
 			country_event = { id = serbia.11 days = 4 }
+			country_event = { id = serbia.12 days = 14 }
 		}
 	}
 }
@@ -283,8 +284,33 @@ country_event = {
 		add_popularity = { ideology = collectivist popularity = 0.02 }
 		add_popularity = { ideology = valkist popularity = 0.01 }
 		hidden_effect = {
-			remove_state_core = 787
-			remove_state_core = 941
+		}
+	}
+}
+
+country_event = {
+	id = serbia.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.12"}
+	title = serbia.12.t
+	desc = serbia.12.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+	}
+
+	option = {
+		name = serbia.12.a
+		add_political_power = -50
+		add_stability = -0.03
+		add_popularity = { ideology = social_conservative popularity = -0.03 }
+		add_popularity = { ideology = market_liberal popularity = 0.03 }
+		add_popularity = { ideology = social_liberal popularity = 0.01 }
+		hidden_effect = {
 		}
 	}
 }
@@ -308,6 +334,7 @@ country_event = { #Assassination attempt
 		name = serbia.9.a
 		add_stability = -0.10
 		complete_national_focus = SER_saving_grace
+		add_ideas = SER_saving_grace_idea
 		hidden_effect = {
 			country_event = { id = serbia.10 days = 3 }
 		}
@@ -317,17 +344,18 @@ country_event = { #Assassination attempt
 		name = serbia.9.b
 		add_stability = -0.15
 		complete_national_focus = SER_king_is_dead
+		add_ideas = SER_king_is_dead_idea
 		kill_country_leader = yes
-		add_country_leader_role = {
-			character = SER_Prince_Paul
-			promote_leader = yes
-			country_leader = {
-				ideology = social_liberal_subtype
-				traits = { }
-			}
-		}
 		custom_effect_tooltip  = SER_regent_prince_paul_tooltip
 		hidden_effect = {
+			add_country_leader_role = {
+				character = SER_Prince_Paul
+				promote_leader = yes
+				country_leader = {
+					ideology = social_liberal_subtype
+					traits = { }
+				}
+			}
 			add_country_leader_role = {
 				character = SER_Prince_Paul
 				promote_leader = yes
@@ -360,8 +388,6 @@ country_event = { #Assassination attempt
 					traits = { }
 				}
 			}
-			remove_state_core = 787
-			remove_state_core = 941
 			country_event = { id = serbia.10 days = 3 }
 		}
 	}
@@ -389,13 +415,18 @@ country_event = { #Embolden resistance
 			remove_idea = SER_macedonian_internal_unrest_idea
 			add_idea = SER_macedonian_internal_unrest_bad_idea
 		}
+		custom_effect_tooltip  = SER_resistance_rising_tooltip
+		hidden_effect = {
+		remove_state_core = 787
+		remove_state_core = 941
 		787 = {
+			start_resistance = yes
 			damage_building = {
 				type = infrastructure
 				damage = 1
 			}
-			add_resistance = 55
-			add_compliance = -50
+			add_resistance = 60
+			add_compliance = -70
 			set_demilitarized_zone = yes
 		}
 		931 = {
@@ -403,13 +434,10 @@ country_event = { #Embolden resistance
 				type = infrastructure
 				damage = 1
 			}
-			add_resistance = 50
-			add_compliance = -50
+			add_resistance = 60
+			add_compliance = -70
 			set_demilitarized_zone = yes
 		}
-		941 = {
-			add_resistance = 35
-			add_compliance = -40
 		}
 	}
 }
