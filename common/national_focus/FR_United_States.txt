@@ -3643,6 +3643,7 @@ focus_tree = {
             tag = FRA
             is_in_faction_with = FRA
           }
+          is_subject = no
         }
         add_opinion_modifier = {
           target = ROOT
@@ -4517,6 +4518,10 @@ focus_tree = {
     x = 1
     y = 1
     cost = 6
+    available = {
+      has_capitulated = no
+      is_subject = no
+    }
     prerequisite = { focus = USA_the_arsenal_of_democracy }
     prerequisite = { focus = USA_longer_reach }
     relative_position_id = USA_the_arsenal_of_democracy
