@@ -90,6 +90,12 @@ defined_text = {
 		localization_key = "[?party_popularity@var:political_power_ideology|%0]"
 	}
 	text = {
+		trigger = {
+			check_variable = { var:coalition_partners > 0 }
+		}
+		localization_key = "[?coalition_ruling_combined_pop|%0]"
+	}
+	text = {
 		localization_key = "[?party_popularity@ruling_party|%0]"
 	}
 }
@@ -370,7 +376,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			check_variable = { coalition_partner_var = token:national_populist }
+			check_variable = { coalition_partner_var = token:valkist }
 		}
 		localization_key = colour_green
 	}

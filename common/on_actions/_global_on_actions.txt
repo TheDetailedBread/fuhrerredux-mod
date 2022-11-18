@@ -25,7 +25,7 @@ on_actions = {
   on_daily = {
     effect = {
       if = {
-        limit = { has_variable = coalition_partners^num }
+        limit = { check_variable = { var:coalition_partners > 0 } }
         set_coalition_government_popularity = yes
       }
     }
