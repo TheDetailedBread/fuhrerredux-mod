@@ -13,7 +13,11 @@ set_technology = {
 	tech_engineers = 1
 	gw_artillery = 1
 	fuel_silos = 1
+	fuel_refining = 1
 	basic_train = 1
+	electronic_mechanical_engineering = 1
+	motorised_infantry = 1
+	radio = 1
 }
 
 if = {
@@ -343,3 +347,21 @@ recruit_character = USA_Charles_Maynard_Cooke_Jr
 recruit_character = USA_Daniel_Edward_Barbey
 recruit_character = USA_Felix_Budwell_Stump
 recruit_character = USA_Harry_Wilbur_Hill
+recruit_character = USA_Henry_Wilson_Temple
+recruit_character = USA_Arthur_Vandenberg
+
+### Operatives ###
+if = {
+	limit = { has_dlc_lar = yes }
+	create_operative_leader = {
+		name = "William J. Donovan"
+		GFX = GFX_portrait_fx_william_donovan
+		traits = {
+			operative_natural_orator
+			operative_tough
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { USA CLB NAR ORE NEE }
+	}
+}

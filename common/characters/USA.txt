@@ -638,6 +638,9 @@ characters = {
 				small = "gfx/interface/ministers/USA/USA_Douglas_MacArthur.png"
 			}
 		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+		}
 		field_marshal = {
 			traits = {
 				offensive_doctrine
@@ -925,6 +928,9 @@ characters = {
 			civilian = {
 				small = "gfx/interface/ministers/USA/USA_George_Catlett_Marshall_Jr.png"
 			}
+			army = {
+				large = "gfx/leaders/USA/Portrait_USA_George_Catlett_Marshall.png"
+			}
 		}
 		advisor = {
 			cost = 150
@@ -943,6 +949,14 @@ characters = {
 				social_democrat
 				for_foreign_sympathizer
 			}
+		}
+		field_marshal = {
+			traits = { career_officer politically_connected organizer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
 	USA_Hugh_Simons_Gibson = {
@@ -1688,6 +1702,7 @@ characters = {
 		name = "Malin Craig"
 		portraits = {
 			army = {
+				large = "gfx/leaders/USA/Portrait_USA_Malin_Craig.png"
 				small = "gfx/interface/ministers/USA/USA_Malin_Craig.png"
 			}
 		}
@@ -1698,6 +1713,14 @@ characters = {
 			traits = {
 				cos_school_of_defence
 			}
+		}
+		field_marshal = {
+			traits = { trait_cautious organizer logistics_wizard }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
 		}
 	}
 	USA_Omar_Nelson_Bradley = {
@@ -2563,6 +2586,22 @@ characters = {
 			navy = {
 				large = "gfx/leaders/USA/Portrait_USA_Harry_Wilbur_Hill.png"
 				small = "gfx/interface/ministers/USA/USA_Harry_Wilbur_Hill.png"
+			}
+		}
+	}
+	USA_Arthur_Vandenberg = {
+		name = "Arthur Vandenberg"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Harry_Wilbur_Hill.png"
+			}
+		}
+	}
+	USA_Henry_Wilson_Temple = {
+		name = "Henry Wilson Temple"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Henry_Wilson_Temple.png"
 			}
 		}
 	}
