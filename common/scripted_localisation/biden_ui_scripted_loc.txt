@@ -35,7 +35,6 @@ defined_text = {
 		}
 		localization_key = GUIHOGNAMETRAIT
 	}
-
 }
 
 # defined_text = {
@@ -312,6 +311,38 @@ defined_text = {
 		}
 		localization_key = LEADER_OR_CMS
 	}
+	text = {
+		trigger = {
+			AND = {
+				tag = JAP
+				has_country_leader = {
+					name = "Nakano Seigo"
+					ruling_only = yes 
+				}
+				OR = {
+					has_country_flag = JAP_Hirohito_hos
+					has_country_flag = JAP_Yasuhito_hos
+				}
+			}
+		}
+		localization_key = LEADER_OR_SHK
+	}
+	text = {
+		trigger = {
+			AND = {
+				tag = JAP
+				has_country_leader = {
+					name = "Inoue Nissho"
+					ruling_only = yes
+				}
+				OR = {
+					has_country_flag = JAP_Hirohito_hos
+					has_country_flag = JAP_Yasuhito_hos
+				}
+			}
+		}
+		localization_key = LEADER_OR_LSM
+	}
 }
 
 defined_text = {
@@ -344,7 +375,18 @@ defined_text = {
 		}
 		localization_key = "Edo San-bugyō"
 	}
-
+	text = {
+		trigger = {
+			has_country_flag = JAP_Hirohito_hos
+		}
+		localization_key = "Hirohito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = JAP_Yasuhito_hos
+		}
+		localization_key = "Hirohito"
+	}
 	#so on and so forth
 }
 
