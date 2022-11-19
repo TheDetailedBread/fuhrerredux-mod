@@ -1052,6 +1052,41 @@ focus_tree = {
 		}
 		x = 19
 		y = 2
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_stabalize_serbian_currency"
+			add_political_power = -35
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 108 }
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1110,6 +1145,31 @@ focus_tree = {
 		}
 		x = 21
 		y = 1
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_fund_rural_development"
+			add_political_power = -50
+			add_stability = 0.03
+			if = {
+				limit = {
+					has_idea = SER_london_crash_idea
+				}
+				swap_ideas = {
+					remove_idea = SER_london_crash_idea
+					add_idea = SER_fund_rural_development_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SER_stabalize_serbian_currency_idea
+					add_idea = SER_london_crash1_idea
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1135,6 +1195,16 @@ focus_tree = {
 		}
 		x = 20
 		y = 3
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_bank_reform"
+			add_stability = 0.10
+			remove_ideas = SER_london_crash1_idea
+		}
 
 	}
 	focus = {

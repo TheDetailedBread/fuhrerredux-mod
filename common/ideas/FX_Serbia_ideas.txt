@@ -111,6 +111,42 @@ ideas = {
 			removal_cost = -1
 		}
 		
+		SER_fund_rural_development_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_fund_rural_development_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.10
+				industrial_capacity_factory = -0.10
+				industrial_capacity_dockyard = -0.10
+				production_speed_buildings_factor = -0.20
+			}
+			picture = great_depression
+			removal_cost = -1
+		}
+		
+		SER_london_crash1_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_london_crash1_idea"}
+			
+			allowed = {	always = no	}
+			
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.10
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+			picture = great_depression
+			removal_cost = -1
+		}
+		
 		SER_king_is_dead_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_king_is_dead_idea"}
 			
