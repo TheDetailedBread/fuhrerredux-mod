@@ -4033,17 +4033,11 @@ focus_tree = {
       country_exists = GER
     }
     bypass = {
+      has_war_with = GER
       custom_trigger_tooltip = {
         tooltip = USA_defeated_valkist_ger_tt
-        OR = {
-          NOT = { country_exists = GER }
-          GER = { has_war_with = ROOT }
-          GRP = {
-            exists = yes
-            is_subject_of = ROOT
-            is_in_faction_with = ROOT 
-          }
-        }
+        country_exists = GRP
+        GER = { exists = no }
       }
     }
     prerequisite = { focus = USA_demand_greenland }
@@ -4068,20 +4062,11 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
-      NOT = { country_exists = GER }
-    }
-    bypass = {
+      has_war = no
       custom_trigger_tooltip = {
         tooltip = USA_defeated_valkist_ger_tt
-        OR = {
-          NOT = { country_exists = GER }
-          GER = { has_war_with = ROOT }
-          GRP = {
-            exists = yes
-            is_subject_of = ROOT
-            is_in_faction_with = ROOT 
-          }
-        }
+        country_exists = GRP
+        GER = { exists = no }
       }
     }
     prerequisite = { focus = USA_stop_the_valkist_menace }
@@ -4099,23 +4084,11 @@ focus_tree = {
     y = 1
     cost = 6
     available = {
+      has_war = no
       custom_trigger_tooltip = {
         tooltip = USA_defeated_valkist_ger_tt
-        OR = {
-          NOT = { country_exists = GER }
-          GER = { has_war_with = ROOT }
-          GRP = {
-            exists = yes
-            is_subject_of = ROOT
-            is_in_faction_with = ROOT 
-          }
-        }
-      }
-    }
-    bypass = {
-      NOT = { 
-        country_exists = GER
         country_exists = GRP
+        GER = { exists = no }
       }
     }
     prerequisite = { focus = USA_stop_the_valkist_menace }
@@ -4143,7 +4116,10 @@ focus_tree = {
       country_exists = SOV
     }
     bypass = {
-      SOV = { exists = no }
+      OR = {
+        NOT = { country_exists = SOV }
+        has_war_with = SOV
+      }
     }
     prerequisite = { focus = USA_the_marshall_plan }
     prerequisite = { focus = USA_villainify_german_valkism }
