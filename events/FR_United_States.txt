@@ -576,11 +576,6 @@ country_event = { # San Francisco Conference
 	option = {
 		name = usa.17.a
 		ai_chance = { base = 90 }
-		diplomatic_relation = { 
-			country = USA 
-			relation = non_aggression_pact
-		}
-		give_military_access = USA
 		FROM = { country_event = usa.18 }
 	}
 	option = {
@@ -599,8 +594,15 @@ country_event = { # SF Conference Success
 
 	option = {
 		name = usa.18.a
-		give_military_access = PHI
-		set_country_flag = USA_san_francisco_conference_success
+		if = {
+			limit = { is_faction_leader = yes }
+			add_to_faction = FROM
+
+			else = {
+				create_faction = PHI_USA_faction
+				add_to_faction = FROM
+			}
+		}
 	}
 }
 
@@ -1279,14 +1281,14 @@ country_event = { # 1944 Elections
 		}
 		hidden_effect = {
 			set_country_flag = USA_had_1944_elections
-						add_country_leader_role = {
-								character = USA_Henry_Wallace
-								promote_leader = yes
-								country_leader = {
-										ideology = social_democrat_subtype
-										traits = {}
-								}
-						}
+			add_country_leader_role = {
+				character = USA_Henry_Wallace
+				promote_leader = yes
+				country_leader = {
+					ideology = social_democrat_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 	option = { # Dewey
@@ -1309,13 +1311,13 @@ country_event = { # 1944 Elections
 		hidden_effect = {
 			set_country_flag = USA_had_1944_elections
 			add_country_leader_role = {
-								character = USA_Thomas_Dewey
-								promote_leader = yes
-								country_leader = {
-										ideology = social_liberal_subtype
-										traits = { }
-								}
-						}
+				character = USA_Thomas_Dewey
+				promote_leader = yes
+				country_leader = {
+					ideology = social_liberal_subtype
+					traits = { }
+				}
+			}
 		}
 	}
 	option = { # Barkley
@@ -1337,14 +1339,14 @@ country_event = { # 1944 Elections
 		}
 		hidden_effect = {
 			set_country_flag = USA_had_1944_elections
-						add_country_leader_role = {
-								character = USA_Alben_W_Barkley
-								promote_leader = yes
-								country_leader = {
-										ideology = market_liberal_subtype
-										traits = {}
-								}
-						}
+			add_country_leader_role = {
+				character = USA_Alben_W_Barkley
+				promote_leader = yes
+				country_leader = {
+					ideology = market_liberal_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 	option = { # Russell
@@ -1366,14 +1368,14 @@ country_event = { # 1944 Elections
 		}
 		hidden_effect = {
 			set_country_flag = USA_had_1944_elections
-						add_country_leader_role = {
-								character = USA_Richard_Russell_Jr
-								promote_leader = yes
-								country_leader = {
-										ideology = social_conservative_subtype
-										traits = {}
-								}
-						}
+			add_country_leader_role = {
+				character = USA_Richard_Russell_Jr
+				promote_leader = yes
+				country_leader = {
+					ideology = social_conservative_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 }
@@ -1412,13 +1414,13 @@ country_event = { # 1948 Elections
 		hidden_effect = {
 			set_country_flag = USA_had_1948_elections
 			add_country_leader_role = {
-								character = USA_Philip_La_Follette
-								promote_leader = yes
-								country_leader = {
-										ideology = social_democrat_subtype
-										traits = {}
-								}
-						}
+				character = USA_Philip_La_Follette
+				promote_leader = yes
+				country_leader = {
+					ideology = social_democrat_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 	option = { # Bricker
@@ -1441,13 +1443,13 @@ country_event = { # 1948 Elections
 		hidden_effect = {
 			set_country_flag = USA_had_1948_elections
 			add_country_leader_role = {
-								character = USA_John_W_Bricker
-								promote_leader = yes
-								country_leader = {
-										ideology = social_liberal_subtype
-										traits = {}
-								}
-						}
+				character = USA_John_W_Bricker
+				promote_leader = yes
+				country_leader = {
+					ideology = social_liberal_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 	option = { # Stassen
@@ -1470,13 +1472,13 @@ country_event = { # 1948 Elections
 		hidden_effect = {
 			set_country_flag = USA_had_1948_elections
 			add_country_leader_role = {
-								character = USA_Harold_Stassen
-								promote_leader = yes
-								country_leader = {
-										ideology = market_liberal_subtype
-										traits = {}
-								}
-						}
+				character = USA_Harold_Stassen
+				promote_leader = yes
+				country_leader = {
+					ideology = market_liberal_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 	option = { # Russell
@@ -1499,13 +1501,13 @@ country_event = { # 1948 Elections
 		hidden_effect = {
 			set_country_flag = USA_had_1944_elections
 			add_country_leader_role = {
-								character = USA_Richard_Russell_Jr
-								promote_leader = yes
-								country_leader = {
-										ideology = social_conservative_subtype
-										traits = {}
-								}
-						}
+				character = USA_Richard_Russell_Jr
+				promote_leader = yes
+				country_leader = {
+					ideology = social_conservative_subtype
+					traits = {}
+				}
+			}
 		}
 	}
 }
@@ -1705,6 +1707,682 @@ country_event = { # Demand Oregon - Refused
 		}
 	}
 }
+
+country_event = { # Demand Greenland
+	id = usa.52
+	title = usa.52.t
+	desc = usa.52.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.52.a
+		ai_chance = {
+			base = 80
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		FROM = {
+			country_event = { id = usa.53 days = 1 }
+		}
+	}
+
+	option = { # Refused
+		name = usa.52.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = {
+			country_event = { id = usa.54 days = 1 }
+		}
+	}
+}
+
+country_event = { # Denmark Accepted
+	id = usa.53
+	title = usa.53.t
+	desc = usa.53.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = {
+		name = usa.53.a
+		transfer_state = 101
+		transfer_state = 911
+	}
+}
+
+country_event = { # Denmark Refused American Demands
+	id = usa.54
+	title = usa.54.t
+	desc = usa.54.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.54.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.54.b
+		add_political_power = 100
+	}
+}
+
+country_event = { # Demand Atlantic Territories
+	id = usa.55
+	title = usa.55.t
+	desc = usa.55.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.55.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = 40
+				has_war = yes
+			}
+			modifier = {
+				add = -20
+				OR = {
+					is_in_faction_with = ENG
+					is_in_faction_with = ITA
+					is_in_faction_with = FRA
+					is_in_faction_with = GER
+				}
+			}
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		FROM = {
+			country_event = { id = usa.56 days = 1 }
+		}
+	}
+
+	option = { # Refused
+		name = usa.55.b
+		ai_chance = {
+			base = 40
+		}
+		FROM = {
+			country_event = { id = usa.57 days = 1 }
+		}
+	}
+}
+
+country_event = { # Offer Accepted
+	id = usa.56
+	title = usa.56.t
+	desc = usa.56.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = {
+		name = usa.56.a
+		if = {
+			limit = { 
+				FROM = { owns_state = 100 }
+			}
+			add_state_claim = 100
+			transfer_state = 100
+		}
+		if = {
+			limit = {
+				FROM = { owns_state = 178 }
+			}
+			transfer_state = 178
+		}
+		if = {
+			limit = {
+				FROM = { owns_state = 697 }
+			}
+			transfer_state = 697
+		}
+		if = {
+			limit = {
+				FROM = { owns_state = 698 }
+			}
+			transfer_state = 698
+		}
+	}
+}
+
+country_event = { # Offer Refused
+	id = usa.57
+	title = usa.57.t
+	desc = usa.57.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.57.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.57.b
+		add_political_power = 100
+	}
+}
+
+country_event = { # Demand Haiti or DomRep Submission
+	id = usa.58
+	title = usa.58.t
+	desc = usa.58.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.58.a
+		FROM = {
+			country_event = { id = usa.59 days = 2 }
+		}
+	}
+
+	option = { # Refuse
+		name = usa.58.b
+		FROM = {
+			country_event = { id = usa.60 days = 2 }
+		}
+	}
+}
+
+country_event = { # Accepted
+	id = usa.59
+	title = usa.59.t
+	desc = usa.59.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.59.a
+		puppet = FROM
+		add_war_support = 0.025
+	}
+}
+
+country_event = { # Refused
+	id = usa.60
+	title = usa.60.t
+	desc = usa.60.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.60.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.60.b
+		add_war_support = -0.025
+	}
+}
+
+country_event = { # Demand British and French West Indies 
+	id = usa.61
+	title = usa.61.t
+	desc = usa.61.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.61.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_war_with = GER
+			}
+			modifier = {
+				add = 10
+				has_war_with = SOV
+			}
+		}
+		FROM = {
+			country_event = { id = usa.62 days = 2 }
+		}
+	}
+
+	option = { # Refuse
+		name = usa.61.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = usa.63 days = 2 }
+		}
+	}
+}
+
+country_event = { # Accepted
+	id = usa.62
+	title = usa.62.t
+	desc = usa.62.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.62.a
+		if = {
+			limit = {
+				FROM = { tag = ENG }
+			}
+
+			set_temp_variable = { tag_to_release = ROOT }
+			ENG = {
+				689 = { transfer_state_and_add_claim = yes }
+				690 = { transfer_state_and_add_claim = yes }
+				691 = { transfer_state_and_add_claim = yes }
+				692 = { transfer_state_and_add_claim = yes }
+				693 = { transfer_state_and_add_claim = yes }
+				696 = { transfer_state_and_add_claim = yes }
+				308 = { transfer_state_and_add_claim = yes }
+				311 = { transfer_state_and_add_claim = yes }
+			}
+		}
+
+		if = {
+			limit = {
+				FROM = { tag = FRA }
+			}
+
+			set_temp_variable = { tag_to_release = ROOT }
+			FRA = {
+				694 = { transfer_state_and_add_claim = yes }
+				310 = { transfer_state_and_add_claim = yes }
+				969 = { transfer_state_and_add_claim = yes }
+			}
+		}
+	}
+}
+
+country_event = { # Refused
+	id = usa.63
+	title = usa.63.t
+	desc = usa.63.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.63.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.63.b
+		add_war_support = -0.025
+	}
+}
+
+country_event = { # American Equipment Arrives
+  id = usa.64
+  title = usa.64.t
+  desc = usa.64.d
+  picture = GFX_report_event_japanese_soldiers_01
+  is_triggered_only = yes
+
+  option = { # Much needed!
+    name = usa.64.a
+		add_war_support = 0.025
+  }
+}
+
+country_event = { # American Advisors
+  id = usa.65
+  title = usa.65.t
+  desc = usa.65.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
+
+  option = { # Much needed!
+    name = usa.65.a
+		add_ideas = USA_advisors
+  }
+}
+
+country_event = { # American Advisors
+  id = usa.66
+  title = usa.66.t
+  desc = usa.66.d
+  picture = GFX_report_event_usa_election_generic
+  is_triggered_only = yes
+
+  option = { # Much needed!
+    name = usa.66.a
+		random_owned_controlled_state = {
+			if = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+  }
+}
+
+country_event = { # Demand African Territories 
+	id = usa.67
+	title = usa.67.t
+	desc = usa.67.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.67.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_war_with = GER
+			}
+			modifier = {
+				add = 10
+				has_war_with = SOV
+			}
+		}
+
+		every_owned_state = {
+			limit = {
+				is_on_continent = africa
+				NOT = { is_core_of = ROOT }
+			}
+			USA = { transfer_state = PREV }
+		}
+		if = {
+			limit = {
+				NFA = { is_subject_of = ROOT }
+			}
+			USA = {
+				puppet = NFA
+				set_nationality = {
+					character = USA_Arthur_Vandenberg
+					target_country = NFA
+				}
+			}
+			NFA = {
+				set_cosmetic_tag = NFA_USA
+				add_country_leader_role = {
+					character = USA_Arthur_Vandenberg
+					promote_leader = yes
+					country_leader = {
+						ideology = authoritarian_democrat_subtype
+					}
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = NFQ_american
+					long_name = NFQ_american_long
+				}
+			}
+		}
+		if = {
+			limit = {
+				NFQ = { is_subject_of = ROOT }
+			}
+			USA = {
+				puppet = NFQ
+				set_nationality = {
+					character = USA_Henry_Wilson_Temple
+					target_country = NFQ
+				}
+			}
+			NFQ = {
+				set_cosmetic_tag = NFQ_USA
+				add_country_leader_role = {
+					character = USA_Henry_Wilson_Temple
+					promote_leader = yes
+					country_leader = {
+						ideology = authoritarian_democrat_subtype
+					}
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = NFQ_american
+					long_name = NFQ_american_long
+				}
+			}
+		}
+		if = {
+			limit = {
+				MOR = { is_subject_of = ROOT }
+			}
+			USA = { puppet = MOR }
+		}
+		if = {
+			limit = {
+				LBA = { is_subject_of = ROOT }
+			}
+			USA = { puppet = LBA }
+		}
+		if = {
+			limit = {
+				ETH = { is_subject_of = ROOT }
+			}
+			USA = { puppet = ETH }
+		}
+		if = {
+			limit = {
+				EGY = { is_subject_of = ROOT }
+			}
+			USA = { puppet = EGY }
+		}
+		if = {
+			limit = {
+				COG = { is_subject_of = ROOT }
+			}
+			USA = { puppet = COG }
+		}
+
+		FROM = {
+			country_event = { id = usa.68 days = 2 }
+		}
+	}
+
+	option = { # Refuse
+		name = usa.67.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = usa.69 days = 2 }
+		}
+	}
+}
+
+country_event = { # Accepted
+	id = usa.68
+	title = usa.68.t
+	desc = usa.68.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.68.a
+		add_war_support = 0.025
+	}
+}
+
+country_event = { # Refused
+	id = usa.69
+	title = usa.69.t
+	desc = usa.69.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.69.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.69.b
+		add_war_support = -0.025
+	}
+}
+
+country_event = { # American Support Arrives
+  id = usa.70
+  title = usa.70.t
+  desc = usa.70.d
+  picture = GFX_report_event_germany_politician_handshake
+  is_triggered_only = yes
+
+  option = { # Much needed!
+    name = usa.70.a
+  }
+}
+
+country_event = { # Demand Pacific 
+	id = usa.71
+	title = usa.71.t
+	desc = usa.71.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.71.a
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				has_war_with = GER
+			}
+			modifier = {
+				add = 10
+				has_war_with = SOV
+			}
+		}
+
+		if = {
+			limit = {
+				tag = ENG
+			}
+			custom_effect_tooltip = USA_british_east_indies_annexed_tt
+		}
+		if = {
+			limit = {
+				tag = FRA
+			}
+			custom_effect_tooltip = USA_french_indochina_annexed_tt
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 336
+					state = 819
+					state = 820
+					state = 821
+					state = 944
+				}
+			}
+			USA = {
+				transfer_state = PREV
+			}
+		}
+		FROM = {
+			country_event = { id = usa.72 days = 2 }
+		}
+	}
+
+	option = { # Refuse
+		name = usa.71.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = usa.73 days = 2 }
+		}
+	}
+}
+
+country_event = { # Accepted
+	id = usa.72
+	title = usa.72.t
+	desc = usa.72.d
+	picture = GFX_report_event_canada_patriation
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = usa.72.a
+		if = {
+			limit = {
+				FROM = { tag = ENG }
+			}
+			annex_country = {
+				target = BEA
+				transfer_troops = no
+			}
+		}
+
+		if = {
+			limit = {
+				FROM = { tag = FRA }
+			}
+			annex_country = {
+				target = FIC
+				transfer_troops = no
+			}
+		}
+	}
+}
+
+country_event = { # Refused
+	id = usa.73
+	title = usa.73.t
+	desc = usa.73.d
+	picture = GFX_report_event_us_panay_demands
+	is_triggered_only = yes
+
+	option = { # War
+		name = usa.73.a
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = { # No War
+		name = usa.73.b
+		add_war_support = -0.025
+	}
+}
+
+#################################################
+#################################################
+#################################################
+#################################################
 
 country_event = { # Nationwide Riots
 	id = usa.100

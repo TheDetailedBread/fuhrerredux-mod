@@ -324,40 +324,6 @@ BEL_MTN_01 =
 	}
 }
 
-BEL_GAR_01 =
-{
-	name = "Hulptroepen"
-	for_countries = { BEL }
-
-	can_use = { always = yes }
-
-	division_types = { "garrison" }
-
-	# Number reservation system will tie to another group.
-	link_numbering_with = { BEL_INF_01 }
-
-	# fallback_name = "%de Regiment Hulptroepen"
-
-	# Names with numbers (only one number per entry).
-	# It's okay to have gaps in numbering.
-	ordered =
-	{
-		1 = { "1ste Licht Regiment" }
-		2 = { "2de Licht Regiment" }
-		3 = { "Territoriale Rijkswacht" }
-		4 = { "Grootprovoostdienst" }
-		5 = { "1ste Bataljon (Oost-Vlaanderen)" }
-		6 = { "2de Bataljon (Antwerpen)" }
-		7 = { "3de Bataljon (Antwerpen)" }
-		8 = { "4de Bataljon (Brabant)" }
-		9 = { "5de Bataljon (Brabant)" }
-		10 = { "6de Bataljon (Henegouwen)" }
-		11 = { "7de Bataljon (Namen)" }
-		12 = { "8ste Bataljon (Luik)" }
-		13 = { "9de Bataljon (Luik)" }
-	}
-}
-
 BEL_MLT_01 =
 {
 	name = "Militie"

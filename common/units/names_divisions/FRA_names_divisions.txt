@@ -484,42 +484,6 @@ FRA_MTN_01 = {
 	}
 }
 
-FRA_GAR_01 = {
-	name = "Garrison Division"
-
-	for_countries = { FRA }
-
-	can_use = { always = yes }
-
-	division_types = { "garrison" }
-
-	# Number reservation system will tie to another group.
-	#link_numbering_with = { FRA_INF_01 }
-
-	fallback_name = "%dème Division de Forteresse"
-
-	#Names with numbers (only one number per entry).
-	#It's okay to have gaps in numbering.
-	ordered =
-	{
-		1 = { "%dère Division de Forteresse" }
-		2 = { "%dème Division de Forteresse" }
-		3 = { "%dème Division de Forteresse" }
-		4 = { "%dème Division de Forteresse" }
-		5 = { "%dème Division de Forteresse" }
-		6 = { "%dème Division de Forteresse" }
-		7 = { "%dème Division de Forteresse" }
-		8 = { "%dème Division de Forteresse" }
-		9 = { "%dème Division de Forteresse" }
-		10 = { "%dème Division de Forteresse" }
-		11 = { "%dème Division de Forteresse" }
-		12 = { "%dème Division de Forteresse" }
-		13 = { "%dème Division de Forteresse" }
-		14 = { "%dème Division de Forteresse" }
-		15 = { "%dème Division de Forteresse" }
-	}
-}
-
 FRA_MIL_01 = {
 	name = "Militia Division"
 

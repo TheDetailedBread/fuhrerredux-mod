@@ -337,36 +337,3 @@ SWI_MTN_01 =
 		20 = { "Gebirgsdivision %d" }
 	}
 }
-
-SWI_GAR_01 =
-{
-	name = "Garrison Unit"
-
-	for_countries = { SWI }
-
-	can_use = { always = yes }
-
-	division_types = { "garrison" }
-
-	#Number reservation system will tie to another group.
-	#link_numbering_with = { SWI_INF_01 }
-
-	fallback_name = "Festungbrigaden %d"
-
-	#Names with numbers (only one number per entry).
-	#It's okay to have gaps in numbering.
-	ordered =
-	{
-		1 = { "Festungbrigaden %d" }
-		2 = { "Festungbrigaden %d" }
-		3 = { "Festungbrigaden %d" }
-		4 = { "Festungbrigaden %d" }
-		5 = { "Festungbrigaden %d" }
-		6 = { "Festungbrigaden %d" }
-		7 = { "Festungbrigaden %d" }
-		8 = { "Festungbrigaden %d" }
-		9 = { "Festungbrigaden %d" }
-		10 = { "Festungbrigaden %d" }
-	}
-}
-

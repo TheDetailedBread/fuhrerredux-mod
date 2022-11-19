@@ -1,5 +1,13 @@
 ideas = {
   hidden_ideas = {
+		ready_to_surrender = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ready_to_surrender" }
+			available = { has_war = yes }
+			modifier = {
+				forced_surrender_limit = -1
+			}
+		}
+
     idea_continuous_naval_production = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea idea_continuous_naval_production" }
 			allowed = {

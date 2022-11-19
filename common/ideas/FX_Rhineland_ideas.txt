@@ -12,15 +12,11 @@ ideas = {
 
 		RHI_S_rhineland_coal = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RHI_S_rhineland_coal"}
-			picture = state_economy
+			picture = RHI_french_exports
 			modifier = {
 				civilian_factory_use = 5
 			}
-		#	targeted_modifier = {
-		#		tag = FRA
-		#		cic_to_target_factor = 0.2
-		#	}
-		targeted_modifier = {
+			targeted_modifier = {
 				tag = FRA
 				trade_cost_for_target_factor = -0.4
 				extra_trade_to_target_factor = 0.20
@@ -28,7 +24,7 @@ ideas = {
 		}
 		RHI_S_political_powderkeg = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RHI_S_political_powderkeg"}
-			picture = generic_disjointed_gov
+			picture = SPR_political_violence
 			modifier = {
 				political_power_gain = -1.25
 			}

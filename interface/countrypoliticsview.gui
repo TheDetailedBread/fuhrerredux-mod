@@ -192,44 +192,52 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "power_balance_button"
-				position = { x = 320 y = -62 }
+				position = { x = 105 y = 62 }
 				clipping = no
 
 				buttonType = {
 					name = "show_power_balance"
-					position = { x = 0 y = 0 }
+					position = { x = 95 y = 15 }
 					quadTextureSprite = "GFX_show_power_balance_button"
+					clicksound = click_default
+				}
+
+				iconType = {
+					name = "show_power_balance_glow"
+					position = { x = 0 y = 0 }
+					quadTextureSprite = "GFX_bop_glow_effect"
+					alwaystransparent = yes
 				}
 
 				instantTextboxType = {
 					name = "power_balance_percentage"
 					format = center
-					position = { x = 40 y = 10 }
+					position = { x = 73 y = 60 }
 					font = "hoi_16mbs"
 					text = "90%"
 					fixedsize = yes
-					maxWidth = 100
+					maxWidth = 100				
 					maxHeight = 20
 					alwaystransparent = yes
-				}
-
+				}	
+				
 				instantTextboxType = {
 					name = "power_balance_levels"
 					format = center
-					position = { x = 40 y = 25 }
+					position = { x = 45 y = 60 }
 					font = "hoi_16mbs"
 					text = "3/5"
 					fixedsize = yes
-					maxWidth = 100
+					maxWidth = 100				
 					maxHeight = 20
 					alwaystransparent = yes
-				}
-
+				}	
+				
 				iconType = {
 					name = "power_balance_ICON"
-					position = { x = 12 y = 4 }
+					position = { x = 95 y = 13 }
 					quadTextureSprite = "GFX_placeholder_bordered"
-					alwaystransparent = yes
+					alwaystransparent = yes				
 					scale = 0.55
 				}
 			}
@@ -1587,7 +1595,7 @@ guiTypes = {
 		buttonType = {
 			name = "exile_country_flag"
 			quadTextureSprite ="GFX_player_flag"
-			position = { x= 10 y = 5 }
+			position = { x= 12 y = 7 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -1604,10 +1612,35 @@ guiTypes = {
 			position = { x = 107 y = 10 }
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 150
+			maxWidth = 120
 			maxHeight = 20
 			format = left
 			vertical_alignment = center			
+		}
+
+		containerWindowType = {
+			name = "legitimacy_container"
+			position = { x = 260 y = 50 }
+			size = { width = 150 height = 75 }
+			clipping = no
+
+			instantTextboxType = {
+				name = "legitimacy"
+				position = { x = 20 y = 15 }
+				font = "hoi_24header"
+				text = "42"
+				maxWidth = 80
+				maxHeight = 20
+				fixedsize = yes
+				format = center	
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "icon"
+				spriteType = "GFX_icon_exiled_governments"
+				position = { x = 12 y = 12 }
+			}
 		}
 
 		containerWindowType = {
