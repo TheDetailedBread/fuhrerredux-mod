@@ -1633,8 +1633,8 @@ focus_tree = {
 	focus = {
 		id = BLR_bnsp_secures_power
 		icon = GFX_goal_ideology_valkist
-		x = 0
-		y = 2
+		x = 26
+		y = 0
 		cost = 6
 		available = {
       hidden_trigger = {
@@ -1647,7 +1647,6 @@ focus_tree = {
         has_country_flag = BLR_nat_soc_win
       }
     }
-		relative_position_id = BLR_open_new_universities
 		completion_reward = {
 			custom_effect_tooltip = BLR_bnsp_secures_power_tt
 		}
@@ -1925,10 +1924,10 @@ focus_tree = {
 		}
 	}
 
-	# Konigsberg Conference
+	# German Equipment
 	focus = {
-		id = BLR_konigsberg_conference
-		icon = GFX_goal_BLR_conference
+		id = BLR_german_equipment
+		icon = GFX_goal_generic_military_equipment
 		x = 0
 		y = 2
 		cost = 6
@@ -1938,8 +1937,10 @@ focus_tree = {
 		prerequisite = { focus = BLR_work_with_the_germans }
 		relative_position_id = BLR_work_with_the_germans
 		completion_reward = {
-			GER = {
-				country_event = { id = belarus.19 days = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = GER
 			}
 		}
 	}
@@ -1989,8 +1990,374 @@ focus_tree = {
 		cost = 6
 		prerequisite = { focus = BLR_new_cities }
 		prerequisite = { focus = BLR_empower_the_rada }
-		prerequisite = { focus = BLR_konigsberg_conference }
+		prerequisite = { focus = BLR_german_equipment }
 		relative_position_id = BLR_empower_the_rada
+		completion_reward = {
+			custom_effect_tooltip = BLR_the_new_belarus_tt
+		}
 	}
 
+	###############################################
+	# Foreign Policy
+	###############################################
+
+	# Konigberg Conference
+	focus = {
+		id = BLR_konigsberg_conference
+		icon = GFX_goal_BLR_conference
+		x = 0
+		y = 2
+		cost = 6
+		available = {
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = BLR_the_new_belarus
+				}
+			}
+			has_capitulated = no
+			is_subject = no
+			GER = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+		relative_position_id = BLR_open_new_universities
+		completion_reward = {
+			GER = {
+				country_event = { id = belarus.19 days = 2 }
+			}
+		}
+	}
+
+	# Dreams of Litvism
+	focus = {
+		id = BLR_dreams_of_litvinism
+		icon = GFX_goal_liberty
+		x = -2
+		y = 1
+		cost = 6
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		bypass = {
+			has_country_flag = BLR_konigsberg_gut
+		}
+		mutually_exclusive = { focus = BLR_embrace_belarusian_identity }
+		prerequisite = { focus = BLR_konigsberg_conference }
+		relative_position_id = BLR_konigsberg_conference
+		completion_reward = {
+			custom_effect_tooltip = BLR_dreams_of_litvinism_tt
+		}
+	}
+
+	# Embrace Belarussian Indentity
+	focus = {
+		id = BLR_embrace_belarusian_identity
+		icon = GFX_goal_BLR_belarusian_identity
+		x = 2
+		y = 1
+		cost = 6
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		bypass = {
+			has_country_flag = BLR_konigsberg_nicht_gut
+		}
+		mutually_exclusive = { focus = BLR_dreams_of_litvinism }
+		prerequisite = { focus = BLR_konigsberg_conference }
+		relative_position_id = BLR_konigsberg_conference
+		completion_reward = {
+			custom_effect_tooltip = BLR_embrace_belarusian_identity_tt
+		}
+	}
+
+	# Claims in Ukraine
+	focus = {
+		id = BLR_claims_in_ukraine
+		icon = GFX_goal_generic_attack_ukraine
+		x = -1
+		y = 1
+		cost = 6
+		available = {
+			is_in_faction = yes
+			country_exists = UKR
+		}
+		bypass = {
+			OR = {
+				has_war_with = UKR
+			}
+		}
+		prerequisite = { focus = BLR_dreams_of_litvinism }
+		relative_position_id = BLR_dreams_of_litvinism
+		completion_reward = {
+			UKR = {
+				country_event = { id = belarus.22 days = 1 }
+			}
+		}
+	}
+
+	# Demand Lithuanian Lands
+	focus = {
+		id = BLR_demand_lithuanian_lands
+		icon = GFX_goal_generic_attack_lithuania
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			is_in_faction = yes
+			country_exists = LIT
+		}
+		prerequisite = { focus = BLR_dreams_of_litvinism }
+		relative_position_id = BLR_dreams_of_litvinism
+		completion_reward = {
+			if = {
+				limit = {
+					LIT = { is_subject = yes }
+				}
+				LIT = {
+					overlord = {
+						country_event = { id = belarus.25 days = 1 }
+					}
+				}
+
+				else = {
+					LIT = {
+						country_event = { id = belarus.25 days = 1 }
+					}
+				}
+			}
+		}
+	}
+
+	# Liberation from the Red Menace
+	focus = {
+		id = BLR_liberation_from_the_red_menace
+		icon = GFX_focus_attack_soviet
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			country_exists = SOV
+		}
+		prerequisite = { focus = BLR_claims_in_ukraine }
+		prerequisite = { focus = BLR_demand_lithuanian_lands }
+		relative_position_id = BLR_claims_in_ukraine
+		completion_reward = {
+			SOV = {
+				country_event = { id = belarus.28 days = 1 }
+			}
+		}
+	}
+
+	# The Grand Dukes
+	focus = {
+		id = BLR_the_grand_dukes
+		icon = GFX_goal_monarchism
+		x = 0
+		y = 1
+		cost = 6
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BLR_owns_territories_soviet_tt
+				owns_state = 242
+				owns_state = 243
+				owns_state = 948
+				owns_state = 224
+				owns_state = 205
+				owns_state = 223
+				owns_state = 222
+				owns_state = 791
+			}
+			custom_trigger_tooltip = {
+				tooltip = BLR_owns_territories_ukraine_tt
+				owns_state = 94
+				owns_state = 93
+				owns_state = 199
+				owns_state = 201
+				owns_state = 241
+				owns_state = 202
+				owns_state = 203
+				owns_state = 198
+				owns_state = 193
+				owns_state = 225
+				owns_state = 259
+			}
+			custom_trigger_tooltip = {
+				tooltip = BLR_owns_territories_lithuania_tt
+				owns_state = 11
+				owns_state = 189
+				owns_state = 96
+			}
+		}
+		prerequisite = {
+			focus = BLR_liberation_from_the_red_menace
+		}
+		relative_position_id = BLR_liberation_from_the_red_menace
+		completion_reward = {
+			custom_effect_tooltip = BLR_the_grand_dukes_tt
+		}
+	}
+
+	# Join the Stahlpakt
+	focus = {
+		id = BLR_join_the_stahlpakt
+		icon = GFX_goal_generic_german_agreement
+		x = -1
+		y = 1
+		cost = 6
+		available = {
+			is_subject = no
+			GER = {
+				exists = yes
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+			is_in_faction_with = GER
+		}
+		prerequisite = {
+			focus = BLR_dreams_of_litvinism
+			focus = BLR_embrace_belarusian_identity
+		}
+		relative_position_id = BLR_embrace_belarusian_identity
+		completion_reward = {
+			custom_effect_tooltip = BLR_join_the_stahlpakt_tt
+		}
+	}
+
+	# Trust in the West
+	focus = {
+		id = BLR_trust_in_the_west
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			is_subject = no
+			FRA = {
+				exists = yes
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+			is_in_faction_with = FRA
+		}
+		prerequisite = {
+			focus = BLR_embrace_belarusian_identity
+		}
+		relative_position_id = BLR_embrace_belarusian_identity
+		completion_reward = {
+			custom_effect_tooltip = BLR_trust_in_the_west_tt
+		}
+	}
+
+	# Our Polish Ties
+	focus = {
+		id = BLR_our_polish_ties
+		icon = GFX_goal_generic_polish_agreement
+		x = 3
+		y = 1
+		cost = 6
+		available = {
+			is_subject = no
+			POL = {
+				exists = yes
+				is_faction_leader = yes
+			}
+		}
+		bypass = {
+			is_in_faction_with = POL
+		}
+		prerequisite = {
+			focus = BLR_embrace_belarusian_identity
+		}
+		relative_position_id = BLR_embrace_belarusian_identity
+		completion_reward = {
+			custom_effect_tooltip = BLR_our_polish_ties_tt
+		}
+	}
+
+	# An Offer to Poland
+	focus = {
+		id = BLR_an_offer_to_poland
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 1
+		cost = 6
+		available = {
+			is_in_faction = yes
+			NOT = { owns_state = 889 }
+			country_exists = POL
+		}
+		bypass = {
+			owns_state = 889
+		}
+		prerequisite = {
+			focus = BLR_join_the_stahlpakt
+			focus = BLR_trust_in_the_west
+			focus = BLR_our_polish_ties
+		}
+		relative_position_id = BLR_trust_in_the_west
+		completion_reward = {
+			POL = {
+				country_event = { id = belarus.37 days = 2 }
+			}
+		}
+	}
+
+	# Demand our Eastern Territories
+	focus = {
+		id = BLR_demand_our_eastern_territories
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = -1
+		y = 1
+		cost = 6
+		available = {
+			is_in_faction = yes
+			NOT = {
+				owns_state = 914 
+				owns_state = 791
+				owns_state = 948 
+				owns_state = 243 
+				owns_state = 242
+			}
+		}
+		bypass = {
+			owns_state = 914 
+			owns_state = 791
+			owns_state = 948 
+			owns_state = 243 
+			owns_state = 242
+		}
+		prerequisite = {
+			focus = BLR_join_the_stahlpakt
+			focus = BLR_trust_in_the_west
+			focus = BLR_our_polish_ties
+		}
+		relative_position_id = BLR_trust_in_the_west
+		completion_reward = {
+			SOV = {
+				country_event = { id = belarus.34 days = 1 }
+			}
+		}
+	}
+
+	# Greater Belarus Restored
+	focus = {
+		id = BLR_greater_belarus_restored
+		icon = GFX_goal_collaborate_local_elites
+		x = 1
+		y = 1
+		cost = 6
+		prerequisite = { focus = BLR_demand_our_eastern_territories }
+		prerequisite = { focus = BLR_an_offer_to_poland }
+		relative_position_id = BLR_demand_our_eastern_territories
+		completion_reward = {
+			custom_effect_tooltip = BLR_greater_belarus_restored_tt
+		}
+	}
 }

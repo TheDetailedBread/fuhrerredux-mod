@@ -5,10 +5,68 @@ foreign_politics = {
     fire_only_once = yes
     allowed = { original_tag = BLR }
     visible = {
-      has_completed_focus = BLR_work_with_the_germans
+      has_completed_focus = BLR_join_the_stahlpakt
       is_in_faction = no
     }
     targets = { GER }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        is_faction_leader = yes
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    available = {
+      FROM = {
+        is_faction_leader = yes
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    remove_effect = {
+      FROM = {
+        country_event = { id = belarus.16 days = 1 }
+      }
+    }
+  }
+  BLR_join_france = {
+    icon = GFX_decision_generic_army_support
+    cost = 50
+    fire_only_once = yes
+    allowed = { original_tag = BLR }
+    visible = {
+      has_completed_focus = BLR_trust_in_the_west
+      is_in_faction = no
+    }
+    targets = { FRA }
+    target_trigger = {
+      FROM = {
+        exists = yes
+        is_faction_leader = yes
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    available = {
+      FROM = {
+        is_faction_leader = yes
+        NOT = { has_war_with = ROOT }
+      }
+    }
+    remove_effect = {
+      FROM = {
+        country_event = { id = belarus.16 days = 1 }
+      }
+    }
+  }
+  BLR_join_poland = {
+    icon = GFX_decision_generic_army_support
+    cost = 50
+    fire_only_once = yes
+    allowed = { original_tag = BLR }
+    visible = {
+      has_completed_focus = BLR_our_polish_ties
+      is_in_faction = no
+    }
+    targets = { POL }
     target_trigger = {
       FROM = {
         exists = yes
@@ -538,6 +596,164 @@ BLR_defense_fortifications = {
 					province = 3331
 					instant_build = yes
         }
+      }
+    }
+  }
+}
+
+BLR_territorial_integration = {
+  BLR_integrate_ukraine = {
+    name = BLR_integrate_dec
+    icon = GFX_decision_generic_police_action
+    cost = 10
+    fire_only_once = yes
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_only
+    targets = { 94 93 199 201 241 202 203 198 193 225 178 259 }
+    target_trigger = {
+      has_full_control_of_state = FROM
+      FROM = {
+        is_claimed_by = ROOT
+      }
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      has_completed_focus = BLR_the_grand_dukes
+    }
+    modifier = {
+      political_power_cost = 0.15
+    }
+    remove_effect = {
+      FROM = {
+        remove_claim_by = ROOT
+        add_core_of = ROOT
+      }
+    }
+  }
+  BLR_integrate_soviet = {
+    name = BLR_integrate_dec
+    icon = GFX_decision_generic_police_action
+    cost = 10
+    fire_only_once = yes
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_only
+    targets = { 246 242 243 948 224 205 223 222 791 }
+    target_trigger = {
+      has_full_control_of_state = FROM
+      FROM = {
+        is_claimed_by = ROOT
+      }
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      has_completed_focus = BLR_the_grand_dukes
+    }
+    modifier = {
+      political_power_cost = 0.15
+    }
+    remove_effect = {
+      FROM = {
+        remove_claim_by = ROOT
+        add_core_of = ROOT
+      }
+    }
+  }
+  BLR_integrate_lithuania = {
+    name = BLR_integrate_dec
+    icon = GFX_decision_generic_police_action
+    cost = 10
+    fire_only_once = yes
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_only
+    targets = { 11 96 189 }
+    target_trigger = {
+      has_full_control_of_state = FROM
+      FROM = {
+        is_claimed_by = ROOT
+      }
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      has_completed_focus = BLR_the_grand_dukes
+    }
+    modifier = {
+      political_power_cost = 0.15
+    }
+    remove_effect = {
+      FROM = {
+        remove_claim_by = ROOT
+        add_core_of = ROOT
+      }
+    }
+  }
+  BLR_integrate_west = {
+    name = BLR_integrate_dec
+    icon = GFX_decision_generic_police_action
+    cost = 10
+    fire_only_once = yes
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_only
+    targets = { 96 889 }
+    target_trigger = {
+      has_full_control_of_state = FROM
+      FROM = {
+        is_claimed_by = ROOT
+      }
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      has_completed_focus = BLR_greater_belarus_restored
+    }
+    modifier = {
+      political_power_cost = 0.15
+    }
+    remove_effect = {
+      FROM = {
+        remove_claim_by = ROOT
+        add_core_of = ROOT
+      }
+    }
+  }
+  BLR_integrate_east = {
+    name = BLR_integrate_dec
+    icon = GFX_decision_generic_police_action
+    cost = 10
+    fire_only_once = yes
+    days_remove = 30
+    state_target = yes
+    on_map_mode = map_only
+    targets = { 914 791 948 243 242 }
+    target_trigger = {
+      has_full_control_of_state = FROM
+      FROM = {
+        is_claimed_by = ROOT
+      }
+    }
+    available = {
+      has_full_control_of_state = FROM
+    }
+    visible = {
+      has_completed_focus = BLR_greater_belarus_restored
+    }
+    modifier = {
+      political_power_cost = 0.15
+    }
+    remove_effect = {
+      FROM = {
+        remove_claim_by = ROOT
+        add_core_of = ROOT
       }
     }
   }
