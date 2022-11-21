@@ -1335,3 +1335,29 @@ country_event = { # Refused
 		}
 	}
 }
+
+country_event = { # Coronation of Vytautas II
+	id = belarus.40
+	title = belarus.40.t
+	desc = belarus.40.d
+	picture = GFX_report_event_BLR_king
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.40.a
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_character = LIT_Vytautas_II }
+				}
+				LIT = {
+					set_nationality = {
+						character = LIT_Vytautas_II
+						target_country = BLR
+					}
+				}
+			}
+		}
+		BLR_create_monarchy = yes
+	}
+}

@@ -2032,7 +2032,7 @@ focus_tree = {
 	# Dreams of Litvism
 	focus = {
 		id = BLR_dreams_of_litvinism
-		icon = GFX_goal_liberty
+		icon = GFX_goal_BLR_Litvin
 		x = -2
 		y = 1
 		cost = 6
@@ -2156,7 +2156,7 @@ focus_tree = {
 	# The Grand Dukes
 	focus = {
 		id = BLR_the_grand_dukes
-		icon = GFX_goal_monarchism
+		icon = GFX_goal_POL_lithuanian_king
 		x = 0
 		y = 1
 		cost = 6
@@ -2199,6 +2199,8 @@ focus_tree = {
 		relative_position_id = BLR_liberation_from_the_red_menace
 		completion_reward = {
 			custom_effect_tooltip = BLR_the_grand_dukes_tt
+			set_cosmetic_tag = BLR_LITVINISM
+			country_event = belarus.40
 		}
 	}
 
@@ -2211,6 +2213,7 @@ focus_tree = {
 		cost = 6
 		available = {
 			is_subject = no
+			is_in_faction = no
 			GER = {
 				exists = yes
 				is_faction_leader = yes
@@ -2238,6 +2241,7 @@ focus_tree = {
 		cost = 6
 		available = {
 			is_subject = no
+			is_in_faction = no
 			FRA = {
 				exists = yes
 				is_faction_leader = yes
@@ -2264,6 +2268,7 @@ focus_tree = {
 		cost = 6
 		available = {
 			is_subject = no
+			is_in_faction = no
 			POL = {
 				exists = yes
 				is_faction_leader = yes

@@ -211,3 +211,126 @@ BLR_recover_from_black_wednesday = {
     }
   }
 }
+
+BLR_create_monarchy = {
+  add_ideas = constitutional_monarchy
+  LIT_Vytautas_II = {
+    promote_character = yes
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = market_liberal_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+        traits = {}
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+        traits = {}
+      }
+    }
+  }
+}
+
+BLR_remove_monarchy = {
+  if = {
+    limit = {
+      has_socialist_government = yes
+    }
+    add_ideas = workers_republic
+
+    else = {
+      add_ideas = parliamentary_republic
+    }
+  }
+  BLR_Arkady_Smolich = {
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = social_democrat_subtype
+      }
+    }
+  }
+  BLR_Mikola_Abramcyk = {
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = social_liberal_subtype
+      }
+    }
+  }
+  BLR_Adam_Stankievic = {
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = social_conservative_subtype
+      }
+    }
+  }
+  BLR_Vasil_Zacharka = {
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = authoritarian_democrat_subtype
+      }
+    }
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = paternal_autocrat_subtype
+      }
+    }
+  }
+  BLR_Vaclau_Lastouski = {
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = national_populist_subtype
+      }
+    }
+  }
+  BLR_Radasłaŭ_Astroŭski = {
+    add_country_leader_role = {
+      promote_leader = yes
+      country_leader = {
+        ideology = valkist_subtype
+      }
+    }
+  }
+}
